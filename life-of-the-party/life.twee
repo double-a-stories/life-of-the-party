@@ -1,0 +1,3200 @@
+:: StoryTitle
+Life of the Party
+
+:: StoryCSS [stylesheet]
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --light: rgba(0, 0, 0, 20%);
+  --accent: #d93;
+  --color-vore: #fee;
+  --color-vore-ending: #dbb;
+}
+
+body {
+  font: 1.2rem/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--color, #111);
+  background: var(--background, #eee);
+  transition: opacity 1s, background-color 2s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+tw-story {
+  line-height: inherit;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+  max-width: 35em;
+}
+
+a {
+  color: var(--color, #111);
+  text-decoration-color: var(--light, rgba(0, 0, 0, 20%));
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: var(--accent, #d93);
+  text-decoration-color: var(--accent, #d93);
+}
+
+.prose-time {
+  font-family: serif;
+}
+
+.header {
+  font-size: 0.75em;
+  border-bottom: 1px solid var(--light);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.header-nav > * {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.header-nav > *+* {
+  margin-left: 0.5rem;
+}
+
+.header-nav > *+*::before {
+  content: "|";
+  margin-right: 0.5rem;
+}
+
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.fadeout {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0%;
+  background-image: linear-gradient(to bottom, transparent, var(--background, #eee));
+  margin-bottom: 0;
+}
+
+.textchat {
+  padding: 1rem;
+  font-size: smaller;
+  font-family: monospace;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--light);
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Story Styles (using passage tags) */
+body[data-tags~="vore"] {
+  --background: #fee;
+}
+
+body[data-tags~="dreamy_1"] {
+  --background: #eef;
+}
+
+body[data-tags~="dreamy_2"] {
+  --background: #ddf;
+}
+
+body[data-tags~="morning"] {
+  --background: #ffe;
+}
+
+body[data-tags~="dark"] {
+  --background: #020202;
+  --light: rgba(255, 255, 255, 50%);
+  --color: #ccc;
+}
+
+body[data-tags~="otherstory"] {
+  font-family: "Times New Roman", serif;
+  transition: none !important;
+  line-height: 1.5;
+}
+
+[data-tags~="otherstory"] #recent-command {
+  text-align: center;
+  font-variant: small-caps;
+}
+
+[data-tags~="no_heading"] #recent-command {
+  display: none;
+}
+
+@media screen and (max-width:500px) {
+  .passage {
+    --logo-height: 3em;
+    font-size: 80%;
+  }
+
+  .logo_main {
+    text-align: center;
+    align-items: center
+  }
+
+  a {
+    line-height: 2;
+    padding: 2rem 0;
+  }
+}
+
+:: StoryJS [script]
+// The Snowbunny Engine
+
+// Global Variable: "setup"
+window.setup = window.setup || {};
+setup.version = "v0.3.5"
+
+// Move story styles to before the passages.
+// This prioritizes styles declared inside passages.
+$("tw-story > style").appendTo($("head"));
+
+/* History Commands */
+
+// Undo Command
+setup.undo = () => {
+  window.history.back(); // load last checkpoint
+	$("#back-button:focus").blur(); // unfocus the back button
+}
+// Restart
+setup.restart = () => {
+	console.info("localStorage = ",localStorage);
+	story.history = []; // erase history (resets page visit counts)
+	story.state = {}; // reset state
+
+	// reset the startPassage variable to a passage with the tag 'start'
+	const passages = story.passages.filter(p => p);
+	const start = passages.find(p => p.tags.includes("start"));
+	story.startPassage = start ? start.id : story.startPassage;
+	story.show(story.startPassage); // load startPassage
+}
+// save a Snowman checkpoint on every passage.
+$(window).on('sm.passage.shown', e => {
+  story.checkpoint(); // required for "undo" to restore previous state
+})
+
+/* Page Header */
+/* use the tag `header` on a passage to render it before the passage */
+
+$(window).on('sm.story.started', function(event, {story}) {
+	const passages = story.passages.filter(p => p);
+	const $headerEl = $("<header></header>").attr("id", "header");
+	passages.filter(p => p.tags.includes("header")).forEach(p => {
+		const html = $.parseHTML(story.render(p.id));
+		$(html).appendTo($headerEl);
+	})
+	$headerEl.insertBefore(story.$passageEl);
+});
+
+// Make a passage loading work like page loading
+$(window).on('sm.passage.hidden', function(event, {story}) {
+	window.scrollTo(0, 0); // scroll to top
+	$(":focus").blur(); // unselect selected item
+});
+
+/* Previous Command API */
+// Show the text of the clicked link as the title of the next passage
+// e.g. the link [[Foo|Bar]] goes to the passage Bar, but shows Foo.
+$(window).on('sm.passage.shown', (e, {passage}) => {
+	$("a").on("click", ({ currentTarget }) => {
+	const $this = $(currentTarget);
+	// Data attributes:
+	// Add data-nocommand to use the linked passage's title
+	// Use data-command="..." to set custom titles
+	const data = $this.data();
+	if (data["command"] !== "" && data["nocommand"] !== "") {
+		story.state.previousCommand = data["command"] || $this.html();
+	}
+})
+	const passageTitle = story.state.previousCommand || passage.name
+	$("#recent-command").html(passageTitle)
+	story.state.previousCommand = "";
+})
+
+// DEBUG: Handle Errors without Crashing
+story.ignoreErrors = true;
+$(window).on("sm.story.error", ev => {
+	if (story.ignoreErrors) {
+	  window.alert(story.errorMessage);
+    console.error(story.errorMessage);
+	}
+})
+
+// Basic Fadein. Override by adding "no_fade" tag.
+$(window).on('sm.passage.shown', () => {
+	if (!passage.tags.some(tag => tag === "no_fade")) {
+    $("tw-passage").css({opacity: 0}).animate({opacity: 1}, "slow")
+	}
+})
+
+/*
+ * Keyboard Controls
+ */
+window.controls = window.controls || {}; {
+    controls.getFocusables = () => $("a[href], button, input, select, [tabindex]").filter(":visible");
+
+    controls.focusNext = () => {
+        const $focusables = controls.getFocusables();
+        let index = $focusables.index(document.activeElement);
+        if (index != -1) {
+            $focusables.eq(index + 1).focus();
+        } else {
+            if ($("tw-passage").find($focusables)[0]) {
+                $("tw-passage").find($focusables).first().focus();
+            } else {
+                $focusables.first().focus();
+            }
+        }
+    }
+    controls.focusPrev = () => {
+        const $focusables = controls.getFocusables();
+        let index = $focusables.index(document.activeElement);
+        if (index >= 0) {
+            $focusables.eq(index - 1).focus();
+        } else {
+            controls.focusNext();
+            controls.focusPrev();
+        }
+    }
+    controls.selectFocused = () => {
+        const $focusables = controls.getFocusables();
+        if ($focusables.index(document.activeElement) != -1) {
+            document.activeElement.click();
+        } else {
+            controls.focusNext();
+        }
+    }
+    controls.goNext = () => {
+        let p = passage.id;
+        if (!$(":focus")[0]) {
+            window.history.forward();
+        }
+        if (p == passage.id) {
+            controls.selectFocused();
+        }
+    }
+}
+$(document).keydown(function (e) {
+    if ($(e.target).is("input[type!='button'], [contenteditable]") &&
+        !e.key.startsWith("Arrow")) {
+        return;
+    }
+    switch (e.key.toLowerCase()) {
+        case "enter":
+        case "e":
+        case " ":
+            controls.selectFocused();
+            e.preventDefault();
+            break;
+        case "h":
+        case "a":
+        case "arrowleft":
+            setup.undo();
+            e.preventDefault();
+            break;
+        case "d":
+        case "l":
+        case "arrowright":
+            controls.goNext();
+            e.preventDefault();
+            break;
+        case "w":
+        case "k":
+        case "arrowup":
+            controls.focusPrev();
+            e.preventDefault();
+            break;
+        case "s":
+        case "j":
+        case "arrowdown":
+            controls.focusNext();
+            e.preventDefault();
+            break;
+    }
+});
+
+// Persistent Achievement API
+// Achievements are stored as a JSON array in localStorage.achievements
+setup.getAchievements = () => {
+  localStorage.achievements = localStorage.achievements || "[]";
+  const achievements = JSON.parse(localStorage.achievements);
+  return achievements;
+}
+setup.addAchievement = (name) => {
+	let achievements = setup.getAchievements();
+  if (!setup.getAchievements().includes(name)) {
+	  achievements = [...achievements, name]
+	}
+  localStorage.achievements = JSON.stringify(achievements);
+}
+setup.resetAchievements = () => {
+  localStorage.achievements = JSON.stringify([]);
+}
+
+/* Adds passage tags to body[data-tags]. This enables CSS rules which change the page background based on passage tags.
+A sample selector looks like body[data-tags~="mytag"];
+*/
+$(window).on('sm.passage.shown', function(event, eventObject) {
+	$("body").attr("data-tags", passage.tags.join(" "));
+});
+
+
+
+:: Life of the Party. <2649,515>
+Your name is Hollis. You are an androgynous gray rabbit, around the age of nineteen.
+
+Right now, you're at a very crowded house party. Drunk and horny college furs are everywhere. Loud music and the smell of cheap booze fills every room. <% if (setup.getAchievements().length > 3) { %>This place seems strangely familiar, though you can't put a paw on it.<% } %>
+
+About twenty minutes ago, you showed up with your friend Reese. At some point you got separated, and you haven't seen him since.
+
+\> [[Look around the foyer.|The Foyer.]]
+
+:: The Foyer. <2650,700>
+<%
+s.partyFlavorState = 0;
+%>
+
+The floor in the house's entryway is plastered with empty plastic cups. Music is blaring. College-age furs in every direction are chatting, flirting, and dancing.
+
+What will you do?
+
+\> [[Find someplace quieter.]]
+
+\> [[Search for your friend.]]
+
+\> [[Dance a little.]]
+
+:: Header [hide header] <2836,370>
+<div class="header">
+  <ul class="header-nav list-unstyled">
+	<li>
+	  <a0 id="restart-button" onclick="setup.restart()">Restart</a>
+	</li>
+	<li>
+	  <a0 id="undo-button" onclick="setup.undo()">Undo</a>
+	</li>
+  </ul>
+</div>
+
+<h2 id="recent-command"></h2>
+
+:: Bust a move. <3725,1780>
+You decide to let loose, and begin to really strut your stuff on the dance floor. You recall your lessons in ballet and musical theatre, and perform a real dazzling series of movements. The others around you seem impressed.
+
+A big brown stallion in a green jacket seems to take notice, and winks at you from across the room.
+
+\> [[Wink back at him.|Wink back at Basil.]]
+
+\> [[Ignore him.|Ignore Basil.]]
+
+:: Search for your friend. <925,1150>
+<% localStorage.outsideUnlocked = true %>
+
+You make a quick circle of the first floor, but Reese is nowhere in sight.
+
+<% if (!localStorage.upstairsUnlocked) {
+%>
+
+Someone around here has probably seen where he went. Maybe you should check outside?
+
+\> [[Go back.|The Foyer.]]
+
+<% } else { %>
+
+You get the feeling he's upstairs.
+
+\> [[Look upstairs.]]
+
+<% } %>
+
+:: Find someplace quieter. <1850,950>
+The incessant loud music is starting to hurt your sensitive ears. You decide to look for a place away from the noise where you can clear your thoughts.
+
+This house is huge, and its upscale furnishings seem almost too fancy for the moderately wealthy suburb it's located in. It shouldn't be too hard to find a quiet place to relax.
+
+\> [[Go to the bathroom.]]
+
+\> [[Go outside.]]
+
+<% if (localStorage.garageUnlocked) { %>
+
+\> [[Go to the garage.]] *(HIDDEN UNFINISHED BETA CONTENT)*
+
+<% }%>
+
+:: Look upstairs. <956,1565>
+<div-></div>
+
+You head up the stairs looking for your friend.
+
+<%= story.render("Upstairs Hallway") %>
+
+:: Go outside. <2725,1000>
+You walk outside and down the steps onto the back porch.
+
+You see a large hyena staring at her flip phone. She's a little older than you, and much, much taller. There doesn't appear to be anyone else around.
+
+\> [[Talk to the hyena.]]
+
+\> [[Sit by yourself.]]
+
+:: Talk to the hyena. <2704,1274>
+*CW: Revoked consent. Accidental(?) digestion. Girl with dick. Masturbation.*
+
+The hyena girl is sitting on a garden bench, next to a disused charcoal grill and some rumpled up camping equipment.
+
+She has sandy-colored fur, with brown spots. She's wearing acid-wash jeans and a black t-shirt with the logo of a band you've never heard of.
+
+She notices you, and flips her hair non-chalantly.
+
+"Oh. Sup."
+
+\> [[What are you doing out here alone?]]
+
+\> [[Have you seen my friend?]]
+
+:: Have you seen my friend? <2783,1446>
+She takes a thoughtful sip from a plastic cup.
+
+"Depends who's asking," she replies...
+
+\> [[Tell her your name.]]
+
+:: Wink back at Basil. <3727,1894>
+<% localStorage.talkedToBasil = true; %>
+
+The horse smiles, and walks over to you, carrying two bottles of beer.
+
+"Hey, thanks for coming," he says, squatting down to offer you one. This gesture makes you realize that he's basically twice your height, and easily the biggest person in the room. "I'm Basil."
+
+\> [[Take drink.]]
+
+\> [[Don't take drink.]]
+
+:: Take drink. <3673,2037>
+<%
+s.horseConsensualPath = true;
+%>
+
+You take the bottle and have a few courteous sips. He chugs his immediately, swallowing the whole beer in only a few gulps. It's impressive to watch. He wipes his mouth.
+
+"Those were some cool moves, kid," he says, smiling a little, "Seems like you're enjoying my party."
+
+\> [[Thanks!|Thanks for the compliment!]]
+
+\> [[I'd be happy to show you some more...]]
+
+:: Don't take drink. <3790,2038>
+<%
+  s.horseConsensualPath = false;
+%>
+
+He shrugs. "Suit yourself," he says, then chugs both bottles in hardly a few seconds. It's a little intimidating.
+
+Basil stares at your face for a second, and raises an eyebrow.
+
+"...Don't I know you from somwhere?"
+
+\> [[I don't think so...]]
+
+\> [[My name's Hollis?]]
+
+:: Examine L's bedroom door. <954,2031>
+<div-></div>
+
+You covertly bring one of your ears to the first bedroom door. There are definitely people inside. You can hear a muffled moaning.
+
+What do you do?
+
+\> [[Knock politely on the door.]]
+
+\> [[Ignore it.]]
+
+:: Check the broom closet. [no_fade] <1226,1589>
+<div-></div>
+
+You enter the broom closet.
+
+<div style="min-height: 6em">
+
+Inside is a shelf with some towels, linens, and some cleaning supplies. Leaning against the wall is a broom and a vacuum cleaner.
+
+</div>
+
+\> [[Look around the broom closet.|BROOM CLOSET.]]
+
+<% if (s.broomClosetEnding) { %>
+\> [[Go. Back. To the hallway.|Try to leave.]]
+<% } else { %>
+\> [[Go back to the hallway.|Upstairs Hallway]]
+<% } %>
+
+:: Go to the bathroom. <1864,1324>
+<div-></div>
+
+You enter the downstairs bathroom, and shut the door behind you, freeing yourself from the stress of the party.
+
+The room's every surface is flush with immaculate porcelain and gaudy gold trimmings. There's something hypnotic about it all. Your mind races with possibilities.
+
+\> [[Masturbate.]]
+
+\> [[Use toilet.]]
+
+\> [[Leave.|Leave the bathroom.]]
+
+:: Try to leave. <1231,1858>
+<div-></div>
+
+After wasting an inordinate amount of time doing absolutely nothing, you rationally decide that yes, it is now finally time to leave the broom closet.
+
+You turn to the door and reach for the handle, only to realize that there isn't one. The broom closet only opens from the outside. Whoever designed this tiny, pointlesss room apparently did not expect that anyone would ever be stupid enough to close the door behind them.
+
+You're trapped. Wow. I didn't even know that was possible.
+
+\> [[Bang on the door.|ENDING: Broom Closet]]
+
+:: Open the door. <965,2347>
+*CW: Female Predator, Voyeur, Multi-prey, A dude's butt in your face*
+
+You swing the bedroom door open, and enter. There are three people in the room.
+
+You see a cream-colored mare sitting on the bed, with a huge bulge in her throat. Beside him is a German shepherd, who is gently caressing the horse's stomach.
+
+The third person, you realize, is your friend Reese. The guinea pig's head and shoulders are sticking out of the horse's mouth as she swallows him. All three of them look at you with surprise.
+
+"Woah, what the fuck?" asks the dog.
+
+"Hollis!?" cries Reese.
+
+The horse swallowing Reese suddenly smiles. "Ohmigod, Holly!" You recognize her: it's Lacey Armstrong, the girl who had volunteered to tutor you in math.
+
+\> [[Do something!]]
+
+:: Ignore it. <1026,2226>
+You decide it's probably best to just leave them alone.
+
+<%= story.render("Upstairs Hallway") %>
+
+\> [[Go back to the foyer.|The Foyer.]]
+
+:: Leave the bathroom. <2010,1496>
+You go back into the hallway. The loud music continues to bombard your ears. That didn't really help much.
+
+\> [[Go outside.]]
+
+\> [[Return to the foyer.|The Foyer.]]
+
+:: Upstairs Hallway <960,1685>
+<div-></div>
+
+The upstairs hallway has a few doors. You can see two bedrooms: one is marked with a "B", the other with an "L". In between them is a small broom closet.
+
+Where will you look?
+
+\> [[Examine B's bedroom door.]]
+
+\> [[Check the broom closet.]]
+
+<%
+s.broomClosetState = 0;
+s.broomClosetEnding = false;
+%>
+
+\> [[Examine L's bedroom door.]]
+
+:: Start [no_heading start] <2624,222>
+<style>
+tw-passage {
+  padding-top: 5rem;
+}
+tw-passage > * {
+  margin-bottom: 5rem;
+}
+</style>
+
+<%= story.render("Logo") || "" %>
+
+<div>
+
+\> [[Life of the Party.]]
+
+\> [[Keyboard Controls]]
+
+</div>
+
+<div>
+<%
+let achievements = [...setup.getAchievements()].sort();
+if (achievements && achievements.length > 0) { %>
+<h3>Achievements <%=`(${achievements.length} / ${6})`%></h3>
+<ul>
+<% achievements.map(a => { %>
+   <li><%- a %></li>
+<% }) %>
+</ul>
+
+\> [[Reset Achievements]]
+
+<%
+if ([...setup.getAchievements()].length >= 5
+    && ![...setup.getAchievements()].some(a => /Broom Closet/i.test(a))) { %>
+<code>Did you get the Broom Closet Ending? The Broom Closet Ending was my favorite!</code>
+<% } %>
+
+<% } else { %>
+<h4>⚠️ CONTENT WARNING ⚠️</h4>
+<p><em>CW: This story focuses heavily on oral vore, fatal vore, and unwilling digestion. It also contains scenes containing masturbation, either by the player or their predator. If you find such material objectionable, please read at your own discretion.</em></p>
+<% } %>
+</div>
+
+:: Sit by yourself. [dreamy_1] <3175,1525>
+You find an empty bench to sit on by yourself, distancing yourself from the chaos of the party. Being out here on your own, it's actually quite peaceful.
+
+\> [[Watch the stars.]]
+
+<style>
+  body {
+   --background: #eef
+  }
+</style>
+
+:: Watch the stars. [dreamy_1] <3161,1632>
+You do so.
+
+The night sky is peaceful. The clouds are clear, but you can only barely see the stars thanks to the light pollution of this suburban neighborhood.
+
+\> [[Get up.]]
+
+\> [[Comprehend the oneness of an eternal cosmos.]]
+
+:: Get up. <3044,1595>
+Having had your fill of stargazing, you stand up from the bench.
+
+\> <a0 data-passage="Talk to the hyena.">Talk to the hyena.</a>
+
+\> <a0 data-passage="The Foyer.">Go back to the foyer.</a>
+
+:: Tell her your name. <2781,1564>
+You say your name is Hollis.
+
+"Pleased to meet you, Hollis, I'm Ana." From her tone, you suspect she's being at least a little sarcastic. "Now, this friend of yours?"
+
+\> [[He's a guinea pig, about this tall...|Describe Reese.]]
+
+:: Do something! <967,2477>
+Your friend is being devoured before your very eyes. You know you've got to save him, but you hesitate. Under the pressure, your body freezes up.
+
+"You know them?" asks the dog.
+
+"I'w expfain lafer," says Lacey.
+
+You can see Reese's neck slowly disappearing into the mare's slick pink gullet. "Hollis," he calls, "Don't worry about me! I'll be fi-mmph." His voice becomes muffled as Lacey gulps hard, and pulls Reese's head fully into her mouth.
+
+The dog stands up in a threatening manner.
+
+What will you do?
+
+\> [[Attack Lacey!!]]
+
+:: Ignore Basil. <3877,1787>
+Something about the stallion strikes you as bad news. You keep dancing casually for a little while, but eventally excuse yourself and return to the main foyer.
+
+\> <a0 data-passage="The Foyer.">Go back to the foyer.</a>
+
+:: I'd be happy to show you some more... <3576,2163>
+He raises an eyebrows, and a satisfied smile comes across his face as he catches your meaning.
+
+He delicately takes your hand in his, and steps closer to you until he's almost looking straight down at you. It's a little bit intimidating.
+
+"Y'know, you look kinda familiar..." He spends a few seconds thinking, and raises an eyebrow.
+
+"...Do I know you from somwhere?"
+
+\> [[I don't think so...]]
+
+\> [[My name's Hollis?]]
+
+:: I don't think so... <3847,2290>
+"I've definitely seen your face before..." For a moment, he stares at you intently. His face is rugged and angular, yet his voice is quite gentle.
+
+Suddenly, his eyes flash with recognition. "Wait a minute, Holly Freeley?"
+
+Hollis, you correct him.
+
+"Oh, right! It's me, Basil Armstrong! From Riveredge High? I think you were in my sister's math class!"
+
+\> [[Oh, right!]]
+
+:: My name's Hollis? <3728,2288>
+His eyes flash with recognition.
+
+"No way! Hollis Freeley? It's me, Basil Armstrong, from Riveredge High! I think you were in my sister's math class!"
+
+\> [[Oh, right!]]
+
+:: Masturbate in the bathroom. <1883,1633>
+You.. um... Okay.
+
+Your libido overcomes you. In the privacy of a stranger's house, you stick your hand down your underwear and begin to pleasure yourself for a minute or two.
+
+Satisfied, you take your hands out and stop.
+
+\> [[Keep going.|Keep masturbating.]]
+
+:: Keep masturbating. <1881,1758>
+...Look, um, I'm not here to judge or anything. Maybe you're just here cause you're curious. Maybe you wanna see all the options. Get all the endings.
+
+Still, there's plenty of other stuff you could be doing at this party instead. This is kind of... weird?
+
+\> [[Don't stop!!]]
+
+:: Don't stop!! <1877,1877>
+Okay! God.
+
+You keep on... uh, touching yourself, for a while longer. Your heavy panting gets faster and faster, and little moans escape your lips.
+
+Suddenly, you hear a loud pounding at the door.
+
+"You've been in there for like 15 minutes," says an annoyed female voice through the door, "I gotta fuckin' pee."
+
+\> [[Oh shit!]]
+
+:: Oh shit! <1879,2000>
+*CW: Humiliation. Non-consensual Vore. Blackmail.*
+
+She bangs impatiently on the door for a few more seconds. You realize with horror that you never locked the door behind you.
+
+"That's it!" she says, "I'm coming in there."
+
+\> [[Orgasm!!!|Finish!!!]]
+
+\> [[Escape through window.|Escape through window.]]
+
+:: Finish!!! <1880,2125>
+Throwing care to the wind, you yank your pants down and continue abusing your gentials, steadily approaching climax... Getting closer and closer... Until...!!! You achieve orgasm. It feels wonderful. Your body convulses a little, and you let out a loud moan of satisfaction.
+
+Seconds later, the door swings open to reveal a gigantic brown bear wearing a tank top and shorts. "...!!!"
+
+The bear's face goes red, and she stares at you with what is clearly a combination of disgust and morbid curiosity. Suddenly though, she recognizes you. With a devious smirk, she closes the door behind her, and asks, "Woah, Holly?"
+
+\> <a0 data-command="Wait, I can-" data-passage="Hazel bear-tackles you">Wait, I can explain!</a>
+
+:: Use toilet. <1751,1486>
+You consider using the toilet. However, upon examining it, you realize that the bowl is almost twice your size, and you could easily fall in. You realize that this house is probably owned by a family of rhinoceroses, or maybe big horses.
+
+You didn't really need to pee anyway.
+
+\> [[Go back|Go to the bathroom.]]
+
+:: Escape through window. <1641,2007>
+<div-></div>
+
+Thinking quickly, you yank your pants up, pull the nearest window open, and dive through it to safety.
+
+Just then, the door behind you swings open to reveal Hazel Gently, a buxom brown bear.
+
+As you clear the window sill, you look out and realize that this window is on the second story, overlooking the backyard. You faceplant gracelessly in the backyard and rapidly lose consciousness.
+
+In your last waking seconds, you realize this was a very stupid idea.
+
+### Game Over.
+
+\> [[Undo|Oh shit!]]
+
+\> [[Restart|Start]]
+
+:: Comprehend the oneness of an eternal cosmos. [dreamy_2] <3167,1764>
+Sitting here alone, with your head tilted toward the starryish sky, you realize you don't need anyone else.
+
+You don't need to rescue your friend from being eaten. You don't need to find a hot date, and you definitely don't need to be seduced, swallowed, and privately digested by them. You don't even need to think about how you're getting home after this.
+
+All you need to do is rest your eyes upon the swirling heavens, and relax. You realize the simple truth that we are all one. Whether pred or prey, rabbit or horse, nerd or jock, all are simply food for the gaping maw of time itself.
+
+\> [[Stop meditating.|Get up.]]
+
+\> [[Break these mortal chains.|Break.]]
+
+:: Describe Reese. <2727,2722>
+You give her a brief description of your friend, Reese.
+
+"Sorry, haven't seen him," she shrugs and says, "But at a party like this, I wouldn't be surprised if he was already in some pred's gut."
+
+\> [[What!?|What do you mean?]]
+
+:: Charm. <2656,1792>
+Ana cocks an eyebrow at you. "...What did you say?"
+
+You realize that instead of saying or doing something charming, you literally just said the word *charm* out loud.
+
+Thinking quickly you tell her, uh, you meant, that she seems very charming! No, wait, you're *charmed* to meet her! That's it. Her name's Ana, yours is Hollis. Charmed.
+
+\> [[(oh god oh fuck)]]
+
+:: Attack Lacey!! <968,2603>
+"No, don't!" cries Reese from inside the horse's throat.
+
+Adrenaline rushes through your veins. You sidestep the dog, and fling yourself full force at the horse's bulging stomach, perhaps hoping to dislodge your friend via the Heimlich maneuver. Unfortunately, your small size makes this effort completely ineffective.
+
+"Woah!" the dog says as you harmlessly slam against his girlfriend's gut, "Someone's eager to join their friend!" You fall backward, stunned, and he wraps his big paws around your shoulders. "What do you think, Lace," he says, "Got room for another?"
+
+Lacey gives one last forceful swallow. You watch in horror as the bulge made by Reese's head drifts down her throat and disappears into the writhing bulge in her middle. "Sure do," she smiles.
+
+\> [[Struggle.|Struggle against Lacey.]]
+
+\> [[Let her eat you.|Let Lacey eat you.]]
+
+:: Knock politely on the door. <897,2225>
+"Um, go away," says a female voice from inside the room.
+
+Alongside it, you hear a few more muffled grunts, as well as a kind of slick slurping noise. Is someone... swallowing?
+
+\> [[Open it.|Open the door.]]
+
+\> [[Ignore it.]]
+
+:: Thanks for the compliment! <3731,2167>
+He chuckles. "Y'know, you look familiar..." He spends a few seconds thinking, and raises an eyebrow.
+
+"...Do I know you from somwhere?"
+
+\> [[I don't think so...]]
+
+\> [[My name's Hollis?]]
+
+:: Masturbate. <1871,1489>
+For just a moment, you consider masturbating in the bathroom of a stranger's house, while a gigantic house party rages on just outside. You realize however what a bad idea that is. After all, someone else might want to use the bathroom, or accidentally walk in on you.
+
+You take a deep breath, get your impulses under control, and...
+
+\> [[Leave.|Leave the bathroom.]]
+
+\> [[Masturbate in the bathroom.]]
+
+:: What are you doing out here alone? <2644,1437>
+"I could ask you the same question," she replies.
+
+She looks away for a moment, then lets out a little sigh. "I guess I just get a little stressed out around loud parties? Like, even though I'm supposed to be enjoying myself here? I guess I'm just trying to get away from it all for a moment."
+
+\> [[Same here...]]
+
+:: Same here... <2645,1545>
+She nods, looking wistfully off into the distance. The moonlight reflects perfectly in her amber-colored eyes.
+
+"I'm Ana, by the way. Ana Rose." She pats spot on the bench next to her. "...You can sit if you want."
+
+\> [[My name's Hollis!|Tell Ana your name.]]
+
+:: What do you mean? <2722,2847>
+<% localStorage.upstairsUnlocked = true %>
+
+She gives you a slightly patronizing stare.
+
+"C'mon, you'd have to be an idiot not to realize. This whole place is practically crawling with preds. Your bud probably got dragged into a broom closet somewhere and gurgled. That's all there is to it."
+
+\> [[But, um, if he wasn't...?]]
+
+\> [[That's kind of hot...]]
+
+:: (oh god oh fuck) <2786,1890>
+She snickers as you helplessly tumble over your words. For a moment, she hesitates, delicately running her tongue between her lips and over her pointy white teeth.
+
+"Okay, Hollis. I... think you're kinda cute too," she says, "for a herbivore at least..."
+
+She smiles at you, and brushes her hair out of her eyes. She seems to be a little more comfortable around you now.
+
+"Kinda cold out here, huh?"
+
+\> [[Do you want a hug?]]
+
+\> [[Anyway, I'm looking for this friend of mine?|Looking for a friend. (after meeting Ana)]]
+
+:: Kiss her. <2679,2152>
+You've seen enough romance movies to know where this is going.
+You're sure of it–this is the moment where you lean in, and both share a sudden yet dramatic first kiss.
+
+You turn toward her big furry face, and attempt to kiss her on the mouth. She immediately leans away, letting out a small, surprised growl.
+
+"Woah there, casanova, that's, uh..." She frowns. "I'm not really comfortable with that? "
+
+\> [[S-sorry...|Sorry for trying to kiss you.]]
+
+\> [[Try to kiss her again.|Kiss her again.]]
+
+:: Tell Ana your name. <2648,1658>
+"Hollis," she repeats, smiling in your direction. "Cute name."
+
+You're flustered, and not sure how to respond.
+
+\> [[Charm.]]
+
+\> [[I... um... think you're... also... cute?|(oh god oh fuck)]]
+
+:: Kiss her again. <2614,2276>
+<div-></div>
+
+Ana is visibly uncomfortable, and showing her teeth.
+
+You reflect upon the obvious subtext of her response, and decide instead to delicately run a paw through her dark brown mohawk.
+
+"...No seriously don't-...!!!"
+
+\> [[Stroke hair.|ENDING: Can't Take a Hint]]
+
+:: That's kind of hot... <2783,2959>
+She blushes furiously.
+
+"You... You think vore is *hot*? I mean I guess that's not a surprise, considering you're *here*."
+
+\> [[N-no! I meant...]]
+
+:: A tender moment. <2836,2146>
+The two of you sit there in comfortable silence, watching the stars.
+
+"So," she giggles eventually, "some party, huh."
+
+You caress your ears lightly. Yeah, you say, the music's kinda loud.
+
+She snickers. "Oh my god, I know, right? I can't believe they're playing freakin' dubstep. Like, what is this, 2011?" You both laugh.
+
+For a little while, neither of you say anything. Ana looks over at you. "Something on your mind?"
+
+\> [[I'm looking for this friend of mine...|Looking for a friend. (after meeting Ana)]]
+
+:: N-no! I meant... <2855,3087>
+Thinking quickly you tell her, uh, you meant, that you think predators are hot! Not that you're assuming she's a— no, fuck, um...
+
+"Deep breaths, pal."
+
+You clear your throat. What you meant to say was that digesting inside is a stomach, is literally a hot place to be. Like, temperature-wise. Not that you'd ever *want* to be digested in a stomach. Or-or- even thought about anything like that!
+
+Ana pauses thoughtfully for a moment. You see her sharp and shiny teeth reflecting a tiny bit of moonlight. "...Hollis, do you want me to digest you?"
+
+\> [[...Yes please.]]
+
+\> [[No, wait.]]
+
+:: ...Yes please. <2585,3458>
+You can't believe you're saying this.
+
+Ana chuckles, "Gee, I'm that obvious as a predator, huh?"
+
+Ana stands up and gives you a big smile. "Y'know, talking to you was making me *really* hungry." You blush, and she gives you a paw and helps you up. Her tail is wagging eagerly.
+
+"Okay!" she says, "follow me!"
+
+\> [[Follow Ana into the yard.]]
+
+:: Let Lacey eat you. <903,2722>
+You stop resisting, and go limp against Lacey's engorged belly. The dog stops forcing you against it.
+
+"Huh, this kid's smarter than I thought!" he says, now lifting you towards the horse's awaiting maw. Lacey smiles.
+
+"It's great to see you Holly! So thoughtful of you to be my dessert."
+
+"Oh Hollis, it's so sweet of you to go willingly! I promise I'll digest you and your buddy as painlessly as possible." She licks her lips. "Oh, and thanks for sharing your math homework with me!"
+
+She opens her mouth wide. The dog positions your bare feet in front of her awaiting maw. He smiles. "Time for dessert, babe!"
+
+\> [[Gulp.|Lacey noms ur legs.]]
+
+:: But, um, if he wasn't...? <2663,2963>
+She shrugs.
+
+"I mean, you could probably check in the rooms upstairs. Somewhere secluded and private, that's probably where I'd go... *if* I was trying to eat someone..."
+
+She clears her throat. "Not that that's like, a thing that I've ever done, or anything.
+
+\> [[Y-you could eat me, if you wanted to...|Ana, I want you to eat me.]]
+
+\> [[Thank you, goodbye.]]
+
+:: Thank you, goodbye. <2718,3085>
+You excuse yourself politely, and head back into the house. Ana gives a casual wave as you leave.
+
+\> <a0 data-passage="The Foyer.">Go back to the foyer.</a>
+
+:: Struggle against Lacey. <1016,2727>
+You try to resist, but the dog only grips you tighter, and begins to undress you, presumably to make you easier on the stomach. He then lifts your naked body effortlessly into the air, and positions your bare feet in front of Lacey's awaiting maw.
+
+Lacey looks over your naked body with a bit of pity. "Oh Hollis, I'm real sorry for eating you. Vore just makes me *sooo* horny... And your friend's already squirming *soo* good inside me." She licks her lips. "Plus, you kinda owe me for helping you get that A in Calculus."
+
+Lacey opens her quivering pink maw wide, and says, "Anyway, buh-bye!"
+
+\> [[Gulp.|Lacey noms ur legs.]]
+
+:: Dance a little. <3600,1125>
+<%
+const visits = visited(passage.id);
+
+if (visits == 1) { %>
+
+You head into the living room, a high-ceilinged room where dozens of furs of every size and species are busy getting drunk and grooving to the music.
+
+You're usually a little uncomfortable in big groups, but right now, you're feeling pretty confident, and start dancing a little.
+
+<% } else if (visits == 2) { %>
+
+You happily move to the music blaring from the speakers. It's kind of cramped in here, and you're being a little cautious to make sure no one crushes you by accident.
+
+<p><%= story.render("Randomized Party Flavor") %></p>
+
+<% } else if (visited("Grab some punch.") < 2) { %>
+  <p><% if (visits < setup.partyDanceLiterals.length) { %>
+	<%= either("You dance some more.", "You keep on dancing.") %>
+	<%= either("It feels nice.", "This place is kind of crowded.", "This is fun!") %>
+  <% } else { %>
+    You're starting to feel <%= either("a bit", "a little", "kind of") %> thirsty.
+  <% } %></p>
+
+  <p><%= story.render("Randomized Party Flavor") %></p>
+
+<% } else if (visited("Grab some punch.") < 3 || visits < setup.partyDanceLiterals.length) { %>
+
+  <%= either("You wiggle your hips as you dance.", "You try out some new moves.", "You shake your tail flamboyantly, much to the delight of onlookers.") %>
+
+  <%= either(
+        "Maybe it's the alcohol, but feel like you're dancing really well.",
+		"You're starting to attract some attention.",
+		"People around you are looking on with interest.",
+		"Someone cheers as they watch you move.",
+		"One more drink couldn't hurt, right?",
+		`You hear someone murmur, "Woah, I'd like a piece of that..."`
+		) %>
+
+	<p><%= story.render("Randomized Party Flavor") %></p>
+
+<% } else { %>
+You're feeling it now. You're drunk, horny, and seriously vibing with this song. All those high school theatre classes have prepared you for this moment.
+
+It's time to really show them what you've got.
+<% } %>
+
+\> <a0 data-passage="Dance a little."><% if (s.partyFlavorGutbump) { %>
+N-no problem!
+<% } else if (s.partyFlavorOwl) {%>
+Politely ignore her.
+<% } else if (s.partyFlavorLabrador) { %>
+Y-you too?
+<% } else {%>
+Dance a little more.
+<% } %></a>
+
+<% if ((setup.partyDanceLiterals && visits >= setup.partyDanceLiterals.length)
+  || localStorage.talkedToBasil) { %>
+
+\> [[Bust a move.]]
+
+<% } %>
+
+\> [[Grab some punch.]]
+
+:: Grab some punch. <3581,1784>
+<%= (() => {
+const literals = [
+
+`You scoot over toward the thoughtfully placed snack table, and grab a small cup of fruit punch. Taking a little sip, you observe that it tastes mostly like vodka, with a little hint of kool-aid.\\n\\n
+...Yuck.`,
+
+`You grab another cup of punch. After tasting it again, the flavor is starting to grow on you. You drink it.`,
+
+`You take another drink of punch. Maybe it's because of your weak tolerance, but you're feeling pretty tipsy right now.`,
+
+`You go to get another drink, but trip and fall on the way. Maybe you should slow down?`,
+
+`You walk over to the snack table, and slam down a third drink of vodka punch. You feel like you're about to lose your balance. Wow. That was probably a bad idea.`,
+
+`Better not drink any more of this stuff...`
+];
+
+return literals[Math.min(visited(passage.id), literals.length) - 1]
+})() %>
+
+\> [[Go back.|Dance a little.]]
+
+:: ENDING: Broom Closet [gameover] <1237,1986>
+<%
+if (!setup.getAchievements().some(s => s.includes("Broom Closet"))) {
+  setup.addAchievement("Worth it? (Broom Closet Ending)")
+}
+%>
+
+You bang on the door trying to get someone's attention, but with the loud music going on downstairs, no one can hear you. As a result of this incredibly stupid turn of events, you remain trapped in the broom closet for the rest of the night. Congrats, I guess, on finding the dumbest ending ever.
+
+### Game Over.
+
+\> [[Epilogue?|Epilogue: Broom Closet Ending.]]
+
+:: ENDING: Can't Take a Hint [vore] <2618,2404>
+"...!!!"
+
+The second you touch her hair, the hyena immediately lets out an vicious bark, and reflexively glomps her mouth down over your head. You faint from surprise. Ana quickly swallows your unconscious body, making sure no one else was around to see.
+
+"Dammit," she mutters, patting the massive bulge in her engorged belly, "not again..."
+
+<% s.sawFirstKissEnding = true;
+// setup.achievements.add("Cannot Take a Hint (Hyena Bite Ending)");
+%>
+
+### Game Over
+
+\> [[Do you want a hug?]] *(Rewind)*
+
+:: Randomized Party Flavor [hide] <3614,1586>
+<!-- wow, the code that controls this part sucks. -->
+
+<%= (function() {
+  setup.partyDanceLiterals = setup.partyDanceLiterals || [
+    "You see a group of labradors cheering on their friend as he attempts to do a keg-stand.",
+"A pair of black mice are looking on with awe and dismay as a dog proudly presents his enormous, swollen belly.",
+`The speakers start playing a techno remix of Marie Predatora's latest rap single: "Belly Drop, Belly Drop (Belly Drop)."`,
+`A grey wolf with a huge protruding gut accidentally bumps into you. "S'cuse me," she mutters as she walks away.`,
+`Your ears perk up: the speakers are playing one of your favorite songs by the obscure R&B group, LÖUD GRÜMBLE. You tap your furry toes happily.`,
+`The sound system blares with the shouty vocals and distorted guitar of "Groupie Gas" by The Buttfuck Zombies.`,
+`A tall wolf in a scarf and a flannel shirt brought an acoustic guitar with him. He's playing "Wonderwall" with an extremely thoughtful look on his face.`,
+`A slightly chubby owl notices you from across the room and begins licking her beak.`,
+`A drunk labrador begins nuzzling you. "Oh my gooood you guys, this rabbit is soooo soft..." You blush. Surprisingly, his fur is extremely soft as well.`,
+`A green dragon girl starts wagging her tail in time with the music, and accidentally trips two people. "Sorry!" she stammers, "Sorry again!"`,
+`There aren't many other prey at this party. You feel a little small by comparison to all the huge anthros here.`,
+`A nice, slow song starts playing. You consider offering to dance with one of the guys around you, but most of them are several feet taller than you.`,
+`A heavy-set bear with a selfie stick is recording herself as she shakes her massive hips. You try not to stare, but it's absolutely hypnotic.`,
+`A lioness whispers to her friend, "Did you know there's a rabbit here?" They snicker. "Woah. Do you think it has a vore fetish?"`,
+`You see a catboy eagerly following a wolf out of the room. They both seem quite excited.`
+].sort(e => 0.5 - Math.random());
+
+s.partyFlavorState = +s.partyFlavorState || 0;
+const literals = setup.partyDanceLiterals;
+let text = literals[s.partyFlavorState % literals.length]
+s.partyFlavorState += 1;
+
+// set some flags, in case i want to hook any of these messages into their own routes
+// currently these are used to alter the text of the "dance more" command
+s.partyFlavorMice = text.includes("black mice");
+s.partyFlavorDragon = text.includes("green dragon girl");
+s.partyFlavorOwl = text.includes("chubby owl");
+s.partyFlavorWonderwolf = text.includes("wolf in a scarf");
+s.partyFlavorLioness = text.includes("lioness");
+s.partyFlavorLabrador = text.includes("A drunk labrador");
+s.partyFlavorGutbump = text.includes("accidentally bumps into you");
+
+return text;
+})() %>
+
+:: Do you want a hug? <2726,2029>
+"...Yeah, okay," she replies, with a little smile, and stretches out her arms. You give Ana a hug. You can tell she's wearing a lot of deodorant, but it's not unpleasant. In fact, embracing the soft fur of this curvy hyena, you realize this is one of the best hugs you've ever had.
+
+After a what feels like a wonderful eternity, she lets go. "That was nice," she says, slouching down a little.
+
+Yeah, you say, and tentatively rest your head against her shoulder.
+
+\> [[A tender moment.]]
+
+\> [[Kiss her.]]
+
+:: Ana, I want you to eat me. <2586,3086>
+You brain tells to you to stop. That you're making a big mistake. After hesitating for a second, you finally open your mouth, and manage to get the words out.
+
+The hyena looks at you with astonishment. "R-really?" Her confusion turns into something of a bemused smile.
+
+"You *want* me to eat you? Like, 'eat you' eat you? Digestion and all?"
+
+\> [[...Yes please.]]
+
+\> [[No, wait.]]
+
+:: Hazel bear-tackles you <1879,2247>
+The bear's hackles raise, and she gets a wild look in her eyes. Suddenly, you realize with horror exactly who she is. Standing across the bathroom from you is the captain of your high school's old tackle football league: Hazel Gently.
+
+You try to explain that you're–
+
+Thud. Before you can get a word in edge-ways, or even pull your underwear up, you feel an unbearable weight on your front, and cold tile on your back. Hazel has tackled you to the floor, and is now pinning you by the shoulders.
+
+"Well well well," she says proudly, breathing hotly onto your face, "if it isn't little Holly, still masturbating in the bathroom like the freak they are!"
+
+You groan from under her oppressive mass, and try to say, actually my name is Hhh-...
+
+She cuts you off by shifting her weight onto your wind pipe. "Don't care. But I bet *you'd* care a whole lot if I told everyone at this party I caught you jerking off in the bathroom like a total creep! Isn't that right?"
+
+\> [[Struggle under her.|Struggle under Hazel.]]
+
+:: Struggle under Hazel. <1868,2363>
+You attempt to struggle for breath, but as a petite rabbit, you're hopelessly outmatched. She realizes she's suffocating you, and slowly gets up, squishing her rumbling belly against you in the process.
+
+She eventually towers proudly over your collapsed body. "So. How about we make a little deal? I promise not to share the *embarassing* details of  how you jizzed yourself right in front of me, and in exchange..." A twisted smile comes across her lips. "I get to eat you."
+
+\> [[What? Never!]]
+
+\> [[O-okay...]]
+
+:: What? Never! <1808,2480>
+Gasping for air, you vehemently shake your head no.
+
+"Hm, really?" she says, "I thought you'd like it! Remember that time the librarian caught you touching yourself to 'Keeping Them Down: Tips and Tricks for the Adolescent Predator?'"
+
+Hazel reaches down and scoops you up in her arms like a baby, although her grip is almost painfully tight. She begins to carry you toward the bathroom door.
+
+"But if you're so *wildly* opposed to becoming bear shit, I guess you wouldn't mind if I brought you out there and jerked you off in front of *everybody*! I'm sure they'd be delighted to watch after they hear about how you creamed your jeans in Basil Armstrong's bathroom!"
+
+She gives you a smack on the ass which sends shivers down your spine.
+
+"I bet there's loads of horny critters here who'd just love a piece of this bottom! I mean, assuming you just can't *stand* the thought of being dinner for dear ol' Hazel..."
+
+\> [[W-wait! I'll do it!]]
+
+:: O-okay... <1954,2471>
+Hazel laughs. "I should've known a little creep like you would say yes... For all I know, you're just begging to get inside this belly." She laughs and pats her gut, which grumbles loudly. "I bet that makes you even hornier!"
+
+The bear's paws clench around your skinny shoulders, and lift you effortlessly from the ground. "Don't worry Holly, this'll be our little secret." She stretches her jaw wide, giving you a clear look into the undulating red flesh of her slobbering maw.
+
+"Ready to be bear-fat? Of course you are. Down the hatch!"
+
+\> [[Gulp.|Hazel noms you.]]
+
+:: Hazel noms you. [vore] <1876,2751>
+You attempt to squeal out in fear, but Hazel's giant bear mouth has already clamped down hard over your head. Your face is pressed into her slobbery tongue as she effortlessly slides your head and shoulders into her maw.
+
+"Mmmm," Hazel moans as she tastes your fur. You cringe as your face is slowly squeezed into the slimy, suffocating tunnel of her esophagus. You're still wearing your top, but you feel Hazel's paws effortlessly yank your jeans off as she devours you.
+
+You remember reading once that while their stomach acids can easily dissolve fur, flesh, and bone, bears often struggle to digest denim and leather.
+
+\> [[Get swallowed.|Get swallowed by Hazel.]]
+
+:: Lacey noms ur legs. [vore] <953,2845>
+Your legs slide effortlessly into Lacey's mouth. It's almost like entering a sleeping bag, if that sleeping bag were extremely hot and wet. Your fur feels impossibly slimy. Lacey lets out little snorts and moans as more and more of your body slips into her throat.
+
+The dog watches with fascination and arousal; his girlfriend has already pulled you in up to your chest, then your neck, until only your head is sticking out of her mouth.
+
+Lacey's boyfriend looks at your exposed head and smiles while unzipping his trousers.
+"Now, whaddya say we give our friend here a little goodbye present?"
+
+\> [[Absolutely not!|Refuse Clif's dick.]]
+
+\> [[Suck his dick.|Don't refuse Clif's dick.]]
+
+:: W-wait! I'll do it! <1872,2619>
+Hazel smiles. "Thought so."
+
+She leans down and grabs you by the collar, holding you menacingly up to her face. Her stomach lets out a low, hungry grumble. "Honestly, I'm surprised I never ate you before; you would've been a nice after-game snack!"
+
+The bear's paws clench around your skinny shoulders, and lift you effortlessly from the ground. "Don't worry Holly, this'll be our little secret." She stretches her jaw wide, giving you a clear look into the undulating red flesh of her slobbering maw.
+
+"Ready to be bear-fat? Of course you are. Down the hatch!"
+
+\> [[Gulp.|Hazel noms you.]]
+
+:: Examine B's bedroom door. <634,1904>
+You don't hear anyone inside. Carefully, you prop the door open and peer inside.
+
+There's no one in there. The shelves are sporting a number of trophies from various marathons and track events.
+
+<div->[[Look in Basil's drawers.]]</div>
+
+\> <a0 data-passage="Look in Basil's drawers." data-command="Snoop in drawers.">Check drawers.</a>
+
+\> [[Go back.|Upstairs Hallway]]
+
+:: Reset Achievements <2563,363>
+*This will remove the <%= setup.getAchievements().length %> achievement(s) you have acquired so far, as well as any other persistent story flags. Are you sure you want to continue?*
+
+\> <a0 onclick="localStorage.clear()" data-passage="Start">Yes.</a>
+
+\> [[Cancel.|Start]]
+
+:: No, wait. <2708,3205>
+You tell her she might've gotten the wrong idea. You're not interested in being digested.
+
+"Oh," she says, clearly a little disappointed. "Sorry, but I don't spit my prey up." Ana gestures to her slightly chubby belly, and says, "There's only one way outta here, and it's not pretty. I take it you're not interested anymore?"
+
+\> [[No, thank you though.]]
+
+\> [[You can digest me, if you want... uwu]]
+
+:: Looking for a friend. (after meeting Ana) <2728,2580>
+Ana scratches her head. "I probably haven't seen 'em. What's this friend of yours look like?"
+
+\> [[He's a guinea pig, about this tall...|Describe Reese.]]
+
+:: Oh, right! <3781,2410>
+You remember him now. Basil was a an award-winning track star, who graduated a year ahead of you. His younger sister once gave you math tutoring.
+
+"Yeah, small world, huh?" he says,
+
+You nod, awkwardly.
+
+"So anyway, what brings you to my party?"
+
+\> [[I came here with a friend of mine...]]
+
+\> [[Horse cock.]]
+
+:: Refuse Clif's dick. [vore] <880,3073>
+You vehemently shake your head in protest.
+
+The dog sighs. "Okay, jeez, I was just asking. Suit yourself." He sits on the bed next to Lacey, and begins to caress and massage her bloated stomach. "Looks like your appetizer has already settled down a good bit! You're a real champion, Lace."
+
+Lacey continues dillegently slurping and swallowing you down.
+You feel your feet beginning to enter her stomach, bumping against a hard object which you can only assume is your unfortunate friend. Only your head and shoulders are still protruding from her lips; your body is paralyzed by the powerful muscles of her throat her throat.
+
+\> [[Mmmph...|Lacey finishes swallowing.]]
+
+:: Don't refuse Clif's dick. [vore] <1049,3059>
+You remain silent as Lacey pulls you in further. Now only your head and shoulders are sticking out of her mouth. Obligingly, you open your mouth. The dog smiles.
+
+"Allow me to introduce myself," he says, slowly bringing his erection closer to your mouth. "The name's Clif, and this is my girlfriend Lace. I'm the dog who's gonna destroy your tonsils."
+
+Lacey sees what her boyfriend is doing, and rolls her eyes with a little chuckle. She stops her swallowing, and you barely have time to take a breath before-
+
+*Glk.* Without warning, you feel Clif's enormous rod plunge against your lips, into your throat. Your mouth instantly coats his meat with saliva. His tip is practically dripping with salty pre, and you can do nothing but savor it. His thick, furry balls slap against your snout.
+
+\> [[Swallow his cock.]]
+
+:: Clif jizzes in your mouth. [vore] <1046,3287>
+"...!!!"
+
+Clif grips his cock, and sticks his tip between your lips. Spurt after spurt of warm jizz pumps into your mouth and paints your throat. He lets out a series of eager grunts and gasps as he empties his load into you, and you can tell he's resisting the urge to knot your mouth. You swallow reluctantly. Slowly, and with great satisfaction, he withdraws himself.
+
+"Man," he pants with a smile, "part of me regrets letting you digest this talented little cockslut!" He gently pats Lacey's face. "Part of me, anyway. They're all yours, Lace."
+
+Lacey lets out a happy noise, and opens her mouth wide.
+
+\> [[Mmmph...|Lacey finishes swallowing.]]
+
+:: Lacey finishes swallowing. [vore] <956,3423>
+Your arms are pinned to your side. Lacey's gullet is squeezing tight around your body. You can't move. You couldn't fight back if you tried.
+
+All you can do now is shut your eyes and hope this is all a dream. But you don't wake up. Instead, you feel Lacey stretch her mouth out wide, and...
+
+*Glomp.* Your vision goes dark. You feel her lips clamp down over your ears. Lacey's mouth has engulfed your whole head. She moans with delight. You feel yourself sinking deeper and deeper into her gullet.
+
+\> [[Gulp.|Lacey: Gulp.]]
+
+:: Reese, what happened? [vore] <956,3652>
+You try to reposition yourself, to no avail. Lacey's stomach is hugging you tightly. Your voice is muffled a little by what you now realize is the fur of his tail. Unwittingly, the two of you are sixty-nining.
+
+You ask Reese how the hell he got here.
+
+"Okay, so, I'm grabbing some punch, right? And who do I bump into but Lacey from Math Club, and her hunky boyfriend! We catch up, and it turns out they're both like, *super* into vore. They invite me upstairs and we start fooling around... Then she offered to digest me, and I was like, 'Hell yes!'"
+
+You blink in astonishment. He said *yes*??
+
+"Of course! Why do you think I came here?" he pauses for a moment, and shifts uncomfortably. "...You wanted to get eaten too, right?"
+
+\> [[No! No I did not!|I did not come here to be digested!]]
+
+\> [[I certainly wasn't expecting to!|I did not come here to be digested!]]
+
+:: Lacey: Gulp. [vore] <957,3530>
+You cry out in vain, but nothing slows your slimy descent. You take a deep breath before the slimy tunnel of her throat slides over your neck, and eclipses your nose. For several seconds, you are unable to see or breathe. All you can hear are the sounds of Lacey gulping down your ears, accompanied by her thundrous heartbeat, and the squelching of her innards.
+
+You can feel your legs pressing into Reese's naked fur, as Lacey's stomach effortlessly stretches to accomodate you. The tight accomodations means your body is forced to curl up against his. Finally, after what feels like an eternity, your head is deposited along with the rest of you inside the horse's belly.
+
+"Oh, hey Hollis," says Reese, naked and squeezed tightly against you. "...I think your ass is in my face."
+
+\> [[Reese, what happened?]]
+
+:: Swallow his cock. [vore] <1044,3164>
+"Woah, this kid's a natural! Mmmmh!"
+
+He moans in delight, spending a few seconds merely impressed that you were able to swallow his full length all in one go. However, his torment doesn't end there. Clif eagerly begins to slide his cock in and out of you. The motion quickly evolves into a rhythmic thrust. Each time he hilts in your mouth, you feel yourself getting pushed deeper inside Lacey's throat, until her lips are wrapped around your chin.
+
+"Oh fuck," he moans, grabbing hold of your ears. "I'm gonna... fucking..."
+
+\> [[Spurt.|Clif jizzes in your mouth.]]
+
+:: I did not come here to be digested! [vore] <951,3760>
+"...R-really? Then why did you agree to come along with me? I thought I told you there'd be preds here."
+
+You remind Reese of his exact words. He told you the party would be, and you quote, *crawling with drunk hotties just begging for a taste of you.*
+
+He pauses. "...I see now how that could be misinterpreted. So, you're *not* a vore fetishist? I guess I just always assumed you were a closeted Softie, or a Demi-Dissolver. Sorry, that's what we call people with non-fatal digestion fantasies."
+
+So all that stuff from before... was just roleplaying?
+
+"Yeah," he replies, "all purely consenting fun. Well, except for the part where she ate you. I think she mistook your resistance for playfulness?"
+
+\> [[I need to get out of here!]]
+
+:: I need to get out of here! [vore] <961,3876>
+Reese sucks air through his teeth. "That's... not really an option."
+
+What? You scramble indignantly, trying to get your friend's crotch out of your face for a second.
+
+"It's... kind of an unspoken rule among Dissolvers? No means yes. Lacey wouldn't let us out even if we asked her to. And it'd be rude to deprive her of a meal."
+
+Exasperated, you ask Reese, doesn't she have some kind of *safe word*?
+
+Reese hesitates. "Well um, we *would*, but these two are really into hardcore regurgitation denial," he says. "Like, scenarios where the prey get swallowed, then suddenly change their mind and beg to be released, but the pred still digests them... Clif told me about it, I think it's actually pretty sexy."
+
+You roll your eyes. He's taking the whole "being digested" thing pretty well.
+
+\> [[...So what happens now?]]
+
+:: ...So what happens now? [vore] <960,3996>
+Reese stretches a little against the tight, wet stomach walls around the two of you.
+
+"Now, we digest. A big pred like Lacey should be able to completely convert our bodies to nutrients within about 7 hours."
+
+You ask, will that be painful?
+
+"Oh no, we'll pass out long before then. I'd say we've got about fifteen minutes of oxygen left between us? At least, judging by what I've read."
+
+You sigh. Despite your approaching demise, the warm cocoon of Lacey's belly is actually somewhat calming. In a way, it feels like you're fulfilling your purpose as a rabbit. You're starting to see the appeal of this kind of thing...
+
+\> [[...And until then?]]
+
+:: ...And until then? [vore] <962,4116>
+Lacey's stomach lets out a little grumble. Reese shudders; you can tell the noise makes him a little excited. He tries to reposition himself, to no avail. The two of you remain stuck in a ying-yang of brown and gray fur.
+
+"Well, I was hoping I'd have a little more room in here..." Reese says, and spends a moment thinking. "This is gonna be kind of a dumb question, Hollis... But do you wanna suck *my* dick?"
+
+\> [[...Yeah, okay.|Suck Reese's dick.]]
+
+\> [[Nope.|Don't suck Reese's dick.]]
+
+:: Suck Reese's dick. [vore] <908,4237>
+"Sweet," he says, spreading his legs as much as the stomach will allow. "I really owe you one Hollis. You're the best prey-pal a guy could ever ask for."
+
+It doesn't take much work at all to get Reese's dick into your mouth;  you'd practically been avoiding it this whole time. Its size is nowhere near as threatening as the dog's was.
+
+Mm. You delicately tease your friend with your tongue. He throbs a little in response. If being moments from digestion in a beautiful horse girl's stomach hasn't already done it, he's completely erect now.
+
+"Nnnnnh," he moans, almost involuntarily. It's very cute. "Hol, I'm gonna...!!"
+
+\> [[Swallow his jizz.|Swallow Reese's jizz.]]
+
+:: Don't suck Reese's dick. [vore] <1023,4288>
+"Oh, duh," he says, clearly a little embarassed. "Sorry I asked."
+
+You tell him no problem. You'd imagine you'd probably want to get off before being permanently digested as well. You feel yourself getting lightheaded.
+
+For a little while, Reese doesn't say anything. "Sorry I got you into this mess, Hollis."
+
+You tell him not to worry about it; the whole thing was an almost comically absurd level of miscommunication.
+
+Lacey's stomach grumbles eagerly around you. You now feel yourself getting very sleepy. The last thing you feel is a kind of reluctant contentment, before drifting into a peaceful rest.
+
+\> [[Lacey: Digest.|Lacey: Digest.]]
+
+:: You can digest me, if you want... uwu <2707,3321>
+You blushingly tell Ana you've had a change of heart. You're ready to get gurgled.
+
+Ana stands up and gives you a big smile. "You sure? Awesome! Y'know, talking to you was making me *really* hungry." You blush, and she gives you a paw and helps you up. Her tail is wagging eagerly.
+
+"Okay!" she says, "follow me!"
+
+\> [[Follow Ana into the yard.]]
+
+:: No, thank you though. <2322,4235>
+"Oh, no problem," Ana says, clearly a little crestfallen.
+
+You awkwardly excuse yourself, and walk back into the foyer. She waves half-heartedly as you leave.
+
+\> <a0 data-passage="The Foyer.">Go back to the foyer.</a>
+
+:: Lacey: Digest. <985,4483>
+Outside, Lacey gently caresses the hard masses of meat filling her stomach.
+
+"They stopped moving," she says, smiling and letting a burp escape her lips.
+
+Clif eagerly presses his paws into his girlfriend's engorged belly, feeling for Reese and Hollis's softening outlines. "Do you think they're done in there?"
+
+Lacey touches her gut. "Guess so," she says, "but they were nice while they lasted."
+
+Clif grins, hugging his girlfriend, "Clearly no match for my powerful predator, though, huh?"
+
+She lets out another satisfied burp, and kisses him. "Oh, stop."
+
+\> [[\\*gurgle\\*|Lacey: \\*gurgle\\*]]
+
+:: Lacey: \\*gurgle\\* <976,4634>
+Over the next few hours, Clif and Lacey lay together in her bedroom, as her gut slowly melts Hollis's body into a soft, nutritious paste. Lacey grins as her body lets out a nigh-constant stream of belches.
+
+\> [[The morning after...|ENDING: Lacey's Belly]]
+
+:: Swallow Reese's jizz. [vore] <904,4355>
+Unable to move your head, you have no choice but to allow Reese to hump your face, and after a few seconds, ejaculate into your mouth.
+
+"Mmmmm!" he moans, as his cock spends several seconds erupting with warm semen, which you gulp down. He pants eagerly, likely using up a ton of your air, before finally settling down. "Th-thanks Hol," he murmurs, attempting to pull his dick out of your mouth, and instead smearing your face with cum. "Sorry," he snickers.
+
+For a little while, Reese doesn't say anything. You're getting a little lightheaded now. Finally, he speaks up. "Sorry I got you into this mess, Hollis."
+
+You tell him not to worry about it. You feel yourself getting very sleepy. Lacey's stomach grumbles eagerly around you. The last thing you feel is a kind of reluctant contentment, before drifting into a peaceful rest.
+
+\> [[Lacey: Digest.|Lacey: Digest.]]
+
+:: ENDING: Lacey's Belly [morning] <929,4757>
+The sun rises through through a clear morning sky.
+
+Lacey awakens to find that she has slightly outgrown her bra and pants. Clif rolls over in his sleep, still snoring loudly. As the mare rises to her feet, she feels a familiar rumbling in her gut.
+
+Lacey looks down at her dramatically shrunken belly, and recalls the night before. "Phew," she remarks, "What a night!"
+
+<% s.sawLaceyVoreEnding = true;
+setup.addAchievement("A Two for One Meal (Lacey Vore Ending)");
+%>
+
+### The End.
+
+\> [[Epilogue.|Epilogue: Lacey Post Vore.]] *(Warning: Scat)*
+
+\> <a0 data-passage="Start">Restart</a>
+
+:: I came here with a friend of mine... <3697,2552>
+<% localStorage.upstairsUnlocked = true %>
+
+"Oh, the guinea pig?" he asks.
+
+You nod, and ask if he saw which way he went.
+
+Basil thinks for a second, and says, "I think I saw him talking to my sister's boyfriend."
+
+You ask him if he saw anything after that.
+
+"No, I didn't. But if I were you, I'd probably look upstairs."
+
+\> [[So, how's college?]]
+
+\> [[Thanks for the tip. Goodbye.|Bye Basil.]]
+
+:: Bye Basil. <3738,2699>
+You politely excuse yourself. The horse shoots you finger-guns as you leave. You head for the foyer.
+
+"Stay out of my room!" he calls.
+
+\> <a0 data-passage="The Foyer.">Go back to the foyer.</a>
+
+:: Get swallowed by Hazel. [vore] <1887,2980>
+You flatten your ears against your head, and squeeze your eyes shut as your head begins to slide into Hazel's slick gullet. The big bear handles you effortlessly, now using her paws to grip your struggling legs so you can't kick her in the face. The slimy gulping sensation continues down your neck and her throat wraps around your shoulders as well.
+
+During your first (and only) year on the football team, you saw her use this exact technique on a wolf boy from a rival school. When she caught you watching, she called you a pervert, and threatened to do the same to you if you told anyone. She even made you lie and cover for her absence while she digested him.
+
+You shudder to think that now you're going to become bear fat in the exact same way.
+
+\> [[Enter Hazel's stomach.]]
+
+:: Should I get naked first? <2917,3993>
+"Nah," she says, "I can digest clothes no problem. You're lucky you're dealing with an experienced predator!"
+
+"I mean, you could get naked if you *wanted* to, but, it's not like you're gonna impress me with your dick." She winks. "I guarantee mine's bigger."
+
+\> [[Take off clothes.|Undress in front of Ana outside.]]
+
+\> [[...I don't have a dick.]]
+
+\> [[I'll stay clothed.]]
+
+:: Enter Hazel's stomach. [vore] <1879,3134>
+After what feels like an eternity, you open your eyes and find that you are now sliding head-first into the bear's cavernous, fleshy stomach. Well, it's not exactly cavernous, but there's at least enough room for you to curl up into a ball, soaking in a puddle of hot enzymes. Your hind paws slip over Hazels tongue, and she eagerly slurps them up like noodles. A gulp sends them down to their resting spot, where you and your soaking-wet t-shirt are stewing inside her hot, uncomfortable gut.
+
+Hazel opens her mouth, and lets out an obscene, spine-rattling "BRAAAAAAAAAAAAAAP." Hazel laughs, "Whew, 'scuse me," and looks down at the bulge your body makes in her belly. Surprisingly, it's not a very big bulge, though this speaks more to Hazel's size than it does to yours.  You're amazed that she can still stand up on two legs with you inside her.
+
+\> [[Hazel, let me out of here!]]
+
+\> [[Why are you doing this?]]
+
+:: Hazel, let me out of here! [vore] <1816,3276>
+Hazel laughs, already occupied with snapping photos of her prey-filled gut for her social media account.
+
+"Let you out? Gee, well, let me think about it... Uhhh... No."
+
+She gives her gut a couple of firm pats, causing your prison to jiggle and bounce. You struggle and kick out against the stomach walls with all your might.
+
+"Aahh! No!" she squeals, "Stoppit, that tickles! Hehehe!"
+
+You're hyperventilating now, using up whatever precious bit of air is left inside her noxious gut. Reluctantly, you stop struggling.
+
+"Thank you. Now if you don't mind, I'm *trying* to update my Snapchomp status."
+
+<% if (!visited("Why are you doing this?")) { %>
+
+\> [[Why are you doing this?]]
+
+<% } else { %>
+
+\> [[I don't want to be digested...]]
+
+<% } %>
+
+:: Why are you doing this? [vore] <1942,3276>
+Hazel smirks, and jiggles her gut around with you inside it. The result is extremely disorienting and unpleasant.
+
+Hazel's voice rumbles and reverberates around you. "Well Holly, it's simple," she says, "You're smaller and weaker than me. That makes you my food."
+
+That's not fair, you cry!
+
+"Y'know,  you seem to care a lot about 'fairness' for someone who's about to become shit... I'll admit, I've wanted to digest you ever since I laid eyes on your scrawny ass. Rabbit fur is *so* yummy. And you're small enough that you won't even make me much fatter!"
+
+
+<% if (!visited("Hazel, let me out of here!")) { %>
+
+\> [[Hazel, let me out of here!]]
+
+<% } else { %>
+
+\> [[I don't want to be digested...]]
+
+<% } %>
+
+:: I don't want to be digested... [vore] <1877,3426>
+Hazel groans, "Oh, boo-friggin-hoo. I don't wanna lug ninety pounds of digested dork around with me all night, but you don't see me complaining..."
+
+Her phone lets out a little celebratory chime. "Woah, I got bonus tokens for eating five prey this week! I kept my streak up thanks to you. I guess I owe you one!"
+
+You optimistically ask if that means she'll let you out now.
+
+"I'm *literally* rolling my eyes right now. I *have* to digest you now, or I'll lose my streak! My followers are gonna eat this up..."
+
+\> [[Please let me out of here!|Beg for Hazel to let you out.]]
+
+:: Epilogue: Lacey Post Vore. [morning] <985,4887>
+An hour later, Lacey is sitting on the toilet, gradually squeezing out plop after plop of digested guinea pig and rabbit. The mare's powerful intestines have already absorbed all the nutrients she could get out of them, and pulverised their remains into firm round balls of horse shit. The two aren't hard to pass, just a little time-consuming.
+
+Lacey feels her asshole squeeze out the last glob of leftover rodent, then clench shut with relief. She muses to herself that they were easier coming out in than they were to get out! Especially the rabbit, who squirmed way too much... On the other hand, she probably wouldn't mind eating a duo like that again... <% if (visited("Swallow Reese's jizz.")) { %>She even heard one of them moaning...<% } %> It was kind of exhilarating.
+
+She reaches for her phone.
+
+\> [[Lacey: Text Clif.]]
+
+:: ENDING: Hazel: Digest. <1843,3682>
+Hazel tentatively pokes her stomach as it stops moving, then shrugs, and walks out of the bathroom and back into the party.
+
+"Hoo-hoo!" says an owl, instantly noticing the bear's belly now poking out from underneath her tanktop. "Looks like somebody caught a snack! Anybody I know?"
+
+Hazel grins. "Remember Hollis Freeley?"
+
+The owl gazes back down at the bear's bloated belly, and suddenly looks distraught. "You bitch! I literally told you *I* was gonna eat them! I had dibs."
+
+"Sorry girl, I *had* to." Hazel turns to whisper to the owl, "You'll never believe this, but I walked in on them *masturbating* in the bathroom. Like, they literally creamed their jeans right in front of me!"
+
+The owl snickers and grabs her by the arm. "Hoohoohoo! Oh my god, that's insane! C'mon, we gotta tell Basil."
+
+### The End.
+
+<% s.sawHazelVoreEnding = true;
+setup.addAchievement("A Grizzly End (Hazel Vore Ending)");
+%>
+
+\> [[Epilogue.|Epilogue: Hazel Post Vore.]] *(CW: Scat.)*
+
+\> <a0 data-passage="Start">Restart</a>
+
+:: Beg for Hazel to let you out. [vore] <1886,3561>
+You tell her you're starting to feel short of breath, and very exhausted. The liquids around you are starting to sting your fur.
+
+"Awww," Hazel laughs, "is widdle Holly-wolly going nap-naps in the big scary bear's tum-tum?"
+
+You say you're being serious. If she doesn't let you out you're going to die. Your eyelids are getting very, very heavy. You need to... rest your head... Hazel's massive paws gently caress the stomach walls around you, lulling your anxious mind into a light slumber.
+
+"Bye-bye Holly. You were lousy at football, but you make an excellent dinner."
+
+\> [[Hazel: Digest.|ENDING: Hazel: Digest.]]
+
+:: Epilogue: Hazel Post Vore. <1887,3800>
+<style>
+  #recent-command, tw-passage {
+  	max-width: 33rem;
+	margin: 0 auto;
+  }
+  body {
+    background:
+  }
+
+  .social-card {
+    padding: 1rem;
+    font-size: smaller;
+    font-family: sans-serif;
+	background: white;
+    border: 1px solid var(--light);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+	box-sizing: border-box;
+	cursor: default;
+  }
+  .social-card small {
+    opacity: 0.7;
+  }
+
+  .social-card * + * {
+  margin-top: 1rem;
+  }
+
+  .social-card .placeholder-img {
+    width: 100%;
+	height: 15em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgba(255, 255, 255, 0.7);
+	border-radius: 0.5rem;
+  }
+
+  .placeholder-img {
+	font-weight: bold;
+  }
+</style>
+
+<div class="social-card" tabindex="1">
+<p>Hazel Gently 🐻⚽ <small>@real_grizzy_grumbler – 12h</small></p>
+<div class="placeholder-img" style="background: radial-gradient(ellipse at top, #b19164, transparent),
+            radial-gradient(ellipse at 50% 70%, black, transparent);">NSFW</div>
+<p>Just did a little "catching up" with an old friend! They were positively scrumptious, but I don't think this shirt fits anymore. 🐇👅💦</p>
+<small>#GirlBelly #Digestion #Yumm #SnackGoals #😋</small>
+<p>♡ 926</p>
+<div style="font-size: smaller">
+<hr>
+<p><b>bellyfan_xox </b> hot tummy!! can you film it struggling?</p>
+<p><b>ally.hoppers6</b> dang hazel, u got huge! 😳😳💖 </p></div>
+
+</div>
+<div class="social-card" tabindex="1">
+<p>Hazel Gently 🐻⚽ <small>@real_grizzy_grumbler – 7h</small></p>
+<p>🎉💃 This party got wild! Gotten so many compliments on my huge tummy. Feels like Holly is finally starting to soften up... I swear, dorks always give me indigestion... </p>
+<small>#TGIF #Party #Lit #BellyDance #TummyRubsPlease</small>
+<p>♡ 219</p>
+</div>
+<div class="social-card" tabindex="1">
+<p>Hazel Gently 🐻⚽ <small>@real_grizzy_grumbler – 5h</small></p>
+<p>There's nothing like falling asleep with a gut full of squirmy and squishy prey. Mmmm...</p>
+<small>#Burp #Sleepy #😴 #TopOfTheFoodChain</small>
+<p>♡ 39</p>
+<div style="font-size: smaller">
+<hr>
+<p><b>prey_rights_478</b> disgusting. #PreyArePeopleToo</p>
+<p><b>vorelord.6969</b> guess who's getting ate 2nite  👅☝️</p>
+<p><b>real_grizzy_grumbler</b> @prey_rights_478 💩 get blocked lol</p>
+</div>
+</div>
+<div class="social-card" tabindex="1">
+<p>Hazel Gently 🐻⚽ <small>@real_grizzy_grumbler – 1h</small></p>
+<p>Good morning #GrizzGang! 🥓🥞🍳 My belly is so jiggly now, and I'm not even hung over! Time to pass the dweeb I digested last night. Pics incoming, xoxo</p>
+<small>#GrizzGang #Gurgling #🍑</small>
+<p>♡ 199</p>
+</div>
+<div class="social-card" tabindex="1">
+<p>Hazel Gently 🐻⚽ <small>@real_grizzy_grumbler – 3m</small></p>
+<div class="placeholder-img" style="background: radial-gradient(ellipse at center, #5f3c0b, transparent),
+radial-gradient(ellipse at top, #eeeeee, transparent),
+            radial-gradient(ellipse at 50% 70%, #287486, transparent)">NSFW</div>
+<p>🚽 Wow, they were a bitch to push out, but they made my ass look fantastic. Oh well. Bye Holly, I always thought you were a little turd. 💩💩💩</p>
+<small>#Disposal #PostVore #PreyPoops #StillHungry</small>
+<p>♡ 621</p>
+<div style="font-size: smaller">
+<hr>
+<p><b>kal.mousie</b> woah, you ate someone?</p>
+<p><b>gut.filler.19m</b> Eat me next please!</p>
+<p><b>bigger.jb.21</b> god i'm glad that's not me.</p>
+</div>
+</div>
+
+\> <a0 data-passage="Start">Restart.</a>
+
+:: ...I don't have a dick. <3036,4123>
+Ana hesitates for a second. "Y-yeah. Me neither."
+
+<% s.uhYeahMeNeither = true; %>
+
+<%= story.render("Any questions?") %>
+
+:: Will you be gentle? <2638,4083>
+"No teeth, I promise." She gives you a cute smile. "I can't guarantee my belly will be gentle, but you'll probably pass out before you start digesting anyway. I definitely won't bite or scratch you."
+
+She murmurs, "On purpose, anyway..."
+
+\> [[Should I feel reassured?]]
+
+:: Any questions? <2688,3782>
+<%
+const hasSeen = ["Will you be gentle?", "How does it feel to have live prey inside you?", "Should I get naked first?", "Will I taste okay?"].map(e => +visited(e)).reduce((a, b) => a+b, 0);
+
+if (hasSeen === 0) { %>
+Ana smiles. "Good. Any other questions before you become hyena food?"
+<% } else if (hasSeen !== 4) { %>
+"Anything else?"
+
+<% } else { %>
+"So Hollis, are you ready to get swallowed?"
+
+<% } %>
+
+<% if (!visited("Will you be gentle?")) { %>
+
+\> [[Will you be gentle with me?|Will you be gentle?]]
+
+<% } else if (!visited("How does it feel to have live prey inside you?")) { %>
+
+\> [[What's it like to have prey inside you?|How does it feel to have live prey inside you?]]
+
+<% } %>
+<% if (!visited("Should I get naked first?")) { %>
+
+\> [[Should I get naked first?]]
+
+<% } else if (!visited("You have a penis?")) { %>
+
+\> [[You have a penis?]]
+
+<% } %>
+<% if (!visited("Will I taste okay?")) { %>
+
+\> [[Will I taste okay?]]
+
+<% } %>
+
+<% if (hasSeen < 4) { %>
+\> [[Okay, I'm ready.]]
+<% } else { %>
+\> [[Yes, I'm ready.|Okay, I'm ready.]]
+<% } %>
+<% if (hasSeen > 3 || visited("You have a penis?")) { %>
+\> [[I've changed my mind.]]
+<% } %>
+
+:: Okay, I'm ready. <2679,4704>
+Ana grins. She's practically drooling just from looking at you.
+
+"Thanks for offering to do this, Hollis. I promise to be extra careful as I digest you into my shit."
+
+\> <a0 data-passage="Get vored by Ana." data-command="You're w-">You're welcome!</a>
+
+:: How does it feel to have live prey inside you? <2500,4094>
+As you ask her this, Ana's belly grumbles expectantly. She pats it, and looks thoughtful for a second.
+
+"It's uh, kinda hard to describe, beyond saying it feels *super* good. Like, imagine getting a shiatsu massage from the *inside*. Except, the masseuse is made out of *bacon*... or carrots, or whatever rabbits eat."
+
+\> [[Uh, grass and roots, mostly.]]
+
+:: Undress in front of Ana outside. <2801,4122>
+You remove your clothes, in the hopes that it'll make you easier on Ana's stomach.
+
+She looks at the fur of your naked body with intrigue, her eyes drifting towards your crotch. "O-oh! That's uh, very considerate of you."
+
+<%= story.render("Any questions?") %>
+
+:: Uh, grass and roots, mostly. <2500,4217>
+"Grass? Like, from the ground? Weird."
+
+<%= story.render("Any questions?") %>
+
+:: Follow Ana into the yard. <2690,3658>
+Ana leads you by the paw further into a darker part of the backyard, out of view. "Nobody should bother us out here," she says. You shiver with excitement.
+
+"Now, just one condition for me to eat you. Once I eat you, you're mine. If you change your mind, you can kick and squirm all you like, but you're not coming out. No backsies. Got it?"
+
+\> [[Okay.|Any questions?]]
+
+:: Should I feel reassured? <2638,4205>
+"Well, people say I can be pretty feisty. At least, when they're not saying things like, 'Aah stop!!' and, 'Ana you said you weren't gonna digest me!'"
+
+You give her a horrified expression.
+
+"Kidding!" she says, "Honestly, I don't bite."
+
+\> [[Okay...|Any questions?]]
+
+:: Will I taste okay? <2960,4256>
+She sticks her nose into your chest, smelling you over with a slightly invasive tenacity.
+
+"Yeah, rabbit fur is usually really soft and delicious. Oh, and those ears!" She playfully licks one, which sends a shiver down your spine. "Yeah, you taste great."
+
+She puts a paw on her chin. "...Although maybe you could dump a bottle of salad dressing on yourself... Oh! Or do a quick beer baste!"
+
+\> [[I'm good, I think.|I don't need a beer baste.]]
+
+:: I don't need a beer baste. <2960,4377>
+Ana cheerfully licks your face again. "Yeah, you're  good."
+
+<%= story.render("Any questions?") %>
+
+:: ...F-fast? [vore] <2679,4926>
+Ana snickers, patting the huge furry bulge you've made in her gut. "What, did you want me to <%= (visited("...I don't have a dick.")) ? "jill" : "jack" %> you off on the way down?"
+
+Her mention of the possibility arouses you a little. However, cramped as you are, you're fairly certain you can't quite reach your privates anymore. Curled up in the pit of the hyena's belly, you're surrounded by liquids which coat your fur, and sting your skin a little bit.
+
+"So, my little morsel, do you like it in there?"
+
+\> [[It's... very tight.]]
+
+:: It's... very tight. [vore] <2688,5052>
+"Hfff," she sighs, "well *I'm* enjoying you in there. You really were a yummy snack, Hollis."
+
+Absentmindedly, Ana sticks a paw down her jeans, and begins stroking herself. You can feel the impact of each stroke bumping against her engorged belly.
+
+You ask her if she's jerking off.
+
+"...Yeah. I dunno why but having you in there is making me, like, *rock* hard.
+<% if (s.uhYeahMeNeither) { %>Or, at least, that's what I *would* say, if I did have a penis, which, as established earlier, I don't.
+<% } %>" As she masturbates, the jostling of her gut causes a bit of stomach acid to splash into your mouth.
+
+It's not pleasant.
+
+\> [[I didn't realize how hot it would be...]]
+
+:: I didn't realize how hot it would be... [vore] <2688,5178>
+Ana asks, "Hot as in sexy, or hot like temperature-wise?"
+
+You tell her temperature-wise.
+
+She scoffs, "Well *I* didn't realize I had eaten a sensitive pansy!" Ana places a hand over her belly to stabilize it while she continues jerking off. "Don't tell me you're having second thoughts about this whole digestion thing."
+
+\> [[...Maybe?]]
+
+\> [[N-no! I'm loving it!]]
+
+:: ...Maybe? [vore] <2629,5326>
+"Mmmm, that's a shame," Ana says, "because you're way too delicious to let go. A deal's a deal, bucko. You're hyena fat now."
+
+You cough and choke on a little more stomach fluids. They're getting deeper, and it's gradually becoming harder to breathe.
+
+\> [[...Please let me out?]]
+
+\> [[Digest willingly.]]
+
+:: N-no! I'm loving it! [vore] <2764,5322>
+Ana lightly jiggles her belly again, this time letting out a husky moan.
+
+"Good," she says, "because you feel *fantastic* in there."
+
+You open your mouth to speak, but you accidentally swallow some of her stomach juices.
+
+\> [[...Please let me out?]]
+
+\> [[Digest willingly.]]
+
+:: ...Please let me out? [vore] <2625,5445>
+Ana lets out an exasperated groan, but her masturbation doesn't stop.
+
+"Oh my god. I had literally *one* rule." She gives your body a firm pat, which makes you shudder. "I dunno how to put this politely Hollis, but you're just food now. You're my food, and I'm digesting you, end of discussion. Any further comments, your *majesty*?"
+
+You can only let out a small whimper.
+
+"Good," Ana says, and resumes jerking off.
+
+\> [[(oh god oh fuck.)|Move around inside Ana.]]
+
+:: Ana, please let me out! [vore] <2621,5679>
+You scramble against the walls of Ana's belly, choking on enzymes and stomach fluid. Whatever limited air is left around you is being used up pretty fast. In response, Ana simply lets out a fierce, excited grunt as she pleasures herself. She's clearly approaching orgasm.
+
+You're now feeling woozy and light-headed, and massively regret offering yourself as a meal. In desperation, you yell out to get the hyena's attention, but she merely growls back, "Oh my god, do you ever stop whining?"
+
+"Look," she grunts, "I'll let you out after I orgasm, okay? Just gimme a second. I'm so... freakin'... close...!!!"
+
+\> [[I can't breathe...]]
+
+:: I can't breathe... [vore] <2625,5790>
+Ana strokes herself faster and faster. Her eagerness even seems to increase as she realizes you're already being affected by her digestive juices.
+
+"Hnng, mmm, yeah... Right... There..."
+
+Frantically, you begin to struggle with the last remaining bit of strength you have left. You kick and stretch and thrash against the thick stomach walls which imprison you. You struggle desperately, until you can no longer. Exhaustion and the lack of oxygen are rapidly creeping up on you.
+
+"Oh my *god*, Hollis, you're squirming sooo... good..." Ana's voice escalates in pitch.  "I'm gonna... fucking..."
+
+You shut your eyes, as you begin to dissolve into oblivion. You decide to take... just a teeny tiny nap... until...
+
+\> [[Ana: Cum.]]
+
+:: Ana: Cum. <2656,5933>
+"Mmmmh!" Ana lets out a long, satisfied grunt, and yanks her pants down, just as she begins to shoot off spurt after spurt of jizz onto <% if (visited("Undress in front of Ana outside.")) { %>your discarded clothes<% } else { %>the grass<% } %>. She moans out, "Mmmm, yeahhh..." and collapses back on the garden bench, hoisting her swollen belly.
+
+<% if (visited("Digest willingly.") || visited("N-no, I'm okay. (Ana)")) { %>
+
+Ana reclines in satisfaction. as her body begins to slowly reclaim nutrients from her latest meal.
+
+The hyena sighs contentedly. "Hahhhh, that was hot... Was it good for you too? ...Hollis?" She pokes her gut a few times, but no response comes except for a belch of putrid air.
+
+"Gone already? Jeez, that must be a new record..."
+
+<% } else { %>
+
+The hyena sighs contentedly. "Hahhhh, that was hot... Okay, I've had my fun. I can let you out now if you want... Hollis?" She pokes her gut a few times, but no response comes except for a belch of putrid air. "Oh. Looks like you won't be coming out after all... Whoops..."
+
+She reclines as her body begins to slowly reclaim nutrients from her latest meal. "Well Hollis, sorry for digesting you. If it's any consolation, that was probably the hardest I've ever jizzed... So um, no hard feelings?"
+
+Her prey only responds with a burble, and another loud burp.
+
+Ana giggles contendedly. "...I'll take that as a yes."
+
+
+<% } %>
+
+### The End.
+
+<% s.sawAnaVoreEnding = true;
+setup.addAchievement("A Laughing Matter (Ana Vore Ending)");
+%>
+
+\> [[Epilogue.|Epilogue: Ana Post Vore.]] *(Warning: Scat Disposal.)*
+
+\> <a0 data-passage="Start">Restart</a>
+
+:: Epilogue: Ana Post Vore. [morning] <2643,6076>
+*CW: Desperate to poop. Graphic Scat. Urination. Chain restaurant.*
+
+The morning sun beats down. A hung-over hyena wakes up on a bench in the Armstrongs' backyard.
+
+"Ughhhh," she groans, clutching her forehead and trying to recall what exactly she did last night. She clutches her swollen middle. It's smaller than it was, but still bulging out from under her shirt. Her mind is filled with memory of the rabbit she ate last night. "Ah shit," she mutters.
+
+Ana feels guilty, somewhat. Mostly, she feels Hollis's remains snaking through her intestines, along with the encroaching need to take a massive dump. She looks towards the nearby house, but quickly rules that out as an option. It'd be way too awkward to invite herself inside just to take a shit.
+
+She wracks her brain, trying to think of the best place to squeeze her prey out.
+
+\> [[Ana: Shit in the backyard.]]
+
+\> [[Ana: Drive somewhere with public restrooms.]]
+
+:: I'll stay clothed. <2918,4119>
+"Suit yourself," Ana says, "pun intended."
+
+<%= story.render("Any questions?") %>
+
+:: So, how's college? <3701,2828>
+"It's going alright," he says, "West Nexus offered me a sports scholarship, but I wanted to stay closer to home, so I wound up at ZSU instead. Where are you going again?"
+
+\> [[I dropped out.|...I'm not really sure yet.]]
+
+\> [[...I'm not really sure yet.]]
+
+:: Horse cock. <3831,2563>
+Basil seems taken aback by your candidness. "...What?"
+
+You repeat yourself.
+
+He blushes. "You... came here because you want a piece of this?"
+
+You smile deviously and nod, allowing your ears to flop cutely behind your head.
+
+Basil smiles. "Y'know, you always seemed kinda meek, but now it looks like you really know how to flaunt that tail of yours."
+
+\> [[Interested in getting a closer look at my tail?|Oh, is my tail giving you ideas?]]
+
+\> [[Want a taste?|...Do you want to eat me?]]
+
+:: Look in Basil's drawers. <629,2040>
+You decide it couldn't hurt to take a discrete little peek in the dresser. You pull open the top drawer.
+
+#### Items found:
+
+* 2x Jock Strap (Extra Large)
+
+* 1x Multi-Purpose Body Lotion (8 oz)
+
+* 4x Adult Magazine
+
+* 1x Realistic Silicon Horse Dildo
+
+You close the drawer. Probably shouldn't touch any of these...
+
+\> [[Go back.|Upstairs Hallway]]
+
+:: ...I'm not really sure yet. <3700,2953>
+"Well, I'm sure you'll figure something out," Basil says and shrugs. "Although, if you keep dancing like that, somebody here might decide your future for you!"
+
+You ask him what that's supposed to mean.
+
+"Oh nothing," he muses, "But if you shake your tail like that, you could easily give some drunk predator..." he waggles his eyebrows, "the *wrong idea*."
+
+\> [[Is that a threat?]]
+
+\> [[Oh, is my tail giving you \\"ideas?\\" (¯- w •¯)|Oh, is my tail giving you ideas?]]
+
+:: Is that a threat? <3699,3104>
+"No, no!" Basil stammers, "I'm just saying, you should be careful in a crowd like this."
+
+He crouches down, until his huge face is level with yours. You shudder a little as he murmurs into your tall fuzzy ears.
+
+"The folks round here, they'll digest you without a thought... And unlike me, they won't ask permission first."
+
+\> [[...Do you want to eat me?]]
+
+\> [[Kiss him.]]
+
+:: Oh, is my tail giving you ideas? <3573,3220>
+You flamboyantly wiggle your hips.
+
+Basil gives a surprised smile. He places a firm hand on your shoulder, then lightly caresses your cheek. "That depends," he says in a low voice, "Does your tail wanna feel thirteen inches of meat rubbing against it?"
+
+You cock an eyebrow and say that just because you're a rabbit doesn't mean you can't "eat meat."
+
+He brings himself down to your eye level. "Whaddya say we get a little more... re-acquainted?"
+
+You nod, trying to keep your cool, and not betray how excited you are.
+
+\> [[...Do you want to eat me?]]
+
+:: ...Do you want to eat me? <3700,3388>
+*CW: Exhibitionism. Masturbation.*
+
+Basil's face looks serious as you ask this. Unconsciously, he begins salivating. He swallows a little saliva and asks, "Hollis... Do you wanna get eaten?"
+
+\> [[Yes.|Yes, eat me Basil.]]
+
+\> [[No.|No thank you. (Basil)]]
+
+:: Kiss him. <3711,3222>
+You surprise him by immediately leaning in for a passionate kiss.
+
+"Mmph!" he cries, blindsided. Then, after a moment, he reciprocates. "Mmmm."
+
+After several seconds, he separates his lips from yours. "Well Hollis, whaddya say we get a little more... re-acquainted?"
+
+\> [[...Do you want to eat me?]]
+
+:: Sorry for trying to kiss you. <2734,2269>
+"No," she says, smiling again, "I get it." She gives you another hug.
+
+<%= story.render("A tender moment.") %>
+
+<div->[[A tender moment.]]</div>
+
+:: I've changed my mind. <2306,4096>
+You tell Ana that you've had a change of heart, and don't want to be eaten after all.
+
+<% if (visited("Undress in front of Ana outside.")) { %>
+"R-really?" she asks, looking at down at your naked body, "*after* you took your clothes off?"
+
+You look down, and realize you should probably put your pants back on.
+<% } else { %>
+"R-really?" she asks, looking somewhat disappointed, "*after* my whole spiel?"
+<% } %>
+She frowns, and puts a paw on her chin. "Well, it's your choice after all. I'm not gonna force you to be my prey. You'll need to find another timeline for that." She winks.
+
+She pats her gut, and says, "So, you're *completely* sure you don't wanna be my shit? Even if I'm *extra* gentle when I eat you?"
+
+\> [[No, thank you though.]]
+
+\> [[...I'm ready to be eaten.|Okay, I'm ready.]]
+
+:: Move around inside Ana. [vore] <2621,5566>
+Your pulse quickens as you feel Ana's stomach acids gradually filling up beneath you.  This isn't anything like you imagined it would be. You try to reposition to keep your paws out of the liquid, but slip and accidentally kick into her thick stomach walls.
+
+"Woah," she says, letting out a surprised little moan, "Urp, I love strugglers...!"
+
+\> [[Ana, please let me out!]]
+
+:: Yes, eat me Basil. <3743,3820>
+You nod your head.
+
+Basil scoffs a little, and raises an eyebrow. "You want me to swallow you in front of all these people?"
+
+\> [[Please.|Agree to let Basil eat you in the living room.]]
+
+\> [[No, wait.|No, don't eat me Basil.]]
+
+:: No, don't eat me Basil. <3748,3519>
+Basil frowns. "Heh. Change your mind?" He smugly twiddles his thumbs, "That's a shame, I was looking forward to get a taste of you... You're sure you don't want it?"
+
+\> [[Well, as long as you don't digest me...]]
+
+\> [[No, thank you.|No thank you. (Basil)]]
+
+\> [[How about a taste of my tail instead?  (¯- w •¯)|Oh, is my tail giving you ideas?]]
+
+:: Agree to let Basil eat you in the living room. <3751,3930>
+Something inside your head is screaming at you to run, begging you to not to succumb to such a pointless fate. Maybe the punch is messing with your head. But right now, all you can think about is the wet, hot flesh inside this horse's slobbery mouth.
+
+You nod your head again. Unconsciously, your tail starts wagging.
+
+Basil rises to his feet, a pleased, benevolent smile on his face. He removes his jacket to reveal a gray tank-top, a few shades lighter than your fur. "Alright then <%= visited("My name's Hollis?") ? "Hollis" : "Holly" %>," he says, "Prepare to be horse-food."
+
+\> [[Strip naked.|Undress in the middle of the party.]]
+
+:: Undress in the middle of the party. <3748,4048>
+You attract the attention of a few onlookers as you suddenly shuck off your clothes, and drop them on the floor. You hear a few whoops and hollers. Soon, nearly the whole crowd in the living room is looking at you with anticipation, murmuring eagerly amongst themselves.
+
+Basil towers over you. A bit of his drool drips on your left ear, causing you to twitch. You're sure you can make out a bulge in his trousers. "Huh," the horse says, sneaking interested glances at your naked body, "All this time I thought you were... Nevermind." He licks his lips and says, "Let's give these folks a show!"
+
+The stallion grips you by the shoulders and stretches his mouth wide open. Your last thing you see are his flat white teeth, framing the inviting entrance to his gullet.
+
+\> [[Basil: Glomph.]]
+
+:: Logo [hide] <2426,217>
+<div class="logo">
+  <div class="logo__main">
+	<i class="logo__decoration--masc-horse"></i>
+	<h1 class="logo__title">Life of&nbsp;the Party</h1>
+	<i class="logo__decoration--fem-horse"></i>
+  </div>
+	<p class="logo__subtitle">A Furry Vore Adventure <%= setup.version && `(${setup.version })` || "" %></p>
+</div>
+
+<style>
+.logo {
+  line-height: 1.3;
+  --logo-height: 4rem;
+}
+.logo__main {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.logo__title {
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: var(--logo-height, 5em);
+  font-family: "Times New Roman", serif;
+  line-height: 1;
+  text-align: center;
+}
+.logo__subtitle {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: lighter;
+  display: flex;
+  text-align: center;
+}
+.logo__decoration--fem-horse {
+  height: var(--logo-height, 5em);
+  content: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTM2cHgiIGhlaWdodD0iMTA4cHgiIHZpZXdCb3g9Ijg3MSA0MTQgMTM2IDEwOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIj4KIDwhLS0gR2VuZXJhdGVkIGJ5IFBpeGVsbWF0b3IgUHJvIDEuNS4yIC0tPgogPHBhdGggaWQ9IlNoYXBlIiBkPSJNOTQyLjU4MyA1MjIgQzkwNCA1MjIgOTA0IDUyMiA5MDQgNTE5LjYwNiA5MDQgNTE3LjMxMSA5MDMuODM2IDUxNy4yNTQgODk5Ljk5MyA1MTguMjMgODk3Ljc5IDUxOC43ODkgODkzLjU0MiA1MTkuMDQ0IDg5MC41NTMgNTE4Ljc5NiA4ODYuODk1IDUxOC40OTMgODgzLjc5NiA1MTcuNDY5IDg4MS4wNjggNTE1LjY2NCA4NzguODQgNTE0LjE5IDg3NS44MjEgNTExLjE3NiA4NzQuMzU5IDUwOC45NjcgODcyLjcxNiA1MDYuNDg1IDg3MS41MTkgNTAzLjA1MSA4NzEuMjIzIDQ5OS45NzYgODcwLjkzMyA0OTYuOTUxIDg3MS4xNDUgNDk1IDg3MS43NjQgNDk1IDg3Mi4zMjUgNDk1IDg3My4wNCA0OTYuMDI1IDg3My4zNTUgNDk3LjI3OCA4NzMuNjY5IDQ5OC41MzEgODc1LjE4IDUwMC43NTIgODc2LjcxMyA1MDIuMjE0IDg3OC4yNDYgNTAzLjY3NyA4ODAuNzY2IDUwNS4zNTIgODgyLjMxNSA1MDUuOTM3IDg4My44NjMgNTA2LjUyMSA4ODYuNTYzIDUwNi45OTMgODg4LjMxNSA1MDYuOTg1IDg5MC4wNjcgNTA2Ljk3NiA4OTIuMTA1IDUwNi41ODYgODkyLjg0NSA1MDYuMTE3IDg5My44MjkgNTA1LjQ5MyA4OTMuNDQzIDUwNS4wNzcgODkxLjQwNiA1MDQuNTY2IDg4OS44NzUgNTA0LjE4MiA4ODcuMzUgNTAyLjk2MiA4ODUuNzk2IDUwMS44NTUgODg0LjI0MSA1MDAuNzQ4IDg4Mi4yNjggNDk4LjQ4NiA4ODEuNDExIDQ5Ni44MjggODgwLjU1NCA0OTUuMTcxIDg4MC4wNTggNDkzLjYwOSA4ODAuMzA5IDQ5My4zNTggODgwLjU2IDQ5My4xMDcgODgyLjQ1NiA0OTQuMDQ5IDg4NC41MjIgNDk1LjQ1MSA4ODYuNTg4IDQ5Ni44NTMgODg5LjU4MSA0OTggODkxLjE3MiA0OTggODkyLjc2NCA0OTggODk2LjM0NiA0OTYuODQ1IDg5OS4xMzIgNDk1LjQzMyA5MDEuOTE5IDQ5NC4wMjEgOTAzLjk3MSA0OTIuNjM4IDkwMy42OTIgNDkyLjM1OSA5MDMuNDEzIDQ5Mi4wODEgOTAxLjgxNiA0OTIuNTYxIDkwMC4xNDIgNDkzLjQyNiA4OTguNDY5IDQ5NC4yOTIgODk1Ljk3OCA0OTUgODk0LjYwOSA0OTUgODkzLjIzOSA0OTUgODkxLjg0OCA0OTQuNTYzIDg5MS41MTggNDk0LjAzIDg5MS4xODggNDkzLjQ5NiA4OTIuMDI4IDQ5Mi43OCA4OTMuMzg1IDQ5Mi40MzkgODk0Ljc0MiA0OTIuMDk5IDg5Ni42MyA0OTAuOTYxIDg5Ny41ODEgNDg5LjkxIDg5OS4yNjIgNDg4LjA1MyA4OTkuMTY1IDQ4OCA4OTQuMTIzIDQ4OCA4OTEuMjcgNDg4IDg4Ny4yNjMgNDg3LjMwMSA4ODUuMjE4IDQ4Ni40NDcgODgzLjE3MyA0ODUuNTkzIDg4MC4yMjIgNDgzLjY4IDg3OC42NjEgNDgyLjE5NyA4NzcuMDk5IDQ4MC43MTQgODc1LjExNSA0NzguMTUgODc0LjI1MiA0NzYuNSA4NzMuMzg5IDQ3NC44NSA4NzIuMzc0IDQ3Mi4xNCA4NzEuOTk4IDQ3MC40NzkgODcxLjYyMSA0NjguODE3IDg3MS42MTYgNDY2LjU5NCA4NzEuOTg2IDQ2NS41MzkgODcyLjU1OSA0NjMuOTA2IDg3My4wMDggNDY0LjI0MyA4NzUuMDEzIDQ2Ny44MTEgODc2LjU3NCA0NzAuNTg3IDg3OC43NjIgNDcyLjY3NSA4ODEuNSA0NzQgODgzLjc3MiA0NzUuMSA4ODcuMTc3IDQ3NS45OTMgODg5LjA2NiA0NzUuOTg1IDg5MC45NTQgNDc1Ljk3NiA4OTMuMDc4IDQ3NS42MDMgODkzLjc4NSA0NzUuMTU0IDg5NC42NiA0NzQuNTk5IDg5My44NDcgNDczLjk3MSA4OTEuMjQ0IDQ3My4xOTEgODg5LjEzOSA0NzIuNTYxIDg4Ni4xNzIgNDcwLjc0NSA4ODQuNjUgNDY5LjE1NyA4ODMuMTI4IDQ2Ny41NjggODgxLjYxNiA0NjUuMjQ4IDg4MS4yOSA0NjQgODgwLjk2MyA0NjIuNzUzIDg4MS4xMDIgNDYxLjkwNyA4ODEuNTk4IDQ2Mi4xMjEgODgyLjA5NCA0NjIuMzM0IDg4NC4wNzUgNDYzLjUxOCA4ODYgNDY0Ljc1MSA4ODcuOTI1IDQ2NS45ODQgODkwLjc1NSA0NjYuOTk0IDg5Mi4yOSA0NjYuOTk2IDg5My44MjQgNDY2Ljk5OSA4OTYuOTA1IDQ2Ni4wNjkgODk5LjEzNyA0NjQuOTMgOTAxLjM2OCA0NjMuNzkyIDkwMy4wMzQgNDYyLjcgOTAyLjgzOCA0NjIuNTA1IDkwMi42NDIgNDYyLjMwOSA5MDAuNjQyIDQ2Mi42NCA4OTguMzk0IDQ2My4yNCA4OTYuMTQ2IDQ2My44NDEgODkzLjQ1IDQ2My45ODQgODkyLjQwMyA0NjMuNTU4IDg5MC43ODMgNDYyLjkgODkxLjA1IDQ2Mi41ODkgODk0LjE5MyA0NjEuNDY1IDg5Ni4yMjQgNDYwLjczOSA4OTkuMjAxIDQ1OS4xNzIgOTAwLjgwOCA0NTcuOTgzIDkwMi40MTYgNDU2Ljc5NSA5MDQuNjc0IDQ1NC4xNDUgOTA1LjgyNyA0NTIuMDk0IDkwNi45NzkgNDUwLjA0MyA5MDguMjU1IDQ0Ny40OTcgOTA4LjY2MyA0NDYuNDM2IDkwOS4zODcgNDQ0LjU0OSA5MDkuMzQxIDQ0NC41NDcgOTA2LjYxNSA0NDYuMzMzIDkwNS4wODEgNDQ3LjMzOCA5MDMuNTkyIDQ0Ny45MjYgOTAzLjMwNyA0NDcuNjQgOTAzLjAyMSA0NDcuMzU1IDkwNC4yOTcgNDQzLjgzMSA5MDYuMTQyIDQzOS44MTEgOTA4LjA0MSA0MzUuNjcyIDkxMS4zMyA0MzAuNjU2IDkxMy43MjIgNDI4LjI1IDkxNi40MTEgNDI1LjU0NiA5MTcuMzgxIDQyNCA5MTYuMzkgNDI0IDkxNS41MzQgNDI0IDkxNS4wMTYgNDIzLjQzOCA5MTUuMjM5IDQyMi43NSA5MTUuNDYyIDQyMi4wNjMgOTE4LjcxNiA0MTkuOTI1IDkyMi40NzEgNDE4IDkyOC4yNzMgNDE1LjAyNiA5MzAuMzA2IDQxNC41IDkzNi4wMTEgNDE0LjUgOTQxLjE2OSA0MTQuNSA5NDQuMDg2IDQxNS4xMjMgOTQ4LjYxMSA0MTcuMTg5IDk1Mi43OTIgNDE5LjA5NyA5NTYuODYgNDIwLjA0NCA5NjIuNjM3IDQyMC40NTMgOTY5LjY3IDQyMC45NSA5NzAuODYzIDQyMC44IDk3MS40MiA0MTkuMzQ3IDk3MS44MDcgNDE4LjM0IDk3Mi40MjIgNDE4LjAzMyA5NzIuOTU1IDQxOC41ODMgOTczLjQ0NCA0MTkuMDg3IDk3NC4xNjEgNDIxLjMgOTc0LjU0OSA0MjMuNSA5NzQuOTM2IDQyNS43IDk3NS44NyA0MjkuMDE0IDk3Ni42MjMgNDMwLjg2NCA5NzcuMzc3IDQzMi43MTUgOTc5LjM0MiA0MzUuNzY1IDk4MC45OSA0MzcuNjQyIDk4Mi42MzkgNDM5LjUyIDk4NC44MzkgNDQyLjczMSA5ODUuODc5IDQ0NC43NzggOTg2LjkxOSA0NDYuODI1IDk4OC4zODUgNDUwLjMyOSA5ODkuMTM2IDQ1Mi41NjQgOTg5Ljg4OCA0NTQuOCA5OTMuMDk0IDQ2MC4wMTEgOTk2LjI2IDQ2NC4xNDUgOTk5LjQyNyA0NjguMjc5IDEwMDIuOTE0IDQ3My41MTYgMTAwNC4wMDkgNDc1Ljc4MiAxMDA1LjIzNiA0NzguMzIzIDEwMDYgNDgxLjk1OCAxMDA2IDQ4NS4yNjEgMTAwNiA0ODguMjU3IDEwMDUuMzg3IDQ5MS40NTYgMTAwNC42MDkgNDkyLjUyIDEwMDMuNDE2IDQ5NC4xNTIgMTAwMi44NDkgNDk0LjI1MyAxMDAwLjYwOSA0OTMuMjMyIDk5OC4xMjIgNDkyLjA5OSA5OTggNDkyLjE3OSA5OTggNDk0Ljk1NCA5OTggNDk3LjAzOCA5OTcuNCA0OTguMDU2IDk5NS44ODggNDk4LjUzNSA5OTQuNjEyIDQ5OC45NCA5OTMuMjg5IDQ5OC42NyA5OTIuNTQ0IDQ5Ny44NTMgOTkxLjg2NiA0OTcuMTA5IDk5MC4zMzUgNDk1LjA3MiA5ODkuMTQxIDQ5My4zMjYgOTg3LjYyNyA0OTEuMTExIDk4NS4zODkgNDg5LjYzMyA5ODEuNzM1IDQ4OC40MzYgOTc4Ljg1NiA0ODcuNDkzIDk3My4zNSA0ODUuMDI5IDk2OS41IDQ4Mi45NjIgOTY1LjY1IDQ4MC44OTQgOTYxLjQ4NyA0NzguOTAxIDk2MC4yNSA0NzguNTM0IDk1OC4xMDEgNDc3Ljg5NiA5NTggNDc4LjEyMyA5NTggNDgzLjU2NyA5NTggNDg2LjcwMiA5NTguNTQ5IDQ5MS4xMiA5NTkuMjIxIDQ5My4zODQgOTYwLjA2OCA0OTYuMjM3IDk2Mi41NzkgNDk5LjY0OSA5NjcuNDAyIDUwNC41IDk3MS4yMjkgNTA4LjM1IDk3NS43NDIgNTEzLjQ0MSA5NzcuNDMgNTE1LjgxMyA5NzkuMTE5IDUxOC4xODUgOTgwLjY1IDUyMC41NDcgOTgwLjgzMyA1MjEuMDYzIDk4MS4wMzcgNTIxLjYzNSA5NjYuMTU1IDUyMiA5NDIuNTgzIDUyMiBaIiBmaWxsPSIjMDAwMDAwIiBmaWxsLW9wYWNpdHk9IjEiIHN0cm9rZT0ibm9uZSIvPgo8L3N2Zz4K);
+}
+.logo__decoration--masc-horse {
+  height: var(--logo-height, 5em);
+  content: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTIwcHgiIGhlaWdodD0iMTA3cHgiIHZpZXdCb3g9IjE4IDQxOSAxMjAgMTA3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiPgogPCEtLSBHZW5lcmF0ZWQgYnkgUGl4ZWxtYXRvciBQcm8gMS41LjIgLS0+CiA8cGF0aCBpZD0iU2hhcGUiIGQ9Ik04MS4xMDkgNTI2IEM2NS4yODIgNTI2IDUyLjA3OSA1MjUuNzQ3IDUxLjc3IDUyNS40MzcgNTEuNDYgNTI1LjEyNyA1Mi45OTcgNTIwLjc0IDU1LjE4NyA1MTUuNjg3IDU3LjM3NiA1MTAuNjM0IDYwLjA0OSA1MDIuMjg0IDYxLjEyOCA0OTcuMTMyIDYyLjIyNCA0OTEuODkzIDYyLjk1OSA0ODUuMDYyIDYyLjc5NCA0ODEuNjMyIDYyLjQ5OSA0NzUuNSA2Mi40OTkgNDc1LjUgNTcuNDk5IDQ3NC44MzggNTQuNzQ5IDQ3NC40NzMgNDguNjc0IDQ3NC4xNDYgNDMuOTk5IDQ3NC4xMSAzNy41MDcgNDc0LjA2IDM0LjQ0OSA0NzQuNTIxIDMxLjA1MiA0NzYuMDYyIDI3LjMxOSA0NzcuNzU1IDI2LjE0OCA0NzcuODkgMjMuNzYyIDQ3Ni45MDIgMjIuMTk5IDQ3Ni4yNTQgMjAuMjYzIDQ3NC43ODYgMTkuNDU5IDQ3My42NCAxOC42NTYgNDcyLjQ5MyAxOC4wMDYgNDY5LjUxOCAxOC4wMTQgNDY3LjAyOCAxOC4wMjIgNDY0LjUzOCAxOC41ODUgNDYxLjQ5NCAxOS4yNjQgNDYwLjI2NCAxOS45NDMgNDU5LjAzNCAyMy40MjQgNDU2LjU1OCAyNi45OTkgNDU0Ljc2MiAzMC41NzQgNDUyLjk2NSAzOC42NzQgNDQ4LjAyNSA0NC45OTkgNDQzLjc4MyA1MS4zMjQgNDM5LjU0MiA1OC4yNzkgNDM0LjgxNCA2MC40NTMgNDMzLjI3OCA2NC4yOSA0MzAuNTY3IDY0LjM5OSA0MzAuMzI5IDY0LjEyOSA0MjUuMjQyIDYzLjk3NiA0MjIuMzU5IDY2LjQ5NCA0MTkgNjcgNDE5IDY3LjUwNSA0MTkgNjYuNTEzIDQyMC45MTEgNjcuNTIxIDQyMi4wMjQgNjguOTIzIDQyMy41NzMgNjkuNTQ1IDQyMy43NDkgNzAuMTc2IDQyMi43NzQgNzAuODI1IDQyMS43NyA3MS4yMDcgNDIxLjgxNyA3MS45ODMgNDIzIDcyLjUyNCA0MjMuODI1IDczLjExNiA0MjQuOTI3IDczLjI5OSA0MjUuNDQ5IDczLjQ4MiA0MjUuOTcxIDc1LjAxNCA0MjUuNDE0IDc2LjcwNCA0MjQuMjEgNzguMzkzIDQyMy4wMDggODEuMTgxIDQyMS4zMTQgODIgNDIxIDgzLjAxMyA0MjAuNjExIDgyLjk2NSA0MjEuNzI3IDgzLjQxOCA0MjMuNTMxIDgzLjkyNyA0MjUuNTU5IDg0LjQ4NCA0MjYuMDA3IDg1Ljc5MSA0MjUuNDM5IDg2LjczMSA0MjUuMDMgODkuMDE4IDQyNC40ODMgOTAuODc0IDQyNC4yMjQgOTMuMzQxIDQyMy44NzkgOTQuMTMyIDQyNC4xMDEgOTMuODE3IDQyNS4wNDggOTMuNTU0IDQyNS44MzYgOTUuNzYzIDQyNy41NTMgOTkuNDQyIDQyOS40MjIgMTAyLjgwNiA0MzEuMTMyIDEwNS42NDMgNDMzLjI3OCAxMDUuODIzIDQzNC4yNSAxMDYuMDI3IDQzNS4zNTcgMTA1LjUyMSA0MzYgMTA0LjQ0NSA0MzYgMTAzLjE4MyA0MzYgMTAzLjc4NiA0MzcuMTg0IDEwNi43NzggNDQwLjU4NSAxMDguOTk3IDQ0My4xMDcgMTExLjk1MSA0NDYuNTA4IDExMy4zNDIgNDQ4LjE0MSAxMTUuODI4IDQ1MS4wNjIgMTE1LjgzNyA0NTEuMTI1IDExMy44MjEgNDUxLjg3IDExMS45MzggNDUyLjU2NyAxMTIuMTQgNDUyLjk1NCAxMTYuMzAzIDQ1Ni42MTggMTE4Ljc5NiA0NTguODEzIDEyMS43OTQgNDYyLjIzMyAxMjIuOTY3IDQ2NC4yMiAxMjQuMTM5IDQ2Ni4yMDcgMTI1LjM3MyA0NjkuNTI2IDEyNS43MDkgNDcxLjU5NyAxMjYuMzE5IDQ3NS4zNjEgMTI2LjMxOSA0NzUuMzYxIDEyMi40OTUgNDcyLjk5NyAxMTguOTM4IDQ3MC43OTkgMTE4LjcwNiA0NzAuNzY5IDExOS4xNzggNDcyLjU2NyAxMTkuNDU3IDQ3My42MyAxMjAuMTk3IDQ3Ni4wNzUgMTIwLjgyMyA0NzggMTIxLjQ0OSA0NzkuOTI1IDEyMi42MzQgNDg0LjAwNyAxMjMuNDU2IDQ4Ny4wNzEgMTI0LjYyNyA0OTEuNDMzIDEyNi4wNDEgNDkzLjcxMiAxMjkuOTc0IDQ5Ny41NzEgMTMyLjczNiA1MDAuMjgyIDEzNC45OTcgNTAyLjgzOCAxMzQuOTk4IDUwMy4yNSAxMzQuOTk5IDUwMy42NjMgMTM0LjI4NyA1MDQgMTMzLjQxOCA1MDQgMTMyLjA1NyA1MDQgMTMyLjExMSA1MDQuNDUzIDEzMy44MTIgNTA3LjI1IDEzNC44OTkgNTA5LjAzOCAxMzYuMDY1IDUxMi4zIDEzNi40MDQgNTE0LjUgMTM2Ljc0MyA1MTYuNyAxMzYuNjEgNTE5LjEyOSAxMzYuMTA5IDUxOS44OTggMTM1LjM3OSA1MjEuMDIgMTM0LjMxNiA1MjAuNTc0IDEzMC43NDUgNTE3LjY0OCAxMjguMjk3IDUxNS42NDIgMTI1LjUwNCA1MTQgMTI0LjUzOSA1MTQgMTIzLjI4IDUxNCAxMjIuOTc0IDUxNC40OTQgMTIzLjQ1NSA1MTUuNzUgMTIzLjgyNCA1MTYuNzEzIDEyNS4xMDkgNTE4LjU0NyAxMjYuMzEyIDUxOS44MjcgMTI3LjUxNSA1MjEuMTA3IDEyOC44ODUgNTIyLjg0MSAxMjkuMzU3IDUyMy42OCAxMzAuMDcxIDUyNC45NTIgMTI5LjcxMyA1MjUuMDk2IDEyNy4yMDIgNTI0LjU0NSAxMjUuNDM5IDUyNC4xNTcgMTIzLjkxOCA1MjQuMzIyIDEyMy41MzYgNTI0Ljk0MiAxMjMuMTc2IDUyNS41MjQgMTIxLjg5NSA1MjUuOTk3IDEyMC42OSA1MjUuOTk0IDExOS40ODUgNTI1Ljk5IDExNy4xNzUgNTI1LjExNCAxMTUuNTU2IDUyNC4wNDcgMTEyLjY0MiA1MjIuMTI2IDExMi41OTkgNTIyLjEyNiAxMTEuMjQ5IDUyNC4wNTMgMTA5Ljk1MiA1MjUuOTA2IDEwOC40OSA1MjYgODEuMTA5IDUyNiBaIiBmaWxsPSIjMDAwMDAwIiBmaWxsLW9wYWNpdHk9IjEiIHN0cm9rZT0ibm9uZSIvPgo8L3N2Zz4K);
+}
+</style>
+
+:: Digest willingly. [vore] <2761,5438>
+You remain silent, and take a few deep breaths to relax yourself. Maybe this isn't really so bad. It's certainly warm in here, and the sound of Ana's racing heart reminds you of some ASMR videos you watched one time.
+
+Besides, you did agree that you wouldn't change your mind. It's your fetish, after all.
+
+Ana lets out a relieved sigh, and resumes jerking off. "Say, um, do you think you could struggle a little for me?"
+
+You don't see why not.
+
+\> [[Squirm.|Squirm for Ana's pleasure.]]
+
+:: You have a penis? <2799,4274>
+Ana clears her throat awkwardly. "Yes!"
+
+\> [[Is it because you're a hyena?]]
+
+\> [[Okay, cool.|Any questions?]]
+
+:: Is it because you're a hyena? <2800,4387>
+"No, it's because I'm... Huh. Actually yeah, let's go with that."
+
+\> [[Okay, cool.|Any questions?]]
+
+:: Get vored by Ana. [vore] <2685,4812>
+You're about to say she's welcome, when Ana suddenly lunges at you and clamps her slobbering maw down over your head. Your world suddenly becomes dark, wet, and smelling faintly like mint toothpaste. True to her word, she's feisty, but not actually using teeth.
+
+Ana deftly wraps her paws around your torso, and with a firm thrust, pushes your head, neck, and shoulders into her slimy esophagus, swallowing them almost instantly. You consider that as a hyena, maybe she's predisposed to consuming as much food as possible before someone else gets to it. Or maybe she's just experienced. Either way, the speed and ravenousness with which she traps you in her stomach is almost incredible.
+
+Before you know it, Ana is eagerly gulping down your feet, leaving you curled up into a tight, wet ball inside her squeezing stomach walls.
+
+"BUUUURP," Ana concludes, licking her lips. "How was that?"
+
+\> [[...F-fast?]]
+
+:: Squirm for Ana's pleasure. [vore] <2761,5593>
+You wriggle your body around, hoping to maybe reposition yourself into a more comfortable position.
+
+"Woah," Ana says, letting out a surprised little moan, "I love strugglers...! Mmmmph!"
+
+The already tight confines of Ana's stomach get even tighter as Ana's stomach secretes more stingy liquids. It's not painful, but it's making your fur feel a little tingly.
+
+You tell Ana, um, you think she's starting to digest you.
+
+Ana stifles a moan. "Do you need me to let you out?"
+
+\> [[N-no, I'm okay.|N-no, I'm okay. (Ana)]]
+
+:: Lacey: Text Clif. [morning] <985,5037>
+<style>
+.textchat {
+  padding: 1rem;
+  font-size: 90%;
+  font-family: monospace;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--light);
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+</style>
+
+<div class="textchat">
+
+L: Hey big dog, got any new snacks on your radar?
+
+C: not yet babe, but i can try to find some willing ones on the grumblegeek forums?
+
+</div>
+
+Lacey stands up, and snaps Clif a photo of her latest "handiwork" before thoughtlessly flushing it.
+
+<div class="textchat">
+
+L: <em>attachment.jpg</em>
+
+L: Better find one soon, or this'll be you next! ;V ;V
+
+C: ahaha, don't even joke babe ^^
+
+L: Who said I was joking? We both know you've got a kink for preds...
+
+C: ...ur kidding?
+
+L: Guess we'll find out tonight };3
+
+C: o///o !!!
+
+</div>
+
+Lacey Armstrong yawns and stretches, ready for a new day, full of new meals. Soon, she'd forget all about those the two delicious meals who comprised her last bowel movement.
+
+### The End.
+
+\> <a0 data-passage="Start">Restart.</a>
+
+:: N-no, I'm okay. (Ana) [vore] <2763,5710>
+"Good," Ana says, "Keep struggling, prey."
+
+You begin to kick and squirm against the slick walls of flesh around you. You make an effort to avoid touching the pool of digestive enzymes when possible, but as they continue to flood the chamber, this becomes increasingly difficult.
+
+Ana lets out a fierce, excited grunt in response. Her eager stroking seems to get faster as she realizes you're already being affected by her digestive juices.
+
+You shut your eyes, and resign to fulfill your role as food. It truly is a wonderful feeling. You feel yourself beginning to drift off.
+
+Ana growls out, "Oh... yess... I'm gonna... fucking..."
+
+\> [[Ana: Cum.]]
+
+:: Basil: Glomph. [vore] <3748,4165>
+The party disappears, and your surroundings are swiftly replaced by the darkness of Basil's mouth. Your ears are immediately soaked in saliva, and you feel them tickling the back of this throat.
+
+"Mmmmf," Basil moans out loud. He runs his powerful tongue over your face, tasting you and coating your face in hot drool.
+
+A dozen strangers watch in awe as the massive horse swallows you.
+
+"Woooh," calls a labrador, "Armstrong finally found a snack!"
+
+"Total cutie of a meal!" remarks an owl.
+
+"God, I wish that was me," sighs a black mouse.
+
+Their voices become muffled as your ears are gulped into the horse's throat, followed by your head, neck, and shoulders. You can make out the crowd chanting in unison—"Gulp! Gulp! Gulp! Gulp!"—as if spectators on a particularly hedonistic sport.
+
+\> [[Become horse food.]]
+
+:: Keyboard Controls <2717,372>
+In addition to pointer controls, this game can be played entirely through the keyboard, leaving your dominant hand free for other tasks, such as enjoying a sandwich, or sharing a <a href="http://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/life-of-the-party-a-furry-vore-adventure-18" target="_blank">link to this story</a> with someone you think might like it.
+
+#### Basic Navigation
+
+`W (↑) ` *Select previous link.*
+
+`S (↓)` *Select next link.*
+
+`E (⏎)` *Use selected link.*
+
+#### Time Travel
+
+`A (←)` *Undo last command.*
+
+`D (→)` *Redo last command.*
+
+\> <a0 onclick="setup.undo()">Go back.</a>
+
+:: Basil: Digest. <3720,5675>
+Basil pats his belly with a satisfied smile on his face, and takes a seat in a chair while his belly gurgles and groans with the telltale sounds of a digesting prey.
+
+"Yaaaaawn," he yawns, pressing and squeezing on his swollen gut as it slowly softens up, gradually dissolving whatever is left of the rabbit.
+
+Around him, the scene is a bit chaotic. Following his lead, the room has erupted into a flagrant display of sex and devourment. Clothes and full-bellied predators scatter the room. The few remaining prey are either hiding atop furniture, or actively being seduced by their peckish peers. Those with a penchant for neologism might call it a vorgy.
+
+Some watch enviously as a black mouse's tail is slurped up between the lips of a hungry dragoness. Meanwhile, a drunk labrador burps up the clothes of one of his friends. A lioness restrains a Shih Tzu girl's shoulders while her friend swallows her feet-first.
+
+Basil smiles as the party rages on. Another night well planned.
+
+### The End.
+
+<% setup.addAchievement("Party Animals (Basil Vore Ending)"); %>
+
+\> [[Epilogue.|Epilogue: Basil Post Vore.]] *(CW: Scat Disposal.)*
+
+\> <a0 data-passage="Start">Restart</a>
+
+:: Epilogue: Basil Post Vore. [morning] <3702,5823>
+The next morning, Basil goes to the bathroom.
+
+"Hnnnnnng~," he moans, sitting on the comfortably stallion-sized toilet in his house. His asshole clenches as he squeezes out plop after plop of shit. The putrid globs of horse-turd almost fill the massive toilet bowl, but are soon flushed away by its powerful plumbing. Whatever's left of Hollis that wasn't absorbed onto the horse's body goes unceremoniously racing into the sewers.
+
+"Phew," Basil says, squeezing his abdomen, "I'm glad I only ate one last night, otherwise my figure would be completely wrecked." He walks to the living room, to observe the resultant wreckage from last night's rager.
+
+Unsurpsingly, the living room is a complete mess. The floor is scattered with plastic cups and a couple of passed-out predators. Basil grabs a trash bag, and starts to clean up the trash.
+
+As he's nearing the entertainment center, he realizes that his sister's gaming console (a GameStation 4 Pro, to be precise) is missing. The AC adapter has been ripped straight out of the wall, probably by some drunk opportunistic thief.
+
+"Ugh," he groans, "I turn my back for one freakin' minute..."
+
+### The End.
+
+\> [[Restart.|Start]]
+
+:: Become horse food. [vore] <3746,4282>
+Over the next three minutes or so, Basil slowly but eagerly works your body down his throat and into his belly. You feel yourself gliding effortlessly through the slick tunnel of his gullet, towards your tight, hot destination. He's done this before, hasn't he?
+
+A few furs in the room keep watching with wide eyes as they witness an act of predation for the first time. Others begin shamelessly touching themselves, and others still begin to survey their peers for potential meals.
+
+\> [[Curl up in Basil's belly.]]
+
+:: Moan. [vore] <3743,4531>
+Basil laughs, the kind of chuckle which makes his belly squeeze in on you slightly, "I'll take that as a yes."
+
+The insides of Basil's stomach are spacious and warm. You're curled up in a loose ball, but you have enough room to get comfortable surrounded by the undulating flesh. Even though you specifically asked him to do this, you're still surprised by how aroused it's making you. First time for everything, after all.
+
+The stallion pats your outline and asks, "Say, d'ya think you can squirm around in there for me?" Every time you move slightly, he lets out a satisfied little grunt.
+
+You consider could probably take the opportunity to "enjoy yourself" a little...
+
+\> [[Enjoy yourself.]]
+
+:: Enjoy yourself. [vore] <3741,4657>
+You do that. You're already naked, so you take the opportunity to rub yourself in a pleasing way. The comfy, slimy walls squeeze and squish around you, resisting and conforming to your every movement. It's incredible.
+
+"Woah," Basil grunts, "That feels great! Never had a prey masturbate inside me before..."
+
+Meanwhile, Basil's display seems to have inspired a few other budding predators to also nab a meal. Surprisingly, most of the prey in the room seem pretty amenable to their fate, probably because that's exactly what they came here for.
+
+Basil too is attracting some attention, something you realize when you feel two pairs of hands pressing against your outline in his stomach.
+
+\> [[What's going on out there?]]
+
+:: What's going on out there? [vore] <3736,4793>
+Back outside, a pair of black mice have asked permission to touch Basil's bulging gut. You feel them curiously poking and prodding you, stifling little giggles and gasps as you twitch and move in response. "Woooah," one of them says, "This is *soo* hot. Hope it likes being horseshit!"
+
+Basil winks at the black mouse, "Stick around, and maybe you'll join them for the afterparty!" They both squeal and scamper off giggling.
+
+\> [[Wait, horseshit?]]
+
+:: No thank you. (Basil) <3885,3524>
+"...Oh. Of course," Basil says, awkwardly. He stands, and turns to leave. "Just uh, be careful out there, alright?" He starts to walk away.
+
+Basil walks away, back into the throng of dancing partygoers.
+
+\> [[Return to the Foyer|The Foyer.]]
+
+:: Well, as long as you don't digest me... <3744,3681>
+Basil smiles again. "You've got yourself a deal, Freeley."
+
+The stallion rises to his feet, a pleased, benevolent smile on his face. He yanks off his jacket to reveal a gray tank-top. A few people take interest, and look your way.
+
+"Alright then <%= visited("My name's Hollis?") ? "Hollis" : "Holly" %>," he says, "Prepare to be horse-food."
+
+\> [[Strip naked.|Undress in the middle of the party.]]
+
+:: Curl up in Basil's belly. [vore] <3744,4406>
+The sphincter to his esophagus shuts tightly, as your hind paws come sliding into his stomach after you. Basil's full belly effortlessly stretches to contain the entirety of your curled up body, leaving a massive bulge sticking out of his previously flat and chiseled stomach.
+
+"BRAAAAAAAP," the stallion concludes, wiping his mouth with the neck of his tank top, which has long since given up on containing his swollen belly. He pats his gut happily. "How's it going in there?"
+
+\> [[Moan.]]
+
+:: Wait, horseshit? [vore] <3736,4921>
+"Yeah," Basil chuckles, "should only take me a few hours, really! I'll probably be squeezing you out into a toilet by this time tomorrow."
+
+\> [[You're... gonna digest me?]]
+
+:: You're... gonna digest me? [vore] <3737,5039>
+Basil gives you an affirmative pat. "Uh, you know how this works, right? Did you think I was just gonna keep you in there forever? "
+
+<% if (visited("Well, as long as you don't digest me...")) { %>
+
+You cry out to say he said he wouldn't digest you!
+
+"Oh, I did promise that, didn't I... Well, it's not like I can let you out now. It'd be gross."
+
+<% } else { %>
+
+N-no, you stammer, you assumed he'd let you out.
+
+"Well," he says, patting his gut with a happy belch, "You know what happens when you assume: I make an ass out of you."
+
+<% } %>
+
+\> [[Struggle.|Struggle inside Basil!]]
+
+:: Basil: Get me out of here! [vore] <3800,5430>
+The lack of oxygen is making you dizzy. You bang helplessly on the walls of the horse's stomach, begging to be let out.
+
+"No, sorry. I get that you're new to this, but once you're in there, you're not coming back up."
+
+B-but you're friends, you insist! He can't just digest you!
+
+"Friends? C'mon, we talked like, twice while my sister taught you math."
+
+Money! You have money, you tell him!
+
+"I dunno if you've seen my house, but I'm *really* not that susceptible to bribery." He pokes your outline. "Jeez, you're really taking your time in there. Most meals woulda softened up by now. And I'd *reeally* like you to stop talking now."
+
+You're too light-headed to respond. You need to rest, you decide, before you can struggle any more. Just a short nap. You close your eyes, and drift off into oblivion.
+
+"Nothing else to say? Phew, finally..."
+
+\> [[Basil: Digest.]]
+
+:: This is kinda hot... [vore] <3679,5367>
+Basil pats your bulging outline. "It is right? Glad you changed your mind. It must be nice knowing you're contributing to my sweet bod."
+
+Either because of the oppressive heat in here, or the lack of air, you feel yourself body begin to relax. You resume pleasuring yourself, now finding a strange arousal in the idea of being digested. You're going to die, but somehow, that hardly even matters to you?
+
+Mmmmn, you moan out.
+
+"You really like it in there, huh?" Basil laughs. "That's good, cause that's your new home!" His stomach acids are beginning to tingle your fur, and it's getting tougher to breathe.
+
+You pant with excitement, knowing that you're nothing but food.
+
+\> [[Hollis: Cum.]]
+
+:: Struggle inside Basil! [vore] <3729,5187>
+You kick out at Basil's stomach walls.
+
+"Oooh, yeah, just like that," he says, either oblivious to, or completely ignoring the fact that he's about to digest you." Your world shakes nauseously as the horse grabs his gut, and sloshes it around a little. You're suddenly covered in stinging stomach acid.
+
+"Y'know, you prey like to whine about becoming shit, but they never consider how *we're* affected. I'm gonna have to hit the gym every day next week to get my six-pack back after what you do it."
+
+Your struggling only increases. The juices are beginning to tingle your fur, and it's getting tougher to breathe.
+
+\> [[Get me out of here!|Basil: Get me out of here!]] *(Unwilling Digestion)*
+
+\> [[This is kinda hot...]] *(Willing Digestion)*
+
+:: Hollis: Cum. [vore] <3677,5489>
+You masturbate inside Basil's stomach, your movements gradually becoming faster and more furious.
+
+A few people outside are gawking and pointing at the motion coming from Basil's gut. He simply replies with a cocky smile. "Heh. You've really putting on a show for us, huh?" He rubs his gut, sloshing you with more stomach acid. "Time to soften up now."
+
+The stingy liquids splash all over you, but you don't care. It's exactly what you needed to climax. You hold your breath, and finally orgasm. Waves of pleasure wash through every part of your body. Basil's stomach squeezes tightly around you, coating you in more and more acid.
+
+Just as the ecstasy begins to wane, you suddenly pass out.
+
+\> [[Basil: Digest.]]
+
+:: Epilogue: Broom Closet Ending. [morning] <1233,2110>
+Sure, why not.
+
+The morning sun comes blazing through the windows, and lands warmly on the cream-colored fur of a horse, lying in bed while her boyfriend snores loudly next to her. Lacy Armstrong stretches and yawns as she climbs out of bed, her guts filled with the digested remains of a guinea pig. Specifically, the remains of your friend, a guinea pig named Reese.
+
+Lacey enters the hallway, and opens the broom closet to grab some clean bedsheets. She blinks groggily, as her brain takes a moment to register the unexpected presence of a gray rabbit, curled up and sleeping on the floor.
+
+She laughs. "Wait a minute, is that... Hollis?"
+
+\> [[Hollis: Wake up.]]
+
+:: Hollis: Wake up. [morning] <1229,2228>
+You squint your eyes, woken up by the blinding light streaming in from outside. You slowly and look up at the horse, who is beaming at you with a big smile. "Hey there! Remember me? It's Lacey, from Calc II!"
+
+Instinctually, you try to leap to your feet and escape, but Lacey lightly places a foot (er, hoof, actually) on your stomach, keeping you in place.
+
+"Sorry, can't have you running off now. Usually I'd appreciate some breakfast, but I'm kinda full right now..."
+
+You breathe a sigh of relief, as you realize she's not going to eat you. Then, you hear a German shepherd come out into the hall, wearing nothing but his boxers. "Hey Lacey," he says rubbing his eyes, "who ya talking to?"
+
+Lacey smirks as the dog notices you, and says, "...My *boyfriend* on the other hand, would absolutely *love* a taste!"
+
+#### The End.
+
+\> <a0 data-passage="Start">Restart</a>
+
+:: BROOM CLOSET. [no_fade] <1238,1720>
+<div-></div>
+
+You enter the broom closet.
+
+<div style="min-height: 6em">
+<%=
+(() => {
+  s.broomClosetState = s.broomClosetState || 0;
+  const count = ++s.broomClosetState;
+  const state = Math.floor(count / 20);
+  s.broomClosetEnding = state >= 5;
+  const literals = [
+	"You look around for a moment. Nothing in here seems out of the ordinary. You decide to go back to the hallway.",
+	"You spend 30 seconds really observing the heck out of some towels. Yep, those are towels alright. Good. Moving on.",
+	"There's no story content in the broom closet, alright? No predators, no vore, nothing. It's just a closet.",
+	`You dig behind the towels and find a mysterious glowing amulet! You can use this to gain access to the Crypt of Zamantheus! Actually, it's just more towels.`,
+	`Your friend Reese is being swallowed whole as we speak. Don't you want to rescue him? Go back. To the hallway.`,
+	`You close the door behind you, and hide inside the broom closet for a little while. This is a huge waste of time.`,
+	`Wow! You've clicked this link ${s.broomClosetState < 230 ? s.broomClosetState : '[fuck you]'} times! Hollis has wasted ${5+state<=16?4+state:"so many goddamn"} minutes of their life.`
+  ];
+  const msg = literals[Math.min(state, literals.length - 1)];
+  if (state >= literals.length - 1 || count % 20 <= 20-4) {
+    return msg + "<wbr>.".repeat(Math.floor(count % 20 / 2));
+  } else {
+    return "...<br><br>";
+  }
+})()
+%>
+</div>
+
+\> [[Look around the broom closet.|BROOM CLOSET.]]
+
+<% if (s.broomClosetEnding) { %>
+\> [[Go back to the hallway?|Try to leave.]]
+<% } else { %>
+\> [[Go back to the hallway.|Upstairs Hallway]]
+<% } %>
+
+:: Go to the garage. [todo] <4800,1400>
+You walk down the hall and enter the garage. Parked inside is a clean and polished pickup truck from a luxury brand, and a similarly ostentatious boat.
+
+A few feet ahead of you, you see a red fox, who appears to be struggling to carry a huge cardboard box. Stacked haphazardly on top is a number of objects, including some electronics, a game console, two silver candelabras, and what appears to be an oil painting of a sakura tree. The fox notices you.
+
+"Oh, hi there, cutie!"
+
+\> [[Ask him what he's up to.]] *(Male Pred)*
+
+\> [[What's she doing?]] *(Female Pred)*
+
+:: ...What are you doing? <4800,1625>
+You ask <%=s.rm?"him":"her"%> what <%=s.rm?"he":"she"%>'s doing.
+
+<%=s.rm?"He":"She"%> smiles and replies, "Stealing!"
+
+Huh, yeah, you guess that was pretty obvious.
+
+"You showed up with perfect timing!" <%=s.rm?"he":"she"%> says, gesturing with <%=s.rm?"his":"her"%> bushy tail towards the truck, "Could you unlatch the tailgate for me?"
+
+\> [[Is that a good idea?]]
+
+:: Is that a good idea? <4800,1775>
+<%=s.rm?"He":"She"%> looks confused. "It's a *great* idea? I've always wanted this stuff!"
+
+You meant ethically speaking. Won't the folks who live here be upset about this?
+
+"The horses who live here are loaded. They won't even notice it's gone!"
+
+And what if <%=s.rm?"he":"she"%> gets caught?
+
+<%=s.rm?"He":"She"%> smiles, "That sounds like a problem for Future Ren! ...My name's Ren, by the way."
+
+You're Hollis, you reply, scratching your ears nervously.
+
+"Charmed!" <%=s.rm?"he":"she"%> says, carefully balancing the almost cartoonishly large pile of stolen goods, "Anyway, I could use some help with that latch. Any time now!"
+
+\> [[Help with the latch.|Help Ren.]]
+
+\> [[Don't.|Don't help Ren.]]
+
+:: Help Ren. <4748,1941>
+*CW: Auto theft. Car chase. Hostage situation.*
+
+You can't fault <%=s.rm?"his":"her"%> logic. Well, you can, but you also don't want to get on <%=s.rm?"his":"her"%> bad side. You walk over and unlatch the tailgate, so Ren can load <%=s.rm?"his":"her"%> pile of loot onto the flatbed.
+
+"Phew," <%=s.rm?"he":"she"%> says, closing it up again, "I owe ya one!"
+
+Ren suddenly grabs you into a warm hug, affectionately wrapping <%=s.rm?"his":"her"%> tail around your whole body for a moment, before releasing you as if nothing happened.
+
+N-no problem, you stammer!
+
+<%=s.rm?"He":"She"%> walks around to the driver's side door, <%=s.rm?"his":"her"%> tail already wagging with the excitement of a successful heist.
+
+\> [[Is this your truck?]]
+
+:: Don't help Ren. <5150,2075>
+*CW: Violent threat. Unwilling vore. Bad breath.*
+
+You don't assist <%=s.rm?"him":"her"%>, instead choosing to carefully back toward the door, so as not to seem complicit in <%=s.rm?"his":"her"%> theft. If anyone asks, you were just looking to get some fresh air, when you stumbled upon this eccentric kitsune stealing a load of valuables. It's the perfect alibi, you think, because it's completely true.
+
+Ren struggles to keep the box steady. "Trunk... Now... Please? I'm in kind of a pickle here, and if you don't, I'm... gonna... Ack!"
+
+\> [[Continue.|Ren drops the boxes.]]
+
+:: Go for a ride. <4724,2458>
+You climb into the passenger seat, enjoying the luxuriant feeling of its upholstry, which seems to be made of faux leather. You're not sure why car manufacturers go to such lengths to imitate tanned cowhides, or why any of them actually know what cow skin would even feel like. The very idea strikes you as rather barbaric.
+
+Ren pushes a button which opens the garage door, then pushes another button which starts the engine/ It comes to life with an obedient purr.
+
+"Say, where do you live?" Ren asks.
+
+You punch your address into the car's dashboard computer.
+
+"Oh, that's not far. Let's cruise for a little while first!"
+
+You're not sure that's such a good idea, but you're also in no place to stop <%=s.rm?"him":"her"%>.
+
+\> [[Ren: Getaway.]]
+
+:: Wait, I shouldn't leave my friend... <4723,2307>
+You remember that your friend Reese is still here, and possibly in danger. You can't just abandon him, not at a party full of preds!
+
+"Oh, your friend's totally in a belly by now," Ren says.
+
+What? You ask <%=s.rm?"him":"her"%> how <%=s.rm?"he":"she"%> knows.
+
+"Call it a hunch," <%=s.rm?"he":"she"%> says, "No prey ever came to a party like this expecting to leave in one piece, right? Everyone's either here to eat or get eaten."
+
+You didn't realize this was that kind of party, you say.
+
+Ren smirks, "Then it sounds like you could use a ride home."
+
+You nod.
+
+\> [[Go for a ride.]]
+
+:: Hollis: Escape. <5175,2325>
+You're not fast enough. With the swiftness of a ninja, Ren leaps at you and grabs you by the middle. <%=s.rm?"He":"She"%> bares <%=s.rm?"his":"her"%> teeth.
+
+"This is your fault," <%=s.rm?"he":"she"%> seethes, "You were about to go tell on me, weren't you?"
+
+No! You cry out, you're not gonna tell anyone! Promise!
+
+"Horsecrap!" <%=s.rm?"he":"she"%> says, bringing <%=s.rm?"his":"her"%> sharp teeth right up against the exposed fur of your neck. This is a obscene gesture, uncommon among civilized anthros. <%=s.rm?"He":"She"%> growls, "Gimme one good reason I shouldn't eat you right now."
+
+Your body is frozen. In the heat of the moment, flushed with fear, you try to reply. Your lips quiver but don't form words.
+
+"Whoops," Ren says, licking saliva from <%=s.rm?"his":"her"%> lips, "Too slow."
+
+\> [[Ren: No witnesses.]]
+
+:: Is this your truck? <4748,2068>
+Ren hops into the driver's seat, sniffs around a bit, and jingles a set of keys that was stashed in a cup-holder. "It is now!" <%=s.rm?"he":"she"%>  laughs,  "Wanna take it for a little spin?"
+
+\> [[Why not?]]
+
+\> [[That seems like a bad idea...]]
+
+:: Ren: No witnesses. [vore] <5200,2450>
+Your vision goes dark. Your ears feel slobbery. All you can smell is fish... What happened?
+
+Ren glomps <%=s.rm?'his':'her'%> lips over your head, and begins working to squeeze it into <%=s.rm?'his':'her'%> throat. You try to squirm free, but <%=s.rm?'he':'she'%>'s gripping your body too tightly.
+
+You look up at your destination, and wince slightly. The fox's <%=s.rm?'his':'her'%> pulsating throat keeps blasting you with hot, putrid air. <%=s.rm?'He':'She'%> seems to be hyperventilating as <%=s.rm?'he':'she'%> eats you.
+
+\> [[Try persuasion?]]
+
+:: Ren: Getaway. <4728,2604>
+The fox gets a cocky smile on <%=s.rm?"his":"her"%> face, and peels out like a race car driver. The truck, as if it knows it's being stolen, begins playing some fast rock music. Or maybe it was just tuned to this station.
+
+As Ren pulls out onto the main road, you look in the rear-view mirror, and see <%=localStorage.talkedToBasil?'Basil':'a stallion'%> standing in the garage, bewildered.
+
+Um, you say, you think the horses who live here noticed.
+
+"Psh," Ren says, "We'll be fine."
+
+For a little while, the two of you drive on through the dimly lit streets between suburbs. You drive past your old high school, then the Pizza Shack, then the shopping mall which shut down last year. Your mind flickers with faint memories of all the years you spent growing up here, yet strangely, it all feels foreign. It's as if tonight is the first night you've truly lived.
+
+Ren pulls onto the highway, experimentally speeding and pushing the limits of the vehicle's motor. A constant grin is plastered on <%=s.rm?"his":"her"%> face. <%=s.rm?"He":"She"%>'s truly in <%=s.rm?"his":"her"%> element.
+
+Then you see red and blue lights coming from the car behind you.
+
+\> [[Oh crap, the fuzz!]]
+
+:: Oh crap, the fuzz! <4728,2734>
+"Oh my gosh," Ren laughs, "this isn't an 80's action movie, you don't need to call them the f-" <%=s.rm?"He":"She"%>'s interrupted by sirens.
+
+You immediately start panicking. Why on earth did you think was a good idea?? Suddenly the truck's console lights up with a phone call from an unknown number. You're sweating bullets as you tentatively answer.
+
+A menacing voice comes through the speakers. "Hello, this is State Trooper Jackson Stephanides, requesting that you pull over the stolen vehicle."
+
+You look in the rearview mirror and confirm that the car behind you is a highway patrol vehicle with its lights on. It's being driven by two enormous warthogs.
+
+\> [[(oh shit oh god oh shit oh fuck.)]]
+
+:: Ren: Floor it!!! <4728,2996>
+Ren puts <%=s.rm?"his":"her"%> foot down. You're pulled back against your seat as the car rapidly accelerates.
+
+Oh shit shit shit, you groan. You can't believe this is happening. You look to Ren for assurance. <%=s.rm?"He":"She"%> grins and mouths the words, "so cool, right?" You're gonna be sick.
+
+"WE REPEAT," Stephanides's partner bellows into the phone, "PULL OVER. I AM AUTHORIZED TO USE DEADLY FORCE."
+
+"Don't shoot!" Ren replies with equal ferocity, pushing the truck up to its top speed. "I have a hostage! I have kidnapped an innocent rabbit, and I will be devouring him if my demands are not met!"
+
+Your world spins, and it takes all your might not to simply crumple into a nervous ball. The fox gestures for you to back <%=s.rm?"him":"her"%> up. You whimper into the phone, Th-that's right! You've been kidnapped by a scary fox. Don't shoot!
+
+\> [[
+
+:: (oh shit oh god oh shit oh fuck.) <4728,2860>
+You're pretty sure you know when to cut your losses. You tell Ren that <%=s.rm?"he":"she"%> should slow down.
+
+<%=s.rm?"He":"She"%> doesn't slow down. Instead, <%=s.rm?"he":"she"%> replies, "Sorry, I didn't catch that! Who is this again?"
+
+"I repeat, this is State Trooper Jackson Stephanides," he says, "We received an anonymous tip that a vehicle with this license plate number was stolen from a residence 15 minutes ago. Please. Pull. Over."
+
+The fox considers for a second. <%=s.rm?"He":"She"%> seems to be doing some mental calculations, and you wonder if she's about to turn the two of you in. "Stephanides, huh?" <%=s.rm?"he":"she"%> says, pausing for effect, "...More like Stephani-deez nuts!"
+
+You hold your face in your paws. Stephanides is silent for a moment, then he says into his radio, "This is 119 at 805, I am in pursuit of a 10-29, requesting immediate assistance."
+
+\> [[Ren: Floor it!!!]]
+
+:: Be the hyena. [dark otherstory] <3176,2220>
+my name is ana. i'm a spotted hyena, currently chilling on a bench outside a vore party like a total loser.
+
+i showed up about an hour ago, but big crowds freak me out, so i came out here to get some air and clear my head. i'm here because i want to eat somebody. i want to feel prey writhing around inside my belly. i'd go in there and grab one, but the noise is too overwhelming.
+
+a rabbit walked out here a few minutes ago, and zoned out while staring at the sky. i think they're either high, or having a panic attack.
+
+what do i do?
+
+<div style="font-variant: small-caps;">
+
+\> [[Eat the rabbit.]]
+
+\> [[Eat the rabbit.]]
+
+\> [[Eat the rabbit.]]
+
+</div>
+
+:: Break. [dreamy_2] <3172,2060>
+<% setup.addAchievement("True Zen (Meditation Ending)") %>
+
+You shut your eyes tight, and fall deeper into a sort of trance. The world around you dissolves. The details soften, as though they were simply dark scribbles on a light background. You get the feeling that the little voices in your head are gently fading out into white noise...
+
+You concentrate on your breathing. No wait. *Hollis* concentrates on *their* breathing. Their chest, not yours, gently rises and falls in rhythm with the drifting of the cool autumn leaves scattered around their furry feet.
+
+<div class="fadeout">
+
+In the backyard of a suburban house party, Hollis Freeley opens their eyes, and takes in their surroundings. They draw a deep breath, like a weight has suddenly been lifted from their shoulders. As the last of your influence wanes, Hollis blinks and mutters out loud, "What the fuck was all that about?"
+
+<code>error: client connection lost. please contact manufacturer if problem persists. automated support is available at 1-800-813-621</code>
+<br>
+
+</div>
+
+<div style="text-align: center">
+<a0 class="focusonly" onclick="window.scrollTo({left: 0, top: 9999, behavior: 'smooth'})">↓↓↓ Scroll down ↓↓↓</a>
+</div>
+
+<div class="backdrop">
+
+<code>connection resolved.</code>
+
+<div class="other-logo">
+
+\> [[Be the hyena.]]
+
+</div></div>
+
+<style>
+.fadeout {
+  position: relative;
+}
+.fadeout:: after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(to bottom,
+  transparent, var(--background, #eee));
+  transition: 1s;
+}
+
+.focusonly {
+  opacity: 0;
+  cursor: default;
+  transition: opacity 0.3s;
+}
+
+.focusonly:focus, .focusonly:hover {
+  opacity: 1;
+}
+
+body {
+  margin: 0;
+  transition: none;
+}
+tw-story {
+  position: unset;
+}
+
+.backdrop {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  padding-top: 60rem;
+  padding-bottom: 5rem;
+  background: rgb(238,238,238);
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%,
+    #020202 50%);
+  width: 100%;
+  color: #eee;
+  --color: #eee;
+  --light: rgba(255, 255, 255, 50%);
+  text-align: center;
+}
+.other-logo {
+  font-size: 3rem;
+  padding-bottom: 10rem;
+  font-family: "Times New Roman", serif;
+  font-variant: small-caps;
+}
+</style>
+
+:: Eat the rabbit. [dark otherstory] <3184,2366>
+<style>
+body {
+  font-family: "Times New Roman", serif;
+  transition: none !important;
+  line-height: 1.5
+}
+h1,h2,h3,h4,h5,h6 {
+  font-variant: small-caps;
+}
+.hollistalk {
+  font-family: sans-serif;
+  font-size: 90%;
+}
+</style>
+
+great idea, voice inside my head. i walk over to the rabbit.
+
+<span class="hollistalk">"Um, hi there!"</span> they say, clearly nervous to see me. i have that effect on people sometimes.
+
+they flinch as i nonchalantly grab them up in my paws. <span class="hollistalk">"Woah, wait!"</span> they cry out, but i'm too hungry to listen. their eyes go wide as i stuff their ears into my mouth. they try to fight me at first, but eventually calm down.
+
+with one huge gulp, i eat the rabbit.
+
+burp. in under a minute, i've swallowed them all up, and soon they're thrashing around inside me. a familiar fullness fills my belly, and i sigh with relief.
+
+<span class="hollistalk">"Y-you're gonna digest me, aren't you..."</span> they say.
+
+i pat my belly and reply happily, yup!
+
+<span class="hollistalk">"...Alright,"</span> they say, settling in to their fate.
+
+wow, this route got pretty meta, huh? whatever dumb jerk wrote this crap probably thinks they're *reeeal* clever.
+
+<div style="font-variant: small-caps;">
+
+### The End.
+
+\> [[Restart.|Start]]
+
+</div>
+
+:: Ana: Shit in the backyard. [morning] <2642,6234>
+Not an option. While the trees out here provided some good cover last night, in broad daylight Ana would still be fairly visible. Not to mention, she'd be leaving behind a massive turd in the backyard of a complete stranger.
+
+Ana clutches her head. *Yeah,* she thinks, *not the best idea...*
+
+\> [[Drive somewhere with a public restrooms.|Ana: Drive somewhere with public restrooms.]]
+
+:: Ana: Drive somewhere with public restrooms. [morning] <2764,6231>
+Ana growls. *Wow, that's really my only option? Fine.*
+
+The hyena scampers discretely through the yard, around the massive house, and onto the sidewalk. Every step makes her swollen gut squish uncomfortably. Her meal wants out, *now*. She walks to her car with the determined yet careful stride of someone who desperately needs a toilet.
+
+Ana's car is a dinged up, ancient vehicle. She inherited it from her mother, a hyena almost as unkempt and mangy as the car. Ana's mom was a ruthless predator, and a primary reason she didn't have a father growing up. In fact, it was precisely seventeen years ago today when he was-
+
+*Hey,* Ana thinks, *quit narrating my backstory, I need to take a shit, NOW.*
+
+Alright, sheesh. Ana starts the car and drives for a few minutes, breathing deeply and scanning for the nearest possible location, which happens to be a Pizza Shack. She parks and power-walks inside. Upon entering, she is immediately accosted by a friendly Pizza Shack employee.
+
+\> <a0 data-passage="Employee: Hi!" data-command='"Welcome to-"'>"Hi! Welcome to Pizza Shack!"</a>
+
+\> <a0 data-passage="Employee: Hi!" data-command='"Welcome to-"'>"I'm Chet, I'll be your server today."</a>
+
+\> <a0 data-passage="Employee: Hi!" data-command='"Welcome to-"'>"Have you dined with us before?"</a>
+
+:: Ask him what he's up to. <4725,1525>
+<% s.rm = true; %>
+
+<%= story.render("...What are you doing?") %>
+
+:: What's she doing? <4850,1525>
+<% s.rm = false; %>
+
+<%= story.render("...What are you doing?")%>
+
+:: Take a deep breath. [vore] <5175,2700>
+Just before your head slips into the fox's slimy throat. You take in a big lungful of putrid air and hold it. Your head slides into the tight tube with a wet slick sound.
+
+Ren is pretty big for a fox, but not the biggest fur you've seen here. You get the feeling <%=s.rm?'he':'she'%>'s somewhat struggling to devour you. Still, this doesn't prevent <%=s.rm?'him':'her'%> from swallowing both your head and shoulders in a single powerful GULP.
+
+\> [[Enter Ren's stomach.]]
+
+:: Please! Don't do this! [vore] <5300,2700>
+You open your mouth to squeal one last plea for mercy. Unfortunately, you do this just before the fox gulps your head into <%=s.rm?'his':'her'%> throat, and wind up inhaling a mouthful of saliva. You cough and wheeze uncomfortably. Your head slides into the tight tube with a wet slick sound.
+
+Ren is pretty big for a fox, but not the biggest fur you've seen here. You get the feeling <%=s.rm?'he':'she'%>'s somewhat struggling to devour you. Still, this doesn't prevent <%=s.rm?'him':'her'%> from swallowing both your head and shoulders in a single powerful GULP.
+
+\> [[Enter Ren's stomach.]]
+
+:: Enter Ren's stomach. [vore] <5175,2850>
+
+
+:: Employee: Hi! [morning] <2688,6368>
+"Oh goddammit, *move*!" Ana shoves past the employee and makes a bee-line for the restrooms. Like most bathrooms, the toilets are segregated by size, offering one toilet each for smallerfolk (anthros under 4 feet), largerfolk (7 feet and up), and "medium," all the anthros in between.
+
+Ana, desperately holding a load of ex-rabbit inside her bowels, knocks on the medium door. "Sorry, occupied."
+
+She tries the handle for the largerfolk toilet, but it's out of service for cleaning.
+
+*Fucking dammit,* she thinks, eyeing the smaller restroom.
+
+\> [[Ana: Poop in the tiny toilet.]]
+
+\> [[Ana: Wait until they're finished.]]
+
+:: Ana: Poop in the tiny toilet. [morning] <2688,6514>
+Ana bursts into the smallerfolk restroom, and naturally finds a small toilet designed for anthros much smaller than herself. She yanks down her pants, hovers her large ass over the toilet bowl, and immediately begins squeezing out a thick, solid turd. Her shit is mixed with gray fur and partially-dissolved bones.
+
+The sensation of forcing digested prey out of her asshole is almost euphoric. That's partially due to how badly she needed to do it, and partially a result of her natural inclinations as a predator. She grunts, as she pushes a partially crushed skull through her asshole.
+
+As Ana's asshole squeezes them out, Hollis's remains pile up in the small toilet bowl, well past the point at which they'd be reasonable to flush. The hyena is panting softly, almost overjoyed to get her prey out of her. When the last of the shit is out, her asshole finally relaxes, and she lets loose a heavy stream of piss, splashing atop the disgusting mound of what was formerly a living, breathing person.
+
+\> [[Ana: Flush...?]]
+
+:: Ana: Flush...? [morning] <2688,6664>
+Ana wipes her ass, stands up, and looks back.
+
+"W-wow, that was bigger than I thought it'd be," she remarks. Anticipating the worst, she pushes the handle to flush. "Goodbye Holly, you left me plenty of pounds to remember you buy."
+
+The small toilet sputters, but makes no effort to swallow the massive pile of shit. It remains in the bowl.
+
+"Shit," the hyena sighs, "Well, looks like you're Chet's problem now." She washes her paws, turns toward the door, and walks out with a smile on her face.
+
+"Ciao!"
+
+### The End.
+
+\> [[Restart|Start]]
+
+:: Ana: Wait until they're finished. [morning] <2818,6510>
+*Yeah, no.* She's barely holding it in as is.
+
+<%=story.render("Ana: Poop in the tiny toilet.")%>
+
+:: Try persuasion? [vore] <5200,2575>
+Your mouth is muffled by the slick tongue covering your face, but you try to call out to Ren: It's not too late! <%=s.rm?'He':'She'%> doesn't have to do this!
+
+The fox lets out a low growl. You realize <%=s.rm?'his':'her'%> teeth are now positioned directly around your throat, and <%=s.rm?'he':'she'%> could easily bite your head off if so inclined. You rationally decide to keep your mouth shut from now on. <%=s.rm?'He':'She'%> responds with a happy murr, and swallows again, so your shoulders fill <%=s.rm?'his':'her'%> cheeks.
+
+Your face is moments from sliding into <%=s.rm?'his':'her'%> gullet.
+
+\> [[Take a deep breath.]]
+
+\> [[Please! Don't do this!]]
+
+:: UNFINISHED CONTENT ZONE [todo] <4390,1146>
+the passages over here are still in development.
+
+don't mess with them, please!
+
+:: Nikki and Nox Route <5250,1400>
+
+
+:: Mouse route? <5252,1515>
+Scene, you ask? What scene?
+
+"Y'know," says the other mouse, "This kinda party? For people into certain activities?"
+
+You say that, uh, you're not following. Your words are already slurred. Jeez, did you really have *that* much to drink?
+
+:: Why not? <4648,2184>
+You seriously consider <%=s.rm?"his":"her"%> offer. You had reservations at first, but the more you think about it, the more excited you are to partake in a high-stakes getaway as this strange fox's unwitting accomplice.
+
+Besides, you really don't want to be the only one here when someone notices everything that's missing.
+
+\> [[Wait, I shouldn't leave my friend...]]
+
+:: That seems like a bad idea... <4770,2186>
+Double-click this passage to edit it.
+
+:: Warp zone [hide] <2824,184>
+Lists every passage, as they are ordered by Twine.
+
+To the right are passage tags, metadata which I use for things like checkpoints and background colors.
+
+<table class="table">
+<thead>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>tags</th>
+  </tr>
+</thead>
+<tbody>
+  <% story.passages.map(({ id, name, tags }) => { %>
+  <tr>
+    <td><%-id%></td>
+	<td><a0 data-passage="<%=name%>"><%= name %></a></td>
+    <td><% tags.map(t => { %><span class="tag-badge"
+  color="<%-$(`tw-tag[name=${t}]`).attr('color')%>"><%-t%></span>
+  <% }) %></td>
+  </tr>
+<% }); %>
+</tbody>
+</table>
+
+
+</table>
+
+<style>
+
+.table {
+}
+
+.tag-badge {
+  display: inline-block;
+  background-color: #555;
+  border-radius: 0.25rem;
+  padding: 0 0.25rem;
+  font-size: smaller;
+  color: white;
+}
+.tag-badge[color=yellow] {
+	background-color: #fc1;
+	color: #111;
+}
+.tag-badge[color=red] {
+	background-color: #d34;
+}
+.tag-badge[color=blue] {
+	background-color: #1ab;
+}
+.tag-badge[color=green] {
+	background-color: #2a4;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.table th,
+.table td {
+  padding: 0.25rem;
+  vertical-align: top;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+  text-align: inherit;
+}
+</style>
+
+:: Ren drops the boxes. <5175,2200>
+<%=s.rm?"He":"She"%> loses <%=s.rm?"his":"her"%>  balance and drops the box, sending all of its contents crashing to the ground, including a fine porcelain teapot and a GameStation 4 Pro. <%=s.rm?"He":"She"%> watches helplessly as they smash into several pieces.
+
+<%=s.rm?"His":"Her"%>  ears and whiskers droop with defeat. <%=s.rm?"He":"She"%>  looks like <%=s.rm?"he":"she"%>'s about to cry.
+
+Taking this as your cue to leave, you twist the knob to the garage door. Just as you do, Ren growls, "Don't move. I'm not done with you."
+
+\> [[Hollis: Escape.]]
