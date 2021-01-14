@@ -1,0 +1,3 @@
+[submodule "twee3"]
+	path = twee3
+	url = git@github.com:Rizean/twee3.git
