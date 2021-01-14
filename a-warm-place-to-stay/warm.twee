@@ -1,3 +1,7 @@
+::Configuration [twee2]
+Twee2::build_config.story_ifid = 'c3531136-8151-4632-80bf-82cc117917d5'
+Twee2::build_config.story_format = './snowman-2.0.3'
+
 :: StoryTitle
 A Warm Place to Stay
 
@@ -124,7 +128,7 @@ pre code {
 
 :: StoryJS [script]
 /** Story Constants */
-story.version = "v0.2.4";
+story.version = "v0.3.0";
 
 // Warm Place to Stay Message
 console.log(`
@@ -527,12 +531,12 @@ let unseenCount = checkpoints.filter(p => !seen.includes(p.id)).length;
 	.forEach(({ name, id }) => { %>
 <li><a0 data-passage="<%=name%>"><%= name %></a></li>
 <% }); %>
-<% if (unseenCount > 0) { %>
-<li>(<%- unseenCount %> remaining.)</li>
+<% for (let i = unseenCount; i > 0; i--) { %>
+<li>?????</li>
 <% } %>
 </ul>
 
-&gt; <a0 onclick="window.confirm('This will permanently reset checkpoints. Are you sure?') && storyFlags.assign({seenPassages: []}); bunny.rerender()">Reset checkpoints.</a>
+\\> <a0 onclick="window.confirm('This will permanently reset checkpoints. Are you sure?') && storyFlags.assign({seenPassages: []}); bunny.rerender()">Reset checkpoints.</a>
 
 </div>
 <% } else { %>
@@ -564,14 +568,14 @@ This game can be played with either mouse or keyboard controls.
 
 `D (→)` *Redo last command.*
 
-&gt; <a0 onclick="bunny.undo()">Go back.</a>
+\\> <a0 onclick="bunny.undo()">Go back.</a>
 
 :: A Warm Place to Stay. [cold] <500,225>
 <style>
 body { transition: opacity 2s, background-color 0s; }
 </style>
 
-Your name is Juniper Greenall. You are a black rabbit.
+Your name is Juniper Greenall. You are a rabbit.
 
 You're in the driver's seat of a small car on the side of the road. An empty, snowy expanse surrounds you in every direction. Flecks of powdery white quickly accumulate on your windshield, as if threatening to swallow you whole. Despite your windshield wipers' best efforts, the snow is gradually engulfing your view.
 
@@ -579,11 +583,11 @@ According to your stereo, it's 7:<%= (new Date().getMinutes() < 10 ? "0":"") + n
 
 <div.commands>
 
-&gt; [[Take inventory.]]
+\\> [[Take inventory.]]
 
 </div>
 
-:: Roll the window down. [cold] <500,1500>
+:: Roll the window down. [cold] <500,1425>
 Drafty, snowy air blows in. The polar bear crouches down to peer at you through the open window. You finally get a better look at <%=s.g?"him":"her"%>.
 
 Most notably, <%=s.g?"he":"she"%>'s huge. <%=s.g?"His":"Her"%> bear-sized face almost fully eclipses the window of your decidedly rabbit-sized car.
@@ -595,13 +599,13 @@ You'd probably be more intimidated by this huge hunk of <%=s.g?"muscle":"fat"%> 
 
 <div.commands.important>
 
-&gt; [[Yes, I do need help actually...]]
+\\> [[Yes, I do need help actually...]]
 
-&gt; [[Jump down <%=s.g?"his":"her"%> throat.|Jump down their throat.]]
+\\> [[Jump down <%=s.g?"his":"her"%> throat.|Jump down their throat.]]
 
 </div>
 
-:: Just ignore. [cold] <500,1350>
+:: Just ignore. [cold] <500,1275>
 Faced with the sudden appearance of a potential predator, your natural instincts kick in. You go perfectly still, ignoring the polar bear completely.
 
 This probably won't help. Not only has <%=s.g?"he":"she"%> already seen you, but <%=s.g?"he":"she"%>'s probably not a predator either. Bears—and most carnivores in general—are not ravenous murderers who devour any stranger they come across. Eating people is, in fact, quite frowned upon. Unsolicited predation is extremely uncommon, although the news headlines tend to blow it out of proportion.
@@ -610,13 +614,13 @@ This probably won't help. Not only has <%=s.g?"he":"she"%> already seen you, but
 
 <div.commands>
 
-&gt; [[Keep ignoring <%=s.g?"him":"her"%>.|Keep ignoring.]]
+\\> [[Keep ignoring <%=s.g?"him":"her"%>.|Keep ignoring.]]
 
-&gt; [[Roll the window down.]]
+\\> [[Roll the window down.]]
 
 </div>
 
-:: Cozy up inside Zasha's coat. [warm] <500,2625>
+:: Cozy up inside Zasha's coat. [warm] <500,2550>
 <%
 console.debug(`Set s.snuggled_up from ${s.snuggled_up} to true.`);
 s.snuggled_up = true %>
@@ -625,9 +629,9 @@ You blush, and reluctantly step into the inviting white fur of Zasha's chest. It
 
 The polar bear's pudgy gut jiggles a little with each step. Normally, you'd feel nervous about being so close to a bear—not to mention, a bear's belly—but under the circumstances, you can only feel grateful for this warm gesture. <%=s.g?"His":"Her"%> fur is softer than you could have imagined.
 
-&gt; [[Th-thank you...|Thanks for the warmth.]]
+\\> [[Th-thank you...|Thanks for the warmth.]]
 
-:: Tough it out. [cold] <625,2625>
+:: Tough it out. [cold] <625,2550>
 You politely refuse the gesture, and walk quickly and purposefully to the door, wincing as icy pain attacks the pads of your feet. Zasha trails behind at a plodding pace, dragging with <%=s.g?"him":"her"%> a large, boxy suitcase. By the time you make it to the hotel's entrance, your teeth are already chattering.
 
 The automatic sliding doors look really old. You walk up to them, but they do not detect your presence. You impatiently wave a hand around, but can't get the sensor to trip. When it finally does sense you, the door opens a few inches, then slows to a creaking halt. Wow, you're 0–2 for mechanical failures today, huh.
@@ -636,9 +640,9 @@ Zasha sees the door failing to open, and sees you shuddering and rubbing your sh
 
 "There we go," <%=s.g?"he":"she"%> says, "silly machine no match for Zasha." <%=s.g?"He":"She"%> gestures for you to enter.
 
-&gt; [[Enter the hotel.]]
+\\> [[Enter the hotel.]]
 
-:: Enter the hotel. <500,2875>
+:: Enter the hotel. <500,2800>
 The hotel lobby is small and quaint, containing a short desk with a bell, and another table covered in little pamphlets advertising nearby curiosities. A bored-looking fox in a concierge's uniform is sitting at the desk. Across from the desk is an elevator which is currently out of order. To the left is a hallway which presumably leads to the hotel's rooms.
 
 You take a quick breather while Zasha checks into <%=s.g?"his":"her"%> reservation. You're glad you have your credit card with you. You'll book a room after <%=s.g?"him":"her"%>.
@@ -647,9 +651,9 @@ You see the concierge give Zasha a couple of room keys. <%=s.g?"He":"She"%> turn
 
 "<%= s.snuggled_up ? "Juniper" : "Rabbit"%>, do you wish to sleep with me in my hotel room?"
 
-&gt; [[W-what?]]
+\\> [[W-what?]]
 
-:: Talk to the concierge. <500,3425>
+:: Talk to the concierge. <500,3350>
 You stride confidently toward the concierge's desk. <%=!s.g?"He":"She"%>'s a red <%=!s.g?"fox":"vixen"%>, and it seems as though the two of you have interrupted <%=!s.g?"his":"her"%> extremely important perusal of a fashion magazine.
 
 Hello, you say! You're looking to book a-
@@ -658,16 +662,16 @@ Hello, you say! You're looking to book a-
 
 <div.commands>
 
-&gt; [[You're sure that there aren't any other rooms?]]
+\\> [[You're sure that there aren't any other rooms?]]
 
 </div>
 
-:: Accept the key-card. <500,3950>
+:: Accept the key-card. <500,3875>
 <%
 console.debug(`Set s.got_the_key_card from ${s.got_the_key_card} to true.`)
 s.got_the_key_card = true %>
 
-You accept Zasha's generous offer to share <%=s.g?"his":"her"%> hotel room. <%=s.g?"He":"She"%> delicately hands you <%=s.g?"his":"her"%> spare key-card, which has been marked for Room #006.
+You accept Zasha's generous offer to share <%=s.g?"his":"her"%> hotel room. <%=s.g?"He":"She"%> delicately hands you <%=s.g?"his":"her"%> spare key-card, which has been marked for Room 7.
 
 "I am glad to be of assistance, Rabbit. Come along when you are ready."
 
@@ -675,26 +679,24 @@ Zasha turns and heads for the hallway where the room is.
 
 <div.commands>
 
-&gt; [[Follow Zasha to the room.]]
+\\> [[Follow Zasha to the room.]]
 
-&gt; [[Ask the concierge about towing your car.]]
+\\> [[Ask the concierge about towing your car.]]
 
 </div>
 
-:: Freeze to death outside? <450,3775>
-You glance back toward the snowy wasteland outside the warm confines of the hotel lobby.
+:: Freeze to death outside? <450,3700>
+You glance back toward the snowy wasteland outside the warm confines of the hotel lobby. Not your best idea.
 
-Yeah, probably not a great idea.
-
-&gt; [[Accept the key-card.]]
+\\> [[Accept the key-card.]]
 
 <% if (!visited("Construct makeshift bed from travel pamphlets?")) { %>
 
-&gt; [[Construct makeshift bed from travel pamphlets?]]
+\\> [[Construct makeshift bed from travel pamphlets?]]
 
 <% } %>
 
-:: Ask the concierge about towing your car. <500,4075>
+:: Ask the concierge about towing your car. <500,4000>
 You have a brief but scintilliating conversation with the concierge about how your car is stuck in the snow four miles from here, a fact that no one really seems to care much about but you.
 
 "Sorry pal," <%=s.g?"she":"he"%> says, "You could try calling someone, but everything's probably gonna be shut down 'til tomorrow."
@@ -705,27 +707,27 @@ You ask, Because of the snow-
 
 ...Cool, you say. You decide to deal with that problem in the morning.
 
-&gt; [[Follow Zasha to the room.]]
+\\> [[Follow Zasha to the room.]]
 
-:: Oh! Of course, ha-ha. <500,3125>
+:: Oh! Of course, ha-ha. <500,3050>
 You laugh awkwardly. Right, that's what you thought <%=s.g?"he":"she"%> meant too. Obviously.
 
 "Would you like to share room with me," asks Zasha, clearly somewhat flustered.
 
-You're not overly tempted to accept <%=s.g?"his":"her"%> offer. You've got nothing against Zasha, but you're still hesitant about spending the night with a 600 pound polar bear who could eat you in <%=s.g?"his":"her"%> sleep? Not to mention, you already feel guilty for accepting so much help.
+You're not overly tempted to accept <%=s.g?"his":"her"%> offer. You've got nothing against Zasha, but you're still hesitant about spending the night with a 700 pound polar bear who could eat you in <%=s.g?"his":"her"%> sleep? Not to mention, you already feel guilty for accepting so much help.
 
 <%= s.snuggled_up ? `${s.g?"His":"Her"} fur *was* extremely warm and cuddly,` : `${s.g?"He":"She"} seems harmless enough,`%> but you'd feel much better if you just got your own room.
 
 <div.commands>
 
-&gt; [[Politely refuse.]]
+\\> [[Politely refuse.]]
 
 </div>
 
-:: Buy yourself some tea to warm up. <550,4350>
+:: Buy yourself some tea to warm up. <550,4275>
 <% s.got_tea = true; %>
 
-You ask your newfound roommate if <%=s.g?"he":"she"%> wants tea or coffee, or something.
+You ask your newfound roommate if <%=s.g?"he":"she"%> wants any tea or coffee.
 
 "I am okay without," replies Zasha, unlocking the door to the hotel room, "My body is plenty to keep me warm."
 
@@ -735,9 +737,9 @@ You stick a dollar into the drink machine, and it produces an insulated disposab
 
 Zasha opens the door for you.
 
-&gt; [[Enter the hotel room.|Enter the hotel room. (Tea Route)]]
+\\> [[Enter the hotel room.|Enter the hotel room. (Tea Route)]]
 
-:: Offer to buy Zasha a meal. <425,4350>
+:: Offer to buy Zasha a meal. <425,4275>
 <% s.got_dinner = true; %>
 
 <%
@@ -750,11 +752,11 @@ As if reacting to the mere mention of food, <%=s.g?"his":"her"%> stomach lets ou
 
 "Yes," says Zasha, "I suppose I have not eaten much today at all." <%=s.g?"He":"She"%> studies the machine for a moment, then points to the meal <%=s.g?"he":"she"%> wants.
 
-You feed your six dollars in, and the machine gracefully ejects a large plastic tub: Lemon Risotto with Green Beans and Salmon. As a vegetarian, you can't help but turn up your nose slightly.
+You feed your cash in, and the machine gracefully ejects a large plastic tub: Lemon Risotto with Green Beans and Salmon. As a vegetarian, you can't help but turn up your nose slightly.
 
-You take the container, and follow the enormous bear into Room #006. Zasha is unabashedly wagging <%=s.g?"his":"her"%> stubby white tail, as if utterly overjoyed at your simple gesture of buying <%=s.g?"him":"her"%> dinner.
+You take the container, and follow the enormous bear into Room 7. Zasha is unabashedly wagging <%=s.g?"his":"her"%> stubby white tail, as if utterly overjoyed at your simple gesture of buying <%=s.g?"him":"her"%> dinner.
 
-&gt; [[Enter the hotel room.|Enter the hotel room. (Dinner Route)]]
+\\> [[Enter the hotel room.|Enter the hotel room. (Dinner Route)]]
 
 :: Try calling for help. [cold] <375,600>
 Yep, already tried <%= visited("Check for spare tire.") ? "that too." : "that." %>
@@ -777,14 +779,14 @@ const seenEvery = carPassages.every(p => visited(p)); %>
 <% carPassages.map(p => {
   if (!visited(p)) { %>
 
-&gt; <a0 data-passage="<%=p%>"><%=p%></a>
+\\> <a0 data-passage="<%=p%>"><%=p%></a>
 
 <% }
 }); %>
 
 <% if (seenEvery) { %>
 
-&gt; [[Await slow and chilly death.]]
+\\> [[Await slow and chilly death.]]
 
 <% } %>
 
@@ -806,11 +808,11 @@ If you'd known you were going to get stuck in a snowstorm, you might have at lea
 
 <div.commands>
 
-&gt; [[Wait, I'm not wearing pants?]]
+\\> [[Wait, I'm not wearing pants?]]
 
 </div>
 
-:: Hitch a ride. [cold] <500,1750>
+:: Hitch a ride. [cold] <500,1675>
 Yes, you say, you could use a lift.
 
 "Good," the bear says, "I am glad to assist with such a thing. Come when you are ready." <%=s.g?"He":"She"%> walks back to <%=s.g?"his":"her"%> car, and opens the passenger door for you.
@@ -825,20 +827,20 @@ Th-thanks, you stammer.
 
 <div.commands>
 
-&gt; [[Look out the window.]]
+\\> [[Look out the window.]]
 
 </div>
 
-:: W-what? [warm] <500,3000>
+:: W-what? [warm] <500,2925>
 Your face flushes, and your ears stick straight up with surprise. <%=s.g?"He":"She"%> wants to sleep with you??
 
 You stammer to say that s-sorry, you don't think of <%=s.g?"him":"her"%> that way! <%= s.snuggled_up ? `Even considering how warm ${s.g?"his":"her"} fur was...`:`Though you're very thankful that ${s.g?"he":"she"} rescued you!`%>
 
 Zasha's eyes go wide as <%=s.g?"he":"she"%> realizes <%=s.g?"his":"her"%> mistake. "Oh! I did not intend to suggest such a... prurient thing! I simply offer for you to sleep in my hotel room at no cost to you."
 
-&gt; [[Oh! Of course, ha-ha.]]
+\\> [[Oh! Of course, ha-ha.]]
 
-:: Get out of the truck. [cold checkpoint] <500,2500>
+:: Get out of the truck. [cold checkpoint] <500,2425>
 You shudder as you step outside into the chilly air. The entrance is only a short walk away, but in this cold, it feels like a million miles.
 
 Zasha notices your discomfort, and frowns. <%=s.g?"He":"She"%> holds open <%=s.g?"his":"her"%> puffy coat to reveal the fur of <%=s.g?"his bare":"her naked"%> belly and chest, as if inviting you to huddle against it for warmth. <%=s.g?"He":"She"%>'s... not wearing anything underneath. You feel your cheeks redden, either from embarassment, or from the sheer cold nipping at them.
@@ -847,13 +849,13 @@ Zasha notices your discomfort, and frowns. <%=s.g?"He":"She"%> holds open <%=s.g
 
 <div.commands.important>
 
-&gt; [[Cozy up inside Zasha's coat.]]
+\\> [[Cozy up inside Zasha's coat.]]
 
-&gt; [[Tough it out.]]
+\\> [[Tough it out.]]
 
 </div>
 
-:: Politely refuse. <500,3275>
+:: Politely refuse. <500,3200>
 You tell Zasha that you really appreciate all the help <%=s.g?'he':'she'%>'s provided, but that you can handle it from here. You'll just book yourself a room, and get your car towed tomorrow.
 
 <%=s.g?'He':'She'%> seems kind of crestfallen, but nods in agreement.
@@ -864,23 +866,23 @@ But, you say, um, is there any way you can repay <%=s.g?'him':'her'%>? You don't
 
 You graciously wave adieu to Zasha, then turn to the concierge to get your own room situation sorted.
 
-&gt; [[Talk to the concierge.]]
+\\> [[Talk to the concierge.]]
 
-:: Construct makeshift bed from travel pamphlets? <575,3775>
-Maybe if you stole enough of those little brochures, you could use them as a blanket while you slept on a bench down here in the lobby?
+:: Construct makeshift bed from travel pamphlets? <575,3700>
+Maybe if you stole enough of those little brochures, you could use them as a blanket?
 
-Yeah, no. You're just gonna have to share a room with this bear.
+You're just gonna have to share a room with this bear.
 
-&gt; [[Accept the key-card.]]
+\\> [[Accept the key-card.]]
 
 <% if (!visited("Freeze to death outside?")) { %>
 
-&gt; [[Freeze to death outside?]]
+\\> [[Freeze to death outside?]]
 
 <% } %>
 
 :: Jump down their throat. [warm] <1600,1625>
-*CW: Oral Vore. Full Tour. Saliva. Endo entrapment.*
+*CW: Oral Vore. Saliva. Fatal digestion.*
 
 Something strange takes ahold of you, and at that moment, you cannot bear being outside this huge, sexy predator's maw for one second longer.
 
@@ -888,14 +890,14 @@ Through the car window, you grab hold of <%=s.g?"his":"her"%> lips, pull <%=s.g?
 
 <div.commands>
 
-&gt; [[Continue.|Jump down their throat II.]]
+\\> [[Continue.|Jump down their throat II.]]
 
 </div>
 
-:: Keep ignoring. [cold] <625,1375>
+:: Keep ignoring. [cold] <625,1300>
 You continue paying no attention to the polar bear. <%=s.g?"He":"She"%> scratches <%=s.g?"his":"her"%> head awkwardly.
 
-Okay, this is stupid, and also kind of speciesist? This bear is your only hope of rescue, and <%=s.g?"he":"she's"%> probably a well-adjusted, perfectly ordinary person, content to eat a civilized diet of fish and dairy. Despite what your "old-fashioned" parents would think, bears are not all rabbit-gulping vore machiness. Try to be a little more open minded.
+Okay, this is stupid, and also kind of speciesist? This bear is your only hope of rescue, and <%=s.g?"he's":"she's"%> probably a well-adjusted, perfectly ordinary person, content to eat a civilized diet of fish and dairy. Despite what your "old-fashioned" parents would think, bears are not all rabbit-gulping vore machines. Try to be a little more open minded.
 
 The polar bear taps on your window again. "Er, is rabbit okay? Should I go?"
 
@@ -903,14 +905,14 @@ You're gonna be here all night if you don't talk to <%=s.g?"him":"her"%>.
 
 <div.commands>
 
-&gt; [[Roll the window down.]]
+\\> [[Roll the window down.]]
 
 </div>
 
-:: Of course! My name is... [cold] <500,2000>
+:: Of course! My name is... [cold] <500,1925>
 "Juniper. Hm. This is a sweet sounding name. It reminds me of winter meals in my home," says the polar bear. "My name is Zasha, protector of creatures large and small."
 
-You nod, then return to awkwardly twiddling your paws. Zasha also says nothing.  You've never hitch-hiked before, and you're not very good at the small-talk. You're also very intimidated by the gigantic polar bear who has offered you help.
+You nod, then return to awkwardly twiddling your paws. Zasha also says nothing.  You've never hitch-hiked before, so you're not very good at the small-talk. You're also very intimidated by the gigantic polar bear who has offered you help.
 
 ...Some weather, huh? you say.
 
@@ -918,11 +920,11 @@ You nod, then return to awkwardly twiddling your paws. Zasha also says nothing. 
 
 <div.commands>
 
-&gt; [[Do you live around here?]]
+\\> [[Do you live around here?]]
 
 </div>
 
-:: Header [header] <200,100>
+:: Header [header] <196,100>
 <% if (storyFlags.get().showDebug) { %>
 <div class="debug-menu">
 <style>
@@ -996,13 +998,13 @@ You nod, then return to awkwardly twiddling your paws. Zasha also says nothing. 
     margin-left: 0.5rem;
   }
 
-  .header-nav-group > * + *::before {
+  .header-nav-group > * + *:: before {
     content: "|";
     margin-right: 0.5rem;
   }
 </style>
 
-:: Enter the hotel room. (Tea Route) [checkpoint] <550,4500>
+:: Enter the hotel room. (Tea Route) [checkpoint] <550,4425>
 You walk inside after Zasha, taking a moment to hang up your jacket. Underneath is a simple gray undershirt which politely covers up your torso. Have we mentioned today, that you're not wearing pants?
 
 The hotel room is nothing to write home about. There's a microwave, telephone, bed, singular.
@@ -1011,9 +1013,9 @@ You groan internally as you confirm your suspicions that there's only one bed in
 
 Zasha notices you looking at the bed, and seemingly reads your thoughts. "Hm, bed is too small to share, yes? I should have considered this... Zasha will sleep on floor then."
 
-&gt; [[No no, I'll do it!]]
+\\> [[No no, I'll do it!]]
 
-:: Follow Zasha to the room. [checkpoint] <500,4200>
+:: Follow Zasha to the room. [checkpoint] <500,4125>
 <%if (s.snuggled_up) { %>
 Zasha is waiting for you.
 
@@ -1024,19 +1026,19 @@ Zasha is waiting for you.
 You follow Zasha down the hall. <%=s.g?"He":"She"%>'s hunching <%=s.g?"his":"her"%> neck slightly, and you realize the ceiling here might be slightly too short for a polar bear of <%=s.g?"his":"her"%> size.
 <% } %>
 
-You stop in front of Room #006, right at the end of the hallway. <% if (s.snuggled_up) {%>Zasha lets go of your paw, bashfully.<%}%> Next to the door is a couple of vending machines which pique your interest. You rifle through your little purse, and find the six (6) dollars from earlier.
+You stop in front of Room 7, right at the end of the hallway. <% if (s.snuggled_up) {%>Zasha lets go of your paw, bashfully.<%}%> Next to the door is a couple of vending machines which pique your interest. You rifle through your little purse, and find the seven (7) dollars from earlier.
 
 The first one's a hot beverage maker. The other seems to dispense microwaveable frozen dinners. You wonder—as you've been wondering since you met <%=s.g?"him":"her"%>—is Zasha hungry?
 
 <div.commands.important>
 
-&gt; [[Offer to buy <%=s.g?"him":"her"%> a meal.|Offer to buy Zasha a meal.]]
+\\> [[Offer to buy <%=s.g?"him":"her"%> a meal.|Offer to buy Zasha a meal.]]
 
-&gt; [[Buy yourself some tea to warm up.]]
+\\> [[Buy yourself some tea to warm up.]]
 
 </div>
 
-:: What was that? [cold checkpoint] <500,1225>
+:: What was that? [cold checkpoint] <500,1150>
 Outside, you hear an engine roar and come to a stop. Your windshield is almost too caked in snow to make it out, but you can just barely see a huge pickup truck as it pulls off the road and parks in front of you.
 
 From the truck, a huge, broad-shouldered figure emerges, and begins to trudge through the snow toward your car. Great. You're either about to be rescued, or violently abducted.
@@ -1047,15 +1049,15 @@ A polar bear in a puffy winter coat. They're standing outside your car and polit
 
 <div.commands.important>
 
-&gt; <a0 data-passage="Just ignore." onclick="story.state.g = true;">Just ignore him.</a> *(Male Pred)*
+\\> <a0 data-passage="Just ignore." onclick="story.state.g = true;">Just ignore him.</a> *(Male Pred)*
 
-&gt; <a0 data-passage="Just ignore." onclick="story.state.g = false;">Just ignore her.</a> *(Female Pred)*
+\\> <a0 data-passage="Just ignore." onclick="story.state.g = false;">Just ignore her.</a> *(Female Pred)*
 
 </div>
 
 <div->[[Just ignore.]]</div>
 
-:: Yes, I do need help actually... [cold] <500,1625>
+:: Yes, I do need help actually... [cold] <500,1550>
 Yes, you say, you've got a flat tire, and you're stuck here.
 
 The bear pauses thoughtfully. "You have spare?" <%=s.g?"he":"she"%> asks. You shake your head no. "Hmm," <%=s.g?"he":"she"%> says with a paw on <%=s.g?"his":"her"%> chin, "Snow too heavy. Can't move car right now."
@@ -1070,14 +1072,14 @@ Then again, the alternative is spending all night in a chilly car, so you probab
 
 <div.commands>
 
-&gt; [[Hitch a ride.]]
+\\> [[Hitch a ride.]]
 
 </div>
 
 :: Take inventory. [cold] <500,350>
 An hour ago, you were driving down a narrow highway, on your way across the state of Northaven. The falling snow started out light, but got heavier and heaver. You struck a patch of black ice, swerved off the road, and got a flat tire in the process. Now you're stuck, sitting inside a tiny sedan in a ditch on the side of the road in the middle of nowhere, with little hope of rescue.
 
-In your handbag, you have a cell phone, a credit card, a rewards card for a drive-thru coffee chain, and a wallet containing six (6) dollars.
+In your handbag, you have a cell phone, a credit card, a rewards card for a drive-thru coffee chain, and a wallet containing seven (7) dollars.
 
 What will you do?
 
@@ -1088,9 +1090,9 @@ You do that. If you’re lucky, someone might notice and help you out. Of course
 
 Well, you're officially out of ideas.
 
-&gt; [[Await slow and chilly death.]]
+\\> [[Await slow and chilly death.]]
 
-:: Look out the window. [cold] <500,1875>
+:: Look out the window. [cold] <500,1800>
 The two of you sit in awkward silence for a little bit, as the polar bear carefully drives the two of you down the narrow highway covered in snowy sludge. Occasionally a dense patch of fir trees passes by. You twiddle your paws. The seatbelts in this vehicle are way too large for your little body.
 
 "Rabbit is not a talkative one, yes?" the bear observes.
@@ -1101,15 +1103,15 @@ Oh, s-sorry! you say. You've just had a long day.
 
 In truth, you were distracted, thinking about how powerless you'd be to stop such a hulking carnivore from grabbing and devouring you. Every time <%=s.g?"he":"she"%> speaks, <%=s.g?"his":"her"%> black lips expose four pearly white fangs, and a big pink tongue. It's scary, but mostly it makes you feel... strangely enticed.
 
-"To think lot and say little is a virtue," the polar bear says, "However, I believe it is polite that I should know your name?"
+"To think lot and say little is a virtue," the polar bear continues, "However, I believe it is polite that I should know your name?"
 
 <div.commands>
 
-&gt; [[Of course! My name is...]]
+\\> [[Of course! My name is...]]
 
 </div>
 
-:: Do you live around here? [cold checkpoint] <500,2125>
+:: Do you live around here? [cold checkpoint] <500,2050>
 "Not especially," says Zasha. "Zasha considers <%=s.g?"him":"her"%>self as nomad. Often moving from place to place. Tonight staying in hotel on way east, for next job."
 
 You nod, glancing around the truck's interior, until your eyes fix on a metal toolbox on the floor by your feet. You hope it's not too personal a question, but what does <%=s.g?"he":"she"%> do for a living?
@@ -1118,9 +1120,9 @@ You nod, glancing around the truck's interior, until your eyes fix on a metal to
 
 <div.commands.important>
 
-&gt; [[Nod agreeably.]]
+\\> [[Nod agreeably.]]
 
-&gt; [[Press for more information.]]
+\\> [[Press for more information.]]
 
 </div>
 
@@ -1129,13 +1131,13 @@ You eagerly stick one paw, then the other, into the bear's awaiting maw. <%=s.g?
 
 Experimentally, you try to pull one of your paws back out, but it's being gripped tightly by Zasha's esophagus. Looks like no turning back now.
 
-Zasha's breath is warm and humid as it blasts your face. Surprisingly, it doesn't smell very bad inside <%=s.g?"his":"her"%> mouth. In fact, <%=s.g?"his":"her"%> dental hygiene is spotless. The rows of teeth framing <%=s.g?"his":"her"%> tongue are almost as white as <%=s.g?"his":"her"%> fur. You only have a moment to appreciate this before <%=s.g?"he":"she"%> suddenly lurches <%=s.g?"his":"her"%> head forward, forcing your head and ears to the back of <%=s.g?"his":"her"%> throat.
+Zasha's breath is warm and humid as it blasts your face. Surprisingly, it doesn't smell very bad inside <%=s.g?"his":"her"%> mouth. In fact, <%=s.g?"his":"her"%> dental hygiene is spotless. The sharp teeth framing <%=s.g?"his":"her"%> tongue are almost as white as <%=s.g?"his":"her"%> fur. You only have a moment to appreciate this before <%=s.g?"he":"she"%> suddenly lurches <%=s.g?"his":"her"%> head forward, forcing your head and ears to the back of <%=s.g?"his":"her"%> throat.
 
 You stare in amazement as your face approaches the dark warmth of <%=s.g?"his":"her"%> gullet.
 
 <div.commands>
 
-&gt; [[Th-thank you...]]
+\\> [[Th-thank you...]]
 
 </div>
 
@@ -1150,26 +1152,26 @@ Moments later, you feel the pressure of a huge paw feeling for your presence thr
 
 <div.commands>
 
-&gt; [[Yes, wonderful!]]
+\\> [[Yes, wonderful!]]
 
 </div>
 
 :: Oh, yes please! <1800,1725>
 Your ears stand straight up with excitement. Unlike most bunnies, you've always been "curious" as to what being swallowed is like, but never really admitted it to yourself.
 
-You say that you would love to be eaten, um, but you understand if <%=s.g?"he":"she"%>'s not interested, of course. A-and not digested!
+You say that you would love to be eaten, um, but you understand if <%=s.g?"he":"she"%>'s not interested, of course.
 
 The polar bear—who you presume is Zasha—blushes furiously beneath <%=s.g?"his":"her"%> white fur. <%=s.g?"He":"She"%> looks at you—and your body—with a renewed interest.
 
 "...Rabbit wishes for protection from cold?" <%=s.g?"he":"she"%> asks.
 
-Yes, you say. Zasha narrows <%=s.g?"his":"her"%> eyes.
+Yes, you say. You want to be wrapped up in warmth. You want to feed <%=s.g?"his":"her"%> huge belly and fatten it up with yourself.
 
-"And does not mind being swallowed?" <%=s.g?"he":"she"%> reiterates, as if trying to make sure <%=s.g?"he":"she"%> has not misunderstood or misinterpreted you.
+Zasha narrows <%=s.g?"his":"her"%> eyes. "Rabbit is absolutely sure?" <%=s.g?"he":"she"%> reiterates, as if trying to make sure <%=s.g?"he":"she"%> has not misunderstood or misinterpreted you.
 
 <div.commands>
 
-&gt; [[Yes, a thousand times yes!!]]
+\\> [[Yes, a thousand times yes!!]]
 
 </div>
 
@@ -1186,18 +1188,18 @@ Zasha wets <%=s.g?"his":"her"%> mouth and replies, "You are sure? Zasha would no
 
 <div.commands.important>
 
-&gt; [[No, I'm absolutely sure.]]
+\\> [[No, I'm absolutely sure.]]
 
-&gt; [[P-please swallow me whole!|Oh, yes please!]]
+\\> [[P-please swallow me whole!|Oh, yes please!]]
 
 </div>
 
-:: Arrive at the hotel. [cold] <500,2375>
+:: Arrive at the hotel. [cold] <500,2300>
 Scenery whizzes past. Eventually Zasha turns off the road, and into the parking lot of a roadside hotel, just as promised. It's a meager two-story lodge, probably converted from an old house or something. It's meager, but in a quaint, charming way.
 
-&gt; [[Get out of the truck.]]
+\\> [[Get out of the truck.]]
 
-:: Adventure Log <900,100>
+:: Adventure Log <904,100>
 A list of all the passages the user has seen, in the order they were discovered.
 
 This code might be useful for some kind of sidebar?
@@ -1214,11 +1216,11 @@ let checkpoints = story.passages
 <% }); %>
 </ul>
 
-&gt; <a0 onclick="window.confirm('This will permanently reset checkpoints. Are you sure?') && storyFlags.assign({seenPassages: []}); bunny.rerender()">Reset checkpoints.</a>
+\\> <a0 onclick="window.confirm('This will permanently reset checkpoints. Are you sure?') && storyFlags.assign({seenPassages: []}); bunny.rerender()">Reset checkpoints.</a>
 
 <% } %>
 
-:: Nod agreeably. [cold] <500,2250>
+:: Nod agreeably. [cold] <500,2175>
 Yup, nothing suspicious there.
 
 "And you?" Zasha asks, "If you do not mind, where is Juniper headed?"
@@ -1228,8 +1230,6 @@ Oh, you know, just passing through. It's not important. Probably some kind of bu
 Zasha nods, eager to change the subject. You ride together in silence for a minute or so. <%= story.render("Arrive at the hotel.")%>
 
 :: Press for more information. [cold] <1050,2175>
-*CW: Anal Vore. Masturbation. Rimming. Fatal Vore. Accidental digestion.*
-
 You can clearly tell that Zasha is lying about <%=s.g?"his":"her"%> job. You tell <%=s.g?"him":"her"%> so outright. What does <%=s.g?"he":"she"%> *really* do for a living?
 
 Zasha seems taken aback, "I... I apologize for this untruthfulness. Zasha works in an er... 'disreputable' field, and did not want to make rabbit nervous."
@@ -1244,7 +1244,7 @@ Zasha shifts uncomfortably. "Films of... er... sexual swallowing," <%=s.g?"he":"
 
 <div.commands>
 
-&gt; [[Oh. *Ooooooh.*|Oh. Ooooooh.]]
+\\> [[Oh. *Ooooooh.*|Oh. Ooooooh.]]
 
 </div>
 
@@ -1255,7 +1255,7 @@ You shake your head vehemently no. You're not sure what came over you just now. 
 
 <div.commands>
 
-&gt; [[Yes, actually...|Yes, I do need help actually...]]
+\\> [[Yes, actually...|Yes, I do need help actually...]]
 
 </div>
 
@@ -1276,7 +1276,7 @@ What will you do?
 
 <div.commands>
 
-&gt; [[Climb inside <%=s.g?"his":"her"%> mouth.|Climb inside Zasha's mouth.]]
+\\> [[Climb inside <%=s.g?"his":"her"%> mouth.|Climb inside Zasha's mouth.]]
 
 </div>
 
@@ -1285,7 +1285,7 @@ You shout approvingly at the top of your little rabbit lungs, attempting to make
 
 Zazha opens <%=s.g?"his":"her"%> mouth to reply, but is interrupted by a deep, guttural belch. Your body must've displaced a lot of air. As the burp escapes Zasha's lips, <%=s.g?"his":"her"%> walls get a little bit tighter around you. "That is, *urp*, good to hear," <%=s.g?"he":"she"%> says, "Juniper made for delicious meal." The bear affectionately rubs <%=s.g?"his":"her"%> belly and says, "I am on way to hotel nearby. You will come along with Zasha for night? Return to car in morning?"
 
-**&gt; Perfect...**
+**\\> Perfect...**
 
 You rub the surrounding stomach walls approvingly.
 
@@ -1295,36 +1295,26 @@ Zasha pulls <%=s.g?"his":"her"%> head out of your car window with a satisfied sm
 
 <div.commands>
 
-&gt; [[Get comfy.]]
+\\> [[Get comfy.]]
 
 </div>
 
-:: Oh. Ooooooh. [cold] <1050,2300>
+:: Oh. Ooooooh. <1050,2300>
+*CW: Anal Vore. Masturbation. Rimming.*
+
 <%
 console.debug(`Set s.knows_zasha_does_vorno from ${s.knows_zasha_does_vorno} to true.`)
 s.knows_zasha_does_vorno = true; %>
 
-Oh right, you say, cheeks suddenly turning red, *those* films.
+Oh, you say, cheeks suddenly turning red. *Those* films.
 
 Zasha is referring to internet videos of consensual prey being devoured. *Vornography*. It's legal, although slightly frowned upon. They're chiefly aimed at predators who don't otherwise have a healthy way of expressing their desires.
 
 You're ashamed to think that you've actually seen quite a lot of those films on sites like TummyTube, GrumbleX, and <%=s.g?"ButtBrothers":"SwallowSisters"%>.com. You never thought you'd be in the same *post-code* as one of the <%=s.g?"actors":"actresses"%>, much less riding alone in a car with one.
 
-S-so, you ask, <%=s.g?"he":"she"%> eats people for a living?
+<div.commands>
 
-"Yes," Zasha says, struggling to make eye-contact, "but only with strict consent, of course!"
-
-B-but, <%=s.g?"he":"she"%> doesn't digest them, right?
-
-Zasha pauses for slightly too long to be reassuring. "Er, usually, yes."
-
-Your face flushes. *Usually*? <%=s.g?"He":"She"%>'s d-done it? The bear's belly, just a few feet from you, has dissolved prey into its fat. You never watched much in *that* category, but the thought fills you with equal parts fear and arousal.
-
-<div.commands.important>
-
-&gt; [[...Can you eat me?]]
-
-&gt; [[C-cool! A-anyways...]]
+\\> [[S-so, you eat people for a living?]]
 
 </div>
 
@@ -1337,41 +1327,51 @@ No, you say, you're actually quite curious. N-no digestion, of course!
 
 "Ah. Prey do tend to calm down when reassured they will not be digested... Zasha is not shooting until tomorrow evening, and rabbit does present a tempting offer... Does rabbit wish swallowing, or other options?"
 
-There are other options, you ask?
+There are *other* options?
 
-Zasha smiles uneasily. "Yes, sometimes Zasha is involved in... *specialty* scenes. Taking prey into private parts, or anal hole..."
+Zasha smiles uneasily. "Yes, sometimes Zasha is involved in... *specialty* scenes. Taking prey into private parts, or um, anal hole..."
 
-&gt; [[Wait, you can do that?]]
+\\> [[Anal? You can do that?]]
 
-:: Wait, you can do that? [cold] <1125,2650>
+:: Anal? You can do that? [cold] <1125,2650>
 You're somewhat disbelieving of this. You knew some predators were capable of "anal vore", but you learned in Biology that it was a very rare skill.
 
-"Yes," Zasha replies, "Zasha is big bear, yes. <%=s.g?"He":"She"%> can consume prey through this hole. Can even squeeze through intestines and into stomach to be, er, regurgitated. This requires much practice," <%=s.g?"he":"she"%> says, seemingly quite proud.
+"Yes," Zasha replies, "Zasha is big bear, yes. <%=s.g?"He":"She"%> can consume prey through this hole. Can even squeeze through intestines and into stomach to be, er, regurgitated."
+
+You listen intently, equal parts disgusted, terrified, and amazed.
+
+"This requires much practice," <%=s.g?"he":"she"%> says, seemingly rather proud.
 
 <div.commands>
 
-&gt; [[Would you mind... um... showing me?]]
+\\> [[Would you mind... um... showing me?]]
 
 </div>
 
 :: Get comfy. [vore] <1800,2475>
-// PASSAGE TODO
+<div.important>
+This route is unfinished! It's playable, but is still written as an outline and may be missing content.
+</div>
 
 You're curled up uncomfortably, and decide to reposition yourself slightly.
 
 "Oof..." Zasha grunts and groans slightly as you move around inside <%=s.g?"him":"her"%>. S-sorry! you say, you're just trying to- Woah! Your paw slips and you accidentally kick hard into the stomach walls.
 
-"Mmmmmmmnghh!" Zasha suddenly lets out an erotic moan. Awkward silence. "Oh dear- I do not wish to cause rabbit discomfort, but these movements are making Zasha feel... pleasurable. Do you wish to be regurgitated?"
+"Mmmmmmmnghh!" Zasha suddenly lets out an erotic moan. Awkward silence. "Oh dear- I do not wish to cause rabbit discomfort, but these movements are making Zasha feel... pleasurable. Does Juniper wish to be regurgitated?"
 
-**&gt; I don't mind, actually...**
+**\\> I don't mind, actually...**
 
-You tell Zasha that you don't mind. In fact, you admit, you're experiencing similar feelings.
+Well, um...
 
-"Hmph?" Zasha says. You think <%=s.g?"he":"she"%> might be blushing. "Well then, let us embark before storm gets worse."
+Zasha begins to reach for a bottle of anti-digestion pills.
 
-<%=s.g?"He":"She"%> pops some anti-digestion tablets from the backseat. They fizz and dissolve in the juices around you. <%=s.g?"He":"She"%> starts driving.
+You tell Zasha that you don't mind. In fact, you admit, you're experiencing similar... pleasurable feelings. You like being <%=s.g?"his":"her"%> food.
 
-**&gt; A bumpy ride.**
+"Hmph?" Zasha says. You think <%=s.g?"he":"she"%> might be blushing. "Zasha is happy to hear this. Well then, let us embark before storm gets worse."
+
+<%=s.g?"He":"She"%> conspicuously puts the anti-digestion pills back, and starts driving.
+
+**\\> A bumpy ride.**
 
 Zasha's gut bounces and sloshes harmlessly around you as the truck moves.
 
@@ -1379,24 +1379,14 @@ There'd probably be a description of the passing scenery here, if you weren't co
 
 You hear Zasha stop the car. <%=s.g?"He":"She"%> enters, hefting <%=s.g?"his":"her"%> huge gut inside. The concierge gives <%=s.g?"him":"her"%> a weird look, but says nothing.
 
-**&gt; Enter the hotel room.**
-
-Zasha sits down, and delicately caresses your outline. Feeling both of your libidos at their peak from the undeniably sexual experience of carnivorous satisfaction, the two of you masturbate (skippable).
-
-Having orgasmed, you ask when you can come out.
-
-<div.commands>
-
-&gt; [[Can I come out now?]]
-
-</div>
+\\> [[Enter the hotel room. (Willing Oral Route)]]
 
 :: Would you mind... um... showing me? [cold] <1125,2775>
 Zasha doesn't take <%=s.g?"his":"her"%> eyes off the road, but you can see a mischievous smirk growing on <%=s.g?"his":"her"%> face.
 
-"Yes," <%=s.g?"he":"she"%> "Zasha can do this. Wait until hotel, okay? We are almost there."
+"Yes," <%=s.g?"he":"she"%> replies "Zasha can do this. Wait until hotel, okay? We are almost there."
 
-You nod, now very excited. You hardly expected this night would end with you being devoured through a polar bear's asshole.
+You nod, now very excited. You hardly expected this night would end with you being devoured through a polar bear's asshole. It's almost like a scene in those erotic fanfictions which... *other* people... seem to be very into. So you've heard, anyway.
 
 Zasha keeps driving. Scenery whizzes past. Eventually <%=s.g?"he":"she"%> turns off the road, and into the parking lot of the roadside hotel <%=s.g?"he":"she"%>'s staying at tonight. You climb out of the truck, and groan as the icy snow burns your pawpads.
 
@@ -1404,7 +1394,7 @@ You're about to complain, when Zasha suddenly scoops you into <%=s.g?"his":"her"
 
 <div.commands>
 
-&gt; [[Wh-what gives?]]
+\\> [[Wh-what gives?]]
 
 </div>
 
@@ -1422,39 +1412,54 @@ You nod. You'd rather forget all about Zasha's innate capacity to swallow and wh
 :: Wh-what gives? <1125,2900>
 Zasha snuggles you close to <%=s.g?"his chest":"her bosom"%>, and smiles. "Rabbit is Zasha's food now. Zasha does not like cold food. Must keep warm."
 
-You blush, but accept <%=s.g?"his":"her"%> affectionate teasing as <%=s.g?"he":"she"%> carries you into the building, setting you down in the lobby while <%s.g?"he":"she"%> talks to the concierge to get a room key. As a rabbit, you're somewhat used to people treating you like a child, but Zasha is treating you like *<%=s.g?"his":"her"%>* child, a child <%=s.g?"he":"she"%> intends to consume anally.
+You blush, but accept <%=s.g?"his":"her"%> affectionate teasing as <%=s.g?"he":"she"%> carries you into the building, setting you down in the lobby while <%s.g?"he":"she"%> talks to the concierge to get a room key. As a rabbit, you're somewhat used to people treating you like a child, but Zasha is treating you like *<%=s.g?"his":"her"%>* child, a child <%=s.g?"he":"she"%> intends to consume anally. Freud would have a field day with this.
 
-With keycards in hand, Zasha leads you down the hall, walking with <%=s.g?"his":"her"%> tail in the air, and <%=s.g?"his":"her"%> butt pointed directly at you. It sways slightly as <%=s.g?"he":"she"%> saunters ahead. Your eyes fix on that gigantic furry ass. <%=s.g?"He":"She"%>'s definitely teasing you. You follow <%=s.g?"him":"her"%>.
+With keycards in hand, Zasha leads you down the hall, walking with <%=s.g?"his":"her"%> tail in the air, and <%=s.g?"his":"her"%> butt pointed directly at you. Your eyes fix on that gigantic furry ass. It sways slightly as <%=s.g?"he":"she"%> saunters ahead. <%=s.g?"He":"She"%>'s definitely teasing you. You follow <%=s.g?"him":"her"%>.
 
-From the front desk, the concierge winks at you and gives a thumbs up.
+From the front desk, the concierge winks at you and gives a thumbs up. You smile back, nervously.
 
 <div.commands>
 
-&gt; [[Enter the hotel room.|Enter the hotel room. (Anal Vore Route)]]
+\\> [[Enter the hotel room.|Enter the hotel room. (Anal Vore Route)]]
 
 </div>
 
 :: Enter the hotel room. (Anal Vore Route) [checkpoint] <1125,3025>
-// TODO: the anal vore scene.
-
-Demonstration time.
-
-Zasha tells you to remove clothes and wait for <%=s.g?"him":"her"%> as <%=s.g?"he":"she"%> goes to the car to get some supplies.
-
-<%=s.g?"He":"She"%> returns with the metal toolbox, and shows you some anti-digestion pills, plus a huge bottle of strawberry flavored edible lube. You—naked—bashfully shy away from Zasha, but <%=s.g?"he":"she"%> gently dominates you, cupping your chin and teasing your crotch. All vornography moves.
-
-<%=s.g?"He":"She"%> then hands you the bottle of lube, gets up on the bed on all fours, and instructs you to spread <%=s.g?"his":"her"%> cheeks, and lube up <%=s.g?"his":"her"%> asshole.
-
-<div.commands>
-
-&gt; [[Lube up <%=s.g?"his":"her"%> hole.|Lube up Zasha's hole.]]
-
-&gt; [[Use your tongue.]]
-
+<div.important>
+This route is unfinished! It's playable, but is still written as an outline and may be missing content.
 </div>
 
-:: Enter the hotel room. (Dinner Route) [checkpoint] <425,4500>
-// TODO:
+It's demonstration time.
+
+Zasha instructs you "Remove clothes," and wait while <%=s.g?"he":"she"%> goes back to the car to get some supplies.
+
+**\\> Get undressed.**
+
+You remove your shirt and jacket. God, you just feel so *exposed* and vulnerable like this. You're nearly shaking with excitement.
+
+Zasha returns with the metal toolbox from the car. <%=s.g?"He":"She"%> shows you some anti-digestion pills, plus a huge bottle of strawberry flavored edible lube.
+
+You say that you've never done this before. Sh-should you have a safeword?
+
+"Safe word? Like what?"
+
+\\> <a0 data-passage="The safe word is..."
+onclick="story.state.safeWord='Pineapple';">Pineapple!</a>
+
+\\> <a0 data-passage="The safe word is..."
+onclick="story.state.safeWord='Sassafrass';">Sassafrass!</a>
+
+\\> <a0 data-passage="The safe word is..."
+onclick="story.state.safeWord = 'Idiosyncratic'; story.state.weirdSafeWord = true;">Idiosyncratic!</a>
+
+<div->
+\\> [[The safe word is...]]
+</div>
+
+:: Enter the hotel room. (Dinner Route) [checkpoint] <425,4425>
+<div.important>
+This route is unfinished! It's playable, but is still written as an outline and may be missing content.
+</div>
 
 You and Zasha have a pleasant meal. Zasha shares <%=s.g?"his":"her"%> green beans with you. The two of you learn more about each other, laughing, and enjoying the night. You admit to Zasha that at first, you were worried he/she would eat you! He/she laughs and dismisses the thought.
 
@@ -1466,7 +1471,7 @@ As <%=s.g?"he":"she"%> drives you back to your car, you're relieved to see that 
 
 Happy ending.
 
-&gt; [[Restart.|Title Screen]]
+\\> [[Restart.|Title Screen]]
 
 :: Th-thank you... [vore] <1800,2100>
 You murmur thanks at Zasha, unsure if <%=s.g?"he":"she"%> can hear you.
@@ -1479,11 +1484,11 @@ You're officially food now, and it feels *amazing*.
 
 <div.commands>
 
-&gt; [[Enter stomach.|Enter stomach. (Vore Route 1)]]
+\\> [[Enter stomach.|Enter stomach. (Vore Route 1)]]
 
 </div>
 
-:: No no, I'll do it! <550,4625>
+:: No no, I'll do it! <550,4550>
 You tell Zasha <%=-s.g?"he":"she"%> has done more than enough. You'll nab a blanket or two and sleep on the floor.
 
 Zasha nods and gently sits down on the edge of the matress, which creaks as though it's barely supporting <%-s.g?"him":"her"%>. <%-s.g?"He":"She"%> pats the bedspread, offering for you sit next to <%=s.g?"him":"her"%>. You do so. <% if (s.snuggled_up) { %><%-s.g?"He":"She"%> opens <%=s.g?"his":"her"%> jacket, and you snuggle up inside.<% } %>
@@ -1492,78 +1497,52 @@ You sit <%- s.snuggled_up ? 'cozily' : 'awkwardly' %> beside Zasha for a little 
 
 <div.commands>
 
-**&gt; Do you want a sip?**
+\\> [[Do you want a sip?]]
 
 </div>
 
-You offer a sip of your tea to Zasha. <%=s.g?"He":"She"%> hesitates at first, but eventually obliges, <%=s.g?"his":"her"%> massive claws very gently taking the cup from you, and having a little sip.
+:: Press your face into Zasha's asshole. [vore] <1129,3459>
+<% s.safeWord = s.safeWord || "листва"; %>
 
-"Mm," Zasha remarks, "this is soothing."
+You shlorp your nose into Zasha's thick ass. It's dripping with sweat as you fold your ears behind your head, and press forward.. The sensation of forcing your face into that tight ring, and having it stretch to accept you, is utterly surreal.
 
-Zasha delicately reaches to pass the tea back to you. You reach to take it, but <%=s.g?"his":"her"%> claw slips on the rim, and it falls. "Oh no-!" <%=s.g?"he":"she"%> cries in shock as the cup splashes all over you, drenching your undershirt with warm-ish tea.
+**\\> Breathe deep.**
 
-Zasha's white face turns beet-red. "Oh dear, I am terribly sorry." <%=s.g?"He":"She"%> immediately stands up, walks to the bathroom, and returns with a towel.
+The smell is intoxicating, a powerful musk, mixed with strawberries. You travel past rectum, and into <%=s.g?"his":"her"%> colon.
 
-No, you say, that was completely your fault. You wipe the spilled tea from your fur, and briefly dab your sopping wet undershirt. Your heart sinks. You don't have a spare with you.
+**\\> Is this too deep?**
 
-**&gt; Take off your shirt.**
+Zasha moans and urges you deeper. <%=s.g?"His":"Her"%> paws delicately guide your bulge through <%=s.g?"his":"her"%> intestines. It starts to become a little tight in here, and you find yourself struggling to breathe.
 
-You blush a deep red. You don't have a spare, you say.
+**\\> <%-s.safeWord%>... <%-s.safeWord%>!**
 
-"There is no need for to be ashamed. We have all seen naked creature before, yes?" <%=s.g?"He":"She"%> grabs the lapels of <%=s.g?"his":"her"%> coat. "Zasha would disrobe too, if it made you more comfortable?"
+You're losing oxygen. You wiggle your tightly bound feet with displeasure, and call out for help. Your voice is muffled, but Zasha seems to only push you deeper! You can hear <%=s.g?"his":"her"%> heart pounding around you now.
+
+**\\> <%-s.safeWord.slice(0, 4)%>...**
+
+You feel yourself become woozy. Zasha's upper intestine pulsates indifferently around you. You feel consciousness... beginning... to...
+
+*GASP*. Your head pokes through a sphincter into Zasha's stomach, a dark dank cavern.
+
+You feel your feet disappear beneath Zasha's tail. Zasha sits down, and delicately caresses your outline. "I-is rabbit okay?"
+
+**\\>Y-yeah.**
+
+You're fine, you say. Actually, it made you feel kind of... alive. You look down at your lower half, now also inside the stomach. *Very* alive.
+
+Feeling both of your libidos at their peak from the undeniably sexual experience of carnivorous satisfaction, the two of you (optionally) masturbate.
+
+**\\> Yess!**
+
+Satisfied with the orgasm, the two of you fall asleep.
 
 <div.commands>
 
-**&gt; N-no, thank you! That's okay.**
+\\> [[The next day...]]
 
 </div>
 
-Hesitantly, you remove your shirt. Zasha politely averts <%=s.g?"his":"her"%> eyes.
-
-You two decide to take an early night, but the floor is extremely cold.
-
-**&gt; Ask Zasha for another blanket.**
-
-Zasha is snoring loudly, and you try to wake <%=s.g?"him":"her"%>, but it does not work.
-
-**&gt; Climb into the bed.**
-
-You figure you can just discretely slip into the warm, cozy bed alongside <%=s.g?"him":"her"%>, but in <%=s.g?"his":"her"%> sleep, <%=s.g?"he":"she"%> grabs you and begins to snuggle you against <%=s.g?"his":"her"%> fur.
-
-You're enjoying the guilty pleasure of having <%=s.g?"his":"her"%> arms wrapped around you, until you feel <%=s.g?"his":"her"%> belly rumbling hard. It's totally empty, which makes you a bit nervous. Suddenly, the sleeping Zasha opens <%=s.g?"his":"her"%> mouth wide, grips you in <%=s.g?"his":"her"%> claws, and begin stuffing you inside. Oh dear.
-
-Your parents warned you about sleep eating—one of the many reasons never to ever date a predator—but you assumed it was made-up.
-
-**&gt; Cry for help!**
-
-You yell out, trying to wake Zasha up, but <%=s.g?"he":"she"%> simply keeps sleep-swallowing you until you're deep inside <%=s.g?"his":"her"%> belly, where you begin to digest, and fall unconscious.
-
-"Mmmm..."
-
-### The End.
-
-&gt; [[Epilogue.|Epilogue (Regretful)]]
-
-&gt; <a0 onclick="bunny.restart()">Restart.</a>
-
-:: Press your face into Zasha's asshole. [vore] <1125,3275>
-The smell of Zasha's asshole is an intense musk, mixed with strawberries. The sensation of forcing your face into that tight ring, and having it stretch to accept you, is utterly surreal.
-
-// TODO: more descriptors.
-
-You shlorp your way up Zasha's butt, through <%=s.g?"his":"her"%> rectum, and into <%=s.g?"his":"her"%> colon. <%=s.g?"His":"Her"%> paws delicately guide your massive bulge through <%=s.g?"his":"her"%> intestines, then we skip a few steps, and you're curled up inside Zasha's stomach. Zasha pops some anti-digestion tablets, and begins to masturbate.
-
-Come up with a contrived reason for Zasha to digest the player. Zasha cums and falls alseep; the anti-digestion pills wear off; you're unable to wake <%=s.g?"him":"her"%> so you spend the night gradually digesting.
-
-"Zasha... will let rabbit out... tomorrow."
-
-### The End.
-
-&gt; [[Epilogue.|Epilogue (Regretful)]]
-
-&gt; <a0 onclick="bunny.restart()">Restart.</a>
-
-:: Lube up Zasha's hole. <1125,3150>
+:: Lube up Zasha's hole. <1221,3278>
 You squirt a load of "Strawberry Lik-n-Stik Edible Lube" onto your cupped paw, and delicately smear it all over Zasha's asshole.
 
 "Rabbit will need to get it deeper..." <%=s.g?"he":"she"%> teases.
@@ -1578,31 +1557,31 @@ Zasha's furry tail is sticking straight up. <%=s.g?"He":"She"%> says, "Well rabb
 
 <div.commands>
 
-&gt; [[Press your face into <%=s.g?"his":"her"%> asshole.|Press your face into Zasha's asshole.]]
+\\> [[Press your face into <%=s.g?"his":"her"%> asshole.|Press your face into Zasha's asshole.]]
 
 </div>
 
-:: Use your tongue. <1250,3150>
+:: Use your tongue. <1090,3282>
 As you hold Zasha's cheeks apart and gaze into the hole betwixt, you can't help yourself. You lean in begin to swirl your tongue around <%=s.g?"his":"her"%> huge puckered asshole. <%=s.g?"He":"She"%> immediately responds with a moan, <%=s.g?"his cock twitching slightly between his legs.":"her asshole clenching and releasing."%>. "Rabbit could not help itself, yes? Mm, this is not bad..." You keep going for a little while, inhaling deep lungfuls of bear musk.
 
 Finally, Zasha says, "Rabbit *will* need to use more lube to get inside of Zasha."
 
 <div.commands>
 
-&gt; [[Lube up <%=s.g?"his":"her"%> hole.|Lube up Zasha's hole.]]
+\\> [[Lube up <%=s.g?"his":"her"%> hole.|Lube up Zasha's hole.]]
 
 </div>
 
-:: Epilogue (Regretful) <1125,3400>
-*CW: Post-Vore Disposal*
+:: Epilogue (Digestion regret) <1785,3692>
+*CW: Post-Vore Scat.*
 
-The next day, Zasha wakes up with a huge belly full of digested rabbit. <%=s.g?"He":"She"%> is quite upset over this, having failed to protect an innocent creature, but is gradually corrupted by the carnal feelings of power which predation gives <%=s.g?"him":"her"%>. <%=s.g?"He":"She"%> concludes there was nothing <%=s.g?"he":"she"%> could have done.
+The next day, Zasha wakes up with a huge belly full of digested rabbit. <%=s.g?"He":"She"%> is quite upset over this, having failed to protect an innocent creature, but is gradually corrupted by the carnal feelings of power which predation gives <%=s.g?"him":"her"%>. It's not the first time, and <%=s.g?"he":"she"%> stoically concludes there was nothing <%=s.g?"he":"she"%> could have done to stop it.
 
-You and your belongings are discretely flushed in the hotel toilet. Zasha starts downtown.
+You and your belongings are discretely flushed in the hotel toilet as a slurry of bones and rabbit fur. Zasha starts downtown.
 
-&gt; <a0 onclick="bunny.restart()">Restart.</a>
+\\> <a0 onclick="bunny.restart()">Restart.</a>
 
-:: Warp zone <1100,96>
+:: Warp zone <1104,96>
 You've entered a time warp!
 
 This is a list of every passage, in the order they were added to the game.
@@ -1697,35 +1676,18 @@ The polar bear interrupts, looking you straight in the eyes with furrowed brows 
 
 <div.commands>
 
-&gt; [[Oh, yes please!|Oh, yes please!]]
+\\> [[Oh, yes please!|Oh, yes please!]]
 
-&gt; [[N-no, of course not!]]
+\\> [[N-no, of course not!]]
 
 </div>
-
-:: Can I come out now? [vore] <1800,2625>
-Zasha, exhausted, replies <%=s.g?"he":"she"%>'ll let you out tomorrow morning. What!? You'll be going through "the natural way." More gentle on stomach, says Zasha. <%=s.g?"He":"She"%> seems to be teasing you. "Besides, hotel room is much too cold for rabbit," <%=s.g?"he":"she"%> says smirking, "Zasha must keep warm."
-
-**&gt; No! Spit me up now!**
-
-You try to fight it, but you're in no position to bargain. You spend the night slowly sliding unharmed through Zasha's intestines.
-
-**&gt; The next day...**
-
-You wake up in the morning being squeezed out of the bear's asshole, and into a bathtub. Yuck.
-
-You gratefully return to your car, unable to look Zasha in the eye after spending multiple hours in <%=s.g?"his":"her"%> large intestine. <%=s.g?"He":"She"%> seems a little regretful. You call a company and tow the car to be fixed.
-
-Lukewarm ending...?
-
-&gt; <a0 onclick="bunny.restart()">Restart.</a>
 
 :: Wait, I'm not wearing pants? [cold] <500,850>
 No, of course you're not. What a silly thing for you to wonder.
 
 You, Juniper Greenall, are a rabbit living in a society of anthropomorphic mammals. Like most people, you are furry enough "down there" that you don't consider pants to be a necessary garment, except on especially formal occasions. As long as you're wearing some kind of top (in your case, a jacket and a plain undershirt) you're fully clothed. Porky Pig-style.
 
-The reader privately wonders whether the author is just creating a flimsy excuse for her story to include partial nudity. They don't complain, however, as they're too busy imagining naked furries.
+The reader privately wonders whether the authors are just creating a flimsy excuse for their story to include partial nudity. The reader is too busy imagining half-naked furries to complain.
 
 It's gonna be a long night. There will be plenty of time to think about the societal implications of this when you're-
 
@@ -1733,11 +1695,11 @@ It's gonna be a long night. There will be plenty of time to think about the soci
 
 <div.commands>
 
-&gt; [[What was that?]]
+\\> [[What was that?]]
 
 </div>
 
-:: You're sure that there aren't any other rooms? <500,3575>
+:: You're sure that there aren't any other rooms? <500,3500>
 The concierge looks at you, then back at the sign as if pretending to double-check.
 
 "Yup," <%=!s.g?"he":"she"%> shrugs, "This is a pretty small hotel. You're not the only ones trying to wait out the storm." <%=!s.g?"He":"She"%> <%= s.snuggled_up ? `notices Zasha's fur on your jacket` : `sniffs the air slightly`%>, and quietly asks with a bemused smirk, "Why don't you just stay with your <%=s.g?"boyfriend":"girlfriend"%> over there? Scared <%=s.g?"he":"she"%>'ll get *hungry?*"
@@ -1748,11 +1710,11 @@ Suddenly, you feel Zasha put <%=s.g?"his":"her"%> paw on your shoulder. "No vaca
 
 I mean, it's not like you really have any other options?
 
-&gt; [[Freeze to death outside?]]
+\\> [[Freeze to death outside?]]
 
-&gt; [[Construct makeshift bed from travel pamphlets?]]
+\\> [[Construct makeshift bed from travel pamphlets?]]
 
-:: Thanks for the warmth. [warm] <500,2750>
+:: Thanks for the warmth. [warm] <500,2675>
 Thank you, you tell Zasha, poking your head out to see where you're going.
 
 "There is no need for such gratitudes, Rabbit," Zasha says, still looking ahead, "it is duty of a bear to help all creatures."
@@ -1761,7 +1723,144 @@ You remind Zasha that your name is Juniper, not Rabbit. <%=s.g?"He":"She"%> repe
 
 The automatic doors have seen better days, but they slowly and creakily slide open, bringing in a little draft into the lobby. Zasha opens <%=s.g?"his":"her"%> jacket to release you into the warm air of the lobby. You reluctantly step away, and dust a few white hairs from your jacket.
 
-&gt; [[Enter the hotel.]]
+\\> [[Enter the hotel.]]
+
+:: S-so, you eat people for a living? [cold] <1153,2409>
+"Yes," Zasha says, struggling to make eye-contact, "but only with strict consent, of course!"
+
+A-and no digestion, right?
+
+Zasha pauses for slightly too long to be reassuring. "Er, usually, yes."
+
+Your face flushes. *Usually*? <%=s.g?"He":"She"%>'s d-done it? This bear's belly, just a few feet from you, has dissolved prey into its fat. You never watched much in *that* category, but the thought fills you with equal parts fear and arousal.
+
+<div.commands.important>
+
+\\> [[...Can you eat me?]]
+
+\\> [[C-cool! A-anyways...]]
+
+</div>
+
+:: The next day... <1133,3605>
+You wake up in the morning, being squeezed out of the bear's asshole, and into a bathtub. Yuck.
+
+You gratefully return to your car, unable to look Zasha in the eye after spending multiple hours in <%=s.g?"his":"her"%> large intestine. <%=s.g?"He":"She"%> seems a little bashful about almost killing you, but the two of you are on good terms. Zasha tows your car to a repair shop, and waves you off. As <%=s.g?"he":"she"%> leaves, <%=s.g?"he":"she"%> writes down an email address, and winks, asking if you want to do it again some time. A shiver goes down your spine.
+
+Lukewarm ending...?
+
+\\> <a0 onclick="bunny.restart()">Restart.</a>
+
+:: The safe word is... <1125,3155>
+<% s.safeWord = s.safeWord || "листва"; %>
+
+"<%-s.safeWord%><%-s.weirdSafeWord ? '?' : ',' %>" Zasha repeats, "<%-either("Okay", "Alright", "Yes")%>. Say this, and Zasha will stop what <%=s.g?"he":"she"%> is doing and help Rabbit out."
+
+You—naked—bashfully shy away from Zasha, but <%=s.g?"he":"she"%> gently dominates you, cupping your chin and teasing your crotch. All vornography moves.
+
+W-wow, you two are really doing this.
+
+<%=s.g?"He":"She"%> then hands you the bottle of lube, gets up on the bed on all fours, and instructs you to spread <%=s.g?"his":"her"%> cheeks, and lube up <%=s.g?"his":"her"%> asshole.
+
+<div.commands>
+
+\\> [[Lube up <%=s.g?"his":"her"%> hole.|Lube up Zasha's hole.]]
+
+\\> [[Use your tongue.]]
+
+</div>
+
+:: Enter the hotel room. (Willing Oral Route) [vore checkpoint] <1804,2621>
+**\\> Can I come out now?**
+
+Zasha, exhausted, replies <%=s.g?"he":"she"%>'ll let you out tomorrow morning. What!? You'll be going through "the natural way." More gentle on stomach, says Zasha. <%=s.g?"He":"She"%> seems to be teasing you. "Besides, hotel room is much too cold for rabbit," <%=s.g?"he":"she"%> says smirking, "Zasha must keep warm."
+
+**\\> No! Spit me up now!**
+
+You try to fight it, but you're in no position to bargain. Zasha happily dozes off to sleep. You spend the night in Zasha's belly. The longer you stay, you realize that you're
+
+\\> [[Wake <%=s.g?"him":"her"%> up.|Wake Zasha up.]]
+
+\\> [[Digest quietly.]] (Fatal digestion)
+
+:: Wake Zasha up. <1741,2771>
+It doesn't take. Your predator snores, and only murmurs in <%=s.g?"he":"she"%> sleep, "Zasha... will let rabbit out... tomorrow."
+
+\\> [[Await warm and gurgly death.]] *(Fatal ending)*
+
+\\> [[Thrash and struggle for your life!]] *(Non-fatal ending)*
+
+:: Digest quietly. [vore] <1891,2771>
+\\> [[Await warm and gurgly death.]]
+
+:: Await warm and gurgly death. [vore] <1793,2931>
+### The End.
+
+\\> [[Epilogue.|Epilogue (Digestion regret)]]
+
+\\> <a0 onclick="bunny.restart()">Restart.</a>
+
+:: Thrash and struggle for your life! <1673,2921>
+Double-click this passage to edit it.
+
+:: Take off your shirt. <750,4825>
+
+
+:: Do you want a sip? <550,4675>
+You offer a sip of your tea to Zasha. <%=s.g?"He":"She"%> hesitates at first, but eventually obliges, <%=s.g?"his":"her"%> massive claws very gently taking the cup from you, and having a little sip.
+
+"Mm," Zasha remarks, "Soothing."
+
+Zasha gulps loudly. You can almost hear every muscle relaxing in <%=s.g?"his":"her"%> throat as <%=s.g?"he":"she"%> gulps down the liquid.
+
+Zasha delicately reaches to pass the cup back to you. You reach to take it, but <%=s.g?"his":"her"%> claws slip on the rim, and it falls, completely splattering you with a shirtful of warm tea.
+
+"Oh no!" Zasha's chestnut eyes go wide. <%=s.g?"His":"Her"%> white face turns beet-red. "Oh dear, Zasha is terribly sorry." <%=s.g?"He":"She"%> immediately stands, walks to the bathroom, and returns with a towel which <%=s.g?"he":"she"%> immediately begins dabbing on your dripping shirt.
+
+No, you say, allowing the apologetic polar bear to dab your face <%=s.g?"paternalistically":"maternally"%>, it wasn't <%=s.g?"his":"her"%> fault. Your heart sinks. You don't have a spare with you.
+
+Zasha places a claw on your belly. "Does Rabbit need help removing?"
+
+\\> [[A-actually...|I don't have another shirt!]]
+
+:: I don't have another shirt! <550,4800>
+You blush a deep red, but stammer to produce any words.
+
+"There is no need for to be ashamed, yes? We have all seen naked creature before." <%=s.g?"He":"She"%> grabs the zipper of <%=s.g?"his":"her"%> coat. "Zasha would disrobe too, if it made you more comfortable?"
+
+<div.commands>
+
+**\\> N-no, thank you!**
+
+</div>
+
+Hesitantly, you remove your shirt. Zasha politely averts <%=s.g?"his":"her"%> eyes while you wrap yourself in a spare blanket.
+
+You look back at Zasha, and the two of you make awkward, prolonged eye contact. You decide to take an early night, but the floor is extremely cold.
+
+**\\> Ask Zasha for another blanket.**
+
+Zasha is snoring loudly, and you try to wake <%=s.g?"him":"her"%>, but it does not work.
+
+**\\> Climb into the bed.**
+
+You figure you can just discretely slip into the warm, cozy bed alongside <%=s.g?"him":"her"%>, but in <%=s.g?"his":"her"%> sleep, <%=s.g?"he":"she"%> grabs you and begins to snuggle you against <%=s.g?"his":"her"%> fur.
+
+You're enjoying the guilty pleasure of having <%=s.g?"his":"her"%> arms wrapped around you, until you feel <%=s.g?"his":"her"%> belly rumbling hard. It's totally empty, which makes you a bit nervous. Suddenly, the sleeping Zasha opens <%=s.g?"his":"her"%> mouth wide, grips you in <%=s.g?"his":"her"%> claws, and begin stuffing you inside. Oh dear.
+
+Your parents warned you about sleep eating—one of the many reasons never to ever date a predator—but you assumed it was made-up.
+
+**\\> Cry for help!**
+
+You yell out, trying to wake Zasha up, but <%=s.g?"he":"she"%> simply keeps sleep-swallowing you until you're deep inside <%=s.g?"his":"her"%> belly, where you begin to digest, and fall unconscious.
+
+"Mmmm..."
+
+### The End.
+
+\\> [[Epilogue.|Epilogue (Digestion regret)]]
+
+\\> <a0 onclick="bunny.restart()">Restart.</a>
 
 :: Twee2Settings [twee2]
 @story_start_name = 'Title Screen'
