@@ -1,6 +1,5 @@
-
 /** Story Constants */
-story.version = "v0.3.0";
+story.version = "v0.3.1";
 
 // Warm Place to Stay Message
 console.log(`

@@ -147,9 +147,8 @@ pre code {
 .important>* {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">
-/** Story Constants */
-story.version = "v0.3.0";
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/** Story Constants */
+story.version = "v0.3.1";
 
 // Warm Place to Stay Message
 console.log(`
@@ -502,7 +501,7 @@ $(window).on('sm.passage.shown', (e, {
     const passageTitle = story.state.previousCommand || passage.name;
     $("#recent-command").html(passageTitle)
     story.state.previousCommand = "";
-})</script><tw-tag name="cold" color="blue"></tw-tag><tw-tag name="flush" color="red"></tw-tag><tw-tag name="header" color="green"></tw-tag><tw-tag name="check" color="orange"></tw-tag><tw-tag name="checkpoint" color="yellow"></tw-tag><tw-tag name="sidebar" color="green"></tw-tag><tw-tag name="start" color="green"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-tag name="warm" color="red"></tw-tag><tw-passagedata pid="1" name="Title Screen" tags="start" position="500,100" size="100,100">&lt;div.logo&gt;
+})</script><tw-tag name="flush" color="red"></tw-tag><tw-tag name="header" color="green"></tw-tag><tw-tag name="start" color="green"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-tag name="warm" color="red"></tw-tag><tw-tag name="checkpoint" color="yellow"></tw-tag><tw-tag name="cold" color="blue"></tw-tag><tw-tag name="sidebar" color="green"></tw-tag><tw-tag name="check" color="orange"></tw-tag><tw-passagedata pid="1" name="Title Screen" tags="start" position="500,100" size="100,100">&lt;div.logo&gt;
 &lt;h1 class=&quot;logotitle&quot;&gt;A Warm&amp;nbsp;Place to&amp;nbsp;Stay&lt;/h1&gt;
 &lt;p.logosubtitle&gt;Polar Bear Vore Adventure by Double-A&lt;/p&gt;
 
@@ -874,9 +873,9 @@ You&#39;d probably be more intimidated by this huge hunk of &lt;%=s.g?&quot;musc
 
 &lt;div.commands.important&gt;
 
-\&gt; [[Yes, I do need help actually...]] *(Route 1a)*
+\&gt; [[Yes, I do need help actually...]] *(Route 1)*
 
-\&gt; [[Jump down &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; throat.|Jump down their throat.]] *(Route 1b)*
+\&gt; [[Jump down &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; throat.|Jump down their throat.]] *(Route 2)*
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Yes, I do need help actually..." tags="cold" position="500,1550" size="100,100">Yes, you say, you&#39;ve got a flat tire, and you&#39;re stuck here.
 
@@ -1199,23 +1198,23 @@ Zasha places a claw on your belly. &quot;Does Rabbit need help removing?&quot;
 
 Hesitantly, you remove your shirt. Zasha politely averts &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; eyes while you wrap yourself in a spare blanket.
 
-You look back at Zasha, and the two of you make awkward, prolonged eye contact. You decide to take an early night, but the floor is extremely cold.
+You look back at Zasha, and the two of you make awkward, prolonged eye contact. You decide to take an early night.
+
+**\&gt; Lie down.**
+
+You do so. The floor is extremely cold.
 
 **\&gt; Ask Zasha for another blanket.**
 
-Zasha is snoring loudly, and you try to wake &lt;%=s.g?&quot;him&quot;:&quot;her&quot;%&gt;, but it does not work.
+Zasha is snoring loudly. You try to wake &lt;%=s.g?&quot;him&quot;:&quot;her&quot;%&gt;, but it does not work.
 
-**\&gt; Climb into the bed.**
-
-You figure you can just discretely slip into the warm, cozy bed alongside &lt;%=s.g?&quot;him&quot;:&quot;her&quot;%&gt;, but in &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; sleep, &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; grabs you and begins to snuggle you against &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; fur.
+\&gt; [[Climb into the bed.]]</tw-passagedata><tw-passagedata pid="48" name="Climb into the bed." tags="" position="975,600" size="100,100">You figure you can just discretely slip into the warm, cozy bed alongside &lt;%=s.g?&quot;him&quot;:&quot;her&quot;%&gt;, but in &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; sleep, &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; grabs you and begins to snuggle you against &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; fur.
 
 You&#39;re enjoying the guilty pleasure of having &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; arms wrapped around you, until you feel &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; belly rumbling hard. It&#39;s totally empty, which makes you a bit nervous. Suddenly, the sleeping Zasha opens &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; mouth wide, grips you in &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; claws, and begin stuffing you inside. Oh dear.
 
 Your parents warned you about sleep eating—one of the many reasons never to ever date a predator—but you assumed it was made-up.
 
-**\&gt; Cry for help!**
-
-You yell out, trying to wake Zasha up, but &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; simply keeps sleep-swallowing you until you&#39;re deep inside &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; belly, where you begin to digest, and fall unconscious.
+\&gt; [[Cry for help!]]</tw-passagedata><tw-passagedata pid="49" name="Cry for help!" tags="" position="1100,600" size="100,100">You yell out, trying to wake Zasha up, but &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; simply keeps sleep-swallowing you until you&#39;re deep inside &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; belly. It immediately beings to digest you. In utter shock, you fall unconscious.
 
 &quot;Mmmm...&quot;
 
@@ -1223,13 +1222,13 @@ You yell out, trying to wake Zasha up, but &lt;%=s.g?&quot;he&quot;:&quot;she&qu
 
 \&gt; [[Epilogue.|Ending: Digestion regret]]
 
-\&gt; &lt;a0 onclick=&quot;bunny.restart()&quot;&gt;Restart.&lt;/a&gt;</tw-passagedata><tw-passagedata pid="48" name="Jump down their throat." tags="warm" position="1600,1625" size="100,100">*CW: Oral Vore. Saliva. Fatal digestion.*
+\&gt; &lt;a0 onclick=&quot;bunny.restart()&quot;&gt;Restart.&lt;/a&gt;</tw-passagedata><tw-passagedata pid="50" name="Jump down their throat." tags="warm" position="1600,1625" size="100,100">*CW: Oral Vore. Saliva. Fatal digestion.*
 
 Something strange takes ahold of you, and at that moment, you cannot bear being outside this huge, sexy predator&#39;s maw for one second longer.
 
 Through the car window, you grab hold of &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; lips, pull &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; jaw open, and attempt to force your face against &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; hot, slobbery tongue, so you can wriggle down &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; esophagus and become part of that warm, pudgy belly.
 
-\&gt; [[Continue.|Jump down their throat II.]]</tw-passagedata><tw-passagedata pid="49" name="Jump down their throat II." tags="cold" position="1600,1750" size="100,100">&quot;Hrk!&quot; The bear suddenly gags, and grabs you by the scruff of your neck to yank you out of &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; mouth, coughing. As you awkardly wipe the spittle from your fur, the polar bear looks at you bewildered. &quot;Kafkaf kaf! Ack! Wh-what?&quot;
+\&gt; [[Continue.|Jump down their throat II.]]</tw-passagedata><tw-passagedata pid="51" name="Jump down their throat II." tags="cold" position="1600,1750" size="100,100">&quot;Hrk!&quot; The bear suddenly gags, and grabs you by the scruff of your neck to yank you out of &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; mouth, coughing. As you awkardly wipe the spittle from your fur, the polar bear looks at you bewildered. &quot;Kafkaf kaf! Ack! Wh-what?&quot;
 
 Sorry!! you say immediately, you&#39;re not sure what came over you there, that was completely-
 
@@ -1237,7 +1236,7 @@ The polar bear interrupts, looking you straight in the eyes with furrowed brows 
 
 \&gt; [[Oh, yes please!|Oh, yes please!]]
 
-\&gt; [[N-no, of course not!]]</tw-passagedata><tw-passagedata pid="50" name="N-no, of course not!" tags="cold" position="1600,1875" size="100,100">You take a moment to think about it. *Do* you want to be eaten?
+\&gt; [[N-no, of course not!]]</tw-passagedata><tw-passagedata pid="52" name="N-no, of course not!" tags="cold" position="1600,1875" size="100,100">You take a moment to think about it. *Do* you want to be eaten?
 
 No, no! Of course you don&#39;t. Why would you? That would be insane, right? Who would ever *want* that to happen to them?
 
@@ -1253,11 +1252,11 @@ Zasha wets &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; mouth and replies, &qu
 
 \&gt; [[P-please swallow me whole!|Oh, yes please!]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="No, I&#39;m absolutely sure." tags="cold" position="1600,2000" size="100,100">You shake your head vehemently no. You&#39;re not sure what came over you just now. But you don&#39;t want to be eaten.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="No, I&#39;m absolutely sure." tags="cold" position="1600,2000" size="100,100">You shake your head vehemently no. You&#39;re not sure what came over you just now. But you don&#39;t want to be eaten.
 
 &quot;Okay then,&quot; the bear nods, clears &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; throat. &quot;So, er, car is broken down? You require assistance?&quot;
 
-\&gt; [[Yes, actually...|Yes, I do need help actually...]]</tw-passagedata><tw-passagedata pid="52" name="Oh, yes please!" tags="" position="1800,1725" size="100,100">Your ears stand straight up with excitement. Unlike most bunnies, you&#39;ve always been &quot;curious&quot; as to what being swallowed is like, but never really admitted it to yourself.
+\&gt; [[Yes, actually...|Yes, I do need help actually...]]</tw-passagedata><tw-passagedata pid="54" name="Oh, yes please!" tags="" position="1800,1725" size="100,100">Your ears stand straight up with excitement. Unlike most bunnies, you&#39;ve always been &quot;curious&quot; as to what being swallowed is like, but never really admitted it to yourself.
 
 You say that you would love to be eaten, um, but you understand if &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt;&#39;s not interested, of course.
 
@@ -1269,7 +1268,7 @@ Yes, you say. You want to be wrapped up in warmth. You want to feed &lt;%=s.g?&q
 
 Zasha narrows &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; eyes. &quot;Rabbit is absolutely sure?&quot; &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; reiterates, as if trying to make sure &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; has not misunderstood or misinterpreted you.
 
-\&gt; [[Yes, a thousand times yes!!]]</tw-passagedata><tw-passagedata pid="53" name="Yes, a thousand times yes!!" tags="warm" position="1800,1850" size="100,100">Yes, yes, you say. You&#39;re almost sweating through your shirt with anticipation. You wonder if Zasha can smell it.
+\&gt; [[Yes, a thousand times yes!!]]</tw-passagedata><tw-passagedata pid="55" name="Yes, a thousand times yes!!" tags="warm" position="1800,1850" size="100,100">Yes, yes, you say. You&#39;re almost sweating through your shirt with anticipation. You wonder if Zasha can smell it.
 
 Zasha considers. &quot;This rabbit is a strange one. However, Zasha is hungry, and thought of swallowing has brought about some... urges. Zasha will oblige with Rabbit&#39;s request.&quot;
 
@@ -1283,7 +1282,7 @@ You spend a few seconds merely gazing in awe at your destination. Zasha briefly 
 
 What will you do?
 
-\&gt; [[Climb inside &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; mouth.|Climb inside Zasha&#39;s mouth.]]</tw-passagedata><tw-passagedata pid="54" name="Climb inside Zasha&#39;s mouth." tags="vore checkpoint" position="1800,1975" size="100,100">You eagerly stick one paw, then the other, into the bear&#39;s awaiting maw. &lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; guides them into &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; throat, and swallows them effortlessly. A second gulp tugs at your arms, and pulls you face-first against &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; slobbery tongue, which quickly gets to work tasting your face, and coating your fur in &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; saliva.
+\&gt; [[Climb inside &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; mouth.|Climb inside Zasha&#39;s mouth.]]</tw-passagedata><tw-passagedata pid="56" name="Climb inside Zasha&#39;s mouth." tags="vore checkpoint" position="1800,1975" size="100,100">You eagerly stick one paw, then the other, into the bear&#39;s awaiting maw. &lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; guides them into &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; throat, and swallows them effortlessly. A second gulp tugs at your arms, and pulls you face-first against &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; slobbery tongue, which quickly gets to work tasting your face, and coating your fur in &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; saliva.
 
 Experimentally, you try to pull one of your paws back out, but it&#39;s being gripped tightly by Zasha&#39;s esophagus. Looks like no turning back now.
 
@@ -1291,7 +1290,7 @@ Zasha&#39;s breath is warm and humid as it blasts your face. Surprisingly, it do
 
 You stare in amazement as your face approaches the dark warmth of &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; gullet.
 
-\&gt; [[Th-thank you...]]</tw-passagedata><tw-passagedata pid="55" name="Th-thank you..." tags="vore" position="1800,2100" size="100,100">You murmur thanks at Zasha, unsure if &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; can hear you.
+\&gt; [[Th-thank you...]]</tw-passagedata><tw-passagedata pid="57" name="Th-thank you..." tags="vore" position="1800,2100" size="100,100">You murmur thanks at Zasha, unsure if &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; can hear you.
 
 The bear nods and swallows, squeezing your head and ears into the tight wet tube of &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; esophagus. Powerful arms wrap around your middle, and lift you into the air so &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; can take in your body more easily. Zasha licks and slobbers at your torso, not even bothering to remove your clothes.
 
@@ -1303,7 +1302,7 @@ You&#39;re officially food now, and it feels *amazing*.
 
 \&gt; [[Enter stomach.|Enter stomach. (Vore Route 1)]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="Enter stomach. (Vore Route 1)" tags="vore" position="1800,2225" size="100,100">It&#39;s so warm inside the bear&#39;s gullet. Not surprising, considering all &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; layers of fat. Your small body sails over Zasha&#39;s lips and effortlessly slides down into &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; belly. It&#39;s hard to breathe inside &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; throat, but that changes soon enough.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="Enter stomach. (Vore Route 1)" tags="vore" position="1800,2225" size="100,100">It&#39;s so warm inside the bear&#39;s gullet. Not surprising, considering all &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; layers of fat. Your small body sails over Zasha&#39;s lips and effortlessly slides down into &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; belly. It&#39;s hard to breathe inside &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; throat, but that changes soon enough.
 
 With a *shlorp*, you emerge in the clenching confines of Zasha&#39;s stomach. Your fur is immediately coated in clear slimy enzymes. Moving around is difficult in such a small space, but you eventually manage to remove your shirt and jacket, which have been thoroughly soiled. You are now a completely nude rabbit, inside the dank tummy of a predator. It&#39;s everything you imagined.
 
@@ -1311,7 +1310,7 @@ Moments later, you feel the pressure of a huge paw feeling for your presence thr
 
 &quot;Juniper is doing okay in there?&quot; Zasha asks, &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; voice booming from every direction.
 
-\&gt; [[Yes, wonderful!]]</tw-passagedata><tw-passagedata pid="57" name="Yes, wonderful!" tags="vore" position="1800,2350" size="100,100">You shout approvingly at the top of your little rabbit lungs, attempting to make your voice heard through the thick insulation surrounding you from all sides. As you close your mouth, you taste a little bit of Zasha&#39;s saliva on your lips.
+\&gt; [[Yes, wonderful!]]</tw-passagedata><tw-passagedata pid="59" name="Yes, wonderful!" tags="vore" position="1800,2350" size="100,100">You shout approvingly at the top of your little rabbit lungs, attempting to make your voice heard through the thick insulation surrounding you from all sides. As you close your mouth, you taste a little bit of Zasha&#39;s saliva on your lips.
 
 Zazha opens &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; mouth to reply, but is interrupted by a deep, guttural belch. Your body must&#39;ve displaced a lot of air. As the burp escapes Zasha&#39;s lips, &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; walls get a little bit tighter around you. &quot;That is, *urp*, good to hear,&quot; &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; says, &quot;Juniper made for delicious meal.&quot; The bear affectionately rubs &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; belly and says, &quot;I am on way to hotel nearby. You will come along with Zasha for night? Return to car in morning?&quot;
 
@@ -1327,7 +1326,7 @@ Zasha pulls &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; head out of your car 
 
 \&gt; [[Get comfy.]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="Get comfy." tags="vore" position="1800,2475" size="100,100">&lt;div.important&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="Get comfy." tags="vore" position="1800,2475" size="100,100">&lt;div.important&gt;
 This route is unfinished! It&#39;s playable, but is still written as an outline and may be missing content.
 &lt;/div&gt;
 
@@ -1357,31 +1356,35 @@ There&#39;d probably be a description of the passing scenery here, if you weren&
 
 You hear Zasha stop the car. &lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; enters, hefting &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; huge gut inside. The concierge gives &lt;%=s.g?&quot;him&quot;:&quot;her&quot;%&gt; a weird look, but says nothing.
 
-\&gt; [[Enter the hotel room. (Willing Oral Route)]]</tw-passagedata><tw-passagedata pid="59" name="Enter the hotel room. (Willing Oral Route)" tags="vore checkpoint" position="1800,2625" size="100,100">**\&gt; Can I come out now?**
+\&gt; [[Enter the hotel room. (Willing Oral Route)]]</tw-passagedata><tw-passagedata pid="61" name="Enter the hotel room. (Willing Oral Route)" tags="vore checkpoint" position="1800,2625" size="100,100">**\&gt; Can I come out now?**
 
 Zasha, exhausted, replies &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt;&#39;ll let you out tomorrow morning. What!? You&#39;ll be going through &quot;the natural way.&quot; More gentle on stomach, says Zasha. &lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; seems to be teasing you. &quot;Besides, hotel is much too cold for rabbit,&quot; &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; says smirking, &quot;Zasha must keep warm.&quot;
 
 **\&gt; No! Spit me up now!**
 
-You try to fight it, but you&#39;re in no position to bargain. Zasha happily dozes off to sleep. You spend the night in Zasha&#39;s belly. You&#39;re becoming too tired to fight back.
+You try to fight it, but you&#39;re in no position to bargain. Zasha happily dozes off to sleep. You spend the night in Zasha&#39;s belly. You&#39;re becoming too tired to fight back. You doze off for a few hours.
 
-You doze off for a few hours, but awake to realize that Zasha is still sleeping, and starting to digest you.
+A few hours later, you awake to realize that Zasha is still sleeping, and &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; stomach is starting to digest you.
 
 \&gt; [[Wake &lt;%=s.g?&quot;him&quot;:&quot;her&quot;%&gt; up.|Wake Zasha up.]]
 
-\&gt; [[Digest quietly.|Await warm and gurgly death.]]</tw-passagedata><tw-passagedata pid="60" name="Wake Zasha up." tags="" position="1750,2775" size="100,100">You kick and yell, but it doesn&#39;t take. Your predator snores and turns onto &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; belly.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="62" name="Wake Zasha up." tags="" position="1750,2775" size="100,100">You kick and yell, but it doesn&#39;t take. Your predator snores and turns onto &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; belly.
 
 &lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; only murmurs in &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; sleep, &quot;Zasha... will let rabbit out... tomorrow.&quot;
 
+&lt;div.commands.important&gt;
+
 \&gt; [[Await warm and gurgly death.]] *(Route 2a: Fatal digestion)*
 
-\&gt; [[Thrash and struggle for your life!]] *(Route 2b: Non-fatal)*</tw-passagedata><tw-passagedata pid="61" name="Await warm and gurgly death." tags="vore" position="1800,2925" size="100,100">// TODO:
+\&gt; [[Thrash and struggle for your life!]] *(Route 2b: Non-fatal)*
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="Await warm and gurgly death." tags="vore" position="1800,2925" size="100,100">// TODO:
 
 You resign to your fate of being accidentally digested.
 
-\&gt; [[The next day...|Ending: Digestion regret]]
+\&gt; [[The next day...|Ending: Digestion regret]] *(Post-vore scat)*
 
-\&gt; &lt;a0 onclick=&quot;bunny.restart()&quot;&gt;Restart.&lt;/a&gt;</tw-passagedata><tw-passagedata pid="62" name="Ending: Digestion regret" tags="" position="1775,3700" size="100,100">*CW: Post-Vore Scat.*
+\&gt; &lt;a0 onclick=&quot;bunny.restart()&quot;&gt;Restart.&lt;/a&gt;</tw-passagedata><tw-passagedata pid="64" name="Ending: Digestion regret" tags="" position="1775,3700" size="100,100">*CW: Post-Vore scat.*
 
 The next day, Zasha wakes up with a huge belly full of digested rabbit. &lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; is quite upset over this, having failed to protect an innocent creature, but is gradually corrupted by the carnal feelings of power which predation gives &lt;%=s.g?&quot;him&quot;:&quot;her&quot;%&gt;. It&#39;s not the first time, and &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; stoically concludes there was nothing &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; could have done to stop it.
 
@@ -1389,7 +1392,7 @@ You and your belongings are discretely flushed in the hotel toilet as a slurry o
 
 ### The End.
 
-\&gt; &lt;a0 onclick=&quot;bunny.restart()&quot;&gt;Restart.&lt;/a&gt;</tw-passagedata><tw-passagedata pid="63" name="Thrash and struggle for your life!" tags="" position="1675,2925" size="100,100">*CW: Regurgitation.*
+\&gt; &lt;a0 onclick=&quot;bunny.restart()&quot;&gt;Restart.&lt;/a&gt;</tw-passagedata><tw-passagedata pid="65" name="Thrash and struggle for your life!" tags="" position="1675,2925" size="100,100">*CW: Regurgitation.*
 
 You expend all of your effort, and manage to wake Zasha from &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; slumber, who realizes that &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; fell asleep. &lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; immediately rushes to the bathroom, and horks you up into the tub. The authors don&#39;t have a vomit fetish, so they leave it up to the imagination.
 
@@ -1401,13 +1404,13 @@ You take a long shower, and you think about the choices that lead you to this br
 
 \&gt; [[Just go to bed.]] *(Unlewd ending)*
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="Actually, th-that was kind of hot." tags="" position="475,850" size="100,100">You stop &lt;%=s.g?&quot;him&quot;:&quot;her&quot;%&gt;, and say that being nearly digested made you so unbelievably horny. Zasha is bemused, but reciprocates.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="Actually, th-that was kind of hot." tags="" position="725,850" size="100,100">You stop &lt;%=s.g?&quot;him&quot;:&quot;her&quot;%&gt;, and say that being nearly digested made you so unbelievably horny. Zasha is bemused, but reciprocates.
 
-&lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; removes &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; jacket, and allows.</tw-passagedata><tw-passagedata pid="65" name="Just go to bed." tags="" position="600,850" size="100,100">You walk past Zasha, and  on the floor, still coping with the trauma of almost being digested.
+&lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; removes &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; jacket, and allows.</tw-passagedata><tw-passagedata pid="67" name="Just go to bed." tags="" position="850,850" size="100,100">You walk past Zasha, and  on the floor, still coping with the trauma of almost being digested.
 
 The next day, Zasha wordlessly drives you back to your car. Your cell is working again, and the snow is gone. You try to talk, but can&#39;t think of anything to say.
 
-\&gt; &lt;a0 onclick=&quot;bunny.restart()&quot;&gt;Restart.&lt;/a&gt;</tw-passagedata><tw-passagedata pid="66" name="Ending: Somewhat awkward" tags="" position="725,850" size="100,100">\&gt; &lt;a0 onclick=&quot;bunny.restart()&quot;&gt;Restart.&lt;/a&gt;</tw-passagedata><tw-passagedata pid="67" name="Press for more information." tags="cold" position="1050,2175" size="100,100">*CW: Anal Vore. Masturbation. Rimming.*
+\&gt; &lt;a0 onclick=&quot;bunny.restart()&quot;&gt;Restart.&lt;/a&gt;</tw-passagedata><tw-passagedata pid="68" name="Ending: Somewhat awkward" tags="" position="975,850" size="100,100">\&gt; &lt;a0 onclick=&quot;bunny.restart()&quot;&gt;Restart.&lt;/a&gt;</tw-passagedata><tw-passagedata pid="69" name="Press for more information." tags="cold" position="1050,2175" size="100,100">*CW: Anal Vore. Masturbation. Rimming.*
 
 You can clearly tell that Zasha is lying about &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; job. You tell &lt;%=s.g?&quot;him&quot;:&quot;her&quot;%&gt; so outright. What does &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; *really* do for a living?
 
@@ -1425,7 +1428,7 @@ Zasha shifts uncomfortably. &quot;Films of... er... sexual swallowing,&quot; &lt
 
 \&gt; [[Oh. *Ooooooh.*|Oh. Ooooooh.]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="Oh. Ooooooh." tags="" position="1050,2300" size="100,100">&lt;%
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="Oh. Ooooooh." tags="" position="1050,2300" size="100,100">&lt;%
 console.debug(`Set s.knows_zasha_does_vorno from ${s.knows_zasha_does_vorno} to true.`)
 s.knows_zasha_does_vorno = true; %&gt;
 
@@ -1439,7 +1442,7 @@ You&#39;re ashamed to think that you&#39;ve actually seen quite a lot of those f
 
 \&gt; [[S-so, you eat people for a living?]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="S-so, you eat people for a living?" tags="cold" position="1150,2400" size="100,100">&quot;Yes,&quot; Zasha says, struggling to make eye-contact, &quot;but only with strict consent, of course!&quot;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="S-so, you eat people for a living?" tags="cold" position="1150,2400" size="100,100">&quot;Yes,&quot; Zasha says, struggling to make eye-contact, &quot;but only with strict consent, of course!&quot;
 
 A-and no digestion, right?
 
@@ -1453,7 +1456,7 @@ Your face flushes. *Usually*? &lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt;&#39;
 
 \&gt; [[C-cool! A-anyways...]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="C-cool! A-anyways..." tags="cold" position="975,2525" size="100,100">Now that you have this unpleasant knowledge haunting the back of your mind, you decide to do the normal thing, and change the subject as quickly as possible.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="C-cool! A-anyways..." tags="cold" position="975,2525" size="100,100">Now that you have this unpleasant knowledge haunting the back of your mind, you decide to do the normal thing, and change the subject as quickly as possible.
 
 S-some weather, huh?
 
@@ -1461,7 +1464,7 @@ Zasha says, &quot;I assure you rabbit, Zasha eats no one without their permissio
 
 You nod. You&#39;d rather forget all about Zasha&#39;s innate capacity to swallow and wholly digest people your size. The two of you ride together in silence for a minute or so. &lt;%= story.render(&quot;Arrive at the hotel.&quot;)%&gt;
 
-&lt;div-&gt;[[Arrive at the hotel.]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="...Can you eat me?" tags="cold" position="1125,2525" size="100,100">Your libido gets the better of you. You stammer out a request which feels extremely weird to say out loud. You ask the bear if &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; can eat you.
+&lt;div-&gt;[[Arrive at the hotel.]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="...Can you eat me?" tags="cold" position="1125,2525" size="100,100">Your libido gets the better of you. You stammer out a request which feels extremely weird to say out loud. You ask the bear if &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; can eat you.
 
 Zasha seems taken aback. &quot;This does not... scare you? Usually Zasha&#39;s partners, er, prey, are quite nervous.&quot;
 
@@ -1473,7 +1476,7 @@ There are *other* options?
 
 Zasha smiles uneasily. &quot;Yes, sometimes Zasha is involved in... *specialty* scenes. Taking prey into private parts, or um, anal hole...&quot;
 
-\&gt; [[Anal? You can do that?]]</tw-passagedata><tw-passagedata pid="72" name="Anal? You can do that?" tags="cold" position="1125,2650" size="100,100">You&#39;re somewhat disbelieving of this. You knew some predators were capable of &quot;anal vore&quot;, but you learned in Biology that it was a very rare skill.
+\&gt; [[Anal? You can do that?]]</tw-passagedata><tw-passagedata pid="74" name="Anal? You can do that?" tags="cold" position="1125,2650" size="100,100">You&#39;re somewhat disbelieving of this. You knew some predators were capable of &quot;anal vore&quot;, but you learned in Biology that it was a very rare skill.
 
 &quot;Yes,&quot; Zasha replies, &quot;Zasha is big bear, yes. &lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; can consume prey through this hole. Can even squeeze through intestines and into stomach to be, er, regurgitated.&quot;
 
@@ -1485,7 +1488,7 @@ You listen intently, equal parts disgusted, terrified, and amazed.
 
 \&gt; [[Would you mind... um... showing me?]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="Would you mind... um... showing me?" tags="cold" position="1125,2775" size="100,100">Zasha doesn&#39;t take &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; eyes off the road, but you can see a mischievous smirk growing on &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; face.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="Would you mind... um... showing me?" tags="cold" position="1125,2775" size="100,100">Zasha doesn&#39;t take &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; eyes off the road, but you can see a mischievous smirk growing on &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; face.
 
 &quot;Yes,&quot; &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; replies &quot;Zasha can do this. Wait until hotel, okay? We are almost there.&quot;
 
@@ -1499,7 +1502,7 @@ You&#39;re about to complain, when Zasha suddenly scoops you into &lt;%=s.g?&quo
 
 \&gt; [[Wh-what gives?]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="Wh-what gives?" tags="" position="1125,2900" size="100,100">Zasha snuggles you close to &lt;%=s.g?&quot;his chest&quot;:&quot;her bosom&quot;%&gt;, and smiles. &quot;Rabbit is Zasha&#39;s food now. Zasha does not like cold food. Must keep warm.&quot;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="Wh-what gives?" tags="" position="1125,2900" size="100,100">Zasha snuggles you close to &lt;%=s.g?&quot;his chest&quot;:&quot;her bosom&quot;%&gt;, and smiles. &quot;Rabbit is Zasha&#39;s toy now. Zasha does not like cold toy.&quot;
 
 You blush, but accept &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; affectionate teasing as &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; carries you into the building, setting you down in the lobby while &lt;%s.g?&quot;he&quot;:&quot;she&quot;%&gt; talks to the concierge to get a room key. As a rabbit, you&#39;re somewhat used to people treating you like a child, but Zasha is treating you like *&lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt;* child, a child &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; intends to consume anally. Freud would have a field day with this.
 
@@ -1511,7 +1514,7 @@ From the front desk, the concierge winks at you and gives a thumbs up. You smile
 
 \&gt; [[Enter the hotel room.|Enter the hotel room. (Anal Vore Route)]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="Enter the hotel room. (Anal Vore Route)" tags="checkpoint" position="1125,3025" size="100,100">&lt;div.important&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="Enter the hotel room. (Anal Vore Route)" tags="checkpoint" position="1125,3025" size="100,100">&lt;div.important&gt;
 This route is unfinished! It&#39;s playable, but is still written as an outline and may be missing content.
 &lt;/div&gt;
 
@@ -1540,7 +1543,7 @@ onclick=&quot;story.state.safeWord = &#39;Idiosyncratic&#39;; story.state.weirdS
 
 &lt;div-&gt;
 \&gt; [[The safe word is...]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="The safe word is..." tags="" position="1125,3150" size="100,100">&lt;% s.safeWord = s.safeWord || &quot;листва&quot;; %&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="The safe word is..." tags="" position="1125,3150" size="100,100">&lt;% s.safeWord = s.safeWord || &quot;листва&quot;; %&gt;
 
 &quot;&lt;%-s.safeWord%&gt;&lt;%-s.weirdSafeWord ? &#39;?&#39; : &#39;,&#39; %&gt;&quot; Zasha repeats, &quot;&lt;%-either(&quot;Okay&quot;, &quot;Alright&quot;, &quot;Yes&quot;)%&gt;. Say this, and Zasha will stop what &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; is doing and help Rabbit out.&quot;
 
@@ -1556,7 +1559,7 @@ W-wow, you two are really doing this.
 
 \&gt; [[Use your tongue.]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="Lube up Zasha&#39;s hole." tags="" position="1225,3275" size="100,100">You squirt a load of &quot;Strawberry Lik-n-Stik Edible Lube&quot; onto your cupped paw, and delicately smear it all over Zasha&#39;s asshole.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="Lube up Zasha&#39;s hole." tags="" position="1225,3275" size="100,100">You squirt a load of &quot;Strawberry Lik-n-Stik Edible Lube&quot; onto your cupped paw, and delicately smear it all over Zasha&#39;s asshole.
 
 &quot;Rabbit will need to get it deeper...&quot; &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; teases.
 
@@ -1568,39 +1571,44 @@ You catch on to &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; game, and slip yo
 
 Zasha&#39;s furry tail is sticking straight up. &lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; says, &quot;Well rabbit, this is it. Take deep breath now, yes?&quot;
 
-\&gt; [[Press your face into &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; asshole.|Press your face into Zasha&#39;s asshole.]]</tw-passagedata><tw-passagedata pid="78" name="Use your tongue." tags="" position="1100,3275" size="100,100">As you hold Zasha&#39;s cheeks apart and gaze into the hole betwixt, you can&#39;t help yourself. You lean in begin to swirl your tongue around &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; huge puckered asshole. &lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; immediately responds with a moan, &lt;%=s.g?&quot;his cock twitching slightly between his legs.&quot;:&quot;her asshole clenching and releasing.&quot;%&gt;. &quot;Rabbit could not help itself, yes? Mm, this is not bad...&quot; You keep going for a little while, inhaling deep lungfuls of bear musk.
+\&gt; [[Press your face into &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; asshole.|Press your face into Zasha&#39;s asshole.]]</tw-passagedata><tw-passagedata pid="80" name="Use your tongue." tags="" position="1100,3275" size="100,100">As you hold Zasha&#39;s cheeks apart and gaze into the hole betwixt, you can&#39;t help yourself. You lean in begin to swirl your tongue around &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; huge puckered asshole. &lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; immediately responds with a moan, &lt;%=s.g?&quot;his cock twitching slightly between his legs.&quot;:&quot;her asshole clenching and releasing.&quot;%&gt;. &quot;Rabbit could not help itself, yes? Mm, this is not bad...&quot; You keep going for a little while, inhaling deep lungfuls of bear musk.
 
 Finally, Zasha says, &quot;Rabbit *will* need to use more lube to get inside of Zasha.&quot;
 
-\&gt; [[Lube up &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; hole.|Lube up Zasha&#39;s hole.]]</tw-passagedata><tw-passagedata pid="79" name="Press your face into Zasha&#39;s asshole." tags="vore" position="1125,3450" size="100,100">&lt;% s.safeWord = s.safeWord || &quot;листва&quot;; %&gt;
+\&gt; [[Lube up &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; hole.|Lube up Zasha&#39;s hole.]]</tw-passagedata><tw-passagedata pid="81" name="Press your face into Zasha&#39;s asshole." tags="vore" position="1125,3450" size="100,100">&lt;% s.safeWord = s.safeWord || &quot;листва&quot;; %&gt;
 
 You shlorp your nose into Zasha&#39;s thick ass. It&#39;s dripping with sweat as you fold your ears behind your head, and press forward.. The sensation of forcing your face into that tight ring, and having it stretch to accept you, is utterly surreal.
 
-\&gt; [[Breathe deep.]]</tw-passagedata><tw-passagedata pid="80" name="Breathe deep." tags="" position="1225,975" size="100,100">The smell is intoxicating, a powerful musk, mixed with strawberries. You travel past rectum, and into &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; colon. Your ears lead the way as you keep travelling deeper. It&#39;s magical.
+\&gt; [[Breathe deep.]]</tw-passagedata><tw-passagedata pid="82" name="Breathe deep." tags="" position="225,1100" size="100,100">The smell is intoxicating, a powerful musk, mixed with strawberries. You travel past rectum, and into &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; colon. Your ears lead the way as you keep travelling deeper. It&#39;s magical.
 
-\&gt; [[Is this too deep?]]</tw-passagedata><tw-passagedata pid="81" name="Is this too deep?" tags="" position="100,1100" size="100,100">Zasha moans and urges you deeper. &lt;%=s.g?&quot;His&quot;:&quot;Her&quot;%&gt; paws delicately guide your bulge through &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; intestines.
+\&gt; [[Is this too deep?]]</tw-passagedata><tw-passagedata pid="83" name="Is this too deep?" tags="" position="350,1100" size="100,100">Zasha moans and urges you deeper. &lt;%=s.g?&quot;His&quot;:&quot;Her&quot;%&gt; paws delicately guide your bulge through &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; intestines.
 
 It starts to become a little tight in here, and you find yourself struggling to breathe.
 
-\&gt; [[&lt;%-s.safeWord%&gt;! &lt;%-s.safeWord%&gt;!!|Safeword! Safeword!!]]</tw-passagedata><tw-passagedata pid="82" name="Safeword! Safeword!!" tags="" position="225,1100" size="100,100">You&#39;re losing oxygen. You wiggle your tightly bound feet with displeasure, and call out for help. Your voice is muffled, but Zasha seems to only push you deeper! You can hear &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; heart pounding around you now.
+\&gt; [[&lt;%-s.safeWord%&gt;! &lt;%-s.safeWord%&gt;!!|Safeword! Safeword!!]]</tw-passagedata><tw-passagedata pid="84" name="Safeword! Safeword!!" tags="" position="475,1100" size="100,100">You&#39;re losing oxygen. You wiggle your tightly bound feet with displeasure, and call out for help. Your voice is muffled, but Zasha seems to only push you deeper! You can hear &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; heart pounding around you now.
 
-\&gt; [[&lt;%-s.safeWord.slice(0, 4)%&gt;...|Safe...]]</tw-passagedata><tw-passagedata pid="83" name="Safe..." tags="" position="350,1100" size="100,100">You feel yourself become woozy. Zasha&#39;s upper intestine pulsates indifferently around you. You feel consciousness... beginning... to...
+\&gt; [[&lt;%-s.safeWord.slice(0, 4)%&gt;...|Safe...]]</tw-passagedata><tw-passagedata pid="85" name="Safe..." tags="" position="600,1100" size="100,100">You feel yourself become woozy. Zasha&#39;s upper intestine pulsates indifferently around you. You feel consciousness... beginning... to...
 
 *GASP*. Your head pokes through a sphincter into Zasha&#39;s stomach, a dark dank cavern.
 
-You feel your feet disappear beneath Zasha&#39;s tail. Zasha sits down, and delicately caresses your outline. &quot;I-is rabbit okay?&quot;
+You feel your feet disappear beneath Zasha&#39;s tail. Zasha sits down, and delicately caresses your outline. &quot;I-is rabbit okay?&quot; Zasha swallows several anti-digestion tablets, and they plop and fizz into the surrounding stomach juices.
 
-\&gt; [[Y-yeah. I&#39;m okay.]]</tw-passagedata><tw-passagedata pid="84" name="Y-yeah. I&#39;m okay." tags="" position="475,1100" size="100,100">You&#39;re fine, you say. Actually, it made you feel kind of... alive. You look down at your lower half, now also inside the stomach. *Very* alive.
+\&gt; [[Y-yeah. I&#39;m okay.]]</tw-passagedata><tw-passagedata pid="86" name="Y-yeah. I&#39;m okay." tags="" position="725,1100" size="100,100">You&#39;re fine, you say. Actually, it made you feel kind of... alive. You look down at your lower half, now also inside the stomach. *Very* alive.
 
-Feeling both of your libidos at their peak from the undeniably sexual experience of carnivorous satisfaction, the two of you (optionally) masturbate.
+Zasha, too, is feeling a great deal of physical pleasure. Both of your libidos at their peak from the undeniably sexual experience of carnivorous satisfaction, you both (optionally) masturbate.
 
-\&gt; [[Yess!]]</tw-passagedata><tw-passagedata pid="85" name="Yess!" tags="" position="600,1100" size="100,100">Satisfied with the orgasm, the two of you fall asleep.
+// TODO: jerk-off descriptions
+// Might need separate passages per gender.
+
+\&gt; [[Yess!]]</tw-passagedata><tw-passagedata pid="87" name="Yess!" tags="" position="850,1100" size="100,100">// TODO: Orgasm description.
+
+Satisfied with the orgasm, the two of you fall asleep.
 
 &lt;div.commands&gt;
 
 \&gt; [[The next day...|Ending: Morning after]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="Ending: Morning after" tags="" position="1125,3600" size="100,100">You wake up in the morning, being squeezed out of the bear&#39;s asshole, and into a bathtub. Yuck.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="88" name="Ending: Morning after" tags="" position="1125,3600" size="100,100">You wake up in the morning, being squeezed out of the bear&#39;s asshole, and into a bathtub. Yuck.
 
 You gratefully return to your car, unable to look Zasha in the eye after spending multiple hours in &lt;%=s.g?&quot;his&quot;:&quot;her&quot;%&gt; large intestine. &lt;%=s.g?&quot;He&quot;:&quot;She&quot;%&gt; seems a little bashful about almost killing you, but the two of you are on good terms. Zasha tows your car to a repair shop, and waves you off. As &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; leaves, &lt;%=s.g?&quot;he&quot;:&quot;she&quot;%&gt; writes down an email address, and winks, asking if you want to do it again some time. A shiver goes down your spine.
 
