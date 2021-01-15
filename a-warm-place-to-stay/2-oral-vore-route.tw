@@ -1,7 +1,7 @@
 <!-- Route 2: Starts in "Roll the window down." -->
 
-:: Jump down their throat. [warm] {"position":"1600,1625","sizing":"100,100"}
 
+:: Jump down their throat. [warm] {"position":"1600,1625","sizing":"100,100"}
 *CW: Oral Vore. Saliva. Fatal digestion.*
 
 Something strange takes ahold of you, and at that moment, you cannot bear being outside this huge, sexy predator's maw for one second longer.
@@ -9,6 +9,7 @@ Something strange takes ahold of you, and at that moment, you cannot bear being 
 Through the car window, you grab hold of <%=s.g?"his":"her"%> lips, pull <%=s.g?"his":"her"%> jaw open, and attempt to force your face against <%=s.g?"his":"her"%> hot, slobbery tongue, so you can wriggle down <%=s.g?"his":"her"%> esophagus and become part of that warm, pudgy belly.
 
 \> [[Continue.|Jump down their throat II.]]
+
 
 :: Jump down their throat II. [cold] {"position":"1600,1750","sizing":"100,100"}
 "Hrk!" The bear suddenly gags, and grabs you by the scruff of your neck to yank you out of <%=s.g?"his":"her"%> mouth, coughing. As you awkardly wipe the spittle from your fur, the polar bear looks at you bewildered. "Kafkaf kaf! Ack! Wh-what?"
@@ -20,6 +21,7 @@ The polar bear interrupts, looking you straight in the eyes with furrowed brows 
 \> [[Oh, yes please!|Oh, yes please!]]
 
 \> [[N-no, of course not!]]
+
 
 :: N-no, of course not! [cold] {"position":"1600,1875","sizing":"100,100"}
 You take a moment to think about it. *Do* you want to be eaten?
@@ -40,12 +42,14 @@ Zasha wets <%=s.g?"his":"her"%> mouth and replies, "You are sure? Zasha would no
 
 </div>
 
+
 :: No, I'm absolutely sure. [cold] {"position":"1600,2000","sizing":"100,100"}
 You shake your head vehemently no. You're not sure what came over you just now. But you don't want to be eaten.
 
 "Okay then," the bear nods, clears <%=s.g?"his":"her"%> throat. "So, er, car is broken down? You require assistance?"
 
 \> [[Yes, actually...|Yes, I do need help actually...]]
+
 
 :: Oh, yes please! {"position":"1800,1725","sizing":"100,100"}
 Your ears stand straight up with excitement. Unlike most bunnies, you've always been "curious" as to what being swallowed is like, but never really admitted it to yourself.
@@ -80,6 +84,7 @@ What will you do?
 
 \> [[Climb inside <%=s.g?"his":"her"%> mouth.|Climb inside Zasha's mouth.]]
 
+
 :: Climb inside Zasha's mouth. [vore checkpoint] {"position":"1800,1975","sizing":"100,100"}
 You eagerly stick one paw, then the other, into the bear's awaiting maw. <%=s.g?"He":"She"%> guides them into <%=s.g?"his":"her"%> throat, and swallows them effortlessly. A second gulp tugs at your arms, and pulls you face-first against <%=s.g?"his":"her"%> slobbery tongue, which quickly gets to work tasting your face, and coating your fur in <%=s.g?"his":"her"%> saliva.
 
@@ -90,6 +95,7 @@ Zasha's breath is warm and humid as it blasts your face. Surprisingly, it doesn'
 You stare in amazement as your face approaches the dark warmth of <%=s.g?"his":"her"%> gullet.
 
 \> [[Th-thank you...]]
+
 
 :: Th-thank you... [vore] {"position":"1800,2100","sizing":"100,100"}
 You murmur thanks at Zasha, unsure if <%=s.g?"he":"she"%> can hear you.
@@ -106,6 +112,7 @@ You're officially food now, and it feels *amazing*.
 
 </div>
 
+
 :: Enter stomach. (Vore Route 1) [vore] {"position":"1800,2225","sizing":"100,100"}
 It's so warm inside the bear's gullet. Not surprising, considering all <%=s.g?"his":"her"%> layers of fat. Your small body sails over Zasha's lips and effortlessly slides down into <%=s.g?"his":"her"%> belly. It's hard to breathe inside <%=s.g?"his":"her"%> throat, but that changes soon enough.
 
@@ -116,6 +123,7 @@ Moments later, you feel the pressure of a huge paw feeling for your presence thr
 "Juniper is doing okay in there?" Zasha asks, <%=s.g?"his":"her"%> voice booming from every direction.
 
 \> [[Yes, wonderful!]]
+
 
 :: Yes, wonderful! [vore] {"position":"1800,2350","sizing":"100,100"}
 You shout approvingly at the top of your little rabbit lungs, attempting to make your voice heard through the thick insulation surrounding you from all sides. As you close your mouth, you taste a little bit of Zasha's saliva on your lips.
@@ -135,6 +143,7 @@ Zasha pulls <%=s.g?"his":"her"%> head out of your car window with a satisfied sm
 \> [[Get comfy.]]
 
 </div>
+
 
 :: Get comfy. [vore] {"position":"1800,2475","sizing":"100,100"}
 <div.important>
@@ -169,8 +178,8 @@ You hear Zasha stop the car. <%=s.g?"He":"She"%> enters, hefting <%=s.g?"his":"h
 
 \> [[Enter the hotel room. (Willing Oral Route)]]
 
-:: Enter the hotel room. (Willing Oral Route) [vore checkpoint] {"position":"1800,2625","sizing":"100,100"}
 
+:: Enter the hotel room. (Willing Oral Route) [vore checkpoint] {"position":"1800,2625","sizing":"100,100"}
 
 **\> Can I come out now?**
 
@@ -186,6 +195,7 @@ You doze off for a few hours, but awake to realize that Zasha is still sleeping,
 
 \> [[Digest quietly.|Await warm and gurgly death.]]
 
+
 :: Wake Zasha up. {"position":"1750,2775","sizing":"100,100"}
 You kick and yell, but it doesn't take. Your predator snores and turns onto <%=s.g?"his":"her"%> belly.
 
@@ -195,8 +205,8 @@ You kick and yell, but it doesn't take. Your predator snores and turns onto <%=s
 
 \> [[Thrash and struggle for your life!]] *(Route 2b: Non-fatal)*
 
-:: Await warm and gurgly death. [vore] {"position":"1800,2925","sizing":"100,100"}
 
+:: Await warm and gurgly death. [vore] {"position":"1800,2925","sizing":"100,100"}
 // TODO:
 
 You resign to your fate of being accidentally digested.
@@ -217,6 +227,7 @@ You and your belongings are discretely flushed in the hotel toilet as a slurry o
 
 \> <a0 onclick="bunny.restart()">Restart.</a>
 
+
 :: Thrash and struggle for your life! {"position":"1675,2925","sizing":"100,100"}
 *CW: Regurgitation.*
 
@@ -232,20 +243,20 @@ You take a long shower, and you think about the choices that lead you to this br
 
 </div>
 
-:: Actually, th-that was kind of hot.
 
+:: Actually, th-that was kind of hot.
 You stop <%=s.g?"him":"her"%>, and say that being nearly digested made you so unbelievably horny. Zasha is bemused, but reciprocates.
 
 <%=s.g?"He":"She"%> removes <%=s.g?"his":"her"%> jacket, and allows.
 
-:: Just go to bed.
 
+:: Just go to bed.
 You walk past Zasha, and  on the floor, still coping with the trauma of almost being digested.
 
 The next day, Zasha wordlessly drives you back to your car. Your cell is working again, and the snow is gone. You try to talk, but can't think of anything to say.
 
 \> <a0 onclick="bunny.restart()">Restart.</a>
 
-:: Ending: Somewhat awkward
 
+:: Ending: Somewhat awkward
 \> <a0 onclick="bunny.restart()">Restart.</a>

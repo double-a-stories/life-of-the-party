@@ -1,5 +1,6 @@
 <!-- Route 1a: Starts in "Follow Zasha to the room."-->
 
+
 :: Offer to buy a meal. {"position":"425,4275","sizing":"100,100"}
 <% s.got_dinner = true; %>
 
@@ -18,6 +19,7 @@ You feed your cash in, and the machine gracefully ejects a large plastic tub: Le
 You take the container, and follow the enormous bear into Room 7. Zasha is unabashedly wagging <%=s.g?"his":"her"%> stubby white tail, as if utterly overjoyed at your simple gesture of buying <%=s.g?"him":"her"%> dinner.
 
 \> [[Enter the hotel room.|Enter the hotel room. (Dinner Route)]]
+
 
 :: Enter the hotel room. (Dinner Route) [checkpoint] {"position":"425,4425","sizing":"100,100"}
 <div.important>

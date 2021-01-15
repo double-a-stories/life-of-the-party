@@ -1,5 +1,6 @@
 <!-- Route 1b: Starts in "Follow Zasha to the room."-->
 
+
 :: Buy yourself some tea to warm up. {"position":"550,4275","sizing":"100,100"}
 <% s.got_tea = true; %>
 
@@ -15,6 +16,7 @@ Zasha opens the door for you.
 
 \> [[Enter the hotel room.|Enter the hotel room. (Tea Route)]]
 
+
 :: Enter the hotel room. (Tea Route) [checkpoint] {"position":"550,4425","sizing":"100,100"}
 You walk inside after Zasha, taking a moment to hang up your jacket. Underneath is a simple gray undershirt which politely covers up your torso. Have we mentioned today, that you're not wearing pants?
 
@@ -25,6 +27,7 @@ You groan internally as you confirm your suspicions that there's only one bed in
 Zasha notices you looking at the bed, and seemingly reads your thoughts. "Hm, bed is too small to share, yes? I should have considered this... Zasha will sleep on floor then."
 
 \> [[No no, I'll do it!]]
+
 
 :: No no, I'll do it! {"position":"550,4550","sizing":"100,100"}
 You tell Zasha <%=-s.g?"he":"she"%> has done more than enough. You'll nab a blanket or two and sleep on the floor.
@@ -39,8 +42,8 @@ You sit <%- s.snuggled_up ? 'cozily' : 'awkwardly' %> beside Zasha for a little 
 
 </div>
 
-:: Take off your shirt. {"position":"750,4825","sizing":"100,100"}
 
+:: Take off your shirt. {"position":"750,4825","sizing":"100,100"}
 :: Do you want a sip? {"position":"550,4675","sizing":"100,100"}
 You offer a sip of your tea to Zasha. <%=s.g?"He":"She"%> hesitates at first, but eventually obliges, <%=s.g?"his":"her"%> massive claws very gently taking the cup from you, and having a little sip.
 
@@ -57,6 +60,7 @@ No, you say, allowing the apologetic polar bear to dab your face <%=s.g?"paterna
 Zasha places a claw on your belly. "Does Rabbit need help removing?"
 
 \> [[A-actually...|I don't have another shirt!]]
+
 
 :: I don't have another shirt! {"position":"550,4800","sizing":"100,100"}
 You blush a deep red, but stammer to produce any words.
