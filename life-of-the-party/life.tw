@@ -50,133 +50,6 @@ Basil stares at your face for a second, and raises an eyebrow.
 \> [[My name's Hollis?]]
 
 
-:: Examine L's bedroom door. {"position":"954,2031","sizing":"100,100"}
-<div-></div>
-
-You covertly bring one of your ears to the first bedroom door. There are definitely people inside. You can hear a muffled moaning.
-
-What do you do?
-
-\> [[Knock politely on the door.]]
-
-\> [[Ignore it.]]
-
-
-:: Check the broom closet. [no_fade] {"position":"1226,1589","sizing":"100,100"}
-<div-></div>
-
-You enter the broom closet.
-
-<div style="min-height: 6em">
-
-Inside is a shelf with some towels, linens, and some cleaning supplies. Leaning against the wall is a broom and a vacuum cleaner.
-
-</div>
-
-\> [[Look around the broom closet.|BROOM CLOSET.]]
-
-<% if (s.broomClosetEnding) { %>
-\> [[Go. Back. To the hallway.|Try to leave.]]
-<% } else { %>
-\> [[Go back to the hallway.|Upstairs Hallway]]
-<% } %>
-
-
-:: Go to the bathroom. {"position":"1864,1324","sizing":"100,100"}
-<div-></div>
-
-You enter the downstairs bathroom, and shut the door behind you, freeing yourself from the stress of the party.
-
-The room's every surface is flush with immaculate porcelain and gaudy gold trimmings. There's something hypnotic about it all. Your mind races with possibilities.
-
-\> [[Masturbate.]]
-
-\> [[Use toilet.]]
-
-\> [[Leave.|Leave the bathroom.]]
-
-
-:: Try to leave. {"position":"1231,1858","sizing":"100,100"}
-<div-></div>
-
-After wasting an inordinate amount of time doing absolutely nothing, you rationally decide that yes, it is now finally time to leave the broom closet.
-
-You turn to the door and reach for the handle, only to realize that there isn't one. The broom closet only opens from the outside. Whoever designed this tiny, pointlesss room apparently did not expect that anyone would ever be stupid enough to close the door behind them.
-
-You're trapped. Wow. I didn't even know that was possible.
-
-\> [[Bang on the door.|ENDING: Broom Closet]]
-
-
-:: Open the door. {"position":"965,2347","sizing":"100,100"}
-*CW: Female Predator, Voyeur, Multi-prey, A dude's butt in your face*
-
-You swing the bedroom door open, and enter. There are three people in the room.
-
-You see a cream-colored mare sitting on the bed, with a huge bulge in her throat. Beside him is a German shepherd, who is gently caressing the horse's stomach.
-
-The third person, you realize, is your friend Reese. The guinea pig's head and shoulders are sticking out of the horse's mouth as she swallows him. All three of them look at you with surprise.
-
-"Woah, what the fuck?" asks the dog.
-
-"Hollis!?" cries Reese.
-
-The horse swallowing Reese suddenly smiles. "Ohmigod, Holly!" You recognize her: it's Lacey Armstrong, the girl who had volunteered to tutor you in math.
-
-\> [[Do something!]]
-
-
-:: Ignore it. {"position":"1026,2226","sizing":"100,100"}
-You decide it's probably best to just leave them alone.
-
-<%= story.render("Upstairs Hallway") %>
-
-\> [[Go back to the foyer.|The Foyer.]]
-
-
-:: Leave the bathroom. {"position":"2010,1496","sizing":"100,100"}
-You go back into the hallway. The loud music continues to bombard your ears. That didn't really help much.
-
-\> [[Go outside.]]
-
-\> [[Return to the foyer.|The Foyer.]]
-
-
-:: Upstairs Hallway {"position":"960,1685","sizing":"100,100"}
-<div-></div>
-
-The upstairs hallway has a few doors. You can see two bedrooms: one is marked with a "B", the other with an "L". In between them is a small broom closet.
-
-Where will you look?
-
-\> [[Examine B's bedroom door.]]
-
-\> [[Check the broom closet.]]
-
-<%
-s.broomClosetState = 0;
-s.broomClosetEnding = false;
-%>
-
-\> [[Examine L's bedroom door.]]
-
-
-:: Do something! {"position":"967,2477","sizing":"100,100"}
-Your friend is being devoured before your very eyes. You know you've got to save him, but you hesitate. Under the pressure, your body freezes up.
-
-"You know them?" asks the dog.
-
-"I'w expfain lafer," says Lacey.
-
-You can see Reese's neck slowly disappearing into the mare's slick pink gullet. "Hollis," he calls, "Don't worry about me! I'll be fi-mmph." His voice becomes muffled as Lacey gulps hard, and pulls Reese's head fully into her mouth.
-
-The dog stands up in a threatening manner.
-
-What will you do?
-
-\> [[Attack Lacey!!]]
-
-
 :: Ignore Basil. {"position":"3877,1787","sizing":"100,100"}
 Something about the stallion strikes you as bad news. You keep dancing casually for a little while, but eventally excuse yourself and return to the main foyer.
 
@@ -217,108 +90,6 @@ His eyes flash with recognition.
 \> [[Oh, right!]]
 
 
-:: Masturbate in the bathroom. {"position":"1883,1633","sizing":"100,100"}
-You.. um... Okay.
-
-Your libido overcomes you. In the privacy of a stranger's house, you stick your hand down your underwear and begin to pleasure yourself for a minute or two.
-
-Satisfied, you take your hands out and stop.
-
-\> [[Keep going.|Keep masturbating.]]
-
-
-:: Keep masturbating. {"position":"1881,1758","sizing":"100,100"}
-...Look, um, I'm not here to judge or anything. Maybe you're just here cause you're curious. Maybe you wanna see all the options. Get all the endings.
-
-Still, there's plenty of other stuff you could be doing at this party instead. This is kind of... weird?
-
-\> [[Don't stop!!]]
-
-
-:: Don't stop!! {"position":"1877,1877","sizing":"100,100"}
-Okay! God.
-
-You keep on... uh, touching yourself, for a while longer. Your heavy panting gets faster and faster, and little moans escape your lips.
-
-Suddenly, you hear a loud pounding at the door.
-
-"You've been in there for like 15 minutes," says an annoyed female voice through the door, "I gotta fuckin' pee."
-
-\> [[Oh shit!]]
-
-
-:: Oh shit! {"position":"1879,2000","sizing":"100,100"}
-*CW: Humiliation. Non-consensual Vore. Blackmail.*
-
-She bangs impatiently on the door for a few more seconds. You realize with horror that you never locked the door behind you.
-
-"That's it!" she says, "I'm coming in there."
-
-\> [[Orgasm!!!|Finish!!!]]
-
-\> [[Escape through window.|Escape through window.]]
-
-
-:: Finish!!! {"position":"1880,2125","sizing":"100,100"}
-Throwing care to the wind, you yank your pants down and continue abusing your gentials, steadily approaching climax... Getting closer and closer... Until...!!! You achieve orgasm. It feels wonderful. Your body convulses a little, and you let out a loud moan of satisfaction.
-
-Seconds later, the door swings open to reveal a gigantic brown bear wearing a tank top and shorts. "...!!!"
-
-The bear's face goes red, and she stares at you with what is clearly a combination of disgust and morbid curiosity. Suddenly though, she recognizes you. With a devious smirk, she closes the door behind her, and asks, "Woah, Holly?"
-
-\> <a0 data-command="Wait, I can-" data-passage="Hazel bear-tackles you">Wait, I can explain!</a>
-
-
-:: Use toilet. {"position":"1751,1486","sizing":"100,100"}
-You consider using the toilet. However, upon examining it, you realize that the bowl is almost twice your size, and you could easily fall in. You realize that this house is probably owned by a family of rhinoceroses, or maybe big horses.
-
-You didn't really need to pee anyway.
-
-\> [[Go back|Go to the bathroom.]]
-
-
-:: Escape through window. {"position":"1641,2007","sizing":"200,100"}
-<div-></div>
-
-Thinking quickly, you yank your pants up, pull the nearest window open, and dive through it to safety.
-
-Just then, the door behind you swings open to reveal Hazel Gently, a buxom brown bear.
-
-As you clear the window sill, you look out and realize that this window is on the second story, overlooking the backyard. You faceplant gracelessly in the backyard and rapidly lose consciousness.
-
-In your last waking seconds, you realize this was a very stupid idea.
-
-### Game Over.
-
-\> [[Undo|Oh shit!]]
-
-\> [[Restart|Start]]
-
-
-:: Attack Lacey!! {"position":"968,2603","sizing":"100,100"}
-"No, don't!" cries Reese from inside the horse's throat.
-
-Adrenaline rushes through your veins. You sidestep the dog, and fling yourself full force at the horse's bulging stomach, perhaps hoping to dislodge your friend via the Heimlich maneuver. Unfortunately, your small size makes this effort completely ineffective.
-
-"Woah!" the dog says as you harmlessly slam against his girlfriend's gut, "Someone's eager to join their friend!" You fall backward, stunned, and he wraps his big paws around your shoulders. "What do you think, Lace," he says, "Got room for another?"
-
-Lacey gives one last forceful swallow. You watch in horror as the bulge made by Reese's head drifts down her throat and disappears into the writhing bulge in her middle. "Sure do," she smiles.
-
-\> [[Struggle.|Struggle against Lacey.]]
-
-\> [[Let her eat you.|Let Lacey eat you.]]
-
-
-:: Knock politely on the door. {"position":"897,2225","sizing":"100,100"}
-"Um, go away," says a female voice from inside the room.
-
-Alongside it, you hear a few more muffled grunts, as well as a kind of slick slurping noise. Is someone... swallowing?
-
-\> [[Open it.|Open the door.]]
-
-\> [[Ignore it.]]
-
-
 :: Thanks for the compliment! {"position":"3731,2167","sizing":"100,100"}
 He chuckles. "Y'know, you look familiar..." He spends a few seconds thinking, and raises an eyebrow.
 
@@ -337,30 +108,6 @@ You take a deep breath, get your impulses under control, and...
 \> [[Leave.|Leave the bathroom.]]
 
 \> [[Masturbate in the bathroom.]]
-
-
-:: Let Lacey eat you. {"position":"903,2722","sizing":"100,100"}
-You stop resisting, and go limp against Lacey's engorged belly. The dog stops forcing you against it.
-
-"Huh, this kid's smarter than I thought!" he says, now lifting you towards the horse's awaiting maw. Lacey smiles.
-
-"It's great to see you Holly! So thoughtful of you to be my dessert."
-
-"Oh Hollis, it's so sweet of you to go willingly! I promise I'll digest you and your buddy as painlessly as possible." She licks her lips. "Oh, and thanks for sharing your math homework with me!"
-
-She opens her mouth wide. The dog positions your bare feet in front of her awaiting maw. He smiles. "Time for dessert, babe!"
-
-\> [[Gulp.|Lacey noms ur legs.]]
-
-
-:: Struggle against Lacey. {"position":"1016,2727","sizing":"100,100"}
-You try to resist, but the dog only grips you tighter, and begins to undress you, presumably to make you easier on the stomach. He then lifts your naked body effortlessly into the air, and positions your bare feet in front of Lacey's awaiting maw.
-
-Lacey looks over your naked body with a bit of pity. "Oh Hollis, I'm real sorry for eating you. Vore just makes me *sooo* horny... And your friend's already squirming *soo* good inside me." She licks her lips. "Plus, you kinda owe me for helping you get that A in Calculus."
-
-Lacey opens her quivering pink maw wide, and says, "Anyway, buh-bye!"
-
-\> [[Gulp.|Lacey noms ur legs.]]
 
 
 :: Dance a little. {"position":"3600,1125","sizing":"200,100"}
@@ -454,20 +201,6 @@ return literals[Math.min(visited(passage.id), literals.length) - 1]
 \> [[Go back.|Dance a little.]]
 
 
-:: ENDING: Broom Closet [gameover] {"position":"1237,1986","sizing":"100,100"}
-<%
-if (!setup.getAchievements().some(s => s.includes("Broom Closet"))) {
-  setup.addAchievement("Worth it? (Broom Closet Ending)")
-}
-%>
-
-You bang on the door trying to get someone's attention, but with the loud music going on downstairs, no one can hear you. As a result of this incredibly stupid turn of events, you remain trapped in the broom closet for the rest of the night. Congrats, I guess, on finding the dumbest ending ever.
-
-### Game Over.
-
-\> [[Epilogue?|Epilogue: Broom Closet Ending.]]
-
-
 :: Randomized Party Flavor [hide] {"position":"3614,1586","sizing":"100,100"}
 <!-- wow, the code that controls this part sucks. -->
 
@@ -509,105 +242,6 @@ return text;
 })() %>
 
 
-:: Hazel bear-tackles you {"position":"1879,2247","sizing":"100,100"}
-The bear's hackles raise, and she gets a wild look in her eyes. Suddenly, you realize with horror exactly who she is. Standing across the bathroom from you is the captain of your high school's old tackle football league: Hazel Gently.
-
-You try to explain that you're–
-
-Thud. Before you can get a word in edge-ways, or even pull your underwear up, you feel an unbearable weight on your front, and cold tile on your back. Hazel has tackled you to the floor, and is now pinning you by the shoulders.
-
-"Well well well," she says proudly, breathing hotly onto your face, "if it isn't little Holly, still masturbating in the bathroom like the freak they are!"
-
-You groan from under her oppressive mass, and try to say, actually my name is Hhh-...
-
-She cuts you off by shifting her weight onto your wind pipe. "Don't care. But I bet *you'd* care a whole lot if I told everyone at this party I caught you jerking off in the bathroom like a total creep! Isn't that right?"
-
-\> [[Struggle under her.|Struggle under Hazel.]]
-
-
-:: Struggle under Hazel. {"position":"1868,2363","sizing":"100,100"}
-You attempt to struggle for breath, but as a petite rabbit, you're hopelessly outmatched. She realizes she's suffocating you, and slowly gets up, squishing her rumbling belly against you in the process.
-
-She eventually towers proudly over your collapsed body. "So. How about we make a little deal? I promise not to share the *embarassing* details of  how you jizzed yourself right in front of me, and in exchange..." A twisted smile comes across her lips. "I get to eat you."
-
-\> [[What? Never!]]
-
-\> [[O-okay...]]
-
-
-:: What? Never! {"position":"1808,2480","sizing":"100,100"}
-Gasping for air, you vehemently shake your head no.
-
-"Hm, really?" she says, "I thought you'd like it! Remember that time the librarian caught you touching yourself to 'Keeping Them Down: Tips and Tricks for the Adolescent Predator?'"
-
-Hazel reaches down and scoops you up in her arms like a baby, although her grip is almost painfully tight. She begins to carry you toward the bathroom door.
-
-"But if you're so *wildly* opposed to becoming bear shit, I guess you wouldn't mind if I brought you out there and jerked you off in front of *everybody*! I'm sure they'd be delighted to watch after they hear about how you creamed your jeans in Basil Armstrong's bathroom!"
-
-She gives you a smack on the ass which sends shivers down your spine.
-
-"I bet there's loads of horny critters here who'd just love a piece of this bottom! I mean, assuming you just can't *stand* the thought of being dinner for dear ol' Hazel..."
-
-\> [[W-wait! I'll do it!]]
-
-
-:: O-okay... {"position":"1954,2471","sizing":"100,100"}
-Hazel laughs. "I should've known a little creep like you would say yes... For all I know, you're just begging to get inside this belly." She laughs and pats her gut, which grumbles loudly. "I bet that makes you even hornier!"
-
-The bear's paws clench around your skinny shoulders, and lift you effortlessly from the ground. "Don't worry Holly, this'll be our little secret." She stretches her jaw wide, giving you a clear look into the undulating red flesh of her slobbering maw.
-
-"Ready to be bear-fat? Of course you are. Down the hatch!"
-
-\> [[Gulp.|Hazel noms you.]]
-
-
-:: Hazel noms you. [vore] {"position":"1876,2751","sizing":"100,200"}
-You attempt to squeal out in fear, but Hazel's giant bear mouth has already clamped down hard over your head. Your face is pressed into her slobbery tongue as she effortlessly slides your head and shoulders into her maw.
-
-"Mmmm," Hazel moans as she tastes your fur. You cringe as your face is slowly squeezed into the slimy, suffocating tunnel of her esophagus. You're still wearing your top, but you feel Hazel's paws effortlessly yank your jeans off as she devours you.
-
-You remember reading once that while their stomach acids can easily dissolve fur, flesh, and bone, bears often struggle to digest denim and leather.
-
-\> [[Get swallowed.|Get swallowed by Hazel.]]
-
-
-:: Lacey noms ur legs. [vore] {"position":"953,2845","sizing":"100,200"}
-Your legs slide effortlessly into Lacey's mouth. It's almost like entering a sleeping bag, if that sleeping bag were extremely hot and wet. Your fur feels impossibly slimy. Lacey lets out little snorts and moans as more and more of your body slips into her throat.
-
-The dog watches with fascination and arousal; his girlfriend has already pulled you in up to your chest, then your neck, until only your head is sticking out of her mouth.
-
-Lacey's boyfriend looks at your exposed head and smiles while unzipping his trousers.
-"Now, whaddya say we give our friend here a little goodbye present?"
-
-\> [[Absolutely not!|Refuse Clif's dick.]]
-
-\> [[Suck his dick.|Don't refuse Clif's dick.]]
-
-
-:: W-wait! I'll do it! {"position":"1872,2619","sizing":"100,100"}
-Hazel smiles. "Thought so."
-
-She leans down and grabs you by the collar, holding you menacingly up to her face. Her stomach lets out a low, hungry grumble. "Honestly, I'm surprised I never ate you before; you would've been a nice after-game snack!"
-
-The bear's paws clench around your skinny shoulders, and lift you effortlessly from the ground. "Don't worry Holly, this'll be our little secret." She stretches her jaw wide, giving you a clear look into the undulating red flesh of her slobbering maw.
-
-"Ready to be bear-fat? Of course you are. Down the hatch!"
-
-\> [[Gulp.|Hazel noms you.]]
-
-
-:: Examine B's bedroom door. {"position":"634,1904","sizing":"100,100"}
-You don't hear anyone inside. Carefully, you prop the door open and peer inside.
-
-There's no one in there. The shelves are sporting a number of trophies from various marathons and track events.
-
-<div->[[Look in Basil's drawers.]]</div>
-
-\> <a0 data-passage="Look in Basil's drawers." data-command="Snoop in drawers.">Check drawers.</a>
-
-\> [[Go back.|Upstairs Hallway]]
-
-
 :: Oh, right! {"position":"3781,2410","sizing":"100,100"}
 You remember him now. Basil was a an award-winning track star, who graduated a year ahead of you. His younger sister once gave you math tutoring.
 
@@ -620,219 +254,6 @@ You nod, awkwardly.
 \> [[I came here with a friend of mine...]]
 
 \> [[Horse cock.]]
-
-
-:: Refuse Clif's dick. [vore] {"position":"880,3073","sizing":"100,100"}
-You vehemently shake your head in protest.
-
-The dog sighs. "Okay, jeez, I was just asking. Suit yourself." He sits on the bed next to Lacey, and begins to caress and massage her bloated stomach. "Looks like your appetizer has already settled down a good bit! You're a real champion, Lace."
-
-Lacey continues dillegently slurping and swallowing you down.
-You feel your feet beginning to enter her stomach, bumping against a hard object which you can only assume is your unfortunate friend. Only your head and shoulders are still protruding from her lips; your body is paralyzed by the powerful muscles of her throat her throat.
-
-\> [[Mmmph...|Lacey finishes swallowing.]]
-
-
-:: Don't refuse Clif's dick. [vore] {"position":"1049,3059","sizing":"100,100"}
-You remain silent as Lacey pulls you in further. Now only your head and shoulders are sticking out of her mouth. Obligingly, you open your mouth. The dog smiles.
-
-"Allow me to introduce myself," he says, slowly bringing his erection closer to your mouth. "The name's Clif, and this is my girlfriend Lace. I'm the dog who's gonna destroy your tonsils."
-
-Lacey sees what her boyfriend is doing, and rolls her eyes with a little chuckle. She stops her swallowing, and you barely have time to take a breath before-
-
-*Glk.* Without warning, you feel Clif's enormous rod plunge against your lips, into your throat. Your mouth instantly coats his meat with saliva. His tip is practically dripping with salty pre, and you can do nothing but savor it. His thick, furry balls slap against your snout.
-
-\> [[Swallow his cock.]]
-
-
-:: Clif jizzes in your mouth. [vore] {"position":"1046,3287","sizing":"100,100"}
-"...!!!"
-
-Clif grips his cock, and sticks his tip between your lips. Spurt after spurt of warm jizz pumps into your mouth and paints your throat. He lets out a series of eager grunts and gasps as he empties his load into you, and you can tell he's resisting the urge to knot your mouth. You swallow reluctantly. Slowly, and with great satisfaction, he withdraws himself.
-
-"Man," he pants with a smile, "part of me regrets letting you digest this talented little cockslut!" He gently pats Lacey's face. "Part of me, anyway. They're all yours, Lace."
-
-Lacey lets out a happy noise, and opens her mouth wide.
-
-\> [[Mmmph...|Lacey finishes swallowing.]]
-
-
-:: Lacey finishes swallowing. [vore] {"position":"956,3423","sizing":"100,100"}
-Your arms are pinned to your side. Lacey's gullet is squeezing tight around your body. You can't move. You couldn't fight back if you tried.
-
-All you can do now is shut your eyes and hope this is all a dream. But you don't wake up. Instead, you feel Lacey stretch her mouth out wide, and...
-
-*Glomp.* Your vision goes dark. You feel her lips clamp down over your ears. Lacey's mouth has engulfed your whole head. She moans with delight. You feel yourself sinking deeper and deeper into her gullet.
-
-\> [[Gulp.|Lacey: Gulp.]]
-
-
-:: Reese, what happened? [vore] {"position":"956,3652","sizing":"100,100"}
-You try to reposition yourself, to no avail. Lacey's stomach is hugging you tightly. Your voice is muffled a little by what you now realize is the fur of his tail. Unwittingly, the two of you are sixty-nining.
-
-You ask Reese how the hell he got here.
-
-"Okay, so, I'm grabbing some punch, right? And who do I bump into but Lacey from Math Club, and her hunky boyfriend! We catch up, and it turns out they're both like, *super* into vore. They invite me upstairs and we start fooling around... Then she offered to digest me, and I was like, 'Hell yes!'"
-
-You blink in astonishment. He said *yes*??
-
-"Of course! Why do you think I came here?" he pauses for a moment, and shifts uncomfortably. "...You wanted to get eaten too, right?"
-
-\> [[No! No I did not!|I did not come here to be digested!]]
-
-\> [[I certainly wasn't expecting to!|I did not come here to be digested!]]
-
-
-:: Lacey: Gulp. [vore] {"position":"957,3530","sizing":"100,100"}
-You cry out in vain, but nothing slows your slimy descent. You take a deep breath before the slimy tunnel of her throat slides over your neck, and eclipses your nose. For several seconds, you are unable to see or breathe. All you can hear are the sounds of Lacey gulping down your ears, accompanied by her thundrous heartbeat, and the squelching of her innards.
-
-You can feel your legs pressing into Reese's naked fur, as Lacey's stomach effortlessly stretches to accomodate you. The tight accomodations means your body is forced to curl up against his. Finally, after what feels like an eternity, your head is deposited along with the rest of you inside the horse's belly.
-
-"Oh, hey Hollis," says Reese, naked and squeezed tightly against you. "...I think your ass is in my face."
-
-\> [[Reese, what happened?]]
-
-
-:: Swallow his cock. [vore] {"position":"1044,3164","sizing":"100,100"}
-"Woah, this kid's a natural! Mmmmh!"
-
-He moans in delight, spending a few seconds merely impressed that you were able to swallow his full length all in one go. However, his torment doesn't end there. Clif eagerly begins to slide his cock in and out of you. The motion quickly evolves into a rhythmic thrust. Each time he hilts in your mouth, you feel yourself getting pushed deeper inside Lacey's throat, until her lips are wrapped around your chin.
-
-"Oh fuck," he moans, grabbing hold of your ears. "I'm gonna... fucking..."
-
-\> [[Spurt.|Clif jizzes in your mouth.]]
-
-
-:: I did not come here to be digested! [vore] {"position":"951,3760","sizing":"100,100"}
-"...R-really? Then why did you agree to come along with me? I thought I told you there'd be preds here."
-
-You remind Reese of his exact words. He told you the party would be, and you quote, *crawling with drunk hotties just begging for a taste of you.*
-
-He pauses. "...I see now how that could be misinterpreted. So, you're *not* a vore fetishist? I guess I just always assumed you were a closeted Softie, or a Demi-Dissolver. Sorry, that's what we call people with non-fatal digestion fantasies."
-
-So all that stuff from before... was just roleplaying?
-
-"Yeah," he replies, "all purely consenting fun. Well, except for the part where she ate you. I think she mistook your resistance for playfulness?"
-
-\> [[I need to get out of here!]]
-
-
-:: I need to get out of here! [vore] {"position":"961,3876","sizing":"100,100"}
-Reese sucks air through his teeth. "That's... not really an option."
-
-What? You scramble indignantly, trying to get your friend's crotch out of your face for a second.
-
-"It's... kind of an unspoken rule among Dissolvers? No means yes. Lacey wouldn't let us out even if we asked her to. And it'd be rude to deprive her of a meal."
-
-Exasperated, you ask Reese, doesn't she have some kind of *safe word*?
-
-Reese hesitates. "Well um, we *would*, but these two are really into hardcore regurgitation denial," he says. "Like, scenarios where the prey get swallowed, then suddenly change their mind and beg to be released, but the pred still digests them... Clif told me about it, I think it's actually pretty sexy."
-
-You roll your eyes. He's taking the whole "being digested" thing pretty well.
-
-\> [[...So what happens now?]]
-
-
-:: ...So what happens now? [vore] {"position":"960,3996","sizing":"100,100"}
-Reese stretches a little against the tight, wet stomach walls around the two of you.
-
-"Now, we digest. A big pred like Lacey should be able to completely convert our bodies to nutrients within about 7 hours."
-
-You ask, will that be painful?
-
-"Oh no, we'll pass out long before then. I'd say we've got about fifteen minutes of oxygen left between us? At least, judging by what I've read."
-
-You sigh. Despite your approaching demise, the warm cocoon of Lacey's belly is actually somewhat calming. In a way, it feels like you're fulfilling your purpose as a rabbit. You're starting to see the appeal of this kind of thing...
-
-\> [[...And until then?]]
-
-
-:: ...And until then? [vore] {"position":"962,4116","sizing":"100,100"}
-Lacey's stomach lets out a little grumble. Reese shudders; you can tell the noise makes him a little excited. He tries to reposition himself, to no avail. The two of you remain stuck in a ying-yang of brown and gray fur.
-
-"Well, I was hoping I'd have a little more room in here..." Reese says, and spends a moment thinking. "This is gonna be kind of a dumb question, Hollis... But do you wanna suck *my* dick?"
-
-\> [[...Yeah, okay.|Suck Reese's dick.]]
-
-\> [[Nope.|Don't suck Reese's dick.]]
-
-
-:: Suck Reese's dick. [vore] {"position":"908,4237","sizing":"100,100"}
-"Sweet," he says, spreading his legs as much as the stomach will allow. "I really owe you one Hollis. You're the best prey-pal a guy could ever ask for."
-
-It doesn't take much work at all to get Reese's dick into your mouth;  you'd practically been avoiding it this whole time. Its size is nowhere near as threatening as the dog's was.
-
-Mm. You delicately tease your friend with your tongue. He throbs a little in response. If being moments from digestion in a beautiful horse girl's stomach hasn't already done it, he's completely erect now.
-
-"Nnnnnh," he moans, almost involuntarily. It's very cute. "Hol, I'm gonna...!!"
-
-\> [[Swallow his jizz.|Swallow Reese's jizz.]]
-
-
-:: Don't suck Reese's dick. [vore] {"position":"1023,4288","sizing":"100,100"}
-"Oh, duh," he says, clearly a little embarassed. "Sorry I asked."
-
-You tell him no problem. You'd imagine you'd probably want to get off before being permanently digested as well. You feel yourself getting lightheaded.
-
-For a little while, Reese doesn't say anything. "Sorry I got you into this mess, Hollis."
-
-You tell him not to worry about it; the whole thing was an almost comically absurd level of miscommunication.
-
-Lacey's stomach grumbles eagerly around you. You now feel yourself getting very sleepy. The last thing you feel is a kind of reluctant contentment, before drifting into a peaceful rest.
-
-\> [[Lacey: Digest.|Lacey: Digest.]]
-
-
-:: Lacey: Digest. {"position":"985,4483","sizing":"100,100"}
-Outside, Lacey gently caresses the hard masses of meat filling her stomach.
-
-"They stopped moving," she says, smiling and letting a burp escape her lips.
-
-Clif eagerly presses his paws into his girlfriend's engorged belly, feeling for Reese and Hollis's softening outlines. "Do you think they're done in there?"
-
-Lacey touches her gut. "Guess so," she says, "but they were nice while they lasted."
-
-Clif grins, hugging his girlfriend, "Clearly no match for my powerful predator, though, huh?"
-
-She lets out another satisfied burp, and kisses him. "Oh, stop."
-
-\> [[\*gurgle\*|Lacey: \*gurgle\*]]
-
-
-:: Lacey: \\*gurgle\\* {"position":"976,4634","sizing":"100,100"}
-Over the next few hours, Clif and Lacey lay together in her bedroom, as her gut slowly melts Hollis's body into a soft, nutritious paste. Lacey grins as her body lets out a nigh-constant stream of belches.
-
-\> [[The morning after...|ENDING: Lacey's Belly]]
-
-
-:: Swallow Reese's jizz. [vore] {"position":"904,4355","sizing":"100,100"}
-Unable to move your head, you have no choice but to allow Reese to hump your face, and after a few seconds, ejaculate into your mouth.
-
-"Mmmmm!" he moans, as his cock spends several seconds erupting with warm semen, which you gulp down. He pants eagerly, likely using up a ton of your air, before finally settling down. "Th-thanks Hol," he murmurs, attempting to pull his dick out of your mouth, and instead smearing your face with cum. "Sorry," he snickers.
-
-For a little while, Reese doesn't say anything. You're getting a little lightheaded now. Finally, he speaks up. "Sorry I got you into this mess, Hollis."
-
-You tell him not to worry about it. You feel yourself getting very sleepy. Lacey's stomach grumbles eagerly around you. The last thing you feel is a kind of reluctant contentment, before drifting into a peaceful rest.
-
-\> [[Lacey: Digest.|Lacey: Digest.]]
-
-
-:: ENDING: Lacey's Belly [morning] {"position":"929,4757","sizing":"200,100"}
-The sun rises through through a clear morning sky.
-
-Lacey awakens to find that she has slightly outgrown her bra and pants. Clif rolls over in his sleep, still snoring loudly. As the mare rises to her feet, she feels a familiar rumbling in her gut.
-
-Lacey looks down at her dramatically shrunken belly, and recalls the night before. "Phew," she remarks, "What a night!"
-
-<% s.sawLaceyVoreEnding = true;
-setup.addAchievement("A Two for One Meal (Lacey Vore Ending)");
-%>
-
-### The End.
-
-\> [[Epilogue.|Epilogue: Lacey Post Vore.]] *(Warning: Scat)*
-
-\> <a0 data-passage="Start">Restart</a>
 
 
 :: I came here with a friend of mine... {"position":"3697,2552","sizing":"100,100"}
@@ -861,229 +282,6 @@ You politely excuse yourself. The horse shoots you finger-guns as you leave. You
 \> <a0 data-passage="The Foyer.">Go back to the foyer.</a>
 
 
-:: Get swallowed by Hazel. [vore] {"position":"1887,2980","sizing":"100,100"}
-You flatten your ears against your head, and squeeze your eyes shut as your head begins to slide into Hazel's slick gullet. The big bear handles you effortlessly, now using her paws to grip your struggling legs so you can't kick her in the face. The slimy gulping sensation continues down your neck and her throat wraps around your shoulders as well.
-
-During your first (and only) year on the football team, you saw her use this exact technique on a wolf boy from a rival school. When she caught you watching, she called you a pervert, and threatened to do the same to you if you told anyone. She even made you lie and cover for her absence while she digested him.
-
-You shudder to think that now you're going to become bear fat in the exact same way.
-
-\> [[Enter Hazel's stomach.]]
-
-
-:: Enter Hazel's stomach. [vore] {"position":"1879,3134","sizing":"100,100"}
-After what feels like an eternity, you open your eyes and find that you are now sliding head-first into the bear's cavernous, fleshy stomach. Well, it's not exactly cavernous, but there's at least enough room for you to curl up into a ball, soaking in a puddle of hot enzymes. Your hind paws slip over Hazels tongue, and she eagerly slurps them up like noodles. A gulp sends them down to their resting spot, where you and your soaking-wet t-shirt are stewing inside her hot, uncomfortable gut.
-
-Hazel opens her mouth, and lets out an obscene, spine-rattling "BRAAAAAAAAAAAAAAP." Hazel laughs, "Whew, 'scuse me," and looks down at the bulge your body makes in her belly. Surprisingly, it's not a very big bulge, though this speaks more to Hazel's size than it does to yours.  You're amazed that she can still stand up on two legs with you inside her.
-
-\> [[Hazel, let me out of here!]]
-
-\> [[Why are you doing this?]]
-
-
-:: Hazel, let me out of here! [vore] {"position":"1816,3276","sizing":"100,100"}
-Hazel laughs, already occupied with snapping photos of her prey-filled gut for her social media account.
-
-"Let you out? Gee, well, let me think about it... Uhhh... No."
-
-She gives her gut a couple of firm pats, causing your prison to jiggle and bounce. You struggle and kick out against the stomach walls with all your might.
-
-"Aahh! No!" she squeals, "Stoppit, that tickles! Hehehe!"
-
-You're hyperventilating now, using up whatever precious bit of air is left inside her noxious gut. Reluctantly, you stop struggling.
-
-"Thank you. Now if you don't mind, I'm *trying* to update my Snapchomp status."
-
-<% if (!visited("Why are you doing this?")) { %>
-
-\> [[Why are you doing this?]]
-
-<% } else { %>
-
-\> [[I don't want to be digested...]]
-
-<% } %>
-
-
-:: Why are you doing this? [vore] {"position":"1942,3276","sizing":"100,100"}
-Hazel smirks, and jiggles her gut around with you inside it. The result is extremely disorienting and unpleasant.
-
-Hazel's voice rumbles and reverberates around you. "Well Holly, it's simple," she says, "You're smaller and weaker than me. That makes you my food."
-
-That's not fair, you cry!
-
-"Y'know,  you seem to care a lot about 'fairness' for someone who's about to become shit... I'll admit, I've wanted to digest you ever since I laid eyes on your scrawny ass. Rabbit fur is *so* yummy. And you're small enough that you won't even make me much fatter!"
-
-
-<% if (!visited("Hazel, let me out of here!")) { %>
-
-\> [[Hazel, let me out of here!]]
-
-<% } else { %>
-
-\> [[I don't want to be digested...]]
-
-<% } %>
-
-
-:: I don't want to be digested... [vore] {"position":"1877,3426","sizing":"100,100"}
-Hazel groans, "Oh, boo-friggin-hoo. I don't wanna lug ninety pounds of digested dork around with me all night, but you don't see me complaining..."
-
-Her phone lets out a little celebratory chime. "Woah, I got bonus tokens for eating five prey this week! I kept my streak up thanks to you. I guess I owe you one!"
-
-You optimistically ask if that means she'll let you out now.
-
-"I'm *literally* rolling my eyes right now. I *have* to digest you now, or I'll lose my streak! My followers are gonna eat this up..."
-
-\> [[Please let me out of here!|Beg for Hazel to let you out.]]
-
-
-:: Epilogue: Lacey Post Vore. [morning] {"position":"985,4887","sizing":"100,100"}
-An hour later, Lacey is sitting on the toilet, gradually squeezing out plop after plop of digested guinea pig and rabbit.&nbsp;The mare's powerful intestines have already absorbed all the nutrients she could get out of them, and pulverised their remains into firm round balls of horse shit. The two aren't hard to pass, just a little time-consuming.
-
-Lacey feels her asshole squeeze out the last glob of leftover rodent, then clench shut with relief. She muses to herself that they were easier coming out in than they were to get out! Especially the rabbit, who squirmed way too much... On the other hand, she probably wouldn't mind eating a duo like that again... <% if (visited("Swallow Reese's jizz.")) { %>She even heard one of them moaning...<% } %> It was kind of exhilarating.
-
-She reaches for her phone.
-
-\> [[Lacey: Text Clif.]]
-
-
-:: ENDING: Hazel: Digest. {"position":"1843,3682","sizing":"200,100"}
-Hazel tentatively pokes her stomach as it stops moving, then shrugs, and walks out of the bathroom and back into the party.
-
-"Hoo-hoo!" says an owl, instantly noticing the bear's belly now poking out from underneath her tanktop. "Looks like somebody caught a snack! Anybody I know?"
-
-Hazel grins. "Remember Hollis Freeley?"
-
-The owl gazes back down at the bear's bloated belly, and suddenly looks distraught. "You bitch! I literally told you *I* was gonna eat them! I had dibs."
-
-"Sorry girl, I *had* to." Hazel turns to whisper to the owl, "You'll never believe this, but I walked in on them *masturbating* in the bathroom. Like, they literally creamed their jeans right in front of me!"
-
-The owl snickers and grabs her by the arm. "Hoohoohoo! Oh my god, that's insane! C'mon, we gotta tell Basil."
-
-### The End.
-
-<% s.sawHazelVoreEnding = true;
-setup.addAchievement("A Grizzly End (Hazel Vore Ending)");
-%>
-
-\> [[Epilogue.|Epilogue: Hazel Post Vore.]] *(CW: Scat.)*
-
-\> <a0 data-passage="Start">Restart</a>
-
-
-:: Beg for Hazel to let you out. [vore] {"position":"1886,3561","sizing":"100,100"}
-You tell her you're starting to feel short of breath, and very exhausted. The liquids around you are starting to sting your fur.
-
-"Awww," Hazel laughs, "is widdle Holly-wolly going nap-naps in the big scary bear's tum-tum?"
-
-You say you're being serious. If she doesn't let you out you're going to die. Your eyelids are getting very, very heavy. You need to... rest your head... Hazel's massive paws gently caress the stomach walls around you, lulling your anxious mind into a light slumber.
-
-"Bye-bye Holly. You were lousy at football, but you make an excellent dinner."
-
-\> [[Hazel: Digest.|ENDING: Hazel: Digest.]]
-
-
-:: Epilogue: Hazel Post Vore. {"position":"1887,3800","sizing":"100,100"}
-<style>
-  #recent-command, tw-passage {
-  	max-width: 33rem;
-	margin: 0 auto;
-  }
-  body {
-    background:
-  }
-
-  .social-card {
-    padding: 1rem;
-    font-size: smaller;
-    font-family: sans-serif;
-	background: white;
-    border: 1px solid var(--light);
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-	box-sizing: border-box;
-	cursor: default;
-  }
-  .social-card small {
-    opacity: 0.7;
-  }
-
-  .social-card * + * {
-  margin-top: 1rem;
-  }
-
-  .social-card .placeholder-img {
-    width: 100%;
-	height: 15em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: rgba(255, 255, 255, 0.7);
-	border-radius: 0.5rem;
-  }
-
-  .placeholder-img {
-	font-weight: bold;
-  }
-</style>
-
-<div class="social-card" tabindex="1">
-<p>Hazel Gently 🐻⚽ <small>@real_grizzy_grumbler –&nbsp;12h</small></p>
-<div class="placeholder-img" style="background: radial-gradient(ellipse at top, #b19164, transparent),
-            radial-gradient(ellipse at 50% 70%, black, transparent);">NSFW</div>
-<p>Just did a little "catching up" with an old friend! They were positively scrumptious, but I don't think this shirt fits anymore. 🐇👅💦</p>
-<small>#GirlBelly #Digestion #Yumm #SnackGoals #😋</small>
-<p>♡ 926</p>
-<div style="font-size: smaller">
-<hr>
-<p><b>bellyfan_xox </b> hot tummy!! can you film it struggling?</p>
-<p><b>ally.hoppers6</b> dang hazel, u got huge! 😳😳💖 </p></div>
-
-</div>
-<div class="social-card" tabindex="1">
-<p>Hazel Gently 🐻⚽ <small>@real_grizzy_grumbler –&nbsp;7h</small></p>
-<p>🎉💃 This party got wild! Gotten so many compliments on my huge tummy. Feels like Holly is finally starting to soften up... I swear, dorks always give me indigestion... </p>
-<small>#TGIF #Party #Lit #BellyDance #TummyRubsPlease</small>
-<p>♡ 219</p>
-</div>
-<div class="social-card" tabindex="1">
-<p>Hazel Gently 🐻⚽ <small>@real_grizzy_grumbler – 5h</small></p>
-<p>There's nothing like falling asleep with a gut full of squirmy and squishy prey. Mmmm...</p>
-<small>#Burp #Sleepy #😴 #TopOfTheFoodChain</small>
-<p>♡ 39</p>
-<div style="font-size: smaller">
-<hr>
-<p><b>prey_rights_478</b> disgusting. #PreyArePeopleToo</p>
-<p><b>vorelord.6969</b> guess who's getting ate 2nite  👅☝️</p>
-<p><b>real_grizzy_grumbler</b> @prey_rights_478 💩 get blocked lol</p>
-</div>
-</div>
-<div class="social-card" tabindex="1">
-<p>Hazel Gently 🐻⚽ <small>@real_grizzy_grumbler – 1h</small></p>
-<p>Good morning #GrizzGang! 🥓🥞🍳 My belly is so jiggly now, and I'm not even hung over! Time to pass the dweeb I digested last night. Pics incoming, xoxo</p>
-<small>#GrizzGang #Gurgling #🍑</small>
-<p>♡ 199</p>
-</div>
-<div class="social-card" tabindex="1">
-<p>Hazel Gently 🐻⚽ <small>@real_grizzy_grumbler – 3m</small></p>
-<div class="placeholder-img" style="background: radial-gradient(ellipse at center, #5f3c0b, transparent),
-radial-gradient(ellipse at top, #eeeeee, transparent),
-            radial-gradient(ellipse at 50% 70%, #287486, transparent)">NSFW</div>
-<p>🚽 Wow, they were a bitch to push out, but they made my ass look fantastic. Oh well. Bye Holly, I always thought you were a little turd. 💩💩💩</p>
-<small>#Disposal #PostVore #PreyPoops #StillHungry</small>
-<p>♡ 621</p>
-<div style="font-size: smaller">
-<hr>
-<p><b>kal.mousie</b> woah, you ate someone?</p>
-<p><b>gut.filler.19m</b> Eat me next please!</p>
-<p><b>bigger.jb.21</b> god i'm glad that's not me.</p>
-</div>
-</div>
-
-\> <a0 data-passage="Start">Restart.</a>
-
-
 :: So, how's college? {"position":"3701,2828","sizing":"100,100"}
 "It's going alright," he says, "West Nexus offered me a sports scholarship, but I wanted to stay closer to home, so I wound up at ZSU instead. Where are you going again?"
 
@@ -1106,24 +304,6 @@ Basil smiles. "Y'know, you always seemed kinda meek, but now it looks like you r
 \> [[Interested in getting a closer look at my tail?|Oh, is my tail giving you ideas?]]
 
 \> [[Want a taste?|...Do you want to eat me?]]
-
-
-:: Look in Basil's drawers. {"position":"629,2040","sizing":"100,100"}
-You decide it couldn't hurt to take a discrete little peek in the dresser. You pull open the top drawer.
-
-#### Items found:
-
-* 2x Jock Strap (Extra Large)
-
-* 1x Multi-Purpose Body Lotion (8 oz)
-
-* 4x Adult Magazine
-
-* 1x Realistic Silicon Horse Dildo
-
-You close the drawer. Probably shouldn't touch any of these...
-
-\> [[Go back.|Upstairs Hallway]]
 
 
 :: ...I'm not really sure yet. {"position":"3700,2953","sizing":"100,100"}
@@ -1184,14 +364,6 @@ After several seconds, he separates his lips from yours. "Well Hollis, whaddya s
 \> [[...Do you want to eat me?]]
 
 
-:: Sorry for trying to kiss you. {"position":"2734,2269","sizing":"100,100"}
-"No," she says, smiling again, "I get it." She gives you another hug.
-
-<%= story.render("A tender moment.") %>
-
-<div->[[A tender moment.]]</div>
-
-
 :: Yes, eat me Basil. {"position":"3743,3820","sizing":"100,100"}
 You nod your head.
 
@@ -1230,54 +402,6 @@ Basil towers over you. A bit of his drool drips on your left ear, causing you to
 The stallion grips you by the shoulders and stretches his mouth wide open. Your last thing you see are his flat white teeth, framing the inviting entrance to his gullet.
 
 \> [[Basil: Glomph.]]
-
-
-:: Lacey: Text Clif. [morning] {"position":"985,5037","sizing":"100,100"}
-<style>
-.textchat {
-  padding: 1rem;
-  font-size: 90%;
-  font-family: monospace;
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid var(--light);
-  border-radius: 0.25rem;
-  margin-bottom: 1rem;
-}
-</style>
-
-<div class="textchat">
-
-L: Hey big dog, got any new snacks on your radar?
-
-C: not yet babe, but i can try to find some willing ones on the grumblegeek forums?
-
-</div>
-
-Lacey stands up, and snaps Clif a photo of her latest "handiwork" before thoughtlessly flushing it.
-
-<div class="textchat">
-
-L: <em>attachment.jpg</em>
-
-L: Better find one soon, or this'll be you next! ;V ;V
-
-C: ahaha, don't even joke babe ^^
-
-L: Who said I was joking? We both know you've got a kink for preds...
-
-C: ...ur kidding?
-
-L: Guess we'll find out tonight };3
-
-C: o///o !!!
-
-</div>
-
-Lacey Armstrong yawns and stretches, ready for a new day, full of new meals. Soon, she'd forget all about those the two delicious meals who comprised her last bowel movement.
-
-### The End.
-
-\> <a0 data-passage="Start">Restart.</a>
 
 
 :: Basil: Glomph. [vore] {"position":"3748,4165","sizing":"100,100"}
@@ -1488,74 +612,6 @@ Just as the ecstasy begins to wane, you suddenly pass out.
 \> [[Basil: Digest.]]
 
 
-:: Epilogue: Broom Closet Ending. [morning] {"position":"1233,2110","sizing":"100,100"}
-Sure, why not.
-
-The morning sun comes blazing through the windows, and lands warmly on the cream-colored fur of a horse, lying in bed while her boyfriend snores loudly next to her. Lacy Armstrong stretches and yawns as she climbs out of bed, her guts filled with the digested remains of a guinea pig. Specifically, the remains of your friend, a guinea pig named Reese.
-
-Lacey enters the hallway, and opens the broom closet to grab some clean bedsheets. She blinks groggily, as her brain takes a moment to register the unexpected presence of a gray rabbit, curled up and sleeping on the floor.
-
-She laughs. "Wait a minute, is that... Hollis?"
-
-\> [[Hollis: Wake up.]]
-
-
-:: Hollis: Wake up. [morning] {"position":"1229,2228","sizing":"100,100"}
-You squint your eyes, woken up by the blinding light streaming in from outside. You slowly and look up at the horse, who is beaming at you with a big smile. "Hey there! Remember me? It's Lacey, from Calc II!"
-
-Instinctually, you try to leap to your feet and escape, but Lacey lightly places a foot (er, hoof, actually) on your stomach, keeping you in place.
-
-"Sorry, can't have you running off now. Usually I'd appreciate some breakfast, but I'm kinda full right now..."
-
-You breathe a sigh of relief, as you realize she's not going to eat you. Then, you hear a German shepherd come out into the hall, wearing nothing but his boxers. "Hey Lacey," he says rubbing his eyes, "who ya talking to?"
-
-Lacey smirks as the dog notices you, and says, "...My *boyfriend* on the other hand, would absolutely *love* a taste!"
-
-#### The End.
-
-\> <a0 data-passage="Start">Restart</a>
-
-
-:: BROOM CLOSET. [no_fade] {"position":"1238,1720","sizing":"100,100"}
-<div-></div>
-
-You enter the broom closet.
-
-<div style="min-height: 6em">
-<%=
-(() => {
-  s.broomClosetState = s.broomClosetState || 0;
-  const count = ++s.broomClosetState;
-  const state = Math.floor(count / 20);
-  s.broomClosetEnding = state >= 5;
-  const literals = [
-	"You look around for a moment. Nothing in here seems out of the ordinary. You decide to go back to the hallway.",
-	"You spend 30 seconds really observing the heck out of some towels. Yep, those are towels alright. Good. Moving on.",
-	"There's no story content in the broom closet, alright? No predators, no vore, nothing. It's just a closet.",
-	`You dig behind the towels and find a mysterious glowing amulet! You can use this to gain access to the Crypt of Zamantheus! Actually, it's just more towels.`,
-	`Your friend Reese is being swallowed whole as we speak. Don't you want to rescue him? Go back. To the hallway.`,
-	`You close the door behind you, and hide inside the broom closet for a little while. This is a huge waste of time.`,
-	`Wow! You've clicked this link ${s.broomClosetState < 230 ? s.broomClosetState : '[fuck you]'} times! Hollis has wasted ${5+state<=16?4+state:"so many goddamn"} minutes of their life.`
-  ];
-  const msg = literals[Math.min(state, literals.length - 1)];
-  if (state >= literals.length - 1 || count % 20 <= 20-4) {
-    return msg + "<wbr>.".repeat(Math.floor(count % 20 / 2));
-  } else {
-    return "...<br><br>";
-  }
-})()
-%>
-</div>
-
-\> [[Look around the broom closet.|BROOM CLOSET.]]
-
-<% if (s.broomClosetEnding) { %>
-\> [[Go back to the hallway?|Try to leave.]]
-<% } else { %>
-\> [[Go back to the hallway.|Upstairs Hallway]]
-<% } %>
-
-
 :: Go to the garage. [todo] {"position":"4800,1400","sizing":"100,100"}
 You walk down the hall and enter the garage. Parked inside is a clean and polished pickup truck from a luxury brand, and a similarly ostentatious boat.
 
@@ -1735,7 +791,7 @@ Oh shit shit shit, you groan. You can't believe this is happening. You look to R
 
 Your world spins, and it takes all your might not to simply crumple into a nervous ball. The fox gestures for you to back <%=s.rm?"him":"her"%> up. You whimper into the phone, Th-that's right! You've been kidnapped by a scary fox. Don't shoot!
 
-\> [[
+\> [[]]
 
 
 :: (oh shit oh god oh shit oh fuck.) {"position":"4728,2860","sizing":"100,100"}
@@ -1757,11 +813,14 @@ You hold your face in your paws. Stephanides is silent for a moment, then he say
 
 <%= story.render("...What are you doing?") %>
 
+<div->[[...What are you doing?]]</div>
 
 :: What's she doing? {"position":"4850,1525","sizing":"100,100"}
 <% s.rm = false; %>
 
 <%= story.render("...What are you doing?")%>
+
+<div->[[...What are you doing?]]</div>
 
 
 :: Take a deep breath. [vore] {"position":"5175,2700","sizing":"100,100"}
@@ -1781,6 +840,8 @@ Ren is pretty big for a fox, but not the biggest fur you've seen here. You get t
 
 
 :: Enter Ren's stomach. [vore] {"position":"5175,2850","sizing":"100,100"}
+
+
 :: Try persuasion? [vore] {"position":"5200,2575","sizing":"100,100"}
 Your mouth is muffled by the slick tongue covering your face, but you try to call out to Ren: It's not too late! <%=s.rm?'He':'She'%> doesn't have to do this!
 
@@ -1800,13 +861,14 @@ don't mess with them, please!
 
 
 :: Nikki and Nox Route {"position":"5250,1400","sizing":"100,100"}
+
+
 :: Mouse route? {"position":"5252,1515","sizing":"100,100"}
 Scene, you ask? What scene?
 
 "Y'know," says the other mouse, "This kinda party? For people into certain activities?"
 
 You say that, uh, you're not following. Your words are already slurred. Jeez, did you really have *that* much to drink?
-
 
 
 :: Why not? {"position":"4648,2184","sizing":"100,100"}
