@@ -173,23 +173,19 @@ To the right are passage tags, metadata which I use for things like checkpoints 
   <% story.passages.map(({ id, name, tags }) => { %>
   <tr>
     <td><%-id%></td>
-	<td><a0 data-passage="<%=name%>"><%= name %></a></td>
-    <td><% tags.map(t => { %><span class="tag-badge"
-  color="<%-$(`tw-tag[name=${t}]`).attr('color')%>"><%-t%></span>
-  <% }) %></td>
+	  <td><a0 data-passage="<%=name%>"><%= name %></a></td>
+    <td>
+      <% tags.map(t => { %>
+        <span class="tag-badge" color="<%-$(`tw-tag[name=${t}]`).attr('color')%>"><%-t%></span>
+  <% }) %>
+  </td>
   </tr>
 <% }); %>
 </tbody>
 </table>
 
 
-</table>
-
-
 :: Warp_zone_Stylesheet [stylesheet]
-
-.table {
-}
 
 .tag-badge {
   display: inline-block;

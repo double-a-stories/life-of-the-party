@@ -111,7 +111,7 @@ tw-story, tw-passage {
   padding-bottom: 20rem;
   width: 100%;
   background: rgb(238,238,238);
-  background: linear-gradient(180deg, --background 0%,
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,
     #020202 70%);
   color: #eee;
   --color: #eee;
@@ -126,6 +126,8 @@ tw-story, tw-passage {
 
 
 :: Be the hyena. [dark otherstory] {"position":"3176,2220","sizing":"100,100"}
+
+<style>body { transition: background-color 0s; }</style>
 my name is ana. i'm a spotted hyena, currently chilling on a bench outside a vore party like a total loser.
 
 i showed up about an hour ago, but big crowds freak me out, so i came out here to get some air and clear my head. i'm here because i want to eat somebody. i want to feel prey writhing around inside my belly. i'd go in there and grab one, but the noise is too overwhelming.

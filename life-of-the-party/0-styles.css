@@ -11,7 +11,7 @@ body {
   font: 1.2rem/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--color, #111);
   background: var(--background, #eee);
-  transition: opacity 1s, background 2s !important;
+  transition: opacity 1s, background 2s;
 }
 
 h1,
