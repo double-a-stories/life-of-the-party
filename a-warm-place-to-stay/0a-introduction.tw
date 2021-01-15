@@ -156,9 +156,9 @@ You'd probably be more intimidated by this huge hunk of <%=s.g?"muscle":"fat"%> 
 
 <div.commands.important>
 
-\> [[Yes, I do need help actually...]] *(Route 1a)*
+\> [[Yes, I do need help actually...]] *(Route 1)*
 
-\> [[Jump down <%=s.g?"his":"her"%> throat.|Jump down their throat.]] *(Route 1b)*
+\> [[Jump down <%=s.g?"his":"her"%> throat.|Jump down their throat.]] *(Route 2)*
 
 </div>
 
