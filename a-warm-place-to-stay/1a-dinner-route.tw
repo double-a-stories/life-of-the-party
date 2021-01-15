@@ -1,0 +1,37 @@
+<!-- Route 1a: Starts in "Follow Zasha to the room."-->
+
+:: Offer to buy a meal. {"position":"425,4275","sizing":"100,100"}
+<% s.got_dinner = true; %>
+
+<%
+console.debug(`Set s.snuggled_up from ${s.got_dinner} to true.`);
+s.got_dinner = true %>
+
+You gesture to the frozen dinner machine, and offer to buy Zasha something to eat.
+
+As if reacting to the mere mention of food, <%=s.g?"his":"her"%> stomach lets out a low grumble. Geez, now you're afraid of what might have happened if you hadn't asked.
+
+"Yes," says Zasha, "I suppose I have not eaten much today at all." <%=s.g?"He":"She"%> studies the machine for a moment, then points to the meal <%=s.g?"he":"she"%> wants.
+
+You feed your cash in, and the machine gracefully ejects a large plastic tub: Lemon Risotto with Green Beans and Salmon. As a vegetarian, you can't help but turn up your nose slightly.
+
+You take the container, and follow the enormous bear into Room 7. Zasha is unabashedly wagging <%=s.g?"his":"her"%> stubby white tail, as if utterly overjoyed at your simple gesture of buying <%=s.g?"him":"her"%> dinner.
+
+\> [[Enter the hotel room.|Enter the hotel room. (Dinner Route)]]
+
+:: Enter the hotel room. (Dinner Route) [checkpoint] {"position":"425,4425","sizing":"100,100"}
+<div.important>
+This route is unfinished! It's playable, but is still written as an outline and may be missing content.
+</div>
+
+You and Zasha have a pleasant meal. Zasha shares <%=s.g?"his":"her"%> green beans with you. The two of you learn more about each other, laughing, and enjoying the night. You admit to Zasha that at first, you were worried <%=s.g?"he":"she"%> would eat you! <%=s.g?"He":"She"%> laughs and dismisses the thought.
+
+Zasha offers to share the tiny bed with you, and you feel comfortable enough around <%=s.g?"him":"her"%> to oblige. You cuddle cutely, and fall asleep.
+
+The next day, you awake to find Zasha's arms wrapped tight around you. You wake up and blush, but <%=s.g?"he":"she"%> realizes the time. <%=s.g?"He":"She"%> needs to get on the road to make it to <%=s.g?"his":"her"%> appointment with Jay, who er... needs his laundry machine repaired. (If the player has learned Zasha's real job, the implication here might be obvious?)
+
+As <%=s.g?"he":"she"%> drives you back to your car, you're relieved to see that (a) the snow has melted, and (b) your car is still there. Zasha tows you to a repair shop. You say your farewells to Zasha, who gives you <%=s.g?"his":"her"%> number, and you offer to call. You pull back onto the road, and continue with your trip. Kiss, and wave goodbye.
+
+### The end.
+
+\> [[Restart.|Title Screen]]

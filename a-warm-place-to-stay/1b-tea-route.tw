@@ -1,0 +1,98 @@
+<!-- Route 1b: Starts in "Follow Zasha to the room."-->
+
+:: Buy yourself some tea to warm up. {"position":"550,4275","sizing":"100,100"}
+<% s.got_tea = true; %>
+
+You ask your newfound roommate if <%=s.g?"he":"she"%> wants any tea or coffee.
+
+"I am okay without," replies Zasha, unlocking the door to the hotel room, "My body is plenty to keep me warm."
+
+Alright, just for you then.
+
+You stick a dollar into the drink machine, and it produces an insulated disposable cup. The machine slowly pours a hot cup of green tea. You pick it up. It feels wonderful to hold in your chilly paws, but it's too hot to drink right now.
+
+Zasha opens the door for you.
+
+\> [[Enter the hotel room.|Enter the hotel room. (Tea Route)]]
+
+:: Enter the hotel room. (Tea Route) [checkpoint] {"position":"550,4425","sizing":"100,100"}
+You walk inside after Zasha, taking a moment to hang up your jacket. Underneath is a simple gray undershirt which politely covers up your torso. Have we mentioned today, that you're not wearing pants?
+
+The hotel room is nothing to write home about. There's a microwave, telephone, bed, singular.
+
+You groan internally as you confirm your suspicions that there's only one bed in the room. It's a <%=s.g?"king":"queen"%>-sized bed, but in this case, it will probably only fit one <%=s.g?"king":"queen"%>. Obviously, Zasha didn't expect to share <%=s.g?"his":"her"%> room with a stranger. You glance around for a fold-out couch, but no luck.
+
+Zasha notices you looking at the bed, and seemingly reads your thoughts. "Hm, bed is too small to share, yes? I should have considered this... Zasha will sleep on floor then."
+
+\> [[No no, I'll do it!]]
+
+:: No no, I'll do it! {"position":"550,4550","sizing":"100,100"}
+You tell Zasha <%=-s.g?"he":"she"%> has done more than enough. You'll nab a blanket or two and sleep on the floor.
+
+Zasha nods and gently sits down on the edge of the matress, which creaks as though it's barely supporting <%-s.g?"him":"her"%>. <%-s.g?"He":"She"%> pats the bedspread, offering for you sit next to <%=s.g?"him":"her"%>. You do so. <% if (s.snuggled_up) { %><%-s.g?"He":"She"%> opens <%=s.g?"his":"her"%> jacket, and you snuggle up inside.<% } %>
+
+You sit <%- s.snuggled_up ? 'cozily' : 'awkwardly' %> beside Zasha for a little while, slowly taking little sips of the tea. Mm. It's now the perfect temperature. Zasha yawns, and you do your best not to stare at <%=s.g?"his":"her"%> giant teeth as <%=s.g?"he":"she"%> does so.
+
+<div.commands>
+
+\> [[Do you want a sip?]]
+
+</div>
+
+:: Take off your shirt. {"position":"750,4825","sizing":"100,100"}
+
+:: Do you want a sip? {"position":"550,4675","sizing":"100,100"}
+You offer a sip of your tea to Zasha. <%=s.g?"He":"She"%> hesitates at first, but eventually obliges, <%=s.g?"his":"her"%> massive claws very gently taking the cup from you, and having a little sip.
+
+"Mm," Zasha remarks, "Soothing."
+
+Zasha gulps loudly. You can almost hear every muscle relaxing in <%=s.g?"his":"her"%> throat as <%=s.g?"he":"she"%> gulps down the liquid.
+
+Zasha delicately reaches to pass the cup back to you. You reach to take it, but <%=s.g?"his":"her"%> claws slip on the rim, and it falls, completely splattering you with a shirtful of warm tea.
+
+"Oh no!" Zasha's chestnut eyes go wide. <%=s.g?"His":"Her"%> white face turns beet-red. "Oh dear, Zasha is terribly sorry." <%=s.g?"He":"She"%> immediately stands, walks to the bathroom, and returns with a towel which <%=s.g?"he":"she"%> immediately begins dabbing on your dripping shirt.
+
+No, you say, allowing the apologetic polar bear to dab your face <%=s.g?"paternalistically":"maternally"%>, it wasn't <%=s.g?"his":"her"%> fault. Your heart sinks. You don't have a spare with you.
+
+Zasha places a claw on your belly. "Does Rabbit need help removing?"
+
+\> [[A-actually...|I don't have another shirt!]]
+
+:: I don't have another shirt! {"position":"550,4800","sizing":"100,100"}
+You blush a deep red, but stammer to produce any words.
+
+"There is no need for to be ashamed, yes? We have all seen naked creature before." <%=s.g?"He":"She"%> grabs the zipper of <%=s.g?"his":"her"%> coat. "Zasha would disrobe too, if it made you more comfortable?"
+
+<div.commands>
+
+**\> N-no, thank you!**
+
+</div>
+
+Hesitantly, you remove your shirt. Zasha politely averts <%=s.g?"his":"her"%> eyes while you wrap yourself in a spare blanket.
+
+You look back at Zasha, and the two of you make awkward, prolonged eye contact. You decide to take an early night, but the floor is extremely cold.
+
+**\> Ask Zasha for another blanket.**
+
+Zasha is snoring loudly, and you try to wake <%=s.g?"him":"her"%>, but it does not work.
+
+**\> Climb into the bed.**
+
+You figure you can just discretely slip into the warm, cozy bed alongside <%=s.g?"him":"her"%>, but in <%=s.g?"his":"her"%> sleep, <%=s.g?"he":"she"%> grabs you and begins to snuggle you against <%=s.g?"his":"her"%> fur.
+
+You're enjoying the guilty pleasure of having <%=s.g?"his":"her"%> arms wrapped around you, until you feel <%=s.g?"his":"her"%> belly rumbling hard. It's totally empty, which makes you a bit nervous. Suddenly, the sleeping Zasha opens <%=s.g?"his":"her"%> mouth wide, grips you in <%=s.g?"his":"her"%> claws, and begin stuffing you inside. Oh dear.
+
+Your parents warned you about sleep eating—one of the many reasons never to ever date a predator—but you assumed it was made-up.
+
+**\> Cry for help!**
+
+You yell out, trying to wake Zasha up, but <%=s.g?"he":"she"%> simply keeps sleep-swallowing you until you're deep inside <%=s.g?"his":"her"%> belly, where you begin to digest, and fall unconscious.
+
+"Mmmm..."
+
+### The End.
+
+\> [[Epilogue.|Ending: Digestion regret]]
+
+\> <a0 onclick="bunny.restart()">Restart.</a>
