@@ -22,7 +22,7 @@ else
   for dir in $DIRS
     $TWEE $dir -o $OUTDIR/$dir.html
     for f in $PROOF_FORMATS
-      $TWEE -f $f $dir -o $OUTDIR/proof/$dir-$f.html
+      $TWEE -f $f $dir -o $OUTDIR/proof/$f-$dir.html
     end
   end
 end
