@@ -139,6 +139,14 @@ The second you touch her hair, the hyena immediately lets out an vicious bark, a
 \> [[Do you want a hug?]] *(Rewind)*
 
 
+:: Sorry for trying to kiss you. {"position":"2734,2269","sizing":"100,100"}
+"No," she says, smiling again, "I get it." She gives you another hug.
+
+<%= story.render("A quiet moment.") %>
+
+<div->[[A quiet moment.]]</div>
+
+
 :: Looking for a friend. (after meeting Ana) {"position":"2728,2580","sizing":"100,100"}
 Ana scratches her head. "I probably haven't seen 'em. What's this friend of yours look like?"
 
@@ -188,7 +196,7 @@ She clears her throat. "Not that that's like, a thing that I've ever done, or an
 :: Thank you, goodbye. {"position":"2718,3085","sizing":"100,100"}
 You excuse yourself politely, and head back into the house. Ana gives a casual wave as you leave.
 
-\> [[Go back to the foyer.|The foyer.]]
+\> [[Go back to the foyer.|The Foyer.]]
 
 
 :: Ana, I want you to eat me. {"position":"2586,3086","sizing":"100,100"}
@@ -514,6 +522,7 @@ You open your mouth to speak, but you accidentally swallow some of her stomach j
 
 \> [[Digest willingly.]]
 
+
 :: ...Please let me out? [vore] {"position":"2625,5445","sizing":"100,100"}
 Ana lets out an exasperated groan, but her masturbation doesn't stop.
 
@@ -596,6 +605,7 @@ You shut your eyes, and resign to fulfill your role as food. It truly is a wonde
 Ana growls out, "Oh... yess... I'm gonna... fucking..."
 
 \> [[Ana: Cum.]]
+
 
 :: Ana: Cum. {"position":"2656,5933","sizing":"200,100"}
 "Mmmmh!" Ana lets out a long, satisfied grunt, and yanks her pants down, just as she begins to shoot off spurt after spurt of jizz onto <% if (visited("Undress in front of Ana outside.")) { %>your discarded clothes<% } else { %>the grass<% } %>. She moans out, "Mmmm, yeahhh..." and collapses back on the garden bench, hoisting her swollen belly.
@@ -688,10 +698,12 @@ She tries the handle for the largerfolk toilet, but it's out of service for clea
 
 \> [[Ana: Wait until they're finished.]]
 
+
 :: Ana: Wait until they're finished. [morning] {"position":"2818,6510","sizing":"100,100"}
 *Yeah, no.* She's barely holding it in as is.
 
 <%=story.render("Ana: Poop in the tiny toilet.")%>
+
 
 :: Ana: Poop in the tiny toilet. [morning] {"position":"2688,6514","sizing":"100,100"}
 Ana bursts into the smallerfolk restroom, and naturally finds a small toilet designed for anthros much smaller than herself. She yanks down her pants, hovers her large ass over the toilet bowl, and immediately begins squeezing out a thick, solid turd. Her shit is mixed with gray fur and partially-dissolved bones.

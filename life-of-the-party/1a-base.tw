@@ -185,6 +185,7 @@ To the right are passage tags, metadata which I use for things like checkpoints 
 
 </table>
 
+
 :: Warp_zone_Stylesheet [stylesheet]
 
 .table {

@@ -58,14 +58,6 @@ You get the feeling he's upstairs.
 <% } %>
 
 
-:: Look upstairs. {"position":"956,1565","sizing":"100,100"}
-<div-></div>
-
-You head up the stairs looking for your friend.
-
-<%= story.render("Upstairs Hallway") %>
-
-
 :: Go outside. {"position":"2725,1000","sizing":"100,100"}
 You walk outside and down the steps onto the back porch.
 

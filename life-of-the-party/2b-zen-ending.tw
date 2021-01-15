@@ -25,7 +25,7 @@ Having had your fill of stargazing, you stand up from the bench.
 
 \> [[Talk to the hyena.]]
 
-\> [[Go back to the foyer.|The foyer.]]
+\> [[Go back to the foyer.|The Foyer.]]
 
 
 :: Comprehend the oneness of an eternal cosmos. [dreamy_2] {"position":"3167,1764","sizing":"100,100"}
@@ -71,6 +71,7 @@ In the backyard of a suburban house party, Hollis Freeley opens their eyes, and 
 \> [[Be the hyena.]]
 
 </div></div>
+
 
 :: Break_styles [stylesheet]
 .fadeout {
@@ -127,6 +128,7 @@ tw-story {
   font-variant: small-caps;
 }
 
+
 :: Be the hyena. [dark otherstory] {"position":"3176,2220","sizing":"100,100"}
 my name is ana. i'm a spotted hyena, currently chilling on a bench outside a vore party like a total loser.
 
@@ -145,6 +147,7 @@ what do i do?
 \> [[Eat the rabbit.]]
 
 </div>
+
 
 :: Eat the rabbit. [dark otherstory] {"position":"3184,2366","sizing":"100,100"}
 <style>
