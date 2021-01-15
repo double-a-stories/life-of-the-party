@@ -122,7 +122,7 @@ You're about to complain, when Zasha suddenly scoops you into <%=s.g?"his":"her"
 
 
 :: Wh-what gives? {"position":"1125,2900","sizing":"100,100"}
-Zasha snuggles you close to <%=s.g?"his chest":"her bosom"%>, and smiles. "Rabbit is Zasha's food now. Zasha does not like cold food. Must keep warm."
+Zasha snuggles you close to <%=s.g?"his chest":"her bosom"%>, and smiles. "Rabbit is Zasha's toy now. Zasha does not like cold toy."
 
 You blush, but accept <%=s.g?"his":"her"%> affectionate teasing as <%=s.g?"he":"she"%> carries you into the building, setting you down in the lobby while <%s.g?"he":"she"%> talks to the concierge to get a room key. As a rabbit, you're somewhat used to people treating you like a child, but Zasha is treating you like *<%=s.g?"his":"her"%>* child, a child <%=s.g?"he":"she"%> intends to consume anally. Freud would have a field day with this.
 
@@ -247,7 +247,7 @@ You feel yourself become woozy. Zasha's upper intestine pulsates indifferently a
 
 *GASP*. Your head pokes through a sphincter into Zasha's stomach, a dark dank cavern.
 
-You feel your feet disappear beneath Zasha's tail. Zasha sits down, and delicately caresses your outline. "I-is rabbit okay?"
+You feel your feet disappear beneath Zasha's tail. Zasha sits down, and delicately caresses your outline. "I-is rabbit okay?" Zasha swallows several anti-digestion tablets, and they plop and fizz into the surrounding stomach juices.
 
 \> [[Y-yeah. I'm okay.]]
 
@@ -255,12 +255,18 @@ You feel your feet disappear beneath Zasha's tail. Zasha sits down, and delicate
 :: Y\-yeah. I'm okay.
 You're fine, you say. Actually, it made you feel kind of... alive. You look down at your lower half, now also inside the stomach. *Very* alive.
 
-Feeling both of your libidos at their peak from the undeniably sexual experience of carnivorous satisfaction, the two of you (optionally) masturbate.
+Zasha, too, is feeling a great deal of physical pleasure. Both of your libidos at their peak from the undeniably sexual experience of carnivorous satisfaction, you both (optionally) masturbate.
+
+// TODO: jerk-off descriptions
+// Might need separate passages per gender.
 
 \> [[Yess!]]
 
 
 :: Yess!
+
+// TODO: Orgasm description.
+
 Satisfied with the orgasm, the two of you fall asleep.
 
 <div.commands>
