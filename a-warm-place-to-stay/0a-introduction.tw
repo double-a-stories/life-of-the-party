@@ -11,8 +11,8 @@ According to your stereo, it's 7:<%= (new Date().getMinutes() < 10 ? "0":"") + n
 
 \> [[Take inventory.]]
 
-:: Take inventory. [cold] {"position":"500,350","sizing":"100,100"}
 
+:: Take inventory. [cold] {"position":"500,350","sizing":"100,100"}
 An hour ago, you were driving down a narrow highway, on your way across the state of Northaven. The falling snow started out light, but got heavier and heaver. You struck a patch of black ice, swerved off the road, and got a flat tire in the process. Now you're stuck, sitting inside a tiny sedan in a ditch on the side of the road in the middle of nowhere, with little hope of rescue.
 
 In your handbag, you have a cell phone, a credit card, a rewards card for a drive-thru coffee chain, and a wallet containing seven (7) dollars.
@@ -22,6 +22,7 @@ What will you do?
 <%= story.render("Car Commands") %>
 
 <div->[[Car Commands]]</div>
+
 
 :: Car Commands {"position":"500,475","sizing":"100,100"}
 <%
@@ -46,6 +47,7 @@ const seenEvery = carPassages.every(p => visited(p)); %>
 
 <div->[[Try calling for help.]][[Check for spare tire.]][[Turn on hazards.]]</div>
 
+
 :: Try calling for help. [cold] {"position":"375,600","sizing":"100,100"}
 Yep, already tried <%= visited("Check for spare tire.") ? "that too." : "that." %>
 
@@ -55,6 +57,7 @@ Either the snowstorm is messing with the cell towers, or the cellular infrastruc
 
 <%= story.render("Car Commands") %>
 
+
 :: Check for spare tire. [cold] {"position":"500,600","sizing":"100,100"}
 Good thinking. Unfortunately, you've actually been driving on the spare for the last year or so. Come to think of it, that might be why it gave out so easily.
 
@@ -62,12 +65,14 @@ Well, hindsight's 20/20, and all.
 
 <%= story.render("Car Commands") %>
 
+
 :: Turn on hazards. [cold] {"position":"625,600","sizing":"100,100"}
 You do that. If you’re lucky, someone might notice and help you out. Of course that would require someone to actually be driving on this road, which, in your experience so far, does not happen very often. You haven’t seen another car in over 20 minutes.
 
 Well, you're officially out of ideas.
 
 \> [[Await slow and chilly death.]]
+
 
 :: Await slow and chilly death. [cold] {"position":"500,725","sizing":"100,100"}
 Your fuzzy ears droop behind your head in sorrow, and you resign to your inevitable, icy fate. The cruel reality of your situation sinks in. You can feel the clutches of frostbite already taking hold of...
@@ -77,6 +82,7 @@ Okay, you're being kind of dramatic. You're not gonna die; you've got fur to kee
 If you'd known you were going to get stuck in a snowstorm, you might have at least worn some pants today.
 
 \> [[Wait, I'm not wearing pants?]]
+
 
 :: Wait, I'm not wearing pants? [cold] {"position":"500,850","sizing":"100,100"}
 No, of course you're not. What a silly thing for you to wonder.
@@ -88,6 +94,7 @@ It's gonna be a long night. There will be plenty of time to think about the soci
 *VrooOOOOoom.*
 
 \> [[What was that?]]
+
 
 :: What was that? [cold checkpoint] {"position":"500,1150","sizing":"200,100"}
 Outside, you hear an engine roar and come to a stop. Your windshield is almost too caked in snow to make it out, but you can just barely see a huge pickup truck as it pulls off the road and parks in front of you.
@@ -108,6 +115,7 @@ A polar bear in a puffy winter coat. They're standing outside your car and polit
 
 <div->[[Just ignore.]]</div>
 
+
 :: Just ignore. [cold] {"position":"500,1275","sizing":"100,100"}
 Faced with the sudden appearance of a potential predator, your natural instincts kick in. You go perfectly still, ignoring the polar bear completely.
 
@@ -123,6 +131,7 @@ This probably won't help. Not only has <%=s.g?"he":"she"%> already seen you, but
 
 </div>
 
+
 :: Keep ignoring. [cold] {"position":"625,1300","sizing":"100,100"}
 You continue paying no attention to the polar bear. <%=s.g?"He":"She"%> scratches <%=s.g?"his":"her"%> head awkwardly.
 
@@ -133,6 +142,7 @@ The polar bear taps on your window again. "Er, is rabbit okay? Should I go?"
 You're gonna be here all night if you don't talk to <%=s.g?"him":"her"%>.
 
 \> [[Roll the window down.]]
+
 
 :: Roll the window down. [cold] {"position":"500,1425","sizing":"200,100"}
 Drafty, snowy air blows in. The polar bear crouches down to peer at you through the open window. You finally get a better look at <%=s.g?"him":"her"%>.
@@ -152,6 +162,7 @@ You'd probably be more intimidated by this huge hunk of <%=s.g?"muscle":"fat"%> 
 
 </div>
 
+
 :: Yes, I do need help actually... [cold] {"position":"500,1550","sizing":"100,100"}
 Yes, you say, you've got a flat tire, and you're stuck here.
 
@@ -166,6 +177,7 @@ Your eyes go wide. A ride to a hotel? That's actually extremely convenient! But,
 Then again, the alternative is spending all night in a chilly car, so you probably better accept.
 
 \> [[Hitch a ride.]]
+
 
 :: Hitch a ride. [cold] {"position":"500,1675","sizing":"100,100"}
 Yes, you say, you could use a lift.
@@ -186,6 +198,7 @@ Th-thanks, you stammer.
 
 </div>
 
+
 :: Look out the window. [cold] {"position":"500,1800","sizing":"100,100"}
 The two of you sit in awkward silence for a little bit, as the polar bear carefully drives the two of you down the narrow highway covered in snowy sludge. Occasionally a dense patch of fir trees passes by. You twiddle your paws. The seatbelts in this vehicle are way too large for your little body.
 
@@ -205,6 +218,7 @@ In truth, you were distracted, thinking about how powerless you'd be to stop suc
 
 </div>
 
+
 :: Of course! My name is... [cold] {"position":"500,1925","sizing":"100,100"}
 "Juniper. Hm. This is a sweet sounding name. It reminds me of winter meals in my home," says the polar bear. "My name is Zasha, protector of creatures large and small."
 
@@ -219,6 +233,7 @@ You nod, then return to awkwardly twiddling your paws. Zasha also says nothing. 
 \> [[Do you live around here?]]
 
 </div>
+
 
 :: Do you live around here? [cold checkpoint] {"position":"500,2050","sizing":"200,100"}
 "Not especially," says Zasha. "Zasha considers <%=s.g?"him":"her"%>self as nomad. Often moving from place to place. Tonight staying in hotel on way east, for next job."

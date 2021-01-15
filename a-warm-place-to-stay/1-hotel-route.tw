@@ -1,5 +1,6 @@
 <!-- Route 1: Starts in "Do you live around here?" -->
 
+
 :: Nod agreeably. [cold] {"position":"500,2175","sizing":"100,100"}
 Yup, nothing suspicious there.
 
@@ -11,13 +12,14 @@ Zasha nods, eager to change the subject. You ride together in silence for a minu
 
 <div->[[Arrive at the hotel.]]</div>
 
+
 :: Arrive at the hotel. [cold] {"position":"500,2300","sizing":"100,100"}
 Scenery whizzes past. Eventually Zasha turns off the road, and into the parking lot of a roadside hotel, just as promised. It's a meager two-story lodge, probably converted from an old house or something. It's meager, but in a quaint, charming way.
 
 \> [[Get out of the truck.]]
 
-:: Get out of the truck. [cold] {"position":"500,2300","sizing":"100,100"}
 
+:: Get out of the truck. [cold] {"position":"500,2300","sizing":"100,100"}
 You shudder as you step outside into the chilly air. The entrance is only a short walk away, but in this cold, it feels like a million miles.
 
 Zasha notices your discomfort, and frowns. <%=s.g?"He":"She"%> holds open <%=s.g?"his":"her"%> puffy coat to reveal the fur of <%=s.g?"his bare":"her naked"%> belly and chest, as if inviting you to huddle against it for warmth. <%=s.g?"He":"She"%>'s... not wearing anything underneath. You feel your cheeks redden, either from embarassment, or from the sheer cold nipping at them.
@@ -32,6 +34,7 @@ Zasha notices your discomfort, and frowns. <%=s.g?"He":"She"%> holds open <%=s.g
 
 </div>
 
+
 :: Cozy up inside Zasha's coat. [warm] {"position":"500,2550","sizing":"100,100"}
 <% console.debug(`Set s.snuggled_up from ${s.snuggled_up} to true.`);
 s.snuggled_up = true %>
@@ -41,6 +44,7 @@ You blush, and reluctantly step into the inviting warmth of Zasha's fur. It's un
 The polar bear's pudgy gut jiggles a little with each step. Normally, you'd feel nervous about being so close to a bear—not to mention, a bear's stomach—but it's so bitterly cold out, you can only feel grateful for this warm gesture. <%=s.g?"His":"Her"%> fur is softer than you could have imagined.
 
 \> [[Th-thank you...|Thanks for the warmth.]]
+
 
 :: Thanks for the warmth. [warm] {"position":"500,2675","sizing":"100,100"}
 Thank you, you tell Zasha, poking your head out to see where you're going.
@@ -53,6 +57,7 @@ The automatic doors have seen better days, but they slowly and creakily slide op
 
 \> [[Enter the hotel.]]
 
+
 :: Tough it out. [cold] {"position":"625,2550","sizing":"100,100"}
 You politely refuse the gesture, and walk quickly and purposefully to the door, wincing as icy pain attacks the pads of your feet. Zasha trails behind at a plodding pace, dragging with <%=s.g?"him":"her"%> a large, boxy suitcase. By the time you make it to the hotel's entrance, your teeth are already chattering.
 
@@ -63,6 +68,7 @@ Zasha sees the door failing to open, and sees you shuddering and rubbing your sh
 "There we go," <%=s.g?"he":"she"%> says, "silly machine no match for Zasha." <%=s.g?"He":"She"%> gestures for you to enter.
 
 \> [[Enter the hotel.]]
+
 
 :: Enter the hotel. {"position":"500,2800","sizing":"100,100"}
 The hotel lobby is small and quaint, containing a short desk with a bell, and another table covered in little pamphlets advertising nearby curiosities. A bored-looking fox in a concierge's uniform is sitting at the desk. Across from the desk is an elevator which is currently out of order. To the left is a hallway which presumably leads to the hotel's rooms.
@@ -75,6 +81,7 @@ You see the concierge give Zasha a couple of room keys. <%=s.g?"He":"She"%> turn
 
 \> [[W-what?]]
 
+
 :: W-what? [warm] {"position":"500,2925","sizing":"100,100"}
 Your face flushes, and your ears stick straight up with surprise. <%=s.g?"He":"She"%> wants to sleep with you??
 
@@ -83,6 +90,7 @@ You stammer to say that s-sorry, you don't think of <%=s.g?"him":"her"%> that wa
 Zasha's eyes go wide as <%=s.g?"he":"she"%> realizes <%=s.g?"his":"her"%> mistake. "Oh! I did not intend to suggest such a... prurient thing! I simply offer for you to sleep in my hotel room at no cost to you."
 
 \> [[Oh! Of course, ha-ha.]]
+
 
 :: Oh! Of course, ha-ha. {"position":"500,3050","sizing":"100,100"}
 You laugh awkwardly. Right, that's what you thought <%=s.g?"he":"she"%> meant too. Obviously.
@@ -99,6 +107,7 @@ You're not overly tempted to accept <%=s.g?"his":"her"%> offer. You've got nothi
 
 </div>
 
+
 :: Politely refuse. {"position":"500,3200","sizing":"100,100"}
 You tell Zasha that you really appreciate all the help <%=s.g?'he':'she'%>'s provided, but that you can handle it from here. You'll just book yourself a room, and get your car towed tomorrow.
 
@@ -112,6 +121,7 @@ You graciously wave adieu to Zasha, then turn to the concierge to get your own r
 
 \> [[Talk to the concierge.]]
 
+
 :: Talk to the concierge. {"position":"500,3350","sizing":"100,100"}
 You stride confidently toward the concierge's desk. <%=!s.g?"He":"She"%>'s a red <%=!s.g?"fox":"vixen"%>, and it seems as though the two of you have interrupted <%=!s.g?"his":"her"%> extremely important perusal of a fashion magazine.
 
@@ -124,6 +134,7 @@ Hello, you say! You're looking to book a-
 \> [[You're sure that there aren't any other rooms?]]
 
 </div>
+
 
 :: You're sure that there aren't any other rooms? {"position":"500,3500","sizing":"100,100"}
 The concierge looks at you, then back at the sign as if pretending to double-check.
@@ -140,6 +151,7 @@ I mean, it's not like you really have any other options?
 
 \> [[Construct makeshift bed from travel pamphlets?]]
 
+
 :: Freeze to death outside? {"position":"450,3700","sizing":"100,100"}
 You glance back toward the snowy wasteland outside the warm confines of the hotel lobby. Not your best idea.
 
@@ -150,6 +162,7 @@ You glance back toward the snowy wasteland outside the warm confines of the hote
 \> [[Construct makeshift bed from travel pamphlets?]]
 
 <% } %>
+
 
 :: Construct makeshift bed from travel pamphlets? {"position":"575,3700","sizing":"100,100"}
 Maybe if you stole enough of those little brochures, you could use them as a blanket?
@@ -163,6 +176,7 @@ You're just gonna have to share a room with this bear.
 \> [[Freeze to death outside?]]
 
 <% } %>
+
 
 :: Accept the key-card. {"position":"500,3875","sizing":"100,100"}
 <%
@@ -183,6 +197,7 @@ Zasha turns and heads for the hallway where the room is.
 
 </div>
 
+
 :: Ask the concierge about towing your car. {"position":"500,4000","sizing":"100,100"}
 You have a brief but scintilliating conversation with the concierge about how your car is stuck in the snow four miles from here, a fact that no one really seems to care much about but you.
 
@@ -195,6 +210,7 @@ You ask, Because of the snow-
 ...Cool, you say. You decide to deal with that problem in the morning.
 
 \> [[Follow Zasha to the room.]]
+
 
 :: Follow Zasha to the room. [checkpoint] {"position":"500,4125","sizing":"100,100"}
 <%if (s.snuggled_up) { %>

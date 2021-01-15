@@ -20,8 +20,10 @@
     "zoom": 0.25
 }
 
+
 :: StoryTitle
 A Warm Place to Stay
+
 
 :: Title Screen [start] {"position":"500,100","sizing":"100,100"}
 <div.logo>
@@ -90,6 +92,7 @@ Vore. Furries. Unfinished content.
 </div>
 
 <% } %>
+
 
 :: Keyboard controls {"position":"700,100","sizing":"100,100"}
 This game can be played with either mouse or keyboard controls.
@@ -197,6 +200,7 @@ To the right are passage tags, metadata which I use for things like checkpoints 
 }
 </style>
 
+
 :: Header [header] {"position":"200,100","sizing":"100,100"}
 <% if (storyFlags.get().showDebug) { %>
 <div class="debug-menu">
@@ -276,6 +280,7 @@ To the right are passage tags, metadata which I use for things like checkpoints 
     margin-right: 0.5rem;
   }
 </style>
+
 
 :: Adventure Log {"position":"900,100","sizing":"100,100"}
 A list of all the passages the user has seen, in the order they were discovered.
