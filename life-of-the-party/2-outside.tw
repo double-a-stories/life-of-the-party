@@ -292,8 +292,7 @@ Ana leads you by the paw further into a darker part of the backyard, out of view
 
 
 :: Any questions? {"position":"2688,3782","sizing":"100,100"}
-<%
-const hasSeen = ["Will you be gentle?", "How does it feel to have live prey inside you?", "Should I get naked first?", "Will I taste okay?"].map(e => +visited(e)).reduce((a, b) => a+b, 0);
+<% const hasSeen = ["Will you be gentle?", "How does it feel to have live prey inside you?", "Should I get naked first?", "Will I taste okay?"].map(e => +visited(e)).reduce((a, b) => a+b, 0);
 
 if (hasSeen === 0) { %>
 Ana smiles. "Good. Any other questions before you become hyena food?"
