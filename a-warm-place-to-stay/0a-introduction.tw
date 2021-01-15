@@ -1,0 +1,236 @@
+:: A Warm Place to Stay. [cold] {"position":"500,225","sizing":"100,100"}
+<style>
+body { transition: opacity 2s, background-color 0s; }
+</style>
+
+Your name is Juniper Greenall. You are a rabbit.
+
+You're in the driver's seat of a small car on the side of the road. An empty, snowy expanse surrounds you in every direction. Flecks of powdery white quickly accumulate on your windshield, as if threatening to swallow you whole. Despite your windshield wipers' best efforts, the snow is gradually engulfing your view.
+
+According to your stereo, it's 7:<%= (new Date().getMinutes() < 10 ? "0":"") + new Date().getMinutes()%> PM.
+
+\> [[Take inventory.]]
+
+:: Take inventory. [cold] {"position":"500,350","sizing":"100,100"}
+
+An hour ago, you were driving down a narrow highway, on your way across the state of Northaven. The falling snow started out light, but got heavier and heaver. You struck a patch of black ice, swerved off the road, and got a flat tire in the process. Now you're stuck, sitting inside a tiny sedan in a ditch on the side of the road in the middle of nowhere, with little hope of rescue.
+
+In your handbag, you have a cell phone, a credit card, a rewards card for a drive-thru coffee chain, and a wallet containing seven (7) dollars.
+
+What will you do?
+
+<%= story.render("Car Commands") %>
+
+<div->[[Car Commands]]</div>
+
+:: Car Commands {"position":"500,475","sizing":"100,100"}
+<%
+const carPassages = ["Try calling for help.", "Check for spare tire.", "Turn on hazards."];
+const seenEvery = carPassages.every(p => visited(p)); %>
+
+<%= seenEvery ? "Well, you're officially out of ideas." : "" %>
+
+<% carPassages.map(p => {
+  if (!visited(p)) { %>
+
+\> <a0 data-passage="<%=p%>"><%=p%></a>
+
+<% }
+}); %>
+
+<% if (seenEvery) { %>
+
+\> [[Await slow and chilly death.]]
+
+<% } %>
+
+<div->[[Try calling for help.]][[Check for spare tire.]][[Turn on hazards.]]</div>
+
+:: Try calling for help. [cold] {"position":"375,600","sizing":"100,100"}
+Yep, already tried <%= visited("Check for spare tire.") ? "that too." : "that." %>
+
+You pull out your little cell phone, if only confirm that it still has no reception. You wave it around in the air for a moment, trying to get a signal. No dice.
+
+Either the snowstorm is messing with the cell towers, or the cellular infrastructure of rural Northaven simply leaves a lot to be desired.
+
+<%= story.render("Car Commands") %>
+
+:: Check for spare tire. [cold] {"position":"500,600","sizing":"100,100"}
+Good thinking. Unfortunately, you've actually been driving on the spare for the last year or so. Come to think of it, that might be why it gave out so easily.
+
+Well, hindsight's 20/20, and all.
+
+<%= story.render("Car Commands") %>
+
+:: Turn on hazards. [cold] {"position":"625,600","sizing":"100,100"}
+You do that. If you’re lucky, someone might notice and help you out. Of course that would require someone to actually be driving on this road, which, in your experience so far, does not happen very often. You haven’t seen another car in over 20 minutes.
+
+Well, you're officially out of ideas.
+
+\> [[Await slow and chilly death.]]
+
+:: Await slow and chilly death. [cold] {"position":"500,725","sizing":"100,100"}
+Your fuzzy ears droop behind your head in sorrow, and you resign to your inevitable, icy fate. The cruel reality of your situation sinks in. You can feel the clutches of frostbite already taking hold of...
+
+Okay, you're being kind of dramatic. You're not gonna die; you've got fur to keep you warm, not to mention the car's heater. In the worst case, you'll just have to wait the storm out. Still, it's not how you expected to spend tonight.
+
+If you'd known you were going to get stuck in a snowstorm, you might have at least worn some pants today.
+
+\> [[Wait, I'm not wearing pants?]]
+
+:: Wait, I'm not wearing pants? [cold] {"position":"500,850","sizing":"100,100"}
+No, of course you're not. What a silly thing for you to wonder.
+
+You, Juniper Greenall, are a rabbit living in a society of anthropomorphic mammals. Like most people, you are furry enough "down there" that you don't consider pants to be a necessary garment, except on especially formal occasions. As long as you're wearing either a top or a bottom, (in your case, a jacket and a plain undershirt) you're fully clothed. Porky Pig-style.
+
+It's gonna be a long night. There will be plenty of time to think about the societal implications of this when you're-
+
+*VrooOOOOoom.*
+
+\> [[What was that?]]
+
+:: What was that? [cold checkpoint] {"position":"500,1150","sizing":"200,100"}
+Outside, you hear an engine roar and come to a stop. Your windshield is almost too caked in snow to make it out, but you can just barely see a huge pickup truck as it pulls off the road and parks in front of you.
+
+From the truck, a huge, broad-shouldered figure emerges, and begins to trudge through the snow toward your car. Great. You're either about to be rescued, or violently abducted.
+
+You hear a knock to your left. You sweat a bit, and turn your head extremely slowly to see...
+
+A polar bear in a puffy winter coat. They're standing outside your car and politely tapping on the driver's side window with an enormous white paw.
+
+<div.commands.important>
+
+\> <a0 data-passage="Just ignore." onclick="story.state.g = true;">Just ignore him.</a> *(Male Pred)*
+
+\> <a0 data-passage="Just ignore." onclick="story.state.g = false;">Just ignore her.</a> *(Female Pred)*
+
+</div>
+
+<div->[[Just ignore.]]</div>
+
+:: Just ignore. [cold] {"position":"500,1275","sizing":"100,100"}
+Faced with the sudden appearance of a potential predator, your natural instincts kick in. You go perfectly still, ignoring the polar bear completely.
+
+This probably won't help. Not only has <%=s.g?"he":"she"%> already seen you, but <%=s.g?"he":"she"%>'s probably not a predator either. Bears—and most carnivores in general—are not ravenous murderers who devour any stranger they come across. Eating people is, in fact, quite frowned upon. Unsolicited predation is extremely uncommon, although the news headlines tend to blow it out of proportion.
+
+<%=s.g?"He":"She"%> stares somewhat awkwardly at you for a moment, taps on the glass, and calls out, "Hello? Does rabbit need help?"
+
+<div.commands>
+
+\> [[Keep ignoring <%=s.g?"him":"her"%>.|Keep ignoring.]]
+
+\> [[Roll the window down.]]
+
+</div>
+
+:: Keep ignoring. [cold] {"position":"625,1300","sizing":"100,100"}
+You continue paying no attention to the polar bear. <%=s.g?"He":"She"%> scratches <%=s.g?"his":"her"%> head awkwardly.
+
+Okay, this is stupid, and also kind of speciesist? This bear is your only hope of rescue, and <%=s.g?"he's":"she's"%> probably a well-adjusted, perfectly ordinary person, content to eat a civilized diet of fish and dairy. Despite what your "old-fashioned" parents would think, bears are not all rabbit-gulping vore machines. Try to be a little more open minded.
+
+The polar bear taps on your window again. "Er, is rabbit okay? Should I go?"
+
+You're gonna be here all night if you don't talk to <%=s.g?"him":"her"%>.
+
+\> [[Roll the window down.]]
+
+:: Roll the window down. [cold] {"position":"500,1425","sizing":"200,100"}
+Drafty, snowy air blows in. The polar bear crouches down to peer at you through the open window. You finally get a better look at <%=s.g?"him":"her"%>.
+
+Most notably, <%=s.g?"he":"she"%>'s huge. <%=s.g?"His":"Her"%> bear-sized face almost fully eclipses the window of your decidedly rabbit-sized car.
+<%=s.g?"His":"Her"%> "robust" figure is only widened by the thick blue winter coat <%=s.g?"he":"she"%>'s wearing. And as we established earlier, no pants. You get the feeling that the people in this world have very different standards of modesty. And by "get the feeling," you mean you've known this all along.
+
+You'd probably be more intimidated by this huge hunk of <%=s.g?"muscle":"fat"%>  and fur, but there's something soft and non-threatening about <%=s.g?"his":"her"%> chestnut colored eyes. You feel somewhat calmed by <%=s.g?"his":"her"%> presence.
+
+<%=s.g?"He":"She"%> clears <%=s.g?"his":"her"%> throat. "I saw blinker," <%=s.g?"he":"she"%> says in a thick northern accent, "You require assistance?"
+
+<div.commands.important>
+
+\> [[Yes, I do need help actually...]] *(Route 1a)*
+
+\> [[Jump down <%=s.g?"his":"her"%> throat.|Jump down their throat.]] *(Route 1b)*
+
+</div>
+
+:: Yes, I do need help actually... [cold] {"position":"500,1550","sizing":"100,100"}
+Yes, you say, you've got a flat tire, and you're stuck here.
+
+The bear pauses thoughtfully. "You have spare?" <%=s.g?"he":"she"%> asks. You shake your head no. "Hmm," <%=s.g?"he":"she"%> says with a paw on <%=s.g?"his":"her"%> chin, "Snow too heavy. Can't move car right now."
+
+Your ears droop, crestfallen.
+
+"However, I am on way to hotel," Zasha continues, "Warm place for night, few miles. You wish to ride there with me?"
+
+Your eyes go wide. A ride to a hotel? That's actually extremely convenient! But, should you go with <%=s.g?"him":"her"%>? Growing up as a rabbit, you were taught never to accept rides from strangers,  especially strangers who are theoretically large enough to swallow you whole without a thought.
+
+Then again, the alternative is spending all night in a chilly car, so you probably better accept.
+
+\> [[Hitch a ride.]]
+
+:: Hitch a ride. [cold] {"position":"500,1675","sizing":"100,100"}
+Yes, you say, you could use a lift.
+
+"Good," the bear says, "I am glad to assist with such a thing. Come when you are ready." <%=s.g?"He":"She"%> walks back to <%=s.g?"his":"her"%> car, and opens the passenger door for you.
+
+You grab up your belongings, including your phone, keys, and the little shoulder bag where you usually carry them. You climb out and lock your car, hopefully to return to it tomorrow.
+
+The frigid snow nips at your paw-pads and makes you wince. You're clearly not used to this kind of weather. You high-tail it into the passenger seat of the polar bear's enormous four-seat pickup truck, and slam the door behind you, shivering. The polar bear climbs in the other side, notices your discomfort, and cranks the heat up to full blast.
+
+Th-thanks, you stammer.
+
+"It is no trouble, Rabbit," says the polar bear, "Sorry about mess in here. We will be at hotel soon." You nod, and <%=s.g?'he':'she'%> pulls back onto the highway, and starts driving.
+
+<div.commands>
+
+\> [[Look out the window.]]
+
+</div>
+
+:: Look out the window. [cold] {"position":"500,1800","sizing":"100,100"}
+The two of you sit in awkward silence for a little bit, as the polar bear carefully drives the two of you down the narrow highway covered in snowy sludge. Occasionally a dense patch of fir trees passes by. You twiddle your paws. The seatbelts in this vehicle are way too large for your little body.
+
+"Rabbit is not a talkative one, yes?" the bear observes.
+
+Oh, s-sorry! you say. You've just had a long day.
+
+"I did not mean this to insult," <%=s.g?"he":"she"%> says, "My kind is solitary as well."
+
+In truth, you were distracted, thinking about how powerless you'd be to stop such a hulking carnivore from grabbing and devouring you. Every time <%=s.g?"he":"she"%> speaks, <%=s.g?"his":"her"%> black lips expose four pearly white fangs, and a big pink tongue. It's scary, but mostly it makes you feel... strangely enticed.
+
+"To think lot and say little is a virtue," the polar bear continues, "However, I believe it is polite that I should know your name?"
+
+<div.commands>
+
+\> [[Of course! My name is...]]
+
+</div>
+
+:: Of course! My name is... [cold] {"position":"500,1925","sizing":"100,100"}
+"Juniper. Hm. This is a sweet sounding name. It reminds me of winter meals in my home," says the polar bear. "My name is Zasha, protector of creatures large and small."
+
+You nod, then return to awkwardly twiddling your paws. Zasha also says nothing.  You've never hitch-hiked before, so you're not very good at the small-talk. You're also very intimidated by the gigantic polar bear who has offered you help.
+
+...Some weather, huh? you say.
+
+"Yes," Zasha says, "the snowing is not usually so strong this time of year. It is terrible that you were stranded."
+
+<div.commands>
+
+\> [[Do you live around here?]]
+
+</div>
+
+:: Do you live around here? [cold checkpoint] {"position":"500,2050","sizing":"200,100"}
+"Not especially," says Zasha. "Zasha considers <%=s.g?"him":"her"%>self as nomad. Often moving from place to place. Tonight staying in hotel on way east, for next job."
+
+You nod, glancing around the truck's interior, until your eyes fix on a metal toolbox on the floor by your feet. You hope it's not too personal a question, but what does <%=s.g?"he":"she"%> do for a living?
+
+<%=s.g?"He":"She"%> hesitates and says, "Er, Zasha is a... travelling repair<%=s.g?"man":"woman"%>!"
+
+<div.commands.important>
+
+\> [[Nod agreeably.]] *(Route 1)*
+
+\> [[Press for more information.]] *(Route 3)*
+
+</div>

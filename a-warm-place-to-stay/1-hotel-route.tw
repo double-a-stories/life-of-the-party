@@ -1,0 +1,220 @@
+<!-- Route 1: Starts in "Do you live around here?" -->
+
+:: Nod agreeably. [cold] {"position":"500,2175","sizing":"100,100"}
+Yup, nothing suspicious there.
+
+"And you?" Zasha asks, "If you do not mind, where is Juniper headed?"
+
+Oh, you know, just passing through. It's not important. Probably some kind of business meeting or something.
+
+Zasha nods, eager to change the subject. You ride together in silence for a minute or so. <%= story.render("Arrive at the hotel.")%>
+
+<div->[[Arrive at the hotel.]]</div>
+
+:: Arrive at the hotel. [cold] {"position":"500,2300","sizing":"100,100"}
+Scenery whizzes past. Eventually Zasha turns off the road, and into the parking lot of a roadside hotel, just as promised. It's a meager two-story lodge, probably converted from an old house or something. It's meager, but in a quaint, charming way.
+
+\> [[Get out of the truck.]]
+
+:: Get out of the truck. [cold] {"position":"500,2300","sizing":"100,100"}
+
+You shudder as you step outside into the chilly air. The entrance is only a short walk away, but in this cold, it feels like a million miles.
+
+Zasha notices your discomfort, and frowns. <%=s.g?"He":"She"%> holds open <%=s.g?"his":"her"%> puffy coat to reveal the fur of <%=s.g?"his bare":"her naked"%> belly and chest, as if inviting you to huddle against it for warmth. <%=s.g?"He":"She"%>'s... not wearing anything underneath. You feel your cheeks redden, either from embarassment, or from the sheer cold nipping at them.
+
+"Rabbit," Zasha says, "you will wish to stay warm in this weather, yes?"
+
+<div.commands.important>
+
+\> [[Cozy up inside Zasha's coat.]]
+
+\> [[Tough it out.]]
+
+</div>
+
+:: Cozy up inside Zasha's coat. [warm] {"position":"500,2550","sizing":"100,100"}
+<% console.debug(`Set s.snuggled_up from ${s.snuggled_up} to true.`);
+s.snuggled_up = true %>
+
+You blush, and reluctantly step into the inviting warmth of Zasha's fur. It's unbelievably soft. You cozy up against it, and <%=s.g?"he":"she"%> considerately pulls <%=s.g?"his":"her"%> jacket around you, almost as if to squeeze you tighter against <%=s.g?"him":"her"%>. Zasha begins guiding the two of you through the parking lot.
+
+The polar bear's pudgy gut jiggles a little with each step. Normally, you'd feel nervous about being so close to a bear—not to mention, a bear's stomach—but it's so bitterly cold out, you can only feel grateful for this warm gesture. <%=s.g?"His":"Her"%> fur is softer than you could have imagined.
+
+\> [[Th-thank you...|Thanks for the warmth.]]
+
+:: Thanks for the warmth. [warm] {"position":"500,2675","sizing":"100,100"}
+Thank you, you tell Zasha, poking your head out to see where you're going.
+
+"There is no need for such gratitudes, Rabbit," Zasha says, still looking ahead, "it is duty of a bear to help all creatures."
+
+You remind Zasha that your name is Juniper, not Rabbit. <%=s.g?"He":"She"%> repeats it to commit it to memory. The two of you finally make it to the door.
+
+The automatic doors have seen better days, but they slowly and creakily slide open, bringing in a little draft into the lobby. Zasha opens <%=s.g?"his":"her"%> jacket to release you into the warm air of the lobby. You reluctantly step away, and dust a few white hairs from your jacket.
+
+\> [[Enter the hotel.]]
+
+:: Tough it out. [cold] {"position":"625,2550","sizing":"100,100"}
+You politely refuse the gesture, and walk quickly and purposefully to the door, wincing as icy pain attacks the pads of your feet. Zasha trails behind at a plodding pace, dragging with <%=s.g?"him":"her"%> a large, boxy suitcase. By the time you make it to the hotel's entrance, your teeth are already chattering.
+
+The automatic sliding doors look really old. You walk up to them, but they do not detect your presence. You impatiently wave a hand around, but can't get the sensor to trip. When it finally does sense you, the door opens a few inches, then slows to a creaking halt. Wow, you're 0–2 for mechanical failures today, huh.
+
+Zasha sees the door failing to open, and sees you shuddering and rubbing your shoulders for warmth. A <%=s.g?"paternal":"maternal"%> instinct seems to take hold. <%=s.g?"He":"She"%> walks right up to the sliding doors, examines them for a moment, and with loud grunt, forces one of them aside with <%=s.g?"his":"her"%> bare paws. It resists for a moment, but ultimately gives way.
+
+"There we go," <%=s.g?"he":"she"%> says, "silly machine no match for Zasha." <%=s.g?"He":"She"%> gestures for you to enter.
+
+\> [[Enter the hotel.]]
+
+:: Enter the hotel. {"position":"500,2800","sizing":"100,100"}
+The hotel lobby is small and quaint, containing a short desk with a bell, and another table covered in little pamphlets advertising nearby curiosities. A bored-looking fox in a concierge's uniform is sitting at the desk. Across from the desk is an elevator which is currently out of order. To the left is a hallway which presumably leads to the hotel's rooms.
+
+You take a quick breather while Zasha checks into <%=s.g?"his":"her"%> reservation. You're glad you have your credit card with you. You'll book a room after <%=s.g?"him":"her"%>.
+
+You see the concierge give Zasha a couple of room keys. <%=s.g?"He":"She"%> turns around, and places a friendly paw on your shoulder.
+
+"<%= s.snuggled_up ? "Juniper" : "Rabbit"%>, do you wish to sleep with me in my hotel room?"
+
+\> [[W-what?]]
+
+:: W-what? [warm] {"position":"500,2925","sizing":"100,100"}
+Your face flushes, and your ears stick straight up with surprise. <%=s.g?"He":"She"%> wants to sleep with you??
+
+You stammer to say that s-sorry, you don't think of <%=s.g?"him":"her"%> that way! <%= s.snuggled_up ? `Even considering how warm ${s.g?"his":"her"} fur was...`:`Though you're very thankful that ${s.g?"he":"she"} rescued you!`%>
+
+Zasha's eyes go wide as <%=s.g?"he":"she"%> realizes <%=s.g?"his":"her"%> mistake. "Oh! I did not intend to suggest such a... prurient thing! I simply offer for you to sleep in my hotel room at no cost to you."
+
+\> [[Oh! Of course, ha-ha.]]
+
+:: Oh! Of course, ha-ha. {"position":"500,3050","sizing":"100,100"}
+You laugh awkwardly. Right, that's what you thought <%=s.g?"he":"she"%> meant too. Obviously.
+
+"Would you like to share room with me," asks Zasha, clearly&nbsp;somewhat flustered.
+
+You're not overly tempted to accept <%=s.g?"his":"her"%> offer. You've got nothing against Zasha, but you're still hesitant about spending the night with a 700 pound polar bear who could eat you in <%=s.g?"his":"her"%> sleep? Not to mention, you already feel guilty for accepting so much help.
+
+<%= s.snuggled_up ? `${s.g?"His":"Her"} fur *was* extremely warm and cuddly,` : `${s.g?"He":"She"} seems harmless enough,`%> but you'd feel much better if you just got your own room.
+
+<div.commands>
+
+\> [[Politely refuse.]]
+
+</div>
+
+:: Politely refuse. {"position":"500,3200","sizing":"100,100"}
+You tell Zasha that you really appreciate all the help <%=s.g?'he':'she'%>'s provided, but that you can handle it from here. You'll just book yourself a room, and get your car towed tomorrow.
+
+<%=s.g?'He':'She'%> seems kind of crestfallen, but nods in agreement.
+
+But, you say, um, is there any way you can repay <%=s.g?'him':'her'%>? You don't have much cash, but maybe you could Venmo <%=s.g?'him':'her'%> as thanks for the ride? If you weren't in the middle of a snowstorm, you'd offer to buy <%=s.g?'him':'her'%> dinner somewhere... J-just dinner! Not like a date or anything!
+
+<%=s.g?'He':'She'%> shakes <%=s.g?'his':'her'%> head firmly. "No such repayment is necessary. I only do my part to protect all creatures. Farewell, <%= s.snuggled_up ? "Rabbit- erm, Juniper." : "Rabbit"%>."
+
+You graciously wave adieu to Zasha, then turn to the concierge to get your own room situation sorted.
+
+\> [[Talk to the concierge.]]
+
+:: Talk to the concierge. {"position":"500,3350","sizing":"100,100"}
+You stride confidently toward the concierge's desk. <%=!s.g?"He":"She"%>'s a red <%=!s.g?"fox":"vixen"%>, and it seems as though the two of you have interrupted <%=!s.g?"his":"her"%> extremely important perusal of a fashion magazine.
+
+Hello, you say! You're looking to book a-
+
+"No vacancies," says the concierge immediately, pointing to a convenient sign above <%=!s.g?"his":"her"%> head, which you did not notice until right now. Wow.
+
+<div.commands>
+
+\> [[You're sure that there aren't any other rooms?]]
+
+</div>
+
+:: You're sure that there aren't any other rooms? {"position":"500,3500","sizing":"100,100"}
+The concierge looks at you, then back at the sign as if pretending to double-check.
+
+"Yup," <%=!s.g?"he":"she"%> shrugs, "This is a pretty small hotel. You're not the only ones trying to wait out the storm." <%=!s.g?"He":"She"%> <%= s.snuggled_up ? `notices Zasha's fur on your jacket` : `sniffs the air slightly`%>, and quietly asks with a bemused smirk, "Why don't you just stay with your <%=s.g?"boyfriend":"girlfriend"%> over there? Scared <%=s.g?"he":"she"%>'ll get *hungry?*"
+
+Your ears stick straight up. You quickly stammer, *<%=s.g?"He":"She"%> is not my <%=s.g?"bo":"gi"%>-*
+
+Suddenly, you feel Zasha put <%=s.g?"his":"her"%> paw on your shoulder. "No vacancies? This is not a problem," <%=s.g?"he":"she"%> says, brandishing a key-card from a coat pocket, "The rabbit shall stay in my room, yes?" <%=s.g?"He":"She"%> offers you the card.
+
+I mean, it's not like you really have any other options?
+
+\> [[Freeze to death outside?]]
+
+\> [[Construct makeshift bed from travel pamphlets?]]
+
+:: Freeze to death outside? {"position":"450,3700","sizing":"100,100"}
+You glance back toward the snowy wasteland outside the warm confines of the hotel lobby. Not your best idea.
+
+\> [[Accept the key-card.]]
+
+<% if (!visited("Construct makeshift bed from travel pamphlets?")) { %>
+
+\> [[Construct makeshift bed from travel pamphlets?]]
+
+<% } %>
+
+:: Construct makeshift bed from travel pamphlets? {"position":"575,3700","sizing":"100,100"}
+Maybe if you stole enough of those little brochures, you could use them as a blanket?
+
+You're just gonna have to share a room with this bear.
+
+\> [[Accept the key-card.]]
+
+<% if (!visited("Freeze to death outside?")) { %>
+
+\> [[Freeze to death outside?]]
+
+<% } %>
+
+:: Accept the key-card. {"position":"500,3875","sizing":"100,100"}
+<%
+console.debug(`Set s.got_the_key_card from ${s.got_the_key_card} to true.`)
+s.got_the_key_card = true %>
+
+You accept Zasha's generous offer to share <%=s.g?"his":"her"%> hotel room. <%=s.g?"He":"She"%> delicately hands you <%=s.g?"his":"her"%> spare key-card, which has been marked for Room 7.
+
+"I am glad to be of assistance, Rabbit. Come along when you are ready."
+
+Zasha turns and heads for the hallway where the room is.
+
+<div.commands>
+
+\> [[Follow Zasha to the room.]]
+
+\> [[Ask the concierge about towing your car.]]
+
+</div>
+
+:: Ask the concierge about towing your car. {"position":"500,4000","sizing":"100,100"}
+You have a brief but scintilliating conversation with the concierge about how your car is stuck in the snow four miles from here, a fact that no one really seems to care much about but you.
+
+"Sorry pal," <%=s.g?"she":"he"%> says, "You could try calling someone, but everything's probably gonna be shut down 'til tomorrow."
+
+You ask, Because of the snow-
+
+"Because of the snowstorm," the <%=s.g?"vixen":"fox"%> says.
+
+...Cool, you say. You decide to deal with that problem in the morning.
+
+\> [[Follow Zasha to the room.]]
+
+:: Follow Zasha to the room. [checkpoint] {"position":"500,4125","sizing":"100,100"}
+<%if (s.snuggled_up) { %>
+Zasha is waiting for you.
+
+<%=s.g?"He":"She"%> extends a paw, which you take, and leads you down the hallway as if you were a tiny cub. It's a little humiliating. You're a grown adult after all, and more than capable of finding a room in this tiny hotel yourself. But at the same time, it's kind of cute? Zasha's stubby white tail is wagging.
+<% } else { %>
+"Follow me, Rabbit."
+
+You follow Zasha down the hall. <%=s.g?"He":"She"%>'s hunching <%=s.g?"his":"her"%> neck slightly, and you realize the ceiling here might be slightly too short for a polar bear of <%=s.g?"his":"her"%> size.
+<% } %>
+
+You stop in front of Room 7, right at the end of the hallway. <% if (s.snuggled_up) {%>Zasha lets go of your paw, bashfully.<%}%> Next to the door is a couple of vending machines which pique your interest. You rifle through your little purse, and find the seven (7) dollars from earlier.
+
+The first one's a hot beverage maker. The other seems to dispense microwaveable frozen dinners. You wonder—as you've been wondering since you met <%=s.g?"him":"her"%>—is Zasha hungry?
+
+<div.commands.important>
+
+\> [[Offer to buy <%=s.g?"him":"her"%> a meal.|Offer to buy a meal.]] *(Route 2a)*
+
+\> [[Buy yourself some tea to warm up.]] *(Route 2b)*
+
+</div>

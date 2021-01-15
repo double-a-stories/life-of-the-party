@@ -1,0 +1,299 @@
+
+:: StoryData
+{
+    "ifid": "CFB4E6AB-1631-4384-B7DD-D3868FB9835A",
+    "format": "Snowman",
+    "format-version": "2.0.2",
+    "start": "Title Screen",
+    "tag-colors": {
+        "check": "orange",
+        "checkpoint": "yellow",
+        "cold": "blue",
+        "flush": "red",
+        "header": "green",
+        "sidebar": "green",
+        "start": "green",
+        "todo": "orange",
+        "vore": "red",
+        "warm": "red"
+    },
+    "zoom": 0.25
+}
+
+:: StoryTitle
+A Warm Place to Stay
+
+:: Title Screen [start] {"position":"500,100","sizing":"100,100"}
+<div.logo>
+<h1 class="logotitle">A Warm&nbsp;Place to&nbsp;Stay</h1>
+<p.logosubtitle>Polar Bear Vore Adventure by Double-A</p>
+
+<p style="margin: 2rem 0;">> [[A Warm Place to Stay.]]</p>
+
+</div>
+
+<style>
+
+#recent-command { display: none }
+.logo {
+  text-align: center;
+  margin: 5rem 0;
+}
+.logotitle {
+  font-family: 'Times New Roman', serif;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 1;
+}
+.logosubtitle {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+</style>
+
+<br>
+
+<% let seen = storyFlags.get().seenPassages;
+let checkpoints = story.passages
+    .filter(p => p && p.tags.includes("checkpoint"))
+	<!-- .sort((p1, p2) => seen.indexOf(p1.id) -  seen.indexOf(p2.id)); -->
+let seenCount = checkpoints.filter(p => seen.includes(p.id)).length;
+let unseenCount = checkpoints.filter(p => !seen.includes(p.id)).length;
+	%>
+
+<% if (seenCount > 0) { %>
+<div.important>
+<h3>Checkpoints</h3>
+<ul style="list-style-type: '> ';">
+<% checkpoints.filter(p => seen.includes(p.id))
+	.forEach(({ name, id }) => { %>
+<li><a0 data-passage="<%=name%>"><%= name %></a></li>
+<% }); %>
+<% for (let i = unseenCount; i > 0; i--) { %>
+<li>?????</li>
+<% } %>
+</ul>
+
+\> <a0 onclick="window.confirm('This will permanently reset checkpoints. Are you sure?') && storyFlags.assign({seenPassages: []}); bunny.rerender()">Reset checkpoints.</a>
+
+</div>
+<% } else { %>
+
+<div.important>
+
+#### ⚠️ CONTENT WARNING ⚠️
+
+Vore. Furries. Unfinished content.
+
+</div>
+
+<% } %>
+
+:: Keyboard controls {"position":"700,100","sizing":"100,100"}
+This game can be played with either mouse or keyboard controls.
+
+#### Basic Navigation
+
+`W (↑) ` *Select previous link.*
+
+`S (↓)` *Select next link.*
+
+`E (⏎)` *Use selected link.*
+
+#### Time Travel
+
+`A (←)` *Undo last command.*
+
+`D (→)` *Redo last command.*
+
+\> <a0 onclick="bunny.undo()">Go back.</a>
+
+
+:: Warp zone {"position":"1100,100","sizing":"100,100"}
+You've entered a time warp!
+
+This is a list of every passage, in the order they were added to the game.
+
+To the right are passage tags, metadata which I use for things like checkpoints and background colors.
+
+<table class="table">
+<thead>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>tags</th>
+	<th>seen?</th>
+  </tr>
+</thead>
+<tbody>
+  <%
+  let seen = storyFlags.get().seenPassages;
+  story.passages.map(({ id, name, tags }) => { %>
+  <tr>
+    <td><%-id%></td>
+	<td><a0 data-passage="<%=name%>"><%= name %></a></td>
+    <td><% tags.map(t => { %><span class="tag-badge"
+  color="<%-$(`tw-tag[name=${t}]`).attr('color')%>"><%-t%></span>
+  <% }) %></td>
+    <td><%-seen.includes(id) ? "✔️" : ""%></td>
+  </tr>
+<% }); %>
+</tbody>
+</table>
+
+
+</table>
+
+<style>
+
+.table {
+}
+
+.tag-badge {
+  display: inline-block;
+  background-color: #555;
+  border-radius: 0.25rem;
+  padding: 0 0.25rem;
+  font-size: small;
+  color: white;
+}
+.tag-badge[color=yellow] {
+	background-color: #fc1;
+	color: #111;
+}
+.tag-badge[color=red] {
+	background-color: #d34;
+}
+.tag-badge[color=blue] {
+	background-color: #1ab;
+}
+.tag-badge[color=green] {
+	background-color: #2a4;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.table th,
+.table td {
+  padding: 0.25rem;
+  vertical-align: top;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+  text-align: inherit;
+}
+</style>
+
+:: Header [header] {"position":"200,100","sizing":"100,100"}
+<% if (storyFlags.get().showDebug) { %>
+<div class="debug-menu">
+<style>
+.debug-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 0.75em;
+  margin: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid var(--light);
+}
+</style>
+<p>DEBUG COMMANDS</p>
+<ul style="list-style-type: '> ';">
+  <li>
+    <a0
+	  onclick="story.state.g = !story.state.g; bunny.rerender()">
+	  Toggle gender
+	</a>
+  </li>
+  <li>[[Warp zone]]</li>
+  <li>
+    <a0
+	  onclick="window.confirm('This will fully reset all persistent game data. It will also disable debug mode.')
+	  && (storyFlags.clear(), location.reload());">
+	  Reset Savegame
+	  </a>
+  </li>
+</ul>
+
+</div>
+<% } %>
+
+<div.topbar>
+  <div.header-nav>
+	<div.header-nav-group>
+	  <div><a0 onclick="bunny.restart()">Restart</a>
+	  </div>
+	  <div><a0 onclick="bunny.undo()">Undo</a>
+	  </div>
+	</div>
+	<div.header-nav-group>
+	  <div>[[Keyboard controls]]</div>
+	  <span><%= story.version %></span>
+	</div>
+  </div>
+</div>
+
+<h2 id="recent-command"></h2>
+
+<style>
+  .topbar {
+    font-size: 0.75em;
+    border-bottom: 1px solid var(--light);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .header-nav {
+    display: flex;
+	justify-content: space-between;
+  }
+
+  .header-nav-group > * {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .header-nav-group > * + * {
+    margin-left: 0.5rem;
+  }
+
+  .header-nav-group > * + *::before {
+    content: "|";
+    margin-right: 0.5rem;
+  }
+</style>
+
+:: Adventure Log {"position":"900,100","sizing":"100,100"}
+A list of all the passages the user has seen, in the order they were discovered.
+
+This code might be useful for some kind of sidebar?
+
+<% let seen = storyFlags.get().seenPassages;
+let checkpoints = story.passages
+	.filter(p => p && seen.includes(p.id))
+	.sort((p1, p2) => seen.indexOf(p1.id) -  seen.indexOf(p2.id)); %>
+
+<% if (checkpoints.length > 0) { %>
+<ul style="list-style-type: '> ';">
+<% checkpoints.map(({ name }) => { %>
+<li><a0 data-passage="<%=name%>"><%= name %></a></li>
+<% }); %>
+</ul>
+
+\> <a0 onclick="window.confirm('This will permanently reset checkpoints. Are you sure?') && storyFlags.assign({seenPassages: []}); bunny.rerender()">Reset checkpoints.</a>
+
+<% } %>
