@@ -28,7 +28,7 @@ p {
 tw-story {
   line-height: inherit;
   position: relative;
-  margin: 0 auto;
+  margin: 1rem auto;
   padding-bottom: 4rem;
   max-width: 35em;
 }
@@ -76,16 +76,6 @@ a:active {
   padding-left: 0;
 }
 
-.fadeout {
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  position: absolute;
-  bottom: 0%;
-  background-image: linear-gradient(to bottom, transparent, var(--background, #eee));
-  margin-bottom: 0;
-}
-
 .textchat {
   padding: 1rem;
   font-size: smaller;
@@ -113,13 +103,15 @@ body[data-tags~="morning"] {
   --background: #ffe;
 }
 
-body[data-tags~="dark"] {
+body[data-tags~="dark"], .backdrop {
   --background: #020202;
   --light: rgba(255, 255, 255, 50%);
   --color: #ccc;
 }
 
-body[data-tags~="otherstory"] {
+[data-tags~="otherstory"] tw-passage,
+[data-tags~="otherstory"] #recent-command,
+.backdrop {
   font-family: "Times New Roman", serif;
   transition: none !important;
   line-height: 1.5;
