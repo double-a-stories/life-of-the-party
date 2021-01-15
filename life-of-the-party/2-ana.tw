@@ -1,0 +1,405 @@
+:: Talk to the hyena. {"position":"2704,1274","sizing":"100,100"}
+*CW: Revoked consent. Accidental(?) digestion. Woman with penis. Masturbation.*
+
+The hyena girl is sitting on a garden bench, next to a disused charcoal grill and some rumpled up camping equipment.
+
+She has sandy-colored fur, with brown spots. She's wearing acid-wash jeans and a black t-shirt with the logo of a band you've never heard of.
+
+She notices you, and flips her hair non-chalantly.
+
+"Oh. Sup."
+
+\> [[What are you doing out here alone?]]
+
+\> [[Have you seen my friend?]]
+
+:: What are you doing out here alone? {"position":"2644,1437","sizing":"100,100"}
+"I could ask you the same question," she replies.
+
+She looks away for a moment, then lets out a little sigh. "I guess I just get a little stressed out around loud parties? Like, even though I'm supposed to be enjoying myself here? I guess I'm just trying to get away from it all for a moment."
+
+\> [[Same here...]]
+
+:: Same here... {"position":"2645,1545","sizing":"100,100"}
+She nods, looking wistfully off into the distance. The moonlight reflects perfectly in her amber-colored eyes.
+
+"I'm Ana, by the way. Ana Rose." She pats spot on the bench next to her. "...You can sit if you want."
+
+\> [[My name's Hollis!|Tell Ana your name.]]
+
+:: Have you seen my friend? {"position":"2783,1446","sizing":"100,100"}
+She takes a thoughtful sip from a plastic cup.
+
+"Depends who's asking," she replies...
+
+\> [[Tell her your name.]]
+
+:: Tell Ana your name. {"position":"2648,1658","sizing":"100,100"}
+"Hollis," she repeats, smiling in your direction. "Cute name."
+
+You're flustered, and not sure how to respond.
+
+\> [[Charm.]]
+
+\> [[I... um... think you're... also... cute?|(oh god oh fuck)]]
+
+:: Charm. {"position":"2656,1792","sizing":"100,100"}
+Ana cocks an eyebrow at you. "...What did you say?"
+
+You realize that instead of saying or doing something charming, you literally just said the word *charm* out loud.
+
+Thinking quickly you tell her, uh, you meant, that she seems very charming! No, wait, you're *charmed* to meet her! That's it. Her name's Ana, yours is Hollis. Charmed.
+
+\> [[(oh god oh fuck)]]
+
+:: (oh god oh fuck) {"position":"2786,1890","sizing":"100,100"}
+She snickers as you helplessly tumble over your words. For a moment, she hesitates, delicately running her tongue between her lips and over her pointy white teeth.
+
+"Okay, Hollis. I... think you're kinda cute too," she says, "for a herbivore at least..."
+
+She smiles at you, and brushes her hair out of her eyes. She seems to be a little more comfortable around you now.
+
+"Kinda cold out here, huh?"
+
+\> [[Do you want a hug?]]
+
+\> [[Anyway, I'm looking for this friend of mine?|Looking for a friend. (after meeting Ana)]]
+
+:: Do you want a hug? {"position":"2726,2029","sizing":"100,100"}
+"...Yeah, okay," she replies, with a little smile, and stretches out her arms. You give Ana a hug. You can tell she's wearing a lot of deodorant, but it's not unpleasant. In fact, embracing the soft fur of this curvy hyena, you realize this is one of the best hugs you've ever had.
+
+After a what feels like a wonderful eternity, she lets go. "That was nice," she says, slouching down a little.
+
+Yeah, you say, and tentatively rest your head against her shoulder.
+
+\> [[A quiet moment.]]
+
+\> [[Kiss her.]]
+
+:: A quiet moment. {"position":"2836,2146","sizing":"100,100"}
+The two of you sit there in comfortable silence, watching the stars.
+
+"So," she giggles eventually, "some party, huh."
+
+You caress your ears lightly. Yeah, you say, the music's kinda loud.
+
+She snickers. "Oh my god, I know, right? I can't believe they're playing freakin' dubstep. Like, what is this, 2011?" You both laugh.
+
+For a little while, neither of you say anything. Ana looks over at you. "Something on your mind?"
+
+\> [[I'm looking for this friend of mine...|Looking for a friend. (after meeting Ana)]]
+
+:: Kiss her. {"position":"2679,2152","sizing":"100,100"}
+You've seen enough romance movies to know where this is going.
+You're sure of it–this is the moment where you lean in, and both share a sudden yet dramatic first kiss.
+
+You turn toward her big furry face, and attempt to kiss her on the mouth. She immediately leans away, letting out a small, surprised growl.
+
+"Woah there, casanova, that's, uh..." She frowns. "I'm not really comfortable with that? "
+
+\> [[S-sorry...|Sorry for trying to kiss you.]]
+
+\> [[Try to kiss her again.|Kiss her again.]]
+
+:: Kiss her again. {"position":"2614,2276","sizing":"100,100"}
+<div-></div>
+
+Ana is visibly uncomfortable, and showing her teeth.
+
+You reflect upon the obvious subtext of her response, and decide instead to delicately run a paw through her dark brown mohawk.
+
+"...No seriously don't-...!!!"
+
+\> [[Stroke hair.|ENDING: Can't Take a Hint]]
+
+:: ENDING: Can't Take a Hint [vore] {"position":"2618,2404","sizing":"200,100"}
+"...!!!"
+
+The second you touch her hair, the hyena immediately lets out an vicious bark, and reflexively glomps her mouth down over your head. You faint from surprise. Ana quickly swallows your unconscious body, making sure no one else was around to see.
+
+"Dammit," she mutters, patting the massive bulge in her engorged belly, "not again..."
+
+<% s.sawFirstKissEnding = true;
+// setup.achievements.add("Cannot Take a Hint (Hyena Bite Ending)");
+%>
+
+### Game Over
+
+\> [[Do you want a hug?]] *(Rewind)*
+
+:: Looking for a friend. (after meeting Ana) {"position":"2728,2580","sizing":"100,100"}
+Ana scratches her head. "I probably haven't seen 'em. What's this friend of yours look like?"
+
+\> [[He's a guinea pig, about this tall...|Describe Reese.]]
+
+:: Tell her your name. {"position":"2781,1564","sizing":"100,100"}
+You say your name is Hollis.
+
+"Pleased to meet you, Hollis, I'm Ana." From her tone, you suspect she's being at least a little sarcastic. "Now, this friend of yours?"
+
+\> [[He's a guinea pig, about this tall...|Describe Reese.]]
+
+:: Describe Reese. {"position":"2727,2722","sizing":"100,100"}
+You give her a brief description of your friend, Reese.
+
+"Sorry, haven't seen him," she shrugs and says, "But at a party like this, I wouldn't be surprised if he was already in some pred's gut."
+
+\> [[What!?|What do you mean?]]
+
+:: What do you mean? {"position":"2722,2847","sizing":"100,100"}
+<% localStorage.upstairsUnlocked = true %>
+
+She gives you a slightly patronizing stare.
+
+"C'mon, you'd have to be an idiot not to realize. This whole place is practically crawling with preds. Your bud probably got dragged into a broom closet somewhere and gurgled. That's all there is to it."
+
+\> [[But, um, if he wasn't...?]]
+
+\> [[That's kind of hot...]]
+
+:: But, um, if he wasn't...? {"position":"2663,2963","sizing":"100,100"}
+She shrugs.
+
+"I mean, you could probably check in the rooms upstairs. Somewhere secluded and private, that's probably where I'd go... *if* I was trying to eat someone..."
+
+She clears her throat. "Not that that's like, a thing that I've ever done, or anything.
+
+\> [[Y-you could eat me, if you wanted to...|Ana, I want you to eat me.]]
+
+\> [[Thank you, goodbye.]]
+
+:: Thank you, goodbye. {"position":"2718,3085","sizing":"100,100"}
+You excuse yourself politely, and head back into the house. Ana gives a casual wave as you leave.
+
+\> [[Go back to the foyer.|The foyer.]]
+
+:: Ana, I want you to eat me. {"position":"2586,3086","sizing":"100,100"}
+You brain tells to you to stop. That you're making a big mistake. After hesitating for a second, you finally open your mouth, and manage to get the words out.
+
+The hyena looks at you with astonishment. "R-really?" Her confusion turns into something of a bemused smile.
+
+"You *want* me to eat you? Like, 'eat you' eat you? Digestion and all?"
+
+\> [[...Yes please.]]
+
+\> [[No, wait.]]
+
+:: That's kind of hot... {"position":"2783,2959","sizing":"100,100"}
+Ana blushes, but looks at you interestedly.
+
+"You... think vore is *hot*? I guess that's not a surprise, considering you're *here*. You just didn't strike me as that kind of rabbit."
+
+\> [[N-no! I meant...]]
+
+:: N-no! I meant... {"position":"2855,3087","sizing":"100,100"}
+Thinking quickly you tell her, uh, you meant, that you think predators are hot! Not that you're assuming she's a— no, fuck, um...
+
+"Deep breaths, pal."
+
+You clear your throat. What you meant to say was that digesting inside is a stomach, is literally a hot place to be. Like, temperature-wise. Not that you'd ever *want* to be digested in a stomach. Or-or- even thought about anything like that!
+
+Ana pauses thoughtfully for a moment. You see her sharp and shiny teeth reflecting a tiny bit of moonlight. "...Hollis, do you want me to digest you?"
+
+\> [[...Yes please.]]
+
+\> [[No, wait.]]
+
+:: No, wait. {"position":"2708,3205","sizing":"100,100"}
+You tell her she might've gotten the wrong idea. You're not interested in being digested.
+
+"Oh," she says, clearly a little disappointed. "Sorry, but I don't spit my prey up." Ana gestures to her slightly chubby belly, and says, "There's only one way outta here, and it's not pretty. I take it you're not interested anymore?"
+
+\> [[No, thank you though.]]
+
+\> [[You can digest me, if you want...]]
+
+:: No, thank you though. {"position":"2322,4235","sizing":"100,100"}
+"Oh, no problem," Ana says, clearly a little crestfallen.
+
+You awkwardly excuse yourself, and walk back into the foyer. She waves half-heartedly as you leave.
+
+\> <a0 data-passage="The Foyer.">Go back to the foyer.</a>
+
+:: ...Yes please. {"position":"2585,3458","sizing":"100,100"}
+You can't believe you're saying this.
+
+Ana chuckles, "Gee, I'm that obvious as a predator, huh?" She stands up and gives you a big smile. "Y'know, talking to you was making me *really* hungry." You blush, and she gives you a paw and helps you up. Her tail is wagging eagerly. "You're sure about this?"
+
+You nod.
+
+"Okay!" she says, "follow me!"
+
+\> [[Follow Ana into the yard.]]
+
+:: You can digest me, if you want... {"position":"2707,3321","sizing":"100,100"}
+You blushingly tell Ana you've had a change of heart. You're ready to get gurgled.
+
+Ana stands up and gives you a big smile. "You sure? Awesome! Y'know, talking to you was making me *really* hungry." You blush, and she gives you a paw and helps you up. Her tail is wagging eagerly.
+
+"Okay!" she says, "follow me!"
+
+\> [[Follow Ana into the yard.]]
+
+:: Follow Ana into the yard. {"position":"2690,3658","sizing":"100,100"}
+Ana leads you by the paw further into a darker part of the backyard, out of view. "Nobody should bother us out here," she says. You shiver with excitement.
+
+"Now, just one condition for me to eat you. Once I eat you, you're mine. If you change your mind, you can kick and squirm all you like, but you're not coming out. No backsies. Got it?"
+
+\> [[Okay.|Any questions?]]
+
+:: Any questions? {"position":"2688,3782","sizing":"100,100"}
+<%
+const hasSeen = ["Will you be gentle?", "How does it feel to have live prey inside you?", "Should I get naked first?", "Will I taste okay?"].map(e => +visited(e)).reduce((a, b) => a+b, 0);
+
+if (hasSeen === 0) { %>
+Ana smiles. "Good. Any other questions before you become hyena food?"
+<% } else if (hasSeen !== 4) { %>
+"Anything else?"
+
+<% } else { %>
+"So Hollis, are you ready to get swallowed?"
+
+<% } %>
+
+<% if (!visited("Will you be gentle?")) { %>
+
+\> [[Will you be gentle with me?|Will you be gentle?]]
+
+<% } else if (!visited("How does it feel to have live prey inside you?")) { %>
+
+\> [[What's it like to have prey inside you?|How does it feel to have live prey inside you?]]
+
+<% } %>
+<% if (!visited("Should I get naked first?")) { %>
+
+\> [[Should I get naked first?]]
+
+<% } else if (!visited("You have a penis?")) { %>
+
+\> [[You have a penis?]]
+
+<% } %>
+<% if (!visited("Will I taste okay?")) { %>
+
+\> [[Will I taste okay?]]
+
+<% } %>
+
+<% if (hasSeen < 4) { %>
+\> [[Okay, I'm ready.]]
+<% } else { %>
+\> [[Yes, I'm ready.|Okay, I'm ready.]]
+<% } %>
+<% if (hasSeen > 3 || visited("You have a penis?")) { %>
+\> [[I've changed my mind.]]
+<% } %>
+
+:: Will you be gentle? {"position":"2638,4083","sizing":"100,100"}
+"No teeth, I promise." She gives you a cute smile. "My belly definitely won't go easy on you, but you'll probably pass out before you start digesting anyway. I definitely won't bite or scratch you."
+
+She murmurs, "Not hard, anyway..."
+
+\> [[Should I feel reassured?]]
+
+:: Should I feel reassured? {"position":"2638,4205","sizing":"100,100"}
+"Well, people say I can be pretty feisty. At least, when they're not saying things like, 'Aah stop!!' and, 'Ana you said you weren't gonna digest me!'"
+
+You give her a horrified expression.
+
+"Kidding!" she says, "Honestly, I don't bite."
+
+\> [[Okay...|Any questions?]]
+
+:: How does it feel to have live prey inside you? {"position":"2500,4094","sizing":"100,100"}
+As you ask her this, Ana's belly grumbles expectantly. She pats it, and looks thoughtful for a second.
+
+"It's uh, kinda hard to describe, beyond saying it feels *super* good. Like, imagine getting a shiatsu massage from the *inside*. Except, the masseuse is made out of *bacon*... or like, carrots, or whatever rabbits eat. I'm not explaining it right."
+
+\> [[Root vegetables, mostly...?]]
+
+:: Root vegetables, mostly...? {"position":"2500,4217","sizing":"100,100"}
+"Like, from the ground? Weird."
+
+<%= story.render("Any questions?") %>
+
+:: Should I get naked first? {"position":"2917,3993","sizing":"100,100"}
+"Nah," she says, "I can digest clothes no problem. You're lucky you're dealing with an experienced predator!"
+
+"I mean, you could get naked if you *wanted* to, but, it's not like you're gonna impress me with your dick." She winks. "I guarantee mine's bigger."
+
+\> [[Take off clothes.|Undress in front of Ana outside.]]
+
+\> [[...I don't have a dick.]]
+
+\> [[I'll stay clothed.]]
+
+:: Undress in front of Ana outside. {"position":"2801,4122","sizing":"100,100"}
+You remove your clothes, in the hopes that it'll make you easier on Ana's stomach.
+
+She looks at the fur of your naked body with intrigue, her eyes drifting towards your crotch. "O-oh! That's uh, very considerate of you."
+
+<%= story.render("Any questions?") %>
+
+:: ...I don't have a dick. {"position":"3036,4123","sizing":"100,100"}
+Ana hesitates for a second. "Y-yeah. Me neither."
+
+<% s.uhYeahMeNeither = true; %>
+
+<%= story.render("Any questions?") %>
+
+:: I'll stay clothed. {"position":"2918,4119","sizing":"100,100"}
+"Suit yourself," Ana says, "pun intended."
+
+<%= story.render("Any questions?") %>
+
+:: You have a penis? {"position":"2799,4274","sizing":"100,100"}
+Ana clears her throat awkwardly. "Yes!"
+
+\> [[Is it because you're a hyena?]]
+
+\> [[Okay, cool.|Any questions?]]
+
+:: Is it because you're a hyena? {"position":"2800,4387","sizing":"100,100"}
+"No, it's because I'm... Huh. Actually yeah, let's go with that."
+
+\> [[Okay, cool.|Any questions?]]
+
+
+:: Will I taste okay? {"position":"2960,4256","sizing":"100,100"}
+Ana sticks her nose into your neck, smelling you over with a slightly invasive tenacity.
+
+"Yeah, rabbit fur is usually really soft and delicious. Oh, and those ears!" She playfully licks one, which sends a shiver down your spine. "Yeah, you taste great."
+
+She puts a paw on her chin. "...Although maybe you could dump a bottle of salad dressing on yourself... Oh! Or do a quick beer baste!"
+
+\> [[I'm good, I think.]]
+
+:: I'm good, I think. {"position":"2960,4377","sizing":"100,100"}
+Ana cheerfully licks your face, wetting your nose a little with slobber. "Yeah, you're good."
+
+<%= story.render("Any questions?") %>
+
+:: I've changed my mind. {"position":"2306,4096","sizing":"100,100"}
+You tell Ana that you've had a change of heart, and don't want to be eaten after all.
+
+<% if (visited("Undress in front of Ana outside.")) { %>
+"R-really?" she asks, looking at down at your naked body, "*after* you took your clothes off?"
+
+You look down, and realize you should probably put your pants back on.
+<% } else { %>
+"R-really?" she asks, looking somewhat disappointed, "*after* my whole spiel?"
+<% } %>
+She frowns, and puts a paw on her chin. "Well, it's your choice after all. I'm not gonna force you to be my prey. You'll need to find another playthrough for that." She winks.
+
+She pats her gut, and says, "So, you're *completely* sure you don't wanna be my shit? Even if I'm *extra* gentle when I eat you?"
+
+\> [[No, thank you though.]]
+
+\> [[...I'm ready to be eaten.|Okay, I'm ready.]]
+
+:: Okay, I'm ready. {"position":"2679,4704","sizing":"100,100"}
+Ana grins. She's practically drooling just from looking at you.
+
+"Thanks for offering to do this, Hollis. I promise to be extra careful as I digest you into my shit."
+
+\> <a0 data-passage="Get vored by Ana." data-command="You're w-">You're welcome!</a>
