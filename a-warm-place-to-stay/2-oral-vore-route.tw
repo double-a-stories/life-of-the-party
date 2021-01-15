@@ -187,13 +187,13 @@ Zasha, exhausted, replies <%=s.g?"he":"she"%>'ll let you out tomorrow morning. W
 
 **\> No! Spit me up now!**
 
-You try to fight it, but you're in no position to bargain. Zasha happily dozes off to sleep. You spend the night in Zasha's belly. You're becoming too tired to fight back.
+You try to fight it, but you're in no position to bargain. Zasha happily dozes off to sleep. You spend the night in Zasha's belly. You're becoming too tired to fight back. You doze off for a few hours.
 
-You doze off for a few hours, but awake to realize that Zasha is still sleeping, and starting to digest you.
+A few hours later, you awake to realize that Zasha is still sleeping, and <%=s.g?"his":"her"%> stomach is starting to digest you.
 
 \> [[Wake <%=s.g?"him":"her"%> up.|Wake Zasha up.]]
 
-\> [[Digest quietly.|Await warm and gurgly death.]]
+</div>
 
 
 :: Wake Zasha up. {"position":"1750,2775","sizing":"100,100"}
@@ -201,9 +201,13 @@ You kick and yell, but it doesn't take. Your predator snores and turns onto <%=s
 
 <%=s.g?"He":"She"%> only murmurs in <%=s.g?"his":"her"%> sleep, "Zasha... will let rabbit out... tomorrow."
 
+<div.commands.important>
+
 \> [[Await warm and gurgly death.]] *(Route 2a: Fatal digestion)*
 
 \> [[Thrash and struggle for your life!]] *(Route 2b: Non-fatal)*
+
+</div>
 
 
 :: Await warm and gurgly death. [vore] {"position":"1800,2925","sizing":"100,100"}
@@ -211,13 +215,13 @@ You kick and yell, but it doesn't take. Your predator snores and turns onto <%=s
 
 You resign to your fate of being accidentally digested.
 
-\> [[The next day...|Ending: Digestion regret]]
+\> [[The next day...|Ending: Digestion regret]] *(Post-vore scat)*
 
 \> <a0 onclick="bunny.restart()">Restart.</a>
 
 
 :: Ending: Digestion regret {"position":"1775,3700","sizing":"100,100"}
-*CW: Post-Vore Scat.*
+*CW: Post-Vore scat.*
 
 The next day, Zasha wakes up with a huge belly full of digested rabbit. <%=s.g?"He":"She"%> is quite upset over this, having failed to protect an innocent creature, but is gradually corrupted by the carnal feelings of power which predation gives <%=s.g?"him":"her"%>. It's not the first time, and <%=s.g?"he":"she"%> stoically concludes there was nothing <%=s.g?"he":"she"%> could have done to stop it.
 

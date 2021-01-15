@@ -75,13 +75,19 @@ You blush a deep red, but stammer to produce any words.
 
 Hesitantly, you remove your shirt. Zasha politely averts <%=s.g?"his":"her"%> eyes while you wrap yourself in a spare blanket.
 
-You look back at Zasha, and the two of you make awkward, prolonged eye contact. You decide to take an early night, but the floor is extremely cold.
+You look back at Zasha, and the two of you make awkward, prolonged eye contact. You decide to take an early night.
+
+**\> Lie down.**
+
+You do so. The floor is extremely cold.
 
 **\> Ask Zasha for another blanket.**
 
-Zasha is snoring loudly, and you try to wake <%=s.g?"him":"her"%>, but it does not work.
+Zasha is snoring loudly. You try to wake <%=s.g?"him":"her"%>, but it does not work.
 
-**\> Climb into the bed.**
+\> [[Climb into the bed.]]
+
+:: Climb into the bed.
 
 You figure you can just discretely slip into the warm, cozy bed alongside <%=s.g?"him":"her"%>, but in <%=s.g?"his":"her"%> sleep, <%=s.g?"he":"she"%> grabs you and begins to snuggle you against <%=s.g?"his":"her"%> fur.
 
@@ -89,9 +95,11 @@ You're enjoying the guilty pleasure of having <%=s.g?"his":"her"%> arms wrapped 
 
 Your parents warned you about sleep eating—one of the many reasons never to ever date a predator—but you assumed it was made-up.
 
-**\> Cry for help!**
+\> [[Cry for help!]]
 
-You yell out, trying to wake Zasha up, but <%=s.g?"he":"she"%> simply keeps sleep-swallowing you until you're deep inside <%=s.g?"his":"her"%> belly, where you begin to digest, and fall unconscious.
+:: Cry for help!
+
+You yell out, trying to wake Zasha up, but <%=s.g?"he":"she"%> simply keeps sleep-swallowing you until you're deep inside <%=s.g?"his":"her"%> belly. It immediately beings to digest you. In utter shock, you fall unconscious.
 
 "Mmmm..."
 
