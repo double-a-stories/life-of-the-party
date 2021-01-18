@@ -211,9 +211,9 @@ You kick and yell, but it doesn't take. Your predator snores and turns onto <%=s
 
 
 :: Await warm and gurgly death. [vore] {"position":"1800,2925","sizing":"100,100"}
-// TODO:
+// TODO: Willing digestion ending.
 
-You resign to your fate of being accidentally digested.
+You resign to your fate of being accidentally digested, and slowly dissolve in Zasha's stomach.
 
 \> [[The next day...|Ending: Digestion regret]] *(Post-vore scat)*
 
@@ -251,13 +251,19 @@ You take a long shower, and you think about the choices that lead you to this br
 :: Actually, th-that was kind of hot.
 You stop <%=s.g?"him":"her"%>, and say that being nearly digested made you so unbelievably horny. Zasha is bemused, but reciprocates.
 
-<%=s.g?"He":"She"%> removes <%=s.g?"his":"her"%> jacket, and allows.
+<%=s.g?"He":"She"%> strips off <%=s.g?"his":"her"%> jacket, and invites you back into bed.
+
+// TODO: Sex scene. Might require multiple passages per genital configurations.
+
+\> [[The next day...|Ending: Morning after]]
 
 
 :: Just go to bed.
-You walk past Zasha, and  on the floor, still coping with the trauma of almost being digested.
+You walk past Zasha, and sleep on the floor, still coping with the trauma of almost being digested.
 
-The next day, Zasha wordlessly drives you back to your car. Your cell is working again, and the snow is gone. You try to talk, but can't think of anything to say.
+The next day, Zasha wordlessly drives you back to your car.
+Your cell is working again, and the snow is gone.
+You try to talk, but can't think of anything to say. You call a towing company, and get your car fixed. By the end of the day, you're moving on.
 
 \> <a0 onclick="bunny.restart()">Restart.</a>
 
