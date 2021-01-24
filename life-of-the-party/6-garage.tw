@@ -1,7 +1,7 @@
 :: Go to the garage. [todo] {"position":"4800,1400","sizing":"100,100"}
 You walk down the hall and enter the garage. Parked inside is a clean and polished pickup truck from a luxury brand, and a similarly ostentatious boat.
 
-A few feet ahead of you, you see a red fox, who appears to be struggling to carry a huge cardboard box. Stacked haphazardly on top is a number of objects, including some electronics, a game console, two silver candelabras, and what appears to be an oil painting of a sakura tree. The fox notices you.
+A few feet ahead of you, you see a red fox, who appears to be struggling to carry a huge cardboard box. Stacked haphazardly on top is a number of objects, including some electronics, a game console, two silver candelabras, and what appears to be a priceless oil painting. The fox notices you.
 
 "Oh, hi there, cutie!"
 
@@ -215,7 +215,7 @@ Then you see red and blue lights coming from the car behind you.
 
 
 :: Oh crap, the fuzz! {"position":"4728,2734","sizing":"100,100"}
-"Oh my gosh," Ren laughs, "this isn't an 80's action movie, you don't need to call them the f-" <%=s.rm?"He":"She"%>'s interrupted by sirens.
+"Oh my gosh," Ren laughs, "this isn't an 80's action movie, you don't need to call them the-" <%=s.rm?"He":"She"%>'s interrupted by sirens.
 
 You immediately start panicking. Why on earth did you think was a good idea?? Suddenly the truck's console lights up with a phone call from an unknown number. You're sweating bullets as you tentatively answer.
 
