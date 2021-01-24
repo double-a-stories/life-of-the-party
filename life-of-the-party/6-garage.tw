@@ -58,7 +58,6 @@ You're Hollis, you reply, scratching your ears nervously.
 
 
 :: Don't help Ren. {"position":"5150,2075","sizing":"100,100"}
-*CW: Violent threat. Unwilling vore. Bad breath.*
 
 You don't assist <%=s.rm?"him":"her"%>, instead choosing to carefully back toward the door, so as not to seem complicit in <%=s.rm?"his":"her"%> burglary. If anyone asks, you were just looking to get some fresh air, when you stumbled upon this eccentric kitsune stealing a load of valuables. It's the perfect alibi, you think, because it's completely true.
 
@@ -171,6 +170,8 @@ You're not sure that's such a good idea, but you're also in no place to stop <%=
 
 
 :: Hollis: Escape. {"position":"5175,2325","sizing":"100,100"}
+*CW: Violent threat. Unwilling vore. Bad breath.*
+
 You're not fast enough. With the swiftness of a ninja, Ren leaps at you and grabs you by the middle. <%=s.rm?"He":"She"%> bares <%=s.rm?"his":"her"%> teeth.
 
 "This is your fault," <%=s.rm?"he":"she"%> seethes, "You were about to go tell on me, weren't you?"
