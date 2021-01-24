@@ -2,7 +2,7 @@
 
 // Global Variable: "setup"
 window.setup = window.setup || {};
-setup.version = "v0.4.0"
+setup.version = "v0.4.1"
 
 // Move story styles to before the passages.
 // This prioritizes styles declared inside passages.
