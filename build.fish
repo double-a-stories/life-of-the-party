@@ -11,7 +11,7 @@ set -l PROOF_FORMATS 'illume' 'poof' 'dotgraph'
 
 mkdir -p $OUTDIR
 
-$TWEE ./src/ -o $OUTDIR/$NAME.html --log-files $argv
+$TWEE ./src/ -o index.html --log-files $argv
 
 and for f in $PROOF_FORMATS
     $TWEE ./src/ -f $f -o $OUTDIR/$f-$NAME.html $argv
