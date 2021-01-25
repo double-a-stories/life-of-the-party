@@ -5,7 +5,7 @@
 set -l TWEE 'tweego'
 set -l OUTDIR 'build/'
 
-set -l NAME 'Life_of_the_Party'
+set -l NAME 'A_Warm_Place_to_Stay'
 set -l PROOF_FORMATS 'illume' 'poof' 'dotgraph'
 
 
