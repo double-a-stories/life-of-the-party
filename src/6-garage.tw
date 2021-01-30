@@ -108,7 +108,7 @@ Besides, you really don't want to be the only one here when someone notices ever
 
 \> [[I can't leave my friend...]]
 
-\> [[Go for a ride.]]
+<!-- \> [[Go for a ride.]] -->
 
 
 :: I can't leave my friend... {"position":"4723,2307","sizing":"100,100"}
@@ -126,7 +126,7 @@ Ren smirks, "Want a ride home?"
 
 \> [[No, I really shouldn't...]]
 
-\> [[Go for a ride.]]
+<!-- \> [[Go for a ride.]] -->
 
 
 :: That seems like a bad idea... {"position":"4770,2186","sizing":"100,100"}
@@ -136,7 +136,7 @@ You say you'd really love to um, commit grand theft auto, but you're
 
 "C'mon," the fox says with a vicious smile, "it'll be fun! A little joy-ride never hurt nobody!"
 
-\> [[Go for a ride.]]
+<!-- \> [[Go for a ride.]] -->
 
 \> [[I can't leave my friend...]]
 
