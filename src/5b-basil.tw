@@ -1,137 +1,3 @@
-<!-- remember when i said the broom closet was the worst code? i was wrong.
-this passage is much, much worse. -->
-:: Dance a little. {"position":"3600,1125","sizing":"200,100"}
-<%
-const visits = visited(passage.id);
-
-if (visits == 1) { %>
-
-You head into the living room, a high-ceilinged room where dozens of furs of every size and species are busy getting drunk and grooving to the music.
-
-You're usually a little uncomfortable in big groups, but right now, you're feeling pretty confident, and start dancing a little.
-
-<% } else if (visits == 2) { %>
-
-You happily move to the music blaring from the speakers. It's kind of cramped in here, and you're being a little cautious to make sure no one crushes you by accident.
-
-<p><%= story.render("Randomized Party Flavor") %></p>
-
-<% } else if (visited("Grab some punch.") < 2) { %>
-  <p><% if (visits < setup.partyDanceLiterals.length) { %>
-	<%= either("You dance some more.", "You keep on dancing.") %>
-	<%= either("It feels nice.", "This place is kind of crowded.", "This is fun!") %>
-  <% } else { %>
-    You're starting to feel <%= either("a bit", "a little", "kind of") %> thirsty.
-  <% } %></p>
-
-  <p><%= story.render("Randomized Party Flavor") %></p>
-
-<% } else if (visited("Grab some punch.") < 3 || visits < setup.partyDanceLiterals.length) { %>
-
-  <%= either("You wiggle your hips as you dance.", "You try out some new moves.", "You shake your tail flamboyantly, much to the delight of onlookers.") %>
-
-  <%= either(
-    "Maybe it's the alcohol, but feel like you're dancing really well.",
-		"You're starting to attract some attention.",
-		"People around you are looking on with interest.",
-		"Someone cheers as they watch you move.",
-		"One more drink couldn't hurt, right?",
-		`You hear someone murmur, "Woah, I'd like a piece of that..."`
-		) %>
-
-	<p><%= story.render("Randomized Party Flavor") %></p>
-
-<% } else { %>
-You're feeling it now. You're drunk, horny, and seriously vibing with this song. All those high school theatre classes have prepared you for this moment.
-
-It's time to really show them what you've got.
-<% } %>
-
-\> <a0 data-passage="Dance a little."><% if (s.partyFlavorGutbump) { %>
-N-no problem!
-<% } else if (s.partyFlavorOwl) {%>
-Politely ignore her.
-<% } else if (s.partyFlavorLabrador) { %>
-Y-you too?
-<% } else {%>
-Dance a little more.
-<% } %></a>
-
-<% if ((setup.partyDanceLiterals && visits >= setup.partyDanceLiterals.length)
-  || localStorage.talkedToBasil) { %>
-
-\> [[Bust a move.]]
-
-<% } %>
-
-\> [[Grab some punch.]]
-
-
-:: Grab some punch. {"position":"3581,1784","sizing":"100,100"}
-<%= (() => {
-const literals = [
-
-`You scoot over toward the thoughtfully placed snack table, and grab a small cup of fruit punch. Taking a little sip, you observe that it tastes mostly like vodka, with a little hint of kool-aid.\n\n
-...Yuck.`,
-
-`You grab another cup of punch. After tasting it again, the flavor is starting to grow on you. You drink it.`,
-
-`You take another drink of punch. Maybe it's because of your weak tolerance, but you're feeling pretty tipsy right now.`,
-
-`You go to get another drink, but trip and fall on the way. Maybe you should slow down?`,
-
-`You walk over to the snack table, and slam down a third drink of vodka punch. You feel like you're about to lose your balance. Wow. That was probably a bad idea.`,
-
-`Better not drink any more of this stuff...`
-];
-
-return literals[Math.min(visited(passage.id), literals.length) - 1]
-})() %>
-
-\> [[Go back.|Dance a little.]]
-
-
-:: Randomized Party Flavor [hide] {"position":"3614,1586","sizing":"100,100"}
-<!-- wow, the code that controls this part sucks. -->
-
-<%= (function() {
-  setup.partyDanceLiterals = setup.partyDanceLiterals || [
-    "You see a group of labradors cheering on their friend as he attempts to do a keg-stand.",
-"A pair of black mice are looking on with awe and dismay as a dog proudly presents his enormous, swollen belly.",
-`The speakers start playing a techno remix of Marie Predatora's latest rap single: "Belly Drop, Belly Drop (Belly Drop)."`,
-`A grey wolf with a huge protruding gut accidentally bumps into you. "S'cuse me," she mutters as she walks away.`,
-`Your ears perk up: the speakers are playing one of your favorite songs by the obscure R&B group, LÖUD GRÜMBLE. You tap your furry toes happily.`,
-`The sound system blares with the shouty vocals and distorted guitar of "Groupie Gas" by The Buttfuck Zombies.`,
-`A tall wolf in a scarf and a flannel shirt brought an acoustic guitar with him. He's playing "Wonderwall" with an extremely thoughtful look on his face.`,
-`A slightly chubby owl notices you from across the room and begins licking her beak.`,
-`A drunk labrador begins nuzzling you. "Oh my gooood you guys, this rabbit is soooo soft..." You blush. Surprisingly, his fur is extremely soft as well.`,
-`A green dragon girl starts wagging her tail in time with the music, and accidentally trips two people. "Sorry!" she stammers, "Sorry again!"`,
-`There aren't many other prey at this party. You feel a little small by comparison to all the huge anthros here.`,
-`A nice, slow song starts playing. You consider offering to dance with one of the guys around you, but most of them are several feet taller than you.`,
-`A heavy-set bear with a selfie stick is recording herself as she shakes her massive hips. You try not to stare, but it's absolutely hypnotic.`,
-`A lioness whispers to her friend, "Did you know there's a rabbit here?" They snicker. "Woah. Do you think it has a vore fetish?"`,
-`You see a catboy eagerly following a wolf out of the room. They both seem quite excited.`
-].sort(e => 0.5 - Math.random());
-
-s.partyFlavorState = +s.partyFlavorState || 0;
-const literals = setup.partyDanceLiterals;
-let text = literals[s.partyFlavorState % literals.length]
-s.partyFlavorState += 1;
-
-// set some flags, in case i want to hook any of these messages into their own routes
-// currently these are used to alter the text of the "dance more" command
-s.partyFlavorMice = text.includes("black mice");
-s.partyFlavorDragon = text.includes("green dragon girl");
-s.partyFlavorOwl = text.includes("chubby owl");
-s.partyFlavorWonderwolf = text.includes("wolf in a scarf");
-s.partyFlavorLioness = text.includes("lioness");
-s.partyFlavorLabrador = text.includes("A drunk labrador");
-s.partyFlavorGutbump = text.includes("accidentally bumps into you");
-
-return text;
-})() %>
-
-
 :: Bust a move. {"position":"3725,1780","sizing":"100,100"}
 You decide to let loose, and begin to really strut your stuff on the dance floor. You recall your lessons in ballet and musical theatre, and perform a real dazzling series of movements. The others around you seem impressed.
 
@@ -140,12 +6,6 @@ A big brown stallion in a green jacket seems to take notice, and winks at you fr
 \> [[Wink back at him.|Wink back at Basil.]]
 
 \> [[Ignore him.|Ignore Basil.]]
-
-
-:: Ignore Basil. {"position":"3877,1787","sizing":"100,100"}
-Something about the stallion strikes you as bad news. You keep dancing casually for a little while, but eventally excuse yourself and return to the main foyer.
-
-\> [[Go back to the foyer.|The Foyer.]]
 
 
 :: Wink back at Basil. {"position":"3727,1894","sizing":"100,100"}
@@ -158,6 +18,14 @@ The horse smiles, and walks over to you, carrying two bottles of beer.
 \> [[Take drink.]]
 
 \> [[Don't take drink.]]
+
+
+:: Ignore Basil. {"position":"3877,1787","sizing":"100,100"}
+Something about the stallion strikes you as bad news. You keep dancing casually for a little while, but eventally excuse yourself and return to the main foyer.
+
+\> [[Continue dancing.|Dance a little.]]
+
+\> [[Go back to the foyer.|The Foyer.]]
 
 
 :: Take drink. {"position":"3673,2037","sizing":"100,100"}
@@ -598,4 +466,3 @@ The stingy liquids splash all over you, but you don't care. It's exactly what yo
 Just as the ecstasy begins to wane, you suddenly pass out.
 
 \> [[Basil: Digest.]]
-
