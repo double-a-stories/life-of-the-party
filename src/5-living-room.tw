@@ -1,6 +1,6 @@
 <!-- remember when i said the broom closet had the worst code? i was wrong.
 this passage is much, much worse. -->
-:: Dance a little. {"position":"3600,1125","sizing":"200,100"}
+:: Dance a little.
 <%
 const visits = visited(passage.id);
 
@@ -65,7 +65,7 @@ Dance a little more.
 
 
 
-:: Randomized Party Flavor [hide] {"position":"3614,1586","sizing":"100,100"}
+:: Randomized Party Flavor [hide]
 <!-- wow, the code that controls this part sucks. -->
 
 <%= (function() {
@@ -110,7 +110,7 @@ s.partyFlavorBasil = text.includes("brown stallion");
 return text;
 })() %>
 
-:: Grab some punch. {"position":"3581,1784","sizing":"100,100"}
+:: Grab some punch.
 <%= (() => {
 s.punchCount = visited(passage.id);
 const literals = [

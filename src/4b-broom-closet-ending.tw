@@ -57,7 +57,7 @@ setup.handleBroomCloset = () => {
 }
 
 
-:: Check the broom closet. [no_fade] {"position":"1238,1720","sizing":"100,100"}
+:: Check the broom closet. [no_fade]
 <div-></div>
 <% setup.handleBroomCloset() %>
 
@@ -74,7 +74,7 @@ Inside is a shelf with some towels, linens, and some cleaning supplies. Leaning 
 <div->[[Upstairs Hallway]] [[Try to leave.]]</div>
 
 
-:: Try to leave. {"position":"1231,1858","sizing":"100,100"}
+:: Try to leave.
 <div-></div>
 
 After wasting an inordinate amount of time doing absolutely nothing, you rationally decide that yes, it is now finally time to leave the broom closet.
@@ -86,7 +86,7 @@ You're trapped, numb-nuts. I didn't even know that was possible.
 \> [[Bang on the door.|ENDING: Broom Closet]]
 
 
-:: ENDING: Broom Closet [gameover] {"position":"1237,1986","sizing":"100,100"}
+:: ENDING: Broom Closet [gameover]
 <%
 if (!setup.getAchievements().some(s => s.includes("Broom Closet"))) {
   setup.addAchievement("Worth it? (Broom Closet Ending)")
@@ -100,7 +100,7 @@ You bang on the door trying to get someone's attention, but with the loud music 
 \> [[Epilogue?|Epilogue: Broom Closet Ending.]]
 
 
-:: Epilogue: Broom Closet Ending. [morning] {"position":"1233,2110","sizing":"100,100"}
+:: Epilogue: Broom Closet Ending. [morning]
 Sure, why not.
 
 Elsewhere in the house, the morning sun comes blazing through the windows, and lands warmly on the cream-colored fur of a horse, lying in bed while her boyfriend snores loudly next to her. Lacey Armstrong stretches and yawns as she climbs out of bed, her guts filled with the digested remains of a guinea pig. Specifically, the remains of your friend, a guinea pig named Reese.
@@ -112,7 +112,7 @@ She laughs. "Wait a minute, is that... Hollis?"
 \> [[Hollis: Wake up.]]
 
 
-:: Hollis: Wake up. [morning] {"position":"1229,2228","sizing":"100,100"}
+:: Hollis: Wake up. [morning]
 You squint your eyes, woken up by the blinding light streaming in from outside. You slowly and look up at the horse, who is beaming at you with a big smile. "Hey there! Remember me? It's Lacey, from Calc II!"
 
 Instinctually, you try to leap to your feet and escape, but Lacey lightly places a foot (er, hoof, actually) on your stomach, keeping you in place.

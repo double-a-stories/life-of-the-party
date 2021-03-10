@@ -19,7 +19,7 @@
 Life of the Party
 
 
-:: Start [no_heading start] {"position":"2624,222","sizing":"100,100"}
+:: Start [no_heading start]
 <style>
 tw-passage {
   padding-top: 5rem;
@@ -65,7 +65,7 @@ if ([...setup.getAchievements()].length >= 5
 </div>
 
 
-:: Keyboard Controls {"position":"2717,372","sizing":"100,100"}
+:: Keyboard Controls
 In addition to pointer controls, this game can be played entirely through the keyboard, leaving your dominant hand free for other tasks, such as enjoying a sandwich, or sharing a <a href="http://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/life-of-the-party-a-furry-vore-adventure-18" target="_blank">link to this story</a> with someone you think might like it.
 
 #### Basic Navigation
@@ -85,7 +85,7 @@ In addition to pointer controls, this game can be played entirely through the ke
 \> <a0 onclick="setup.undo()">Go back.</a>
 
 
-:: Reset Achievements {"position":"2563,363","sizing":"100,100"}
+:: Reset Achievements
 *This will remove the <%= setup.getAchievements().length %> achievement(s) you have acquired so far, as well as any other persistent story flags. Are you sure you want to continue?*
 
 \> <a0 onclick="localStorage.clear()" data-passage="Start">Yes.</a>
@@ -93,7 +93,7 @@ In addition to pointer controls, this game can be played entirely through the ke
 \> [[Cancel.|Start]]
 
 
-:: Logo [hide] {"position":"2426,217","sizing":"100,200"}
+:: Logo [hide]
 <div class="logo">
   <div class="logo__main">
 	<i class="logo__decoration--masc-horse"></i>
@@ -139,7 +139,7 @@ In addition to pointer controls, this game can be played entirely through the ke
 }
 
 
-:: Header [hide header] {"position":"2836,370","sizing":"100,100"}
+:: Header [hide header]
 <div class="header">
   <ul class="header-nav list-unstyled">
 	<li>
@@ -154,7 +154,7 @@ In addition to pointer controls, this game can be played entirely through the ke
 <h2 id="recent-command"></h2>
 
 
-:: Warp zone {"position":"1100,100","sizing":"100,100"}
+:: Warp zone
 You've entered a time warp!
 
 This is a list of every passage, in the order they were added to the game.

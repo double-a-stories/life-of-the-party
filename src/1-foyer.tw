@@ -1,4 +1,4 @@
-:: Life of the Party. {"position":"2649,515","sizing":"100,100"}
+:: Life of the Party.
 Your name is Hollis. You are an androgynous gray rabbit, around the age of nineteen.
 
 Right now, you're at a very crowded house party. Drunk and horny college furs are everywhere. Loud music and the smell of cheap booze fills every room. <% if (setup.getAchievements().length > 3) { %>This place seems strangely familiar, though you can't put a paw on it.<% } %>
@@ -8,7 +8,7 @@ About twenty minutes ago, you showed up with your friend Reese. At some point yo
 \> [[Look around the foyer.|The Foyer.]]
 
 
-:: The Foyer. {"position":"2650,700","sizing":"100,100"}
+:: The Foyer.
 <% s.partyFlavorState = 0; %>
 
 The floor in the house's entryway is plastered with empty plastic cups. Music is blaring. College-age furs in every direction are chatting, flirting, and dancing.
@@ -22,7 +22,7 @@ What will you do?
 \> [[Dance a little.]]
 
 
-:: Find someplace quieter. {"position":"1850,950","sizing":"200,100"}
+:: Find someplace quieter.
 The incessant loud music is starting to hurt your sensitive ears. You decide to look for a place away from the noise where you can clear your thoughts.
 
 This house is huge, and its upscale furnishings seem almost too fancy for the moderately wealthy suburb it's located in. It shouldn't be too hard to find a quiet place to relax.
@@ -38,7 +38,7 @@ This house is huge, and its upscale furnishings seem almost too fancy for the mo
 <% }%>
 
 
-:: Search for your friend. {"position":"925,1150","sizing":"200,100"}
+:: Search for your friend.
 <% localStorage.outsideUnlocked = true %>
 
 You make a quick circle of the first floor, but Reese is nowhere in sight.

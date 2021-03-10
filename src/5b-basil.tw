@@ -1,4 +1,4 @@
-:: Bust a move. {"position":"3725,1780","sizing":"100,100"}
+:: Bust a move.
 You decide to let loose, and begin to really strut your stuff on the dance floor. You recall your lessons in ballet and musical theatre, and perform a real dazzling series of movements. The others around you seem impressed.
 
 A big brown stallion in a green jacket seems to take notice, and winks at you from across the room.
@@ -8,7 +8,7 @@ A big brown stallion in a green jacket seems to take notice, and winks at you fr
 \> [[Ignore him.|Ignore Basil.]]
 
 
-:: Wink back at Basil. {"position":"3727,1894","sizing":"100,100"}
+:: Wink back at Basil.
 <% localStorage.talkedToBasil = true; %>
 
 The horse smiles, and walks over to you, carrying two bottles of beer.
@@ -20,7 +20,7 @@ The horse smiles, and walks over to you, carrying two bottles of beer.
 \> [[Don't take drink.]]
 
 
-:: Ignore Basil. {"position":"3877,1787","sizing":"100,100"}
+:: Ignore Basil.
 Something about the stallion strikes you as bad news. You keep dancing casually for a little while, but eventally excuse yourself and return to the main foyer.
 
 \> [[Continue dancing.|Dance a little.]]
@@ -28,7 +28,7 @@ Something about the stallion strikes you as bad news. You keep dancing casually 
 \> [[Go back to the foyer.|The Foyer.]]
 
 
-:: Take drink. {"position":"3673,2037","sizing":"100,100"}
+:: Take drink.
 
 You take the bottle and have a few courteous sips. He chugs his immediately, swallowing the whole beer in only a few gulps. It's impressive to watch. He wipes his mouth.
 
@@ -39,7 +39,7 @@ You take the bottle and have a few courteous sips. He chugs his immediately, swa
 \> [[I'd be happy to show you some more...]]
 
 
-:: Don't take drink. {"position":"3790,2038","sizing":"100,100"}
+:: Don't take drink.
 <%
   s.horseConsensualPath = false;
 %>
@@ -55,7 +55,7 @@ Basil stares at your face for a second, and raises an eyebrow.
 \> [[My name's Hollis?]]
 
 
-:: Thanks for the compliment! {"position":"3731,2167","sizing":"100,100"}
+:: Thanks for the compliment!
 He chuckles. "Y'know, you look familiar..." He spends a few seconds thinking, and raises an eyebrow.
 
 "...Do I know you from somwhere?"
@@ -65,7 +65,7 @@ He chuckles. "Y'know, you look familiar..." He spends a few seconds thinking, an
 \> [[My name's Hollis?]]
 
 
-:: I'd be happy to show you some more... {"position":"3576,2163","sizing":"100,100"}
+:: I'd be happy to show you some more...
 He raises an eyebrows, and a satisfied smile comes across his face as he catches your meaning.
 
 He delicately takes your hand in his, and steps closer to you until he's almost looking straight down at you. It's a little bit intimidating.
@@ -79,7 +79,7 @@ He delicately takes your hand in his, and steps closer to you until he's almost 
 \> [[My name's Hollis?]]
 
 
-:: I don't think so... {"position":"3847,2290","sizing":"100,100"}
+:: I don't think so...
 "I've definitely seen your face before..." For a moment, he stares at you intently. His face is rugged and angular, yet his voice is quite gentle.
 
 Suddenly, his eyes flash with recognition. "Wait a minute, Holly Freeley?"
@@ -91,7 +91,7 @@ Hollis, you correct him.
 \> [[Oh, right!]]
 
 
-:: My name's Hollis? {"position":"3728,2288","sizing":"100,100"}
+:: My name's Hollis?
 His eyes flash with recognition.
 
 "No way! Hollis Freeley? It's me, Basil Armstrong, from Riveredge High! I think you were in my sister's math class!"
@@ -99,7 +99,7 @@ His eyes flash with recognition.
 \> [[Oh, right!]]
 
 
-:: Oh, right! {"position":"3781,2410","sizing":"100,100"}
+:: Oh, right!
 You remember him now. Basil was a an award-winning track star, who graduated a year ahead of you. His younger sister once gave you math tutoring.
 
 "Yeah, small world, huh?" he says,
@@ -113,7 +113,7 @@ You nod, awkwardly.
 \> [[Horse cock.]]
 
 
-:: Horse cock. {"position":"3831,2563","sizing":"100,100"}
+:: Horse cock.
 Basil seems taken aback by your candidness. "...What?"
 
 You repeat yourself.
@@ -129,7 +129,7 @@ Basil smiles. "Y'know, you always seemed kinda meek, but now it looks like you r
 \> [[Want a taste?|...Do you want to eat me?]]
 
 
-:: I came here with a friend of mine... {"position":"3697,2552","sizing":"100,100"}
+:: I came here with a friend of mine...
 <% localStorage.upstairsUnlocked = true %>
 
 "Oh, the guinea pig?" he asks.
@@ -147,7 +147,7 @@ You ask him if he saw anything after that.
 \> [[Thanks for the tip. Goodbye.|Bye Basil.]]
 
 
-:: Bye Basil. {"position":"3738,2699","sizing":"100,100"}
+:: Bye Basil.
 You politely excuse yourself. The horse shoots you finger-guns as you leave. You head for the foyer.
 
 "Stay out of my room!" he calls.
@@ -155,7 +155,7 @@ You politely excuse yourself. The horse shoots you finger-guns as you leave. You
 \> <a0 data-passage="The Foyer.">Go back to the foyer.</a>
 
 
-:: So, how's college? {"position":"3701,2828","sizing":"100,100"}
+:: So, how's college?
 "It's going alright," he says, "West Nexus offered me a sports scholarship, but I wanted to stay closer to home, so I wound up at ZSU instead. Where are you going again?"
 
 \> [[I dropped out.|...I'm not really sure yet.]]
@@ -163,7 +163,7 @@ You politely excuse yourself. The horse shoots you finger-guns as you leave. You
 \> [[...I'm not really sure yet.]]
 
 
-:: ...I'm not really sure yet. {"position":"3700,2953","sizing":"100,100"}
+:: ...I'm not really sure yet.
 "Well, I'm sure you'll figure something out," Basil says and shrugs. "Although, when you dance like that, somebody here might decide your future for you..."
 
 You ask him what that's supposed to mean.
@@ -175,7 +175,7 @@ You ask him what that's supposed to mean.
 \> [[Oh, is my tail giving you \"ideas?\" (¯- w •¯)|Oh, is my tail giving you ideas?]]
 
 
-:: Oh, is my tail giving you ideas? {"position":"3573,3220","sizing":"100,100"}
+:: Oh, is my tail giving you ideas?
 You flamboyantly wiggle your hips.
 
 Basil gives a surprised smile. He places a firm hand on your shoulder, then lightly caresses your cheek. "That depends," he says in a low voice, "Does your tail wanna feel thirteen inches of meat rubbing against it?"
@@ -189,7 +189,7 @@ You nod, trying to keep your cool, and not betray how excited you are.
 \> [[...Do you want to eat me?]]
 
 
-:: Is that a threat? {"position":"3699,3104","sizing":"100,100"}
+:: Is that a threat?
 "No, no!" Basil stammers, "I'm just saying, you should be careful in a crowd like this."
 
 He crouches down, until his huge face is level with yours. You shudder a little as he murmurs into your tall fuzzy ears.
@@ -200,7 +200,7 @@ He crouches down, until his huge face is level with yours. You shudder a little 
 
 \> [[Kiss him.]]
 
-:: Kiss him. {"position":"3711,3222","sizing":"100,100"}
+:: Kiss him.
 You surprise him by immediately leaning in for a passionate kiss.
 
 "Mmph!" he cries, blindsided. Then, after a moment, he reciprocates. "Mmmm."
@@ -210,7 +210,7 @@ After several seconds, he separates his lips from yours. "Well Hollis, whaddya s
 \> [[...Do you want to eat me?]]
 
 
-:: ...Do you want to eat me? {"position":"3700,3388","sizing":"100,100"}
+:: ...Do you want to eat me?
 *CW: Exhibitionism. Masturbation.*
 
 Basil's face looks serious as you ask this. Unconsciously, he begins salivating. He swallows a little saliva and asks, "Hollis... Do you wanna get eaten?"
@@ -220,7 +220,7 @@ Basil's face looks serious as you ask this. Unconsciously, he begins salivating.
 \> [[No.|No thank you. (Basil)]]
 
 
-:: Yes, eat me Basil. {"position":"3743,3820","sizing":"100,100"}
+:: Yes, eat me Basil.
 You nod your head.
 
 Basil scoffs a little, and raises an eyebrow. "You want me to swallow you in front of all these people?"
@@ -230,7 +230,7 @@ Basil scoffs a little, and raises an eyebrow. "You want me to swallow you in fro
 \> [[No, wait.|No, don't eat me Basil.]]
 
 
-:: No, don't eat me Basil. {"position":"3748,3519","sizing":"100,100"}
+:: No, don't eat me Basil.
 Basil frowns. "Heh. Change your mind?" He smugly twiddles his thumbs, "That's a shame, I was looking forward to get a taste of you... You're sure you don't want it?"
 
 \> [[Well, as long as you don't digest me...]]
@@ -240,7 +240,7 @@ Basil frowns. "Heh. Change your mind?" He smugly twiddles his thumbs, "That's a 
 \> [[How about a taste of my tail instead?  (¯- w •¯)|Oh, is my tail giving you ideas?]]
 
 
-:: Agree to let Basil eat you in the living room. {"position":"3751,3930","sizing":"100,100"}
+:: Agree to let Basil eat you in the living room.
 Something inside your head is screaming at you to run, begging you to not to succumb to such a pointless fate. Maybe the punch is messing with your head. But right now, all you can think about is the wet, hot flesh inside this horse's slobbery mouth.
 
 You nod your head again. Unconsciously, your tail starts wagging.
@@ -250,7 +250,7 @@ Basil rises to his feet, a pleased, benevolent smile on his face. He removes his
 \> [[Strip naked.|Undress in the middle of the party.]]
 
 
-:: Undress in the middle of the party. {"position":"3748,4048","sizing":"100,100"}
+:: Undress in the middle of the party.
 You attract the attention of a few onlookers as you suddenly shuck off your clothes, and drop them on the floor. You hear a few whoops and hollers. Soon, nearly the whole crowd in the living room is looking at you with anticipation, murmuring eagerly amongst themselves.
 
 Basil towers over you. A bit of his drool drips on your left ear, causing you to twitch. You're sure you can make out a bulge in his trousers. "Huh," the horse says, sneaking interested glances at your naked body, "All this time I thought you were... Nevermind." He licks his lips and says, "Let's give these folks a show!"
@@ -260,7 +260,7 @@ The stallion grips you by the shoulders and stretches his mouth wide open. Your 
 \> [[Basil: Glomph.]]
 
 
-:: Basil: Glomph. [vore] {"position":"3748,4165","sizing":"100,100"}
+:: Basil: Glomph. [vore]
 The party disappears, and your surroundings are swiftly replaced by the darkness of Basil's mouth. Your ears are immediately soaked in saliva, and you feel them tickling the back of this throat.
 
 "Mmmmf," Basil moans out loud. He runs his powerful tongue over your face, tasting you and coating your face in hot drool.
@@ -278,7 +278,7 @@ Their voices become muffled as your ears are gulped into the horse's throat, fol
 \> [[Become horse food.]]
 
 
-:: Basil: Digest. {"position":"3720,5675","sizing":"100,100"}
+:: Basil: Digest.
 Basil pats his belly with a satisfied smile on his face, and takes a seat in a chair while his belly gurgles and groans with the telltale sounds of a digesting prey.
 
 "Yaaaaawn," he yawns, pressing and squeezing on his swollen gut as it slowly softens up, gradually dissolving whatever is left of the rabbit.
@@ -298,7 +298,7 @@ Basil smiles as the party rages on. Another night well planned.
 \> <a0 data-passage="Start">Restart</a>
 
 
-:: Epilogue: Basil Post Vore. [morning] {"position":"3702,5823","sizing":"200,100"}
+:: Epilogue: Basil Post Vore. [morning]
 The next morning, Basil goes to the bathroom.
 
 "Hnnnnnng~," he moans, sitting on the comfortably stallion-sized toilet in his house. His asshole clenches as he squeezes out plop after plop of shit. The putrid globs of horse-turd almost fill the massive toilet bowl, but are soon flushed away by its powerful plumbing. Whatever's left of Hollis that wasn't absorbed onto the horse's body goes unceremoniously racing into the sewers.
@@ -316,7 +316,7 @@ As he's nearing the entertainment center, he realizes that his sister's gaming c
 \> [[Restart.|Start]]
 
 
-:: Become horse food. [vore] {"position":"3746,4282","sizing":"100,100"}
+:: Become horse food. [vore]
 Over the next three minutes or so, Basil slowly but eagerly works your body down his throat and into his belly. You feel yourself gliding effortlessly through the slick tunnel of his gullet, towards your tight, hot destination. He's done this before, hasn't he?
 
 A few furs in the room keep watching with wide eyes as they witness an act of predation for the first time. Others begin shamelessly touching themselves, and others still begin to survey their peers for potential meals.
@@ -324,7 +324,7 @@ A few furs in the room keep watching with wide eyes as they witness an act of pr
 \> [[Curl up in Basil's belly.]]
 
 
-:: Moan. [vore] {"position":"3743,4531","sizing":"100,100"}
+:: Moan. [vore]
 Basil laughs, the kind of chuckle which makes his belly squeeze in on you slightly, "I'll take that as a yes."
 
 The insides of Basil's stomach are spacious and warm. You're curled up in a loose ball, but you have enough room to get comfortable surrounded by the undulating flesh. Even though you specifically asked him to do this, you're still surprised by how aroused it's making you. First time for everything, after all.
@@ -336,7 +336,7 @@ You consider could probably take the opportunity to "enjoy yourself" a little...
 \> [[Enjoy yourself.]]
 
 
-:: Enjoy yourself. [vore] {"position":"3741,4657","sizing":"100,100"}
+:: Enjoy yourself. [vore]
 You do that. You're already naked, so you take the opportunity to rub yourself in a pleasing way. The comfy, slimy walls squeeze and squish around you, resisting and conforming to your every movement. It's incredible.
 
 "Woah," Basil grunts, "That feels great! Never had a prey masturbate inside me before..."
@@ -348,7 +348,7 @@ Basil too is attracting some attention, something you realize when you feel two 
 \> [[What's going on out there?]]
 
 
-:: What's going on out there? [vore] {"position":"3736,4793","sizing":"100,100"}
+:: What's going on out there? [vore]
 Back outside, a pair of black mice have asked permission to touch Basil's bulging gut. You feel them curiously poking and prodding you, stifling little giggles and gasps as you twitch and move in response. "Woooah," one of them says, "This is *soo* hot. Hope it likes being horseshit!"
 
 Basil winks at the black mouse, "Stick around, and maybe you'll join them for the afterparty!" They both squeal and scamper off giggling.
@@ -356,7 +356,7 @@ Basil winks at the black mouse, "Stick around, and maybe you'll join them for th
 \> [[Wait, horseshit?]]
 
 
-:: No thank you. (Basil) {"position":"3885,3524","sizing":"100,100"}
+:: No thank you. (Basil)
 "...Oh. Of course," Basil says, awkwardly. He stands, and turns to leave. "Just uh, be careful out there, alright?" He starts to walk away.
 
 Basil walks away, back into the throng of dancing partygoers.
@@ -364,7 +364,7 @@ Basil walks away, back into the throng of dancing partygoers.
 \> [[Return to the Foyer|The Foyer.]]
 
 
-:: Well, as long as you don't digest me... {"position":"3744,3681","sizing":"100,100"}
+:: Well, as long as you don't digest me...
 Basil smiles again. "You've got yourself a deal, Freeley."
 
 The stallion rises to his feet, a pleased, benevolent smile on his face. He yanks off his jacket to reveal a gray tank-top. A few people take interest, and look your way.
@@ -374,7 +374,7 @@ The stallion rises to his feet, a pleased, benevolent smile on his face. He yank
 \> [[Strip naked.|Undress in the middle of the party.]]
 
 
-:: Curl up in Basil's belly. [vore] {"position":"3744,4406","sizing":"100,100"}
+:: Curl up in Basil's belly. [vore]
 The sphincter to his esophagus shuts tightly, as your hind paws come sliding into his stomach after you. Basil's full belly effortlessly stretches to contain the entirety of your curled up body, leaving a massive bulge sticking out of his previously flat and chiseled stomach.
 
 "BRAAAAAAAP," the stallion concludes, wiping his mouth with the neck of his tank top, which has long since given up on containing his swollen belly. He pats his gut happily. "How's it going in there?"
@@ -382,13 +382,13 @@ The sphincter to his esophagus shuts tightly, as your hind paws come sliding int
 \> [[Moan.]]
 
 
-:: Wait, horseshit? [vore] {"position":"3736,4921","sizing":"100,100"}
+:: Wait, horseshit? [vore]
 "Yeah," Basil chuckles, "should only take me a few hours, really! I'll probably be squeezing you out into a toilet by this time tomorrow."
 
 \> [[You're... gonna digest me?]]
 
 
-:: You're... gonna digest me? [vore] {"position":"3737,5039","sizing":"100,100"}
+:: You're... gonna digest me? [vore]
 Basil gives you an affirmative pat. "Uh, you know how this works, right? Did you think I was just gonna keep you in there forever? "
 
 <% if (visited("Well, as long as you don't digest me...")) { %>
@@ -408,7 +408,7 @@ N-no, you stammer, you assumed he'd let you out.
 \> [[Struggle.|Struggle inside Basil!]]
 
 
-:: Basil: Get me out of here! [vore] {"position":"3800,5430","sizing":"100,100"}
+:: Basil: Get me out of here! [vore]
 The lack of oxygen is making you dizzy. You bang helplessly on the walls of the horse's stomach, begging to be let out.
 
 "No, sorry. I get that you're new to this, but once you're in there, you're not coming back up."
@@ -428,7 +428,7 @@ You're too light-headed to respond. You&nbsp;need to rest, you decide, before yo
 \> [[Basil: Digest.]]
 
 
-:: This is kinda hot... [vore] {"position":"3679,5367","sizing":"100,100"}
+:: This is kinda hot... [vore]
 Basil pats your bulging outline. "It is right? Glad you changed your mind. It must be nice knowing you're contributing to my sweet bod."
 
 Either because of the oppressive heat in here, or the lack of air, you feel yourself body begin to relax. You resume pleasuring yourself, now finding a strange arousal in the idea of being digested. You're going to die, but somehow, that hardly even matters to you?
@@ -442,7 +442,7 @@ You pant with excitement, knowing that you're nothing but food.
 \> [[Hollis: Cum.]]
 
 
-:: Struggle inside Basil! [vore] {"position":"3729,5187","sizing":"100,100"}
+:: Struggle inside Basil! [vore]
 You kick out at Basil's stomach walls.
 
 "Oooh, yeah, just like that," he says, either oblivious to, or completely ignoring the fact that he's about to digest you. Your world shakes nauseously as the horse grabs his gut, and sloshes it around a little. You're suddenly covered in stinging stomach acid.
@@ -456,7 +456,7 @@ Your struggling only increases. The juices are beginning to tingle your fur, and
 \> [[This is kinda hot...]] *(Willing Digestion)*
 
 
-:: Hollis: Cum. [vore] {"position":"3677,5489","sizing":"100,100"}
+:: Hollis: Cum. [vore]
 You masturbate inside Basil's stomach, your movements gradually becoming faster and more furious.
 
 A few people outside are gawking and pointing at the motion coming from Basil's gut. He simply replies with a cocky smile. "Heh. You've really putting on a show for us, huh?" He rubs his gut, sloshing you with more stomach acid. "Time to soften up now."

@@ -1,4 +1,4 @@
-:: Sit by yourself. [dreamy_1] {"position":"3175,1525","sizing":"100,100"}
+:: Sit by yourself. [dreamy_1]
 You find an empty bench to sit on by yourself, distancing yourself from the chaos of the party. Being out here on your own, it's actually quite peaceful.
 
 \> [[Watch the stars.]]
@@ -10,7 +10,7 @@ You find an empty bench to sit on by yourself, distancing yourself from the chao
 </style>
 
 
-:: Watch the stars. [dreamy_1] {"position":"3161,1632","sizing":"100,100"}
+:: Watch the stars. [dreamy_1]
 You do so.
 
 The night sky is peaceful. The clouds are clear, but you can only barely see the stars thanks to the light pollution of this suburban neighborhood.
@@ -20,7 +20,7 @@ The night sky is peaceful. The clouds are clear, but you can only barely see the
 \> [[Comprehend the endless cosmos.]]
 
 
-:: Get up. {"position":"3044,1595","sizing":"100,100"}
+:: Get up.
 Having had your fill of stargazing, you stand up from the bench.
 
 \> [[Talk to the hyena.]]
@@ -42,7 +42,7 @@ All you need to do is rest your eyes upon the swirling heavens, and relax. You r
 \> [[Break these mortal chains.]]
 
 
-:: Break these mortal chains. [dreamy_2] {"position":"3172,2060","sizing":"100,100"}
+:: Break these mortal chains. [dreamy_2]
 <% setup.addAchievement("True Zen (Meditation Ending)") %>
 
 You shut your eyes tight.
@@ -127,7 +127,7 @@ tw-story, tw-passage {
 }
 
 
-:: Be the hyena. [dark otherstory] {"position":"3176,2220","sizing":"100,100"}
+:: Be the hyena. [dark otherstory]
 
 <style>body { transition: background-color 0s; }</style>
 my name is ana. i'm a spotted hyena, currently chilling on a bench outside a vore party like a total loser.
@@ -149,7 +149,7 @@ what do i do?
 </div>
 
 
-:: Eat the rabbit. [dark otherstory] {"position":"3184,2366","sizing":"100,100"}
+:: Eat the rabbit. [dark otherstory]
 <style>
 .hollistalk {
   font-family: sans-serif;
