@@ -17,7 +17,7 @@ The night sky is peaceful. The clouds are clear, but you can only barely see the
 
 \> [[Get up.]]
 
-\> [[Comprehend the oneness of an eternal cosmos.]]
+\> [[Comprehend the endless cosmos.]]
 
 
 :: Get up. {"position":"3044,1595","sizing":"100,100"}
@@ -28,12 +28,14 @@ Having had your fill of stargazing, you stand up from the bench.
 \> [[Go back to the foyer.|The Foyer.]]
 
 
-:: Comprehend the oneness of an eternal cosmos. [dreamy_2] {"position":"3167,1764","sizing":"100,100"}
-Sitting here alone, with your head tilted toward the starryish sky, you realize you don't need anyone else.
+:: Comprehend the endless cosmos. [dreamy_2]
+Sitting here alone, with your head tilted toward the starryish sky, you realize that nothing you've been doing at this party has been very important.
 
 You don't need to rescue your friend from being eaten. You don't need to find a hot date, and you definitely don't need to be seduced, swallowed, and privately digested by them. You don't even need to think about how you're getting home after this.
 
-All you need to do is rest your eyes upon the swirling heavens, and relax. You realize the simple truth that we are all one. Whether pred or prey, rabbit or horse, nerd or jock, all are simply food for the gaping maw of time itself.
+All you need to do is rest your eyes upon the swirling heavens, and relax. You realize a simple truth that all beings are one. Whether pred or prey, rabbit or horse, nerd or jock, all are simply food for the gaping maw of time itself.
+
+ You need not need cling to the edges of your liminal reality.
 
 \> [[Stop meditating.|Get up.]]
 

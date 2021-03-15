@@ -29,7 +29,7 @@ setup.getBroomClosetMessage = ({state, count, milliseconds}) => {
     `Wow! You've clicked the link in only ${state<=10?milliseconds:"FUCK OFF"} milliseconds! Hollis has wasted ${state < 15 ? state + 5 : "TOO MANY"} minutes of their life in the broom closet.`
   ];
   story.state.broomClosetEnding = state / 5;
-  let passage = literals[Math.min(state + 1, literals.length - 1)];
+  let passage = literals[Math.min(state, literals.length - 1)];
   if (state < 15) {
     passage += "<br>" + "<wbr>.".repeat(count);
   }
