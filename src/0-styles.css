@@ -146,6 +146,10 @@ body[data-tags~="dark"], .backdrop {
   text-transform: lowercase;
 }
 
+.byron {
+  font-family: "Tinos", "Times New Roman", serif;
+}
+
 /* Mobile mode */
 @media screen and (max-width:500px) {
   .passage {
