@@ -88,13 +88,22 @@ $(window).on("sm.story.error", ev => {
 })
 
 // Basic Fadein. Override by adding "no_fade" tag.
-$(window).on('sm.passage.shown', () => {
+$(window).on('sm.passage.hidden', () => {
+  story.$passageEl.css({ opacity: 0 });
+})
+
+$(window).on('sm.passage.shown', (ev, { passage }) => {
   if (!passage.tags.some(tag => tag === "no_fade")) {
-    $("tw-passage").css({
+    story.$passageEl.css({
       opacity: 0
     }).animate({
       opacity: 1
-    }, "slow")
+    }, {
+      duration: "slow",
+      queue: false
+    });
+  } else {
+    story.$passageEl.css({ opacity: 1 });
   }
 })
 
