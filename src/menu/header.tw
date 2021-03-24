@@ -1,0 +1,15 @@
+:: Header [hide header]
+<div class="header">
+  <ul class="header-nav list-unstyled">
+	<li>
+	  <a0 id="restart-button" onclick="setup.restart()">Restart</a>
+	</li>
+	<li>
+	  <a0 id="undo-button" onclick="setup.undo()">Undo</a>
+	</li>
+  </ul>
+</div>
+
+<h2 id="recent-command"></h2>
+
+:: Header script

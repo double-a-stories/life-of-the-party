@@ -1,0 +1,18 @@
+:: Keyboard controls
+In addition to pointer controls, this game can be played entirely through the keyboard.
+
+#### Basic Navigation
+
+`W (↑) ` *Select previous link.*
+
+`S (↓)` *Select next link.*
+
+`E (⏎)` *Use selected link.*
+
+#### Time Travel
+
+`A (←)` *Undo last command.*
+
+`D (→)` *Redo last command.*
+
+\> <a0 onclick="setup.undo()">Go back.</a>

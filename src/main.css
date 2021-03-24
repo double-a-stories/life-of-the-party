@@ -28,7 +28,7 @@ p {
 
 tw-story {
   line-height: inherit;
-  position: relative;
+  position: unset !important;
   margin: 1rem auto;
   padding-bottom: 4rem;
   max-width: 35em;
@@ -153,15 +153,8 @@ body[data-tags~="dark"], .backdrop {
 /* Mobile mode */
 @media screen and (max-width:500px) {
   .passage {
-    --logo-height: 3em;
     font-size: 80%;
   }
-
-  .logo_main {
-    text-align: center;
-    align-items: center
-  }
-
   a {
     line-height: 2;
     padding: 1rem 0;

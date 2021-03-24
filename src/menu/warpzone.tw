@@ -1,0 +1,75 @@
+:: Warp zone
+It's strangely dark. You see a female hyena sitting at a computer, staring blankly at a code editor. They type into their keyboard,
+
+<span class="byron">Hello, I'm Double-A. Thanks for enjoying <i>Life of the Party</i> enough to somehow find your way into my developer room. Below is a list of every passage which is currently in the game.</span>
+
+<table class="table">
+<thead>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>tags</th>
+  </tr>
+</thead>
+<tbody>
+  <% story.passages.map(({ id, name, tags }) => { %>
+  <tr>
+    <td><%-id%></td>
+	  <td><a0 data-passage="<%=name%>"><%= name %></a></td>
+    <td>
+      <% tags.map(t => { %>
+        <span class="tag-badge" color="<%-$(`tw-tag[name='${t}']`).attr('color')%>"><%-t%></span>
+  <% }) %>
+  </td>
+  </tr>
+<% }); %>
+</tbody>
+</table>
+
+
+:: Warp zone stylesheet [stylesheet]
+
+.tag-badge {
+  display: inline-block;
+  background-color: #555;
+  border-radius: 0.25rem;
+  padding: 0 0.25rem;
+  font-size: small;
+  color: white;
+}
+.tag-badge[color=yellow] {
+	background-color: #fc1;
+	color: #111;
+}
+.tag-badge[color=red] {
+	background-color: #d34;
+}
+.tag-badge[color=blue] {
+	background-color: #1ab;
+}
+.tag-badge[color=green] {
+	background-color: #2a4;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.table th,
+.table td {
+  padding: 0.25rem;
+  vertical-align: top;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+  text-align: inherit;
+}
