@@ -1,15 +1,15 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Tinos&display=swap');
 
 :root {
   --light: rgba(0, 0, 0, 20%);
   --accent: #d93;
   --color-vore: #fee;
   --color-vore-ending: #dbb;
+  --font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
-  font: 1.2rem/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1.2rem/1.6 var(--font-stack);
   color: var(--color, #111);
   background: var(--background, #eee);
   transition: opacity 1s, background 2s;
@@ -46,31 +46,6 @@ a:active {
   text-decoration-color: var(--accent, #d93);
 }
 
-.prose-time {
-  font-family: serif;
-}
-
-.header {
-  font-size: 0.75em;
-  border-bottom: 1px solid var(--light);
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-}
-
-.header-nav>* {
-  display: inline-block;
-  margin-bottom: 0;
-}
-
-.header-nav>*+* {
-  margin-left: 0.5rem;
-}
-
-.header-nav>*+*::before {
-  content: "|";
-  margin-right: 0.5rem;
-}
-
 .list-unstyled {
   list-style: none;
   margin: 0;
@@ -104,50 +79,9 @@ body[data-tags~="morning"] {
   --background: #ffe;
 }
 
-body[data-tags~="dark"], .backdrop {
-  --background: #020202;
-  --light: rgba(255, 255, 255, 50%);
-  --color: #ccc;
-}
-
-[data-tags~="otherstory"] tw-passage,
-[data-tags~="otherstory"] #recent-command,
-.backdrop {
-  transition: none !important;
-  line-height: 1.5;
-}
-
-.backdrop,
-[data-tags~="otherstory"] #recent-command,
-[data-tags~="otherstory"] a {
-  font-family:'Times New Roman', Times, serif;
-  font-variant: small-caps;
-  text-transform: none;
-}
-
-[data-tags~="otherstory"] #recent-command {
-  text-align: center;
-}
-
-[data-tags~="otherstory"] .passage a {
-  font-family: 'Times New Roman', Times, serif;
-  font-variant: small-caps;
-  text-transform: none;
-}
-
 /* Tag: no_heading: hides the passage name */
 [data-tags~="no_heading"] #recent-command {
   display: none;
-}
-
-/* Character font quirks */
-[data-tags~="otherstory"], .ana {
-  font-family: "Comic Neue", "Comic Sans", "Comic Sans MS", sans-serif !important;
-  text-transform: lowercase;
-}
-
-.byron {
-  font-family: "Tinos", "Times New Roman", serif;
 }
 
 /* Mobile mode */

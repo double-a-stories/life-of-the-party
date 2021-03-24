@@ -3,6 +3,12 @@
 <!-- Byron is the gray wolf in the red flannel. He tries to impress you with obscure music knowledge. He accuses you of being a poser but you effortlessly name nine songs and begrudgingly gain his respect.
 A self-styled hipster poet whose alleged sensitivity is just a front for his obviously predatory desires. -->
 
+:: Byron's font quirk [stylesheet]
+
+.byron {
+  font-family: 'Tinos', "Times New Roman", serif;
+}
+
 :: Talk to Byron.
 
 You walk over to the wolf with the guitar. Looks like he's really into it. He continues strumming bar chords for a moment, but finally stops and acknowledges you with a nod.
