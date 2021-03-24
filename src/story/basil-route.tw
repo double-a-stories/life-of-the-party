@@ -1,13 +1,3 @@
-:: Bust a move.
-You decide to let loose, and begin to really strut your stuff on the dance floor. You recall your lessons in ballet and musical theatre, and perform a real dazzling series of movements. The others around you seem impressed.
-
-A big brown stallion in a green jacket seems to take notice, and winks at you from across the room.
-
-\> [[Wink back at him.|Wink back at Basil.]]
-
-\> [[Ignore him.|Ignore Basil.]]
-
-
 :: Wink back at Basil.
 <% localStorage.talkedToBasil = true; %>
 
