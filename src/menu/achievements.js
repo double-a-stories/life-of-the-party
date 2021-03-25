@@ -3,26 +3,24 @@
 
 window.setup = window.setup || {};
 
-setup._achievementsKey = "LoTP_achievements";
+const key = story.name+"_achievements"; // <- the attribute in localStorage where
 
 setup.getAchievements = () => {
-  const key = setup._achievementsKey;
-  try {
-    const achievements = JSON.parse(localStorage.getItem(key));
+  const achievements = JSON.parse(localStorage.getItem(key));
+  if (Array.isArray(achievements)) {
     return achievements;
-  } catch {
+  } else {
     setup.resetAchievements();
     return [];
   }
 }
 setup.addAchievement = (name) => {
-  const key = setup._achievementsKey;
   let achievements = setup.getAchievements();
-  if (!setup.getAchievements().includes(name)) {
+  if (!achievements.includes(name)) {
     achievements = [...achievements, name]
   }
   localStorage.setItem(key, JSON.stringify(achievements));
 }
 setup.resetAchievements = () => {
-  localStorage.setItem(setup._achievementsKey, JSON.stringify([]))
+  localStorage.setItem(key, JSON.stringify([]))
 }
