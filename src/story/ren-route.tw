@@ -55,7 +55,7 @@ And what if they do? you ask.
 
 You're Hollis, you reply, scratching your ears nervously.
 
-"Pleased to meet you 🐰😎 dude!" <%=s.rm?"he":"she"%> says. "Can I call you dude? Or are you more of a... 🐰👩❓ dudestress?"
+"Pleased to meet you 🐰😎 dude!" <%=s.rm?"he":"she"%> says. "Can I call you dude? Or are you more of a 🐰👩❓ dude-ess?"
 
 A-actually, you're neither? you reply.
 
@@ -125,7 +125,7 @@ You remember that Reese is still here, and possibly in danger. You can't just ab
 
 What? You ask <%=s.rm?"him":"her"%> how <%=s.rm?"he":"she"%> knows.
 
-"<%=s.rm?"🤷‍♂️":"🤷‍♀️"%> Call it a hunch," <%=s.rm?"he":"she"%> says, "No prey ever came to a party like this expecting to leave in one piece, right? Everyone's either here to 🐺 eat or be 🥩 eaten."
+"<!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%> Call it a hunch," <%=s.rm?"he":"she"%> says, "No prey ever came to a party like this expecting to leave in one piece, right? Everyone's either here to 🐺 eat or be 🥩 eaten."
 
 You didn't realize this was that kind of party, you say.
 
@@ -243,17 +243,33 @@ Ren is pretty big for a fox, but not the biggest anthro you've seen here. You ge
 
 You're head pokes into Ren's stomach. It's wet. It's hot. It's wet and hot. Your legs slide in behind you. Ren swallows them with a satisfied "👅 Murr...", and they slide down <%=s.rm?"his":"her"%> throat like thick, furry noodles.
 
-You've never been eaten before, but it's basically exactly how you imagined it. Your body is packed tight into a curled up position, in a dank, squelching sac meant only for food.
+You're pretty sure you've never been eaten before, but it's basically exactly how you imagined it. Your body is packed tight into a curled up position, in a dank, squelching sac meant only for food.
 
 As you lie here, now completely encapsulated in this fox's body, you feel almost... at home? As if you are fulfilling a role in the grand scheme of things. As though being devoured was exactly what was expected from you from the beginning.
 
-Ren burps ("😌💨"), and <%=s.rm?"his":"her"%> stomach walls clench tighter around you. Maybe you should stop waxing pseudo-zen nonsense, and think of a way out of here?
+Ren burps ("😮‍💨😌") and <%=s.rm?"his":"her"%> stomach walls clench tighter around you. You begin to suspect that getting out of here won't be easy.
 
-\> [[Struggle!|Struggle inside Ren.]]
+"Woah, 😳" <%=s.rm?"he":"she"%> says, rubbing <%=s.rm?"his":"her"%> huge belly, "That was intense. 😌😌"
 
-\> [[Why bother?|Struggle inside Ren.]]
+\> [[Wh-why did you do that?]]
 
-:: Struggle inside Ren.
 
-TODO: More description. Ending.
+:: Wh-why did you do that? [vore]
 
+You scramble around inside to get Ren's attention, and ask <%=s.rm?"him":"her"%> why <%=s.rm?"he":"she"%> ate you.
+
+"😕 W-well," <%=s.rm?"he":"she"%> says, "I didn't want you to 🐇💨 escape and snitch on me. Then it was kinda like my body just took over? 🦊<!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%>"
+
+You say you honestly weren't gonn rat <%=s.rm?"him":"her"%> out.
+
+"Oh," <%=s.rm?"he":"she"%> replies, rubbing <%=s.rm?"his":"her"%> gut bashfully. "Well, what's done is done..."
+
+\> [[Can you get me out of here?]]
+
+:: Can you get me out of here?
+
+### Game Over.
+
+\> <a0 onclick="setup.undo()">Undo</a>
+
+\> [[Restart|Start]]
