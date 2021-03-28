@@ -31,11 +31,7 @@ This house is huge, and its upscale furnishings seem almost too fancy for the mo
 
 \> [[Go outside.]]
 
-<% if (localStorage.garageUnlocked) { %>
-
-\> [[Go to the garage.]] *(HIDDEN UNFINISHED BETA CONTENT)*
-
-<% }%>
+\> [[Go to the garage.]]
 
 
 :: Search for your friend.

@@ -58,12 +58,8 @@ Dance a little more.
 
 <% } if (s.partyFlavorWonderwolf || s.partySeenByron) {
   s.partySeenByron = true; %>
-<!-- \> [[Talk to the wolf.|Talk to Byron.]] -->
+\> [[Talk to the wolf.|Talk to Byron.]]
 <% } %>
-
-
-
-
 
 :: Randomized Party Flavor [hide]
 <!-- wow, the code that controls this part sucks. -->

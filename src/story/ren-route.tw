@@ -270,6 +270,8 @@ You say you honestly weren't gonn rat <%=s.rm?"him":"her"%> out.
 
 ### Game Over.
 
+<% setup.addAchievement("🦊🍑😘 (Ren Vore Ending)"); %>
+
 \> <a0 onclick="setup.undo()">Undo</a>
 
 \> [[Restart|Start]]

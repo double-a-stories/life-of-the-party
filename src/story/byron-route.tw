@@ -11,6 +11,8 @@ A self-styled hipster poet whose alleged sensitivity is just a front for his obv
 
 :: Talk to Byron.
 
+*This route is a W.I.P.*
+
 You walk over to the wolf with the guitar. Looks like he's really into it. He continues strumming bar chords for a moment, but finally stops and acknowledges you with a nod.
 
 <span class="byron">"Ah,"</span> he says, <span class="byron">"What a pleasure to see a rabbit in a grim setting like this. Perhaps... 'twas fate that united us?"</span>
@@ -82,3 +84,8 @@ A spark lights in Byron's eyes. <span class="byron">"Say, Hollis,"</span> he say
 
 <span class="byron">"What?"</span> He acts offended, and says, <span class="byron">"I would never attempt to take advantage of someone in such an uncivilized manner. It is beneath me, and all of wolfkind."</span>
 
+## Route end. (WIP)
+
+<% setup.addAchievement(`<span class="byron">Wonder wolf</span> (Byron Vore Ending)`); %>
+
+\> [[Restart.|Start]]
