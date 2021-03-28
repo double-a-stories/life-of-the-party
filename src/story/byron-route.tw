@@ -84,8 +84,8 @@ A spark lights in Byron's eyes. <span class="byron">"Say, Hollis,"</span> he say
 
 <span class="byron">"What?"</span> He acts offended, and says, <span class="byron">"I would never attempt to take advantage of someone in such an uncivilized manner. It is beneath me, and all of wolfkind."</span>
 
-## Route end. (WIP)
+### Route end. (WIP)
 
-<% setup.addAchievement(`<span class="byron">Wonder wolf</span> (Byron Vore Ending)`); %>
+<% setup.addAchievement(`Wonder Wolf (Byron Vore Ending)`); %>
 
 \> [[Restart.|Start]]
