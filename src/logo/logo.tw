@@ -5,7 +5,7 @@
 	<h1 class="logo__title">Life of&nbsp;the Party</h1>
 	<img class="logo__horse" src="<%-story.render("logo-horse-right")%>">
   </div>
-	<p class="logo__subtitle">A Furry Vore Adventure <%= setup.version && `(${setup.version })` || "" %></p>
+	<p class="logo__subtitle">A Furry Vore Adventure by Double-A</p>
 </div>
 
 :: Logo_Style [stylesheet]

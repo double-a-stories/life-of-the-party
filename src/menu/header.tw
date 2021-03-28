@@ -1,13 +1,16 @@
 :: Header [hide header]
-<div class="header">
-  <ul class="header-nav list-unstyled">
-	<li>
-	  <a0 id="restart-button" onclick="setup.restart()">Restart</a>
-	</li>
-	<li>
-	  <a0 id="undo-button" onclick="setup.undo()">Undo</a>
-	</li>
-  </ul>
-</div>
+<header.topbar.header-nav>
+	<div.header-nav-group>
+	  <div><a0 onclick="setup.restart()">Restart</a>
+	  </div>
+	  <div><a0 onclick="setup.undo()">Undo</a>
+	  </div>
+	</div>
+	<div.header-nav-group>
+	  <div>[[Keyboard controls]]</div>
+	  <span><%= setup.version %></span>
+	</div>
+  </div>
+</header>
 
 <h2 id="recent-command"></h2>
