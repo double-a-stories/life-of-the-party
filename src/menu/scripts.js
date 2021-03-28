@@ -10,11 +10,21 @@ setup.version = "v0.4.2"
 
 // DEBUG: Handle Errors without Crashing
 story.ignoreErrors = true;
-$(window).on("sm.story.error", ev => {
-  if (story.ignoreErrors) {
-    window.alert(story.errorMessage);
-    console.error(story.errorMessage);
-  }
+$(window).on("sm.story.error", (event, error) => {
+    if (story.ignoreErrors) {
+        const message =
+            `${error.message}
+        ---
+        Error occured while viewing "${window.passage ? passage.name : "undefined"}". Check debug console for for details.
+
+        To report this bug, please message the developer with the following:
+        1) What version is your browser?
+        2) Steps to reproduce?
+        3) A screenshot of the debug console
+        `;
+        window.alert(message);
+        console.error(error);
+    }
 })
 
 /* Adds passage tags to body[data-tags]. This enables CSS rules which change the page background based on passage tags.

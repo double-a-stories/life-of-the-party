@@ -9,7 +9,6 @@ setup.undo = () => {
 }
 // Restart
 setup.restart = () => {
-  console.info("localStorage = ", localStorage);
   story.history = []; // erase history (resets page visit counts)
   story.state = {}; // reset state
 

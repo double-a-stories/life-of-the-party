@@ -1,7 +1,25 @@
-:: Warp zone
-It's strangely dark. You see a female hyena sitting at a computer, staring blankly at a code editor. They type into their keyboard,
+:: Message [script]
+console.log(`${story.name} ${setup.version}
+============================================================
 
-<span class="byron">Hello, I'm Double-A. Thanks for enjoying <i>Life of the Party</i> enough to somehow find your way into my developer room. Below is a list of every passage which is currently in the game.</span>
+Hello, I'm Double-A. Thanks for playing my game!. If you're
+here, you're probably looking for juicy cheat codes, or
+you're stuck finding the more obscure achievements.
+
+To get the hidden zen ending, go outside and sit by yourself.
+
+To get the hidden broom closet ending, go to the broom
+closet.
+
+For the remaining endings, you'll just have to look around.
+
+-AA
+
+=========================================================
+`);
+
+:: Warp zone
+
 
 <table class="table">
 <thead>
@@ -73,3 +91,7 @@ It's strangely dark. You see a female hyena sitting at a computer, staring blank
   border-bottom: 2px solid #dee2e6;
   text-align: inherit;
 }
+
+:: Debug room.
+
+Hollis walks into the debug room, which is impossible, because there are no doors to either enter or exit the debug room. It literally does not exist.
