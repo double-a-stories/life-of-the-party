@@ -8,7 +8,7 @@
 	</div>
 	<div.header-nav-group>
 	  <div>[[Keyboard controls]]</div>
-	  <span><%= setup.version %></span>
+	  <span><%- story.version %></span>
 	</div>
   </div>
 </header>

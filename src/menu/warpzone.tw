@@ -1,5 +1,9 @@
 :: Message [script]
-console.log(`${story.name} ${setup.version}
+
+$(window).on('sm.story.started', function (event, {
+  story
+}) {
+console.log(`${story.name} ${story.version}
 ============================================================
 
 Hello, I'm Double-A. Thanks for playing my game!. If you're
@@ -17,6 +21,7 @@ For the remaining endings, you'll just have to look around.
 
 =========================================================
 `);
+});
 
 :: Warp zone
 
