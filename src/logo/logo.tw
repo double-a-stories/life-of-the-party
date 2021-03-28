@@ -1,48 +1,9 @@
 :: Logo [hide]
 <div class="logo">
   <div class="logo__main">
-  <img class="logo__horse" src="<%-story.render("logo-horse-left")%>">
+  <img role="presentation" class="logo__horse" src="<%-story.render("logo-horse-left")%>">
 	<h1 class="logo__title">Life of&nbsp;the Party</h1>
-	<img class="logo__horse" src="<%-story.render("logo-horse-right")%>">
+	<img role="presentation" class="logo__horse" src="<%-story.render("logo-horse-right")%>">
   </div>
 	<p class="logo__subtitle">A Furry Vore Adventure by Double-A</p>
 </div>
-
-:: Logo_Style [stylesheet]
-.logo {
-  line-height: 1.3;
-  --logo-height: 4rem;
-}
-.logo__main {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-.logo__title {
-  font-variant: small-caps;
-  font-weight: bold;
-  font-size: var(--logo-height, 5em);
-  font-family: "Times New Roman", serif;
-  line-height: 1;
-  text-align: center;
-}
-.logo__subtitle {
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: lighter;
-  display: flex;
-  text-align: center;
-}
-.logo__horse {
-  height: var(--logo-height, 5em);
-}
-@media screen and (max-width:500px) {
-  .passage {
-    --logo-height: 3em;
-    font-size: 80%;
-  }
-  .logo_main {
-    text-align: center;
-    align-items: center
-  }
-}
