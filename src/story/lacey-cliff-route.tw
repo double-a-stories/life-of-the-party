@@ -1,6 +1,8 @@
 :: Look upstairs.
 <div->[[Upstairs Hallway]]</div>
 
+<!-- Idea: the final ending, in which you get Ana or Basil to follow you upstairs, and rescue Reese and go back to his house. He talks about his vore kink with you, and you realize you regret not getting eaten at the party. It makes way more sense than going to college, or whatever. -->
+
 You head up the stairs looking for your friend.
 
 <%= story.render("Upstairs Hallway") %>
@@ -435,7 +437,7 @@ C: o///o !!!
 
 </div>
 
-Lacey Armstrong yawns and stretches, ready for a new day, full of new meals. Soon, she'd forget all about those the two delicious meals who comprised her last bowel movement.
+Lacey Armstrong yawns and stretches, ready for a new day, full of new meals. Soon, she'd forget all about those two delicious meals who comprised her last bowel movement.
 
 ### The End.
 
