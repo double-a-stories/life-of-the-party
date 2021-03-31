@@ -183,7 +183,7 @@ Your vision goes dark. Your ears feel slobbery. All you can smell is fish... Wha
 
 Ren glomps <%=s.rm?'his':'her'%> lips over your head, and begins working to squeeze it into <%=s.rm?'his':'her'%> throat. You try to squirm free, but <%=s.rm?'he':'she'%>'s gripping your body too tightly.
 
-You look up at your destination, and wince slightly. The fox's <%=s.rm?'his':'her'%> pulsating throat keeps blasting you with hot, putrid air. <%=s.rm?'He':'She'%> seems to be hyperventilating as <%=s.rm?'he':'she'%> eats you.
+You look up at your destination, and wince slightly. The fox's pulsating throat keeps blasting you with hot, putrid air. <%=s.rm?'He':'She'%> seems to be hyperventilating as <%=s.rm?'he':'she'%> eats you.
 
 \> [[Struggle for freedom!]]
 
@@ -216,9 +216,9 @@ You open your mouth to squeal one last plea for mercy. Unfortunately, you do thi
 
 :: Struggle for freedom! [vore]
 
-You thrash your arms and legs, trying to free yourself. Instinctively, the fox sinks <%=s.rm?'his':'her'%> teeth into your neck, something <%=s.rm?'he':'she'%> immediately regrets.
+You thrash your arms and legs, trying to free yourself. Instinctively, the fox sinks <%=s.rm?'his':'her'%> teeth into the flesh of your neck, something <%=s.rm?'he':'she'%> immediately regrets.
 
-Everything feels hot and blurry. You fall unconscious.
+You feel stinging pain as Ren releases you, and you collapse the garage floor. Everything feels hot and blurry. Then you fall unconscious.
 
 "😨😨🥩🩸"
 
@@ -256,17 +256,25 @@ Ren burps ("😮‍💨😌") and <%=s.rm?"his":"her"%> stomach walls clench tig
 
 :: Wh-why did you do that? [vore]
 
-You scramble around inside to get Ren's attention, and ask <%=s.rm?"him":"her"%> why <%=s.rm?"he":"she"%> ate you.
+You scramble around inside to get Ren's attention, and ask <%=s.rm?"him":"her"%> why <%=s.rm?"he":"she"%> just ate you.
 
 "😕 W-well," <%=s.rm?"he":"she"%> says, "I didn't want you to 🐇💨 escape and snitch on me. Then it was kinda like my body just took over? 🦊<!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%>"
 
 You say you honestly weren't gonn rat <%=s.rm?"him":"her"%> out.
 
-"Oh," <%=s.rm?"he":"she"%> replies, rubbing <%=s.rm?"his":"her"%> gut bashfully. "Well, what's done is done..."
+"Oh," <%=s.rm?"he":"she"%> replies, rubbing <%=s.rm?"his":"her"%> gut bashfully. "Well, what's done is done... 😏"
 
 \> [[Can you get me out of here?]]
 
 :: Can you get me out of here?
+
+Ren puts a paw on <%=s.rm?"his":"her"%> chin. "Well, I... 🤔  don't actually know."
+
+<%=s.rm?"He":"She"%>... doesn't know?
+
+"This is actually my first time doing something like this... 😳 "
+
+// TODO: Ren is about to try to throw you up, but then hears a
 
 ### Game Over.
 
