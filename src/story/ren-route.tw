@@ -165,7 +165,7 @@ You nervously back away, praying that you'll be fast enough to make it out of he
 :: Hollis: Escape.
 *CW: Violent threat. Unwilling vore. Bad breath.*
 
-You're not fast enough. With the swiftness of a ninja, Ren leaps at you and grabs you by the middle. <%=s.rm?"He":"She"%> bares <%=s.rm?"his":"her"%> teeth.
+You're not fast enough. With incredible agility, Ren leaps at you and grabs you by the middle. <%=s.rm?"He":"She"%> bares <%=s.rm?"his":"her"%> claws and fangs.
 
 <q class="ren">😡 This is your fault,</q> <%=s.rm?"he":"she"%> seethes, <q class="ren">You were about to go tell on me, weren't you?</q>
 
@@ -175,25 +175,24 @@ You're not fast enough. With the swiftness of a ninja, Ren leaps at you and grab
 
 No! You cry out, trying to wrestle free, you're not gonna tell anyone! Promise!
 
-<q class="ren">🤬 Horsecrap!</q> <%=s.rm?"he":"she"%> says, bringing <%=s.rm?"his":"her"%> sharp teeth right up against the exposed fur of your neck. This is a obscene gesture, uncommon among civilized anthros. <%=s.rm?"He":"She"%> growls, <q class="ren">Gimme one good reason I shouldn't eat you right now. 🥩🩸</q>
+<q class="ren">🤬 Horsecrap!</q> <%=s.rm?"he":"she"%> says, bringing <%=s.rm?"his":"her"%> sharp teeth right up against the exposed fur of your neck, licking saliva from <%=s.rm?"his":"her"%> lips. This is a obscene gesture, uncommon among civilized anthros. <%=s.rm?"He":"She"%> growls, <q class="ren">Gimme one good reason I shouldn't eat you right now. 🥩🩸</q>
 
 Your body is frozen. In the heat of the moment, flushed with fear, you try to reply. Your lips quiver, and your ears flatten, but your tongue won't form words.
 
-<q class="ren">Whoops,</q> Ren says, licking saliva from <%=s.rm?"his":"her"%> lips, <q class="ren">😈 Too slow.</q>
+<q class="ren">Whoops, 😈</q> Ren says, locking the door behind you with a *click*, <q class="ren">Too slow.</q>
 
 \> [[Ren: No witnesses.]]
 
 
 :: Ren: No witnesses. [vore]
-Your vision goes dark. Your ears feel slobbery. All you can smell is fish... What happened?
 
-Ren glomps <%=s.rm?'his':'her'%> lips over your head, and begins working to squeeze it into <%=s.rm?'his':'her'%> throat. You try to squirm free, but <%=s.rm?'he':'she'%>'s gripping your body too tightly.
+Ren glomps <%=s.rm?'his':'her'%> lips over your head, and begins working to squeeze it into <%=s.rm?'his':'her'%> throat. You try to squirm free, but <%=s.rm?'he':'she'%>'s gripping your body too tightly. Your vision goes dark. The fur on your ears feel slobbery. All you can smell is fish...
 
 You look up at your destination, and wince slightly. The fox's pulsating throat keeps blasting you with hot, putrid air. <%=s.rm?'He':'She'%> seems to be hyperventilating as <%=s.rm?'he':'she'%> eats you.
 
-\> [[Struggle for freedom!]]
-
 \> [[Try persuasion?]]
+
+\> [[Struggle for freedom!]]
 
 
 :: Try persuasion? [vore]
@@ -222,9 +221,11 @@ You open your mouth to squeal one last plea for mercy. Unfortunately, you do thi
 
 :: Struggle for freedom! [vore]
 
+*CW: Accidental mauling. Blood.*
+
 You thrash your arms and legs, trying to free yourself. Instinctively, the fox sinks <%=s.rm?'his':'her'%> teeth into the flesh of your neck, something <%=s.rm?'he':'she'%> immediately regrets.
 
-You feel stinging pain as Ren releases you, and you collapse the garage floor. Everything feels hot and blurry. Then you fall unconscious.
+You feel stinging pain as Ren releases you, and you collapse weakly to the garage floor. Everything feels hot and blurry. Then you fall unconscious.
 
 <q class="ren">😨😨🥩🩸</q>
 
@@ -266,28 +267,88 @@ You scramble around inside to get Ren's attention, and ask <%=s.rm?"him":"her"%>
 
 <q class="ren">😕 W-well,</q> <%=s.rm?"he":"she"%> says, <q class="ren">I didn't want you to 🐇💨 escape and snitch on me. Then it was kinda like my body just took over? 🦊<!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%></q>
 
-You say you honestly weren't gonn rat <%=s.rm?"him":"her"%> out.
+You say weren't gonna rat <%=s.rm?"him":"her"%> out, honestly.
 
 <q class="ren">Oh,</q> <%=s.rm?"he":"she"%> replies, rubbing <%=s.rm?"his":"her"%> gut bashfully. <q class="ren">Well, what's done is done... 😏</q>
 
 \> [[Can you get me out of here?]]
 
-:: Can you get me out of here?
+:: Can you get me out of here? [vore]
 
-Ren puts a paw on <%=s.rm?"his":"her"%> chin. <q class="ren">Well, I... 🤔  don't actually know.</q>
+Ren puts a paw on <%=s.rm?"his":"her"%> chin. <q class="ren">Well, I... 🤔  don't actually know?</q>
 
 <%=s.rm?"He":"She"%>... doesn't know?
 
-<q class="ren">This is actually my first time doing something like this... 😳 Like, I could try throwing you up? But that sounds p gross tbh. 🤢</q>
+<q class="ren">This is actually my first time eating someone whole like this... 😳 Like, I could try throwing you up? But that sounds p gross tbh. 🤢</q>
+
+\> [[...Could you try?]]
 
 
-:: Ren route ending
+:: ...Could you try? [vore]
 
-// TODO: Ren is about to try to throw you up, but then hears a
+You're surprised (and honestly, impressed) to hear this is <%=s.rm?"his":"her"%> first time, considering how fast it went by. Still, your life and Reese's depends on getting out of here. You ask Ren to try throwing you up.
+
+<q class="ren">😕 I mean I guess...</q>  <%=s.rm?"he":"she"%> says. <q class="ren">I'd feel really bad if I ☠️ digested you, you seem nice... Although you might finally make my  <%=s.rm?"🍑 ass":"🍈 chest"%> fill out...</q>
+
+Focus, you say! You need <%=s.rm?"him":"her"%> to get out of here.
+
+<q class="ren">Fine... 😒</q> Ren begins slowly sticking a claw into <%=s.rm?"his":"her"%> throat. <q class="ren">Here goes... 🤢</q> Suddenly, you hear the garage's doorknob rattle. <q class="ren">😧 Oh crap,</q> Ren says.
+
+\> [[What now?]]
+
+
+:: What now? [vore]
+
+You hear pounding on the door <q class="ren">Y'know those 🐴 horses I mentioned earlier?</q>
+
+You squint. The ones <%=s.rm?"he":"she"%> said would never notice?
+
+<q class="ren">Yeah, 😬</q> Ren says, <q class="ren">they noticed. 🙊</q>
+
+A gruff, masculine voice yells through the door, <q>What's goin' on in there?</q>
+
+<q class="ren">Nothing!</q> Ren yells back, <q class="ren">Just normal, consensual vore! 🦊<%=s.rm?"♂":""%>🤰</q> You feel <%=s.rm?"his":"her"%> belly sag and slosh around you, as<%=s.rm?"he":"she"%> quickly stands up and rushes over to the truck and climbs into the driver's seat.
+
+\> [[Ren: Getaway.]]
+
+
+:: Ren: Getaway. [vore]
+
+*CW: Hostage situation. Grand theft auto.*
+
+#### TODO: Write this ending.
+
+Ren hops in the driver's seat and books it out, just as Basil enters the garage. Basil calls the cops.
+
+Ren flees onto the interstate, threatening to digest you. There's a high-octane car-chase, but you don't get to see any of it because you're still in a fox gut.
+
+At a key moment, you have the choice to struggle or remain still.
+
+\> [[Struggle inside Ren.]] *(CW: Fatal digestion)*
+
+\> [[Ren Non-Fatal Ending]]
+
+:: Struggle inside Ren. [vore]
+
+You kick around, distracting Ren (<q.ren>Nnnng~ 😩</q>), and breaking <%=s.rm?"his":"her"%> focus long enough for <%=s.rm?"him":"her"%> to not notice a police barricade ahead (<q.ren>😦🚔</q>). <%=s.rm?"He":"She"%> has no choice but to stop.
+
+Ren is detained by police. You weakly attempt to get their attention by yelling and squirming, but they assume you're too far gone, and allow Ren to digest you (<q.ren>😏☠️</q>) as they haul <%=s.rm?"him":"her"%> off.
 
 ### Game Over.
 
-<% setup.addAchievement("🦊🍑😘 (Ren Vore Ending)"); %>
+\> <a0 onclick="setup.undo()">Undo</a>
+
+:: Ren Non-Fatal Ending [vore]
+
+Ren ditches the truck and escapes over a highway divider into the woods.
+
+After <%=s.rm?"he":"she"%> loses the cops, you convince <%=s.rm?"him":"her"%> to throw you up, and drops you at home, no worse for wear, and disappears into the night.
+
+The next day, you hear a knock on your door, and open it to find <%=s.rm?"Basil":"Lacey"%> (switch between Basil/Lacey depending on whether they picked male/female Ren) who is extremely pissed.
+
+### Game Over.
+
+<% setup.addAchievement("🦊🍑😘 (Ren Non-Fatal Ending)"); %>
 
 \> <a0 onclick="setup.undo()">Undo</a>
 
