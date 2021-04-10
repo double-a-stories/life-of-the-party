@@ -1,34 +1,34 @@
 :: Help [no_checkpoint]
 
-\> <a0 onclick="setup.undo()">Go back.</a>
-
 ### Keyboard controls
-
-In addition to pointer controls, this game can be played entirely through the keyboard. If this causes problems, you can disable it below.
-
-\> <a0 onclick="localStorage.noKeyboard = localStorage.noKeyboard ? '' : true;" data-passage="<%= passage.name %>"><%-localStorage.noKeyboard?"Enable":"Disable"%> keyboard controls</a>
 
 <% if (!localStorage.noKeyboard) { %>
 
-#### Basic Navigation
+* `W (↑) ` *Select previous link.*
+* `S (↓)` *Select next link.*
+* `E (⏎)` *Use selected link.*
+* `A (←)` *Undo last command.*
+* `D (→)` *Redo last command.*
 
-`W (↑) ` *Select previous link.*
+In addition to pointer controls, this game can be played entirely through the keyboard. If this causes problems, you can disable it below.
 
-`S (↓)` *Select next link.*
-
-`E (⏎)` *Use selected link.*
-
-#### Time Travel
-
-`A (←)` *Undo last command.*
-
-`D (→)` *Redo last command.*
-
+<% } else { %>
+Keyboard controls are currently disabled.
 <% } %>
 
-:: Credits
 
-*<%- story.name %>* was written and developed by <a href="https://aryion.com/g4/user/DoubleA">Double-A</a>.
+\> <a0 onclick="localStorage.noKeyboard = localStorage.noKeyboard ? '' : true;" data-passage="<%= passage.name %>"><%-localStorage.noKeyboard?"Enable":"Disable"%> keyboard controls</a>
+
+### Play offline
+
+\> <a href="" download="<%- story.name %> <%- story.version %>.html">Download</a>
+
+This file is licensed under the Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> license, meaning you are free to distribute and modify it for non-commercial purposes.
+
+### Credits
+
+This story was written and developed by <a href="https://aryion.com/g4/user/DoubleA">Double-A</a>.
+
 
 #### Special thanks to
 

@@ -29,6 +29,8 @@ tw-passage > * {
 }
 </style>
 
+<%= story.render("Local play message") %>
+
 <%= story.render("Logo") || "" %>
 
 <div>
@@ -49,4 +51,7 @@ tw-passage > * {
 
 *CW: This story focuses heavily on oral vore, fatal vore, and unwilling digestion. It also contains scenes containing masturbation, either by the player or their predator. If you find such material objectionable, please read at your own discretion.*
 
-\> [[Credits]]
+:: Local play message
+<% if (location.protocol == "file:") { %>
+<p style="text-align: center">This is an <strong>offline version</strong> of <i><%- story.name %></i>. It may not be the latest revision.</p>
+<% } %>
