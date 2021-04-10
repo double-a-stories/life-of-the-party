@@ -1,7 +1,6 @@
-<!-- Planned route -->
-
-<!-- Byron is the gray wolf in the red flannel. He tries to impress you with obscure music knowledge. He accuses you of being a poser but you effortlessly name nine songs and begrudgingly gain his respect.
-A self-styled hipster poet whose alleged sensitivity is just a front for his obviously predatory desires. -->
+<!-- Planned route:
+In the living room is Byron, a hipster wolf guitarist with poetic aspirations and delusions of being a high-class gentleman. He tries to gatekeep you with flowery speech and obscure knowledge, but begrudgingly admits his respect for you.
+Hollis realizes that his sensitive exterior is just a front for his predatory desires, and rejects him. He doesn't take it well. -->
 
 :: Byron's font quirk [stylesheet]
 
@@ -104,13 +103,15 @@ He narrows his eyes, and scowls, <q class="byron">...You insult me gravely, litt
 
 :: Don't take it.
 
-Byron growls at you, now openly scowling. <q class="byron">You disgrace me and my name! A gentleman cannot let a slight like that go unpunished. You *will* submit to me.</q> He rises to his feet, slings his guitar over his back, and offers you his paw.
+Byron snarls at you, now openly scowling. "Gods, you prey are all the same!"
+
+He pops his collar. <q class="byron">You disgrace me and my name! A gentleman cannot let a slight like that go unpunished. You *will* submit to me.</q> He rises to his feet, slings his guitar over his back, and offers you his paw.
 
 <q class="byron">Stand up,</q> he commands.
 
 You tell him you're not gonna-
 
-<q class="byron">*Now.*</q>
+He bares his fangs. <q class="byron">*Now.*</q>
 
 \> [[Stand up.]]
 
@@ -143,7 +144,9 @@ You feel the paw on your shoulder grip you tighter.
 
 :: Get off of me, you creep! [vore]
 
-// TODO: You cry out and try to get away, causing Byron to put a huge bloody gash on your back. You quickly faint from blood loss. Basil completely clobbers Byron in the face. Total party foul, and everything turns into chaos. You pass out from blood loss.
+// TODO: You cry out and try to get away, causing Byron to put a huge bloody gash on your back. You quickly faint from blood loss. Basil completely clobbers Byron in the face.
+
+You wake up the next day in Basil's bedroom, bandaged up. Clif walks in, and comes onto you.
 
 ### Game Over.
 

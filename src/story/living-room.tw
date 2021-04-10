@@ -1,5 +1,4 @@
-<!-- remember when i said the broom closet had the worst code? i was wrong.
-this passage is much, much worse. -->
+<!-- You go to the living room and dance. This room has a bunch of random world-building flavor text, and can branch off into a few different routes. The script that manages this part is really really awful. -->
 :: Dance a little.
 <%
 const visits = visited(passage.id);

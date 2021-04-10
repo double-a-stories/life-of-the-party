@@ -1,3 +1,5 @@
+<!-- While dancing in the living room, you meet up with Basil Armstrong, a jock you knew in high school. This is his house. You flirt, and eventually offer to let him eat you. He does so, but doesn't adequately inform you that he plans to keep you. You digest as the rest of the party looks on excitedly. -->
+
 :: Wink back at Basil.
 <% localStorage.talkedToBasil = true; %>
 
