@@ -7,7 +7,7 @@
 	  </div>
 	</div>
 	<div.header-nav-group>
-	  <div>[[Keyboard controls]]</div>
+	  <div>[[Help]]</div>
 	  <span><%- story.version %></span>
 	</div>
   </div>

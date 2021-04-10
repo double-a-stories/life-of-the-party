@@ -19,7 +19,6 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: lighter;
-  display: flex;
   text-align: center;
 }
 .logo__horse {

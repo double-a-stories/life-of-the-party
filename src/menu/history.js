@@ -19,6 +19,7 @@ setup.restart = () => {
   story.show(story.startPassage); // load startPassage
 }
 // save a Snowman checkpoint on every passage.
-$(window).on('sm.passage.shown', e => {
+$(window).on('sm.passage.shown', (e, {passage}) => {
+  if (!passage.tags.includes("no_checkpoint"))
   story.checkpoint(); // required for "undo" to restore previous state
 })

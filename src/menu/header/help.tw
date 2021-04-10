@@ -1,0 +1,37 @@
+:: Help [no_checkpoint]
+
+\> <a0 onclick="setup.undo()">Go back.</a>
+
+### Keyboard controls
+
+In addition to pointer controls, this game can be played entirely through the keyboard. If this causes problems, you can disable it below.
+
+\> <a0 onclick="localStorage.noKeyboard = localStorage.noKeyboard ? '' : true;" data-passage="<%= passage.name %>"><%-localStorage.noKeyboard?"Enable":"Disable"%> keyboard controls</a>
+
+<% if (!localStorage.noKeyboard) { %>
+
+#### Basic Navigation
+
+`W (↑) ` *Select previous link.*
+
+`S (↓)` *Select next link.*
+
+`E (⏎)` *Use selected link.*
+
+#### Time Travel
+
+`A (←)` *Undo last command.*
+
+`D (→)` *Redo last command.*
+
+<% } %>
+
+:: Credits
+
+*<%- story.name %>* was written and developed by <a href="https://aryion.com/g4/user/DoubleA">Double-A</a>.
+
+#### Special thanks to
+
+* <a href="https://twinery.org/">Twee/Twine</a> - A tool for building interactive stories, by <a href="https://chrisklimas.com/">Chris Klimas</a> and the <a href="https://iftechfoundation.org/">IFTF</a>
+* <a href="https://videlais.github.io/snowman/2/">Snowman</a> story format by <a href="https://github.com/videlais">@videlais</a>
+* <a href="https://www.motoslave.net/tweego/">Tweego</a> - An interactive fiction compiler by <a href="https://github.com/tmedwards">@tmedwards</a>

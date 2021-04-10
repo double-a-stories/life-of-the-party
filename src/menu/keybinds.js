@@ -50,6 +50,9 @@ controls.goNext = () => {
 }
 
 $(document).keydown(function (e) {
+  if (localStorage.noKeyboard) {
+    return;
+  }
   if ($(e.target).is("input[type!='button'], [contenteditable]") &&
     !e.key.startsWith("Arrow")) {
     return;
