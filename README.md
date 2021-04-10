@@ -10,7 +10,7 @@ Latest stable build: https://double-a-stories.github.io/life-of-the-party/
 
 The source code underlying this project, including passage styling and Javascript, is licensed under the [MIT-0 license](/LICENSE-CODE). You may use any or all of of this code for any purpose **without attribution**.
 
-All prose and image content of this story is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). You are free to share and adapt the content in any medium or format **with attribution**, and for **non-commercial purposes**.
+All prose and image content of this story is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). You are free to share and adapt the content in any medium or format **with attribution** for **non-commercial purposes**.
 
 ## Building from source
 
