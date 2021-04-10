@@ -52,16 +52,6 @@ a:active {
   padding-left: 0;
 }
 
-.textchat {
-  padding: 1rem;
-  font-size: smaller;
-  font-family: monospace;
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid var(--light);
-  border-radius: 0.25rem;
-  margin-bottom: 1rem;
-}
-
 /* Story Styles (using passage tags) */
 body[data-tags~="vore"] {
   --background: #fbb;

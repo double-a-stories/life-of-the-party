@@ -385,7 +385,6 @@ setup.addAchievement("A Two for One Meal (Lacey Vore Ending)");
 
 \> [[Restart|Start]]
 
-
 :: Epilogue: Lacey Post Vore. [morning]
 An hour later, Lacey is sitting on the toilet, gradually squeezing out plop after plop of digested guinea pig and rabbit.&nbsp;The mare's powerful intestines have already absorbed all the nutrients she could get out of them, and pulverised their remains into firm round balls of horse shit. The two aren't hard to pass, just a little time-consuming.
 
@@ -396,48 +395,73 @@ She reaches for her phone.
 \> [[Lacey: Text Clif.]]
 
 
-:: Lacey: Text Clif. [morning]
-<style>
+:: Lacey chat styles [stylesheet]
 .textchat {
-  padding: 1rem;
-  font-size: 90%;
-  font-family: monospace;
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid var(--light);
-  border-radius: 0.25rem;
+    padding: 1rem;
+    font-size: smaller;
+    font-family: Roboto, sans-serif;
+    background: white;
+    border: 1px solid var(--light);
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.textchat > * {
+  border-radius: 1em;
+  padding: 0.5rem;
+  background: #ddd;
   margin-bottom: 1rem;
 }
-</style>
+
+.textchat .lacey {
+  align-self: flex-end;
+  color: white;
+  --color: white;
+  --light: (255, 255, 255, 0.9);
+}
+
+.textchat p.lacey {
+  align-self: flex-end;
+  background: #66d;
+  border-top-right-radius: 0;
+}
+
+.textchat .clif {
+  align-self: flex-start;
+  border-top-left-radius: 0;
+}
+
+.textchat a, .textchat [role="img"] {
+  cursor: not-allowed;
+}
+
+
+:: Lacey: Text Clif. [morning]
 
 <div class="textchat">
 
-L: Hey big dog, got any new snacks on your radar?
+<p class="lacey">Hey big dog, any new snacks on your radar?</p>
 
-C: not yet babe, but i can try to find some willing ones on the grumblegeek forums?
+<p class="clif">not yet babe, but i can try to find some willing ones on the grumblegeek forums?</p>
 
 </div>
 
-Lacey stands up, and snaps Clif a photo of her latest "handiwork" before thoughtlessly flushing it.
+Lacey stands up, and records a video as she nonchalantly flushes her latest "handiwork" down the toilet. It swirls away into her house's well-worn plumbing.
 
 <div class="textchat">
-
-L: <em>attachment.jpg</em>
-
-L: Better find one soon, or this'll be you next! ;V ;V
-
-C: ahaha, don't even joke babe ^^
-
-L: Who said I was joking? We both know you've got a kink for preds...
-
-C: ...ur kidding?
-
-L: Guess we'll find out tonight };3
-
-C: o///o !!!
-
+<div role="img" class="placeholder-img lacey" style="width: 20rem; height: 15rem; background: radial-gradient(ellipse at 60% 40%, #5f3c0b, transparent),   radial-gradient(ellipse at top, #eeeeee, transparent), radial-gradient(ellipse at 30% 70%, #287486, transparent), radial-gradient(ellipse at 40% 40%, white, transparent)"><span>Could not load: attachment.vp8 (1.2 MiB)</span></div>
+<p class="clif">woof, big one :*o</p>
+<p class="lacey">Better find one soon, or this'll be you next! ;=V</p>
+<p class="clif">lol, don't even joke babe ^ ^</p>
+<p class="lacey">Who's joking? We both know you've got a kink for preds...</p>
+<p class="clif">...ur kidding</p>
+<p class="lacey">Guess we'll find out tonight }:=)</p>
+<p class="clif">o///o !!!</p>
 </div>
 
-Lacey Armstrong yawns and stretches, ready for a new day, full of new meals. Soon, she'd forget all about those two delicious meals who comprised her last bowel movement.
+Lacey Armstrong yawns and stretches, ready for a new day, full of new meals. Soon, she'd forget all about the two delicious meals who comprised her last bowel movement.
 
 ### The End.
 
