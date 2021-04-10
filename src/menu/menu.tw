@@ -28,14 +28,13 @@ tw-passage > * {
   margin-bottom: 5rem;
 }
 </style>
-
-<%= story.render("Local play message") %>
-
 <%= story.render("Logo") || "" %>
 
 <div>
 
 \> [[Life of the Party.]]
+
+<%= story.render("Local play message") %>
 
 </div>
 
