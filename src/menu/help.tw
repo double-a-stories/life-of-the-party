@@ -23,8 +23,8 @@ Keyboard controls are currently disabled.
 
 \> <a href="" download="<%- story.name %> <%- story.version %>.html">Download</a>
 
-This file is licensed under the Creative Commons <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> license. Feel free to share it with someone you think might like it.
+This file is licensed under the Creative Commons <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> license. Feel free to share it with someone you think might like it.
 
 ### Credits
 
-This story was written and developed by <a href="https://aryion.com/g4/user/DoubleA">Double-A</a>. Feel free to leave feedback <a href="<%-story.mainURL %>>">here</a>!
+This story was written and developed by <a href="https://aryion.com/g4/user/DoubleA" target="_blank">Double-A</a>. Feel free to leave feedback <a href="<%-story.mainURL %>>" target="_blank">here</a>!
