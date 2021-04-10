@@ -67,7 +67,7 @@ Dance a little more.
 if (!setup.partyDanceLiterals) {
   setup.partyDanceLiterals = [
     "You see a group of labradors cheering on their friend as he attempts to do a keg-stand.",
-"A pair of black mice are looking on with awe and dismay as a dog proudly presents his enormous, swollen belly.",
+"A pair of black cats are looking on with awe as a dog proudly presents his enormous, swollen belly.",
 `The speakers start playing a techno remix of Marie Predatora's latest rap single: "Belly Drop, Belly Drop (Belly Drop)."`,
 `A grey wolf with a huge protruding gut accidentally bumps into you. "S'cuse me," she mutters as she walks away.`,
 `Your ears perk up: the speakers are playing one of your favorite songs by the obscure R&B group, LÖUD GRÜMBLE. You tap your furry toes happily.`,
