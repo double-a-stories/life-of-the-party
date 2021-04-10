@@ -23,15 +23,8 @@ Keyboard controls are currently disabled.
 
 \> <a href="" download="<%- story.name %> <%- story.version %>.html">Download</a>
 
-This file is licensed under the Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> license, meaning you are free to distribute and modify it for non-commercial purposes.
+This file is licensed under the Creative Commons <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> license. Feel free to share it with someone you think might like it.
 
 ### Credits
 
-This story was written and developed by <a href="https://aryion.com/g4/user/DoubleA">Double-A</a>.
-
-
-#### Special thanks to
-
-* <a href="https://twinery.org/">Twee/Twine</a> - A tool for building interactive stories, by <a href="https://chrisklimas.com/">Chris Klimas</a> and the <a href="https://iftechfoundation.org/">IFTF</a>
-* <a href="https://videlais.github.io/snowman/2/">Snowman</a> story format by <a href="https://github.com/videlais">@videlais</a>
-* <a href="https://www.motoslave.net/tweego/">Tweego</a> - An interactive fiction compiler by <a href="https://github.com/tmedwards">@tmedwards</a>
+This story was written and developed by <a href="https://aryion.com/g4/user/DoubleA">Double-A</a>. Feel free to leave feedback <a href="<%-story.mainURL %>>">here</a>!

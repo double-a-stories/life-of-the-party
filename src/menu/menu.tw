@@ -53,5 +53,5 @@ tw-passage > * {
 
 :: Local play message
 <% if (location.protocol == "file:") { %>
-<p style="text-align: center">This is an <strong>offline version</strong> of <i><%- story.name %></i>. It may not be the latest revision.</p>
+<p style="text-align: center">This is an <strong>offline version</strong> of <i><%- story.name %></i>. You can check for the latest revision <a href="<%-story.mainURL %>>">here</a>.</p>
 <% } %>
