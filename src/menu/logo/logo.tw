@@ -1,9 +1,8 @@
 :: Logo [hide]
+<!-- The logo text is drawn using fake small caps. Creating them with inline span elements, rather than the font-variant-caps property makes them render consistently across Firefox and Chrome. -->
 <div class="logo">
-  <div class="logo__main">
-  <img role="presentation" class="logo__horse" src="<%-story.render("logo-horse-left")%>">
-	<h1 class="logo__title">Life of&nbsp;the Party</h1>
-	<img role="presentation" class="logo__horse" src="<%-story.render("logo-horse-right")%>">
-  </div>
-	<p class="logo__subtitle">A Furry Vore Adventure by Double-A</p>
+<h1 class="logo__title">
+<img role="presentation" class="logo__horse" src="<%-story.render("logo-horse-left")%>"><span>L<span class="logo__sc">ife of the </span>P<span class="logo__sc">arty</span></span><img role="presentation" class="logo__horse" src="<%-story.render("logo-horse-right")%>">
+</h1>
+<p class="logo__subtitle">A Furry Vore Adventure by Double-A</p>
 </div>
