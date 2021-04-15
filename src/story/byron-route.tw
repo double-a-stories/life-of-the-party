@@ -1,6 +1,6 @@
 <!-- Planned route:
 In the living room is Byron, a hipster wolf guitarist with poetic aspirations and delusions of being a high-class gentleman. He tries to gatekeep you with flowery speech and obscure knowledge, but begrudgingly admits his respect for you.
-Hollis realizes that his sensitive exterior is just a front for his predatory desires, and rejects him. He doesn't take it well. -->
+Hollis realizes that Byron's sensitive exterior is just a front for his predatory desires, and rejects him. He doesn't take it well. -->
 
 :: Byron's font quirk [stylesheet]
 
@@ -12,6 +12,8 @@ Hollis realizes that his sensitive exterior is just a front for his predatory de
 :: Talk to Byron.
 
 *This route is a W.I.P.*
+
+*CW: Negging. Threats and coercion. Non-consensual.*
 
 You walk over to the wolf with the guitar. Looks like he's really into it. He continues sitting on the couch, strumming bar chords for a moment, but finally stops playing and acknowledges you with a nod.
 
@@ -58,7 +60,7 @@ You notice that underneath his flannel, he's wearing a t-shirt from an emo rock 
 
 You scowl and remind him that you were a teenager once too! *You* just happened to grow out of it!
 
-<q class="byron">Oh really?</q> he raises an eyebrow. <q class="byron">Then I guess you should have no problem naming three of their albums?</q>
+<q class="byron">Oh really?</q> he raises an eyebrow. <q class="byron">Then I guess you should have no problem naming three Foxes albums?</q>
 
 You roll your eyes.
 
@@ -71,7 +73,7 @@ You roll your eyes.
 
 :: Name 3 of their albums.
 
-<q class="byron">...Hm.</q> The wolf raises his eyebrows as you correctly rattle off three Foxes albums. He seems slightly impressed, and offers you a seat on the couch next to him. <q class="byron">My name is Byron.</q>
+<q class="byron">...Hm.</q> The wolf raises his eyebrows as you correctly rattle off three album names. He seems slightly impressed, and offers you a seat on the couch next to him. <q class="byron">My name is Byron.</q>
 
 Hollis, you reply smugly.
 
@@ -103,11 +105,7 @@ He narrows his eyes, and scowls, <q class="byron">...You insult me gravely, litt
 
 :: Don't take it.
 
-Byron snarls at you, now openly scowling. "Gods, you prey are all the same!"
-
-He pops his collar. <q class="byron">You disgrace me and my name! A gentleman cannot let a slight like that go unpunished. You *will* submit to me.</q> He rises to his feet, slings his guitar over his back, and offers you his paw.
-
-<q class="byron">Stand up,</q> he commands.
+Byron snarls at you, now openly scowling. <q class="byron">Gods, you prey are all the same!</q> He pops his collar. <q class="byron">You disgrace me and my name! A gentleman cannot let a slight like that go unpunished. You *will* submit to me.</q> He rises to his feet, slings his guitar over his back, and offers you his paw. <q class="byron">Stand up,</q> he commands.
 
 You tell him you're not gonna-
 
@@ -117,8 +115,6 @@ He bares his fangs. <q class="byron">*Now.*</q>
 
 
 :: Stand up.
-
-*CW: Violent threats and coercion.*
 
 <q class="byron">Good.</q> Byron places his paw firmly on your lower back. You feel his claws outstretched, threatening to shred through your top and into the flesh beneath. <q class="byron">Now, let's go upstairs. Easy does it.</q>
 
@@ -142,7 +138,11 @@ You feel the paw on your shoulder grip you tighter.
 
 <q class="byron">Right,</q> Byron mutters.
 
+\> [[Follow Byron upstairs.]]
+
 :: Get off of me, you creep! [vore]
+
+*CW: Blood, personal injury*
 
 // TODO: You cry out and try to get away, causing Byron to put a huge bloody gash on your back. You quickly faint from blood loss. Basil completely clobbers Byron in the face.
 
