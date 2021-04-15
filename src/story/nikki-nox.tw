@@ -3,3 +3,44 @@ You get extremely drunk in the living room, and black out. You awake to find two
 
 They're vore voyeurs, and try to talk you into eating a micro.
 -->
+
+:: Drunk effect [stylesheet]
+[data-tags~="drunk"] {
+  filter: blur(1px);
+  animation: rock 5s ease-in-out infinite, blur 3s ease-in-out infinite;
+}
+
+@keyframes rock {
+  0% { transform: rotateY(0deg);}
+  50% { transform: rotateZ(1deg);}
+  100% { transform: rotateY(0deg); }
+}
+
+@keyframes blur {
+  0% { filter: blur(0); }
+  50% { filter: blur (10px); }
+  100% { filter: blur(0); }
+}
+
+
+:: Get very very drunk. [dark drunk]
+
+You take another drink of the spiked punch, wrinkling your nose at the taste.
+
+It feels like the room is spinning. You stagger like an exaggerated cartoon depiction of a drunk person.
+
+You have a dream.
+
+\> [[Wake up in the broom closet.]]
+
+:: Wake up in the broom closet.
+
+You wake up.
+
+You
+
+\> [[Who are you?]]
+
+:: Who are you?
+
+So begins the Nikki/Nox route. Not done yet!
