@@ -21,7 +21,7 @@ Keyboard controls are currently disabled.
 
 ### Play offline
 
-Click below to download a local copy of this game. You're free to distribute it under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> license.
+Click below to download a local copy of this game. You're free to distribute and modify it under the terms of the CC BY-NC-SA 4.0 license.
 
 \> <a href="" download="<%- story.name %> <%- story.version %>.html">Download</a>
 
