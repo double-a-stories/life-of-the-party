@@ -75,17 +75,13 @@ In the backyard of a suburban house party, Hollis Freeley opens their eyes, and 
 
 :: Be the hyena. [dark otherstory]
 
-<span class="ana">
+Your name is Ana. You're a spotted hyena, currently chilling on a bench outside a house party like a total loser.
 
-My name is Ana. I'm a spotted hyena, currently chilling on a bench outside a vore party like a total loser.
+You showed up about an hour ago, but big crowds freak you out, so you came out here to get some air and clear your head. You're here because, like most young predators, you want to eat someone. You want to feel prey writhing around inside your belly. You'd go in there and grab one, but the noise is too overwhelming.
 
-I showed up about an hour ago, but big crowds freak me out, so I came out here to get some air and clear my head. I'm here because I want to eat somebody. I want to feel prey writhing around inside my belly. I'd go in there and grab one, but the noise is too overwhelming.
+A rabbit walked out here a few minutes ago, and zoned out while staring at the sky. You think they're either high, or having a dissociative episode.
 
-A rabbit walked out here a few minutes ago, and zoned out while staring at the sky. I think they're either high, or having a dissociative episode.
-
-What do i do?
-
-</span>
+What do you do?
 
 \> [[Eat the rabbit.]]
 
@@ -96,24 +92,33 @@ What do i do?
 
 :: Eat the rabbit. [dark otherstory]
 
-<div class="ana">
-Great idea, voice inside my head. I walk over to the rabbit.
+<i.ana>Great idea, voice inside my head,</i> you think. You walk over to the rabbit.
 
-<span class="hollistalk">"Um, hi there!"</span> they say, clearly nervous to see me. I have that effect on people sometimes.
+<q.hollistalk>Um, hi there!</q> they say, clearly slightly nervous to see you. You have that effect on people sometimes. Probably because you're 6′10″ and your whole body was designed for shredding meat into tiny pieces.
 
-They flinch as I nonchalantly grab them up in my paws. <span class="hollistalk">"Woah, wait!"</span> they cry out, but I'm too hungry to listen. Their eyes go wide as I stuff their ears into my mouth. They try to fight me at first, but eventually calm down.
+They flinch as you nonchalantly grab them up in my paws. <q.hollistalk>Woah, wait!</q> they cry out, but you're too hungry to listen. Their eyes go wide as you stuff their ears into your mouth.
 
-With one huge gulp, I eat the rabbit.
+They try to fight you at first, but eventually calm down.
 
-Burp. In under a minute, I've swallowed them all up, and soon they're thrashing around inside me. A familiar fullness fills my belly, and I sigh with relief.
+\> [[Swallow them.]]
 
-<span class="hollistalk">"Y-you're gonna digest me, aren't you..."</span> they say.
+\> [[Swallow them.]]
 
-I pat my belly and reply happily, yup!
+\> [[Swallow them.]]
 
-<span class="hollistalk">"...Alright,"</span> they say, settling in to their fate.
+:: Swallow them. [dark otherstory]
 
-Wow, this route got pretty meta, huh? Whatever dumb jerk wrote this crap probably thinks they're *reeeal* clever.</span>
+With one huge gulp, you swallow the rabbit.
+
+Burp. In under a minute, they're all the way inside you. A familiar fullness fills your belly, and you sigh with relief.
+
+<q.hollistalk>Y-you're gonna digest me, aren't you...</q> they say.
+
+You pat your belly and reply happily, yup!
+
+<q.hollistalk>...Alright,</q> they say, settling in to their fate.
+
+You begin to drift off to a nap. <i.ana>Wow,</i> you think, <i.ana>this route got pretty meta, huh? Whatever dumb jerk wrote this crap probably thinks they're *reeeal* clever.</i>
 
 </div>
 
