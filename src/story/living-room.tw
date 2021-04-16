@@ -40,19 +40,19 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 
 <!-- LIVING ROOM COMMANDS -->
 
-\> <a0 data-passage="Dance a little."><% if (s.partyFlavorGutbump) { %>
-N-no problem!
+<% if (s.partyFlavorGutbump) { %>
+\> [[N-no problem!|Dance a little.]]
+<% } else if (s.partyFlavorMicroMouse) { %>
+\> [[Do nothing.|Watch the owl eat.]]
 <% } else if (s.partyFlavorOwl) {%>
-Politely ignore her.
+\> [[N-no problem!|Dance a little.]]
 <% } else if (s.partyFlavorLabrador) { %>
-Y-you too?
+\> [[Y-you too?|Dance a little.]]
 <% } else {%>
-Dance a little more.
+\> [[Dance a little more.|Dance a little.]]
 <% } %></a>
 
 <% if (s.partyFlavorMicroMouse) { %>
-\> [[Do nothing.|Watch the owl eat.]]
-
 \> [[H-hey, don't do that!|Intervene on the owl.]]
 <% } %>
 
@@ -142,13 +142,13 @@ You look toward the punch bowl and scowl with disgust. A labrador notices and el
 
 :: Watch the owl eat.
 
-// TODO: You watch the owl (Henrietta) snarf down the mouse with a satisfied smile. You feel some guilt, and a slight arousal.
+// TODO: You watch the owl snarf down the mouse with a satisfied smile. You feel some guilt, and a slight arousal.
 
 \> [[Dance a little more.|Dance a little.]]
 
 :: Intervene on the owl.
 
-// TODO: You rescue the mouse. She's a small and gray-furred dwarf mouse named Kaia. She thanks you for the help, and blames herself for being captured so carelessnly. Like you, she's here with a friend (girlfriend, actually), and would very much like to go home.
+// TODO: You rescue the mouse. She's a small and white-furred dwarf mouse named Kaia. She thanks you for the help, and blames herself for being captured so carelessly. Like you, she's here with a friend (girlfriend, actually), and would very much like to go home.
 
 You drop her off on the bannister, and say you'll keep an eye out for another mouse.
 
