@@ -1,5 +1,5 @@
 <!-- Planned route:
-In the living room is Byron, a hipster wolf guitarist with poetic aspirations and delusions of being a high-class gentleman. He tries to gatekeep you with flowery speech and obscure knowledge, but begrudgingly admits his respect for you.
+In the living room is Byron Bladd, a hipster wolf guitarist with poetic aspirations and delusions of being a high-class gentleman. He tries to gatekeep you with flowery speech and obscure knowledge, but begrudgingly admits his respect for you.
 Hollis realizes that Byron's sensitive exterior is just a front for his predatory desires, and rejects him. He doesn't take it well. -->
 
 :: Byron's font quirk [stylesheet]
@@ -11,7 +11,7 @@ Hollis realizes that Byron's sensitive exterior is just a front for his predator
 
 :: Talk to Byron.
 
-*This route is a W.I.P.*
+*This route is **unfinished content.** Proceed at your own risk.*
 
 *CW: Negging. Threats and coercion. Non-consensual.*
 
@@ -58,7 +58,7 @@ You notice that underneath his flannel, he's wearing a t-shirt from an emo rock 
 
 :: Hey, I've done that!
 
-You scowl and remind him that you were a teenager once too! *You* just happened to grow out of it!
+You scowl and inform him that you were a moody teenager once too! *You* just happened to grow out of it!
 
 <q class="byron">Oh really?</q> he raises an eyebrow. <q class="byron">Then I guess you should have no problem naming three Foxes albums?</q>
 
@@ -73,7 +73,7 @@ You roll your eyes.
 
 :: Name 3 of their albums.
 
-<q class="byron">...Hm.</q> The wolf raises his eyebrows as you correctly rattle off three album names. He seems slightly impressed, and offers you a seat on the couch next to him. <q class="byron">My name is Byron.</q>
+<q class="byron">...Hm.</q> The wolf raises his eyebrows as you correctly rattle off three album names. He seems slightly impressed, and offers you a seat on the couch next to him. <q class="byron">I'm Byron Goode. Pleasure to make your acquaintance.</q>
 
 Hollis, you reply smugly.
 
@@ -118,29 +118,31 @@ He bares his fangs. <q class="byron">*Now.*</q>
 
 <q class="byron">Good.</q> Byron places his paw firmly on your lower back. You feel his claws outstretched, threatening to shred through your top and into the flesh beneath. <q class="byron">Now, let's go upstairs. Easy does it.</q>
 
-You grit your teeth, and walk helplessly in lock-step with the wolf as he leads you back out of the living room. You're about to enter the foyer, when a huge horse in a green jacket stops the two of you. You vaguely recognize him as Basil Armstrong, someone you went to high school with.
+You grit your teeth, and walk helplessly in lock-step with the wolf as he leads you back out of the living room. You're about to enter the foyer, when a golden lab in a green jacket stops the two of you.
 
-"Woah," says the horse, "Holly Freeley! Small world, huh?" He points at Byron. "Is this guy bothering you?"
+"Well well," the dog says, "if it isn't Byron the Bad!"
+
+<q class="byron">It's *Bladd*,</q> Byron mutters, tightening his grip on you slightly.
+
+The dog points at Byron and asks, "Is this guy bothering you?"
 
 Byron begins, <q class="byron">No, we were just-</q>
 
-"Let em talk, Wordsworth," Basil interrupts.
+"Let em talk, Wordsworth," the dog interrupts.
 
-You feel the paw on your shoulder grip you tighter.
+\> [[Haha! We're totally cool! Yup!]]
 
-\> [[Nope, haha! We're cool.]]
+\> [[Get this creep off me!]]
 
-\> [[Get off of me, you creep!]]
+:: Haha! We're totally cool! Yup!
 
-:: Nope, haha! We're cool.
+"Well alright then. Have fun you two," the dog says, shooting both of you a wink.
 
-"Well alright then. Have fun you two," Basil says, shooting both of you a wink.
-
-<q class="byron">Right,</q> Byron mutters.
+<q class="byron">Oh,</q> Byron mutters with a half-smile, <q class="byron">We will.</q>
 
 \> [[Follow Byron upstairs.]]
 
-:: Get off of me, you creep! [vore]
+:: Get this creep off me! [vore]
 
 *CW: Blood, personal injury*
 
@@ -154,10 +156,17 @@ You wake up the next day in Basil's bedroom, bandaged up. Clif walks in, and com
 
 \> [[Restart|Start]]
 
+
+:: Follow Byron upstairs.
+
+// TODO: You follow Byron into one of the bedrooms upstairs. He vores you, all while gloating about what an awful rabbit you are.
+
+<% story.render("Byron route end.") %>
+
 :: Byron route end.
 
 ### Route end. (WIP)
 
-<% setup.addAchievement(`Wonder Wolf (Byron Vore Ending)`); %>
+<% setup.addAchievement(`Bladd Ending (Byron Vore Ending)`); %>
 
 \> [[Restart.|Start]]
