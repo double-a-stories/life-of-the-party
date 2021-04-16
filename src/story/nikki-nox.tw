@@ -5,20 +5,19 @@ They're vore voyeurs, and try to talk you into eating a micro.
 -->
 
 :: Drunk effect [stylesheet]
-[data-tags~="drunk"] {
-  filter: blur(1px);
+body[data-tags~="drunk"] {
   animation: rock 5s ease-in-out infinite, blur 3s ease-in-out infinite;
 }
 
 @keyframes rock {
-  0% { transform: rotateY(0deg);}
+  0% { transform: rotateY(-1deg);}
   50% { transform: rotateZ(1deg);}
-  100% { transform: rotateY(0deg); }
+  100% { transform: rotateY(-1deg); }
 }
 
 @keyframes blur {
   0% { filter: blur(0); }
-  50% { filter: blur (10px); }
+  50% { filter: blur (40px); }
   100% { filter: blur(0); }
 }
 
@@ -27,20 +26,106 @@ They're vore voyeurs, and try to talk you into eating a micro.
 
 You take another drink of the spiked punch, wrinkling your nose at the taste.
 
-It feels like the room is spinning. You stagger like an exaggerated cartoon depiction of a drunk person.
+It feels like the room is spinning. You stagger back like an exaggerated cartoon depiction of a drunk person.
 
-You have a dream.
+Woah, this actually feels pretty good. You feel ready to take on the world! Ready to rock this party, and finally become the social butterfly you were always meant to be.
+
+You feel... Hm.
+
+\> [[...???]]
+
+
+:: ...??? [dark drunk]
+
+Your name is Hollis Freeley.
+
+You remember drinking a fifth cup of punch, probably five more than your tiny rabbit body could handle. Then you walked back into the party...
+
+It's, uh, kind of a blur after that.
+
+\> [[What?]]
+
+:: What? [dark drunk]
+
+Your name is Hollis Freeley.
+
+You remember streaks of light and sound. Dancing. Black fur. You can't quite make heads or tails of it.
+
+\> [[Do something?]]
+
+:: Do something? [dark drunk]
+
+Unfortunately, Hollis can't do anything, because Hollis has blacked out.
+
+An hour passes.
 
 \> [[Wake up in the broom closet.]]
 
 :: Wake up in the broom closet.
 
-You wake up.
+You clutch your head groaning as you come to. You're in... a broom closet? It's a small, nondescript room with some towels, linens, and some cleaning supplies.
 
-You
+Two small black cats are hovering over you, waiting for you to wake up.
 
-\> [[Who are you?]]
+"Ooh, they're waking up!" one of them says excitedly.
 
-:: Who are you?
+"Quiet," says the other.
 
-So begins the Nikki/Nox route. Not done yet!
+\> [[Hng, who are you two?]]
+
+:: Hng, who are you two?
+
+"Oh, how rude of us! She's Nikki," says the first cat. "And he's Nox," says the other.
+
+You squint. They look and sound completely identical.
+
+"Pleased to meet you, Hollis!" they both say.
+
+\> [[You know my name?]]
+
+:: You know my name?
+
+"Yes," says Nox.
+
+"You actually said it several times earlier," says Nikki.
+
+You say you don't remember.
+
+"You got pretty juiced," says Nox, "danced with some drunk jocks, and yelled 'My name is Hollis Freeley!!' a couple times."
+
+Geez, that's embarassing.
+
+\> [[What am I doing in here?]]
+
+
+:: What am I doing in here?
+
+"After that, you passed out on the floor," says Nikki.
+
+"So we brought you here! Y'know, so you'd be safe."
+
+\> [[You're not gonna eat me, are you?]]
+
+
+:: You're not gonna eat me, are you?
+
+"Oh dear, no!" says Nikki, "You're far too big for that."
+
+"Besides," Nox considers, "there's two of us, and only one of you! That would hardly be fair!"
+
+"We actually have a rather... different proposal for you," says Nikki.
+
+"It's not sex!" Nox blurts out. Nikki shoots him a look. "Sorry, it sounded like you were offering sex is all."
+
+\> [[Wh-what is it then?]]
+
+
+:: Wh-what is it then?
+
+"Glad you asked," says Nikki, "Nox, if you will?"
+
+Nox reaches into his front pockets, and produces two small white dwarf mice, both about six inches tall. They squint at the sudden exposure to light, and look up all three of you nervously.
+
+// TODO: Nikki talks you into eating one of them.
+
+\> [[Restart.|Start]]
