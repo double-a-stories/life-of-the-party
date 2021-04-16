@@ -1,5 +1,7 @@
 :: Help [no_checkpoint]
 
+\> <a0 onclick="setup.undo();">Go back</a>
+
 ### Keyboard controls
 
 <% if (!localStorage.noKeyboard) { %>
