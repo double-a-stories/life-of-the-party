@@ -9,7 +9,7 @@ You walk down the hall and enter the garage. Parked inside is a clean and polish
 
 A few feet ahead of you, you see a red fox, who appears to be struggling to carry a huge cardboard box. Stacked haphazardly on top is a number of objects, including some electronics, a game console, two silver candelabras, and what appears to be a priceless oil painting. The fox notices you.
 
-<q class="ren">Hiya! 😊👋🐾</q> they say, talking in an... unusually expressive manner.
+<q class="ren">Hiya! 😊👋🐾</q> they say, talking in an 😃 excited and 😃😃 expressive manner.
 
 \> [[Ask him what he's up to.]] *(Male Pred)*
 
@@ -233,8 +233,6 @@ You feel stinging pain as Ren releases you, and you collapse weakly to the garag
 
 \> <a0 onclick="setup.undo()">Undo</a>
 
-\> [[Restart|Start]]
-
 :: Get swallowed by Ren. [vore]
 
 Your head slides into the tight fleshy tube with a slick *grlk* noise.
@@ -292,7 +290,7 @@ You're surprised (and honestly, impressed) to hear this is <%=s.rm?"his":"her"%>
 
 Focus, you say! You need <%=s.rm?"him":"her"%> to get out of here.
 
-<q class="ren">Fine... 😒</q> Ren begins slowly sticking a claw into <%=s.rm?"his":"her"%> throat. <q class="ren">Here goes... 🤢</q> Suddenly, you hear the garage's doorknob rattle. <q class="ren">😧 Oh crap,</q> Ren says.
+<q class="ren">Fine... 😒 Here goes... 🤢</q> Ren begins slowly sticking a claw into <%=s.rm?"his":"her"%> throat. Suddenly, you hear the garage's doorknob rattle. <q class="ren">😧 Oh crap,</q> Ren says.
 
 \> [[What now?]]
 
