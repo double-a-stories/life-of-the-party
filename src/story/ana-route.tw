@@ -1,25 +1,23 @@
 <!-- You go outside and talk to Ana Rose, a hungry hyena with some self-esteem issues. You get familiar, and eventually offer to be eaten. She agrees on the condition that you can't change your mind, and snarfs you down quickly. You begin to have second thoughts, but it's too late. -->
 
 :: Go outside.
-You walk outside and down the steps onto the back porch.
+You walk outside and down the steps onto the back porch. It's quiet out here.
 
-You see a large hyena staring at her flip phone. She's a little older than you, and much, much taller. There doesn't appear to be anyone else around.
+You see a large hyena sitting on a garden bench, next to a disused charcoal grill and some rumpled up camping equipment. She looks to be a little older than you, and way, way taller.
 
-\> [[Talk to the hyena.]]
+There's also another bench a little further into the yard.
+
+\> [[Look at hyena.]]
 
 \> [[Sit by yourself.]]
 
 
-:: Talk to the hyena.
-*CW: Revoked consent. Accidental(?) digestion. Woman with penis. Masturbation.*
+:: Look at hyena.
+*CW: Revoked consent. Woman with penis. Masturbation.*
 
-The hyena girl is sitting on a garden bench, next to a disused charcoal grill and some rumpled up camping equipment.
+She's wearing acid-wash jeans and a black t-shirt that reads "Bad Bitch". She has sandy-colored fur with brown spots, and a thick long neck.
 
-She has sandy-colored fur, with brown spots. She's wearing acid-wash jeans and a black t-shirt with "Bad Bitch" written on it.
-
-She notices you, and flips her hair non-chalantly.
-
-"Oh. Sup."
+The hyena sees you staring, and looks up from her phone. She notices you, and says, "Oh. Sup."
 
 \> [[What are you doing out here alone?]]
 
@@ -27,31 +25,48 @@ She notices you, and flips her hair non-chalantly.
 
 
 :: What are you doing out here alone?
-"I could ask you the same question," she replies.
+She folds her arms and and flips her mohawk non-chalantly. "Could ask you the same question."
 
-She looks away for a moment, then lets out a little sigh. "I guess I just get a little stressed out around loud parties? Like, even though I'm supposed to be enjoying myself here? I guess I'm just trying to get away from it all for a moment."
+\> [[I'm not really one for parties...]]
+
+\> [[Just... getting some air?]]
+
+:: Just... getting some air?
+
+Ana kicks her feet up on the bench, and says, "Well, there's a free bench over there."
+
+\> [[Sit by yourself.]]
+
+\> [[Have you seen my friend?]]
+
+:: I'm not really one for parties...
+
+She lets out a little sigh. "Yeah, me either. It's like, I'm supposed to be enjoying myself here? Making friends and eating people? But all the noise, and the crowds, I get freaked out. I guess I'm just trying to get away from it all for a moment."
 
 \> [[Same here...]]
 
+\> [[Wait, eating people?]]
+
+:: Wait, eating people?
+
+"Meeting," Ana corrects herself, "Making friends and *meeting* people. I don't eat people, despite what you may have heard." She clears her throat awkwardly. "I'm Ana, by the way. Ana Rose." She pats spot on the bench next to her. "...You can sit if you want."
+
+\> [[I'm Hollis.|Tell Ana your name.]]
+
 
 :: Same here...
-She nods, looking wistfully off into the distance. The moonlight reflects perfectly in her amber-colored eyes.
+
+She nods, looking wistfully off into the distance. The moonlight reflects in her amber-colored eyes.
 
 "I'm Ana, by the way. Ana Rose." She pats spot on the bench next to her. "...You can sit if you want."
 
 \> [[My name's Hollis!|Tell Ana your name.]]
 
 
-:: Have you seen my friend?
-She takes a thoughtful sip from a plastic cup.
-
-"Depends who's asking," she replies...
-
-\> [[Tell her your name.]]
-
-
 :: Tell Ana your name.
-"Hollis," she repeats, smiling in your direction. "Cute name."
+You sit down on the bench, and tell Ana your name.
+
+"Hollis," she repeats, smiling slightly. "Cute name."
 
 You're flustered, and not sure how to respond.
 
@@ -73,19 +88,15 @@ Thinking quickly you tell her, uh, you meant, that she seems very charming! No, 
 :: (oh god oh fuck)
 She snickers as you helplessly tumble over your words. For a moment, she hesitates, delicately running her tongue between her lips and over her pointy white teeth.
 
-"Okay, Hollis. I... think you're kinda cute too," she says, "for a herbivore at least..."
-
-She smiles at you, and brushes her hair out of her eyes. She seems to be a little more comfortable around you now.
-
-"Kinda cold out here, huh?"
+"Okay, Hollis. I... think you're kinda cute too," she says, "for a herbivore at least..." She smiles at you, and brushes her hair out of her eyes. She seems to be a little more comfortable around you now. "Kinda cold out here, huh?"
 
 \> [[Do you want a hug?]]
 
-\> [[Anyway, I'm looking for this friend of mine?|Looking for a friend. (after meeting Ana)]]
+\> [[Anyway, I'm looking for this friend of mine?|I came here with a friend...]]
 
 
 :: Do you want a hug?
-"...Yeah, okay," she replies, with a little smile, and stretches out her arms. You give Ana a hug. You can tell she's wearing a lot of deodorant, but it's not unpleasant. In fact, embracing the soft fur of this curvy hyena, you realize this is one of the best hugs you've ever had.
+"...Sure, whatever," she replies, with a little smile, and stretches out her arms. You give Ana a hug. You can tell she's wearing a lot of deodorant, but it's actually quite nice. You don't remember the last time you were hugged.
 
 After a what feels like a wonderful eternity, she lets go. "That was nice," she says, slouching down a little.
 
@@ -96,29 +107,15 @@ Yeah, you say, and tentatively rest your head against her shoulder.
 \> [[Kiss her.]]
 
 
-:: A quiet moment.
-The two of you sit there in comfortable silence, watching the stars.
-
-"So," she giggles eventually, "some party, huh."
-
-You caress your ears lightly. Yeah, you say, the music's kinda loud.
-
-She snickers. "Oh my god, I know, right? I can't believe they're playing freakin' dubstep. Like, what is this, 2011?" You both laugh.
-
-For a little while, neither of you say anything. Ana looks over at you. "Something on your mind?"
-
-\> [[I'm looking for this friend of mine...|Looking for a friend. (after meeting Ana)]]
-
-
 :: Kiss her.
 You've seen enough romance movies to know where this is going.
 You're sure of it–this is the moment where you lean in, and both share a sudden yet dramatic first kiss.
 
 You turn toward her big furry face, and attempt to kiss her on the mouth. She immediately leans away, letting out a small, surprised growl.
 
-"Woah there, casanova, that's, uh..." She frowns. "I'm not really comfortable with that?"
+"Woah there, casanova, that's, uh..." She frowns. "I'm not really comfortable with that right now?"
 
-\> [[S-sorry...|Sorry for trying to kiss you.]]
+\> [[S-sorry!|Sorry for trying to kiss you.]]
 
 \> [[Try to kiss her again.|Kiss her again.]]
 
@@ -140,7 +137,7 @@ You reflect upon the obvious subtext of her response, and decide instead to deli
 
 The second you touch her hair, the hyena immediately lets out an vicious bark, and reflexively glomps her mouth down over your head. You faint from surprise. Ana quickly swallows your unconscious body, making sure no one else was around to see.
 
-"Dammit," she mutters, patting the massive bulge in her engorged belly, "not again..."
+"Dammit," she mutters, patting the massive bulge in her engorged belly, "Why is meeting new people so HARD??"
 
 <% s.sawFirstKissEnding = true;
 // setup.achievements.add("Cannot Take a Hint (Hyena Bite Ending)");
@@ -151,6 +148,22 @@ The second you touch her hair, the hyena immediately lets out an vicious bark, a
 \> [[Do you want a hug?]] *(Rewind)*
 
 
+:: A quiet moment.
+For a little while, neither of you say anything. The two of you sit there in comfortable silence, watching the stars.
+
+"So," she giggles eventually, "some party, huh."
+
+ Yeah, you say, the music's kinda loud.
+
+"Oh my god, I know, right? "I can't believe they're playing friggin' dubstep. Like, last century called?" She snorts as she laughs.
+
+"I don't even know why I came here, honestly. It's just a bunch of horny rich college kids," she says, "-No offense." Ana looks over at you. "Why'd you even come here in the first place?"
+
+\> [[I came here with a friend...]]
+
+\> [[I think I want you to eat me...|Ana, I want you to eat me.]]
+
+
 :: Sorry for trying to kiss you.
 "No," she says, smiling again, "I get it." She gives you another hug.
 
@@ -159,10 +172,19 @@ The second you touch her hair, the hyena immediately lets out an vicious bark, a
 <div->[[A quiet moment.]]</div>
 
 
-:: Looking for a friend. (after meeting Ana)
+:: I came here with a friend...
+
 Ana scratches her head. "I probably haven't seen 'em. What's this friend of yours look like?"
 
 \> [[He's a guinea pig, about this tall...|Describe Reese.]]
+
+
+:: Have you seen my friend?
+She takes a thoughtful sip from a plastic cup.
+
+"Depends who's asking," she replies.
+
+\> [[Tell her your name.]]
 
 
 :: Tell her your name.
@@ -238,7 +260,7 @@ Thinking quickly you tell her, uh, you meant, that you think predators are hot! 
 
 You clear your throat. What you meant to say was that digesting inside is a stomach, is literally a hot place to be. Like, temperature-wise. Not that you'd ever *want* to be digested in a stomach. Or-or- even thought about anything like that!
 
-Ana pauses thoughtfully for a moment. You see her sharp and shiny teeth reflecting a tiny bit of moonlight. "...Hollis, do you want me to digest you?"
+Ana pauses thoughtfully for a moment. Her sharp, shiny teeth glint in the moonlight. "...Hollis, do you want me to digest you?"
 
 \> [[...Yes please.]]
 
@@ -746,4 +768,3 @@ The small toilet sputters, but makes no effort to swallow the massive pile of sh
 ### The End.
 
 \> [[Restart|Start]]
-
