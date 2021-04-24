@@ -49,16 +49,11 @@ controls.goNext = () => {
   }
 }
 
-$(document).keydown(function (e) {
-  if (localStorage.noKeyboard) {
-    return;
-  }
-  if ($(e.target).is("input[type!='button'], [contenteditable]") &&
-    !e.key.startsWith("Arrow")) {
-    return;
+$(document).keydown((e) => {
+  if ($(e.target).is("input[type!='button'], [contenteditable]")) {
+    return
   }
   switch (e.key.toLowerCase()) {
-    case "enter":
     case "e":
     case " ":
       controls.selectFocused();
@@ -66,25 +61,21 @@ $(document).keydown(function (e) {
       break;
     case "h":
     case "a":
-    case "arrowleft":
       setup.undo();
       e.preventDefault();
       break;
     case "d":
     case "l":
-    case "arrowright":
       controls.goNext();
       e.preventDefault();
       break;
     case "w":
     case "k":
-    case "arrowup":
       controls.focusPrev();
       e.preventDefault();
       break;
     case "s":
     case "j":
-    case "arrowdown":
       controls.focusNext();
       e.preventDefault();
       break;

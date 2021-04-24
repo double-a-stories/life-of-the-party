@@ -4,22 +4,12 @@
 
 ### Keyboard controls
 
-<% if (!localStorage.noKeyboard) { %>
+* `S (J)` - *Select next link.*
+* `W (K)` - *Select previous link.*
+* `E (Space)` - *Use selected link.*
+* `A (H)` - *Undo last command.*
+* `D (L) ` - *Redo last command.*
 
-* `W (↑) ` *Select previous link.*
-* `S (↓)` *Select next link.*
-* `E (⏎)` *Use selected link.*
-* `A (←)` *Undo last command.*
-* `D (→)` *Redo last command.*
-
-In addition to pointer controls, this game can be played entirely through the keyboard. If this causes problems, you can disable it below.
-
-<% } else { %>
-Keyboard controls are currently disabled.
-<% } %>
-
-
-\> <a0 data-nocommand onclick="localStorage.noKeyboard = localStorage.noKeyboard ? '' : true;" data-passage="<%= passage.name %>"><%-localStorage.noKeyboard?"Enable":"Disable"%> keyboard controls</a>
 
 ### Play offline
 
