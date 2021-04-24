@@ -1,0 +1,19 @@
+:: Tweeomoji [script]
+// Load Twemoji script
+jQuery.getScript("https://twemoji.maxcdn.com/v/latest/twemoji.min.js", () => {
+  $(window).on('sm.passage.shown', function (event, eventObject) {
+    twemoji.parse(document, {
+      folder: 'svg',
+      ext: '.svg'
+    });
+  });
+});
+
+:: Twemoji style [stylesheet]
+.emoji {
+  object-fit: contain;
+  width: 1.375em;
+  height: 1.375em;
+  vertical-align: -0.1em;
+  text-shadow: black 1px 1px;
+}
