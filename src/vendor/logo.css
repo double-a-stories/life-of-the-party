@@ -1,6 +1,7 @@
 .logo {
   line-height: 1.3;
   text-align: center;
+  margin: 5rem 0;
 }
 .logo__title {
   font-family: Times New Roman, serif;
@@ -10,7 +11,7 @@
   text-align: center;
 }
 .logo__sc {
-  font-size: 0.7em; /* <- small caps scale factor */
+  font-size: 0.8em; /* <- small caps scale factor */
   text-transform: uppercase;
   /* font-weight: bolder; */
 }

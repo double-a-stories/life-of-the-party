@@ -2,8 +2,6 @@
 
 // Global Variable: "setup"
 window.setup = window.setup || {};
-story.version = "v0.5.0-indev"
-story.mainURL = "https://aryion.com/forum/viewtopic.php?f=79&t=59177"
 
 // Move story styles to before the passages.
 // This prioritizes styles declared inside passages.

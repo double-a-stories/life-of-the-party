@@ -1,0 +1,36 @@
+:: StoryData
+{
+    "ifid": "63C20183-3B4C-4AA8-956D-FC3721F85803",
+    "format": "Snowman",
+    "format-version": "2.0.2",
+    "start": "Start",
+    "tag-colors": {
+        "TODO": "red",
+        "hide": "blue",
+        "morning": "yellow",
+        "todo": "orange",
+        "vore": "red"
+    },
+    "zoom": 0.6
+}
+
+:: Misc story variables [script]
+story.version = "v0.5.0-indev"
+story.mainURL = "https://aryion.com/forum/viewtopic.php?f=79&t=59177"
+
+:: StoryTitle
+Life of the Party
+
+:: Credits passage
+
+### Credits
+
+This story was written and developed by <a href="https://aryion.com/g4/user/DoubleA" target="_blank">Double-A</a>. Feel free to leave feedback <a href="<%-story.mainURL %>>" target="_blank">here</a>!
+
+This story uses <a href="https://github.com/twitter/twemoji">Twemoji</a> 😃, which belongs to Twitter Inc.
+
+:: Content warning
+
+### ⚠️ CONTENT WARNING ⚠️
+
+*CW: This story focuses heavily on oral vore, fatal vore, and unwilling digestion. It also contains scenes containing masturbation, either by the player or their predator. If you find such material objectionable, please read at your own discretion.*
