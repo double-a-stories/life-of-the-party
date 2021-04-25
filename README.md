@@ -1,6 +1,6 @@
 # life-of-the-party
 
-This is a text-based interactive story written in [Twee 3](https://github.com/iftechfoundation/twine-specs/blob/master/twee-3-specification.md). It contains content which **may be unsuitable for all except a unique adult audience**, including references to scat, sex, and death. Reader discretion is strongly advised. 
+This is a text-based interactive story written in [Twee 3](https://github.com/iftechfoundation/twine-specs/blob/master/twee-3-specification.md). It contains content which **may be unsuitable for all except a unique adult audience**, including references to scat, sex, and death. Reader discretion is strongly advised.
 
 ## Play
 
@@ -27,7 +27,6 @@ All prose and image content of this story is licensed under [CC BY-NC-SA 4.0](ht
 
     ```sh
     $ tweego ./src/ -o Life_of_the_Party.html
-    # generates at output.html
     # -w (Watch for changes)
     # -s [passage name] (Specify start passage)
     # -f [formatid] (Specify a different format)
