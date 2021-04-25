@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Tinos&display=swap');
 
+/* Style variables */
+
 :root {
   --light: rgba(0, 0, 0, 20%);
   --accent: #d93;
@@ -50,23 +52,6 @@ a:active {
   list-style: none;
   margin: 0;
   padding-left: 0;
-}
-
-/* Story Styles (using passage tags) */
-body[data-tags~="vore"] {
-  --background: #fbb;
-}
-
-body[data-tags~="dreamy_1"] {
-  --background: #eef;
-}
-
-body[data-tags~="dreamy_2"] {
-  --background: #ddf;
-}
-
-body[data-tags~="morning"] {
-  --background: #ffe;
 }
 
 /* Tag: no_heading: hides the passage name */
