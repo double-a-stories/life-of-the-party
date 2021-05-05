@@ -1,4 +1,4 @@
-:: Help [no_checkpoint]
+:: Help [no_checkpoint dark]
 
 \> <a0 onclick="setup.undo();">Go back</a>
 
