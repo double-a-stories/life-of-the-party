@@ -29,7 +29,13 @@ Life of the Party
 
 This story was written and developed by <a href="https://aryion.com/g4/user/DoubleA" target="_blank">Double-A</a>. Feel free to leave feedback <a href="<%-story.mainURL %>>" target="_blank">here</a>!
 
-This story uses <a href="https://github.com/twitter/twemoji" target="_blank">Twemoji</a> by Twitter Inc.
+Special thank to the following open source projects:
+
+* 😃 <a href="https://github.com/twitter/twemoji" target="_blank">Twemoji</a> by Twitter Inc.
+* 📖 <a href="https://twinery.org/" target="_blank">Twine/Twee</a> by <a href="https://github.com/klembot">klembot</a>
+* ⛄ <a href="https://github.com/videlais/snowman" target="_blank">Snowman story format</a> by <a href="https://github.com/videlais">videlais</a>
+* 🏍️ <a href="https://github.com/tmedwards/tweego" target="_blank">Tweego</a> by tmedwards
+
 
 :: Content warning
 
