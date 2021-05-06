@@ -1,6 +1,6 @@
 /* Story Styles (using passage tags) */
 body[data-tags~="vore"] {
-  --background: #fbb;
+  --background: #fcc;
 }
 
 body[data-tags~="dreamy_1"] {
