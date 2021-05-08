@@ -52,7 +52,9 @@ You notice that underneath his flannel, he's wearing a t-shirt from an emo rock 
 
 :: Actually I just like their music...
 
-<q class="byron">Oh,</q> he replies, frowning, <q class="byron">I suppose I mistook you for a true afficionado. One who has stared into the black abyss of sorrow, and emerged clad in the darkness of truth.</q> He begins tuning his guitar and ignoring you.
+<q class="byron">Oh,</q> he replies, frowning, <q class="byron">I suppose I mistook you for a true afficionado. One who has stared into the black abyss of sorrow, and emerged clad in the darkness of truth.</q>
+
+He begins tuning his guitar and ignoring you.
 
 \> [[Hey, I've done that!]]
 
@@ -73,7 +75,7 @@ You roll your eyes.
 
 :: Name 3 of their albums.
 
-<q class="byron">...Hm.</q> The wolf raises his eyebrows as you correctly rattle off three album names. He seems slightly impressed, and offers you a seat on the couch next to him. <q class="byron">I'm Byron Goode. Pleasure to make your acquaintance.</q>
+<q class="byron">...Hm.</q> The wolf raises his eyebrows as you correctly rattle off three album names. He seems slightly impressed, and offers you a seat on the couch next to him. <q class="byron">I'm Byron Badde. Pleasure to make your acquaintance.</q>
 
 Hollis, you reply smugly.
 
@@ -96,6 +98,10 @@ You tell Byron you're not gonna let him eat you, or fuck you, or anything.
 
 His mouth seems to become slightly dry. <q class="byron">Are... are you sure? I've been told it can be quite... pleasant, given the right participants. A sensual reminder of animal passions long forgotten, heightened by the careless grip of mortality...</q>
 
+\> [[Shut it!]]
+
+:: Shut it!
+
 Ugh, stop talking like that, you say. The whole "sensitive musician" thing is obviously just a ploy to lure in prey. You tell Byron he's just horny and hungry, like everybody else at this dumb party. A literal wolf in sheep's clothing!
 
 He narrows his eyes, and scowls, <q class="byron">...You insult me gravely, little rabbit. I have been nothing but a pinnacle of courtesy, and you rebuff both me and my pedigree.</q> He sticks out a paw. <q class="byron">Follow me.</q>
@@ -116,19 +122,23 @@ He bares his fangs. <q class="byron">*Now.*</q>
 
 :: Stand up.
 
-<q class="byron">Good.</q> Byron places his paw firmly on your lower back. You feel his claws outstretched, threatening to shred through your top and into the flesh beneath. <q class="byron">Now, let's go upstairs. Easy does it.</q>
+<q class="byron">Good.</q> Byron places his paw firmly on your lower back. You feel his claws outstretched, threatening to shred through your top and into the flesh beneath. <q class="byron">Now, let's go upstairs, shall we?</q>
 
-You grit your teeth, and walk helplessly in lock-step with the wolf as he leads you back out of the living room. You're about to enter the foyer, when a golden lab in a green jacket stops the two of you.
+You grit your teeth, and walk helplessly in lock-step with the wolf as he leads you back out of the living room. You're about to enter the foyer, when a golden labrador in a green jacket stops the two of you.
 
-"Well well," the dog says, "if it isn't Byron the Bad!"
+\> [[Blink twice.]]
 
-<q class="byron">It's *Bladd*,</q> Byron mutters, tightening his grip on you slightly.
+:: Blink twice.
 
-The dog points at Byron and asks, "Is this guy bothering you?"
+"Yoo, dude!" the dog chuckles, "If it isn't Byron the Bad! It's Gus! Long time no see, dude!"
+
+<q class="byron">My name is Badde,</q> Byron mutters, tightening his grip on you slightly.
+
+The labrador points a paw at the wolf, and asks you, "Hey, is this dude bothering you, dude? Cause that's supes no bueno, dude."
 
 Byron begins, <q class="byron">No, we were just-</q>
 
-"Let em talk, Wordsworth," the dog interrupts.
+"Let em talk, dude," the dog interrupts.
 
 \> [[Haha! We're totally cool! Yup!]]
 
@@ -136,17 +146,33 @@ Byron begins, <q class="byron">No, we were just-</q>
 
 :: Haha! We're totally cool! Yup!
 
-"Well alright then. Have fun you two," the dog says, shooting both of you a wink.
+"Oh, chill. Have a good time, dudes," the dog says, shooting both of you a wink.
 
 <q class="byron">Oh,</q> Byron mutters with a half-smile, <q class="byron">We will.</q>
 
+You gulp.
+
 \> [[Follow Byron upstairs.]]
 
-:: Get this creep off me! [vore]
+:: Get this creep off me! [vore drunk]
 
 *CW: Blood, personal injury*
 
-// TODO: You cry out and try to get away, causing Byron to put a huge bloody gash on your back. You quickly faint from blood loss. Basil completely clobbers Byron in the face.
+You cry out and try to escape. As you pull away, Byron grabs you, putting a huge bloody gash on your back.
+
+You groan from the pain, and collapse to the floor. Gus looks shocked.
+
+Byron stares at his bloodied claws, seemingly more intrigued than bothered. He wipes it on his shirt. <q.byron>I am ashamed, dear rabbit, that it has come to this. Perhaps we beasts truly are inseparable from our dark–</q> Wham.
+
+The wolf is interrupted by Gus's fist clobbering him in the face. "Party fuckin' foul, dude. You okay, bunny bro?"
+
+You respond by fainting from blood loss.
+
+\> [[Ow...]]
+
+:: Ow... [morning]
+
+// TODO:
 
 You wake up the next day in Basil's bedroom, bandaged up. Clif walks in, and comes onto you.
 
@@ -167,6 +193,6 @@ You wake up the next day in Basil's bedroom, bandaged up. Clif walks in, and com
 
 ### Route end. (WIP)
 
-<% setup.addAchievement(`Bladd Ending (Byron Vore Ending)`); %>
+<% setup.addAchievement(`Badde Ending (Byron Vore Ending)`); %>
 
 \> [[Restart.|Start]]
