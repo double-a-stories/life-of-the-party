@@ -23,3 +23,15 @@ $(window).on('sm.passage.shown', (e, {passage}) => {
   if (!passage.tags.includes("no_checkpoint"))
   story.checkpoint(); // required for "undo" to restore previous state
 })
+
+setup.rewind = () => {
+  if (story.history.length >= 1) {
+    let id = _.findLastIndex(story.history.slice(-1),
+    id => story.passage(id).tags.includes("checkpoint"));
+    if (id != -1) {
+      story.show(story.history[id]);
+      return;
+    }
+  }
+  setup.restart();
+}
