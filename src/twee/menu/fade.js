@@ -1,3 +1,4 @@
+// LICENSE: MIT-0
 // Fadein effect when showing passages
 // Passages can disable this by adding the tag "no_fade"
 

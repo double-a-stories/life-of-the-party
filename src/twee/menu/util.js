@@ -1,4 +1,4 @@
-// The Snowbunny Engine
+// LICENSE: MIT-0
 
 // Global Variable: "setup"
 window.setup = window.setup || {};

@@ -1,3 +1,5 @@
+// LICENSE: MIT-0
+
 /* Page Header */
 /* use the tag `header` on a passage to render it before the passage */
 

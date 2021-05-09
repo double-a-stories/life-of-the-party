@@ -1,3 +1,5 @@
+// LICENSE: MIT-0
+
 /* History Commands */
 
 window.setup = window.setup || {};

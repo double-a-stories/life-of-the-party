@@ -1,4 +1,5 @@
 // Persistent Achievement API
+// LICENSE: MIT-0
 // Achievements are stored as a JSON array in localStorage.achievements
 
 window.setup = window.setup || {};
