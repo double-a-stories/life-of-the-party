@@ -17,12 +17,3 @@ tw-passage > * {
 <%= story.render(hasSomeAchievements ? "Achievements list" : "Content warning") %>
 
 </div>
-
-<%= story.render("Local play message") %>
-
-:: Local play message
-<% if (location.protocol == "file:") { %>
-
-This is an <strong>offline version</strong> of <i><%- story.name %></i>, which might not be the latest. You can check for the latest revision <a href="<%-story.mainURL %>>" target="_blank">here</a>.
-
-<% } %>
