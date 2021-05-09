@@ -14,20 +14,12 @@ All prose and image content of this story is licensed under [CC BY-NC-SA 4.0](ht
 
 ## Building from source
 
-1. Install [Tweego](http://www.motoslave.net/tweego/).
+1. Install [Tweego](http://www.motoslave.net/tweego/) and NodeJS.
 
-1. Install story formats in the directory `~/.storyformats/`
-    * [Snowman](https://github.com/videlais/snowman/tree/master/dist/snowman-2.0.3)
+1. Install the [Snowman](https://github.com/videlais/snowman/tree/master/dist/snowman-2.0.3) story format, if you don't already have it.
 1. Install proofing formats (optional)
     * [poof](https://github.com/ChapelR/poof/releases) – Proof-reading tool
     * [Illume](https://www.maximumverbosity.net/twine/Illume/) – Provides passage analysis
     * [dotgraph](https://github.com/mcdemarco/dotgraph/releases/tag/v2.2.0) – Generates story graphs
 
-1. To build:
-
-    ```sh
-    $ tweego ./src/ -o Life_of_the_Party.html
-    # -w (Watch for changes)
-    # -s [passage name] (Specify start passage)
-    # -f [formatid] (Specify a different format)
-    ```
+1. `npm run build`
