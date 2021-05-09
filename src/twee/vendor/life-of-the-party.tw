@@ -18,23 +18,33 @@
 
 story.semanticVersion = [0, 5, 0, "-indev"];
 story.version = `v${story.semanticVersion.slice(0, 3).join(".")}${story.semanticVersion[3] || ""}`;
-story.mainURL = "https://aryion.com/forum/viewtopic.php?f=79&t=59177";
+story.sourceURL = "https://github.com/double-a-stories/life-of-the-party";
 
 :: StoryTitle
 Life of the Party
 
 :: Credits passage
 
+### Play offline
+
+Click below to download a local copy of this game. You're free to distribute and modify it under the terms of the CC BY-NC-SA 4.0 license.
+
+\> <a href="" download="<%- story.name %> <%- story.version %>.html">Download</a>
+
+\> <a href="https://github.com/double-a-stories/life-of-the-party" target="_blank">Source code</a>
+
 ### Credits
 
-This story was written and developed by <a href="https://aryion.com/g4/user/DoubleA" target="_blank">Double-A</a>. Feel free to leave feedback <a href="<%-story.mainURL %>>" target="_blank">here</a>!
+This story was written and developed by <a href="https://aryion.com/g4/user/DoubleA" target="_blank">Double-A</a>. If you liked it, leave a comment at <a href="https://aryion.com/forum/viewtopic.php?f=79&t=59177" target="_blank">Eka's Portal</a> or <a href="http://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/life-of-the-party-a-furry-vore-adventure-18" target="_blank">Textadventures.co.uk</a>.
 
-Special thank to the following open source projects:
+If you really like this, and want me to spend more time making things like it, consider supporting me on <a href="https://ko-fi.com/doublea">☕ Ko-fi</a>.
 
-* 😃 <a href="https://github.com/twitter/twemoji" target="_blank">Twemoji</a> by Twitter Inc.
-* 📖 <a href="https://twinery.org/" target="_blank">Twine/Twee</a> by <a href="https://github.com/klembot">klembot</a>
-* ⛄ <a href="https://github.com/videlais/snowman" target="_blank">Snowman story format</a> by <a href="https://github.com/videlais">videlais</a>
-* 🏍️ <a href="https://github.com/tmedwards/tweego" target="_blank">Tweego</a> by tmedwards
+Special thanks to the following open source projects:
+
+* <a href="https://github.com/twitter/twemoji" target="_blank">😃 Twemoji</a> by Twitter Inc.
+* <a href="https://twinery.org/" target="_blank">📖 Twine/Twee</a> by <a href="https://github.com/klembot">klembot</a>
+* <a href="https://github.com/videlais/snowman" target="_blank">⛄ Snowman story format</a> by <a href="https://github.com/videlais">videlais</a>
+* <a href="https://github.com/tmedwards/tweego" target="_blank">🏍️ Tweego</a> by tmedwards
 
 
 :: Content warning

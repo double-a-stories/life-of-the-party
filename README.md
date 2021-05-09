@@ -6,6 +6,13 @@ This is a text-based interactive story written in [Twee 3](https://github.com/if
 
 Latest stable build: https://double-a-stories.github.io/life-of-the-party/
 
+
+## Synopsis
+
+> Your name is Hollis. You are a small gray rabbit, standing meekly in the foyer of a big, loud suburban house party. Your ears hurt, and in the mere twenty minutes since you've arrived, you've already completely lost sight of your friend who brought you here. Even worse, you're surrounded by huge, drunk anthros who could probably swallow you in seconds. Most alarming of all, one of them is your old high school bully. It's hardly a question of *if* you're gonna get eaten, but rather, by whom.
+
+> What will you do?
+
 ## License
 
 The source code underlying this project, including passage styling and JavaScript, is licensed under the [MIT-0 license](/LICENSE-CODE). You may use any or all of of this code for any purpose **without attribution**.
