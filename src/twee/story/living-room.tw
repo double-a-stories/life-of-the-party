@@ -58,10 +58,10 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 
 \> [[Grab some punch.]]
 
-<% if (s.partyFlavorBasil || s.partySeenBasil) {
+<% if (s.partyFlavorBasil || s.partySeenBasil || setup.isFlagSet("talkedToBasil")) {
   s.partySeenBasil = true; %>
 \> [[Wink back at the horse.|Wink back at Basil.]]
-<% } if (s.partyFlavorWonderwolf || s.partySeenByron) {
+<% } if (s.partyFlavorWonderwolf || s.partySeenByron || setup.isFlagSet("talkedToByron")) {
   s.partySeenByron = true; %>
 \> [[Talk to the wolf.|Talk to Byron.]]
 <% } %>

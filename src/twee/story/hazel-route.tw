@@ -291,7 +291,7 @@ The owl snickers and grabs her by the arm. "Hoohoohoo! Oh my god, that's insane!
 ### The End.
 
 <% s.sawHazelVoreEnding = true;
-setup.addAchievement("A Grizzly End (Hazel Vore Ending)");
+setup.addAchievement("Grizzly End (Hazel Vore Ending)");
 %>
 
 \> [[Epilogue.|Epilogue: Hazel Post Vore.]] *(CW: Scat.)*

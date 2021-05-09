@@ -1,7 +1,7 @@
 <!-- While dancing in the living room, you meet up with Basil Armstrong, a jock you knew in high school. This is his house. You flirt, and eventually offer to let him eat you. He does so, but doesn't adequately inform you that he plans to keep you. You digest as the rest of the party looks on excitedly. -->
 
 :: Wink back at Basil.
-<% localStorage.talkedToBasil = true; %>
+<% setup.setFlag("talkedToBasil"); %>
 
 The horse smiles, and walks over to you, carrying two bottles of beer.
 
@@ -114,7 +114,7 @@ Basil smiles. "Y'know, you always seemed kinda meek, but now it looks like you r
 
 
 :: I came here with a friend of mine...
-<% localStorage.upstairsUnlocked = true %>
+<% setup.setFlag("upstairsUnlocked"); %>
 
 "Oh, the guinea pig?" he asks.
 
@@ -275,7 +275,7 @@ Basil smiles as the party rages on. Another night well planned.
 
 ### The End.
 
-<% setup.addAchievement("Party Animals (Basil Vore Ending)"); %>
+<% setup.addAchievement("Party Animal (Basil Vore Ending)"); %>
 
 \> [[Epilogue.|Epilogue: Basil Post Vore.]] *(CW: Scat Disposal.)*
 

@@ -11,6 +11,8 @@ Hollis realizes that Byron's sensitive exterior is just a front for his predator
 
 :: Talk to Byron.
 
+<% setup.setFlag("talkedToByron"); %>
+
 *This route is **unfinished content.** Proceed at your own risk.*
 
 *CW: Negging. Threats and coercion. Non-consensual.*

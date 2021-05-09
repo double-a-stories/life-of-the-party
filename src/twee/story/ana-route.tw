@@ -204,7 +204,7 @@ You give her a brief description of your friend, Reese.
 
 
 :: What do you mean?
-<% localStorage.upstairsUnlocked = true %>
+<% setup.setFlag("upstairsUnlocked"); %>
 
 She gives you a slightly patronizing stare.
 
@@ -667,7 +667,7 @@ Ana giggles contendedly. "...I'll take that as a yes."
 ### The End.
 
 <% s.sawAnaVoreEnding = true;
-setup.addAchievement("A Laughing Matter (Ana Vore Ending)");
+setup.addAchievement("No Laughing Matter (Ana Vore Ending)");
 %>
 
 \> [[Epilogue.|Epilogue: Ana Post Vore.]] *(Warning: Scat Disposal.)*

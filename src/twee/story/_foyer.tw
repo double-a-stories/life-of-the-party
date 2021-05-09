@@ -37,15 +37,12 @@ This house is huge, and its upscale furnishings seem almost too fancy for the mo
 
 
 :: Search for your friend.
-<% localStorage.outsideUnlocked = true %>
 
 You make a quick circle of the first floor, but Reese is nowhere in sight.
 
-<% if (!localStorage.upstairsUnlocked) { %>
+<% if (!setup.isFlagSet("upstairsUnlocked")) { %>
 
 Someone around here has probably seen where he went.
-
-\> [[Go back.|The Foyer.]]
 
 <% } else { %>
 
@@ -54,6 +51,8 @@ You get the feeling he's upstairs.
 \> [[Look upstairs.]]
 
 <% } %>
+
+\> [[Go back.|The Foyer.]]
 
 :: Look upstairs.
 <div->[[Upstairs Hallway]]</div>
