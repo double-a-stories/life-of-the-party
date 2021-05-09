@@ -25,19 +25,11 @@ Life of the Party
 
 :: Credits passage
 
-### Play offline
-
-Click below to download a local copy of this game. You're free to distribute and modify it under the terms of the CC BY-NC-SA 4.0 license.
-
-\> <a href="" download="<%- story.name %> <%- story.version %>.html">Download</a>
-
-\> <a href="https://github.com/double-a-stories/life-of-the-party" target="_blank">Source code</a>
-
 ### Credits
 
-This story was written and developed by <a href="https://aryion.com/g4/user/DoubleA" target="_blank">Double-A</a>. If you liked it, leave a comment at <a href="https://aryion.com/forum/viewtopic.php?f=79&t=59177" target="_blank">Eka's Portal</a> or <a href="http://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/life-of-the-party-a-furry-vore-adventure-18" target="_blank">Textadventures.co.uk</a>.
+This story was written and developed by me, <a href="https://aryion.com/g4/user/DoubleA" target="_blank">▽ Double-A ▽</a>. If you liked it, leave a comment at <a href="https://aryion.com/forum/viewtopic.php?f=79&t=59177" target="_blank">Eka's Portal</a> or <a href="http://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/life-of-the-party-a-furry-vore-adventure-18" target="_blank">Textadventures.co.uk</a>!
 
-If you really like this, and want me to spend more time making things like it, consider supporting me on <a href="https://ko-fi.com/doublea">☕ Ko-fi</a>.
+If you really enjoyed this, and want me to spend more time making things like it, consider supporting me at <a href="https://ko-fi.com/doublea">☕ Ko-fi</a>.
 
 Special thanks to the following open source projects:
 
@@ -46,6 +38,13 @@ Special thanks to the following open source projects:
 * <a href="https://github.com/videlais/snowman" target="_blank">⛄ Snowman story format</a> by <a href="https://github.com/videlais">videlais</a>
 * <a href="https://github.com/tmedwards/tweego" target="_blank">🏍️ Tweego</a> by tmedwards
 
+### Play offline
+
+\> <a href="" download="<%- story.name %> <%- story.version %>.html">Download a local copy.</a>
+
+\> <a href="https://github.com/double-a-stories/life-of-the-party" target="_blank">View source code.</a>
+
+Copyright (c) 2021 Double-A. You are hereby free to distribute and adapt this story, under the terms of the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> license.
 
 :: Content warning
 
