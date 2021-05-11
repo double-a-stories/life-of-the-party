@@ -24,6 +24,8 @@ body[data-tags~="drunk"] {
 
 :: Get very very drunk. [dark drunk]
 
+*This route contains **unfinished content**, planned to be completed as part of v0.7.0. Proceed at your own risk.*
+
 You take another drink of the spiked punch, wrinkling your nose at the taste.
 
 It feels like the room is spinning. You stagger back like an exaggerated cartoon depiction of a drunk person.
@@ -138,7 +140,9 @@ Nox reaches into his front pockets, and produces two small white dwarf mice, bot
 
 M-mice, you ask?
 
-"Meals!" Nikki smiles. "Morsels!" Nox beams.
+"Meals!" Nikki smiles.
+
+"Morsels!" Nox beams.
 
 \> [[Oh, um, I don't... do that.]]
 
@@ -155,7 +159,7 @@ Nikki smirks, "Nothing is quite as thrilling as your first time doing vore!"
 
 // TODO: Nikki talks you into eating one of them.
 
-<% setup.addAchievement("Mouse mouther (Nikki & Nox ending)")%>
+<% setup.addAchievement("Untitled (Nikki & Nox ending)")%>
 
 ## Game over.
 

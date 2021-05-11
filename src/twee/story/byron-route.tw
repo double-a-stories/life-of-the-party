@@ -13,7 +13,7 @@ Hollis realizes that Byron's sensitive exterior is just a front for his predator
 
 <% setup.setFlag("talkedToByron"); %>
 
-*This route is **unfinished content.** Proceed at your own risk.*
+*This route contains **unfinished content**, planned to be completed in v0.6.0. Proceed at your own risk.*
 
 *CW: Negging. Threats and coercion. Non-consensual.*
 
@@ -187,7 +187,9 @@ You wake up the next day in Basil's bedroom, bandaged up. Clif walks in, and com
 
 :: Follow Byron upstairs.
 
-// TODO: You follow Byron into one of the bedrooms upstairs. He vores you, all while gloating about what an awful rabbit you are.
+// TODO:
+
+You follow Byron into one of the bedrooms upstairs. He vores you, all while gloating about what an awful rabbit you are.
 
 <% story.render("Byron route end.") %>
 
