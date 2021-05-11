@@ -40,20 +40,17 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 
 <!-- LIVING ROOM COMMANDS -->
 
-<% if (s.partyFlavorGutbump) { %>
-\> [[N-no problem!|Dance a little.]]
-<% } else if (s.partyFlavorMicroMouse) { %>
-\> [[Do nothing.|Watch the owl eat.]]
-<% } else if (s.partyFlavorOwl) {%>
+<% if (s.partyFlavorMicroMouse) { %>
+<!-- Owl about to eat mouse. -->
+\> [[Do nothing.|Watch the dragonness eat.]]
+
+\> [[H-hey, don't do that!|Intervene on the dragonness.]]
+<% } else if (s.partyFlavorOwl || s.partyFlavorGutbump) {%>
 \> [[N-no problem!|Dance a little.]]
 <% } else if (s.partyFlavorLabrador) { %>
 \> [[Y-you too?|Dance a little.]]
 <% } else {%>
 \> [[Dance a little more.|Dance a little.]]
-<% } %></a>
-
-<% if (s.partyFlavorMicroMouse) { %>
-\> [[H-hey, don't do that!|Intervene on the owl.]]
 <% } %>
 
 \> [[Grab some punch.]]
@@ -70,31 +67,33 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 <!-- wow, the code that controls this part sucks. -->
 
 <%= (function() {
+s.partyFlavorState = +s.partyFlavorState || 0;
+
 if (!setup.partyDanceLiterals) {
   setup.partyDanceLiterals = [
     "You see a group of labradors cheering on their friend as he attempts to do a keg-stand.",
 "A pair of black cats are looking on with awe as a dog proudly presents his enormous, swollen belly.",
 `The speakers start playing a techno remix of Marie Predatora's latest rap single: "Belly Drop, Belly Drop (Belly Drop)."`,
 `A grey wolf with a huge protruding gut accidentally bumps into you. "S'cuse me," she mutters as she walks away.`,
-`Your ears perk up: the speakers are playing one of your favorite songs by the obscure R&B group, LÖUD GRÜMBLE. You tap your furry toes happily.`,
-`The sound system blares with the shouty vocals and distorted guitar of "Groupie Gas" by The Buttfuck Zombies.`,
+`Your ears perk up: the speakers are a slow-jam by the classic R&B duo, Thumper & Bang. You tap your furry toes happily.`,
+`The sound system blares with the shouty vocals and distorted guitar of "groupie gas (ft. some snack idk)" by LOÜD GRÜMBLE.`,
+`Tails wag and fists pump in the air as the subwoofer rattles out seemingly the thirtieth dubstep song of the evening. You can't tell if it's the same song or not.`,
 `A tall black wolf in a scarf and a flannel shirt brought an acoustic guitar with him. He's playing "Wonderwall" with an extremely thoughtful expression.`,
 `A slightly chubby owl notices you from across the room and begins licking her beak.`,
 `A drunk labrador begins nuzzling you. "Oh my gooood dudes, this rabbit is soooo soft..." You blush. Surprisingly, his fur is extremely soft as well.`,
-`A green dragon girl starts wagging her tail in time with the music, and accidentally trips two people. "Sorry!" she stammers, "Sorry again!"`,
+`A green anaconda girl starts wagging her tail in time with the music, and accidentally trips two people. "Sorry!" she stammers, "Sorry again!"`,
 `There aren't many other prey at this party. You feel a little small by comparison to all the huge anthros here.`,
-`A nice, slow song starts playing. You consider offering to dance with one of the guys around you, but most of them are several feet taller than you.`,
+`A nice, easy song starts playing. You consider offering to dance with one of the guys around you, but most of them are several feet taller than you.`,
 `A heavy-set bear with a selfie stick is recording herself as she shakes her massive hips. You try not to stare, but it's absolutely hypnotic.`,
 `A lioness whispers to her friend, "Did you know there's a rabbit here?" They snicker. "Woah. Do you think it has a vore fetish?"`,
 `You see a catboy eagerly following a lioness out of the room. They both seem quite excited.`,
-`You watch as an owl reaches down and picks up a mouse about six inches tall. She smirks as the mouse begins to struggle. Should you... do something?`,
+`A dragonness reaches down, grabs a tiny mouse, and dangles it teasingly over her snout. She smirks as it struggles. Should you... do something?`,
 ].sort(e => 0.5 - Math.random());
 
 setup.partyDanceLiterals.push(`A big brown stallion in a green jacket seems to take notice of your dancing. He winks at you from across the room.`);
   }
 
 
-s.partyFlavorState = +s.partyFlavorState || 0;
 const literals = setup.partyDanceLiterals;
 let text = literals[s.partyFlavorState % literals.length]
 s.partyFlavorState += 1;
@@ -109,7 +108,7 @@ s.partyFlavorLioness = text.includes("lioness");
 s.partyFlavorLabrador = text.includes("A drunk labrador");
 s.partyFlavorGutbump = text.includes("accidentally bumps into you");
 s.partyFlavorBasil = text.includes("brown stallion");
-s.partyFlavorMicroMouse = text.includes("mouse about six inches tall");
+s.partyFlavorMicroMouse = text.includes("a tiny mouse");
 return text;
 })() %>
 
@@ -140,20 +139,30 @@ You look toward the punch bowl and scowl with disgust. A labrador notices and el
 
 \> [[Get very very drunk.]]
 
-:: Watch the owl eat.
+:: Watch the dragonness eat.
 
-You watch as the owl snarfs down the little mouse with a satisfied smile. At first the morsel squeaks in fear, but instantly snakes down her throat.
+<% s.rescuedKaia = false; %>
 
-You feel a little guilty for not intervening. Also slightly aroused?
+You watch as the dragonness snarfs down the little white mouse boy with a satisfied smile. At first he squeaks out in fear, but the sound stops instantly as he snakes down her throat.
+
+You feel slightly guilty for not intervening. And somehow... aroused?
 
 
 \> [[Dance a little more.|Dance a little.]]
 
-:: Intervene on the owl.
+:: Intervene on the dragonness.
 
-// TODO: You rescue the mouse. She's a small and white-furred dwarf mouse named Kaia. She thanks you for the help, and blames herself for being captured so carelessly. Like you, she's here with a friend (girlfriend, actually), and would very much like to go home.
+You shout at the owl not to eat the mouse.
 
-You drop her off on the bannister, and say you'll keep an eye out for another mouse.
+She blinks, and asks, "Hoo hoo, why not?"
+
+<% s.rescuedKaia = true; %>
+
+// TODO: You rescue the mouse. She's a small and white-furred dwarf mouse named Kaia.
+
+"Thanks for your help... It's really my fault for being so careless. Cass is always telling me to stay away from larger folk, but you seem nice!"
+
+You drop her off on the bannister, "Let me know if you see her! I'll be hanging out by the punch bowl."
 
 You gain **+15 morality points**. 30 more of those, and you'll unlock the good ending!
 
