@@ -6,17 +6,13 @@
   margin: 5rem 0;
 }
 .logo__title {
-  font-family: Times New Roman, serif;
+  font-family: Playfair Display SC, Times New Roman, serif;
   font-weight: bold;
-  font-size: 3.9rem;
+      font-size: 3.5rem;
   line-height: 0.8;
   text-align: center;
 }
-.logo__sc {
-  font-size: 0.8em; /* <- small caps scale factor */
-  text-transform: uppercase;
-  /* font-weight: bolder; */
-}
+
 .logo__subtitle {
   letter-spacing: 0.12em;
   text-transform: uppercase;
