@@ -1,15 +1,21 @@
 :: Tweeomoji [script]
 // Load Twemoji script
+
+const TWEMOJI_OPTIONS = {
+  folder: 'svg',
+  ext: '.svg'
+};
+
 const handleTwemoji = () => {
-  window.twemoji && twemoji.parse(story.$el[0], {
-    folder: 'svg',
-    ext: '.svg'
-  });
+  if (!twemoji) {
+    console.error("Twemoji script not loaded!");
+    return;
+  }
+  twemoji.parse(story.$passageEl[0], TWEMOJI_OPTIONS);
 }
 
-jQuery.getScript("https://twemoji.maxcdn.com/v/latest/twemoji.min.js", handleTwemoji);
+$(window).on('sm.passage.hidden sm.passage.shown', handleTwemoji);
 
-  $(window).on('sm.passage.shown', handleTwemoji);
 
 :: Twemoji style [stylesheet]
 .emoji {
