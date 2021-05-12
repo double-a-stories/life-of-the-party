@@ -77,17 +77,17 @@ if (!setup.partyDanceLiterals) {
 `A grey wolf with a huge protruding gut accidentally bumps into you. "S'cuse me," she mutters as she walks away.`,
 `Your ears perk up: the speakers are a slow-jam by the classic R&B duo, Thumper & Bang. You tap your furry toes happily.`,
 `The sound system blares with the shouty vocals and distorted guitar of "groupie gas (ft. some snack idk)" by LOÜD GRÜMBLE.`,
-`Tails wag and fists pump in the air as the subwoofer rattles out seemingly the thirtieth dubstep song of the evening. You can't tell if it's the same song or not.`,
+`Tails wag and paws pump in the air as the subwoofer wubs and dubs the bass-drop of this one dubstep song, yet again.`,
 `A tall black wolf in a scarf and a flannel shirt brought an acoustic guitar with him. He's playing "Wonderwall" with an extremely thoughtful expression.`,
 `A slightly chubby owl notices you from across the room and begins licking her beak.`,
 `A drunk labrador begins nuzzling you. "Oh my gooood dudes, this rabbit is soooo soft..." You blush. Surprisingly, his fur is extremely soft as well.`,
-`A green anaconda girl starts wagging her tail in time with the music, and accidentally trips two people. "Sorry!" she stammers, "Sorry again!"`,
+`A green anaconda waggs her tail in time with the music, and accidentally trips two people. "Oh, sorry!" she stammers, "Sorry again!"`,
 `There aren't many other prey at this party. You feel a little small by comparison to all the huge anthros here.`,
 `A nice, easy song starts playing. You consider offering to dance with one of the guys around you, but most of them are several feet taller than you.`,
 `A heavy-set bear with a selfie stick is recording herself as she shakes her massive hips. You try not to stare, but it's absolutely hypnotic.`,
 `A lioness whispers to her friend, "Did you know there's a rabbit here?" They snicker. "Woah. Do you think it has a vore fetish?"`,
 `You see a catboy eagerly following a lioness out of the room. They both seem quite excited.`,
-`A dragonness reaches down, grabs a tiny mouse, and dangles it teasingly over her snout. She smirks as it struggles. Should you... do something?`,
+`A dragonness reaches down, grabs a tiny mouse off the floor, and dangles it teasingly over her snout. She smirks as the little thing cries out and begs for mercy. Should you... do something?`,
 ].sort(e => 0.5 - Math.random());
 
 setup.partyDanceLiterals.push(`A big brown stallion in a green jacket seems to take notice of your dancing. He winks at you from across the room.`);
@@ -135,35 +135,12 @@ return literals[Math.min(s.punchCount, literals.length) - 1]
 
 :: Grab one more punch.
 
-You look toward the punch bowl and scowl with disgust. A labrador notices and elbows you, "Hey, maybe lay off the sauce, huh?"
+You look toward the punch bowl and scowl with disgust.
+
+<% if (s.rescuedKaia) { %>
+Kaia the mouse looks up at you with concern. "Uh, maybe take it slow, huh?"
+<% } else { %>
+A labrador notices and elbows you. "Woahh, dude! Maybe go a little easy on the party sauce, kay dude?"
+<% } %>
 
 \> [[Get very very drunk.]]
-
-:: Watch the dragonness eat.
-
-<% s.rescuedKaia = false; %>
-
-You watch as the dragonness snarfs down the little white mouse boy with a satisfied smile. At first he squeaks out in fear, but the sound stops instantly as he snakes down her throat.
-
-You feel slightly guilty for not intervening. And somehow... aroused?
-
-
-\> [[Dance a little more.|Dance a little.]]
-
-:: Intervene on the dragonness.
-
-You shout at the owl not to eat the mouse.
-
-She blinks, and asks, "Hoo hoo, why not?"
-
-<% s.rescuedKaia = true; %>
-
-// TODO: You rescue the mouse. She's a small and white-furred dwarf mouse named Kaia.
-
-"Thanks for your help... It's really my fault for being so careless. Cass is always telling me to stay away from larger folk, but you seem nice!"
-
-You drop her off on the bannister, "Let me know if you see her! I'll be hanging out by the punch bowl."
-
-You gain **+15 morality points**. 30 more of those, and you'll unlock the good ending!
-
-\> [[Dance a little more.|Dance a little.]]

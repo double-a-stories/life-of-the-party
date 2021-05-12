@@ -1,0 +1,75 @@
+:: Dragon tongue [stylesheet]
+
+.dragon {
+  font-family: cursive;
+}
+.mouse {
+  font-family: Verdana, sans-serif;
+  font-size: 80%;
+}
+
+:: Watch the dragonness eat.
+
+<% s.rescuedKaia = false; %>
+
+You watch as the dragonness snarfs down the little white mouse boy with a satisfied smile. At first he squeaks out in fear, but the sound stops instantly as he snakes down her throat.
+
+You feel slightly guilty for not intervening. And somehow... aroused?
+
+\> [[Dance a little more.|Dance a little.]]
+
+:: Intervene on the dragonness.
+
+You timidly shout at the dragoness not to eat the mouse.
+
+The dragoness stops dangling the little white mouse girl over her mouth, and turns to look at you. She blinks, and asks, <q.dragon>Why should we not? It is food, and brings us joy to eat.</q>
+
+She speaks with the distinct and refined draconic accent, including the royal *we*. Dragons are not common around here. You wonder if she's an exchange student or something.
+
+\> [[She's not food!]]
+
+\> [[That's a living person!|She's not food!]]
+
+:: She's not food!
+
+The dragoness narrows her eyes. <q.dragon>It fits in our mouth, and so it is food. You are strange to think otherwise, Rabbit. You would bring us joy to eat as well.</q>
+
+\> [[Grab the mouse out of her claws.]]
+
+:: Grab the mouse out of her claws.
+
+The dragoness looks with surprise as you attempt to free the mouse by force. She lifts the mouse higher, just out of your reach.
+
+<q.dragon>Your bravery is admirable and annoying,</q> she sighs, <q.dragon>If you care so strongly about this tiny thing, than I suppose I shall release it into your custody, and pursue a more filling meal for the evening.</q>
+
+She releases the mouse into your outstretched paws. You dutifully carry her over to the banister and release her.
+
+\> [[A-are you hurt?]]
+
+:: A-are you hurt?
+
+<% s.rescuedKaia = true; %>
+
+The mouse rises to her feet, and dusts herself off. At full height, she's a mere 6-inches tall.
+
+She replies in a small voice, <q.mouse>Not physically, but I think my life might have flashed before my eyes... Even thought it was my fault, it'd be really embarassing if my whole purpose in life was to be a meal for some rando at a college party!</q>
+
+\> [[Yeah, it would...]]
+
+:: Yeah, it would...
+
+You nod awkwardly.
+
+<q.mouse>Oh, how rude of me. My name's Kaia. Thanks for rescuing me!</q>
+
+You reply that your name is Hollis, and ask the mouse if she's here with anybody else.
+
+<q.mouse>I'm here with my girlfriend Faith, actually, although I haven't seen her recently... She's super careful though, so I'm sure she's be fine. She's a mouse like me. Would you let me know if you see her?</q>
+
+You nod again.
+
+<q.mouse>Awesome! I'll be hanging out by the punch bowl.</q>
+
+You gain **+15 morality points**. 30 more of those, and you'll unlock the good ending!
+
+\> [[Dance a little more.|Dance a little.]]
