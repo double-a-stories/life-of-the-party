@@ -35,4 +35,8 @@ $(window).on('sm.passage.shown', function (event, eventObject) {
 
 // Set document language to English.
 // This causes <q> to implicitly render as curly double quotes.
-$("html").attr("lang", "en-us")
+$("html").attr("lang", "en-us");
+
+$(window).on('sm.passage.shown', function (event, eventObject) {
+    $("a[href^='https']").attr("target", "_blank");
+});
