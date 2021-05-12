@@ -28,12 +28,13 @@ $(window).on('sm.passage.shown', (e, {passage}) => {
 
 setup.rewind = () => {
   if (story.history.length >= 1) {
-    let id = _.findLastIndex(story.history.slice(-1),
+    let idx = _.findLastIndex(story.history.slice(0, -1),
     id => story.passage(id).tags.includes("checkpoint"));
-    if (id != -1) {
-      story.show(story.history[id]);
-      return;
+    if (idx != -1) {
+      story.show(story.history[idx]);
+      story.history = story.history.slice(0, idx + 1);
+    } else {
+      setup.restart();
     }
   }
-  setup.restart();
 }
