@@ -346,9 +346,9 @@ Getting involved in a car-jacking wasn't really in your evening plans, you say. 
 
 Ren revs the engine. Soon, <%=s.rm?"he":"she"%>'s onto the highway, experimentally speeding and pushing the limits of the vehicle's motor. You can't see, but a constant grin is plastered on <%=s.rm?"his":"her"%> face. It sounds like <%=s.rm?"he":"she"%>'s truly in <%=s.rm?"his":"her"%> element.
 
-Then you hear sirens.
+Then, you hear sirens.
 
-<q.ren>Ah, fuzz. 🚔🚔🚔</q>
+<q.ren>Ah, fuzz, 🚔🚔🚔</q> says Ren.
 
 \> [[(oh gosh oh fluff)]]
 
@@ -359,11 +359,11 @@ Then you hear sirens.
 
 Against your urging, Ren decides to floor it and evade the cops. More and more wild shit happens, but you don't get to see any of it because you're still in a fox gut.
 
-Ren says <%=s.rm?"he":"she"%> has a live prey, and attempts to coerce them into letting <%=s.rm?"him":"her"%> go
+The cops call on the carphone. Ren tells them <%=s.rm?"he":"she"%> has a live prey, and attempts to use you as a hostage so they let <%=s.rm?"him":"her"%> go.
 
-Seriously, you say, <%=s.rm?"he":"she"%>'s' gotta turn <%=s.rm?"him":"her"%>self in.
+Seriously, you say, <%=s.rm?"he":"she"%>'s gotta turn <%=s.rm?"him":"her"%>self in. You say you're starting to run low on air, and fizzy liquids are beginning to tickle your toes.
 
-<q.ren>😼 Good idea, but I got a better one.</q> <%=s.rm?"He":"She"%>'s gonna fake out the cops by coming up on a turn really fast, then cutting the wheel.
+<q.ren>😼 Good idea, but I got a better one.</q> <%=s.rm?"He":"She"%> prepares to fake out the cops by coming up on a turn really fast, then cutting the wheel.
 
 At this key moment, you have the choice to struggle or remain still.
 
@@ -375,11 +375,11 @@ At this key moment, you have the choice to struggle or remain still.
 
 *CW: Police negligence. Fatal digestion. Betrayal.*
 
-You kick around frantically. Ren pats <%=s.rm?"he":"she"%> gut frantically.
+You kick around frantically. Ren pats <%=s.rm?"his":"her"%> gut frantically.
 
-<q.ren>Nnnng~ 😩 S-stop it!!!</q>, <%=s.rm?"he":"she"%> groans, <q.ren>😖 You're gonna break my-...</q>
+<q.ren>Nnnng~ 😩 S-stop it!!!</q>, <%=s.rm?"he":"she"%> groans, <q.ren>😖 You're gonna break my focus and...</q>
 
-<%=s.rm?"He":"She"%> misses the turn, and is now heading straight toward a police barricade (<q.ren>🚔🚔😦🚔🚔 </q>). <q.ren>...Focus. 😨</q> <%=s.rm?"He":"She"%> has no choice but to pull to a stop.
+<%=s.rm?"He":"She"%> misses the turn, and is now heading straight toward a police barricade (<q.ren>🚔🚔😦🚔🚔 </q>). <%=s.rm?"He":"She"%> has no choice but to pull to a stop.
 
 \> [[Uh-oh...]]
 
