@@ -1,0 +1,14 @@
+:: Help [no_checkpoint dark]
+
+\> <a0 onclick="setup.undo();">Go back</a>
+
+### Keyboard controls
+
+* `S (J)` - *Select next link.*
+* `W (K)` - *Select previous link.*
+* `E (Space)` - *Use selected link.*
+* `A (H)` - *Undo last command.*
+* `D (L) ` - *Redo last command.*
+
+
+<%= story.render("Credits passage") %>

@@ -1,0 +1,89 @@
+/* Ana speaks in Comic Sans */
+
+.ana {}
+
+/* Hollis reverts back to the default font. */
+
+.hollistalk {
+  font-family: var(--font-stack);
+  font-weight: normal;
+  text-transform: none !important;
+  font-size: 90%;
+}
+
+body[data-tags~="dark"], .backdrop {
+  --background: #020202;
+  --light: rgba(255, 255, 255, 50%);
+  --color: #ccc;
+}
+
+[data-tags~="otherstory"] {
+  transition: none !important;
+  line-height: 1.5;
+}
+
+.backdrop,
+[data-tags~="otherstory"] #recent-command,
+[data-tags~="otherstory"] {
+  font-family:'Times New Roman', Times, serif;
+}
+
+[data-tags~="otherstory"] #recent-command {
+  text-align: center;
+}
+
+[data-tags~="otherstory"] a,
+[data-tags~="otherstory"] #recent-command {
+  font-variant-caps: small-caps;
+}
+
+.fadeout {
+  position: relative;
+}
+
+.fadeout::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(to bottom,
+  transparent, var(--background, #eee));
+  transition: 1s;
+}
+
+.focusonly {
+  opacity: 0;
+  cursor: default;
+  transition: opacity 0.3s;
+}
+
+.focusonly:focus, .focusonly:hover {
+  opacity: 1;
+}
+
+tw-story, tw-passage {
+  position: unset;
+}
+
+.backdrop {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  padding-top: 60rem;
+  padding-bottom: 20rem;
+  width: 100%;
+  background: rgb(238,238,238);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,
+    #020202 70%);
+  color: #eee;
+  --color: #eee;
+  --light: rgba(255, 255, 255, 50%);
+  text-align: center;
+}
+.other-logo {
+  font-size: 3rem;
+  padding-bottom: 10rem;
+  font-variant: small-caps;
+}

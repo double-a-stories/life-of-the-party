@@ -1,0 +1,19 @@
+:: Start [no_heading start]
+<style>
+tw-passage > * {
+  margin-bottom: 5rem;
+}
+</style>
+<%= story.render("Logo") || "" %>
+
+<div>
+
+\> [[Life of the Party.]]
+
+</div>
+
+<div>
+<% const hasSomeAchievements = (setup.getAchievements().length > 0); %>
+<%= story.render(hasSomeAchievements ? "Achievements list" : "Content warning") %>
+
+</div>

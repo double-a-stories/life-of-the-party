@@ -1,0 +1,128 @@
+:: Sit by yourself. [dreamy_1]
+You find an empty bench to sit on by yourself, distancing yourself from the chaos of the party. Being out here on your own, it's actually quite peaceful.
+
+\> [[Watch the stars.]]
+
+<style>
+  body {
+   --background: #eef
+  }
+</style>
+
+
+:: Watch the stars. [dreamy_1]
+You do so.
+
+The night sky is peaceful. The clouds are clear, but you can only barely see the stars thanks to the light pollution of this suburban neighborhood.
+
+\> [[Get up.]]
+
+\> [[Comprehend the endless cosmos.]]
+
+
+:: Get up.
+Having had your fill of stargazing, you stand up from the bench.
+
+\> [[Look at hyena.]]
+
+\> [[Go back to the foyer.|The Foyer.]]
+
+
+:: Comprehend the endless cosmos. [dreamy_2]
+Sitting here alone, with your head tilted toward the starryish sky, you realize that nothing you've been doing at this party has been very important.
+
+You don't need to rescue your friend from being eaten. You don't need to find a hot date, and you definitely don't need to be seduced, swallowed, and privately digested by them. You don't even need to think about how you're getting home after this.
+
+All you need to do is rest your eyes upon the swirling heavens, and relax. You realize a simple truth that all beings are one. Whether pred or prey, rabbit or horse, nerd or jock, all are simply food for the gaping maw of time itself.
+
+ You need not need cling to the edges of your liminal reality.
+
+\> [[Stop meditating.|Get up.]]
+
+\> [[Break these mortal chains.]]
+
+
+:: Break these mortal chains. [dreamy_2]
+<% setup.addAchievement("True Zen (Meditation Ending)") %>
+
+You shut your eyes tight.
+
+The world around you dissolves. The details soften, as though they were simply dark scribbles on a light background. You get the feeling that the little voices in your head are gently fading out into white noise...
+
+You concentrate on your breathing. No wait. *Hollis* concentrates on *their* breathing. Their chest, not yours, gently rises and falls in rhythm with the drifting of the cool autumn leaves scattered around their furry feet.
+
+<div class="fadeout">
+
+In the backyard of a suburban house party, Hollis Freeley opens their eyes, and takes in their surroundings. They draw a deep breath, like a weight has suddenly been lifted from their shoulders. As the last of your influence wanes, Hollis blinks and mutters out loud, "What the fuck was all that about?"
+
+<code>LotP encountered an error:<br>client connection lost. please contact manufacturer if problem persists. automated support is available at 1-800-813-621</code>
+<br>
+
+</div>
+
+<div style="text-align: center">
+<a0 class="focusonly" onclick="window.scrollTo({left: 0, top: 9999, behavior: 'smooth'})">↓↓↓ Scroll down ↓↓↓</a>
+</div>
+
+<div class="backdrop">
+
+<p style="margin-bottom: 3rem;">Connection resolved.</p>
+
+<div class="other-logo">
+
+\> [[Be the hyena.]]
+
+
+:: Be the hyena. [dark otherstory]
+
+Your name is Ana. You're a spotted hyena, currently chilling on a bench outside a house party like a total loser.
+
+You showed up about an hour ago, but big crowds freak you out, so you came out here to get some air and clear your head. You're here because, like most young predators, you want to eat someone. You want to feel prey writhing around inside your belly. You'd go in there and grab one, but the noise is too overwhelming.
+
+A rabbit walked out here a few minutes ago, and zoned out while staring at the sky. You think they're either high, or having a dissociative episode.
+
+What do you do?
+
+\> [[Eat the rabbit.]]
+
+\> [[Eat the rabbit.]]
+
+\> [[Eat the rabbit.]]
+
+
+:: Eat the rabbit. [dark otherstory]
+
+<i.ana>Great idea, voice inside my head,</i> you think. You walk over to the rabbit.
+
+<q.hollistalk>Um, hi there!</q> they say, clearly slightly nervous to see you. You have that effect on people sometimes. Probably because you're 6′10″ and your whole body was designed for shredding meat into tiny pieces.
+
+They flinch as you nonchalantly grab them up in my paws. <q.hollistalk>Woah, wait!</q> they cry out, but you're too hungry to listen. Their eyes go wide as you stuff their ears into your mouth.
+
+They try to fight you at first, but eventually calm down.
+
+\> [[Swallow them.]]
+
+\> [[Swallow them.]]
+
+\> [[Swallow them.]]
+
+:: Swallow them. [dark otherstory]
+
+With one huge gulp, you swallow the rabbit.
+
+Burp. In under a minute, they're all the way inside you. A familiar fullness fills your belly, and you sigh with relief.
+
+<q.hollistalk>Y-you're gonna digest me, aren't you...</q> they say.
+
+You pat your belly and reply happily, yup!
+
+<q.hollistalk>...Alright,</q> they say, settling in to their fate.
+
+You begin to drift off to a nap. <i.ana>Wow,</i> you think, <i.ana>this route got pretty meta, huh? Whatever dumb jerk wrote this crap probably thinks they're *reeeal* clever.</i>
+
+</div>
+
+### The End.
+
+\> [[Restart.|Start]]
+
