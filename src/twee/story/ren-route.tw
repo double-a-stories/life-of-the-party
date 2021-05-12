@@ -432,9 +432,9 @@ You feel yourself... beginning to... pass out.
 
 <% setup.addAchievement("🦊🥱🐇 (Ren Vore Ending)"); %>
 
-\> [[(oh gosh oh fluff)]] *(Rewind)*
+\> <a0 onclick="setup.rewind();">Rewind</a>
 
-\> [[Restart|Start]]
+\> <a0 onclick="setup.restart();">Restart</a>
 
 :: Stay still. [vore]
 
@@ -454,6 +454,6 @@ After <%=s.rm?"he":"she"%> loses the cops, you convince <%=s.rm?"him":"her"%> to
 
 The next day, you hear a knock on your door, and open it to find <%=s.rm?"Basil":"Lacey"%> (switch between Basil/Lacey depending on whether they picked male/female Ren) who is extremely pissed.
 
-\> [[(oh gosh oh fluff)]] *(Rewind)*
+\> <a0 onclick="setup.rewind();">Rewind</a>
 
-\> [[Restart|Start]]
+\> <a0 onclick="setup.restart();">Restart</a>
