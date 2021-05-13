@@ -7,17 +7,31 @@
 		<style>
 		/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}details,main,tw-passage{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;color:#222;text-decoration-color:#ccc}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template,tw-storydata{display:none}body{font:1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;color:#222;margin:.5em}tw-story{max-width:35em;margin:0 auto;line-height:150%;display:block}a:hover{color:#cc8929;text-decoration-color:#cc8929}a:active{color:#ffb040;text-decoration-color:#cc8929}@media screen and (max-width:480px){#passage{font-size:70%}}
 		</style>
-	<noscript>
+	<!-- Message for users without JavaScript -->
+<noscript>
+  <img src="logo.png" alt="Life of the Party">
   <!-- Tweego appends this content to the head-->
   This game requires browser scripts to run. Please <strong>enable JavaScript</strong>, and reload this page.</noscript>
 
+<!-- Google fonts-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link
   href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Playfair+Display+SC:wght@700&family=Tinos:ital@0;1&display=swap"
   rel="stylesheet">
 
+<!-- Twemoji script -->
 <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 
+<!-- Opengraph tags for embeds -->
+<meta property="og:title" content="Life of the Party: A Furry Vore Adventure (18+)">
+<meta property="og:site_name" content="Double-A Stories">
+<meta property="og:url" content="">
+<meta property="og:description"
+  content="An HTML interactive story, featuring fatal vore and multiple endings. Your name is Hollis Freely. You are a small gray rabbit. What will you do?">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.png">
+
+<!-- Favicon manifest -->
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="assets/icons/favicon.svg">
 <link rel="mask-icon" href="assets/icons/mask-icon.svg" color="#000000">
@@ -875,7 +889,7 @@ setup.handleBroomCloset = () => {
 /* twine-user-script #10: "Misc story variables" */
 story.semanticVersion = [0, 5, 0, "-indev"];
 story.version = `v${story.semanticVersion.slice(0, 3).join(".")}${story.semanticVersion[3] || ""}`;
-story.sourceURL = "https://github.com/double-a-stories/life-of-the-party";</script><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-passagedata pid="1" name="Achievements list" tags="" position="100,100" size="100,100">&lt;% const achievements = setup.getAchievements().sort();
+story.sourceURL = "https://github.com/double-a-stories/life-of-the-party";</script><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-passagedata pid="1" name="Achievements list" tags="" position="100,100" size="100,100">&lt;% const achievements = setup.getAchievements().sort();
    const story_max_achievements = 9; // TODO: change me!
 %&gt;
 
