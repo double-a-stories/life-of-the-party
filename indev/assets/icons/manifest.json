@@ -1,0 +1,13 @@
+{
+    "name": "Life of the Party",
+    "short_name": "Life of the Party",
+    "icons": [
+        {
+            "src": "google-touch-icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff"
+}
