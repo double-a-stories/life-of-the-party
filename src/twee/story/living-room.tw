@@ -60,7 +60,7 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 \> [[Wink back at the horse.|Wink back at Basil.]]
 <% } if (s.partyFlavorWonderwolf || s.partySeenByron || setup.isFlagSet("talkedToByron")) {
   s.partySeenByron = true; %>
-\> [[Talk to the wolf.|Talk to Byron.]]
+\> [[Look at wolf.]]
 <% } %>
 
 :: Randomized Party Flavor [hide]
@@ -78,7 +78,7 @@ if (!setup.partyDanceLiterals) {
 `Your ears perk up: the speakers are a slow-jam by the classic R&B duo, Thumper & Bang. You tap your furry toes happily.`,
 `The sound system blares with the shouty vocals and distorted guitar of "groupie gas (ft. some snack idk)" by LOÜD GRÜMBLE.`,
 `Tails wag and paws pump in the air as the subwoofer wubs and dubs the bass-drop of this one dubstep song, yet again.`,
-`A tall black wolf in a scarf and a flannel shirt brought an acoustic guitar with him. He's playing "Wonderwall" with an extremely thoughtful expression.`,
+`A tall black wolf in a scarf and a flannel shirt brought an acoustic guitar to the party, and is playing "Wonderwall" with an extremely thoughtful expression.`,
 `A slightly chubby owl notices you from across the room and begins licking her beak.`,
 `A drunk labrador begins nuzzling you. "Oh my gooood dudes, this rabbit is soooo soft..." You blush. Surprisingly, his fur is extremely soft as well.`,
 `A green anaconda waggs her tail in time with the music, and accidentally trips two people. "Oh, sorry!" she stammers, "Sorry again!"`,

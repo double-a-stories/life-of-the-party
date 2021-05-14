@@ -1,6 +1,6 @@
 <!-- Planned route:
-In the living room is Byron Bladd, a hipster wolf guitarist with poetic aspirations and delusions of being a high-class gentleman. He tries to gatekeep you with flowery speech and obscure knowledge, but begrudgingly admits his respect for you.
-Hollis realizes that Byron's sensitive exterior is just a front for his predatory desires, and rejects him. He doesn't take it well. -->
+In the living room is a hipster wolf guitarist with poetic aspirations and delusions of being a high-class gentleman. <%-s.bm?"He":"She"%> tries to gatekeep you with flowery speech and obscure knowledge, but begrudgingly admits <%-s.bm?"his":"her"%> respect for you.
+Hollis realizes that Byron's sensitive exterior is just a front for <%-s.bm?"his":"her"%> predatory desires, and rejects <%-s.bm?"him":"her"%>. <%-s.bm?"He":"She"%> doesn't take it well. -->
 
 :: Byron's font quirk [stylesheet]
 
@@ -9,89 +9,110 @@ Hollis realizes that Byron's sensitive exterior is just a front for his predator
   font-size: 1.1em;
 }
 
+:: Look at wolf.
+
+*CW: Negging. Threats and coercion. Non-consensual.*
+
+A black-furred wolf, about six feet tall, wearing in a stylish scarf and a checkered red flannel shirt. They're sitting aloofly on a couch, and serenading the party with an acoustic guitar.
+
+\> <a0 onclick="story.state.bm = true;" data-passage="Talk to Byron.">Talk to him.</a> *(Male pred)*
+
+\> <a0 onclick="story.state.bm = false;" data-passage="Talk to Byron.">Talk to her.</a> *(Female pred)*
+
+\> [[Go back.|Dance a little.]]
+
+*This route contains **unfinished content**, planned to be completed in v0.6.0. Proceed at your own risk.*
+
 :: Talk to Byron.
 
 <% setup.setFlag("talkedToByron"); %>
 
-*This route contains **unfinished content**, planned to be completed in v0.6.0. Proceed at your own risk.*
+You walk over to the wolf. <%-s.bm?"He":"She"%> continues sitting on the couch, strumming bar chords on <%-s.bm?"his":"her"%> guitar. <%-s.bm?"He":"She"%> looks really into it, but finally stops playing and acknowledges you with a nod.
 
-*CW: Negging. Threats and coercion. Non-consensual.*
-
-You walk over to the wolf with the guitar. Looks like he's really into it. He continues sitting on the couch, strumming bar chords for a moment, but finally stops playing and acknowledges you with a nod.
-
-<q class="byron">Ahh,</q> he says, speaking with a deep, aristocratic accent, <q class="byron">What a pleasure to see a rabbit in a grim setting like this. Perhaps... 'twas fate that united us?</q>
+<q class="byron">Ahh,</q> <%-s.bm?"he":"she"%> says, speaking with a deep, aristocratic accent, <q class="byron">The countenance of a lone rabbit amidst a grim setting is an unexpected pleasure. Perhaps... 'twas fate that united us?</q>
 
 \> [[Uh, what?]]
 
 
 :: Uh, what?
 
-You squint and say you're not really sure what he's talking about.
+You squint and say you're not really sure what <%-s.bm?"he":"she"%>'s talking about. <%-s.bm?"He":"She"%> looks aloofly out at the party, <%-s.bm?"his":"her"%> dark green eyes glistening beneath the jet-black fur of <%-s.bm?"his":"her"%> face.
 
-He looks aloofly into the distance, his dark green eyes glistening beneath the jet-black fur of his face. <q class="byron">Forgive an old hound's musings. It was once said that rabbits are good luck, so it seemed ominous that fortune would lead you here... You tread like a small leaf on the wind... I wonder if we crueller beasts could learn something from that...</q>
+<q class="byron">Forgive an old hound's musings</q>, <%-s.bm?"he":"she"%> says, <q.byron>It was once said that rabbits are good luck, so it seemed ominous that fortune would lead you here... You tread like a small leaf on the wind... I wonder if we crueller beasts could learn something from that...</q>
 
-You stare back at him blankly. Is he... flirting with you? He talks like a moody teenaged vampire from a bad fanfiction, so it's sort of hard to tell.
+You stare back at <%-s.bm?"him":"her"%> blankly. Is <%-s.bm?"he":"she"%>... flirting with you? <%-s.bm?"He":"She"%> talks like a moody teenaged vampire from a bad fanfiction, so it's sort of hard to tell.
 
 \> [[...Have you tried the punch?]]
 
-\> [[...Compliment his shirt?]]
+\> [[...Compliment <%-s.bm?"his":"her"%> shirt?|Compliment shirt?]]
 
 :: ...Have you tried the punch?
 
-<q class="byron">No,</q> replies Byron, <q class="byron">I choose not to desecrate my body with that corporate poison.</q>
+<q class="byron">No,</q> replies the wolf, <q class="byron">I choose not to desecrate my body with that corporate poison.</q>
 
 Right, you say, you never really saw the appeal either.
 
-\> [[...Compliment his shirt?]]
+\> [[...Compliment <%-s.bm?"his":"her"%> shirt?|Compliment shirt?]]
 
 
-:: ...Compliment his shirt?
+:: Compliment shirt?
 
-You notice that underneath his flannel, he's wearing a t-shirt from an emo rock group called Dead-Ass Dingoes. You had a pretty big Dingoes phase back in junior high, which you'd rather not talk about.
+You notice that underneath <%-s.bm?"his":"her"%> flannel, <%-s.bm?"he":"she"%>'s wearing a t-shirt from an emo rock group called Dead Beat Dingoes. You used to be pretty into them, back in junior high.
 
 Cool shirt, you say.
 
-The wolf gives you a little smile. <q class="byron">Oh, what's this? Another soul moved by song? A kindred spirit, lead by dismal poetries to muse on the thin veneer of this shallow world?</q> He puts a paw on his chin, and continues to look contemplative, <q class="byron">Perhaps we have more in common than these shallow costumes of fur would have us believe...</q>
+<q class="byron">Oh, what's this?</q> The wolf gives you a little smile. <q.byron>Another soul moved by song? A kindred spirit, inspired by the Dingoes' poetries to muse on the thin veneer of this shallow world?</q>
+
+You stare blankly.
+
+<%-s.bm?"He":"She"%> puts a paw on <%-s.bm?"his":"her"%> chin, and continues to look contemplative, <q class="byron">Perhaps we have more in common than these shallow costumes of fur would have us believe...</q>
 
 \> [[Actually I just like their music...]]
 
 :: Actually I just like their music...
 
-<q class="byron">Oh,</q> he replies, frowning, <q class="byron">I suppose I mistook you for a true afficionado. One who has stared into the black abyss of sorrow, and emerged clad in the darkness of truth...</q>
+<q class="byron">Oh,</q> <%-s.bm?"he":"she"%> replies, frowning, <q class="byron">I suppose I mistook you for a true afficionado. One who has stared into the black abyss of sorrow, and emerged clad in the darkness of truth...</q>
 
-He begins tuning his guitar and ignoring you.
+<%-s.bm?"He":"She"%> begins tuning <%-s.bm?"his":"her"%> guitar and ignoring you.
 
 \> [[Hey, I've done that!]]
 
 :: Hey, I've done that!
 
-You scowl and inform him that you were a moody teenager once too! *You* just happened to grow out of it!
+You scowl and inform <%-s.bm?"him":"her"%> that you were a moody teenager once too! *You* just happened to grow out of it!
 
-<q class="byron">Oh really?</q> he raises an eyebrow. <q class="byron">Then I guess you should have no problem naming three Dingoes albums?</q>
+<q class="byron">Oh really?</q> <%-s.bm?"he":"she"%> raises an eyebrow. <q class="byron">Then I suppose you should have no problem naming three Dingoes albums?</q>
 
 You roll your eyes.
 
-\> [[*Red Paranoia. Chained Up Illness. Bite My Kiss.*|Name 3 of their albums.]]
+\> [[*Red Paranoia*.|Name 3 of their albums.]]
 
-\> [[*Sucker F\*cker. Dingoes Must Die. Eat Eat Repeat.*|Name 3 of their albums.]]
+\> [[*Sucker F\*cker*.|Name 3 of their albums.]]
 
-\> [[*Food For Love. Pain Train. Tummy KO OK.*|Name 3 of their albums.]]
+\> [[*Dingoes Must Die*.|Name 3 of their albums.]]
 
 
 :: Name 3 of their albums.
 
-<q class="byron">...Hm.</q> The wolf raises his eyebrows as you correctly rattle off three albums by Dead-ass Dingoes. He seems slightly impressed, and offers you a seat on the couch next to him. <q class="byron">I'm Byron Badde. Pleasure to make your acquaintance.</q>
+<q class="byron">...Hm.</q> The wolf raises <%-s.bm?"his":"her"%> eyebrows as you correctly rattle off three albums by Deadbeat Dingoes. <%-s.bm?"He":"She"%> seems slightly impressed. <%-s.bm?"He":"She"%> gestures grandiosely to <%-s.bm?"his":"her"%> chest. <q class="byron">I am <%-s.bm?"Emmet":"Emily"%> Byron III, but you may call me simply Byron. Pleasure to make your acquaintance.</q>
 
-Hollis, you reply smugly.
+Byron offers you a seat on the couch next to <%-s.bm?"him":"her"%>. <q class="byron">And you are?</q>
 
-A spark lights in Byron's eyes. <q class="byron">Say, Hollis,</q> he says, <q class="byron">Why don't we head upstairs? Somewhere the two of us can talk more... privately?</q>
+\> [[Hollis Freely, Esq.. At your service!]]
+
+
+:: Hollis Freely, Esq.. At your service!
+
+You sit down, introducing yourself with a similarly grandiose manner.
+
+A spark lights in Byron's eyes. <q class="byron">Say, Hollis,</q> <%-s.bm?"he":"she"%> says, <q class="byron">Why don't we head upstairs? Somewhere the two of us can talk more... privately?</q>
 
 \> [[Why? So you can eat me?]]
 
 
 :: Why? So you can eat me?
 
-<q class="byron">What?</q> He acts offended, and says, <q class="byron">I would never attempt to take advantage of someone in such an uncivilized manner. It is beneath me, and all of wolfkind.</q> He raises a claw to his chin. <q class="byron">But, if *you* were interested in such a thing, I suppose I would have no choice but to accept...</q>
+<q class="byron">What?</q> <%-s.bm?"He":"She"%> acts offended, and says, <q class="byron">I hope you know would never attempt to take advantage of someone in such an uncivilized manner. It is beneath me, and all of wolfkind.</q> <%-s.bm?"He":"She"%> raises a claw to <%-s.bm?"his":"her"%> chin. <q class="byron">But, if *you* were interested in such a thing, I suppose I would have no choice but to accept...</q>
 
 \> [[God, you're pathetic!]]
 
@@ -99,37 +120,37 @@ A spark lights in Byron's eyes. <q class="byron">Say, Hollis,</q> he says, <q cl
 
 Byron blinks. <q class="byron">What?</q>
 
-You tell Byron you're not gonna let him eat you, or fuck you, or anything.
+You tell Byron you're not gonna let <%-s.bm?"him":"her"%> eat you, or fuck you, or anything.
 
-His mouth seems to become slightly dry. <q class="byron">Are... are you sure? I've been told it can be quite... pleasant, given the right participants. A sensual reminder of animal passions long forgotten, heightened by the careless grip of mortality...</q>
+<%-s.bm?"His":"Her"%> mouth seems to become slightly dry. <q class="byron">Are... are you sure? I've been told it can be quite... pleasant, given the right participants. A sensual reminder of animal passions long forgotten, heightened by the careless grip of mortality...</q>
 
 \> [[Shut it!]]
 
 :: Shut it!
 
-Ugh, stop talking like that, you say. The whole "sensitive musician" thing is obviously just a ploy to lure in prey. You tell Byron he's just horny and hungry, like everybody else at this dumb party. A literal wolf in sheep's clothing!
+Ugh, stop talking like that, you say. The whole "sensitive musician" thing is obviously just a ploy to lure in prey. You tell Byron <%-s.bm?"he":"she"%>'s just horny and hungry, like everybody else at this dumb party. A literal wolf in sheep's clothing!
 
-He narrows his eyes, and scowls, <q class="byron">...You insult me gravely, little rabbit. I have been nothing but a pinnacle of courtesy, and you rebuff both me and my pedigree.</q> He sticks out a paw. <q class="byron">Follow me.</q>
+<%-s.bm?"He":"She"%> narrows <%-s.bm?"his":"her"%> eyes, and scowls, <q class="byron">...You insult me gravely, little rabbit. I have been nothing but a pinnacle of courtesy, and you rebuff both me and my pedigree.</q> <%-s.bm?"He":"She"%> sticks out a paw. <q class="byron">Follow me.</q>
 
 \> [[Don't take it.]]
 
 
 :: Don't take it.
 
-Byron snarls at you, now openly scowling. <q class="byron">Gods, you prey are all the same!</q> He pops his collar. <q class="byron">You disgrace me and my name! A gentleman cannot let a slight like that go unpunished. You *will* submit to me.</q> He rises to his feet, slings his guitar over his back, and offers you his paw. <q class="byron">Stand up,</q> he commands.
+Byron snarls at you, now openly scowling. <q class="byron">Gods, you prey are all the same!</q> <%-s.bm?"He":"She"%> pops <%-s.bm?"his":"her"%> collar. <q class="byron">You disgrace me and my name! A gentleman cannot let a slight like that go unpunished. You *will* submit to me.</q> <%-s.bm?"He":"She"%> rises to <%-s.bm?"his":"her"%> feet, slings <%-s.bm?"his":"her"%> guitar over <%-s.bm?"his":"her"%> back, and offers you <%-s.bm?"his":"her"%> paw. <q class="byron">Stand up,</q> <%-s.bm?"he":"she"%> commands.
 
-You tell him you're not gonna-
+You tell <%-s.bm?"him":"her"%> you're not gonna-
 
-He bares his fangs. <q class="byron">*Now.*</q>
+<%-s.bm?"He":"She"%> bares <%-s.bm?"his":"her"%> fangs. <q class="byron">*Now.*</q>
 
 \> [[Stand up.]]
 
 
 :: Stand up.
 
-<q class="byron">Good.</q> Byron places his paw firmly on your lower back. You feel his claws outstretched, threatening to shred through your top and into the flesh beneath. <q class="byron">Now, let's go upstairs, shall we?</q>
+<q class="byron">Good.</q> Byron places <%-s.bm?"his":"her"%> paw firmly on your lower back. You feel <%-s.bm?"his":"her"%> claws outstretched, threatening to shred through your top and into the flesh beneath. <q class="byron">Now, let's go upstairs, shall we?</q>
 
-You grit your teeth, and walk helplessly in lock-step with the wolf as he leads you back out of the living room. You're about to enter the foyer, when a golden labrador in a green jacket stops the two of you.
+You grit your teeth, and walk helplessly in lock-step with the wolf as <%-s.bm?"he":"she"%> leads you back out of the living room. You're about to enter the foyer, when a golden labrador in a green jacket stops the two of you.
 
 \> [[Blink twice.]]
 
@@ -137,7 +158,7 @@ You grit your teeth, and walk helplessly in lock-step with the wolf as he leads 
 
 "Yoo, dude!" the dog chuckles, "If it isn't Byron the Bad! It's Gus! Long time no see, dude!"
 
-<q class="byron">My name is Badde,</q> Byron mutters, tightening his grip on you slightly.
+<q class="byron">My name is Badde,</q> Byron mutters, tightening <%-s.bm?"his":"her"%> grip on you slightly.
 
 The labrador points a paw at the wolf, and asks you, "Hey, is this dude bothering you, dude? Cause that's supes no bueno, dude."
 
@@ -167,9 +188,9 @@ You cry out and try to escape. As you pull away, Byron grabs you, putting a huge
 
 You groan from the pain, and collapse to the floor. Gus looks shocked.
 
-Byron stares at his bloodied claws, seemingly more intrigued than bothered. He wipes it on his shirt. <q.byron>I am ashamed, dear rabbit, that it has come to this. Perhaps we beasts truly are inseparable from our dark–</q> Wham.
+Byron stares at <%-s.bm?"his":"her"%> bloodied claws, seemingly more intrigued than bothered. <%-s.bm?"He":"She"%> wipes it on <%-s.bm?"his":"her"%> shirt. <q.byron>I am ashamed, dear rabbit, that it has come to this. Perhaps we beasts truly are inseparable from our dark–</q> Wham.
 
-The wolf is interrupted by Gus's fist clobbering him in the face. "Party fuckin' foul, dude. You okay, bunny bro?"
+The wolf is interrupted by Gus's fist clobbering <%-s.bm?"him":"her"%> in the face. "Party fuckin' foul, dude. You okay, bunny bro?"
 
 You respond by fainting from blood loss.
 
@@ -192,7 +213,7 @@ You wake up the next day in Basil's bedroom, bandaged up. Clif walks in, and com
 
 // TODO:
 
-You follow Byron into one of the bedrooms upstairs. He vores you, all while gloating about what an awful rabbit you are.
+You follow Byron into one of the bedrooms upstairs. <%-s.bm?"He":"She"%> vores you, all while gloating about what an awful rabbit you are.
 
 <% story.render("Byron route end.") %>
 
@@ -200,6 +221,6 @@ You follow Byron into one of the bedrooms upstairs. He vores you, all while gloa
 
 ### The End. (WIP)
 
-<% setup.addAchievement(`Badde Ending (Byron Vore Ending)`); %>
+<% setup.addAchievement(`Untitled (Byron Vore Ending)`); %>
 
 \> [[Restart.|Start]]
