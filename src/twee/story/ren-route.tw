@@ -199,29 +199,23 @@ You look up at your destination, and wince slightly. The fox's pulsating throat 
 
 \> [[Try persuasion?]]
 
-\> [[Struggle for freedom!]]
-
+\> [[Please! Don't do this!|Try persuasion?]]
 
 :: Try persuasion? [vore]
 Your voice is muffled by the slick tongue covering your face, but you try to call out to Ren: It's not too late! <%=s.rm?'He':'She'%> doesn't have to do this!
 
-The fox lets out a low growl. (<q class="ren">😈<%=s.rm?'‍🧛🏻':'️🧛🏻‍♀️'%>👅</q>) You realize <%=s.rm?'his':'her'%> teeth are now positioned directly around your throat, and <%=s.rm?'he':'she'%> could easily bite your head off if so inclined. You rationally decide to keep your mouth shut from now on. <%=s.rm?'He':'She'%> responds with a happy murr (<q class="ren">🤤</q>) and swallows again, so your shoulders fill <%=s.rm?'his':'her'%> cheeks.
+The fox lets out a low growl. (<q class="ren">😈<%=s.rm?'‍🧛🏻':'️🧛🏻‍♀️'%>👅</q>) You realize <%=s.rm?'his':'her'%> teeth are now positioned directly around your throat, and <%=s.rm?'he':'she'%> could easily bite your head off if so inclined.
+
+You rationally decide to keep your mouth shut from now on. <%=s.rm?'He':'She'%> responds with a happy murr (<q class="ren">🤤</q>) and swallows again, so your shoulders fill <%=s.rm?'his':'her'%> cheeks.
 
 Your face is moments from sliding into <%=s.rm?'his':'her'%> gullet.
 
-\> [[Please! Don't do this!]]
-
 \> [[Take a deep breath.]]
 
+\> [[Struggle for freedom!]]
 
 :: Take a deep breath. [vore]
 Just before your head slips into the fox's slimy throat. You take in a big lungful of putrid air and hold it. <%= story.render("Get swallowed by Ren.") %>
-
-<div->[[Get swallowed by Ren.]]</div>
-
-
-:: Please! Don't do this! [vore]
-You open your mouth to squeal one last plea for mercy. Unfortunately, you do this just before the fox gulps your head into <%=s.rm?'his':'her'%> throat, and wind up inhaling a mouthful of saliva. You cough and wheeze uncomfortably. <%= story.render("Get swallowed by Ren.") %>
 
 <div->[[Get swallowed by Ren.]]</div>
 
