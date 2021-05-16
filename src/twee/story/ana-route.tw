@@ -1,6 +1,6 @@
 <!-- You go outside and talk to Ana Rose, a hungry hyena with some self-esteem issues. You get familiar, and eventually offer to be eaten. She agrees on the condition that you can't change your mind, and snarfs you down quickly. You begin to have second thoughts, but it's too late. -->
 
-:: Go outside.
+:: Go outside. [checkpoint]
 You walk outside and down the steps onto the back porch. It's quiet out here.
 
 You see a large hyena sitting on a garden bench, next to a disused charcoal grill and some rumpled up camping equipment. She looks to be a little older than you, and way, way taller.
@@ -544,7 +544,7 @@ You cough and choke on a little more stomach fluids. They're getting deeper, and
 \> [[Digest willingly.]]
 
 
-:: N-no! I'm loving it! [vore]
+:: N-no! I'm loving it! [vore checkpoint]
 Ana lightly jiggles her belly again, this time letting out a husky moan.
 
 "Good," she says, "because you feel *fantastic* in there."

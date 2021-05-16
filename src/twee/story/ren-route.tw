@@ -201,7 +201,7 @@ You look up at your destination, and wince slightly. The fox's pulsating throat 
 
 \> [[Please! Don't do this!|Try persuasion?]]
 
-:: Try persuasion? [vore]
+:: Try persuasion? [vore checkpoint]
 Your voice is muffled by the slick tongue covering your face, but you try to call out to Ren: It's not too late! <%=s.rm?'He':'She'%> doesn't have to do this!
 
 The fox lets out a low growl. (<q class="ren">😈<%=s.rm?'‍🧛🏻':'️🧛🏻‍♀️'%>👅</q>) You realize <%=s.rm?'his':'her'%> teeth are now positioned directly around your throat, and <%=s.rm?'he':'she'%> could easily bite your head off if so inclined.

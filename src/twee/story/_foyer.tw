@@ -64,7 +64,7 @@ You head up the stairs looking for your friend.
 <%= story.render("Upstairs Hallway") %>
 
 
-:: Upstairs Hallway
+:: Upstairs Hallway [checkpoint]
 <div-></div>
 
 The upstairs hallway has a few doors. You can see two bedrooms: one is marked with a "B", the other with an "L". In between them is a small broom closet.

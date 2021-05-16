@@ -1,6 +1,6 @@
 <!-- While dancing in the living room, you meet up with Basil Armstrong, a jock you knew in high school. This is his house. You flirt, and eventually offer to let him eat you. He does so, but doesn't adequately inform you that he plans to keep you. You digest as the rest of the party looks on excitedly. -->
 
-:: Wink back at Basil.
+:: Wink back at Basil. [checkpoint]
 <% setup.setFlag("talkedToBasil"); %>
 
 The horse smiles, and walks over to you, carrying two bottles of beer.
@@ -160,6 +160,9 @@ You ask him what that's supposed to mean.
 
 
 :: Oh, is my tail giving you ideas?
+
+*This path is unfinished. __Sorry!__*
+
 You flamboyantly wiggle your hips.
 
 Basil gives a surprised smile. He places a firm hand on your shoulder, then lightly caresses your cheek. "That depends," he says in a low voice, "Does your tail wanna feel thirteen inches of meat rubbing against it?"
@@ -170,8 +173,9 @@ He brings himself down to your eye level. "Whaddya say we get a little more... r
 
 You nod, trying to keep your cool, and not betray how excited you are.
 
-\> [[...Do you want to eat me?]]
+\> **TODO**
 
+\> [[...Do you want to eat me?]]
 
 :: Is that a threat?
 "No, no!" Basil stammers, "I'm just saying, you should be careful in a crowd like this."
@@ -426,7 +430,7 @@ You pant with excitement, knowing that you're nothing but food.
 \> [[Hollis: Cum.]]
 
 
-:: Struggle inside Basil! [vore]
+:: Struggle inside Basil! [vore checkpoint]
 You kick out at Basil's stomach walls.
 
 "Oooh, yeah, just like that," he says, either oblivious to, or completely ignoring the fact that he's about to digest you. Your world shakes nauseously as the horse grabs his gut, and sloshes it around a little. You're suddenly covered in stinging stomach acid.
