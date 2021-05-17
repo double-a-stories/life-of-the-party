@@ -61,6 +61,6 @@ Special thanks to [Chris Klimas](https://github.com/klembot) and all contributor
 
 ## License
 
-The source code underlying this project, including passage styling and JavaScript, is licensed under the [MIT-0 license](/LICENSE-CODE). You may use any or all of of this code for any purpose **without attribution**.
+All prose and image content in *Life of the Party* is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). You are free to share and adapt this content in any medium or format **with attribution** for **non-commercial purposes** under **the same license**.
 
-All prose and image content of this story is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). You are free to share and adapt this content in any medium or format **with attribution** for **non-commercial purposes** under **the same license**.
+All non-textual source code underlying this project (excluding the prose content described above), including configuration files and scripts, is licensed under the [MIT-0 license](/LICENSE-CODE). You may use any or all of this code for any purpose **without attribution**.

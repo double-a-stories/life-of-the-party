@@ -10,5 +10,10 @@
 * `A (H)` - *Undo last command.*
 * `D (L) ` - *Redo last command.*
 
+### Play offline
 
-<%= story.render("Credits passage") %>
+\> <a href="" download="<%- story.name %> <%- story.version %>.html">Download</a>
+
+### Credits
+
+<%= story.render("Credits") %>

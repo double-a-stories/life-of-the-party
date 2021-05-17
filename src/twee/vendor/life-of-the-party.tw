@@ -23,30 +23,26 @@ story.sourceURL = "https://github.com/double-a-stories/life-of-the-party";
 :: StoryTitle
 Life of the Party
 
-:: Credits passage
+:: Credits [dark]
 
-### Credits
-
-This story was written and developed by me, [▽ Double-A ▽](https://aryion.com/g4/user/DoubleA). If you liked it, leave me feedback at [Eka's Portal](https://aryion.com/forum/viewtopic.php?f=79&t=59177) or [textadventures.co.uk](http://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/life-of-the-party-a-furry-vore-adventure-18)!
+*Life of the Party* was written and developed by me, [▽ Double-A ▽](https://aryion.com/g4/user/DoubleA). If you liked it, leave me feedback at [Eka's Portal](https://aryion.com/forum/viewtopic.php?f=79&t=59177) or [textadventures.co.uk](http://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/life-of-the-party-a-furry-vore-adventure-18)!
 
 If you really enjoyed this, and want me to spend more time making things like it, consider supporting me at [☕ Ko-fi](https://ko-fi.com/doublea).
 
-Special thanks to the creators and contributors of the following open source projects:
-
-
+* 📖 [Twine and Twee](https://github.com/tweecode)
 * 😃 [twitter/twemoji](https://github.com/twitter/twemoji) – Open source Emoji set and CDN.
 * 🏍️ [tmedwards/tweego](https://github.com/tmedwards/tweego) – Compiler for Twee 3
 * ⛄️ [videlais/snowman](https://github.com/videlais/snowman) – Story format
 
-Special thanks to [Chris Klimas](https://github.com/klembot) and all contributors to the <a href="https://github.com/tweecode">Twine and Twee</a> project.
+Special thanks to [Chris Klimas](https://github.com/klembot) and all contributors to the
 
-### Play offline
+### License
 
-\> <a href="" download="<%- story.name %> <%- story.version %>.html">Download a local copy.</a>
+<%= story.render("License") %>
 
-\> <a href="https://github.com/double-a-stories/life-of-the-party" target="_blank">View source code.</a>
+:: License
 
-Copyright (c) 2021 Double-A. You are hereby free to distribute and adapt this story, under the terms of the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> license.
+Copyright © 2021 Double-A. The [text of this story](https://github.com/double-a-stories/life-of-the-party) is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). You are free to share and adapt this text in any medium **with attribution** for **non-commercial purposes** under **the same license**.
 
 :: Content warning
 
