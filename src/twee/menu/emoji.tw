@@ -7,8 +7,8 @@ const TWEMOJI_OPTIONS = {
 };
 
 const handleTwemoji = () => {
-  if (!twemoji) {
-    console.error("Twemoji script not loaded!");
+  if (!window.twemoji) {
+    console.error("Twemoji script not loaded! Emoji will fallback to system font.");
     return;
   }
   twemoji.parse(story.$passageEl[0], TWEMOJI_OPTIONS);
