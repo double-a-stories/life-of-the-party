@@ -6,7 +6,7 @@ tw-passage > * {
 </style>
 <%= story.render("Logo") || "" %>
 
-<div>
+<div style="text-align: center">
 
 \> [[Life of the Party.]]
 
