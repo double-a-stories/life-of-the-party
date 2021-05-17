@@ -342,7 +342,7 @@ Ren revs the engine. Soon, <%=s.rm?"he":"she"%>'s onto the highway, experimental
 
 Then, you hear sirens.
 
-<q.ren>Ah, fuzz, 🚔🚔🚔</q> says Ren.
+<q.ren>Ah, fuzzing bullshrimp, 🚔🚔🚔</q> says Ren.
 
 \> [[(oh gosh oh fluff)]]
 
@@ -359,11 +359,9 @@ Seriously, you say, <%=s.rm?"he":"she"%>'s gotta turn <%=s.rm?"him":"her"%>self 
 
 <q.ren>😼 Good idea, but I got a better one.</q> <%=s.rm?"He":"She"%> prepares to fake out the cops by coming up on a turn really fast, then cutting the wheel.
 
-At this key moment, you have the choice to struggle or remain still.
+You try to reason, but it's no use.
 
-\> [[Struggle inside Ren.]] *(Ending 1)*
-
-\> [[Stay still.]] *(Ending 2)*
+\> [[Struggle inside Ren.]]
 
 :: Struggle inside Ren. [vore]
 
@@ -384,9 +382,9 @@ A wildebeast and a boar step out of the foremost police car to apprehend <%=s.rm
 
 <q.ren><%=s.rm?"🙇‍♂️":"🙇‍♀️"%>😒 🐷🐗👮...</q> Ren mutters, complying.
 
-"Paws where I can see em, <%=s.rm?"Mister":"Miss"%>... Davis." You feel the boar poke a finger poke at you through Ren's shirt. "This thing still alive?" he asks.
+"Paws where I can see em, <%=s.rm?"Mister":"Miss"%>... Davis." You feel the boar poke a finger at you through Ren's shirt. "This thing still alive?" he asks.
 
-"Not sure," the wildebeast says. "Is it recent?" she asks Ren.
+"Not sure," the wildebeast says. "Is that recent?" she asks Ren.
 
 Ren shakes <%=s.rm?"his":"her"%> head. <q.ren><%=s.rm?"🙅‍♂️":"🙅‍♀️"%>⏱⏱... 🐇🥩☠️ *BURP*.</q>
 
@@ -420,34 +418,22 @@ The boar snaps a pair of handcuffs onto <%=s.rm?"his":"her"%> wrists and says, "
 
 Ren's stomach pulses around you happily (<q.ren>⛓<%=s.rm?"🤷‍♂️":"🤷‍♀️"%>😏☠️</q>).
 
-You feel yourself... beginning to... pass out.
-
-### Game Over.
+You've had a long, long day. You feel yourself... beginning to... pass out.
 
 <% setup.addAchievement("🦊🥱🐇 (Ren Vore Ending)"); %>
 
-\> <a0 onclick="setup.rewind();">Rewind</a>
+\> [[Epilogue.|Epilogue: Ren route.]]
 
 \> <a0 onclick="setup.restart();">Restart</a>
 
-:: Stay still. [vore]
 
-Ren successfully makes a last-minute swerve. <%=s.rm?"He":"She"%> ditches the truck and escapes over a highway divider into the woods. Police recover the vehicle, and conclude that Ren's probably long-gone.
+:: Epilogue: Ren route. [morning]
 
-After <%=s.rm?"he":"she"%> loses the cops, you convince <%=s.rm?"him":"her"%> to throw you up, and drops you at home, no worse for wear, and disappears into the night.
+// TODO
 
-### The end.
 
-<% setup.addAchievement("🦊🥱🐇 (Ren Vore Ending)"); %>
-
-\> [[Epilogue.|Epilogue (Ren non-fatal ending)]]
-
-\> [[Restart|Start]]
-
-:: Epilogue (Ren non-fatal ending) [morning]
-
-The next day, you hear a knock on your door, and open it to find <%=s.rm?"Basil":"Lacey"%> (switch between Basil/Lacey depending on whether they picked male/female Ren) who is extremely pissed.
-
-\> <a0 onclick="setup.rewind();">Rewind</a>
+### The End.
 
 \> <a0 onclick="setup.restart();">Restart</a>
+
+\> [[Credits]]
