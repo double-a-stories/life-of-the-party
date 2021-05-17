@@ -27,3 +27,8 @@ body[data-tags~="morning"] {
   --background: #ffe;
   --color: #320;
 }
+
+body[data-tags~="gore"] {
+  --background: #B00;
+  --color: #FFF;
+}
