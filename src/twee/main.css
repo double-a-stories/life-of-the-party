@@ -7,7 +7,7 @@
   --accent: #d93;
   --color-vore: #fee;
   --color-vore-ending: #dbb;
-  --font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-stack: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Segoe UI, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Arial, sans-serif;
 }
 
 body {
