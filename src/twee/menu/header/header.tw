@@ -1,8 +1,7 @@
 :: Header [hide header]
 <header.topbar.header-nav>
 	<div.header-nav-group>
-		<div><a0 onclick="setup.rewind()">Rewind</a>
-	  </div>
+          <div><a0 onclick="setup.restart()">Restart</a></div>
 	  <div><a0 onclick="setup.undo()">Undo</a>
 	  </div>
 	</div>
