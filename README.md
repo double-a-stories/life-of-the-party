@@ -42,7 +42,8 @@ This is a text-based interactive story written in [Twee 3](https://github.com/if
     * [poof](https://github.com/ChapelR/poof/releases) – Proof-reading tool
     * [illume](https://www.maximumverbosity.net/twine/Illume/) – Provides passage analysis
     * [dotgraph](https://github.com/mcdemarco/dotgraph/releases/tag/v2.2.0) – Generates story graphs
-5. `npm run serve` - Launches a live server
+5. `npm run develop` - Launch live server for development
+6. `npm run twee-build` - Generates game at ./dist/index.html
 
 ## Credits
 
