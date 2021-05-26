@@ -249,9 +249,9 @@ Ren is pretty large for a fox, but not the biggest anthro you've seen tonight. Y
 
 Your head pokes into Ren's stomach. It's wet. It's hot. It's wet and hot. Your legs slide in behind you. Ren swallows them with a satisfied <q class="ren">👅 Murr...</q>, and they slide down <%=s.rm?"his":"her"%> throat like thick, furry noodles.
 
-You're pretty sure you've never been eaten before, but it's basically exactly how you imagined it. Your body is packed tight into a curled up position, in a dank, squelching sac meant only for food.
+You've never been eaten before, but it's basically exactly how you imagined it. Your body is packed tight into a curled up position, in a dank, squelching sac meant only for food.
 
-As you lie here, now completely encapsulated in this fox's body, you feel almost... at home? As if you are fulfilling a role in the grand scheme of things. As though being devoured was exactly what was expected from you from the beginning.
+As you lie here, now completely encapsulated in this fox's body, you feel almost... at home? As if you are fulfilling an important role in the grand scheme of things. As though being devoured was exactly what was expected from you from the beginning.
 
 Ren burps (<q class="ren">😮‍💨😌</q>) and <%=s.rm?"his":"her"%> stomach walls clench tighter around you. You begin to suspect that getting out of here won't be easy.
 
@@ -342,53 +342,70 @@ Ren revs the engine. Soon, <%=s.rm?"he":"she"%>'s onto the highway, experimental
 
 Then, you hear sirens.
 
-<q.ren>Ah, fuzzing bullshrimp, 🚔🚔🚔</q> says Ren.
+<q.ren>Oh, fuzz. 🚔🚔🚔</q> says Ren.
 
 \> [[(oh gosh oh fluff)]]
 
 
 :: (oh gosh oh fluff) [vore checkpoint]
 
-#### TODO: Write this scene.
+You can hear Ren's heart rate quickening as it pulses all around you. Your captor is now being chased by police.
 
-Against your urging, Ren decides to floor it and evade the cops. More and more wild shit happens, but you don't get to see any of it because you're still in a fox gut.
+<q.ren>Fudging bullshrimp! 😾🛻🚓🚓💨</q> the fox mutters, noticing two police cars in the rear view mirror.
 
-The cops call on the carphone. Ren tells them <%=s.rm?"he":"she"%> has a live prey, and attempts to use you as a hostage so they let <%=s.rm?"him":"her"%> go.
+You poke <%-s.rm?"him":"her"%> in the gut, and tell Ren that um, you think maybe <%-s.rm?"he":"she"%> should turn <%-s.rm?"him":"her"%>self in. This all seems really dangerous, and you'd *really* like to get out of here in one piece...
 
-Seriously, you say, <%=s.rm?"he":"she"%>'s gotta turn <%=s.rm?"him":"her"%>self in. You say you're starting to run low on air, and fizzy liquids are beginning to tickle your toes.
+Ren pats you firmly, clearly not appreciating the distraction of having you inside <%-s.rm?"him":"her"%> during this tense situation. <q.ren>🤫 Can't talk,</q> <%-s.rm?"he":"she"%> says, <q.ren>evading cops!!!</q>
 
-<q.ren>😼 Good idea, but I got a better one.</q> <%=s.rm?"He":"She"%> prepares to fake out the cops by coming up on a turn really fast, then cutting the wheel.
+\> [[Seriously, slow down!]]
 
-You try to reason, but it's no use.
+:: Seriously, slow down! [vore]
 
-\> [[Struggle inside Ren.]]
+You tell Ren to slow down, and kick your foot out to help your point. <%=s.rm?"His":"Her"%> stomach seems to respond by growling a little. Is it getting hotter and wetter in here?
 
-:: Struggle inside Ren. [vore]
+<q.ren>😼 Good idea, but I got a better one.</q> Ren replies, ignoring your advice completely. Instead, <%=s.rm?"he":"she"%> floors it, and begins  rapidly gaining speed.
+
+You groan. You're now starting to run low on air, and fizzy liquids are beginning to tickle your toes. You tell Ren that <%=s.rm?"he":"she"%>'s gotta turn <%=s.rm?"him":"her"%>self in, and puke you up.
+
+Instead, Ren turns the truck's lights off, allowing it to disappear into the darkness. <q.ren>My exit's coming up next. Let' see them cop *this!* 😼🛻🔥💨</q>
+
+\> [[Struggle desperately inside Ren.]]
+
+:: Struggle desperately inside Ren. [vore]
 
 *CW: Police negligence. Fatal digestion. Betrayal.*
+
+Ren prepares to crank the wheel to the right, and shake the fuzz.
 
 You kick around frantically. Ren pats <%=s.rm?"his":"her"%> gut frantically.
 
 <q.ren>Nnnng~ 😩 S-stop it!!!</q>, <%=s.rm?"he":"she"%> groans, <q.ren>😖 You're gonna break my focus and...</q>
 
-<%=s.rm?"He":"She"%> misses the turn, and is now heading straight toward a police barricade (<q.ren>🚔🚔😦🚔🚔 </q>). <%=s.rm?"He":"She"%> has no choice but to pull to a stop.
+<%=s.rm?"He":"She"%> misses the turn, and is now heading head-long toward a  barricade of five more police cars.
+
+<q.ren>🚔🚔😦🚔🚔</q>
+
+Defeated, <%=s.rm?"he":"she"%> has no choice but to pull to a stop.
+
+<q.ren>😡 Grr...</q> You hear Ren produce a deep, low growl.
 
 \> [[Uh-oh...]]
 
 :: Uh-oh... [vore]
 
-A wildebeast and a boar step out of the foremost police car to apprehend <%=s.rm?"him":"her"%>.
-"Outta the car," the boar yells, "Driver's license, if you got it. You have the right to remain silent."
+A wildebeast and a boar step out of the foremost police car to apprehend Ren.
 
-<q.ren><%=s.rm?"🙇‍♂️":"🙇‍♀️"%>😒 🐷🐗👮...</q> Ren mutters, complying.
+"Outta the car," the wildebeast yells, "You have the right to remain silent."
 
-"Paws where I can see em, <%=s.rm?"Mister":"Miss"%>... Davis." You feel the boar poke a finger at you through Ren's shirt. "This thing still alive?" he asks.
+<q.ren>🐷🐗👮<%=s.rm?"🙇‍♂️":"🙇‍♀️"%>😒...</q> Ren mutters, complying.
 
-"Not sure," the wildebeast says. "Is that recent?" she asks Ren.
+"Paws where I can see em. You're wanted for possession of a stolen vehicle,  reckless driving, and endangerment of life," the boar says. You feel him poke a finger at you through Ren's shirt. "This thing still alive?" he asks.
 
-Ren shakes <%=s.rm?"his":"her"%> head. <q.ren><%=s.rm?"🙅‍♂️":"🙅‍♀️"%>⏱⏱... 🐇🥩☠️ *BURP*.</q>
+"Not sure," the wildebeast says. She asks Ren, "Is your prey recent?"
 
-"We're probably too late," the boar says, "It must be pretty far along."
+Ren shakes <%=s.rm?"his":"her"%> head. <q.ren><%=s.rm?"🙅‍♂️":"🙅‍♀️"%>... ⏱🐇🥩☠️ *BURP*.</q>
+
+"We're probably too late," the boar says, "it seems pretty far along in the digestive process..."
 
 \> [[N-no I'm not!]]
 
@@ -396,29 +413,27 @@ Ren shakes <%=s.rm?"his":"her"%> head. <q.ren><%=s.rm?"🙅‍♂️":"🙅‍�
 
 You struggle vehemently. You do feel weaker after being trapped in here for so long, but you're still perfectly and completely alive. Although it's starting to get pretty wet in here, and you're really starting to feel light-headed.
 
-The wildebeast scratches her head and asks Ren, "We're too far out to get an ambulance here. Can you throw up?
+The wildebeast scratches her head and asks Ren, "We're too far out to get an ambulance here. Can you puke up this prey?"
 
 <q.ren>🥺🥺😖</q> says Ren.
 
 You squirm and kick harder, letting out kicks and muffled yells.
 
-The officers look awkwardly amongst themselves, then back at Ren's bulging gut. "Sounds like it's in pain," says the boar uneasily. "Maybe we should just let things take their course?"
+The officers look awkwardly amongst themselves, then back at Ren's bulging gut. "Sounds like the prey is in pain," says the boar uneasily. "Maybe we should just let things take their course?"
 
 \> [[No! Get me out of here!!]]
 
 :: No! Get me out of here!! [vore]
 
-No you're not! You yell, Let me out! Please!
+You cry out. No I'm not! Let me out! Please!
 
-"Alright," says the wildebeast, "just don't tell the PRA's. Mouse media will be on our ass if they catch a whiff of this..."
+"Alright," says the wildebeast, "just don't tell the PRA's. Media will be all over our ass if they catch a whiff of this..."
 
-Ren sighs with relief (<q.ren>😌😌😌</q>). You guess <%=s.rm?"he":"she"%>'s really mad at you.
+Ren sighs with relief, <q.ren>😌😌😌</q>. You guess <%=s.rm?"he":"she"%>'s really mad at you.
 
 The boar snaps a pair of handcuffs onto <%=s.rm?"his":"her"%> wrists and says, "We recieved a report from one <%=s.rm?"Basil":"Lacey"%> Armstrong of a stolen vehicle with this tag. Ren Davis, you are under arrest, and have the right to remain silent.
 
-Ren's stomach pulses around you happily (<q.ren>⛓<%=s.rm?"🤷‍♂️":"🤷‍♀️"%>😏☠️</q>).
-
-You've had a long, long day. You feel yourself... beginning to... pass out.
+Ren's stomach pulses around you happily (<q.ren>⛓<%=s.rm?"🤷‍♂️":"🤷‍♀️"%>😏☠️</q>). As Ren is hauled away, you feel yourself... beginning to... pass out.
 
 <% setup.addAchievement("🦊🥱🐇 (Ren Vore Ending)"); %>
 
@@ -429,8 +444,23 @@ You've had a long, long day. You feel yourself... beginning to... pass out.
 
 :: Epilogue: Ren route. [morning]
 
-// TODO
+The late morning sun pours through a square window, between steel bars, and onto a big, fat-gutted fox who is sleeping soundly inside a concrete cell at the St. Buckwheat Corrections Facility.
 
+<q.ren>🥱... What a party!</q> <%-s.rm?"he":"she"%> murmurs.
+
+Ren's cellmate, a small fennec fox, looks over. <q.fennec>Oh good, you're finally awake,</q> <%-!s.rm?"he":"she"%> says, <q.fennec>I'm <%=!s.rm?"Xander":"Xandra"%>, renowned serial tax evader. What're you in for?</q>
+
+<q.ren>🤔 Well, I got caught stealing a cool 🛻 truck from some horses, plus several hundreds of dollars of 💰 valuable goods. So basically... nothing!!!</q>
+
+<%-!s.rm?"Xander":"Xandra"%> chuckles, <q.fennec>Wow, sounds like you had quite the evening.</q>
+
+Ren pats <%-s.rm?"his":"her"%> gut. <q.ren>Oh, and I ate a 🐇 nonbinary rabbit at a party!!! I'll probs need to use that toilet over there in a few hours...</q>
+
+<q.fennec>Wait, you're a-</q> <%-!s.rm?"Xander":"Xandra"%> frowns, now becoming very cognizant of the fact that <%-!s.rm?"he":"she"%>'s all alone with <%-s.rm?"him":"her"%>. <%-!s.rm?"He":"She"%> can't help but finish the sentence, <q.fennec>...Predator?</q>
+
+<q.ren>Yeah!!! 😃😃 I'm not happy to be here, but it was actually really nice of the prison system to serve me breakfast in bed!</q>
+
+<%-!s.rm?"Xander":"Xandra"%> blinks. <q.fennec>...!!! (OxO;)</q>
 
 ### The End.
 
