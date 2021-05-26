@@ -16,7 +16,7 @@
 
 :: Misc story variables [script]
 
-story.semanticVersion = [0, 5, 0, "-indev"];
+story.semanticVersion = [0, 5, 0];
 story.version = `v${story.semanticVersion.slice(0, 3).join(".")}${story.semanticVersion[3] || ""}`;
 story.sourceURL = "https://github.com/double-a-stories/life-of-the-party";
 
