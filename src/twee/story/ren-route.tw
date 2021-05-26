@@ -3,6 +3,12 @@
   font-family: "Comic Neue", "Comic Sans", "Comic Sans MS", sans-serif !important;
 }
 
+:: Preload Ren emojis
+<!-- This hidden passage contains most emojis used in the Ren route. We attempt to cache them as early as possible, so they don't pop in on passages. -->
+<div aria-hidden="true" style="height: 0; overflow: hidden;">
+🍈 🍑 🏻 🐇 🐔 🐰 🐴 🐹 🐺 🐾 👅 👌 💢 💨 💰 🔑 🎮🖼 🏎🏎 🐇💨 🐰👤 🐰👩 👋🐾 🔥💨 🐷🐗👮 👿👿👿 💦💦💦
+</div>
+
 :: Go to the garage. [checkpoint]
 You walk down the hall and enter the garage. The garage door is open, looking out onto rows of similarly suburban houses. Cool fresh air enters. The smell of freedom.
 

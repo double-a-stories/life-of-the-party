@@ -35,6 +35,8 @@ This house is huge, and its upscale furnishings seem almost too fancy for the mo
 
 \> [[Go to the garage.]]
 
+<%= story.render("Preload Ren emojis")%>
+
 
 :: Search for your friend.
 
