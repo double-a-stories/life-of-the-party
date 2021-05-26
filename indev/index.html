@@ -866,7 +866,7 @@ setup.handleBroomCloset = () => {
   }
 }
 /* twine-user-script #10: "Misc story variables" */
-story.semanticVersion = [0, 5, 0, "-indev"];
+story.semanticVersion = [0, 5, 0];
 story.version = `v${story.semanticVersion.slice(0, 3).join(".")}${story.semanticVersion[3] || ""}`;
 story.sourceURL = "https://github.com/double-a-stories/life-of-the-party";</script><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-passagedata pid="1" name="Achievements list" tags="" position="100,100" size="100,100">&lt;% const achievements = setup.getAchievements().sort();
    const story_max_achievements = 9; // TODO: change me!
@@ -980,7 +980,9 @@ This house is huge, and its upscale furnishings seem almost too fancy for the mo
 
 \&gt; [[Go outside.]]
 
-\&gt; [[Go to the garage.]]</tw-passagedata><tw-passagedata pid="10" name="Search for your friend." tags="" position="1225,100" size="100,100">You make a quick circle of the first floor, but Reese is nowhere in sight.
+\&gt; [[Go to the garage.]]
+
+&lt;%= story.render(&quot;Preload Ren emojis&quot;)%&gt;</tw-passagedata><tw-passagedata pid="10" name="Search for your friend." tags="" position="1225,100" size="100,100">You make a quick circle of the first floor, but Reese is nowhere in sight.
 
 &lt;% if (!setup.isFlagSet(&quot;upstairsUnlocked&quot;)) { %&gt;
 
@@ -2707,7 +2709,10 @@ return literals[Math.min(s.punchCount, literals.length) - 1]
 
 \&gt; [[Go back.|Dance a little.]]</tw-passagedata><tw-passagedata pid="206" name="Grab one more punch." tags="" position="725,2600" size="100,100">You look toward the punch bowl and scowl with disgust.
 
-A labrador notices and elbows you. &quot;Woahh, dude! Maybe go a little easy on the party sauce, kay dude?&quot;</tw-passagedata><tw-passagedata pid="207" name="Go to the garage." tags="checkpoint" position="850,2600" size="100,100">You walk down the hall and enter the garage. The garage door is open, looking out onto rows of similarly suburban houses. Cool fresh air enters. The smell of freedom.
+A labrador notices and elbows you. &quot;Woahh, dude! Maybe go a little easy on the party sauce, kay dude?&quot;</tw-passagedata><tw-passagedata pid="207" name="Preload Ren emojis" tags="" position="850,2600" size="100,100">&lt;!-- This hidden passage contains most emojis used in the Ren route. We attempt to cache them as early as possible, so they don&#39;t pop in on passages. --&gt;
+&lt;div aria-hidden=&quot;true&quot; style=&quot;height: 0; overflow: hidden;&quot;&gt;
+🍈 🍑 🏻 🐇 🐔 🐰 🐴 🐹 🐺 🐾 👅 👌 💢 💨 💰 🔑 🎮🖼 🏎🏎 🐇💨 🐰👤 🐰👩 👋🐾 🔥💨 🐷🐗👮 👿👿👿 💦💦💦
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="208" name="Go to the garage." tags="checkpoint" position="975,2600" size="100,100">You walk down the hall and enter the garage. The garage door is open, looking out onto rows of similarly suburban houses. Cool fresh air enters. The smell of freedom.
 
 Parked inside the garage is a clean and polished pickup truck from a luxury brand, and a similarly ostentatious boat.
 
@@ -2717,15 +2722,15 @@ A few feet ahead of you, you see a red fox, who appears to be struggling to carr
 
 \&gt; [[Ask him what he&#39;s up to.]] *(Male Pred)*
 
-\&gt; [[What&#39;s she doing?]] *(Female Pred)*</tw-passagedata><tw-passagedata pid="208" name="Ask him what he&#39;s up to." tags="" position="975,2600" size="100,100">&lt;% s.rm = true; %&gt;
+\&gt; [[What&#39;s she doing?]] *(Female Pred)*</tw-passagedata><tw-passagedata pid="209" name="Ask him what he&#39;s up to." tags="" position="1100,2600" size="100,100">&lt;% s.rm = true; %&gt;
 
 &lt;%= story.render(&quot;...What are you doing?&quot;) %&gt;
 
-&lt;div-&gt;[[...What are you doing?]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="209" name="What&#39;s she doing?" tags="" position="1100,2600" size="100,100">&lt;% s.rm = false; %&gt;
+&lt;div-&gt;[[...What are you doing?]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="210" name="What&#39;s she doing?" tags="" position="1225,2600" size="100,100">&lt;% s.rm = false; %&gt;
 
 &lt;%= story.render(&quot;...What are you doing?&quot;)%&gt;
 
-&lt;div-&gt;[[...What are you doing?]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="210" name="...What are you doing?" tags="" position="1225,2600" size="100,100">You ask &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt; what &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt;&#39;s doing.
+&lt;div-&gt;[[...What are you doing?]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="211" name="...What are you doing?" tags="" position="100,2725" size="100,100">You ask &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt; what &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt;&#39;s doing.
 
 &lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt; smiles and replies, &lt;q class=&quot;ren&quot;&gt;Stealing!!! 🦊&lt;%=s.rm?&quot;🦹‍♂️&quot;:&quot;🦹‍♀️&quot;%&gt;💰&lt;/q&gt;
 
@@ -2733,7 +2738,7 @@ Yeah, you guess that was pretty obvious.
 
 &lt;q class=&quot;ren&quot;&gt;Your timing is 👌 perf,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, gesturing with &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; bushy tail towards the truck, &lt;q class=&quot;ren&quot;&gt;Could you unlatch the 🛻 tailgate for me?&lt;/q&gt;
 
-\&gt; [[Is that a good idea?]]</tw-passagedata><tw-passagedata pid="211" name="Is that a good idea?" tags="" position="100,2725" size="100,100">&lt;q class=&quot;ren&quot;&gt;🤨  Um, it&#39;s a *great* idea? I&#39;ve always wanted some of this 🎮🖼️💰 stuff!!!&lt;/q&gt;
+\&gt; [[Is that a good idea?]]</tw-passagedata><tw-passagedata pid="212" name="Is that a good idea?" tags="" position="225,2725" size="100,100">&lt;q class=&quot;ren&quot;&gt;🤨  Um, it&#39;s a *great* idea? I&#39;ve always wanted some of this 🎮🖼️💰 stuff!!!&lt;/q&gt;
 
 You say you meant, like, ethically. Won&#39;t the folks who live here be upset about this?
 
@@ -2743,7 +2748,7 @@ And what if they do notice? you ask.
 
 &lt;q class=&quot;ren&quot;&gt;Sounds like a problem for &lt;%=s.rm?&quot;🦹‍♂️&quot;:&quot;🦹‍♀️&quot;%&gt; Future Ren,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; chuckles, &lt;q class=&quot;ren&quot;&gt;I&#39;m Ren, btw. 😉&lt;/q&gt;
 
-\&gt; [[Uh, I&#39;m Hollis.]]</tw-passagedata><tw-passagedata pid="212" name="Uh, I&#39;m Hollis." tags="checkpoint" position="225,2725" size="100,100">You&#39;re Hollis, you reply, scratching your ears nervously.
+\&gt; [[Uh, I&#39;m Hollis.]]</tw-passagedata><tw-passagedata pid="213" name="Uh, I&#39;m Hollis." tags="checkpoint" position="350,2725" size="100,100">You&#39;re Hollis, you reply, scratching your ears nervously.
 
 &lt;q class=&quot;ren&quot;&gt;Pleased to meet you 🐰😎 dude!!!&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says. &lt;q class=&quot;ren&quot;&gt;Sorry, can I call you 🐰 dude? Or are you more of a 🐰👩❓ dude-ess?&lt;/q&gt;
 
@@ -2753,11 +2758,11 @@ A-actually, you&#39;re neither? you reply.
 
 \&gt; [[Help with the latch.|Help Ren.]]
 
-\&gt; [[Don&#39;t.|Don&#39;t help Ren.]]</tw-passagedata><tw-passagedata pid="213" name="Don&#39;t help Ren." tags="" position="350,2725" size="100,100">You don&#39;t assist &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt;, instead choosing to carefully back toward the door, so as not to seem complicit in &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; burglary. If anyone asks, you were just looking to get some fresh air, when you stumbled upon this eccentric kitsune stealing a load of valuables. It&#39;s the perfect alibi, you think, because it&#39;s completely true.
+\&gt; [[Don&#39;t.|Don&#39;t help Ren.]]</tw-passagedata><tw-passagedata pid="214" name="Don&#39;t help Ren." tags="" position="475,2725" size="100,100">You don&#39;t assist &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt;, instead choosing to carefully back toward the door, so as not to seem complicit in &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; burglary. If anyone asks, you were just looking to get some fresh air, when you stumbled upon this eccentric kitsune stealing a load of valuables. It&#39;s the perfect alibi, you think, because it&#39;s completely true.
 
 Ren struggles to keep the box steady. &lt;q class=&quot;ren&quot;&gt;🛻 Trunk... Now... Please? ⏳⏳⏳ I&#39;m kind of in a 🥒 here, and if you don&#39;t, I&#39;m... gonna...&lt;/q&gt;
 
-\&gt; [[Go back to the foyer...?|Ren drops the boxes.]]</tw-passagedata><tw-passagedata pid="214" name="Ren drops the boxes." tags="" position="475,2725" size="100,100">You inch toward the door.
+\&gt; [[Go back to the foyer...?|Ren drops the boxes.]]</tw-passagedata><tw-passagedata pid="215" name="Ren drops the boxes." tags="" position="600,2725" size="100,100">You inch toward the door.
 
 &lt;q.ren&gt;Ack!!! 😨😨😨&lt;/q&gt; Ren loses &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt;  balance and drops the box, sending all of its contents crashing to the ground, including a fine porcelain teapot and a GameStation 4 Pro. &lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt; watches helplessly as they smash into several pieces.
 
@@ -2765,7 +2770,7 @@ Ren struggles to keep the box steady. &lt;q class=&quot;ren&quot;&gt;🛻 Trunk.
 
 Taking this as your cue to leave, you twist the knob to the garage door. Just as you do, Ren growls, &lt;q class=&quot;ren&quot;&gt;👿👿👿 *Don&#39;t move.* I&#39;m not done with you. 💢&lt;/q&gt;
 
-\&gt; [[Hollis: Escape.]]</tw-passagedata><tw-passagedata pid="215" name="Help Ren." tags="" position="600,2725" size="100,100">*CW: Crimes? Crimes.*
+\&gt; [[Hollis: Escape.]]</tw-passagedata><tw-passagedata pid="216" name="Help Ren." tags="" position="725,2725" size="100,100">*CW: Crimes? Crimes.*
 
 You can&#39;t fault &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; logic. Well, you can, but you probably shouldn&#39;t get on this fox&#39;s bad side. You walk over and unlatch the tailgate so Ren can load &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; pile of loot onto the flatbed.
 
@@ -2777,17 +2782,17 @@ N-no problem, you stammer!
 
 &lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt; walks around to the driver-side door, &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; tail already wagging with the excitement of a successful heist.
 
-\&gt; [[Is this your truck?]]</tw-passagedata><tw-passagedata pid="216" name="Is this your truck?" tags="checkpoint" position="725,2725" size="100,100">You ask Ren if this is &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; vehicle, even though you probably know the answer already.
+\&gt; [[Is this your truck?]]</tw-passagedata><tw-passagedata pid="217" name="Is this your truck?" tags="checkpoint" position="850,2725" size="100,100">You ask Ren if this is &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; vehicle, even though you probably know the answer already.
 
 Ren hops into the driver&#39;s seat, sniffs around a bit, and jingles a set of keys that was stashed in a cup-holder. &lt;q class=&quot;ren&quot;&gt;🔑😁  Is now!!!&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt;  laughs,  &lt;q class=&quot;ren&quot;&gt;Wanna take it for a little spin? 🛻😃&lt;/q&gt;
 
 \&gt; [[Hey, why not?]]
 
-\&gt; [[That seems like a bad idea...]]</tw-passagedata><tw-passagedata pid="217" name="Hey, why not?" tags="" position="850,2725" size="100,100">You seriously consider &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; offer. You had reservations at first, but the more you think about it, the more excited you are to partake in a high-stakes getaway as this strange fox&#39;s unwitting accomplice. It almost feels like you&#39;re in some kind of video game.
+\&gt; [[That seems like a bad idea...]]</tw-passagedata><tw-passagedata pid="218" name="Hey, why not?" tags="" position="975,2725" size="100,100">You seriously consider &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; offer. You had reservations at first, but the more you think about it, the more excited you are to partake in a high-stakes getaway as this strange fox&#39;s unwitting accomplice. It almost feels like you&#39;re in some kind of video game.
 
 You don&#39;t want to be the only one here when someone notices everything that&#39;s missing, but it really feels like you&#39;re forgetting something.
 
-\&gt; [[I can&#39;t leave my friend...]]</tw-passagedata><tw-passagedata pid="218" name="I can&#39;t leave my friend..." tags="" position="975,2725" size="100,100">You remember that Reese is still here, and possibly in danger. You can&#39;t just abandon him, not at a party full of predators!
+\&gt; [[I can&#39;t leave my friend...]]</tw-passagedata><tw-passagedata pid="219" name="I can&#39;t leave my friend..." tags="" position="1100,2725" size="100,100">You remember that Reese is still here, and possibly in danger. You can&#39;t just abandon him, not at a party full of predators!
 
 &lt;q class=&quot;ren&quot;&gt;Oh, ur 🐹 friend&#39;s totally in some pred&#39;s belly by now, 🐺🤰&lt;/q&gt; Ren says.
 
@@ -2799,13 +2804,13 @@ You didn&#39;t realize this was that kind of party, you say.
 
 Ren smirks, &lt;q class=&quot;ren&quot;&gt;Want a ride home?&lt;/q&gt;
 
-\&gt; [[No, I really shouldn&#39;t...]]</tw-passagedata><tw-passagedata pid="219" name="That seems like a bad idea..." tags="" position="1100,2725" size="100,100">Ren looks at you, surprised.&lt;q class=&quot;ren&quot;&gt;What, you&#39;re backing out now? I thought you were a 🐇 rabbit, not 🐔 chicken.&lt;/q&gt;
+\&gt; [[No, I really shouldn&#39;t...]]</tw-passagedata><tw-passagedata pid="220" name="That seems like a bad idea..." tags="" position="1225,2725" size="100,100">Ren looks at you, surprised.&lt;q class=&quot;ren&quot;&gt;What, you&#39;re backing out now? I thought you were a 🐇 rabbit, not 🐔 chicken.&lt;/q&gt;
 
 You say you&#39;d really love to... commit a crime, but as a rule, you try not to take rides from strangers.
 
 &lt;q class=&quot;ren&quot;&gt;C&#39;mon,&lt;/q&gt; the fox says with a vicious smile, &lt;q class=&quot;ren&quot;&gt;it&#39;ll be fun!!! A little joy-ride never hurt nobody!&lt;/q&gt;
 
-\&gt; [[I can&#39;t leave my friend...]]</tw-passagedata><tw-passagedata pid="220" name="No, I really shouldn&#39;t..." tags="" position="1225,2725" size="100,100">Ren narrows &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; eyes. &lt;q class=&quot;ren&quot;&gt;You&#39;re just trying to snitch on me, aren&#39;t you. 😠&lt;/q&gt;
+\&gt; [[I can&#39;t leave my friend...]]</tw-passagedata><tw-passagedata pid="221" name="No, I really shouldn&#39;t..." tags="" position="100,2850" size="100,100">Ren narrows &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; eyes. &lt;q class=&quot;ren&quot;&gt;You&#39;re just trying to snitch on me, aren&#39;t you. 😠&lt;/q&gt;
 
 What? No, you say. You might be a bit of a square, but you&#39;re not a narc.
 
@@ -2813,7 +2818,7 @@ What? No, you say. You might be a bit of a square, but you&#39;re not a narc.
 
 You nervously start to step toward the door.
 
-\&gt; [[Hollis: Escape.]]</tw-passagedata><tw-passagedata pid="221" name="Hollis: Escape." tags="" position="100,2850" size="100,100">*CW: Violent threat. Unwilling vore. Bad breath.*
+\&gt; [[Hollis: Escape.]]</tw-passagedata><tw-passagedata pid="222" name="Hollis: Escape." tags="" position="225,2850" size="100,100">*CW: Violent threat. Unwilling vore. Bad breath.*
 
 You take a deep breath and make a break for the door. away, praying you&#39;ll be fast enough to make it out of here alive.
 
@@ -2823,7 +2828,7 @@ You&#39;re not fast enough. With incredible agility, Ren leaps at you and grabs 
 
 &lt;q class=&quot;ren&quot;&gt;😡 This is your fault,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; seethes, &lt;q class=&quot;ren&quot;&gt;You were about to go tell on me, weren&#39;t you?&lt;/q&gt;
 
-\&gt; [[What? No!]]</tw-passagedata><tw-passagedata pid="222" name="What? No!" tags="" position="225,2850" size="100,100">No! You cry out, trying to wrestle free, you&#39;re not gonna tell anyone! Promise!
+\&gt; [[What? No!]]</tw-passagedata><tw-passagedata pid="223" name="What? No!" tags="" position="350,2850" size="100,100">No! You cry out, trying to wrestle free, you&#39;re not gonna tell anyone! Promise!
 
 &lt;q class=&quot;ren&quot;&gt;🤬 Horsecrud!!!&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, bringing &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; sharp teeth right up against the exposed fur of your neck, licking saliva from &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; lips. This is a obscene gesture, uncommon among civilized anthros. &lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt; growls, &lt;q class=&quot;ren&quot;&gt;Gimme one good reason I shouldn&#39;t frigging eat you right now. 🥩🩸&lt;/q&gt;
 
@@ -2831,13 +2836,13 @@ Your body is frozen. In the heat of the moment, flushed with fear, you try to re
 
 &lt;q class=&quot;ren&quot;&gt;Whoops, 😈&lt;/q&gt; Ren says, locking the door behind you with a *click*, &lt;q class=&quot;ren&quot;&gt;Too slow.&lt;/q&gt;
 
-\&gt; [[Ren: No witnesses.]]</tw-passagedata><tw-passagedata pid="223" name="Ren: No witnesses." tags="vore" position="350,2850" size="100,100">Ren glomps &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; lips over your head (&lt;q.ren&gt;🦊🥱🐇&lt;/q&gt;), and begins working to squeeze it into &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; throat. You try to squirm free, but &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt;&#39;s gripping your body too tightly. Your vision goes dark. The fur on your ears feel slobbery. All you can smell is fish...
+\&gt; [[Ren: No witnesses.]]</tw-passagedata><tw-passagedata pid="224" name="Ren: No witnesses." tags="vore" position="475,2850" size="100,100">Ren glomps &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; lips over your head (&lt;q.ren&gt;🦊🥱🐇&lt;/q&gt;), and begins working to squeeze it into &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; throat. You try to squirm free, but &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt;&#39;s gripping your body too tightly. Your vision goes dark. The fur on your ears feel slobbery. All you can smell is fish...
 
 You look up at your destination, and wince slightly. The fox&#39;s pulsating throat keeps blasting you with ♨️ hot, ♨️♨️ putrid air. &lt;%=s.rm?&#39;He&#39;:&#39;She&#39;%&gt; seems to be hyperventilating as &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt; eats you.
 
 \&gt; [[Try persuasion?]]
 
-\&gt; [[Please! Don&#39;t do this!|Try persuasion?]]</tw-passagedata><tw-passagedata pid="224" name="Try persuasion?" tags="vore checkpoint" position="475,2850" size="100,100">Your voice is muffled by the slick tongue covering your face, but you try to call out to Ren: It&#39;s not too late! &lt;%=s.rm?&#39;He&#39;:&#39;She&#39;%&gt; doesn&#39;t have to do this!
+\&gt; [[Please! Don&#39;t do this!|Try persuasion?]]</tw-passagedata><tw-passagedata pid="225" name="Try persuasion?" tags="vore checkpoint" position="600,2850" size="100,100">Your voice is muffled by the slick tongue covering your face, but you try to call out to Ren: It&#39;s not too late! &lt;%=s.rm?&#39;He&#39;:&#39;She&#39;%&gt; doesn&#39;t have to do this!
 
 The fox lets out a low growl. (&lt;q class=&quot;ren&quot;&gt;😈&lt;%=s.rm?&#39;‍🧛🏻&#39;:&#39;️🧛🏻‍♀️&#39;%&gt;👅&lt;/q&gt;) You realize &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; teeth are now positioned directly around your throat, and &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt; could easily bite your head off if so inclined.
 
@@ -2847,9 +2852,9 @@ Your face is moments from sliding into &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&g
 
 \&gt; [[Take a deep breath.]]
 
-\&gt; [[Struggle for freedom!]]</tw-passagedata><tw-passagedata pid="225" name="Take a deep breath." tags="vore" position="600,2850" size="100,100">Just before your head slips into the fox&#39;s slimy throat. You take in a big lungful of putrid air and hold it. &lt;%= story.render(&quot;Get swallowed by Ren.&quot;) %&gt;
+\&gt; [[Struggle for freedom!]]</tw-passagedata><tw-passagedata pid="226" name="Take a deep breath." tags="vore" position="725,2850" size="100,100">Just before your head slips into the fox&#39;s slimy throat. You take in a big lungful of putrid air and hold it. &lt;%= story.render(&quot;Get swallowed by Ren.&quot;) %&gt;
 
-&lt;div-&gt;[[Get swallowed by Ren.]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="226" name="Struggle for freedom!" tags="gore" position="725,2850" size="100,100">*CW: Accidental mauling. Blood.*
+&lt;div-&gt;[[Get swallowed by Ren.]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="227" name="Struggle for freedom!" tags="gore" position="850,2850" size="100,100">*CW: Accidental mauling. Blood.*
 
 You thrash your arms and legs, trying to free yourself. Instinctively, the fox sinks &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; teeth into the flesh of your neck, something &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt; immediately regrets.
 
@@ -2859,13 +2864,13 @@ You feel stinging pain as Ren releases you, and you collapse weakly to the garag
 
 ### Game Over.
 
-\&gt; &lt;a0 onclick=&quot;setup.undo()&quot;&gt;Undo&lt;/a&gt;</tw-passagedata><tw-passagedata pid="227" name="Get swallowed by Ren." tags="vore" position="850,2850" size="100,100">Your head slides into the tight fleshy tube with a slick *grlk* noise.
+\&gt; &lt;a0 onclick=&quot;setup.undo()&quot;&gt;Undo&lt;/a&gt;</tw-passagedata><tw-passagedata pid="228" name="Get swallowed by Ren." tags="vore" position="975,2850" size="100,100">Your head slides into the tight fleshy tube with a slick *grlk* noise.
 
 (&lt;q class=&quot;ren&quot;&gt;🤤💦💦💦&lt;/q&gt;)
 
 Ren is pretty large for a fox, but not the biggest anthro you&#39;ve seen tonight. You get the feeling &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt;&#39;s somewhat struggling to devour you. Still, this doesn&#39;t prevent &lt;%=s.rm?&#39;him&#39;:&#39;her&#39;%&gt; from swallowing both your head and shoulders in a single powerful &lt;q class=&quot;ren&quot;&gt;😝 *gulp*~&lt;/q&gt;.
 
-\&gt; [[Enter Ren&#39;s stomach.]]</tw-passagedata><tw-passagedata pid="228" name="Enter Ren&#39;s stomach." tags="vore" position="975,2850" size="100,100">Your head pokes into Ren&#39;s stomach. It&#39;s wet. It&#39;s hot. It&#39;s wet and hot. Your legs slide in behind you. Ren swallows them with a satisfied &lt;q class=&quot;ren&quot;&gt;👅 Murr...&lt;/q&gt;, and they slide down &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; throat like thick, furry noodles.
+\&gt; [[Enter Ren&#39;s stomach.]]</tw-passagedata><tw-passagedata pid="229" name="Enter Ren&#39;s stomach." tags="vore" position="1100,2850" size="100,100">Your head pokes into Ren&#39;s stomach. It&#39;s wet. It&#39;s hot. It&#39;s wet and hot. Your legs slide in behind you. Ren swallows them with a satisfied &lt;q class=&quot;ren&quot;&gt;👅 Murr...&lt;/q&gt;, and they slide down &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; throat like thick, furry noodles.
 
 You&#39;ve never been eaten before, but it&#39;s basically exactly how you imagined it. Your body is packed tight into a curled up position, in a dank, squelching sac meant only for food.
 
@@ -2875,7 +2880,7 @@ Ren burps (&lt;q class=&quot;ren&quot;&gt;😮‍💨😌&lt;/q&gt;) and &lt;%=s
 
 &lt;q class=&quot;ren&quot;&gt;Woah, 😳&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, rubbing &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; huge belly, &lt;q class=&quot;ren&quot;&gt;That was intense. 😌😌&lt;/q&gt;
 
-\&gt; [[Wh-why did you do that?]]</tw-passagedata><tw-passagedata pid="229" name="Wh-why did you do that?" tags="vore" position="1100,2850" size="100,100">You scramble around inside to get Ren&#39;s attention, and ask &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt; why &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; just ate you.
+\&gt; [[Wh-why did you do that?]]</tw-passagedata><tw-passagedata pid="230" name="Wh-why did you do that?" tags="vore" position="1225,2850" size="100,100">You scramble around inside to get Ren&#39;s attention, and ask &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt; why &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; just ate you.
 
 &lt;q class=&quot;ren&quot;&gt;😕 W-well,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, &lt;q class=&quot;ren&quot;&gt;I didn&#39;t want you to 🐇💨 escape and snitch on me. Then it was kinda like my body just took over? 🦊&lt;!-- shrug --&gt;&lt;%=s.rm?&quot;🤷‍♂️&quot;:&quot;🤷‍♀️&quot;%&gt;&lt;/q&gt;
 
@@ -2883,13 +2888,13 @@ You say weren&#39;t gonna rat &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt; o
 
 &lt;q class=&quot;ren&quot;&gt;Oh,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; replies, rubbing &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; gut bashfully. &lt;q class=&quot;ren&quot;&gt;Well, what&#39;s done is done... 😏&lt;/q&gt;
 
-\&gt; [[Can you get me out of here?]]</tw-passagedata><tw-passagedata pid="230" name="Can you get me out of here?" tags="vore" position="1225,2850" size="100,100">Ren puts a paw on &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; chin. &lt;q class=&quot;ren&quot;&gt;Well, I... 🤔  don&#39;t actually know?&lt;/q&gt;
+\&gt; [[Can you get me out of here?]]</tw-passagedata><tw-passagedata pid="231" name="Can you get me out of here?" tags="vore" position="100,2975" size="100,100">Ren puts a paw on &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; chin. &lt;q class=&quot;ren&quot;&gt;Well, I... 🤔  don&#39;t actually know?&lt;/q&gt;
 
 &lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt;... doesn&#39;t know?
 
 &lt;q class=&quot;ren&quot;&gt;This is actually my first time eating someone whole like this... 😳 Like, I could try throwing you up? But that sounds p gross tbh. 🤢&lt;/q&gt;
 
-\&gt; [[...Could you try?]]</tw-passagedata><tw-passagedata pid="231" name="...Could you try?" tags="vore" position="100,2975" size="100,100">You&#39;re surprised (and honestly, impressed) to hear this is &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; first time, considering how fast it went by. Still, your life and Reese&#39;s depends on you getting out of here. You ask Ren to try throwing you up.
+\&gt; [[...Could you try?]]</tw-passagedata><tw-passagedata pid="232" name="...Could you try?" tags="vore" position="225,2975" size="100,100">You&#39;re surprised (and honestly, impressed) to hear this is &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; first time, considering how fast it went by. Still, your life and Reese&#39;s depends on you getting out of here. You ask Ren to try throwing you up.
 
 &lt;q class=&quot;ren&quot;&gt;😕 I mean I guess...&lt;/q&gt;  &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says. &lt;q class=&quot;ren&quot;&gt;I&#39;d feel really bad if I ☠️ digested you, you seem nice... Although you might finally make my  &lt;%=s.rm?&quot;🍑 ass&quot;:&quot;🍈 chest&quot;%&gt; fill out...&lt;/q&gt;
 
@@ -2897,7 +2902,7 @@ Focus, you say! You need &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt; to get 
 
 &lt;q class=&quot;ren&quot;&gt;Fine... 😒 Here goes... 🤢&lt;/q&gt; Ren begins slowly sticking a claw into &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; throat. Suddenly, you hear the garage&#39;s doorknob rattle. &lt;q class=&quot;ren&quot;&gt;😧 Oh crap,&lt;/q&gt; Ren says.
 
-\&gt; [[What now?]]</tw-passagedata><tw-passagedata pid="232" name="What now?" tags="vore" position="225,2975" size="100,100">You hear pounding on the door.
+\&gt; [[What now?]]</tw-passagedata><tw-passagedata pid="233" name="What now?" tags="vore" position="350,2975" size="100,100">You hear pounding on the door.
 
 &lt;q class=&quot;ren&quot;&gt;Y&#39;know those 🐴 horses I mentioned earlier?&lt;/q&gt;
 
@@ -2909,7 +2914,7 @@ A &lt;%=s.rm?&quot;gruff&quot;:&quot;ladylike&quot;%&gt; voice yells through the
 
 &lt;q class=&quot;ren&quot;&gt;Nothing!!!&lt;/q&gt; Ren yells back, &lt;q class=&quot;ren&quot;&gt;Just normal, consensual vore!!! 🦊🤰&lt;%=s.rm?&quot;♂&quot;:&quot;&quot;%&gt;&lt;/q&gt; You feel &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; belly sag and slosh around you, as &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; rushes over to the truck and climbs into the driver&#39;s seat.
 
-\&gt; [[Ren: Getaway.]]</tw-passagedata><tw-passagedata pid="233" name="Ren: Getaway." tags="vore" position="350,2975" size="100,100">*CW: Grand theft auto.*
+\&gt; [[Ren: Getaway.]]</tw-passagedata><tw-passagedata pid="234" name="Ren: Getaway." tags="vore" position="475,2975" size="100,100">*CW: Grand theft auto.*
 
 Through the muffled fat of Ren&#39;s gut, you hear the truck&#39;s engine roar to life. The fox gets an excited smile plastered across &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; face (&lt;q.ren&gt;😃🏎🏎  !!!!&lt;/q&gt;) as &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; slams the truck into reverse, and peels out at full speed.
 
@@ -2921,7 +2926,7 @@ Ren pats your curled-up bulge. &lt;q.ren&gt;Don&#39;t worry little 🐰 guy... p
 
 You&#39;re really not feeling reassured.
 
-\&gt; [[H-have you done this before?]]</tw-passagedata><tw-passagedata pid="234" name="H-have you done this before?" tags="vore" position="475,2975" size="100,100">Ren smiles. &lt;q.ren&gt;Oh yeah, loads of times!!! 😉🛻💨 What did *you* do in high school?&lt;/q&gt;
+\&gt; [[H-have you done this before?]]</tw-passagedata><tw-passagedata pid="235" name="H-have you done this before?" tags="vore" position="600,2975" size="100,100">Ren smiles. &lt;q.ren&gt;Oh yeah, loads of times!!! 😉🛻💨 What did *you* do in high school?&lt;/q&gt;
 
 Getting involved in a car-jacking wasn&#39;t really in your evening plans, you say. If this goes poorly, you could be killed. Or worse, arrested!
 
@@ -2933,7 +2938,7 @@ Then, you hear sirens.
 
 &lt;q.ren&gt;Oh, fuzz. 🚔🚔🚔&lt;/q&gt; says Ren.
 
-\&gt; [[(oh gosh oh fluff)]]</tw-passagedata><tw-passagedata pid="235" name="(oh gosh oh fluff)" tags="vore checkpoint" position="600,2975" size="100,100">You can hear Ren&#39;s heart rate quickening as it pulses all around you. Your captor is now being chased by police.
+\&gt; [[(oh gosh oh fluff)]]</tw-passagedata><tw-passagedata pid="236" name="(oh gosh oh fluff)" tags="vore checkpoint" position="725,2975" size="100,100">You can hear Ren&#39;s heart rate quickening as it pulses all around you. Your captor is now being chased by police.
 
 &lt;q.ren&gt;Fudging bullshrimp! 😾🛻🚓🚓💨&lt;/q&gt; the fox mutters, noticing two police cars in the rear view mirror.
 
@@ -2941,7 +2946,7 @@ You poke &lt;%-s.rm?&quot;him&quot;:&quot;her&quot;%&gt; in the gut, and tell Re
 
 Ren pats you firmly, clearly not appreciating the distraction of having you inside &lt;%-s.rm?&quot;him&quot;:&quot;her&quot;%&gt; during this tense situation. &lt;q.ren&gt;🤫 Can&#39;t talk,&lt;/q&gt; &lt;%-s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, &lt;q.ren&gt;evading cops!!!&lt;/q&gt;
 
-\&gt; [[Seriously, slow down!]]</tw-passagedata><tw-passagedata pid="236" name="Seriously, slow down!" tags="vore" position="725,2975" size="100,100">You tell Ren to slow down, and kick your foot out to help your point. &lt;%=s.rm?&quot;His&quot;:&quot;Her&quot;%&gt; stomach seems to respond by growling a little. Is it getting hotter and wetter in here?
+\&gt; [[Seriously, slow down!]]</tw-passagedata><tw-passagedata pid="237" name="Seriously, slow down!" tags="vore" position="850,2975" size="100,100">You tell Ren to slow down, and kick your foot out to help your point. &lt;%=s.rm?&quot;His&quot;:&quot;Her&quot;%&gt; stomach seems to respond by growling a little. Is it getting hotter and wetter in here?
 
 &lt;q.ren&gt;😼 Good idea, but I got a better one.&lt;/q&gt; Ren replies, ignoring your advice completely. Instead, &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; floors it, and begins  rapidly gaining speed.
 
@@ -2949,7 +2954,7 @@ You groan. You&#39;re now starting to run low on air, and fizzy liquids are begi
 
 Instead, Ren turns the truck&#39;s lights off, allowing it to disappear into the darkness. &lt;q.ren&gt;My exit&#39;s coming up next. Let&#39; see them cop *this!* 😼🛻🔥💨&lt;/q&gt;
 
-\&gt; [[Struggle desperately inside Ren.]]</tw-passagedata><tw-passagedata pid="237" name="Struggle desperately inside Ren." tags="vore" position="850,2975" size="100,100">*CW: Police negligence. Fatal digestion. Betrayal.*
+\&gt; [[Struggle desperately inside Ren.]]</tw-passagedata><tw-passagedata pid="238" name="Struggle desperately inside Ren." tags="vore" position="975,2975" size="100,100">*CW: Police negligence. Fatal digestion. Betrayal.*
 
 Ren prepares to crank the wheel to the right, and shake the fuzz.
 
@@ -2965,7 +2970,7 @@ Defeated, &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; has no choice but to pu
 
 &lt;q.ren&gt;😡 Grr...&lt;/q&gt; You hear Ren produce a deep, low growl.
 
-\&gt; [[Uh-oh...]]</tw-passagedata><tw-passagedata pid="238" name="Uh-oh..." tags="vore" position="975,2975" size="100,100">A wildebeast and a boar step out of the foremost police car to apprehend Ren.
+\&gt; [[Uh-oh...]]</tw-passagedata><tw-passagedata pid="239" name="Uh-oh..." tags="vore" position="1100,2975" size="100,100">A wildebeast and a boar step out of the foremost police car to apprehend Ren.
 
 &quot;Outta the car,&quot; the wildebeast yells, &quot;You have the right to remain silent.&quot;
 
@@ -2979,7 +2984,7 @@ Ren shakes &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; head. &lt;q.ren&gt;&l
 
 &quot;We&#39;re probably too late,&quot; the boar says, &quot;it seems pretty far along in the digestive process...&quot;
 
-\&gt; [[N-no I&#39;m not!]]</tw-passagedata><tw-passagedata pid="239" name="N-no I&#39;m not!" tags="vore" position="1100,2975" size="100,100">You struggle vehemently. You do feel weaker after being trapped in here for so long, but you&#39;re still perfectly and completely alive. Although it&#39;s starting to get pretty wet in here, and you&#39;re really starting to feel light-headed.
+\&gt; [[N-no I&#39;m not!]]</tw-passagedata><tw-passagedata pid="240" name="N-no I&#39;m not!" tags="vore" position="1225,2975" size="100,100">You struggle vehemently. You do feel weaker after being trapped in here for so long, but you&#39;re still perfectly and completely alive. Although it&#39;s starting to get pretty wet in here, and you&#39;re really starting to feel light-headed.
 
 The wildebeast scratches her head and asks Ren, &quot;We&#39;re too far out to get an ambulance here. Can you puke up this prey?&quot;
 
@@ -2989,7 +2994,7 @@ You squirm and kick harder, letting out kicks and muffled yells.
 
 The officers look awkwardly amongst themselves, then back at Ren&#39;s bulging gut. &quot;Sounds like the prey is in pain,&quot; says the boar uneasily. &quot;Maybe we should just let things take their course?&quot;
 
-\&gt; [[No! Get me out of here!!]]</tw-passagedata><tw-passagedata pid="240" name="No! Get me out of here!!" tags="vore" position="1225,2975" size="100,100">You cry out. No I&#39;m not! Let me out! Please!
+\&gt; [[No! Get me out of here!!]]</tw-passagedata><tw-passagedata pid="241" name="No! Get me out of here!!" tags="vore" position="100,3100" size="100,100">You cry out. No I&#39;m not! Let me out! Please!
 
 &quot;Alright,&quot; says the wildebeast, &quot;just don&#39;t tell the PRA&#39;s. Media will be all over our ass if they catch a whiff of this...&quot;
 
@@ -3003,7 +3008,7 @@ Ren&#39;s stomach pulses around you happily (&lt;q.ren&gt;⛓&lt;%=s.rm?&quot;�
 
 \&gt; [[Epilogue.|Epilogue: Ren route.]]
 
-\&gt; &lt;a0 onclick=&quot;setup.restart();&quot;&gt;Restart&lt;/a&gt;</tw-passagedata><tw-passagedata pid="241" name="Epilogue: Ren route." tags="morning" position="100,3100" size="100,100">The late morning sun pours through a square window, between steel bars, and onto a big, fat-gutted fox who is sleeping soundly inside a concrete cell at the St. Buckwheat Corrections Facility.
+\&gt; &lt;a0 onclick=&quot;setup.restart();&quot;&gt;Restart&lt;/a&gt;</tw-passagedata><tw-passagedata pid="242" name="Epilogue: Ren route." tags="morning" position="225,3100" size="100,100">The late morning sun pours through a square window, between steel bars, and onto a big, fat-gutted fox who is sleeping soundly inside a concrete cell at the St. Buckwheat Corrections Facility.
 
 &lt;q.ren&gt;🥱... What a party!&lt;/q&gt; &lt;%-s.rm?&quot;he&quot;:&quot;she&quot;%&gt; murmurs.
 
@@ -3025,7 +3030,7 @@ Ren pats &lt;%-s.rm?&quot;his&quot;:&quot;her&quot;%&gt; gut. &lt;q.ren&gt;Oh, a
 
 \&gt; &lt;a0 onclick=&quot;setup.restart();&quot;&gt;Restart&lt;/a&gt;
 
-\&gt; [[Credits]]</tw-passagedata><tw-passagedata pid="242" name="Sit by yourself." tags="dreamy_1" position="225,3100" size="100,100">You find an empty bench to sit on by yourself, distancing yourself from the chaos of the party. Being out here on your own, it&#39;s actually quite peaceful.
+\&gt; [[Credits]]</tw-passagedata><tw-passagedata pid="243" name="Sit by yourself." tags="dreamy_1" position="350,3100" size="100,100">You find an empty bench to sit on by yourself, distancing yourself from the chaos of the party. Being out here on your own, it&#39;s actually quite peaceful.
 
 \&gt; [[Watch the stars.]]
 
@@ -3033,17 +3038,17 @@ Ren pats &lt;%-s.rm?&quot;his&quot;:&quot;her&quot;%&gt; gut. &lt;q.ren&gt;Oh, a
   body {
    --background: #eef
   }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="243" name="Watch the stars." tags="dreamy_1" position="350,3100" size="100,100">You do so.
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="244" name="Watch the stars." tags="dreamy_1" position="475,3100" size="100,100">You do so.
 
 The night sky is peaceful. The clouds are clear, but you can only barely see the stars thanks to the light pollution of this suburban neighborhood.
 
 \&gt; [[Get up.]]
 
-\&gt; [[Comprehend the endless cosmos.]]</tw-passagedata><tw-passagedata pid="244" name="Get up." tags="" position="475,3100" size="100,100">Having had your fill of stargazing, you stand up from the bench.
+\&gt; [[Comprehend the endless cosmos.]]</tw-passagedata><tw-passagedata pid="245" name="Get up." tags="" position="600,3100" size="100,100">Having had your fill of stargazing, you stand up from the bench.
 
 \&gt; [[Look at hyena.]]
 
-\&gt; [[Go back to the foyer.|The Foyer.]]</tw-passagedata><tw-passagedata pid="245" name="Comprehend the endless cosmos." tags="dreamy_2" position="600,3100" size="100,100">Sitting here alone, with your head tilted toward the starryish sky, you realize that nothing you&#39;ve been doing at this party has been very important.
+\&gt; [[Go back to the foyer.|The Foyer.]]</tw-passagedata><tw-passagedata pid="246" name="Comprehend the endless cosmos." tags="dreamy_2" position="725,3100" size="100,100">Sitting here alone, with your head tilted toward the starryish sky, you realize that nothing you&#39;ve been doing at this party has been very important.
 
 You don&#39;t need to rescue your friend from being eaten. You don&#39;t need to find a hot date, and you definitely don&#39;t need to be seduced, swallowed, and privately digested by them. You don&#39;t even need to think about how you&#39;re getting home after this.
 
@@ -3053,7 +3058,7 @@ All you need to do is rest your eyes upon the swirling heavens, and relax. You r
 
 \&gt; [[Stop meditating.|Get up.]]
 
-\&gt; [[Break these mortal chains.]]</tw-passagedata><tw-passagedata pid="246" name="Break these mortal chains." tags="dreamy_2" position="725,3100" size="100,100">&lt;% setup.addAchievement(&quot;True Zen (Meditation Ending)&quot;) %&gt;
+\&gt; [[Break these mortal chains.]]</tw-passagedata><tw-passagedata pid="247" name="Break these mortal chains." tags="dreamy_2" position="850,3100" size="100,100">&lt;% setup.addAchievement(&quot;True Zen (Meditation Ending)&quot;) %&gt;
 
 You shut your eyes tight.
 
@@ -3080,7 +3085,7 @@ In the backyard of a suburban house party, Hollis Freeley opens their eyes, and 
 
 &lt;div class=&quot;other-logo&quot;&gt;
 
-\&gt; [[Be the hyena.]]</tw-passagedata><tw-passagedata pid="247" name="Be the hyena." tags="dark otherstory" position="850,3100" size="100,100">Your name is Ana. You&#39;re a spotted hyena, currently chilling on a bench outside a house party like a total loser.
+\&gt; [[Be the hyena.]]</tw-passagedata><tw-passagedata pid="248" name="Be the hyena." tags="dark otherstory" position="975,3100" size="100,100">Your name is Ana. You&#39;re a spotted hyena, currently chilling on a bench outside a house party like a total loser.
 
 You showed up about an hour ago, but big crowds freak you out, so you came out here to get some air and clear your head. You&#39;re here because, like most young predators, you want to eat someone. You want to feel prey writhing around inside your belly. You&#39;d go in there and grab one, but the noise is too overwhelming.
 
@@ -3092,7 +3097,7 @@ What do you do?
 
 \&gt; [[Eat the rabbit.]]
 
-\&gt; [[Eat the rabbit.]]</tw-passagedata><tw-passagedata pid="248" name="Eat the rabbit." tags="dark otherstory" position="975,3100" size="100,100">&lt;i.ana&gt;Great idea, voice inside my head,&lt;/i&gt; you think. You walk over to the rabbit.
+\&gt; [[Eat the rabbit.]]</tw-passagedata><tw-passagedata pid="249" name="Eat the rabbit." tags="dark otherstory" position="1100,3100" size="100,100">&lt;i.ana&gt;Great idea, voice inside my head,&lt;/i&gt; you think. You walk over to the rabbit.
 
 &lt;q.hollistalk&gt;Um, hi there!&lt;/q&gt; they say, clearly slightly nervous to see you. You have that effect on people sometimes. Probably because you&#39;re 6′10″ and your whole body was designed for shredding meat into tiny pieces.
 
@@ -3104,7 +3109,7 @@ They try to fight you at first, but eventually calm down.
 
 \&gt; [[Swallow them.]]
 
-\&gt; [[Swallow them.]]</tw-passagedata><tw-passagedata pid="249" name="Swallow them." tags="dark otherstory" position="1100,3100" size="100,100">With one huge gulp, you swallow the rabbit.
+\&gt; [[Swallow them.]]</tw-passagedata><tw-passagedata pid="250" name="Swallow them." tags="dark otherstory" position="1225,3100" size="100,100">With one huge gulp, you swallow the rabbit.
 
 Burp. In under a minute, they&#39;re all the way inside you. A familiar fullness fills your belly, and you sigh with relief.
 
@@ -3120,7 +3125,7 @@ You begin to drift off to a nap. &lt;i.ana&gt;Wow,&lt;/i&gt; you think, &lt;i.an
 
 ### The End.
 
-\&gt; [[Restart.|Start]]</tw-passagedata><tw-passagedata pid="250" name="Credits" tags="dark" position="1225,3100" size="100,100">*Life of the Party* was written and developed by me, [▽ Double-A ▽](https://aryion.com/g4/user/DoubleA). If you liked it, leave me feedback at [Eka&#39;s Portal](https://aryion.com/forum/viewtopic.php?f=79&amp;t=59177) or [textadventures.co.uk](http://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/life-of-the-party-a-furry-vore-adventure-18)!
+\&gt; [[Restart.|Start]]</tw-passagedata><tw-passagedata pid="251" name="Credits" tags="dark" position="100,3225" size="100,100">*Life of the Party* was written and developed by me, [▽ Double-A ▽](https://aryion.com/g4/user/DoubleA). If you liked it, leave me feedback at [Eka&#39;s Portal](https://aryion.com/forum/viewtopic.php?f=79&amp;t=59177) or [textadventures.co.uk](http://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/life-of-the-party-a-furry-vore-adventure-18)!
 
 If you really enjoyed this, and want me to spend more time making things like it, consider supporting me at [☕ Ko-fi](https://ko-fi.com/doublea).
 
@@ -3133,11 +3138,11 @@ Special thanks to the creators and contributors of the following open source pro
 
 ### License
 
-&lt;%= story.render(&quot;License&quot;) %&gt;</tw-passagedata><tw-passagedata pid="251" name="License" tags="" position="100,3225" size="100,100">Copyright © 2021 Double-A. The [content of this story](https://github.com/double-a-stories/life-of-the-party) is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). You are free to share and adapt this text in any medium **with attribution** for **non-commercial purposes** under **the same license**.
+&lt;%= story.render(&quot;License&quot;) %&gt;</tw-passagedata><tw-passagedata pid="252" name="License" tags="" position="225,3225" size="100,100">Copyright © 2021 Double-A. The [content of this story](https://github.com/double-a-stories/life-of-the-party) is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). You are free to share and adapt this text in any medium **with attribution** for **non-commercial purposes** under **the same license**.
 
-The author(s) provide this hypertext “as is”, without warranty of any kind, either express or implied, including but not limited to, the implied warranties of **sexiness or fitness for a particular fetish**. The entire risk as to the quality and performance of this fiction is with you. Should the story prove unsexy, you assume the cost of all necessary servicing, repair, or brain bleach.</tw-passagedata><tw-passagedata pid="252" name="Content warning" tags="" position="225,3225" size="100,100">### ⚠️ CONTENT WARNING ⚠️
+The author(s) provide this hypertext “as is”, without warranty of any kind, either express or implied, including but not limited to, the implied warranties of **sexiness or fitness for a particular fetish**. The entire risk as to the quality and performance of this fiction is with you. Should the story prove unsexy, you assume the cost of all necessary servicing, repair, or brain bleach.</tw-passagedata><tw-passagedata pid="253" name="Content warning" tags="" position="350,3225" size="100,100">### ⚠️ CONTENT WARNING ⚠️
 
-This story is for **adults only**. It contains **niche fetish content**, including but not limited to **soft vore, sadism, digestion, and death**. Proceed at your own discretion.</tw-passagedata><tw-passagedata pid="253" name="logo-horse-left" tags="Twine.image" position="350,3225" size="100,100">data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTA3IiB2aWV3Qm94PSIxOCA0MTkgMTIwIDEwNyIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cGF0aCBkPSJNODEuMTA5IDUyNmMtMTUuODI3IDAtMjkuMDMtLjI1My0yOS4zMzktLjU2M3MxLjIyNy00LjY5NyAzLjQxNy05Ljc1IDQuODYyLTEzLjQwMyA1Ljk0MS0xOC41NTVjMS4wOTYtNS4yMzkgMS44MzEtMTIuMDcgMS42NjYtMTUuNS0uMjk1LTYuMTMyLS4yOTUtNi4xMzItNS4yOTUtNi43OTQtMi43NS0uMzY1LTguODI1LS42OTItMTMuNS0uNzI4LTYuNDkyLS4wNS05LjU1LjQxMS0xMi45NDcgMS45NTItMy43MzMgMS42OTMtNC45MDQgMS44MjgtNy4yOS44NC0xLjU2My0uNjQ4LTMuNDk5LTIuMTE2LTQuMzAzLTMuMjYycy0xLjQ1My00LjEyMi0xLjQ0NS02LjYxMi41NzEtNS41MzQgMS4yNS02Ljc2NCA0LjE2LTMuNzA2IDcuNzM1LTUuNTAyIDExLjY3NS02LjczNyAxOC0xMC45NzlsMTUuNDU0LTEwLjUwNWMzLjgzNy0yLjcxMSAzLjk0Ni0yLjk0OSAzLjY3Ni04LjAzNkM2My45NzYgNDIyLjM1OSA2Ni40OTQgNDE5IDY3IDQxOXMtLjQ4NyAxLjkxMS41MjEgMy4wMjRjMS40MDIgMS41NDkgMi4wMjQgMS43MjUgMi42NTUuNzUuNjQ5LTEuMDA0IDEuMDMxLS45NTcgMS44MDcuMjI2LjU0MS44MjUgMS4xMzMgMS45MjcgMS4zMTYgMi40NDlzMS43MTUtLjAzNSAzLjQwNS0xLjIzOVM4MS4xODEgNDIxLjMxNCA4MiA0MjFjMS4wMTMtLjM4OS45NjUuNzI3IDEuNDE4IDIuNTMxLjUwOSAyLjAyOCAxLjA2NiAyLjQ3NiAyLjM3MyAxLjkwOC45NC0uNDA5IDMuMjI3LS45NTYgNS4wODMtMS4yMTUgMi40NjctLjM0NSAzLjI1OC0uMTIzIDIuOTQzLjgyNC0uMjYzLjc4OCAxLjk0NiAyLjUwNSA1LjYyNSA0LjM3NCAzLjM2NCAxLjcxIDYuMjAxIDMuODU2IDYuMzgxIDQuODI4LjIwNCAxLjEwNy0uMzAyIDEuNzUtMS4zNzggMS43NS0xLjI2MiAwLS42NTkgMS4xODQgMi4zMzMgNC41ODVsNi41NjQgNy41NTZjMi40ODYgMi45MjEgMi40OTUgMi45ODQuNDc5IDMuNzI5LTEuODgzLjY5Ny0xLjY4MSAxLjA4NCAyLjQ4MiA0Ljc0OCAyLjQ5MyAyLjE5NSA1LjQ5MSA1LjYxNSA2LjY2NCA3LjYwMnMyLjQwNiA1LjMwNiAyLjc0MiA3LjM3N2MuNjEgMy43NjQuNjEgMy43NjQtMy4yMTQgMS40LTMuNTU3LTIuMTk4LTMuNzg5LTIuMjI4LTMuMzE3LS40My4yNzkgMS4wNjMgMS4wMTkgMy41MDggMS42NDUgNS40MzNzMS44MTEgNi4wMDcgMi42MzMgOS4wNzFjMS4xNzEgNC4zNjIgMi41ODUgNi42NDEgNi41MTggMTAuNSAyLjc2MiAyLjcxMSA1LjAyMyA1LjI2NyA1LjAyNCA1LjY3OXMtLjcxMS43NS0xLjU4Ljc1Yy0xLjM2MSAwLTEuMzA3LjQ1My4zOTQgMy4yNSAxLjA4NyAxLjc4OCAyLjI1MyA1LjA1IDIuNTkyIDcuMjVzLjIwNiA0LjYyOS0uMjk1IDUuMzk4Yy0uNzMgMS4xMjItMS43OTMuNjc2LTUuMzY0LTIuMjUtMi40NDgtMi4wMDYtNS4yNDEtMy42NDgtNi4yMDYtMy42NDgtMS4yNTkgMC0xLjU2NS40OTQtMS4wODQgMS43NS4zNjkuOTYzIDEuNjU0IDIuNzk3IDIuODU3IDQuMDc3czIuNTczIDMuMDE0IDMuMDQ1IDMuODUzYy43MTQgMS4yNzIuMzU2IDEuNDE2LTIuMTU1Ljg2NS0xLjc2My0uMzg4LTMuMjg0LS4yMjMtMy42NjYuMzk3LS4zNi41ODItMS42NDEgMS4wNTUtMi44NDYgMS4wNTJzLTMuNTE1LS44OC01LjEzNC0xLjk0N2MtMi45MTQtMS45MjEtMi45NTctMS45MjEtNC4zMDcuMDA2LTEuMjk3IDEuODUzLTIuNzU5IDEuOTQ3LTMwLjE0IDEuOTQ3eiIvPjwvc3ZnPg==</tw-passagedata><tw-passagedata pid="254" name="logo-horse-right" tags="Twine.image" position="475,3225" size="100,100">data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMzYiIGhlaWdodD0iMTA4IiB2aWV3Qm94PSI4NzEgNDE0IDEzNiAxMDgiIHhtbG5zOnY9Imh0dHBzOi8vdmVjdGEuaW8vbmFubyI+PHBhdGggZD0iTTk0Mi41ODMgNTIyQzkwNCA1MjIgOTA0IDUyMiA5MDQgNTE5LjYwNmMwLTIuMjk1LS4xNjQtMi4zNTItNC4wMDctMS4zNzYtMi4yMDMuNTU5LTYuNDUxLjgxNC05LjQ0LjU2Ni0zLjY1OC0uMzAzLTYuNzU3LTEuMzI3LTkuNDg1LTMuMTMyLTIuMjI4LTEuNDc0LTUuMjQ3LTQuNDg4LTYuNzA5LTYuNjk3LTEuNjQzLTIuNDgyLTIuODQtNS45MTYtMy4xMzYtOC45OTEtLjI5LTMuMDI1LS4wNzgtNC45NzYuNTQxLTQuOTc2LjU2MSAwIDEuMjc2IDEuMDI1IDEuNTkxIDIuMjc4czEuODI1IDMuNDc0IDMuMzU4IDQuOTM2IDQuMDUzIDMuMTM4IDUuNjAyIDMuNzIzIDQuMjQ4IDEuMDU2IDYgMS4wNDggMy43OS0uMzk5IDQuNTMtLjg2OGMuOTg0LS42MjQuNTk4LTEuMDQtMS40MzktMS41NTEtMS41MzEtLjM4NC00LjA1Ni0xLjYwNC01LjYxLTIuNzExcy0zLjUyOC0zLjM2OS00LjM4NS01LjAyNy0xLjM1My0zLjIxOS0xLjEwMi0zLjQ3IDIuMTQ3LjY5MSA0LjIxMyAyLjA5MyA1LjA1OSAyLjU0OSA2LjY1IDIuNTQ5IDUuMTc0LTEuMTU1IDcuOTYtMi41NjcgNC44MzktMi43OTUgNC41Ni0zLjA3NC0xLjg3Ni4yMDItMy41NSAxLjA2Ny00LjE2NCAxLjU3NC01LjUzMyAxLjU3NC0yLjc2MS0uNDM3LTMuMDkxLS45Ny41MS0xLjI1IDEuODY3LTEuNTkxIDMuMjQ1LTEuNDc4IDQuMTk2LTIuNTI5YzEuNjgxLTEuODU3IDEuNTg0LTEuOTEtMy40NTgtMS45MS0yLjg1MyAwLTYuODYtLjY5OS04LjkwNS0xLjU1M3MtNC45OTYtMi43NjctNi41NTctNC4yNS0zLjU0Ni00LjA0Ny00LjQwOS01LjY5Ny0xLjg3OC00LjM2LTIuMjU0LTYuMDIxLS4zODItMy44ODUtLjAxMi00Ljk0Yy41NzMtMS42MzMgMS4wMjItMS4yOTYgMy4wMjcgMi4yNzIgMS41NjEgMi43NzYgMy43NDkgNC44NjQgNi40ODcgNi4xODkgMi4yNzIgMS4xIDUuNjc3IDEuOTkzIDcuNTY2IDEuOTg1czQuMDEyLS4zODIgNC43MTktLjgzMWMuODc1LS41NTUuMDYyLTEuMTgzLTIuNTQxLTEuOTYzLTIuMTA1LS42My01LjA3Mi0yLjQ0Ni02LjU5NC00LjAzNHMtMy4wMzQtMy45MDktMy4zNi01LjE1Ny0uMTg4LTIuMDkzLjMwOC0xLjg3OSAyLjQ3NyAxLjM5NyA0LjQwMiAyLjYzIDQuNzU1IDIuMjQzIDYuMjkgMi4yNDUgNC42MTUtLjkyNyA2Ljg0Ny0yLjA2NiAzLjg5Ny0yLjIzIDMuNzAxLTIuNDI1LTIuMTk2LjEzNS00LjQ0NC43MzUtNC45NDQuNzQ0LTUuOTkxLjMxOGMtMS42Mi0uNjU4LTEuMzUzLS45NjkgMS43OS0yLjA5MyAyLjAzMS0uNzI2IDUuMDA4LTIuMjkzIDYuNjE1LTMuNDgyczMuODY2LTMuODM4IDUuMDE5LTUuODg5IDIuNDI4LTQuNTk3IDIuODM2LTUuNjU4Yy43MjQtMS44ODcuNjc4LTEuODg5LTIuMDQ4LS4xMDMtMS41MzQgMS4wMDUtMy4wMjMgMS41OTMtMy4zMDggMS4zMDdzLjk5LTMuODA5IDIuODM1LTcuODI5YzEuODk5LTQuMTM5IDUuMTg4LTkuMTU1IDcuNTgtMTEuNTYxIDIuNjg5LTIuNzA0IDMuNjU5LTQuMjUgMi42NjgtNC4yNS0uODU2IDAtMS4zNzQtLjU2Mi0xLjE1MS0xLjI1czMuNDc3LTIuODI1IDcuMjMyLTQuNzVjNS44MDItMi45NzQgNy44MzUtMy41IDEzLjU0LTMuNSA1LjE1OCAwIDguMDc1LjYyMyAxMi42IDIuNjg5IDQuMTgxIDEuOTA4IDguMjQ5IDIuODU1IDE0LjAyNiAzLjI2NCA3LjAzMy40OTcgOC4yMjYuMzQ3IDguNzgzLTEuMTA2LjM4Ny0xLjAwNyAxLjAwMi0xLjMxNCAxLjUzNS0uNzY0LjQ4OS41MDQgMS4yMDYgMi43MTcgMS41OTQgNC45MTdzMS4zMjEgNS41MTQgMi4wNzQgNy4zNjQgMi43MTkgNC45MDEgNC4zNjcgNi43NzggMy44NDkgNS4wODkgNC44ODkgNy4xMzZhNzAuMDcgNzAuMDcgMCAwIDEgMy4yNTcgNy43ODZjLjc1MiAyLjIzNiAzLjk1OCA3LjQ0NyA3LjEyNCAxMS41ODFzNi42NTQgOS4zNzEgNy43NDkgMTEuNjM3YzEuMjI3IDIuNTQxIDEuOTkxIDYuMTc2IDEuOTkxIDkuNDc5IDAgMi45OTYtLjYxMyA2LjE5NS0xLjM5MSA3LjI1OS0xLjE5MyAxLjYzMi0xLjc2IDEuNzMzLTQgLjcxMi0yLjQ4Ny0xLjEzMy0yLjYwOS0xLjA1My0yLjYwOSAxLjcyMiAwIDIuMDg0LS42IDMuMTAyLTIuMTEyIDMuNTgxLTEuMjc2LjQwNS0yLjU5OS4xMzUtMy4zNDQtLjY4Mi0uNjc4LS43NDQtMi4yMDktMi43ODEtMy40MDMtNC41MjctMS41MTQtMi4yMTUtMy43NTItMy42OTMtNy40MDYtNC44OS0yLjg3OS0uOTQzLTguMzg1LTMuNDA3LTEyLjIzNS01LjQ3NHMtOC4wMTMtNC4wNjEtOS4yNS00LjQyOGMtMi4xNDktLjYzOC0yLjI1LS40MTEtMi4yNSA1LjAzMyAwIDMuMTM1LjU0OSA3LjU1MyAxLjIyMSA5LjgxNy44NDcgMi44NTMgMy4zNTggNi4yNjUgOC4xODEgMTEuMTE2IDMuODI3IDMuODUgOC4zNCA4Ljk0MSAxMC4wMjggMTEuMzEzczMuMjIgNC43MzQgMy40MDMgNS4yNWMuMjA0LjU3Mi0xNC42NzguOTM3LTM4LjI1LjkzN3oiLz48L3N2Zz4=</tw-passagedata><tw-passagedata pid="255" name="Logo" tags="hide" position="600,3225" size="100,100">&lt;!-- The logo text is drawn using fake small caps. Creating them with inline span elements, rather than the font-variant-caps property makes them render consistently across Firefox and Chrome. --&gt;
+This story is for **adults only**. It contains **niche fetish content**, including but not limited to **soft vore, sadism, digestion, and death**. Proceed at your own discretion.</tw-passagedata><tw-passagedata pid="254" name="logo-horse-left" tags="Twine.image" position="475,3225" size="100,100">data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTA3IiB2aWV3Qm94PSIxOCA0MTkgMTIwIDEwNyIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cGF0aCBkPSJNODEuMTA5IDUyNmMtMTUuODI3IDAtMjkuMDMtLjI1My0yOS4zMzktLjU2M3MxLjIyNy00LjY5NyAzLjQxNy05Ljc1IDQuODYyLTEzLjQwMyA1Ljk0MS0xOC41NTVjMS4wOTYtNS4yMzkgMS44MzEtMTIuMDcgMS42NjYtMTUuNS0uMjk1LTYuMTMyLS4yOTUtNi4xMzItNS4yOTUtNi43OTQtMi43NS0uMzY1LTguODI1LS42OTItMTMuNS0uNzI4LTYuNDkyLS4wNS05LjU1LjQxMS0xMi45NDcgMS45NTItMy43MzMgMS42OTMtNC45MDQgMS44MjgtNy4yOS44NC0xLjU2My0uNjQ4LTMuNDk5LTIuMTE2LTQuMzAzLTMuMjYycy0xLjQ1My00LjEyMi0xLjQ0NS02LjYxMi41NzEtNS41MzQgMS4yNS02Ljc2NCA0LjE2LTMuNzA2IDcuNzM1LTUuNTAyIDExLjY3NS02LjczNyAxOC0xMC45NzlsMTUuNDU0LTEwLjUwNWMzLjgzNy0yLjcxMSAzLjk0Ni0yLjk0OSAzLjY3Ni04LjAzNkM2My45NzYgNDIyLjM1OSA2Ni40OTQgNDE5IDY3IDQxOXMtLjQ4NyAxLjkxMS41MjEgMy4wMjRjMS40MDIgMS41NDkgMi4wMjQgMS43MjUgMi42NTUuNzUuNjQ5LTEuMDA0IDEuMDMxLS45NTcgMS44MDcuMjI2LjU0MS44MjUgMS4xMzMgMS45MjcgMS4zMTYgMi40NDlzMS43MTUtLjAzNSAzLjQwNS0xLjIzOVM4MS4xODEgNDIxLjMxNCA4MiA0MjFjMS4wMTMtLjM4OS45NjUuNzI3IDEuNDE4IDIuNTMxLjUwOSAyLjAyOCAxLjA2NiAyLjQ3NiAyLjM3MyAxLjkwOC45NC0uNDA5IDMuMjI3LS45NTYgNS4wODMtMS4yMTUgMi40NjctLjM0NSAzLjI1OC0uMTIzIDIuOTQzLjgyNC0uMjYzLjc4OCAxLjk0NiAyLjUwNSA1LjYyNSA0LjM3NCAzLjM2NCAxLjcxIDYuMjAxIDMuODU2IDYuMzgxIDQuODI4LjIwNCAxLjEwNy0uMzAyIDEuNzUtMS4zNzggMS43NS0xLjI2MiAwLS42NTkgMS4xODQgMi4zMzMgNC41ODVsNi41NjQgNy41NTZjMi40ODYgMi45MjEgMi40OTUgMi45ODQuNDc5IDMuNzI5LTEuODgzLjY5Ny0xLjY4MSAxLjA4NCAyLjQ4MiA0Ljc0OCAyLjQ5MyAyLjE5NSA1LjQ5MSA1LjYxNSA2LjY2NCA3LjYwMnMyLjQwNiA1LjMwNiAyLjc0MiA3LjM3N2MuNjEgMy43NjQuNjEgMy43NjQtMy4yMTQgMS40LTMuNTU3LTIuMTk4LTMuNzg5LTIuMjI4LTMuMzE3LS40My4yNzkgMS4wNjMgMS4wMTkgMy41MDggMS42NDUgNS40MzNzMS44MTEgNi4wMDcgMi42MzMgOS4wNzFjMS4xNzEgNC4zNjIgMi41ODUgNi42NDEgNi41MTggMTAuNSAyLjc2MiAyLjcxMSA1LjAyMyA1LjI2NyA1LjAyNCA1LjY3OXMtLjcxMS43NS0xLjU4Ljc1Yy0xLjM2MSAwLTEuMzA3LjQ1My4zOTQgMy4yNSAxLjA4NyAxLjc4OCAyLjI1MyA1LjA1IDIuNTkyIDcuMjVzLjIwNiA0LjYyOS0uMjk1IDUuMzk4Yy0uNzMgMS4xMjItMS43OTMuNjc2LTUuMzY0LTIuMjUtMi40NDgtMi4wMDYtNS4yNDEtMy42NDgtNi4yMDYtMy42NDgtMS4yNTkgMC0xLjU2NS40OTQtMS4wODQgMS43NS4zNjkuOTYzIDEuNjU0IDIuNzk3IDIuODU3IDQuMDc3czIuNTczIDMuMDE0IDMuMDQ1IDMuODUzYy43MTQgMS4yNzIuMzU2IDEuNDE2LTIuMTU1Ljg2NS0xLjc2My0uMzg4LTMuMjg0LS4yMjMtMy42NjYuMzk3LS4zNi41ODItMS42NDEgMS4wNTUtMi44NDYgMS4wNTJzLTMuNTE1LS44OC01LjEzNC0xLjk0N2MtMi45MTQtMS45MjEtMi45NTctMS45MjEtNC4zMDcuMDA2LTEuMjk3IDEuODUzLTIuNzU5IDEuOTQ3LTMwLjE0IDEuOTQ3eiIvPjwvc3ZnPg==</tw-passagedata><tw-passagedata pid="255" name="logo-horse-right" tags="Twine.image" position="600,3225" size="100,100">data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMzYiIGhlaWdodD0iMTA4IiB2aWV3Qm94PSI4NzEgNDE0IDEzNiAxMDgiIHhtbG5zOnY9Imh0dHBzOi8vdmVjdGEuaW8vbmFubyI+PHBhdGggZD0iTTk0Mi41ODMgNTIyQzkwNCA1MjIgOTA0IDUyMiA5MDQgNTE5LjYwNmMwLTIuMjk1LS4xNjQtMi4zNTItNC4wMDctMS4zNzYtMi4yMDMuNTU5LTYuNDUxLjgxNC05LjQ0LjU2Ni0zLjY1OC0uMzAzLTYuNzU3LTEuMzI3LTkuNDg1LTMuMTMyLTIuMjI4LTEuNDc0LTUuMjQ3LTQuNDg4LTYuNzA5LTYuNjk3LTEuNjQzLTIuNDgyLTIuODQtNS45MTYtMy4xMzYtOC45OTEtLjI5LTMuMDI1LS4wNzgtNC45NzYuNTQxLTQuOTc2LjU2MSAwIDEuMjc2IDEuMDI1IDEuNTkxIDIuMjc4czEuODI1IDMuNDc0IDMuMzU4IDQuOTM2IDQuMDUzIDMuMTM4IDUuNjAyIDMuNzIzIDQuMjQ4IDEuMDU2IDYgMS4wNDggMy43OS0uMzk5IDQuNTMtLjg2OGMuOTg0LS42MjQuNTk4LTEuMDQtMS40MzktMS41NTEtMS41MzEtLjM4NC00LjA1Ni0xLjYwNC01LjYxLTIuNzExcy0zLjUyOC0zLjM2OS00LjM4NS01LjAyNy0xLjM1My0zLjIxOS0xLjEwMi0zLjQ3IDIuMTQ3LjY5MSA0LjIxMyAyLjA5MyA1LjA1OSAyLjU0OSA2LjY1IDIuNTQ5IDUuMTc0LTEuMTU1IDcuOTYtMi41NjcgNC44MzktMi43OTUgNC41Ni0zLjA3NC0xLjg3Ni4yMDItMy41NSAxLjA2Ny00LjE2NCAxLjU3NC01LjUzMyAxLjU3NC0yLjc2MS0uNDM3LTMuMDkxLS45Ny41MS0xLjI1IDEuODY3LTEuNTkxIDMuMjQ1LTEuNDc4IDQuMTk2LTIuNTI5YzEuNjgxLTEuODU3IDEuNTg0LTEuOTEtMy40NTgtMS45MS0yLjg1MyAwLTYuODYtLjY5OS04LjkwNS0xLjU1M3MtNC45OTYtMi43NjctNi41NTctNC4yNS0zLjU0Ni00LjA0Ny00LjQwOS01LjY5Ny0xLjg3OC00LjM2LTIuMjU0LTYuMDIxLS4zODItMy44ODUtLjAxMi00Ljk0Yy41NzMtMS42MzMgMS4wMjItMS4yOTYgMy4wMjcgMi4yNzIgMS41NjEgMi43NzYgMy43NDkgNC44NjQgNi40ODcgNi4xODkgMi4yNzIgMS4xIDUuNjc3IDEuOTkzIDcuNTY2IDEuOTg1czQuMDEyLS4zODIgNC43MTktLjgzMWMuODc1LS41NTUuMDYyLTEuMTgzLTIuNTQxLTEuOTYzLTIuMTA1LS42My01LjA3Mi0yLjQ0Ni02LjU5NC00LjAzNHMtMy4wMzQtMy45MDktMy4zNi01LjE1Ny0uMTg4LTIuMDkzLjMwOC0xLjg3OSAyLjQ3NyAxLjM5NyA0LjQwMiAyLjYzIDQuNzU1IDIuMjQzIDYuMjkgMi4yNDUgNC42MTUtLjkyNyA2Ljg0Ny0yLjA2NiAzLjg5Ny0yLjIzIDMuNzAxLTIuNDI1LTIuMTk2LjEzNS00LjQ0NC43MzUtNC45NDQuNzQ0LTUuOTkxLjMxOGMtMS42Mi0uNjU4LTEuMzUzLS45NjkgMS43OS0yLjA5MyAyLjAzMS0uNzI2IDUuMDA4LTIuMjkzIDYuNjE1LTMuNDgyczMuODY2LTMuODM4IDUuMDE5LTUuODg5IDIuNDI4LTQuNTk3IDIuODM2LTUuNjU4Yy43MjQtMS44ODcuNjc4LTEuODg5LTIuMDQ4LS4xMDMtMS41MzQgMS4wMDUtMy4wMjMgMS41OTMtMy4zMDggMS4zMDdzLjk5LTMuODA5IDIuODM1LTcuODI5YzEuODk5LTQuMTM5IDUuMTg4LTkuMTU1IDcuNTgtMTEuNTYxIDIuNjg5LTIuNzA0IDMuNjU5LTQuMjUgMi42NjgtNC4yNS0uODU2IDAtMS4zNzQtLjU2Mi0xLjE1MS0xLjI1czMuNDc3LTIuODI1IDcuMjMyLTQuNzVjNS44MDItMi45NzQgNy44MzUtMy41IDEzLjU0LTMuNSA1LjE1OCAwIDguMDc1LjYyMyAxMi42IDIuNjg5IDQuMTgxIDEuOTA4IDguMjQ5IDIuODU1IDE0LjAyNiAzLjI2NCA3LjAzMy40OTcgOC4yMjYuMzQ3IDguNzgzLTEuMTA2LjM4Ny0xLjAwNyAxLjAwMi0xLjMxNCAxLjUzNS0uNzY0LjQ4OS41MDQgMS4yMDYgMi43MTcgMS41OTQgNC45MTdzMS4zMjEgNS41MTQgMi4wNzQgNy4zNjQgMi43MTkgNC45MDEgNC4zNjcgNi43NzggMy44NDkgNS4wODkgNC44ODkgNy4xMzZhNzAuMDcgNzAuMDcgMCAwIDEgMy4yNTcgNy43ODZjLjc1MiAyLjIzNiAzLjk1OCA3LjQ0NyA3LjEyNCAxMS41ODFzNi42NTQgOS4zNzEgNy43NDkgMTEuNjM3YzEuMjI3IDIuNTQxIDEuOTkxIDYuMTc2IDEuOTkxIDkuNDc5IDAgMi45OTYtLjYxMyA2LjE5NS0xLjM5MSA3LjI1OS0xLjE5MyAxLjYzMi0xLjc2IDEuNzMzLTQgLjcxMi0yLjQ4Ny0xLjEzMy0yLjYwOS0xLjA1My0yLjYwOSAxLjcyMiAwIDIuMDg0LS42IDMuMTAyLTIuMTEyIDMuNTgxLTEuMjc2LjQwNS0yLjU5OS4xMzUtMy4zNDQtLjY4Mi0uNjc4LS43NDQtMi4yMDktMi43ODEtMy40MDMtNC41MjctMS41MTQtMi4yMTUtMy43NTItMy42OTMtNy40MDYtNC44OS0yLjg3OS0uOTQzLTguMzg1LTMuNDA3LTEyLjIzNS01LjQ3NHMtOC4wMTMtNC4wNjEtOS4yNS00LjQyOGMtMi4xNDktLjYzOC0yLjI1LS40MTEtMi4yNSA1LjAzMyAwIDMuMTM1LjU0OSA3LjU1MyAxLjIyMSA5LjgxNy44NDcgMi44NTMgMy4zNTggNi4yNjUgOC4xODEgMTEuMTE2IDMuODI3IDMuODUgOC4zNCA4Ljk0MSAxMC4wMjggMTEuMzEzczMuMjIgNC43MzQgMy40MDMgNS4yNWMuMjA0LjU3Mi0xNC42NzguOTM3LTM4LjI1LjkzN3oiLz48L3N2Zz4=</tw-passagedata><tw-passagedata pid="256" name="Logo" tags="hide" position="725,3225" size="100,100">&lt;!-- The logo text is drawn using fake small caps. Creating them with inline span elements, rather than the font-variant-caps property makes them render consistently across Firefox and Chrome. --&gt;
 &lt;div class=&quot;logo&quot;&gt;
 &lt;h1 class=&quot;logo__title&quot;&gt;
 &lt;img role=&quot;presentation&quot; class=&quot;logo__horse&quot; src=&quot;&lt;%-story.render(&quot;logo-horse-left&quot;)%&gt;&quot;&gt;&lt;span&gt;Life of the Party&lt;/span&gt;&lt;img role=&quot;presentation&quot; class=&quot;logo__horse&quot; src=&quot;&lt;%-story.render(&quot;logo-horse-right&quot;)%&gt;&quot;&gt;
