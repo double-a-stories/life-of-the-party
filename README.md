@@ -12,7 +12,7 @@ This is a text-based interactive story written in [Twee 3](https://github.com/if
 
 ## Features
 
-### 6 unique story routes:
+### 7 unique story routes:
 * #### Outdoors route 🌳
   * Meet Ana Rose, a loner hyena chick with a penchant for punk rock, hugs, and digesting you.
   * *CW: Revoked consent. Accidental digestion. Woman with penis. Masturbation (by predator). Scat (optional).*
@@ -31,6 +31,11 @@ This is a text-based interactive story written in [Twee 3](https://github.com/if
 * #### Broom closet route 🧹
   * There is no content in the broom closet.
   * *CW: ????*
+
+* #### Garage Route 🦊
+  * Meet Ren Davis, a 🦊 with an 😃 upbeat attitude and a knack for 💰💎 "borrowing".
+  * Assist in 🦹 crimes! Flee the 🚔 cops! Get 🥱 eaten!
+  * *CW: Grand theft auto. Unwilling vore/digestion. Threats of physical violence.*
 
 ## Building from source
 
