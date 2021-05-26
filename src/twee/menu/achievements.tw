@@ -1,7 +1,7 @@
 :: Achievements list
 
 <% const achievements = setup.getAchievements().sort();
-   const story_max_achievements = 9; // TODO: change me!
+   const story_max_achievements = 7; // TODO: change me!
 %>
 
 ### Achievements <%=`(${achievements.length} / ${story_max_achievements})`%>
