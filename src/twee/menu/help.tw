@@ -17,3 +17,26 @@
 ### Credits
 
 <%= story.render("Credits") %>
+
+:: Credits [dark]
+
+*Life of the Party* was written and developed by me, [▽ Double-A ▽](https://aryion.com/g4/user/DoubleA). If you liked it, leave me feedback at [Eka's Portal](https://aryion.com/forum/viewtopic.php?f=79&t=59177) or [textadventures.co.uk](http://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/life-of-the-party-a-furry-vore-adventure-18)!
+
+If you really enjoyed this, and want me to spend more time making things like it, consider supporting me at [☕ Ko-fi](https://ko-fi.com/doublea).
+
+Special thanks to the creators and contributors of the following open source projects:
+
+* 📖 [Twine and Twee](https://github.com/tweecode) by Chris Klimas and the IFTF
+* 😃 [Twemoji](https://github.com/twitter/twemoji) – Open source Emoji set by Twitter.
+* 🏍️ [Tweego](https://github.com/tmedwards/tweego) – Compiler for Twee 3 by T.M. Edwards
+* ⛄️ [Snowman](https://github.com/videlais/snowman) – Story format by Videlais
+
+### License
+
+<%= story.render("License") %>
+
+:: License
+
+Copyright © 2021 Double-A. The [content of this story](https://github.com/double-a-stories/life-of-the-party) is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). You are free to share and adapt this text in any medium **with attribution** for **non-commercial purposes** under **the same license**.
+
+The author(s) provide this hypertext “as is”, without warranty of any kind, either express or implied, including but not limited to, the implied warranties of **sexiness or fitness for a particular fetish**. The entire risk as to the quality and performance of this fiction is with you. Should the story prove unsexy, you assume the cost of all necessary servicing, repair, or brain bleach.
