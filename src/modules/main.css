@@ -3,30 +3,24 @@
 /* Style variables */
 
 :root {
+  --color: #111;
+  --background: #eee;
+  /* Semi-transparent decoration color */
   --light: rgba(0, 0, 0, 20%);
+  /* Link hover color */
   --accent: #d93;
-  --color-vore: #fee;
-  --color-vore-ending: #dbb;
+  /* Default body font */
   --font-stack: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Segoe UI, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Arial, sans-serif;
 }
 
 body {
   font: 1.2rem/1.6 var(--font-stack);
-  color: var(--color, #111);
-  background: var(--background, #eee);
+  color: var(--color);
+  background: var(--background);
   transition: opacity 1s, background 2s;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
+/* Override default Twee styles */
 
 tw-story {
   line-height: inherit;
@@ -35,6 +29,19 @@ tw-story {
   padding-bottom: 4rem;
   max-width: 35em;
 }
+
+/* Typography and spacing */
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.15;
+}
+
+/* Links */
 
 a {
   color: var(--color, #111);
