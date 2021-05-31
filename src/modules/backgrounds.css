@@ -1,0 +1,43 @@
+/* Story Styles (using passage tags) */
+
+body[data-tags~="vore"] {
+  --background: #400;
+  --light: #fff4;
+  --color: #fdd;
+}
+
+body[data-tags~="dreamy_1"] {
+  --background: #eef;
+}
+
+body[data-tags~="dreamy_2"] {
+  --background: #ddf;
+}
+
+body[data-tags~="morning"] {
+  --background: #ffe;
+  --color: #320;
+}
+
+body[data-tags~="gore"] {
+  --background: #B00;
+  --color: #FFF;
+}
+
+/* Drunk effect (for Nikki/Nox route) */
+
+body[data-tags~="drunk"] {
+  animation: rock 5s ease-in-out infinite, blur 3s ease-in-out infinite;
+}
+
+@keyframes rock {
+  0% { transform: rotateY(-1deg);}
+  50% { transform: rotateZ(1deg);}
+  100% { transform: rotateY(-1deg); }
+}
+
+@keyframes blur {
+  0% { filter: blur(0); }
+  50% { filter: blur (40px); }
+  100% { filter: blur(0); }
+}

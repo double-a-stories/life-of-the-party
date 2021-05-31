@@ -1,0 +1,83 @@
+/* Fake social cards for Hazel ending */
+
+[data-tags~="socmed"] tw-story {
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+.social-card {
+  padding: 1rem;
+  font-size: smaller;
+  font-family: sans-serif;
+background: white;
+  border: 1px solid var(--light);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+box-sizing: border-box;
+cursor: default;
+}
+.social-card small {
+  opacity: 0.7;
+}
+
+.social-card * + * {
+margin-top: 1rem;
+}
+
+.social-card .placeholder-img {
+  width: 100%;
+  height: 15em;
+  border-radius: 0.5rem;
+}
+
+.placeholder-img {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Lacey ending */
+
+.textchat {
+    padding: 1rem;
+    font-size: smaller;
+    font-family: Roboto, sans-serif;
+    background: white;
+    border: 1px solid var(--light);
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.textchat > * {
+  border-radius: 1em;
+  padding: 0.5rem;
+  background: #ddd;
+  margin-bottom: 1rem;
+}
+
+.textchat .lacey {
+  align-self: flex-end;
+  color: white;
+  --color: white;
+  --light: (255, 255, 255, 0.9);
+}
+
+.textchat p.lacey {
+  align-self: flex-end;
+  background: #66d;
+  border-top-right-radius: 0;
+}
+
+.textchat .clif {
+  align-self: flex-start;
+  border-top-left-radius: 0;
+}
+
+.textchat a, .textchat [role="img"] {
+  cursor: not-allowed;
+}
