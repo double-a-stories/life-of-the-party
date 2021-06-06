@@ -1,30 +1,35 @@
-:: Message [script]
+:: Debug console message [script]
 
 $(window).on('sm.story.started', function (event, {
   story
 }) {
-console.log(`${story.name} ${story.version}
-============================================================
 
-Hello, I'm Double-A. Thanks for playing my game!. If you're
-here, you're probably looking for juicy cheat codes, or
-you're stuck finding the more obscure achievements.
+const headingStyle = "font: bold 2rem/1 serif; font-variant-caps: small-caps;";
+const normalStyle = "font: 1rem/1 bold sans-serif;"
 
-To get the hidden zen ending, go outside and sit by yourself.
+console.log(`%cLife of the Party %c${story.version}`,
+"font: bold 2rem/1.6 serif; font-variant-caps: small-caps;",
+"font: lighter 1rem/1.6 sans-serif; text-transform: uppercase"
+);
+console.log(`%c${story.passage("Debug message").source}\n`, "font: 1rem/1.6 sans-serif", );
 
-To get the hidden broom closet ending, go to the broom
-closet.
-
-For the remaining endings, you'll just have to look around.
-
--AA
-
-=========================================================
-`);
 });
+
+window.warpZone = function(){
+  story.show("Warp zone");
+}
+
+:: Debug message
+
+> Open developer console
+
+You decide to stick your nose where it doesn't belong, and enter the developer's room. It's a vast, abstract expanse full of confusing syntax, spaghetti code, and runtime errors. Oh dear, how did you even get in here?
+
+  story.show("Warp zone");
 
 :: Warp zone
 
+You've entered a time warp! This is a list of every passage in *<%= story.name %>*. Obviously, there are **spoilers ahead**.
 
 <table class="table">
 <thead>
