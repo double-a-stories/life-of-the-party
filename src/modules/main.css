@@ -76,3 +76,12 @@ a:active {
     padding: 1rem 0;
   }
 }
+
+.commands-list {
+  list-style: "> " inside;
+  padding-inline-start: unset;
+}
+
+.commands-list li {
+  margin-bottom: 1rem;
+}
