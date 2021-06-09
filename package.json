@@ -1,0 +1,29 @@
+{
+  "name": "life-of-the-party",
+  "version": "0.6.0-nightly",
+  "description": "A furry vore adventure",
+  "scripts": {
+    "develop": "concurrently 'npm run twee-watch' 'npm run live-server'",
+    "deploy-stable": "gh-pages -a -d dist",
+    "deploy-indev": "gh-pages -a -d dist -e indev/",
+    "live-server": "light-server -s dist -w '*.html' -o",
+    "twee-build": "tweego -m src/modules/ --head=src/head-content.html -o dist/index.html src/twee",
+    "twee-build-proof": "tweego -f poof -m src/modules/ --head=src/head-content.html -o proofing/poof.html src/twee; tweego -f illume -m src/modules/ --head=src/head-content.html -o proofing/illume.html src/twee; tweego -f dotgraph -m src/modules/ --head=src/head-content.html -o proofing/dotgraph.html src/twee;",
+    "twee-watch": "npm run twee-build -- -w"
+  },
+  "devDependencies": {
+    "concurrently": "^6.1.0",
+    "gh-pages": "^3.1.0",
+    "light-server": "^2.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/double-a-stories/life-of-the-party.git"
+  },
+  "author": "Double-A",
+  "license": "MIT-0",
+  "bugs": {
+    "url": "https://github.com/double-a-stories/life-of-the-party/issues"
+  },
+  "homepage": "https://github.com/double-a-stories/life-of-the-party#readme"
+}
