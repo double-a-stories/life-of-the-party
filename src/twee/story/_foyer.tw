@@ -71,12 +71,6 @@ Where will you look?
 
 * [[Examine B's bedroom door.]]
 * [[Check the broom closet.]]
-
-<%
-s.broomClosetState = 0;
-s.broomClosetEnding = false;
-%>
-
 * [[Examine L's bedroom door.]]
 
 

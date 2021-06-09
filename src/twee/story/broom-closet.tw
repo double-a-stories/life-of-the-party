@@ -1,67 +1,7 @@
 <!-- You get trapped in a broom closet. Stanley Parable, eat your heart out. -->
 
-:: Broom closet script [script]
-
-// The worst function ever.
-
-setup.getBroomClosetState = () => {
-  let newTime = new Date().getTime();
-  setup.clickTimer = setup.clickTimer || newTime;
-  let timeDiff = newTime - setup.clickTimer;
-  setup.clickTimer = newTime;
-
-  story.state.broomClosetState = story.state.broomClosetState || 0;
-  let count = story.state.broomClosetState;
-  setup.clickTimer = setup.clickTimer || new Date().getTime();
-  return {
-    state: Math.floor(count / 20),
-    count: count % 20,
-    milliseconds: timeDiff
-  };
-}
-
-setup.getBroomClosetMessage = ({state, count, milliseconds}) => {
-  const literals = [
-    "You look around for a moment. Nothing in here seems out of the ordinary. You decide to go back to the hallway.",
-    "You spend 30 seconds really observing the heck out of some towels. Yep, those are towels alright. Good. Moving on.",
-    "There's no story content in the broom closet, alright? No predators, no vore, nothing. It's just a closet.",
-    `You dig behind the towels and find a mysterious glowing amulet! You can use this to gain access to the Crypt of Zamantheus! Actually, it's just more towels.`,
-    `Your friend Reese is being swallowed whole as we speak. Don't you want to rescue him? Go back. To the hallway.`,
-    `You close the door behind you, and hide inside the broom closet for a little while. This is a huge waste of time.`,
-    `Wow! You've clicked the link in only ${state<=10?milliseconds:"FUCK OFF"} milliseconds! Hollis has wasted ${state < 15 ? state + 5 : "TOO MANY"} minutes of their life in the broom closet.`
-  ];
-  story.state.broomClosetEnding = state / 5;
-  let passage = literals[Math.min(state, literals.length - 1)];
-  if (state < 15) {
-    passage += "<br>" + "<wbr>.".repeat(count);
-  }
-  let link = "Go back to the hallway"
-  if (state < 5){
-    link += ".";
-  } else if (state <= 10) {
-    link += "?";
-  } else {
-    link += "? Please?";
-  }
-  return {passage, link};
-}
-
-setup.handleBroomCloset = () => {
-  story.state.broomClosetState += 1;
-  const s = setup.getBroomClosetState();
-  const msgs = setup.getBroomClosetMessage(s);
-
-  $('#broom-closet-text').html(msgs.passage)
-  $('#broom-closet-link').html(msgs.link)
-  if (s.state >= 5) {
-    $('#broom-closet-link').attr("data-passage", "Try to leave.")
-  }
-}
-
-
 :: Check the broom closet. [no_fade]
 <div-></div>
-<% setup.handleBroomCloset() %>
 
 You enter the broom closet.
 
@@ -69,11 +9,76 @@ You enter the broom closet.
 Inside is a shelf with some towels, linens, and some cleaning supplies. Leaning against the wall is a broom and a vacuum cleaner.
 </div>
 
-* <a0 onclick="setup.handleBroomCloset()">Check the broom closet.</a>
-* <a0 id="broom-closet-link" data-passage="Upstairs Hallway">Go back to the hallway.</a>
+* <a0 onclick="renderToSelector('#broom-closet-text', 'Broom closet status')">Check the broom closet.</a>
+* <a0 id="broom-closet-exit" data-passage="Upstairs Hallway">Go back to the hallway.</a>
 
 <div->[[Upstairs Hallway]] [[Try to leave.]]</div>
 
+
+:: Detect touch users [script]
+document.addEventListener('pointerdown', function isTouching(ev) {
+  // Call the appropriate pointer type handler
+  if (ev.pointerType == undefined) {
+    return;
+  } else {
+    window.isTouching = !(ev.pointerType == "mouse");
+  }
+});
+
+:: Broom closet status
+
+<%
+
+// Initialize variables
+
+const s = story.state;
+if (!s.broomClosetCount) {
+  s.broomClosetCount = 0;
+}
+
+// how many clicks needed to advance
+const divisor = window.isTouching ? 1 : 15;
+
+// state: which message to display
+const state = Math.floor(s.broomClosetCount / divisor);
+
+// count: number of clicks since the latest message
+const count = s.broomClosetCount % divisor;
+
+// Detect time between last click
+
+let newTime = new Date().getTime();
+setup.clickTimer = setup.clickTimer || newTime;
+let timeDiffMilliseconds = newTime - setup.clickTimer;
+setup.clickTimer = newTime;
+
+const messages = [
+  "You look around for a moment. Nothing in here seems out of the ordinary. You decide to go back to the hallway.",
+  "You spend 30 seconds really observing the heck out of some towels. Yep, those are towels alright. Good. Moving on.",
+  "There's no story content in the broom closet, alright? No predators, no vore, nothing. It's just a closet.",
+  `You dig behind the towels and find a mysterious glowing amulet! You can use this to gain access to the Crypt of Zamantheus! Actually, it's just more towels.`,
+  `Your friend Reese is being swallowed whole as we speak. Don't you want to rescue him? Go back. To the hallway.`,
+  `You close the door behind you, and hide inside the broom closet for a little while. This is a huge waste of time.`,
+  `Wow! You've examined the broom closet ${state <= 25 ? (state * divisor) : "FUCK OFF"} times! Hollis has wasted ${state <= 25 ? state + 10 : "SEVERAL"} minutes of their life in the broom closet.`
+];
+
+print(messages[Math.min(state, messages.length - 1)]);
+
+if (state < messages.length - 1) {
+  print("<br>" + "<wbr>.".repeat(count));
+}
+if (state == 5) {
+    $('#broom-closet-exit').attr("data-passage", "Try to leave.")
+    $('#broom-closet-exit').text("Go back to the hallway?")
+}
+if (state == 14) {
+    $('#broom-closet-exit').attr("data-passage", "Try to leave.")
+    $('#broom-closet-exit').text("Go back to the hallway? Please?")
+  }
+
+// Increment upon each visit
+s.broomClosetCount += 1;
+%>
 
 :: Try to leave.
 <div-></div>
