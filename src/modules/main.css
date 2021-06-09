@@ -41,6 +41,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.15;
 }
 
+/* Responsive typography */
+
+@media screen and (max-width:700px) {
+  body {
+    font-size: min(4vw, 1.2rem);
+  }
+}
+
 /* Links */
 
 a {
@@ -66,16 +74,6 @@ a:active {
   display: none;
 }
 
-/* Mobile mode */
-@media screen and (max-width:500px) {
-  .passage {
-    font-size: 80%;
-  }
-  a {
-    line-height: 2;
-    padding: 1rem 0;
-  }
-}
 
 /* Commands */
 
@@ -106,6 +104,14 @@ a:active {
 .commands-list a:focus {
   color: var(--background);
   background: var(--color);
-  border-color: var(--background);
+  border-color: transparent;
   outline: none;
+}
+
+/* Mobile mode */
+@media screen and (max-width:500px) {
+  .commands-list a {
+    display: inline-block;
+    padding: 1rem !important;
+  }
 }

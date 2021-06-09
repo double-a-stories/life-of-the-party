@@ -22,6 +22,7 @@ body[data-tags~="morning"] {
 body[data-tags~="gore"] {
   --background: #B00;
   --color: #FFF;
+  --light: #fff4;
 }
 
 /* Drunk effect (for Nikki/Nox route) */
