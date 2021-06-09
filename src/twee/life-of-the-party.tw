@@ -1,0 +1,955 @@
+:: StoryTitle
+Life of the Party
+
+
+:: StoryData
+{
+	"ifid": "63C20183-3B4C-4AA8-956D-FC3721F85803",
+	"format": "Snowman",
+	"format-version": "2.0.2",
+	"start": "Start",
+	"zoom": 0.6
+}
+
+
+:: Story Stylesheet [stylesheet]
+:root {
+  font-size: unset;
+}
+
+body, tw-story {
+  font: 1.5rem/1.6 sans-serif;
+  color: #111;
+  background: #eee
+}
+
+a {
+  color: #080808;
+}
+
+
+:: Story JavaScript [script]
+$("tw-story").prepend($(story.render("Header")));
+
+window.setup = window.setup || {};
+
+if (localStorage.achievements) {
+	const achArray = JSON.parse(localStorage.achievements);
+	if (Array.isArray(achArray)) {
+	  setup.achievements = new Set(achArray);
+	} 
+} else {
+  setup.achievements = new Set();
+}
+
+$(window).on('sm.passage.shown', function(event, eventObject) {
+	// Store achievements as JSON
+	localStorage.setItem("achievements", 
+      JSON.stringify([...setup.achievements]));
+	
+	
+    // Check if the player was not previously at this passage, then set a checkpoint.
+	  if (!story.atCheckpoint && story.history[story.history.length - 1] !== story.history[story.history.length - 2]) {
+			story.checkpoint();
+		}
+	// For all tags besides those tagged with `no_heading`, add a heading with the previous command.
+	if (!eventObject.passage.tags.some(el => el.toLowerCase() === "no_heading")) {
+		const headingText = story.state.recentCommand || eventObject.passage.name;
+		$("tw-passage").prepend($("<h2></h2>").text(headingText));
+	}
+	
+  $("a[data-passage]").click(function () {
+		story.state.recentCommand = $(this).text();
+		console.log("CLICKED: " + story.state.recentCommand )
+	})
+});
+
+
+:: Life of the Party. {"position":"1701,102","size":"100,100"}
+<div-></div>
+
+Your name is Hollis. You are a small-ish anthropomorphic rabbit.
+
+Right now, you're at a very crowded house party. Drunk college furs are everywhere. Loud music, and the smell of cheap booze fills every room. 
+
+About an hour ago, you showed up with your friend Reese, but you got separated at some point, and haven't seen him since.
+
+\> [[Look around.]]
+
+
+:: Look around. {"position":"1702,225","size":"100,100"}
+<div-></div>
+
+The floor is plastered with empty plastic cups. Music is blaring. Young-adult furs in every direction are chatting, flirting, and dancing.
+
+What will you do?
+
+\> [[Search for your friend.]]
+
+\> [[Dance a little.]]
+
+\> [[Find someplace quieter.]]
+
+
+:: Header {"position":"1202,100","size":"100,100"}
+<div class="header-nav">
+  <span>
+    <a0 onclick="history.back()">Go Back</a>
+  </span>
+  <span>
+    <a0 onclick="story.show('Start')">Restart</a>
+  </span>
+</div>
+
+<style>
+.header-nav {
+  font-size: 0.75em;
+  border-bottom: 1px solid #ccc;  
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.header-nav > * {
+  display: inline-block;
+}
+.header-nav > * + * {
+  margin-left: 0.5rem;
+}
+
+.header-nav > * + *::before {
+  content: "|";
+  margin-right: 0.5rem;
+}
+</style>
+
+
+:: Take center stage. {"position":"743,342","size":"100,100"}
+You decide to let loose, and begin to really strut your stuff on the dance floor. You've taken lessons in ballet and musical theatre, and are a surprisingly competent dancer. The others seem impressed.
+
+A tall brown stallion seems to take notice, and winks at you from across the room.
+
+\> [[Wink back.]]
+
+\> [[Ignore him.]]
+
+
+:: Search for your friend. {"position":"1702,350","size":"100,100"}
+<div-></div>
+
+You do a quick circle of the first floor, but he's nowhere in sight.
+
+Maybe he's upstairs?
+
+\> [[Look upstairs.]]
+
+
+:: Find someplace quieter. {"position":"3222,344","size":"100,100"}
+The loud music is beginning to hurt your ears.
+
+You decide to look for a place away from the noise where you can clear your thoughts.
+
+\> [[Go outside.]]
+
+
+:: Look upstairs. {"position":"1567,453","size":"100,100"}
+<div-></div>
+
+You head up the stairs looking for your friend. 
+
+<%= story.render("Upstairs Hallway") %>
+
+
+:: Go outside. {"position":"3218,510","size":"100,100"}
+You walk out onto the back porch.
+
+You see a large hyena staring at her phone. She's a little older than you, and much, much taller. There doesn't appear to be anyone else around.
+
+\> [[Talk to the hyena.]]
+
+\> [[Sit by yourself.]]
+
+
+:: Talk to the hyena. {"position":"3221,662","size":"100,100"}
+The hyena girl is sitting on a garden bench, next to a disused charcoal grill and some rumpled up camping equipment.
+
+She notices you, and flips her dyed-black hair non-chalantly.
+
+"Oh. Sup."
+
+\> [[What are you doing out here alone?]]
+
+\> [[Have you seen my friend?]]
+
+
+:: Have you seen my friend? {"position":"3338,786","size":"100,100"}
+Ana takes a thoughtful sip from a nearby plastic cup.
+
+"Depends who's asking," she replies...
+
+\> [[Tell her your name.]]
+
+
+:: Wink back. {"position":"741,459","size":"100,100"}
+The horse smiles, and walks over to you carrying two cups of beer. As he gets closer, you realize that he's significantly taller than you are.
+
+"Hi, I'm Basil," he says, offering you one of the beers.
+
+\> [[Take drink.]]
+
+\> [[Don't take drink.]]
+
+
+:: Take drink. {"position":"613,633","size":"100,100"}
+<%
+s.horseConsensualPath = true;
+%>
+
+You take the cup and take a few courteous sips. He chugs his immediately, swallowing the whole beer in only a few gulps.
+
+"Cool moves, kid," he says, smiling a little.
+
+\> [[Thanks!]]
+
+\> [[I'd be happy to show you some more...]]
+
+
+:: Don't take drink. {"position":"876,637","size":"100,100"}
+<%
+  s.horseConsensualPath = false;
+%>
+
+He shrugs. "Suit yourself," he says, then chugs both cups in hardly a few seconds. His throat muscles seem extremely powerful, and it's a little intimidating.
+
+He spends a few seconds thinking, and raises an eyebrow.
+
+"...Do I know you from somwhere?"
+
+\> [[I don't think so...]]
+
+\> [[My name's Hollis?]]
+
+
+:: Examine the bedroom door. {"position":"1710,603","size":"100,100"}
+<div-></div>
+
+You covertly bring one of your ears to one of the bedroom doors. There are definitely people inside. You hear a muffled moaning.
+
+What do you do?
+
+\> [[Swing open the door.]]
+
+\> [[Knock politely on the door.]]
+
+\> [[Ignore it.]]
+
+
+:: Broom closet. {"position":"1372,669","size":"100,100"}
+<div-></div>
+
+<%
+if (typeof s.broomClosetState !== "number") {
+  s.broomClosetState = 0;
+}
+s.broomClosetState++;
+%>
+
+You enter the broom closet.
+
+Inside is a dusty shelf with some cleaning supplies. Leaning against the wall is a broom and a vacuum cleaner.
+
+<%=
+(() => {
+  const count = s.broomClosetState;
+  const split = 10; // the number of clicks needed to progress
+  if (count < split / 2) {
+    return "There doesn't seem to be anything in here.";
+  } else if (count < split * 3) {
+    return "...";
+  }
+  else if (count < split * 5) {
+    return "Nothing seems to be out of the ordinary here.\n You decide to leave.";
+  } else if (count < split * 6) {
+    return "...";
+  } else if (count < split * 8) {
+    return "You wait inside the broom closet for a few minutes, but nothing happens.";
+  } else if (count < split * 9) {
+    return "...";
+  } else if (count < split * 11) {
+    return  "There is no reward for waiting inside the broom closet. I promise.";
+  } else if (count < split * 12) {
+    return "...";
+  } else {
+    if (count >= split * 25) {
+	  s.broomClosetEnding = true;
+	}
+    return `Hollis has been standing inside the broom closet for ${Math.floor(count / (2 * split) + 5)} minutes now.`
+  }
+})()
+%>
+
+<% if (s.broomClosetEnding) { %>
+\> <span style="user-select: none;">Wait here.</span>
+
+\> [[Try to leave.|Try to leave.]]
+<% } else { %>
+\> [[Wait here.|Broom closet.]]
+
+\> [[Go back.|Upstairs Hallway]]
+<% } %>
+
+
+:: Check the master bathroom. {"position":"2200,600","size":"100,100"}
+<div-></div>
+
+You peek into the master bathroom, and discover that it is empty.
+
+The room's every surface is flush with immaculate porcelain and gaudy gold trimmings. There's something hypnotic about it all.
+
+\> [[Shut the door behind you.]]
+
+\> [[Go back.|Upstairs Hallway]]
+
+
+:: Try to leave. {"position":"1374,794","size":"100,100"}
+<div-></div>
+
+
+After wasting an inordinate amount of time doing absolutely nothing, you rationally decide that yes, it is now finally time to leave the broom closet.
+
+You carefully place your hand on the doorknob, take a deep breath, and twist. The door does not open. You jiggle the handle, but it won't budge. 
+
+\> [[====>|ENDING: Broom Closet]]
+
+
+:: Swing open the door. {"position":"1645,847","size":"100,100"}
+You swing the bedroom door open, and enter the room.
+
+There are three people here. The first is a large German shepherd, sitting on the edge of the bed with his pants unzipped. Beside him is a cream-colored horse girl with a lump in her gut, which the dog is gently caressing.
+ 
+The third person, you realize, is your friend Reese the guinea pig. His head and shoulders are sticking out from the lips of the horse, who has almost completely swallowed him whole.
+
+All three of their eyes fix on you. Reese, from inside the horse's mouth, mutters, "What the fuck?" His eyes go wide with panic. "Hollis?!"
+
+\> [[Do something!]]
+
+
+:: Ignore it. {"position":"1798,848","size":"100,100"}
+Probably best to just leave them alone. <%= story.render("Upstairs Hallway") %>
+
+
+:: Shut the door behind you. {"position":"2198,720","size":"100,100"}
+You close the door behind you. 
+
+The beautiful, polished and perfect bathroom stretches before you. Your mind races with possibilities.
+
+\> [[Masturbate.]]
+
+\> [[Use toilet.]]
+
+\> [[Leave.|Upstairs Hallway]]
+
+
+:: Upstairs Hallway {"position":"1709,483","size":"100,100"}
+<div-></div>
+
+The upstairs hallway has a few doors. To your left is the master bathroom. Next to it is a broom closet. At the end of the hall is the door to a bedroom, behind which you can hear voices. Where will you look?
+
+\> [[Examine the bedroom door.]]
+
+\> [[Check the master bathroom.]]
+
+<% if (!s.sawBroomClosetEnding){ %>
+\> [[Broom closet.]]
+<% } else { %>
+\> Broom closet. (Locked)
+<% } %>
+
+
+:: Start [no_heading] {"position":"1548,103.66666666666667","size":"100,100"}
+<%
+
+%>
+
+# Life of the Party (W.I.P)
+
+A Vore Adventure Game by Double-A
+
+\> [[Life of the Party.]] 
+
+
+<% 
+const achievements = [...setup.achievements].sort();
+if (achievements && achievements.length > 0) {
+  %><h3>Achievements</h3>
+   <ul>
+  <%
+
+  for (const ach of achievements) {
+    %><li><%= ach %></li><%
+  }
+  %></ul> 
+  <%
+} else {
+%>
+*Content Warning: 
+This story may contain instances of non-consensual oral vore, unwilling fatal digestion, and implied disposal. Please read at your own discretion. It is also currently a work in progress.*
+<% } %>
+
+
+:: Sit by yourself. {"position":"3598,500","size":"100,100"}
+You find a garden bench to sit on by yourself, distancing yourself from the chaos of the party.
+
+\> [[Watch the stars.]]
+
+
+:: Watch the stars. {"position":"3597,620","size":"100,100"}
+The night sky is peaceful. The clouds are clear, but you can just barely see the stars thanks to the light pollution of this suburban neighborhood.
+
+\> [[Go back inside.]]
+
+\> [[Find inner peace.]]
+
+
+:: Go back inside. {"position":"3721,663","size":"100,100"}
+Having had your fill, you walk back into the heart of the party. 
+
+\> [[====>|Look around.]]
+
+
+:: Tell her your name. {"position":"3336,909","size":"100,100"}
+You say your name is Hollis.
+
+"Pleased to meet you, Hollis," she says, with a level of politeness which makes you suspect she's being at least a little sarcastic. "Now, this friend of yours?"
+
+\> [[His name is Reese?|Describe Reese.]]
+
+\> [[He's a guinea pig?|Describe Reese.]]
+
+\> [[About this tall?|Describe Reese.]]
+
+
+:: Do something! {"position":"1644,958","size":"100,100"}
+You know you've got to save your friend, but you hesitate. You can't remember the last time you were in such a stressful situation. Your body freezes up.
+
+You vaguely recognize the cream-colored horse as Lacey Armstrong from your high school math class. She becomes worried that you might interfere with her meal, and attempts to gulp Reese down faster.
+
+"Forget about me," Reese calls as his torso slowly disappears into the slick pink gullet, "You've gotta get outta here!"
+
+The dog, apparently Lacey's boyfriend, stands up in a threatening manner.
+
+\> [[Attack Lacey!!]]
+
+\> Run away from the dog! *(Shepherd Route W.I.P)*
+
+
+:: Ignore him. {"position":"848,462","size":"100,100"}
+Something about the stallion strikes you as bad news. You keep dancing casually for a little while, but eventally excuse yourself and return to the main foyer.
+
+\> [[Go back.|Look around.]]
+
+
+:: I'd be happy to show you some more... {"position":"660,760","size":"100,100"}
+He raises an eyebrows, and a satisfied smile comes across his long face as he catches your meaning. 
+
+He delicately takes your hand in his, and steps closer to you until he's almost looking straight down at you. It's a little bit intimidating.
+
+"I think that sounds *perfect*. Follow me."
+
+\> [[Follow Basil.|Follow Basil (Consensual Vore Path)]]
+
+
+:: I don't think so... {"position":"925,761","size":"100,100"}
+For a moment, he stares with a strange intentness.
+
+"I've definitely seen your face before..."
+
+He pauses for a moment, then his eyes flash with recognition.
+
+"Wait a minute, you're Hollis Freeley! It's Basil Armstrong, from Riveredge High! I think you were in my sister's math class."
+
+You remember him now; he was a star quarterback, and a year ahead of you.
+
+<%= story.render("Basil Route Incomplete") %>
+
+
+:: My name's Hollis? {"position":"800,761","size":"100,100"}
+His eyes flash with recognition.
+
+"No way! Hollis Freeley? It's Basil Armstrong, from Riveredge High! I think you were in my sister's math class!"
+
+You remember him now; he was a star quarterback, and a year ahead of you.
+
+<%= story.render("Basil Route Incomplete") %>
+
+
+:: Masturbate in the bathroom. {"position":"2203,969","size":"100,100"}
+You.. um... Okay.
+
+Your libido overcomes you. In the privacy of a stranger's house, you stick your hand down your underwear and begin to pleasure yourself for a minute or two.
+
+Satisfied, you take your hands out and stop.
+
+\> [[Keep going.|Keep masturbating.]]
+
+
+:: Keep masturbating. {"position":"2201,1094","size":"100,100"}
+Look, um, I'm not here to judge or anything. Maybe you're just here cause you're curious. Maybe you wanna see all the options. Get all the endings.
+
+Still, there's a lot of other stuff you could be doing in this house party. This is kind of... weird?
+
+\> [[Don't stop!!]]
+
+
+:: Don't stop!! {"position":"2203,1219","size":"100,100"}
+Okay! God. 
+
+You keep on... uh, touching yourself. Your heavy panting gets faster and faster, and little moans escape your lips.
+
+Suddenly, you hear pounding at the door.
+
+\> [[Oh shit!]]
+
+\> [[Hnnnnng!|Oh shit!]]
+
+
+:: Oh shit! {"position":"2203,1344","size":"100,100"}
+"You've been in there for like 15 minutes," says an annoyed female voice through the door, "I've gotta fuckin' pee."
+
+She pauses impatiently for a few seconds.
+
+"That's it! I'm coming in there."
+
+\> [[Finish.]]
+
+\> [[Escape through window.|Escape through window.]]
+
+
+:: Finish. {"position":"2278,1470","size":"100,100"}
+Your body convulses a little as you achieve orgasm, and you let out a loud moan of satisfaction. This happens just as the door swings open to reveal a tall, curvy hyena, who you recognize as Ana Rose.
+
+"...!!!"
+
+Her face goes red, and she stares with what is clearly a combination of disgust and morbid curiosity.
+
+\> [[Wait, I can explain!|Ana tacklepounces you]]
+
+\> [[It's not what it looks like!|Ana tacklepounces you]]
+
+
+:: Use toilet. {"position":"2119,838","size":"100,100"}
+You consider using the toilet. However, upon examining it, the bowl is almost twice your size, and you could easily fall in. You realize that this house is probably owned by very large anthros.
+
+You decide that you're okay without.
+
+\> [[Go back|Shut the door behind you.]]
+
+
+:: Escape through window. {"position":"2152,1469","size":"100,100"}
+<div-></div>
+
+Thinking quickly, you take your hand out of your pants, and rush over to the frosted-glass window on the far side of the bathroom, and lift it open.
+
+The door swings open to reveal a buxom hyena girl. Just before she sees you, you leap dynamically over the window-sill.
+
+At that moment, you remember that you're on the second story of a pretty big house.
+
+\> [[====>|ENDING: Escape through window]]
+
+
+:: Find inner peace. {"position":"3599,739","size":"100,100"}
+...
+
+Sitting here alone, with your head tilted toward the starryish sky, you realize you don't need anyone else.
+
+You don't need to rescue your friend from being eaten. You don't need to find a hot date, and you definitely don't need to be seduced, swallowed, and privately digested by them.
+
+All you need is to rest your eyes upon the swirling heavens, and relax. You realize the simple truth that all are one, whether pred or prey, rabbit or horse, nerd or jock, all are one. Perhaps we are all simply food for the gaping maw of time itself.
+
+\> [[Stop meditating.|Go back inside.]]
+
+\> [[Submit to the oneness of the cosmos.|Meditation Ending]]
+
+
+:: Meditation Ending {"position":"3597,864","size":"100,100"}
+<div-></div>
+
+You shut your eyes, and fall deeper into a meditative trance.
+
+The world around you dissolves. The details soften, as though they were simply black scribbles on a white background. You get the feeling that the little voice in your head is gently fading out into white noise...
+
+You focus on your breathing. Or rather, Hollis focuses on their breathing. Their chest, not yours, gently rises and falls, in rhythm with the drifting of the cool autumn leaves scattered around their furry feet.
+
+Hollis Freeley gently opens their eyes and takes in their surroundings, a little confused about how exactly they got here.
+
+As the last of your control wanes, they shake their head, and mutter, "What the fuck?"
+
+\> [[====>|ENDING: Meditation]]
+
+
+:: Game Over {"position":"1403,292","size":"100,100"}
+### Game Over.
+
+\> [[Restart|Start]]
+
+
+:: Describe Reese. {"position":"3336,1013","size":"100,100"}
+You give her a brief description of your friend, Reese the guinea pig.
+
+"Sorry, haven't seen him," she says giving a little shrug. "But at a party like, this, I'd be surprised if he isn't already in some pred's gut."
+
+\> [[What!?|What do you mean?]]
+
+
+:: Charm. {"position":"3073.9999999999995,1026.6666666666667","size":"100,100"}
+Ana cocks an eyebrow at you. "...What did you say?"
+
+You realize that instead of doing something to somehow charm this attractive chick, you literally just said the word *charm* out loud.
+
+Thinking quickly you tell her, uh, you meant, that she seems very charming! No, wait, you're *charmed* to meet her! That's it. Her name's Ana, yours is Hollis. Charmed.
+
+\> [[(oh god oh fuck)]]
+
+
+:: Attack Lacey!! {"position":"1643,1082","size":"100,100"}
+### CW: Non-Consensual F/N Vore, Voyeurism, Masturbation
+
+"No, don't!" cries Reese.
+
+You dash over to Lacey the horse, and attempt to body slam her, perhaps hoping to dislodge your friend via the Heimlich maneuver. However, due to your small size, this is almost completely ineffective.
+
+You stagger backward, giving the dog enough time to grab you by the scruff of your neck.
+
+"Woah pal," he says, "seems like you're real eager to join your friend in there!" 
+
+\> [[====>|Rescue Reese Pt. 2]]
+
+
+:: Knock politely on the door. {"position":"1717,716","size":"100,100"}
+"Uh, go away," says a gruff male voice from inside the room.
+
+Alongside it, you hear a few more muffled grunts, as well as a kind of slick slurping noise. Is someone... swallowing?
+
+\> [[Open it.|Swing open the door.]]
+
+\> [[Leave.|Ignore it.]]
+
+
+:: Ana tacklepounces you {"position":"2278,1591","size":"100,100"}
+Ana's hackles raise, and she gets a wild look in her eyes.
+
+Before you can get another word in edge-ways, you feel a great weight on your front, and cold tile on your back. Ana has tackled you to the floor, and is pinning you under her weight.
+
+"Finally," she remarks, "I can get some alone time with my prey!"
+
+#### WIP. This page will at some point connect into the vore scene in Ana's route.
+
+\> P-prey?
+
+\> oh god please don't eat me
+
+\> uwu \*squirmies\*
+
+
+:: Thanks! {"position":"538,763","size":"100,100"}
+<%= story.render("Basil Route Incomplete") %>
+
+
+:: Masturbate. {"position":"2239,843","size":"100,100"}
+For a moment, you consider masturbating in the bathroom of a stranger's house, while a gigantic house party rages on just downstairs. You realize however what a bad idea that is. After all, someone else might want to use the bathroom, or accidentally walk in on you.
+
+You take a deep breath, get your impulses under control, and...
+
+\> [[Masturbate in the bathroom.]]
+
+
+:: What are you doing out here alone? {"position":"3077,776.3333333333334","size":"100,100"}
+"I could ask you the same question," she says. She looks away for a moment, then lets out a little sigh. "I just get a little stressed out around loud parties? Like, even though I'm supposed to be having enjoying myself?"
+
+\> [[Same here...|Same here.]]
+
+\> [[I'm looking for someone...|Have you seen my friend?]]
+
+
+:: Same here. {"position":"3077,898","size":"100,100"}
+She nods, looking wistfully off into the distance.
+
+"I'm Ana, by the way. Ana Rose."
+
+\> [[My name's Hollis!|Tell Ana your name.]]
+
+\> [[Charm.]]
+
+
+:: What do you mean? {"position":"3336,1134.6666666666667","size":"100,100"}
+She gives you a slightly patronizing stare. 
+
+"C'mon, you'd have to be an idiot not to realize. This whole place is crawling with preds. Your bud probably got grabbed and gurgled. That's all there is to it."
+
+\> [[But, um, if he wasn't...?]]
+
+\> [[That's kind of hot...]]
+
+
+:: (oh god oh fuck) {"position":"3075.3333333333335,1150.3333333333333","size":"100,100"}
+She watches as you thoughtlessly tumble over your words, and lets out a repressed little chortle. She hesitates, delicately running her tongue between her lips and over her pointy white teeth.
+
+"Okay, Hollis. I... also think you're kinda cute too," she says, looking away, "for a grass-eater at least..."
+
+\> [[Aw, thank you!]]
+
+\> [[Kiss her.]]
+
+
+:: Kiss her. {"position":"2947.6666666666665,1222","size":"100,100"}
+You've seen enough romance movies to know that this is the moment where you lean in, and you both share a sudden yet dramatic first kiss. 
+
+You lean up to her big face to kiss her on the lips. She immediately leans away, letting out a small, surprised growl.
+
+"Woah there, casanova, that's, uh..." She looks away bashfully. "I'm not comfortable with that yet." She anxiously scoots away from you and fixes her hair.
+
+\> [[Oh, sorry...]]
+
+\> [[Is a hug okay?]]
+
+\> [[Try to kiss her again.|Kiss her again.]]
+
+
+:: Tell Ana your name. {"position":"3150.0000000000005,1397","size":"100,100"}
+"Hollis," she repeats. "Cool name."
+
+\> [[Thank you!|Aw, thank you!]]
+
+\> [[So, I'm looking for this friend of mine...|Describe Reese.]]
+
+
+:: Rescue Reese Pt. 2 {"position":"1642,1216","size":"100,100"}
+The dog teasingly presses your face into Lacey's stomach, where you can faintly detect the outline of Reese's kicking feet.
+
+Reese's voice becomes muffled, and is now coming from the back of Lacy's throat. "Hollif, I told you t-mmmmghmmph!" His voice becomes inaudible as Lacy swallows his head with a satisfied gulp. His head slips into her slick gullet, and vanishes.
+
+Lacey smiles with approval, and with a satisfied gulp, sends Reese plummeting down her esophagus. With her throat now clear, she looks down and immediately squeals with excitement. "Ohmigod, Hollis? From Algebra II? That is *soo* crazy."
+
+"Whaddya say Lace?" says the dog, "Got room for another in there?" 
+
+The horse replies with a big grin, "Hells to the yes!"
+
+\> [[Struggle.|Struggle against Lacey.]]
+
+\> [[Let her eat you.]]
+
+
+:: Back to the Foyer| {"position":"1597,723","size":"100,100"}
+Double-click this passage to edit it.
+
+
+:: Basil Route Incomplete {"position":"898,895","size":"100,100"}
+#### WORK IN PROGRESS – BASIL ROUTE COMING SOON.
+
+Prepare to be dicked down by a rugged yet sensitive stallion. Maybe he'll confess his Ultimate Feelings, or maybe he'll get drunk and eat you?
+
+
+:: Oh, sorry... {"position":"3025.3333333333335,1391.3333333333333","size":"100,100"}
+She chuckles awkwardly, "No, no, it's okay. I'm just... not comfortable with that kind of touch." Through the hole in the back of her jeans, her short, fuzzy tail flits anxiously back and forth.
+
+"...So um, you said your name was Hollis?"
+
+\> [[Yup!|Tell Ana your name.]]
+
+
+:: Kiss her again. {"position":"2773.666666666666,1400.3333333333335","size":"100,100"}
+<div-></div>
+
+Ana is nervously showing her teeth.
+
+You reflect upon the obvious subtext of her response, and decide instead to delicately run a paw through her dark brown mohawk.
+
+"...No seriously don't-...!!!"
+
+[[====>|ENDING: Can't Take a Hint]]
+
+
+:: That's kind of hot... {"position":"3469,1276","size":"100,100"}
+She blushes furiously. "You... You think predation is hot?"
+
+\> [[N-no! I meant...]]
+
+\> [[Nod.]]
+
+
+:: Aw, thank you! {"position":"3097.3333333333335,1596.9999999999998","size":"100,100"}
+She smiles a little, and brushes her hair out of her eyes. She seems a little more comfortable around you now.
+
+"So, some party huh?" she giggles. 
+
+Yeah, you say caressing your ears lightly, the music kinda sucks here.
+
+"Oh my god, right? I can't believe they're playing Buttfuck Zombies."
+
+
+:: N-no! I meant... {"position":"3471.3333333333335,1406.6666666666667","size":"100,100"}
+Thinking quickly you tell her, uh, you meant, that you think predators are hot! Not that you're assuming she's— no, fuck, um...
+
+She looks at you inquisitively. "Deep breaths, pal."
+
+You pause for a moment, and collect yourself. What you meant to say was, that being inside is a stomach, is literally a hot place to be. Like, temperature-wise. Not that you'd ever want to be in a stomach. Or-or- even thought about anything like that!
+
+Ana pauses thoughtfully for a moment. You see her shiny sharp teeth reflecting a tiny bit of moonlight. "...Do you want me to eat you?"
+
+\> [[...Yes please.]]
+
+\> [[No!]]
+
+
+:: Nod. {"position":"3594.3333333333335,1405.6666666666667","size":"100,100"}
+Blushing furiously, you nod your head in admission.
+
+Ana pauses thoughtfully for a moment. You see her shiny sharp teeth reflecting a tiny bit of moonlight. "...You want me to eat you?"
+
+\> [[...Yes please.]]
+
+\> [[No!]]
+
+
+:: ...Yes please. {"position":"3590,1532.6666666666667","size":"100,100"}
+Ana smiles, seemingly more than a little pleased about this news. Her tail wags eagerly.
+
+"Okay!" she says, suddenly standing up. "Um... Follow me."
+
+\> [[Follow.|Follow Ana (Consensual Vore Path)]]
+
+
+:: No! {"position":"3469,1532.6666666666667","size":"100,100"}
+"Oh," she replies, "okay." She's silent for a few seconds. "Anyway, Hollis... I... think you're kind of cute."
+
+\> [[Aw, thank you!]]
+
+
+:: Follow Ana (Consensual Vore Path) {"position":"3536,1947","size":"100,100"}
+Double-click this passage to edit it.
+
+
+:: Follow Basil (Consensual Vore Path) {"position":"665,890","size":"100,100"}
+<%= story.render("Basil Route Incomplete") %>
+
+
+:: Let her eat you. {"position":"1578,1347","size":"100,100"}
+You go limp in the
+
+
+:: But, um, if he wasn't...? {"position":"3343.6666666666665,1276.6666666666667","size":"100,100"}
+She shrugs.
+
+"I mean, you could probably check in the rooms upstairs. Somewhere secluded and private, that's probably where I'd go... if I was trying to eat someone... N-not that that's a thing that I've ever done, or anything."
+
+\> [[What are you doing out here alone?]]
+
+\> [[Thank you, goodbye.]]
+
+
+:: Thank you, goodbye. {"position":"3346.6666666666665,1399.6666666666667","size":"100,100"}
+You excuse yourself politely, and head back into the house. Ana gives a casual wave as you leave.
+
+\> [[Return to the house|Look around.]]
+
+
+:: Struggle against Lacey. {"position":"1688,1350","size":"100,100"}
+Double-click this passage to edit it.
+
+
+:: Dance a little. {"position":"671,214","size":"100,100"}
+You head into the living room, where dozens of furs are busy getting drunk and grooving to the music. You're usually a little uncomfortable in big groups, but right now, you're feeling pretty confident, and decide to start moving to the rhythm.
+
+<%= story.render("Randomized Party Flavor") %>
+
+\> [[Dance a little more.|Dance a little.]]
+
+\> [[Take center stage.]]
+
+\> [[Grab some punch.]]
+
+
+:: Grab some punch. {"position":"596,338","size":"100,100"}
+You head over to a thoughtfully placed snack table, and grab a small cup of fruit punch. Taking a little sip, you observe that it tastes mostly like vodka, with a little hint of kool-aid.
+
+\> [[Go back.|Dance a little.]]
+
+
+:: ENDING: Escape through window {"position":"2064,1593.3333333333333","size":"200,100"}
+You faceplant gracelessly in the backyard and fall unconscious. In your last waking seconds, you realize this was a very stupid idea.
+
+<% s.sawWindowEscapeEnding = true; 
+setup.achievements.add("Escape Artist (Window Ending)")
+%>
+
+### Game Over.
+
+\> <a0 data-passage="Start">Restart</a>
+
+
+:: ENDING: Broom Closet [gameover] {"position":"1282,984","size":"200,100"}
+<% s.sawBroomClosetEnding = true; 
+setup.achievements.add("Extreme Patience (Broom Closet Ending)")
+%>
+
+Somehow, the door has locked behind you. You remain trapped in the broom closet for the rest of the night.
+
+### Game Over.
+
+\> <a0 data-passage="Start">Restart</a>
+
+
+:: ...But... um... I still think you're... cute?| {"position":"3595,1684","size":"100,100"}
+Double-click this passage to edit it.
+
+
+:: ENDING: Can't Take a Hint {"position":"2797.6666666666665,1531.3333333333333","size":"200,100"}
+"...!!!"
+
+The second you touch her hair, the hyena immediately lets out an vicious bark, and reflexively glomps her giant mouth down over your head. You faint from surprise. Ana quickly swallows your unconscious body, making sure no one else was around to see.
+
+"Dammit," she mutters, patting the massive bulge in her engorged belly, "not again..."
+
+<% s.sawFirstKissEnding = true; 
+setup.achievements.add("Cannot Take a Hint (Bite Ending)");
+%>
+
+### Game Over
+
+\> <a0 data-passage="Start">Restart</a>
+
+
+:: ENDING: Meditation {"position":"3593,984","size":"100,100"}
+<% s.sawMeditationEnding = true; 
+setup.achievements.add("True Zen (Meditation Ending)")
+%>
+
+
+:: Randomized Party Flavor {"position":"296,436","size":"100,100"}
+<%= (function() {
+  setup.partyDanceLiterals = setup.partyDanceLiterals || [
+    "You see a group of labradors cheering on their friend as he attempts to do a keg-stand.",
+"Several mice are looking on with awe and dismay as a cat proudly presents her enormous, swollen belly.",
+"You see a rhinocerous is running around and desperately trying to prevent damage to any of the furniture in this house.",
+`The DJ starts playing a techno remix of Evelyn Predatora's latest rap single, "Belly Drop, Belly Drop (Belly Drop)."`,
+`A grey wolf with a huge protruding gut accidentally bumps into you. "S'cuse me," she mutters as she walks away.`,
+`Your ears perk up: the DJ is playing one of your favorite songs by the obscure R&B group, LÖUD GRÜMBLE. You tap your furry toes happily.`,
+`The sound system blares with the shouty vocals and distorted guitar of "Groupie Gas," by The Buttfuck Zombies.`,
+`A tall wolf in a scarf and a flannel shirt brought an acoustic guitar with him. He's playing "Wonderwall" with an extremely thoughtful look on his face.`,
+`A slightly chubby owl sees you from across the room. Her eyes fix on you, and she and begins licking her beak. You politely ignore her.`,
+`A drunk labrador begins nuzzling you. "Oh my gooood you guys, this rabbit is soooo soft..." You blush. Surprisingly, his fur is extremely soft as well.`,
+`A green dragongirl wags her tail in time with the music, and once again accidentally trips several people. "S-sorry!" she stammers.`,
+`Maybe it's your imagination, but there are noticably fewer prey here than there were when you arrived.`,
+`A nice, slow song starts playing. You consider offering to dance with one of the guys around you, but most of them are several feet taller than you.`,
+`You're really feeling this song. Maybe you'll go out there and really show em what you've got.`
+  ].sort(() => Math.random() - 0.5);
+  
+  
+  s.partyDanceState = +(s.partyDanceState) || 0;
+  s.partyDanceState = (s.partyDanceState + 1) % setup.partyDanceLiterals.length;
+  return setup.partyDanceLiterals[s.partyDanceState];
+})() %>
+
+
+:: Is a hug okay? {"position":"2902.0000000000005,1398.6666666666667","size":"100,100"}
+"Y-yeah," she replies, with a little smile, and stretches out her arms. You give the hyena a hug. You can tell she's wearing a lot of deodorant, but it's not unpleasant.
+
+
