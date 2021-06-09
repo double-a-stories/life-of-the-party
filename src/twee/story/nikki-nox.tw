@@ -16,7 +16,7 @@ Woah, this actually feels pretty good. You feel ready to take on the world! Read
 
 You feel... Wait, where are you?
 
-\> [[What?]]
+* [[What?]]
 
 
 :: What? [dark drunk]
@@ -27,7 +27,7 @@ You remember drinking a fifth cup of punch, probably five more than your tiny ra
 
 It's, uh, kind of a blur after that.
 
-\> [[Where am I?]]
+* [[Where am I?]]
 
 :: Where am I? [dark drunk]
 
@@ -37,7 +37,7 @@ You remember streaks of light and sound. Dancing. Black fur. You can't quite mak
 
 Your name is Hollis Freeley. What will you do?
 
-\> [[Hollis: Do something?]]
+* [[Hollis: Do something?]]
 
 :: Hollis: Do something? [dark drunk]
 
@@ -47,7 +47,7 @@ Unfortunately, you can't do anything.
 
 You have blacked out.
 
-\> [[Wake up in the broom closet.]]
+* [[Wake up in the broom closet.]]
 
 :: Wake up in the broom closet. [checkpoint]
 
@@ -61,7 +61,7 @@ Two small black cats are hovering over you, waiting for you to wake up.
 
 "Quiet," says the other.
 
-\> [[Hng, who are you two?]]
+* [[Hng, who are you two?]]
 
 :: Hng, who are you two?
 
@@ -71,7 +71,7 @@ You squint. They look and sound completely identical.
 
 "Pleased to meet you, Hollis!" they both say.
 
-\> [[You know my name?]]
+* [[You know my name?]]
 
 :: You know my name?
 
@@ -85,7 +85,7 @@ You say you don't remember.
 
 Geez, that's embarassing.
 
-\> [[What am I doing in here?]]
+* [[What am I doing in here?]]
 
 
 :: What am I doing in here?
@@ -94,7 +94,7 @@ Geez, that's embarassing.
 
 "So we brought you here! Y'know, so you'd be safe."
 
-\> [[You're not gonna eat me, are you?]]
+* [[You're not gonna eat me, are you?]]
 
 
 :: You're not gonna eat me, are you?
@@ -111,7 +111,7 @@ Nikki shoots him a look.
 
 "Sorry, it sounded like we were offering sex is all. Which we're not."
 
-\> [[Wh-what is it then?]]
+* [[Wh-what is it then?]]
 
 
 :: Wh-what is it then?
@@ -126,7 +126,7 @@ M-mice, you ask?
 
 "Morsels!" Nox beams.
 
-\> [[Oh, um, I don't... do that.]]
+* [[Oh, um, I don't... do that.]]
 
 
 :: Oh, um, I don't... do that.
@@ -145,4 +145,4 @@ Nikki smirks, "Nothing is quite as thrilling as your first time doing vore!"
 
 ## Game over.
 
-\> [[Restart.|Start]]
+* [[Restart.|Start]]

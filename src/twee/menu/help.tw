@@ -1,6 +1,6 @@
 :: Help [no_checkpoint dark]
 
-\> <a0 onclick="setup.undo();">Go back</a>
+* <a0 onclick="setup.undo();">Go back</a>
 
 ### Keyboard controls
 
@@ -12,7 +12,7 @@
 
 ### Play offline
 
-\> <a href="" download="<%- story.name %> <%- story.version %>.html">Download</a>
+* <a href="" download="<%- story.name %> <%- story.version %>.html">Download</a>
 
 ### Credits
 

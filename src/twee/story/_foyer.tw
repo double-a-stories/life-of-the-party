@@ -7,7 +7,7 @@ Right now, you're at a very crowded house party. Drunk and horny college furs ar
 
 About twenty minutes ago, you showed up with your friend Reese. At some point you got separated, and you haven't seen him since.
 
-\> [[Look around the foyer.|The Foyer.]]
+* [[Look around the foyer.|The Foyer.]]
 
 
 :: The Foyer.
@@ -17,11 +17,9 @@ The floor in the house's entryway is plastered with empty plastic cups. Music is
 
 What will you do?
 
-\> [[Find someplace quieter.]]
-
-\> [[Search for your friend.]]
-
-\> [[Dance a little.]]
+* [[Find someplace quieter.]]
+* [[Search for your friend.]]
+* [[Dance a little.]]
 
 
 :: Find someplace quieter.
@@ -29,11 +27,9 @@ The incessant loud music is starting to hurt your sensitive ears. You decide to 
 
 This house is huge, and its upscale furnishings seem almost too fancy for the moderately wealthy suburb it's located in. It shouldn't be too hard to find a quiet place to relax.
 
-\> [[Go to the bathroom.]]
-
-\> [[Go outside.]]
-
-\> [[Go to the garage.]]
+* [[Go to the bathroom.]]
+* [[Go outside.]]
+* [[Go to the garage.]]
 
 <%= story.render("Preload Ren emojis")%>
 
@@ -50,11 +46,11 @@ Someone around here has probably seen where he went.
 
 You get the feeling he's upstairs.
 
-\> [[Look upstairs.]]
+* [[Look upstairs.]]
 
 <% } %>
 
-\> [[Go back.|The Foyer.]]
+* [[Go back.|The Foyer.]]
 
 :: Look upstairs.
 <div->[[Upstairs Hallway]]</div>
@@ -73,16 +69,15 @@ The upstairs hallway has a few doors. You can see two bedrooms: one is marked wi
 
 Where will you look?
 
-\> [[Examine B's bedroom door.]]
-
-\> [[Check the broom closet.]]
+* [[Examine B's bedroom door.]]
+* [[Check the broom closet.]]
 
 <%
 s.broomClosetState = 0;
 s.broomClosetEnding = false;
 %>
 
-\> [[Examine L's bedroom door.]]
+* [[Examine L's bedroom door.]]
 
 
 :: Examine B's bedroom door.
@@ -92,9 +87,8 @@ There's no one in there. The shelves are sporting a number of trophies from vari
 
 <div->[[Look in Basil's drawers.]]</div>
 
-\> <a0 data-passage="Look in Basil's drawers." data-command="Snoop in drawers.">Check drawers.</a>
-
-\> [[Go back.|Upstairs Hallway]]
+* <a0 data-passage="Look in Basil's drawers." data-command="Snoop in drawers.">Check drawers.</a>
+* [[Go back.|Upstairs Hallway]]
 
 
 :: Look in Basil's drawers.
@@ -103,16 +97,13 @@ You decide it couldn't hurt to take a discrete little peek in the dresser. You p
 #### Items found:
 
 * 2x Jock Strap (Extra Large)
-
 * 1x Multi-Purpose Body Lotion (8 oz)
-
 * 4x Adult Magazine
-
 * 1x Realistic Silicon Horse Dildo
 
 You close the drawer. Probably shouldn't touch any of these...
 
-\> [[Go back.|Upstairs Hallway]]
+* [[Go back.|Upstairs Hallway]]
 
 
 :: Examine L's bedroom door.
@@ -122,9 +113,8 @@ You covertly bring one of your ears to the first bedroom door. There are definit
 
 What do you do?
 
-\> [[Knock politely on the door.]]
-
-\> [[Ignore it.]]
+* [[Knock politely on the door.]]
+* [[Ignore it.]]
 
 
 :: Knock politely on the door.
@@ -132,9 +122,8 @@ What do you do?
 
 Alongside it, you hear a few more muffled grunts, as well as a kind of slick slurping noise. Is someone... swallowing?
 
-\> [[Open it.|Open the door.]]
-
-\> [[Ignore it.]]
+* [[Open it.|Open the door.]]
+* [[Ignore it.]]
 
 
 :: Ignore it.
@@ -142,4 +131,4 @@ Sounds like it's just people having sex. You should probably leave them alone.
 
 <%= story.render("Upstairs Hallway") %>
 
-\> [[Go back to the foyer.|The Foyer.]]
+* [[Go back to the foyer.|The Foyer.]]

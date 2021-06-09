@@ -1,7 +1,7 @@
 :: Sit by yourself. [dreamy_1]
 You find an empty bench to sit on by yourself, distancing yourself from the chaos of the party. Being out here on your own, it's actually quite peaceful.
 
-\> [[Watch the stars.]]
+* [[Watch the stars.]]
 
 <style>
   body {
@@ -15,17 +15,15 @@ You do so.
 
 The night sky is peaceful. The clouds are clear, but you can only barely see the stars thanks to the light pollution of this suburban neighborhood.
 
-\> [[Get up.]]
-
-\> [[Comprehend the endless cosmos.]]
+* [[Get up.]]
+* [[Comprehend the endless cosmos.]]
 
 
 :: Get up.
 Having had your fill of stargazing, you stand up from the bench.
 
-\> [[Look at hyena.]]
-
-\> [[Go back to the foyer.|The Foyer.]]
+* [[Look at hyena.]]
+* [[Go back to the foyer.|The Foyer.]]
 
 
 :: Comprehend the endless cosmos. [dreamy_2]
@@ -37,9 +35,8 @@ All you need to do is rest your eyes upon the swirling heavens, and relax. You r
 
  You need not need cling to the edges of your liminal reality.
 
-\> [[Stop meditating.|Get up.]]
-
-\> [[Break these mortal chains.]]
+* [[Stop meditating.|Get up.]]
+* [[Break these mortal chains.]]
 
 
 :: Break these mortal chains. [dreamy_2]
@@ -70,7 +67,7 @@ In the backyard of a suburban house party, Hollis Freeley opens their eyes, and 
 
 <div class="other-logo">
 
-\> [[Be the hyena.]]
+* [[Be the hyena.]]
 
 
 :: Be the hyena. [dark otherstory]
@@ -83,11 +80,9 @@ A rabbit walked out here a few minutes ago, and zoned out while staring at the s
 
 What do you do?
 
-\> [[Eat the rabbit.]]
-
-\> [[Eat the rabbit.]]
-
-\> [[Eat the rabbit.]]
+* [[Eat the rabbit.]]
+* [[Eat the rabbit.]]
+* [[Eat the rabbit.]]
 
 
 :: Eat the rabbit. [dark otherstory]
@@ -100,11 +95,9 @@ They flinch as you nonchalantly grab them up in my paws. <q.hollistalk>Woah, wai
 
 They try to fight you at first, but eventually calm down.
 
-\> [[Swallow them.]]
-
-\> [[Swallow them.]]
-
-\> [[Swallow them.]]
+* [[Swallow them.]]
+* [[Swallow them.]]
+* [[Swallow them.]]
 
 :: Swallow them. [dark otherstory]
 
@@ -124,5 +117,5 @@ You begin to drift off to a nap. <i.ana>Wow,</i> you think, <i.ana>this route go
 
 ### The End.
 
-\> [[Restart.|Start]]
+* [[Restart.|Start]]
 

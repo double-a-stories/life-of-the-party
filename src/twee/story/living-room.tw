@@ -42,25 +42,22 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 
 <% if (s.partyFlavorMicroMouse) { %>
 <!-- Owl about to eat mouse. -->
-\> [[Do nothing.|Watch the jackrabbit eat.]]
-
-\> [[H-hey, don't do that!|Intervene on the jackrabbit.]]
+* [[Do nothing.|Watch the jackrabbit eat.]]
+* [[H-hey, don't do that!|Intervene on the jackrabbit.]]
 <% } else if (s.partyFlavorOwl || s.partyFlavorGutbump) {%>
-\> [[N-no problem!|Dance a little.]]
+* [[N-no problem!|Dance a little.]]
 <% } else if (s.partyFlavorLabrador) { %>
-\> [[Y-you too?|Dance a little.]]
+* [[Y-you too?|Dance a little.]]
 <% } else {%>
-\> [[Dance a little more.|Dance a little.]]
+* [[Dance a little more.|Dance a little.]]
 <% } %>
-
-\> [[Grab some punch.]]
-
+* [[Grab some punch.]]
 <% if (s.partyFlavorBasil || s.partySeenBasil || setup.isFlagSet("talkedToBasil")) {
   s.partySeenBasil = true; %>
-\> [[Wink back at the horse.|Wink back at Basil.]]
+* [[Wink back at the horse.|Wink back at Basil.]]
 <% } if (s.partyFlavorWonderwolf || s.partySeenByron || setup.isFlagSet("talkedToByron")) {
   s.partySeenByron = true; %>
-\> [[Look at wolf.]]
+* [[Look at wolf.]]
 <% } %>
 
 :: Randomized Party Flavor [hide]
@@ -131,7 +128,7 @@ story.render("Grab one more punch.")
 return literals[Math.min(s.punchCount, literals.length) - 1]
 })() %>
 
-\> [[Go back.|Dance a little.]]
+* [[Go back.|Dance a little.]]
 
 :: Grab one more punch.
 
@@ -143,4 +140,4 @@ Kaia the mouse looks up at you with concern. "Uh, maybe take it slow, huh?"
 A labrador notices and elbows you. "Woahh, dude! Maybe go a little easy on the party sauce, kay dude?"
 <% } %>
 
-\> [[Get very very drunk.]]
+* [[Get very very drunk.]]

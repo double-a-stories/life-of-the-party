@@ -69,9 +69,8 @@ You enter the broom closet.
 Inside is a shelf with some towels, linens, and some cleaning supplies. Leaning against the wall is a broom and a vacuum cleaner.
 </div>
 
-\> <a0 onclick="setup.handleBroomCloset()">Check the broom closet.</a>
-
-\> <a0 id="broom-closet-link" data-passage="Upstairs Hallway">Go back to the hallway.</a>
+* <a0 onclick="setup.handleBroomCloset()">Check the broom closet.</a>
+* <a0 id="broom-closet-link" data-passage="Upstairs Hallway">Go back to the hallway.</a>
 
 <div->[[Upstairs Hallway]] [[Try to leave.]]</div>
 
@@ -85,7 +84,7 @@ You turn to the door and reach for the handle, only to realize that there isn't 
 
 You're trapped, numb-nuts. I didn't even know that was possible.
 
-\> [[Bang on the door.|ENDING: Broom Closet]]
+* [[Bang on the door.|ENDING: Broom Closet]]
 
 
 :: ENDING: Broom Closet [gameover]
@@ -99,7 +98,7 @@ You bang on the door trying to get someone's attention, but with the loud music 
 
 ### Game Over.
 
-\> [[Epilogue?|Epilogue: Broom Closet Ending.]]
+* [[Epilogue?|Epilogue: Broom Closet Ending.]]
 
 
 :: Epilogue: Broom Closet Ending. [morning]
@@ -111,7 +110,7 @@ Lacey enters the hallway, and opens the broom closet to grab some clean bedsheet
 
 She laughs. "Wait a minute, is that... Hollis?"
 
-\> [[Hollis: Wake up.]]
+* [[Hollis: Wake up.]]
 
 
 :: Hollis: Wake up. [morning]
@@ -127,5 +126,5 @@ Lacey smirks as the dog notices you, and says, "...My *boyfriend* on the other h
 
 #### The End.
 
-\> [[Restart|Start]]
+* [[Restart|Start]]
 

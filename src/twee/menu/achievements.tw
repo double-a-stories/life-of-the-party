@@ -12,7 +12,7 @@
   <% }) %>
 </ul>
 
-\> <a0 onclick="setup.resetAchievementsPrompt();">Reset achievements.</a>
+* <a0 onclick="setup.resetAchievementsPrompt();">Reset achievements.</a>
 
 
 <%
