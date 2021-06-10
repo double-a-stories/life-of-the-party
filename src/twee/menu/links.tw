@@ -8,14 +8,3 @@ $(window).on('sm.passage.shown', () => {
     $(el).parents("ul").addClass("commands-list");
   })
 });
-
-:: Links styles [stylesheet]
-
-.commands-list {
-  list-style: "> " inside;
-  padding-inline-start: unset;
-}
-
-.commands-list li {
-  margin-bottom: 1rem;
-}

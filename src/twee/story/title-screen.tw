@@ -36,7 +36,7 @@ tw-passage > * {
 <p class="logo__subtitle">A Furry Vore Adventure by Double-A</p>
 </div>
 
-<div style="text-align: center">
+<div class="center-list">
 
 * [[Life of the Party.]]
 

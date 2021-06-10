@@ -78,8 +78,8 @@ a:active {
 /* Commands */
 
 .commands-list {
-  list-style: "> " inside;
-  padding-inline-start: unset;
+  list-style-type: "> ";
+  padding-inline-start: 1rem;
 }
 
 .commands-list li {
@@ -108,10 +108,15 @@ a:active {
   outline: none;
 }
 
+.center-list, .center-list>ul {
+  text-align: center;
+  padding-inline-start: 0;
+  list-style-position: inside;
+}
+
 /* Mobile mode */
 @media screen and (max-width:500px) {
   .commands-list a {
-    display: inline-block;
-    padding: 1rem !important;
+    padding: 1rem;
   }
 }
