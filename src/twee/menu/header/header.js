@@ -7,12 +7,10 @@ $(window).on('sm.story.started', function (event, {
   story
 }) {
   const passages = story.passages.filter(p => p);
-  const $headerEl = $("<header></header>").attr("id", "header");
   passages.filter(p => p.tags.includes("header")).forEach(p => {
     const html = $.parseHTML(story.render(p.id));
-    $(html).appendTo($headerEl);
+    $(html).insertBefore(story.$passageEl);
   })
-  $headerEl.insertBefore(story.$passageEl);
 });
 
 // Make a passage loading work like page loading
