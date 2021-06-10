@@ -134,30 +134,6 @@ margin-top: 1rem;
 .textchat a, .textchat [role="img"] {
   cursor: not-allowed;
 }</style>
-<style id="style-module-header" type="text/css">.topbar {
-  font-size: 0.75em;
-  border-bottom: 1px solid var(--light);
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-}
-.header-nav {
-  display: flex;
-justify-content: space-between;
-}
-
-.header-nav-group > * {
-  display: inline-block;
-  margin-bottom: 0;
-}
-
-.header-nav-group > * + * {
-  margin-left: 0.5rem;
-}
-
-.header-nav-group > * + *::before {
-  content: "|";
-  margin-right: 0.5rem;
-}</style>
 <style id="style-module-logo" type="text/css">/* LICENSE: MIT-0 */
 
 .logo {
@@ -212,6 +188,7 @@ body {
   color: var(--color);
   background: var(--background);
   transition: opacity 1s, background 2s;
+  margin: 0.5rem;
 }
 
 /* Override default Twee styles */
@@ -219,7 +196,7 @@ body {
 tw-story {
   line-height: inherit;
   position: unset !important;
-  margin: 1rem auto;
+  margin: 0 auto;
   padding-bottom: 4rem;
   max-width: 35em;
 }
@@ -272,8 +249,8 @@ a:active {
 /* Commands */
 
 .commands-list {
-  list-style: "> " inside;
-  padding-inline-start: unset;
+  list-style-type: "> ";
+  padding-inline-start: 1rem;
 }
 
 .commands-list li {
@@ -302,11 +279,16 @@ a:active {
   outline: none;
 }
 
+.center-list, .center-list>ul {
+  text-align: center;
+  padding-inline-start: 0;
+  list-style-position: inside;
+}
+
 /* Mobile mode */
 @media screen and (max-width:500px) {
   .commands-list a {
-    display: inline-block;
-    padding: 1rem !important;
+    padding: 1rem;
   }
 }</style>
 <style id="style-module-zen_ending" type="text/css">/* Hollis reverts back to the default font. */
@@ -324,8 +306,8 @@ body[data-tags~="dark"], .backdrop {
   --color: #ccc;
 }
 
-[data-tags~="otherstory"] {
-  transition: none !important;
+[data-tags~="otherstory"], [data-tags~="otherstory"] .topbar {
+  transition: opacity 1s, background 0s !important;
   line-height: 1.5;
 }
 
@@ -346,6 +328,7 @@ body[data-tags~="dark"], .backdrop {
 
 .fadeout {
   position: relative;
+  padding-bottom: 1rem;
 }
 
 .fadeout::after {
@@ -438,14 +421,37 @@ tw-story, tw-passage {
   vertical-align: -0.1em;
   text-shadow: black 1px 1px;
 }
-/* twine-user-stylesheet #2: "Links styles" */
-.commands-list {
-  list-style: "> " inside;
-  padding-inline-start: unset;
+/* twine-user-stylesheet #2: "header.css" */
+.topbar {
+  font-size: 0.75em;
+  border-bottom: 1px solid var(--light);
+  padding-block: 1em;
+  margin-bottom: 1em;
+  background: var(--background);
+  transition: background 2s;
+  position: sticky;
+  top: 0;
 }
 
-.commands-list li {
-  margin-bottom: 1rem;
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav-group {
+  list-style: none;
+  padding-inline-start: unset;
+  display: flex;
+  margin: 0;
+}
+
+.header-nav-group > * + * {
+  margin-left: 0.5rem;
+}
+
+.header-nav-group > * + *::before {
+  content: "|";
+  margin-right: 0.5rem;
 }
 /* twine-user-stylesheet #3: "Warp zone stylesheet" */
 .tag-badge {
@@ -507,6 +513,7 @@ tw-story, tw-passage {
 /* twine-user-stylesheet #7: "Ren quirk" */
 .ren {
   font-family: "Comic Neue", "Comic Sans", "Comic Sans MS", sans-serif !important;
+  font-weight: 700;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "achievements.js" */
 // Persistent Storage API
 // LICENSE: MIT-0
@@ -651,12 +658,10 @@ $(window).on('sm.story.started', function (event, {
   story
 }) {
   const passages = story.passages.filter(p => p);
-  const $headerEl = $("<header></header>").attr("id", "header");
   passages.filter(p => p.tags.includes("header")).forEach(p => {
     const html = $.parseHTML(story.render(p.id));
-    $(html).appendTo($headerEl);
+    $(html).insertBefore(story.$passageEl);
   })
-  $headerEl.insertBefore(story.$passageEl);
 });
 
 // Make a passage loading work like page loading
@@ -893,7 +898,7 @@ document.addEventListener('pointerdown', function isTouching(ev) {
   }
 });
 /* twine-user-script #11: "Misc story variables" */
-story.version = `v0.6.0-nightly`;</script><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-passagedata pid="1" name="Achievements list" tags="" position="100,100" size="100,100">&lt;% const achievements = setup.getAchievements().sort();
+story.version = `v0.6.0-nightly`;</script><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-passagedata pid="1" name="Achievements list" tags="" position="100,100" size="100,100">&lt;% const achievements = setup.getAchievements().sort();
    const story_max_achievements = 9; // TODO: change me!
 %&gt;
 
@@ -915,15 +920,14 @@ const sawBroomClosetEnding = achievements.some(a =&gt; /Broom Closet/i.test(a));
 if (oneAchievementLeft &amp;&amp; !sawBroomClosetEnding) { %&gt;
 &lt;code&gt;Did you get the Broom Closet Ending? The Broom Closet Ending was my favorite!&lt;/code&gt;
 &lt;% } %&gt;</tw-passagedata><tw-passagedata pid="2" name="Header" tags="hide header" position="225,100" size="100,100">&lt;header.topbar.header-nav&gt;
-	&lt;div.header-nav-group&gt;
-          &lt;div&gt;&lt;a0 onclick=&quot;setup.restart()&quot;&gt;Restart&lt;/a&gt;&lt;/div&gt;
-	  &lt;div&gt;&lt;a0 onclick=&quot;setup.undo()&quot;&gt;Undo&lt;/a&gt;
-	  &lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div.header-nav-group&gt;
-	  &lt;div&gt;[[Help]]&lt;/div&gt;
-	  &lt;span&gt;&lt;%- story.version %&gt;&lt;/span&gt;
-	&lt;/div&gt;
+	&lt;ul.header-nav-group&gt;
+    &lt;li&gt;&lt;a0 onclick=&quot;setup.restart()&quot;&gt;Restart&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a0 onclick=&quot;setup.undo()&quot;&gt;Undo&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;ul.header-nav-group&gt;
+	  &lt;li&gt;[[Help]]&lt;/li&gt;
+	  &lt;li&gt;&lt;%- story.version %&gt;&lt;/li&gt;
+	&lt;/ul&gt;
   &lt;/div&gt;
 &lt;/header&gt;
 
@@ -3157,7 +3161,7 @@ tw-passage &gt; * {
 &lt;p class=&quot;logo__subtitle&quot;&gt;A Furry Vore Adventure by Double-A&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div style=&quot;text-align: center&quot;&gt;
+&lt;div class=&quot;center-list&quot;&gt;
 
 * [[Life of the Party.]]
 
@@ -3207,21 +3211,17 @@ You concentrate on your breathing. No wait. *Hollis* concentrates on *their* bre
 In the backyard of a suburban house party, Hollis Freeley opens their eyes, and takes in their surroundings. They draw a deep breath, like a weight has suddenly been lifted from their shoulders. As the last of your influence wanes, Hollis blinks and mutters out loud, &quot;What the fuck was all that about?&quot;
 
 &lt;code&gt;LotP encountered an error:&lt;br&gt;client connection lost. please contact manufacturer if problem persists. automated support is available at 1-800-813-621&lt;/code&gt;
-&lt;br&gt;
 
 &lt;/div&gt;
-
-&lt;div style=&quot;text-align: center&quot;&gt;
 &lt;a0 class=&quot;focusonly&quot; onclick=&quot;window.scrollTo({left: 0, top: 9999, behavior: &#39;smooth&#39;})&quot;&gt;↓↓↓ Scroll down ↓↓↓&lt;/a&gt;
 &lt;/div&gt;
-
 &lt;div class=&quot;backdrop&quot;&gt;
-
 &lt;p style=&quot;margin-bottom: 3rem;&quot;&gt;Connection resolved.&lt;/p&gt;
+&lt;div class=&quot;other-logo center-list&quot;&gt;
 
-&lt;div class=&quot;other-logo&quot;&gt;
+* [[Be the hyena.]]
 
-* [[Be the hyena.]]</tw-passagedata><tw-passagedata pid="270" name="Be the hyena." tags="dark otherstory" position="1225,3350" size="100,100">Your name is Ana. You&#39;re a spotted hyena, currently chilling on a bench outside a house party like a total loser.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="270" name="Be the hyena." tags="dark otherstory" position="1225,3350" size="100,100">Your name is Ana. You&#39;re a spotted hyena, currently chilling on a bench outside a house party like a total loser.
 
 You showed up about an hour ago, but big crowds freak you out, so you came out here to get some air and clear your head. You&#39;re here because, like most young predators, you want to eat someone. You want to feel prey writhing around inside your belly. You&#39;d go in there and grab one, but the noise is too overwhelming.
 
