@@ -6,16 +6,13 @@ const TWEMOJI_OPTIONS = {
   ext: '.svg'
 };
 
-const handleTwemoji = () => {
+$(window).on('sm.story.started sm.passage.hidden sm.passage.shown', () => {
   if (!window.twemoji) {
     console.error("Twemoji script not loaded! Emoji will fallback to system font.");
     return;
   }
   twemoji.parse(story.$passageEl[0], TWEMOJI_OPTIONS);
-}
-
-$(window).on('sm.passage.hidden sm.passage.shown', handleTwemoji);
-
+});
 
 :: Twemoji style [stylesheet]
 .emoji {
