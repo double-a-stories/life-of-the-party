@@ -110,7 +110,7 @@ The wolf is silent for a moment, then says, <q.byron>I am impressed by your know
 
 :: The name's Freely. Hollis Freely.
 
-<q.byron>Pleasure to make your acquaintance, dear Freely,</q> Byron says, now observing you with renewed interest. <%-s.bm?"His":"Her"%> fluffy tail curls around your back. It makes you slightly nervous.
+<q.byron>Pleasure to make your acquaintance, dear Freely,</q> the wolf says, now observing you with renewed interest. <%-s.bm?"His":"Her"%> fluffy tail curls around your back. It makes you slightly nervous.
 
 Finally, <%-s.bm?"he":"she"%> deigns to introduce <%-s.bm?"himself":"herself"%> to you. <%-s.bm?"He":"She"%> gestures grandiosely to <%-s.bm?"his":"her"%> chest, and says, <q.byron>I am <%-s.bm?"Emmet":"Emily"%> Byron III, but you may call me simply <%-s.bm?"Emmet":"Emily"%>.</q>
 
