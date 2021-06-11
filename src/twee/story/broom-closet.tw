@@ -59,7 +59,7 @@ const messages = [
   `You dig behind the towels and find a mysterious glowing amulet! You can use this to gain access to the Crypt of Zamantheus! Actually, it's just more towels.`,
   `Your friend Reese is being swallowed whole as we speak. Don't you want to rescue him? Go back. To the hallway.`,
   `You close the door behind you, and hide inside the broom closet for a little while. This is a huge waste of time.`,
-  `Wow! You've examined the broom closet ${state <= 25 ? (state * divisor) : "FUCK OFF"} times! Hollis has wasted ${state <= 25 ? state + 10 : "SEVERAL"} minutes of their life in the broom closet.`
+  `Wow! You've examined the broom closet ${state <= 25 ? (Math.floor(s.broomClosetCount / 10) * 10) : "FUCK OFF"} times! Hollis has wasted ${state <= 25 ? state + 10 : "SEVERAL"} minutes of their life in the broom closet.`
 ];
 
 print(messages[Math.min(state, messages.length - 1)]);
