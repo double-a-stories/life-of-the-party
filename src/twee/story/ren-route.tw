@@ -7,6 +7,7 @@
 :: Preload Ren emojis
 <!-- This hidden passage contains most emojis used in the Ren route. We attempt to cache them as early as possible, so they don't pop in on passages. -->
 <div aria-hidden="true" style="height: 0; overflow: hidden;">
+<q.ren>Heeeeey!!!</q>
 🍈 🍑 🏻 🐇 🐔 🐰 🐴 🐹 🐺 🐾 👅 👌 💢 💨 💰 🔑 🎮 🖼 🏎 👤 👩 👋 🔥 🐷 🐗 👮 👿 💦 😊 😃 🦊 🦹‍♂️ 🦹‍♀️ 🛻 🤨 🖼️ 🙈 🤷‍♂️ 🤷‍♀️ 😉 😎 ❓ ⏳ 🥒 😨 😦 😟 😔 😮‍ 🫂 😁 🤰 🥩 😠 😡 🤬 🩸 😈 🥱 ♨️ 😈‍ 🧛🏻️ 🧛🏻‍♀️ 🤤   😝 😌 😳 😕 😏 🤔 🤢 ☠️ 😒 😧 😬 🙊 ♂ 🚔 😾 🚓 🤫 😼 😩 😖 🙇‍♂️ 🙇‍♀️ 🙅‍♂️ 🙅‍♀️ ⏱ 🥺 ⛓
 </div>
 
