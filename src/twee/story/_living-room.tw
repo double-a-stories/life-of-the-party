@@ -1,5 +1,7 @@
 <!-- You go to the living room and dance. This room has a bunch of random world-building flavor text, and can branch off into a few different routes. The script that manages this part is really really awful. -->
 :: Dance a little.
+<div-></div>
+
 <%
 const visits = visited(passage.id);
 
@@ -17,26 +19,31 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 
 <% } else if (visited("Grab some punch.") < 2) { %>
 
-	<%= either("You dance some more.", "You keep on dancing.") %>
-	<%= either("Why stop now?", "Feels good.", "This place is kind of cramped.", "This is fun!") %>
+<%= either("You dance some more.", "You keep on dancing.") %>
+<%= either("Why stop now?", "Feels good.", "This place is kind of cramped.", "This is fun!") %>
 
 <% } else { %>
 
-  <%= either("You wiggle your hips as you dance.", "You try out some new moves.", "You shake your tail flamboyantly, to the delight of onlookers.") %> <%= either(
-    "It's probably the alcohol, it feels like you're dancing really well.",
-		"You're starting to attract some attention.",
-		"Anthros around you are looking on with interest.",
-		"Someone cheers as they watch you.",
-		"One more drink couldn't hurt, right?",
-		`You hear someone murmur, "Woah, I'd like a piece of that..."`
-		) %>
+<%= either(
+	"You wiggle your hips as you dance.",
+	"You try out some new moves.",
+	"You shake your tail flamboyantly, to the delight of onlookers.") %>
+<%= either(
+	"It's probably the alcohol, but it feels like you're dancing really well.",
+	"You're starting to attract some attention.",
+	"Anthros around you are looking on with interest.",
+	"Someone cheers as they watch you.",
+	"One more drink couldn't hurt, right?",
+	`You hear someone murmur, "Woah, I'd like a piece of that..."`) %>
 
 <% } %>
-
 <% if (visits > 2) { %>
 <p><%= story.render("Randomized Party Flavor") %></p>
-
 <% } %>
+
+<%= story.render("Living room commands") %>
+
+:: Living room commands
 
 <!-- LIVING ROOM COMMANDS -->
 
@@ -44,20 +51,23 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 <!-- Owl about to eat mouse. -->
 * [[Do nothing.|Watch the jackrabbit eat.]]
 * [[H-hey, don't do that!|Intervene on the jackrabbit.]]
-<% } else if (s.partyFlavorOwl || s.partyFlavorGutbump) {%>
+<% } else { %>
+
+<% if (s.partyFlavorOwl || s.partyFlavorGutbump) {%>
 * [[N-no problem!|Dance a little.]]
 <% } else if (s.partyFlavorLabrador) { %>
 * [[Y-you too?|Dance a little.]]
 <% } else {%>
 * [[Dance a little more.|Dance a little.]]
 <% } %>
-* [[Grab some punch.]]
 <% if (s.partyFlavorBasil || s.partySeenBasil || setup.isFlagSet("talkedToBasil")) {
   s.partySeenBasil = true; %>
 * [[Wink back at the horse.|Wink back at Basil.]]
 <% } if (s.partyFlavorWonderwolf || s.partySeenByron || setup.isFlagSet("talkedToByron")) {
   s.partySeenByron = true; %>
 * [[Look at wolf.]]
+<% } %>
+* [[Grab some punch.]]
 <% } %>
 
 :: Randomized Party Flavor [hide]
@@ -84,7 +94,7 @@ if (!setup.partyDanceLiterals) {
 `A heavy-set bear with a selfie stick is recording herself as she shakes her massive hips. You try not to stare, but it's absolutely hypnotic.`,
 `A lioness whispers to her friend, "Did you know there's a rabbit here?" They snicker. "Woah. Do you think it has a vore fetish?"`,
 `You see a catboy eagerly following a lioness out of the room. They both seem quite excited.`,
-`A jackrabbit reaches down, grabs a tiny mouse off the floor, and dangles it teasingly over her snout. She smirks as the little thing cries out and begs for mercy. Should you... do something?`,
+`A jackrabbit reaches down, grabs a tiny mouse off the floor, and dangles it teasingly over her snout. Should you... do something?`,
 ].sort(e => 0.5 - Math.random());
 
 setup.partyDanceLiterals.push(`A big brown stallion in a green jacket seems to take notice of your dancing. He winks at you from across the room.`);

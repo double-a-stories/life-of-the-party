@@ -1,19 +1,18 @@
 :: Kaia quirk [stylesheet]
 /* She talks small. */
 .mouse {
-  font-family: Verdana, sans-serif;
   font-size: 80%;
 }
 
 :: Watch the jackrabbit eat.
 
-<% s.rescuedKaia = false; %>
+<% s.rescuedKaia = false; s.partyFlavorMicroMouse = false; %>
 
 You watch as the jackrabbit snarfs down the little white mouse boy with a satisfied smile. At first he squeaks out in fear, but the sound stops instantly as he snakes down her throat.
 
 You feel slightly guilty for not intervening. And somehow... aroused?
 
-* [[Dance a little more.|Dance a little.]]
+<%= story.render("Living room commands") %>
 
 :: Intervene on the jackrabbit.
 
