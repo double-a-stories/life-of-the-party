@@ -6,143 +6,228 @@ They're vore voyeurs, and try to talk you into eating a micro.
 
 :: Get very very drunk. [dark drunk]
 
-*This route contains **unfinished content**, planned to be completed as part of v0.7.0. Proceed at your own risk.*
+You decide to grab one more cup of spiked punch, and shudder as you swallow the contents of the cup.
 
-You take another drink of the spiked punch, wrinkling your nose at the taste.
+As you do, you begin to feel slightly off-balance, as if the room is spinning. You stagger back from the table like an exaggerated cartoon depiction of a drunk person.
 
-It feels like the room is spinning. You stagger back like an exaggerated cartoon depiction of a drunk person.
+Surprisingly, being drunk feels pretty good. You feel ready to take on the world! Ready to finally become the extroverted social butterfly you were always meant to be.
 
-Woah, this actually feels pretty good. You feel ready to take on the world! Ready to rock this party, and finally become the social butterfly you were always meant to be.
+You slick your ears back behind your head, and confidently stride back into the party. And then...
 
-You feel... Wait, where are you?
+Uh...
 
-* [[What?]]
+* [[What?|Drunk route bullshit]]
 
 
-:: What? [dark drunk]
+:: Drunk route bullshit [dark drunk]
 
 Your name is Hollis Freeley. You are an androgynous gray rabbit.
 
-You remember drinking a fifth cup of punch, probably five more than your tiny rabbit body could handle. Then you walked back into the party...
+You remember drinking a fifth cup of punch, probably five more than your tiny rabbit body could handle. Then you went back onto the dance floor... It's kind of a blur after that?
 
-It's, uh, kind of a blur after that.
+You remember streaks of light and sound. Black fur. You can't quite make heads or tails of it, although you're pretty sure there were a lot of heads and tails there.
 
-* [[Where am I?]]
+Your name is Hollis Freeley. You have blacked out.
 
-:: Where am I? [dark drunk]
+* [[Where am I now?]]
 
-You are an androgynous gray rabbit. You're at a very crowded house party. Or maybe you're somewhere else now.
+:: Where am I now? [dark drunk]
 
-You remember streaks of light and sound. Dancing. Black fur. You can't quite make heads or tails of it, although you're pretty sure there were a lot of heads and tails there.
+Your name is Hollis Freeley. You are an androgynous gray rabbit.
 
-Your name is Hollis Freeley. What will you do?
+You're at a very crowded house party. Or, you were. But maybe you're somewhere else now?
 
-* [[Hollis: Do something?]]
+Right now you're lying flat on your back. Your stomach feels a little gross, and your eyes are shut tightly. A few feet away is a stainless steel oven, fridge, and dishwasher, complimented by a midcentury modern marble countertop.
 
-:: Hollis: Do something? [dark drunk]
+You're on the floor of the kitchen. What will you do?
 
-Unfortunately, you can't do anything.
+* [[Get up.|Wake up in the kitchen.]]
 
-...
+:: Wake up in the kitchen. [checkpoint]
 
-You have blacked out.
+*CW: Player pred. Sadism. Micro prey. Violent coercion.*
 
-* [[Wake up in the broom closet.]]
+"Ooh! They're waking up!" says a voice.
 
-:: Wake up in the broom closet. [checkpoint]
+"Quiet," says another voice.
 
-An hour passes.
+Your ears twitch, and you groan as you slowly sit up. A warm fluorescent lightbulb blasts you in the eyes. Lying beside you is a pile of plastic cups, a jumbo bag of vegan pretzels, and a silicon horse dildo.
 
-You clutch your head, groaning as you come back into awakeness. You're in... a broom closet? It's a small, nondescript room with some towels, linens, and some cleaning supplies.
+Two identical black cats are hovering over you expectantly, their tails wiggling with interest.
 
-Two small black cats are hovering over you, waiting for you to wake up.
+* [[Wh-who are you guys?]]
 
-"Ooh, they're waking up!" one of them says excitedly.
+:: Wh-who are you guys?
 
-"Quiet," says the other.
+<% s.knowNikkiNoxNames = true; %>
 
-* [[Hng, who are you two?]]
+"Oh, how rude of us! I'm Nox, and she's Nikki." says the first cat.
 
-:: Hng, who are you two?
+"I'm Nikki, he's Nox," repeats the other cat.
 
-"Oh, how rude of us! She's Nikki," says the first cat. "And he's Nox," says the other.
+"A pleasure to make your acquaintance!" says Nikki.
 
-You squint. They look and sound completely identical.
+* [[What happened?]]
 
-"Pleased to meet you, Hollis!" they both say.
+:: What happened?
 
-* [[You know my name?]]
+Both cats give you a genial smile. "You don't remember?" asks Nox, scratching his fur nervously.
 
-:: You know my name?
+You shake your head.
 
-"Yes," says Nox.
+Nikki clears her throat. "Well, Hollis, the short version is that you got totally, extremely sloshed, and passed out on the floor for about an hour."
 
-"You actually told us earlier," says Nikki.
+* [[How do you know my name?]]
 
-You say you don't remember.
+:: How do you know my name?
 
-"You got pretty sauced," says Nox, "danced with some drunk jocks, and yelled 'My name is Hollis Freeley!!' like four times."
+"Oh," says Nox, "this is kind of awkward, but you actually said it, like, four times. You kept on insisting, 'I am Hollis Freeley!'"
 
-Geez, that's embarassing.
+You feel your cheeks flush with embarassment.
 
-* [[What am I doing in here?]]
+"Anyway," Nikki continues, "you danced a little, then ran around for a while flirting with preds."
 
+"And er, you took off your shirt at one point!"
 
-:: What am I doing in here?
+* [[Oh jeez...]]
 
-"After that, you passed out on the floor," says Nikki.
+:: Oh jeez...
 
-"So we brought you here! Y'know, so you'd be safe."
+Nox chimes in, "A couple of the jocks tried to take a lick, but this labrador guy was really insistent that 'None of you dudes try and take advantage of this little rabbit dude in their inebriated state, kay dudes?'"
+
+Nikki continues, "Afterwards, you stumbled into the kitchen, grabbed even more booze and snacks, and fell asleep. And here you are now!"
+
+"We've been watching you ever since," Nox says, smiling, "Just to make sure you didn't die, or anything!"
+
+* [[...And the dildo?]]
+
+:: ...And the dildo?
+
+All three of your look down at the flared 14-incher lying limply at your feet. The cats exchange a glance.
+
+"...I actually have no idea where you got that from," says Nikki.
+
+You rise to your feet, dusting some pretzel crumbs off your back.
+
 
 * [[You're not gonna eat me, are you?]]
 
-
 :: You're not gonna eat me, are you?
 
-"Oh dear, no!" says Nikki, "You're far too big for that."
+"Oh, no!" says Nox, "You're way too big!"
 
-"Besides," Nox considers, "there's two of us, and only one of you! That would hardly be fair!"
+Nikki adds, "Besides, my sibling and I don't much fancy ourselves predators, per se..."
 
-"We actually have a rather... different proposition for you," says Nikki, runnning her paw gently up your arm.
+Nox pipes in, "We prefer to think of ourselves as encouraging observers!"
 
-Your mouth goes dry. Nox immediately blurts out, "It's not sex!"
+"In fact, while we're on the subject, we have an... interesting proposition for you," says Nikki, runnning her paw gently up your arm.
+
+Your mouth goes dry.
+
+* [[Well I'm flattered, but...]]
+
+:: Well I'm flattered, but...
+
+ Nox immediately blurts out, "It's not sex!"
 
 Nikki shoots him a look.
 
-"Sorry, it sounded like we were offering sex is all. Which we're not."
+"Sorry, it sounded like we were talking about sex. Which we're not."
 
 * [[Wh-what is it then?]]
-
 
 :: Wh-what is it then?
 
 "Glad you asked," says Nikki, "Nox, if you will?"
 
-Nox reaches into his front pockets, and produces two small white dwarf mice, both about six inches tall. They squint at the sudden exposure to light, and look up at the three of you nervously.
+Nox reaches into his front pockets and produces a brown dwarf mouse. She struggles for balance as she stands on his paw, and squints at the sudden exposure to light.
 
-M-mice, you ask?
+A mouse? you ask.
 
-"Meals!" Nikki smiles.
+"A meal!" Nikki smiles.
 
-"Morsels!" Nox beams.
+"A morsel!" Nox beams.
+
+* [[You want me to eat her??]]
+
+:: You want me to eat her??
+
+Nikki nods.
+
+Nox says, "We figured that since you're feeling sauced and snacky, you'd enjoy feeling this lovely lady wriggling down your throat!"
+
+"Not to mention, our little friend here is perfectly and completely willing!" Nikki shoots a glare at the mouse in Nox's paws. "Isn't that right?
+
+<q.mouse>Yes, that's right!</q> the mouse replies with a forced smile.
+
+You look nervously at the tiny mouse. She looks back at you hopefully.
 
 * [[Oh, um, I don't... do that.]]
 
-
 :: Oh, um, I don't... do that.
 
-You look nervously at the tiny couple of mice. They look up at you hopefully.
+But you're not a predator, you say. You don't eat people.
 
-"Of course you don't," says Nox, "That's actually why we're interested!"
+"Of course you don't," says Nikki, "That's actually why we're so interested!"
 
-Nikki smirks, "Nothing is quite as thrilling as your first time doing vore!"
+Nox smirks, blushing slightly, "There's nothing quite the thrill of like watching someone's first time!"
 
-"Except maybe *watching* someone *else*'s first time doing it!" Nox adds.
+"Especially you herbivores! You get so conflicted and twisted up over it!" Nikki adds, clearly betraying her excitement.
 
-// TODO: Nikki talks you into eating one of them.
+"Why not give it a try?" asks Nox, bringing the brown mouse up to your paws, "A small, vulnerable thing like you may not get another chance before someone snatches *you* up!"
+
+* [[Examine mouse.]]
+
+:: Examine mouse.
+
+You hold your paws flat, and the brown mouse dutifully walks from Nikki's paws onto yours. She keeps her hands folded nervously behind her back, as she continues to smile with only her teeth.
+
+You haven't really seen such a small person up close before. Unsurprisingly, tinyfolk (that is, very small anthros) tend not to spend very much time around bigger folk, who could accidentally crush them with a single misstep.
+
+You've also lived your whole life as a small, weak thing. Is it wrong to feel morbidly intrigued by the thought of devouring something even smaller and weaker?
+
+For just a second, you catch yourself looking at the tiny mouse as an object, rather than a person.  You see her tiny body tremble slightly. Your stomach ties in knots.
+
+* [[H-hello there, I'm Hollis.]]
+
+:: H-hello there, I'm Hollis.
+
+You introduce yourself to the mouse.
+
+<q.mouse>H-hi!</q> says the brown mouse, glancing at Nikki, as if asking for permission to speak. <q.mouse>I'm Faith.</q>
+
+You ask Faith if she wants to be eaten.
+
+Faith swallows and says, <q.mouse>Yup, haha! Totally!</q> while looking halfway over her shoulder. Then she blinks several times. You're pretty sure you get the picture.
+
+* [[I won't do it!]]
+
+:: I won't do it!
+
+You say you refuse to participate in something so barbaric as devouring two helpless mice against their wills.
+
+Nox seems disappointed. "Well, I guess there was always a possibility you'd say no. We can't force you, after all!"
+
+Nikki snatches Faith back out of your paws, who replies with a startled squeak. The cat examines her coldly, and muses, "I suppose there are other ways we could have our fun with them..."
+
+* [[You mean like torture??]]
+
+:: You mean like torture??
+
+Nikki looks back to you, "Well, torture is such a strong word..."
+
+That's horrible! you say.
+
+"Well," Nox says, "my sister can be a little intense with her food, but that's only if you decide not to partake!"
 
 <% setup.addAchievement("Untitled (Nikki & Nox ending)")%>
 
 ## Game over.
 
 * [[Restart.|Start]]
+
+:: Be Kaia [mousestory]
+
+Your name is Kaia. You are a mouse.
+
+* [[Link 1]]
