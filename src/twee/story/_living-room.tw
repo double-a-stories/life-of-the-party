@@ -47,27 +47,20 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 
 <!-- LIVING ROOM COMMANDS -->
 
-<% if (s.partyFlavorMicroMouse) { %>
-<!-- Owl about to eat mouse. -->
-* [[Do nothing.|Watch the jackrabbit eat.]]
-* [[H-hey, don't do that!|Intervene on the jackrabbit.]]
-<% } else { %>
-
-<% if (s.partyFlavorOwl || s.partyFlavorGutbump) {%>
+<% if (s.partyFlavorOwl || s.partyFlavorGutbump) %>
 * [[N-no problem!|Dance a little.]]
-<% } else if (s.partyFlavorLabrador) { %>
+<% else if (s.partyFlavorLabrador) %>
 * [[Y-you too?|Dance a little.]]
-<% } else {%>
+<% else %>
 * [[Dance a little more.|Dance a little.]]
-<% } %>
+<% %>
+* [[Grab some punch.]]
 <% if (s.partyFlavorBasil || s.partySeenBasil || setup.isFlagSet("talkedToBasil")) {
   s.partySeenBasil = true; %>
 * [[Wink back at the horse.|Wink back at Basil.]]
 <% } if (s.partyFlavorWonderwolf || s.partySeenByron || setup.isFlagSet("talkedToByron")) {
   s.partySeenByron = true; %>
 * [[Look at wolf.]]
-<% } %>
-* [[Grab some punch.]]
 <% } %>
 
 :: Randomized Party Flavor [hide]
@@ -94,7 +87,6 @@ if (!setup.partyDanceLiterals) {
 `A heavy-set bear with a selfie stick is recording herself as she shakes her massive hips. You try not to stare, but it's absolutely hypnotic.`,
 `A lioness whispers to her friend, "Did you know there's a rabbit here?" They snicker. "Woah. Do you think it has a vore fetish?"`,
 `You see a catboy eagerly following a lioness out of the room. They both seem quite excited.`,
-`A jackrabbit reaches down, grabs a tiny mouse off the floor, and dangles it teasingly over her snout. Should you... do something?`,
 ].sort(e => 0.5 - Math.random());
 
 setup.partyDanceLiterals.push(`A big brown stallion in a green jacket seems to take notice of your dancing. He winks at you from across the room.`);
@@ -115,39 +107,58 @@ s.partyFlavorLioness = text.includes("lioness");
 s.partyFlavorLabrador = text.includes("A drunk labrador");
 s.partyFlavorGutbump = text.includes("accidentally bumps into you");
 s.partyFlavorBasil = text.includes("brown stallion");
-s.partyFlavorMicroMouse = text.includes("a tiny mouse");
 return text;
 })() %>
 
 :: Grab some punch.
-<%= (() => {
-s.punchCount = visited(passage.id);
-const literals = [
-`You scoot over toward the thoughtfully placed snack table, and grab a small cup of fruit punch. Taking a little sip, you observe that it tastes mostly like vodka, with a little hint of kool-aid. ...Yuck.`,
 
-`You grab another cup of punch, and down it. After tasting it again, the flavor starts to grow on you.`,
+<%
+const punchCount = visited(passage.id);
+if (punchCount == 1) %>
+You scoot over toward the thoughtfully placed snack table, and grab a small cup of fruit punch. Taking a little sip, you observe that it tastes mostly like vodka, with a little hint of kool-aid. ...Yuck.
+<% else if (punchCount == 2) %>
+You grab another cup of punch, and down it. After tasting it again, the flavor starts to grow on you.
+<% else if (punchCount == 3) %>
+You get a second drink of punch. Maybe it's your weak tolerance, but you're feeling pretty tipsy right now.
+<% else if (punchCount == 4) %>
+You walk over to the snack table, and slam down a third cup of vodka punch. You feel like you're about to lose your balance. Wow. That was probably a bad idea.
+<% else if (punchCount == 5) %>
+On your way to get a fourth cup of punch, you see a jackrabbit grab a tiny mouse off the floor, and dangle it teasingly over her snout. Should you... do something?
 
-`You get a second drink of punch. Maybe it's your weak tolerance, but you're feeling pretty tipsy right now.`,
+* [[Do nothing.|Watch the jackrabbit eat.]]
+* [[H-hey, don't do that!|Intervene on the jackrabbit.]]
+<% else { %>
+You walk over the punch bowl, look down at the vat of boozy kool-aid, and scowl with disgust. You get the nagging feeling that one more drink will make something very bad happen.
 
-`You walk over to the snack table, and slam down a third cup of vodka punch. You feel like you're about to lose your balance. Wow. That was probably a bad idea.`,
+<% if (s.rescuedKaia) { %>
+Kaia the mouse looks up at you with concern. <q.mouse>Uh, hi Hollis! I hear that puch can be pretty strong. Maybe you should take it slow?</q>
 
-`You go to get another drink, but trip and fall on the way. Maybe you should slow down?`,
-story.render("Grab one more punch.")
-];
+* [[Good idea, thanks.]]
+* [[Get very very drunk.]]
+* [[Eat Kaia.]]
 
-return literals[Math.min(s.punchCount, literals.length) - 1]
-})() %>
+<% } else { %>
+A labrador notices and elbows you. "Woahh, dude! Maybe go a little easy on the party sauce, kay dude?"
+
+* [[Get very very drunk.]]
+* [[Decide not to.|Dance a little.]]
+<% } %>
+<% } %>
+
+<% if (punchCount <= 4) %>
+* [[Go back.|Dance a little.]]
+
+:: Good idea, thanks.
+
+You nod, and thank her for looking out of your health.
+
+<q.mouse>No problem! Lemme know if you find faith. Er, Faith, my girlfriend.</q>
 
 * [[Go back.|Dance a little.]]
 
-:: Grab one more punch.
+:: Eat Kaia.
 
-You look toward the punch bowl and scowl with disgust.
-
-<% if (s.rescuedKaia) { %>
-Kaia the mouse looks up at you with concern. "Uh, maybe take it slow, huh?"
-<% } else { %>
-A labrador notices and elbows you. "Woahh, dude! Maybe go a little easy on the party sauce, kay dude?"
-<% } %>
+What? No. I get that you're drunk, but why would you even think of something like that?
 
 * [[Get very very drunk.]]
+* [[Go back.|Dance a little.]]
