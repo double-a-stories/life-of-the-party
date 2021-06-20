@@ -8,11 +8,11 @@
 
 <% s.rescuedKaia = false; s.partyFlavorMicroMouse = false; %>
 
-You watch as the jackrabbit snarfs down the little white mouse boy with a satisfied smile. At first he squeaks out in fear, but the sound stops instantly as he snakes down her throat.
+You watch as the jackrabbit snarfs down the little white mouse with a satisfied smile. At first it squeaks out in fear, but the sound stops instantly as it begins snaking down her throat.
 
 You feel slightly guilty for not intervening. And somehow... aroused?
 
-<%= story.render("Living room commands") %>
+* [[Go back.|Dance a little.]]
 
 :: Intervene on the jackrabbit.
 
@@ -63,7 +63,7 @@ You nod awkwardly.
 
 You reply that your name is Hollis, and ask the mouse if she's here with anybody else.
 
-<q.mouse>I'm here with my friend Faith,</q> she says, <q.mouse>Er, girlfriend actually. I haven't seen her recently, but I'm sure she's be fine. Would you let me know if you see her? She's a mouse like me.</q>
+<q.mouse>I'm here with my friend Faith,</q> she says, <q.mouse>Er, girlfriend actually. I haven't seen her recently, but I'm sure she's fine. Would you let me know if you see her? She's a mouse like me.</q>
 
 You nod again.
 
