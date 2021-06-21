@@ -11,14 +11,13 @@ Hollis realizes that Byron's sensitive exterior is just a front for <%-s.bm?"his
 
 :: Look at wolf. [checkpoint]
 
-*CW: Negging. Threats and coercion. Non-consensual.*
+*CW: Negging. Threats and coercion. Non-consensual. Blood.*
 
 A black-furred wolf, about six feet tall, wearing in a stylish scarf and a checkered red flannel shirt. They're sitting aloofly on a couch, and serenading the party with an acoustic guitar.
 
 * <a0 onclick="story.state.bm = true;" data-passage="Talk to Byron.">Talk to him.</a> *(Male pred)*
 * <a0 onclick="story.state.bm = false;" data-passage="Talk to Byron.">Talk to her.</a> *(Female pred)*
 * [[Go back.|Dance a little.]]
-*This route contains **unfinished content**, planned to be completed in v0.6.0. Proceed at your own risk.*
 
 :: Talk to Byron.
 
@@ -155,7 +154,6 @@ Ugh, stop talking like that, you say. The whole "sensitive musician" thing is ob
 
 <%-s.bm?"He":"She"%> narrows <%-s.bm?"his":"her"%> eyes, and scowls, <q.byron>...You insult me gravely, little thing. I have been nothing but a pinnacle of courtesy, and you rebuff both me and my pedigree.</q> <%-s.bm?"He":"She"%> sticks out a paw. <q.byron>Follow me.</q>
 
-* [[Don't take it.]]
 * [[Don't take it.]]
 
 :: Don't take it.
