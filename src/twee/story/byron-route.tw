@@ -89,9 +89,9 @@ You roll your eyes.
 
 The wolf raises <%-s.bm?"his":"her"%> eyebrows as you correctly rattle off three D.A.M.G album titles. <q.byron>Hm. I see you prefer their later work.</q>
 
-On the contrary, your favorite was their first live album, *Dingoes On Tour*. You say you think they sounded best before their original drummer, left due to creative differences.
+On the contrary, your favorite was their first live album, *Dingoes On Tour*. You say you think they sounded best before their original drummer quit differences.
 
-The wolf gestures for you to sit. <q.byron>I take it then, that you don't believe all the conspiracy theories?</q>
+<q.byron>Quit? I take it then, that you don't believe all the conspiracy theories?</q> The wolf gestures for you to sit.
 
 * [[Of course I don't.]]
 
@@ -144,7 +144,7 @@ Uh-huh, you say.
 
 You tell Byron firmly that you're not gonna let <%-s.bm?"him":"her"%> eat you, or fuck you, or anything.
 
-<%-s.bm?"His":"Her"%> mouth seems to become slightly dry. <q.byron>Are... are you sure? I have been told it can be quite... pleasant, given the right participants. A sensual reminder of animal passions long forgotten, heightened by the careless grip of mortality...</q>
+<%-s.bm?"His":"Her"%> mouth seems to become slightly dry. <q.byron>Are... are you sure? I have been told it can be quite... pleasant, given the right participants. A sensual reminder of animal passions long forgotten, heightened by the cruel grip of mortality...</q>
 
 * [[Shut it!]]
 
@@ -177,7 +177,7 @@ You grit your teeth, and walk helplessly alongside <%-s.bm?"Byron":"Emily"%> as 
 
 * [[Blink twice.]]
 
-:: Blink twice. [checkpoint]
+:: Blink twice.
 
 "Yoo, dude!" the dog chuckles, "If it isn't Emory <%-s.bm?"Whatshisname":"Whatserface"%>, from the chess club! It's Gus! Long time no see, dude!"
 
@@ -189,45 +189,49 @@ The labrador points a paw at the wolf, and asks you, "Hey dude, this dude bother
 
 "Let em talk, dude," the dog interrupts.
 
+* [[Well, um...|Well, um... (Byron)]]
+
+:: Well, um... (Byron) [checkpoint]
+
+You hesitate for a moment. Then, you feel <%-s.bm?"Byron":"Emily"%>'s paw tighten on your shoulder. The pointy claws of <%-s.bm?"his":"her"%> thumb prod you in the back, probably harder than <%-s.bm?"he":"she"%> meant it to. It stings. D-did <%-s.bm?"he":"she"%> just draw blood? You grimace slightly, and suck air through your teeth.
+
 * [[Haha! We're totally cool! Yup!]]
-* [[Get this creep off me!]]
+* [[Ow, get this creep away from me!]]
 
 :: Haha! We're totally cool! Yup!
+
+You reply nonchalantly, struggling to get the words out without arousing suspicion. You hope the dog might notice your obvious discomfort, but he does not.
 
 "Oh, cool. Have a cool time, dudes," the dog says, shooting both of you a wink and walking away.
 
 <q.byron>Oh,</q> <%-s.bm?"Byron":"Emily"%> mutters with a half-smile, <q.byron>We will.</q>
 
-You gulp.
+You gulp, as the wolf leads you from the room.
 
 * [[Follow Byron upstairs.]]
 
-:: Get this creep off me! [gore]
+:: Ow, get this creep away from me! [gore]
+<%-s.bm?"Byron":"Emily"%>'s claws instinctively dig into you as you try to pull away. You squeal as <%-s.bm?"he":"she"%> puts a huge bloody gash on your back.
+<q.byron>Oh dear,</q> <%-s.bm?"Byron":"Emily"%> mutters in surprise. <%-s.bm?"He":"She"%> stares down at <%-s.bm?"his":"her"%> claws, wet with your blood, seemingly more intrigued than bothered. <%-s.bm?"He":"She"%> wipes them on <%-s.bm?"his":"her"%> flannel, and says, <q.byron>I am ashamed, dear rabbit, that it has come to this. Perhaps we beasts truly are inseparable from our dark– *Ow!*</q>
+<%-s.bm?"Byron":"Emily"%> is interrupted by Gus's fist, as he completely clobbers <%-s.bm?"him":"her"%> in the face, knocking <%-s.bm?"him":"her"%> to the floor.
 
-*CW: Blood, personal injury*
-
-<%-s.bm?"Emmet":"Emily"%>'s claws instinctively dig into you as you try to pull away. You squeal as <%-s.bm?"he":"she"%> puts a huge bloody gash on your back.
-
-<q.byron>Oh dear,</q> <%-s.bm?"Emmet":"Emily"%> mutters in surprise. <%-s.bm?"He":"She"%> stares down at <%-s.bm?"his":"her"%> bloodied claws, seemingly more intrigued than bothered. <%-s.bm?"He":"She"%> wipes them on <%-s.bm?"his":"her"%> shirt, and says, <q.byron>I am ashamed, dear rabbit, that it has come to this. Perhaps we beasts truly are inseparable from our dark– *Ow!*</q>
-
-<%-s.bm?"Emmet":"Emily"%> is interrupted by Gus's fist, as he completely clobbers <%-s.bm?"him":"her"%> in the face, knocking <%-s.bm?"him":"her"%> to the floor.
-
-"Party fuckin' foul, dude," Gus says, checking on you, "You okay, bunny bro?"
+"Party fuckin' foul, dude," Gus says, as <%-s.bm?"Byron":"Emily"%> collapses. He leans down to check on you. "You okay, bunny bro?"
 
 You respond by fainting from blood loss.
-
-* [[Ow...]]
-
-:: Ow... [morning]
-
-// TODO:
-
-You wake up the next day in Basil's bedroom, bandaged up. Clif walks in, and comes onto you.
 
 ### Game Over.
 
 * <a0 onclick="setup.rewind()">Rewind</a>
 * [[Restart|Start]]
+
+
+
+
+
+
+
+
+
 
 
 :: Follow Byron upstairs.
