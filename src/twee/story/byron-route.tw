@@ -111,15 +111,15 @@ The wolf is silent for a moment, then says, <q.byron>I am impressed by your know
 
 <q.byron>Pleasure to make your acquaintance, dear Freely,</q> the wolf says, now observing you with renewed interest. <%-s.bm?"His":"Her"%> fluffy tail curls around your back. It makes you slightly nervous.
 
-Finally, <%-s.bm?"he":"she"%> deigns to introduce <%-s.bm?"himself":"herself"%> to you. <%-s.bm?"He":"She"%> gestures grandiosely to <%-s.bm?"his":"her"%> chest, and says, <q.byron>I am <%-s.bm?"Emmet":"Emily"%> Byron III, but you may call me simply <%-s.bm?"Emmet":"Emily"%>.</q>
+Finally, <%-s.bm?"he":"she"%> deigns to introduce <%-s.bm?"himself":"herself"%> to you. <%-s.bm?"He":"She"%> gestures grandiosely to <%-s.bm?"his":"her"%> chest, and says, <q.byron>I am <%-s.bm?"Emmet":"Emily"%> Byron III, but you may call me simply <%-s.bm?"Byron":"Emily"%>.</q>
 
-<%-s.bm?"Emmet":"Emily"%> extends <%-s.bm?"his":"her"%> massive right paw.
+<%-s.bm?"Byron":"Emily"%> extends <%-s.bm?"his":"her"%> massive right paw.
 
 * [[Shake.]]
 
 :: Shake.
 
-You politely return the pawshake. <%-s.bm?"Emmet":"Emily"%>'s firm, professional grip around your wrist is uncomfortably tight, and you're relieved when <%-s.bm?"he":"she"%> lets go.
+You politely return the pawshake. <%-s.bm?"Byron":"Emily"%>'s firm, professional grip around your wrist is uncomfortably tight, and you're relieved when <%-s.bm?"he":"she"%> lets go.
 
 <q.byron>Say, Freely,</q> <%-s.bm?"he":"she"%> says, <q.byron>Why don't we head upstairs? Somewhere the two of us may speak more... privately?</q>
 
@@ -140,7 +140,7 @@ Uh-huh, you say.
 
 :: God, you're pathetic!
 
-<%-s.bm?"Emmet":"Emily"%> blinks. <q.byron>Excuse me?</q>
+<%-s.bm?"Byron":"Emily"%> blinks. <q.byron>Ex*cuse* me?</q>
 
 You tell Byron firmly that you're not gonna let <%-s.bm?"him":"her"%> eat you, or fuck you, or anything.
 
@@ -150,7 +150,7 @@ You tell Byron firmly that you're not gonna let <%-s.bm?"him":"her"%> eat you, o
 
 :: Shut it!
 
-Ugh, stop talking like that, you say. The whole "sensitive musician" thing is obviously just a ploy to lure in prey. You tell Byron <%-s.bm?"he":"she"%>'s just horny and hungry, like everybody else at this dumb party. A literal wolf in sheep's clothing!
+Ugh, stop talking like that, you say. The whole "sensitive musician" thing is obviously just a ploy to lure in prey. You tell <%-s.bm?"Byron":"Emily"%> <%-s.bm?"he":"she"%>'s just horny and hungry, like everybody else at this dumb party. A literal wolf in sheep's clothing!
 
 <%-s.bm?"He":"She"%> narrows <%-s.bm?"his":"her"%> eyes, and scowls, <q.byron>...You insult me gravely, little thing. I have been nothing but a pinnacle of courtesy, and you rebuff both me and my pedigree.</q> <%-s.bm?"He":"She"%> sticks out a paw. <q.byron>Follow me.</q>
 
@@ -171,21 +171,21 @@ You tell <%-s.bm?"him":"her"%> you're not gonna-
 
 :: Stand up.
 
-<q.byron>Good.</q> Byron places <%-s.bm?"his":"her"%> paw firmly on your lower back. You feel <%-s.bm?"his":"her"%> claws outstretched, threatening to shred through your clothes and into the flesh beneath. <q.byron>Let's go upstairs, shall we?</q>
+<q.byron>Good.</q> <%-s.bm?"Byron":"Emily"%> places <%-s.bm?"his":"her"%> paw firmly on your lower back. You feel <%-s.bm?"his":"her"%> claws outstretched, as if threatening to shred through your clothes and into the flesh beneath. <q.byron>Let's go upstairs, shall we?</q>
 
-You grit your teeth, and walk helplessly alongside Byron as <%-s.bm?"he":"she"%> leads you back out of the living room. You're about to enter the foyer, when a golden labrador in a green jacket stops the two of you.
+You grit your teeth, and walk helplessly alongside <%-s.bm?"Byron":"Emily"%> as <%-s.bm?"he":"she"%> leads you back out of the living room. You're about to enter the foyer, when a golden labrador in a green jacket stops the two of you.
 
 * [[Blink twice.]]
 
 :: Blink twice. [checkpoint]
 
-"Yoo, dude!" the dog chuckles, "If it isn't Emory <%-s.bm?"Whatsername":"Whatshisface"%>! Remember me from Riveredge, dude? It's Gus!"
+"Yoo, dude!" the dog chuckles, "If it isn't Emory <%-s.bm?"Whatshisname":"Whatserface"%>, from the chess club! It's Gus! Long time no see, dude!"
 
-<q.byron><%-s.bm?"Emmet":"Emily"%> Byron,</q> the wolf smiles, giving you a friendly pat on the shoulder. <q.byron>And this is my charming friend, Hollis!</q>
+<q.byron><%-s.bm?"Byron":"Emily"%> Byron,</q> the wolf smiles, giving you a friendly pat on the shoulder. <q.byron>And this is my charming friend, Hollis!</q>
 
 The labrador points a paw at the wolf, and asks you, "Hey dude, this dude bothering you, dude? Cause that's supes no bueno, dude."
 
-<%-s.bm?"Emmet":"Emily"%> tightens <%-s.bm?"his":"her"%> grip on you and tries start walking again, and says, <q.byron>No, we were just-</q>
+<%-s.bm?"Byron":"Emily"%> tightens <%-s.bm?"his":"her"%> grip on you and tries start walking again, and says, <q.byron>No, we were just-</q>
 
 "Let em talk, dude," the dog interrupts.
 
@@ -196,7 +196,7 @@ The labrador points a paw at the wolf, and asks you, "Hey dude, this dude bother
 
 "Oh, cool. Have a cool time, dudes," the dog says, shooting both of you a wink and walking away.
 
-<q.byron>Oh,</q> <%-s.bm?"Emmet":"Emily"%> mutters with a half-smile, <q.byron>We will.</q>
+<q.byron>Oh,</q> <%-s.bm?"Byron":"Emily"%> mutters with a half-smile, <q.byron>We will.</q>
 
 You gulp.
 
