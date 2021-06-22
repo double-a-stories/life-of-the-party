@@ -109,12 +109,11 @@ a:active {
   outline: none;
 }
 
-.center-list, .center-list>ul {
-  text-align: center;
-  padding-inline-start: 0;
-  list-style-position: inside;
+.center-list {
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
 }
-
 /* Mobile mode */
 @media screen and (max-width:500px) {
   .commands-list a {
