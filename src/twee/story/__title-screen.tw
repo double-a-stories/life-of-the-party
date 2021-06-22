@@ -39,6 +39,9 @@ tw-passage > * {
 <div class="center-list">
 
 * [[Life of the Party.]]
+<% if (setup.getAchievements().length >= setup.totalAchievements) { %>
+* [[Epilogue.]]
+<% } %>
 
 </div>
 
