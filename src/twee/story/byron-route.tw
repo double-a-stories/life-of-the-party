@@ -224,30 +224,108 @@ You respond by fainting from blood loss.
 * <a0 onclick="setup.rewind()">Rewind</a>
 * [[Restart|Start]]
 
-
-
-
-
-
-
-
-
-
-
 :: Follow Byron upstairs.
 
-<q.byron>Those damn dogs,</q> <%-s.bm?"Emmet":"Emily"%> mutters as <%-s.bm?"he":"she"%> leads you through the foyer and up the stairs. <q.byron>More interested in rutting and drinking than </q>
+<q.byron>Those damn dogs,</q> <%-s.bm?"Byron":"Emily"%> mutters as <%-s.bm?"he":"she"%> drags you through the foyer and up the stairs. <q.byron>Just interested in rutting and drinking... No respect for superior intellect, and no appreciation for the finer things in life...</q> <%-s.bm?"He":"She"%> opens the door to an upstairs bedroom, and ushers you in.
+
+<q.byron>There,</q> the wolf says, locking the door, <q.byron>Just the two of us now!</q>
+
+* [[You'll never get away with this.]]
+
+:: You'll never get away with this.
+
+The wolf chuckles. <q.byron>With what? Eating you? I guess you truly are stupider than you look.</q> <%-s.bm?"He":"She"%> gestures for you to take a seat on the bed. You oblige.
+
+<q.byron>I shan't bore your little mind with statistics, but did you know that 900,000 prey are reported missing every year? You might also be interested to know that only 2% of those cases are even investigated?</q>
+
+You shift uncomfortably, still trying not to look frightened. <%-s.bm?"Byron":"Emily"%> leans forward and puts <%-s.bm?"his":"her"%> paws on your knees.
+
+<q.byron>So face it, little rabbit. No one is coming to save you...</q>  <%-s.bm?"He":"She"%> pats <%-s.bm?"his":"her"%> stomach, and says, <q.byron>...And once you are done in here, no one is ever going to find you. So why don't we make it easy? Take off your clothes.</q>
+
+* [[Do as told.|Take off your top.]]
+* [[Fuck you.|Take off your top.]]
+
+:: Take off your top.
+
+<q.byron>Oh, no need to be ashamed, dear rabbit. You and I are merely animals, playing at civilization, and these clothes are but a pointless shroud.</q> The wolf "assists" in forcibly undressing you.
+
+<q.byron>How obedient. I think deep down, your body is eager to fulfill its purpose in feeding me...</q> <%-s.bm?"He":"She"%> looks you over, then notices the small red gash on your shoulder.
+
+<q.byron>Oh dear, let me have a look at this...</q> <%-s.bm?"He":"She"%> sticks <%-s.bm?"his":"her"%> nose into your fur, then drags <%-s.bm?"his":"her"%> tongue across your wound. You wince as <%-s.bm?"he":"she"%> tastes your blood. <q.byron>Hm, you're not exactly cabernet, but still... I can see why my ancestors liked this...</q>
+
+* [[G-gross...]]
+
+:: G-gross...
+
+You shudder as <%-s.bm?"he":"she"%> laps at your wound, instinctively pulling away. The wolf stops licking, and stands while dusting off <%-s.bm?"his":"her"%> shoulders.
+
+<q.byron>I would not expect you to understand a carnivore's complex palete,</q> <%-s.bm?"Byron":"Emily"%> says, <q.byron>The wretched pretenders of my kind claim to be civilized eaters of soy, fish, and dairy, but some appetites are not so easily tamed...</q>
+
+You rest your chin on your palms with boredom.
+
+<%-s.bm?"He":"She"%> examines <%-s.bm?"his":"her"%> claws coldly, <q.byron>At the very least, one must have the nobility to be honest about their bloodlust.</q>
+
+* [[Shut up shut up shut up!]]
+
+:: Shut up shut up shut up!
+
+You tell <%-s.bm?"Byron":"Emily"%>, oh my god, shut up! Can <%-s.bm?"he":"she"%> go thirty seconds without droning on and on about pretentious nonsense?? You'd much rather bleed to death than spend one more second listening to <%-s.bm?"him":"her"%> speak.
+
+<q.byron>Hmph. I was only trying to have a decent conversation,</q> the wolf says, <q.byron>But if you prefer to spend your final moments like an ungrateful, frightened whelp, then so be it. I can be scary.</q>
+
+<%-s.bm?"He":"She"%> bares <%-s.bm?"his":"her"%> fangs.
+
+* [[Wow, I'm terrified.]]
+
+:: Wow, I'm terrified.
 
 // TODO:
 
-You follow <%-s.bm?"Emmet":"Emily"%> into one of the bedrooms upstairs. <%-s.bm?"He":"She"%> vores you, all while gloating about what an awful rabbit you are.
+* Byron tries harder to be scary, accidentally embarassing <%-s.bm?"him":"her"%>self when it becomes obvious <%-s.bm?"he":"she"%> is trying too hard.
+* Finally, Byron eats you, and explains in excruciating, literary detail, what <%-s.bm?"his":"her"%> body will do to you.
+* Hollis gets in one last kick, then passes out and begins digesting.
+* Byron goes back downstairs
+* Ending passage.
 
-<% story.render("Byron route end.") %>
-
-:: Byron route end.
-
-### The End. (WIP)
+### The end.
 
 <% setup.addAchievement(`Untitled (Byron Vore Ending)`); %>
+
+* [[Restart.|Start]]
+
+:: Byron Epilogue.
+
+<script>
+story.state.previousCommand = "<i>Epilogue</i>"
+</script>
+
+<style>
+body {
+  --background: #ffc;
+  font-family: Tinos, Times New Roman, serif;
+}
+tw-passage {
+
+    background: repeating-linear-gradient(#886, #886 2px, transparent 2px, transparent 2rem);
+  background-attachment: local;
+  background-size: 2rem 2rem;
+  line-height: 2rem;
+}
+h1, h2, h3, h4 {
+  margin-bottom: 0;
+}
+tw-passage > * {
+  line-height: 2rem;
+  margin-block-end: 2rem;
+}
+</style>
+
+by Byron III
+
+A very bad vore-themed poem?<br>
+Unbearably terrible quatrains<br>
+Of wretched song lyrics.<br>
+
+### The end.
 
 * [[Restart.|Start]]
