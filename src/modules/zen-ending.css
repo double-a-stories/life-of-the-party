@@ -100,18 +100,18 @@ body[data-tags~="dreamy_3"] {
 .space {
   background-position: center;
   background-size: 200px 200px;
-  background-repeat: round;
-/*   border: 1px dashed purple; */
-  bottom: 0;
-  left: 0;
   position: fixed;
-  right: 0;
-  top: 0;
+  top: min(-50vh, -50vw);
+  left: min(-50vh, -50vw);
+  bottom: min(-50vh, -50vw);
+  right: min(-50vh, -50vw);
   z-index: -100;
+  animation-name: space;
+  animation-iteration-count: infinite;
 }
 
 .stars1 {
-  animation: space 120s ease-in-out infinite;
+  animation-duration: 120s;
   background-image:
     radial-gradient(1px 1px at 25px 5px, var(--color), rgba(255, 255, 255, 0)),
     radial-gradient(1px 1px at 50px 25px, var(--color), rgba(255, 255, 255, 0)),
@@ -122,8 +122,7 @@ body[data-tags~="dreamy_3"] {
 }
 
 .stars2 {
-  animation: space 180s infinite;
-  animation-delay: -2s;
+  animation-duration: 190s;
   background-image:
     radial-gradient(1px 1px at 75px 125px, var(--color), rgba(255, 255, 255, 0)),
     radial-gradient(1px 1px at 100px 75px, var(--color), rgba(255, 255, 255, 0)),
@@ -134,8 +133,7 @@ body[data-tags~="dreamy_3"] {
 }
 
 .stars3 {
-  animation: space 240s infinite;
-  animation-delay: -5s;
+  animation-duration: 220s;
   background-image:
     radial-gradient(1px 1px at 10px 10px, var(--color), rgba(255, 255, 255, 0)),
     radial-gradient(1px 1px at 150px 150px, var(--color), rgba(255, 255, 255, 0)),
@@ -159,3 +157,42 @@ body[data-tags~="dreamy_3"] {
     transform: rotate(360deg);
   }
 }
+
+/* Only show when passage has "stars" tag */
+
+#space-bg {
+  display: none;
+  position: absolute;
+  z-index: -3;
+}
+[data-tags~="stars"] #space-bg {
+  display: block;
+  animation-name: fadein;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion) {
+  .space {
+    animation-name: none !important;
+  }
+}
+
+@media (prefers-contrast) {
+  tw-passage {
+    background: var(--background);
+  }
+}
+

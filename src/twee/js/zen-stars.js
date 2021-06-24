@@ -1,6 +1,6 @@
 // MIT-0
 
-// Creates the following markup, and displays it exclusively on passages with the "stars" tag.
+// Creates the following markup,
 // <div#space-bg>
 //   <div.space.stars1>
 //   <div.space.stars2>
@@ -16,9 +16,4 @@ $(window).on("sm.story.started", (ev, { passage }) => {
     space.appendChild(stars);
   }
   document.querySelector("tw-story").appendChild(space);
-})
-
-$(window).on("sm.passage.shown", (ev, { passage }) => {
-  const space = document.querySelector("#space-bg");
-  space.style.display = passage.tags.includes("stars") ? "" : "none";
 })
