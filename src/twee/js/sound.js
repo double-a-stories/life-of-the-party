@@ -49,7 +49,7 @@ const gurgle = new Howl({
   volume: 1.0
 });
 const epilogueMusic = new Howl({
-  src: ["assets/sound/dozent - Flower.mp3"],
+  src: ["assets/sound/kevp888 - CD_YIN_001.mp3"],
   html5: true,
   loop: true,
   volume: 1.0
