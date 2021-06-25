@@ -20,3 +20,17 @@ class SoundInstance {
     }
   }
 }
+
+
+const birds = new SoundInstance(new Howl({
+  src: ["assets/sound/birds.mp3"],
+  html5: true,
+}));
+
+$(window).on("sm.passage.shown", (ev, { passage }) => {
+  if (passage.tags.includes("morning")) {
+    birds.fadeIn();
+  } else {
+    birds.fadeOut();
+  }
+})
