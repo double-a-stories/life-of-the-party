@@ -52,3 +52,9 @@ $(window).on('sm.story.started', function(event, { story }) {
         story.startPassage = params.get("start");
     }
 })
+
+setup.setStart = () => {
+    const params = new URLSearchParams();
+    params.set("start", passage.name);
+    location.search = params.toString();
+}
