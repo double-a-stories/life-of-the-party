@@ -307,12 +307,11 @@ a:active {
   outline: none;
 }
 
-.center-list, .center-list>ul {
-  text-align: center;
-  padding-inline-start: 0;
-  list-style-position: inside;
+.center-list {
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
 }
-
 /* Mobile mode */
 @media screen and (max-width:500px) {
   .commands-list a {
@@ -433,18 +432,18 @@ body[data-tags~="dreamy_3"] {
 .space {
   background-position: center;
   background-size: 200px 200px;
-  background-repeat: round;
-/*   border: 1px dashed purple; */
-  bottom: 0;
-  left: 0;
   position: fixed;
-  right: 0;
-  top: 0;
+  top: min(-50vh, -50vw);
+  left: min(-50vh, -50vw);
+  bottom: min(-50vh, -50vw);
+  right: min(-50vh, -50vw);
   z-index: -100;
+  animation-name: space;
+  animation-iteration-count: infinite;
 }
 
 .stars1 {
-  animation: space 120s ease-in-out infinite;
+  animation-duration: 120s;
   background-image:
     radial-gradient(1px 1px at 25px 5px, var(--color), rgba(255, 255, 255, 0)),
     radial-gradient(1px 1px at 50px 25px, var(--color), rgba(255, 255, 255, 0)),
@@ -455,8 +454,7 @@ body[data-tags~="dreamy_3"] {
 }
 
 .stars2 {
-  animation: space 180s infinite;
-  animation-delay: -2s;
+  animation-duration: 190s;
   background-image:
     radial-gradient(1px 1px at 75px 125px, var(--color), rgba(255, 255, 255, 0)),
     radial-gradient(1px 1px at 100px 75px, var(--color), rgba(255, 255, 255, 0)),
@@ -467,8 +465,7 @@ body[data-tags~="dreamy_3"] {
 }
 
 .stars3 {
-  animation: space 240s infinite;
-  animation-delay: -5s;
+  animation-duration: 220s;
   background-image:
     radial-gradient(1px 1px at 10px 10px, var(--color), rgba(255, 255, 255, 0)),
     radial-gradient(1px 1px at 150px 150px, var(--color), rgba(255, 255, 255, 0)),
@@ -491,12 +488,52 @@ body[data-tags~="dreamy_3"] {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Only show when passage has "stars" tag */
+
+#space-bg {
+  display: none;
+  position: absolute;
+  z-index: -3;
+}
+[data-tags~="stars"] #space-bg {
+  display: block;
+  animation-name: fadein;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion) {
+  .space {
+    animation-name: none !important;
+  }
+}
+
+@media (prefers-contrast) {
+  tw-passage {
+    background: var(--background);
+  }
 }</style>
 <!-- Message for users without JavaScript -->
 <noscript>
+  <tw-story>
   <img src="logo.png" srcset="logo.png, https://double-a-stories.github.io/life-of-the-party/logo.png" alt="Life of the Party" width="400" style="margin: 0 auto;">
   <!-- Tweego appends this content to the head-->
   <p>This game requires browser scripts to run. Please <strong>enable JavaScript</strong>, and reload this page.</p>
+  </tw-story>
 </noscript>
 
 <!-- Google fonts-->
@@ -514,18 +551,14 @@ body[data-tags~="dreamy_3"] {
 <meta property="og:image" content="https://double-a-stories.github.io/life-of-the-party/logo.png">
 
 <!-- Fallback favicons -->
+<link rel="icon" type="image/svg+xml" href="https://double-a-stories.github.io/life-of-the-party/assets/icons/favicon.svg">
+<link rel="icon" type="image/png" href="https://double-a-stories.github.io/life-of-the-party/assets/icons/favicon.png">
+<link rel="apple-touch-icon" href="https://double-a-stories.github.io/life-of-the-party/assets/icons/apple-touch-icon.png">
+<link rel="mask-icon" href="https://double-a-stories.github.io/life-of-the-party/assets/icons/favicon.svg" color="#eee">
 <!-- Prefer local URL. -->
-<!-- <link rel="icon" type="image/png" href="https://double-a-stories.github.io/life-of-the-party/assets/icons/favicon.png"> -->
-<link rel="icon" type="image/png" href="assets/icons/favicon.png">
-<!-- favicon.svg -->
-<!-- <link rel="icon" type="image/svg+xml"
-  href="https://double-a-stories.github.io/life-of-the-party/assets/icons/favicon.svg"> -->
 <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-<!-- mask-icon.svg -->
-<!-- <link rel="mask-icon" href="https://double-a-stories.github.io/life-of-the-party/assets/icons/mask-icon.svg"
-  color="#d93"> -->
+<link rel="icon" type="image/png" href="assets/icons/favicon.png">
 <link rel="mask-icon" href="assets/icons/favicon.svg" color="#eee">
-
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 
 <!-- Twemoji script -->
@@ -978,10 +1011,16 @@ $(window).on('sm.story.started', function(event, { story }) {
         story.startPassage = params.get("start");
     }
 })
+
+setup.setStart = () => {
+    const params = new URLSearchParams();
+    params.set("start", passage.name);
+    location.search = params.toString();
+}
 /* twine-user-script #7: "zen-stars.js" */
 // MIT-0
 
-// Creates the following markup, and displays it exclusively on passages with the "stars" tag.
+// Creates the following markup,
 // <div#space-bg>
 //   <div.space.stars1>
 //   <div.space.stars2>
@@ -998,12 +1037,10 @@ $(window).on("sm.story.started", (ev, { passage }) => {
   }
   document.querySelector("tw-story").appendChild(space);
 })
-
-$(window).on("sm.passage.shown", (ev, { passage }) => {
-  const space = document.querySelector("#space-bg");
-  space.style.display = passage.tags.includes("stars") ? "" : "none";
-})
-/* twine-user-script #8: "Tweeomoji" */
+/* twine-user-script #8: "Max achievements" */
+window.setup = window.setup || {};
+setup.totalAchievements = 9;
+/* twine-user-script #9: "Tweeomoji" */
 // Load Twemoji script
 
 const TWEMOJI_OPTIONS = {
@@ -1023,14 +1060,14 @@ if (!window.twemoji) {
 
 // BAD: <%s.rm?"⚠️":"⚠️"%>
 // OK: <%s.rm?`⚠️:`⚠️`%>
-/* twine-user-script #9: "Links" */
+/* twine-user-script #10: "Links" */
 $(window).on('sm.passage.shown', () => {
   $("tw-passage ul a[href='javascript:void(0)'], .command-link").each((i, el) => {
     $(el).unwrap("p");
     $(el).parents("ul").addClass("commands-list");
   })
 });
-/* twine-user-script #10: "Debug console message" */
+/* twine-user-script #11: "Debug console message" */
 $(window).on('sm.story.started', function (event, {
   story
 }) {
@@ -1049,9 +1086,9 @@ console.log(`%c${story.passage("Debug message").source}\n`, "font: 1rem/1.6 sans
 window.warpZone = function(){
   story.show("Warp zone");
 }
-/* twine-user-script #11: "Misc story variables" */
+/* twine-user-script #12: "Misc story variables" */
 story.version = `v0.6.0-nightly`;
-/* twine-user-script #12: "Detect touch users" */
+/* twine-user-script #13: "Detect touch users" */
 document.addEventListener('pointerdown', function isTouching(ev) {
   // Call the appropriate pointer type handler
   if (ev.pointerType == undefined) {
@@ -1059,11 +1096,11 @@ document.addEventListener('pointerdown', function isTouching(ev) {
   } else {
     window.isTouching = !(ev.pointerType == "mouse");
   }
-});</script><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-passagedata pid="1" name="Achievements list" tags="" position="100,100" size="100,100">&lt;% const achievements = setup.getAchievements().sort();
-   const story_max_achievements = 9; // TODO: change me!
+});</script><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-passagedata pid="1" name="Achievements list" tags="" position="100,100" size="100,100">&lt;% const achievements = setup.getAchievements().sort();
+   ; // TODO: change me!
 %&gt;
 
-### Achievements &lt;%=`(${achievements.length} / ${story_max_achievements})`%&gt;
+### Achievements &lt;%=`(${achievements.length} / ${setup.totalAchievements})`%&gt;
 
 &lt;ul&gt;
   &lt;% achievements.map(a =&gt; { %&gt;
@@ -1073,9 +1110,8 @@ document.addEventListener('pointerdown', function isTouching(ev) {
 
 * &lt;a0 onclick=&quot;setup.resetAchievementsPrompt();&quot;&gt;Reset achievements.&lt;/a&gt;
 
-
 &lt;%
-const oneAchievementLeft = achievements.length == story_max_achievements - 1;
+const oneAchievementLeft = achievements.length == setup.totalAchievements - 1;
 const sawBroomClosetEnding = achievements.some(a =&gt; /Broom Closet/i.test(a));
 
 if (oneAchievementLeft &amp;&amp; !sawBroomClosetEnding) { %&gt;
