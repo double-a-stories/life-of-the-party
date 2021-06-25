@@ -61,6 +61,6 @@ const epilogueMusic = new Howl({
 });
 passageAudio(birds, ["morning"]);
 passageAudio(gurgle, ["vore"]);
-passageAudio(crickets, ["epilogue"]);
+passageAudio(crickets, ["outside"]);
 
 passageAudio(epilogueMusic, ["epilogue", "stars"]);

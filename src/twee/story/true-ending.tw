@@ -29,7 +29,7 @@ body[data-tags~="epilogue"] {
 }
 
 
-:: Epilogue. [epilogue]
+:: Epilogue. [epilogue outside]
 
 It's early in the evening. Fall leaves scatter about the otherwise well-kempt lawns of a dozen suburban houses. Parked cars are lined up as far as the eye can see.
 
@@ -39,7 +39,7 @@ A rabbit and a guinea pig walk along the sidewalk, and arrive in front of the Ar
 
 * [[I don't think I'm ready for this...]]
 
-:: I don't think I'm ready for this... [epilogue]
+:: I don't think I'm ready for this... [epilogue outside]
 
 <q.hollis>I don't think I'm ready for this,</q> says the rabbit, awkwardly adjusting their shirt.
 
@@ -49,7 +49,7 @@ The thumping bass, and a few whoops and hollers can be heard from outside.
 
 * [[I'm not great with crowds...]]
 
-:: I'm not great with crowds... [epilogue]
+:: I'm not great with crowds... [epilogue outside]
 
 <q.hollis>We both know I'm not really great with crowds...</q> the rabbit says, shifting uncomfortably.
 
@@ -61,7 +61,7 @@ Frightening images flash through the rabbit's mind; a wolf's fangs, a bear's maw
 
 * [[I really don't want to!]]
 
-:: I really don't want to! [epilogue]
+:: I really don't want to! [epilogue outside]
 
 <q.hollis>I really don't want to...</q> they say.
 
@@ -73,7 +73,7 @@ The guinea pig smiles, and says, <q.reese>If you say so...</q> He goes to knock 
 
 * [[Wait, didn't we already do this?]]
 
-:: Wait, didn't we already do this? [epilogue]
+:: Wait, didn't we already do this? [epilogue outside]
 
 <q.hollis>Wait, didn't we already do this?</q> asks Hollis, confused. The sentence echoes strangely inside their head as they say it.
 
@@ -85,7 +85,7 @@ Hollis says, <q.hollis>I remember having this conversation before. You convinced
 
 * [[We went inside...]]
 
-:: We went inside... [epilogue]
+:: We went inside... [epilogue outside]
 
 Hollis frowns as they mentally retrace their steps. <q.hollis>We went inside... Then I got separated from you. And I went upstairs? No wait, outside... There was a horse involved? And I think...</q>
 
@@ -95,21 +95,19 @@ Reese nods, <q.reese>You think...?</q>
 
 * [[I think I died.]]
 
-:: I think I died. [epilogue]
+:: I think I died. [epilogue outside stars]
 
 <q.hollis>I think I died?</q> says Hollis. Their heart sinks.
 
 Reese smirks, <q.reese>I was wondering when you'd catch on.</q>
 
-Hollis looks around. The house is gone, as is the sidewalk. In every direction, it's just the twilit sky stretching out forever, slowly turning into night.
-
 * [[What's happening?]]
 
 :: What's happening? [epilogue stars]
 
-
-
 <q.hollis>What's happening?</q> Hollis asks.
+
+Hollis looks around. The house is gone, as is the sidewalk. In every direction, it's just the twilit sky stretching out forever, slowly turning into night.
 
 Reese glances around, and shrugs nonchalantantly. <q.reese>If I had to guess, I'd say we've been digested.</q> He scratches the back of his head.
 
