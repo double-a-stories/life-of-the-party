@@ -21,16 +21,39 @@ class SoundInstance {
   }
 }
 
+// Ambient bird noises for morning endings
+const audioRootPath = "assets/sound/";
 
-const birds = new SoundInstance(new Howl({
+const passageAudio = (howlObject, tags) => {
+  const soundInstance = new SoundInstance(howlObject);
+  $(window).on("sm.passage.shown", (ev, { passage }) => {
+    if (tags.every(t => passage.tags.includes(t))) {
+      soundInstance.fadeIn();
+    } else {
+      soundInstance.fadeOut();
+    }
+  })
+  return soundInstance.id;
+}
+
+const birds = new Howl({
   src: ["assets/sound/birds.mp3"],
   html5: true,
-}));
-
-$(window).on("sm.passage.shown", (ev, { passage }) => {
-  if (passage.tags.includes("morning")) {
-    birds.fadeIn();
-  } else {
-    birds.fadeOut();
-  }
-})
+  loop: true,
+  volume: 0.6,
+});
+const gurgle = new Howl({
+  src: ["assets/sound/gurgle.mp3"],
+  html5: true,
+  loop: true,
+  volume: 1.0
+});
+const epilogueMusic = new Howl({
+  src: ["assets/sound/dozent - Flower.mp3"],
+  html5: true,
+  loop: true,
+  volume: 1.0
+});
+passageAudio(birds, ["morning"]);
+passageAudio(gurgle, ["vore"]);
+passageAudio(epilogueMusic, ["epilogue"]);
