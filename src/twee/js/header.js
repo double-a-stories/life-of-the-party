@@ -43,3 +43,11 @@ $(window).on('sm.passage.shown', (e, {
   $("#recent-command").html(passageTitle)
   story.state.previousCommand = "";
 })
+
+setup.help = () => {
+  if (passage.name != "Help") {
+    story.show("Help");
+  } else {
+    setup.undo();
+  }
+}
