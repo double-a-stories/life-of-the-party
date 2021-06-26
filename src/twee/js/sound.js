@@ -2,12 +2,15 @@
 Simple sound controller using howler.js
 */
 class SoundInstance {
+  /**
+   *
+   * @param {Howl} howlObject
+   */
   constructor(howlObject) {
     this.howl = howlObject;
-    howlObject.mute(true);
     this.id = howlObject.play();
-    howlObject.pause(this.id);
-    howlObject.mute(false);
+    this.howl.pause(this.id);
+    this.howl.mute(false, this.id)
   }
   fadeIn(duration = 1000) {
     if (!this.howl.playing(this.id)) {
@@ -19,7 +22,7 @@ class SoundInstance {
   fadeOut(duration = 1000) {
     if (this.howl.playing(this.id)) {
       this.howl.fade(this.howl.volume(), 0.0, duration, this.id);
-      this.howl.once("fade", () => this.howl.stop(this.id), this.id);
+      this.howl.once("fade", () => this.howl.mute(true, this.id), this.id);
     }
   }
 }
@@ -27,10 +30,16 @@ class SoundInstance {
 // Ambient bird noises for morning endings
 const audioRootPath = "assets/sound/";
 
-const passageAudio = (howlObject, tags) => {
+/**
+ *
+ * @param {Howl} howlObject
+ * @param  {...((passage: Passage) => boolean)} predicates
+ * @returns {number}
+ */
+const passageAudio = (howlObject, ...predicates) => {
   const soundInstance = new SoundInstance(howlObject);
   $(window).on("sm.passage.shown", (ev, { passage }) => {
-    if (tags.every(t => passage.tags.includes(t))) {
+    if (predicates.some(f => f(passage))) {
       soundInstance.fadeIn();
     } else {
       soundInstance.fadeOut();
@@ -39,28 +48,38 @@ const passageAudio = (howlObject, tags) => {
   return soundInstance.id;
 }
 
+/**
+ *
+ * @param  {...any} tags
+ * @returns {(passage: Passage) => boolean}
+ */
+const hasTags = (...tags) => (passage) => tags.every(t => passage.tags.includes(t));
+
 const birds = new Howl({
   src: ["assets/sound/birds.mp3"],
   loop: true,
   volume: 0.6,
+  muted: true,
 });
 const gurgle = new Howl({
   src: ["assets/sound/gurgle.mp3"],
   loop: true,
-  volume: 1.0
+  volume: 1.0,
+  muted: true
 });
 const crickets = new Howl({
   src: ["assets/sound/crickets.mp3"],
   loop: true,
   volume: 0.1,
+  muted: true
 });
-const epilogueMusic = new Howl({
+const zenMusic = new Howl({
   src: ["assets/sound/kevp888 - CD_YIN_001.mp3"],
   html5: true,
-  volume: 1.0
+  volume: 1.0,
+  muted: true
 });
-passageAudio(birds, ["morning"]);
-passageAudio(gurgle, ["vore"]);
-passageAudio(crickets, ["outside"]);
-
-passageAudio(epilogueMusic, ["epilogue", "stars"]);
+passageAudio(birds, hasTags("morning"));
+passageAudio(gurgle, hasTags("vore"));
+passageAudio(crickets, hasTags("outside"));
+passageAudio(zenMusic, hasTags("zen"));

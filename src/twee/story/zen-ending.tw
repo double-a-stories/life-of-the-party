@@ -3,7 +3,7 @@ You find an empty bench to sit on by yourself, distancing yourself from the chao
 
 * [[Watch the stars.]]
 
-:: Watch the stars. [outside dreamy_2 stars]
+:: Watch the stars. [outside dreamy_2 stars zen]
 You do so.
 
 The night sky is peaceful. The clouds are clear, but you can only barely see the stars thanks to the light pollution of this suburban neighborhood.
@@ -19,7 +19,7 @@ Having had your fill of stargazing, you stand up from the bench.
 * [[Go back to the foyer.|The Foyer.]]
 
 
-:: Comprehend the endless cosmos. [outside dreamy_3 stars]
+:: Comprehend the endless cosmos. [outside dreamy_3 stars zen]
 Sitting here alone, with your head tilted toward the starryish sky, you realize that nothing you've been doing at this party has been very important.
 
 You don't need to rescue your friend from being eaten. You don't need to find a hot date, and you definitely don't need to be seduced, swallowed, and privately digested by them. You don't even need to think about how you're getting home after this.
@@ -32,7 +32,7 @@ All you need to do is rest your eyes upon the swirling heavens, and relax. You r
 * [[Break these mortal chains.]]
 
 
-:: Break these mortal chains. [dreamy_3 stars outside]
+:: Break these mortal chains. [dreamy_3 stars outside zen]
 <% setup.addAchievement("True Zen (Meditation Ending)") %>
 
 You shut your eyes tight.
