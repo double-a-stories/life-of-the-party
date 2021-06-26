@@ -831,6 +831,14 @@ $(window).on('sm.passage.shown', (e, {
   $("#recent-command").html(passageTitle)
   story.state.previousCommand = "";
 })
+
+setup.help = () => {
+  if (passage.name != "Help") {
+    story.show("Help");
+  } else {
+    setup.undo();
+  }
+}
 /* twine-user-script #4: "history.js" */
 // LICENSE: MIT-0
 
@@ -1096,7 +1104,7 @@ document.addEventListener('pointerdown', function isTouching(ev) {
   } else {
     window.isTouching = !(ev.pointerType == "mouse");
   }
-});</script><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-passagedata pid="1" name="Achievements list" tags="" position="100,100" size="100,100">&lt;% const achievements = setup.getAchievements().sort();
+});</script><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-passagedata pid="1" name="Achievements list" tags="" position="100,100" size="100,100">&lt;% const achievements = setup.getAchievements().sort();
    ; // TODO: change me!
 %&gt;
 
@@ -1122,7 +1130,7 @@ if (oneAchievementLeft &amp;&amp; !sawBroomClosetEnding) { %&gt;
 	  &lt;li&gt;&lt;a0 onclick=&quot;setup.undo()&quot;&gt;Undo&lt;/a&gt;&lt;/li&gt;
 	&lt;/ul&gt;
 	&lt;ul.header-nav-group&gt;
-	  &lt;li&gt;[[Help]]&lt;/li&gt;
+	  &lt;li&gt;&lt;a0 onclick=&quot;setup.help();&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
 	  &lt;li&gt;&lt;%- story.version %&gt;&lt;/li&gt;
 	&lt;/ul&gt;
   &lt;/div&gt;
