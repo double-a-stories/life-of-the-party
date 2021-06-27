@@ -19,6 +19,7 @@ body {
   background: var(--background);
   transition: opacity 1s, background 2s;
   margin: 0.5rem;
+  min-height: calc(100vh + 1px);
 }
 
 /* Override default Twee styles */
