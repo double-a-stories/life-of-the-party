@@ -281,20 +281,54 @@ You rest your chin on your palms with boredom.
 
 :: Shut up shut up shut up!
 
-You tell <%-s.bm?"Byron":"Emily"%>, oh my god, shut up! Can <%-s.bm?"he":"she"%> go thirty seconds without droning on and on about pretentious nonsense?? You'd much rather bleed to death than spend one more second listening to <%-s.bm?"him":"her"%> speak.
+You tell <%-s.bm?"Byron":"Emily"%>, oh my god, stop talking! Can <%-s.bm?"he":"she"%> go thirty seconds without droning on and on about pretentious nonsense?? You'd much rather bleed to death than spend one more second listening to <%-s.bm?"him":"her"%> speak.
 
 <q.byron>Hmph. I was only trying to have a decent conversation,</q> the wolf says, <q.byron>But if you prefer to spend your final moments like an ungrateful, frightened whelp, then so be it. I can be scary.</q>
 
 <%-s.bm?"He":"She"%> bares <%-s.bm?"his":"her"%> fangs.
 
-* [[Wow, I'm terrified.]]
+* [[Do your worst.]]
 
-:: Wow, I'm terrified.
+:: Do your worst.
+
+<%-s.bm?"Byron":"Emily"%> opens <%-s.bm?"his":"her"%> jaws wide in front of your face, close enough to see individual strands of saliva. <%-s.bm?"His":"Her"%> breath on your face is disgusting. You can tell <%-s.bm?"he":"she"%> is trying very hard to be intimidating.
+
+Wow, you say, hiding your anxieties behind a cool, cold demeanor. I'm literally terrified.
+
+The wolf glares at you, and snarls, <q.byron>You seem to be under the impression that pretending to be brave will make me lose interest.</q> <%-s.bm?"He":"She"%> smirks, <q.byron>I admit, I derive some satisfaction from a prey's unbridled fear of dying, but I *am* going to eat you, whether you struggle or not.</q>
+
+You fold your arms and say, Oh, cool. Whatever.
+
+<q.byron>Besides, wolves can *smell* fear.</q>
+
+TODO: Byron eats you, and describes in detail what his:her body will do to you.
+
+* [[You're in control. You can still let me out.]]
+
+:: You're in control. You can still let me out.
+
+You kick around for a moment. The red flesh of the wolf's belly ripples around you.
+
+<q.byron>Believe me, if any of us had even the slightest control over our senseless animal desires, this world would be a very different place.</q> <%-s.bm?"Byron":"Emily"%> pats <%-s.bm?"his":"her"%> gut, and continues, <q.byron>But this is simply the way of things. My kind is doomed to destroy, while yours is doomed to serve.</q>
+
+* [[It doesn't have to be that way...]]
+
+:: It doesn't have to be that way...
+
+<q.byron>Ah, what a splendid idea!</q> <%-s.bm?"he":"she"%> says, patting you on the head like a toddler, <q.byron>You've picked a wonderful time to sell me on this fantastic utopia. What do you propose? Peaceful, vegan coexistence? Pred and prey singing kumbayah? Getting our fix by swallowing eggs, and supressing our desires into <q>healthy outlets</q>, like rock songs about juicy, dripping flesh?</q>
+
+You start to say, Well, it wouldn't be overnight, but maybe with some common-sense legal reforms-
+
+<%-s.bm?"Byrom":"Emily"%> interrupts. <q.byron>Hush. Don't you see, little rabbit? This *is* peaceful. No mauling, no bloodshed. Almost entirely painless. Activists talk a lot about 'safety' and 'respect', but  *this* is what you prey deserve. The strong take what they can, while the weak suffer what they must.</q>
+
+* [[Get me out of here, you fuck.]]
+
+:: Get me out of here, you fuck.
+
+You can't see, but the wolf puts a paw on his:her chin and says, <q.byron>Hm, what was that scintillating thing you said to me earlier? Ah yes. *Stop talking*.</q>
 
 // TODO:
 
-* Byron tries harder to be scary, accidentally embarassing <%-s.bm?"him":"her"%>self when it becomes obvious <%-s.bm?"he":"she"%> is trying too hard.
-* Finally, Byron eats you, and explains in excruciating, literary detail, what <%-s.bm?"his":"her"%> body will do to you.
 * Hollis gets in one last kick, then passes out and begins digesting.
 * Byron goes back downstairs
 * Ending passage.
