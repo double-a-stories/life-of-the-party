@@ -5,7 +5,7 @@
 	  <li><a0 onclick="setup.undo()">Undo</a></li>
 	</ul>
 	<ul.header-nav-group>
-	  <li><a0 onclick="setup.help();">Help</a></li>
+	  <li><a0 class="help-button" onclick="setup.help();">Help</a></li>
 	  <li><%- story.version %></li>
 	</ul>
   </div>

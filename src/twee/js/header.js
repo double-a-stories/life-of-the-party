@@ -51,3 +51,11 @@ setup.help = () => {
     setup.undo();
   }
 }
+
+$(window).on("sm.passage.shown", (event, {passage}) => {
+  if (passage.name == "Help") {
+    $(".help-button").text("Back");
+  } else {
+    $(".help-button").text("Help");
+  }
+})
