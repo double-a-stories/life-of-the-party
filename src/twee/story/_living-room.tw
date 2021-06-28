@@ -47,12 +47,6 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 
 <!-- LIVING ROOM COMMANDS -->
 
-<% if (s.partyFlavorMicroMouse) { %>
-<!-- Owl about to eat mouse. -->
-* [[Do nothing.|Watch the jackrabbit eat.]]
-* [[H-hey, don't do that!|Intervene on the jackrabbit.]]
-<% } else { %>
-
 <% if (s.partyFlavorOwl || s.partyFlavorGutbump) {%>
 * [[N-no problem!|Dance a little.]]
 <% } else if (s.partyFlavorLabrador) { %>
@@ -94,7 +88,6 @@ if (!setup.partyDanceLiterals) {
 `A heavy-set bear with a selfie stick is recording herself as she shakes her massive hips. You try not to stare, but it's absolutely hypnotic.`,
 `A lioness whispers to her friend, "Did you know there's a rabbit here?" They snicker. "Woah. Do you think it has a vore fetish?"`,
 `You see a catboy eagerly following a lioness out of the room. They both seem quite excited.`,
-`A jackrabbit reaches down, grabs a tiny mouse off the floor, and dangles it teasingly over her snout. Should you... do something?`,
 ].sort(e => 0.5 - Math.random());
 
 setup.partyDanceLiterals.push(`A big brown stallion in a green jacket seems to take notice of your dancing. He winks at you from across the room.`);
