@@ -6,6 +6,7 @@ Hollis realizes that Byron's sensitive exterior is just a front for <%-s.bm?"his
 
 .byron {
   font-family: 'Tinos', "Times New Roman", serif;
+  font-weight: bold;
   font-size: 1.1em;
 }
 
