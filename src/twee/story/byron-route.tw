@@ -297,13 +297,13 @@ You tell <%-s.bm?"Byron":"Emily"%>, oh my god, stop talking! Can <%-s.bm?"he":"s
 
 * [[Wow, I'm literally terrified.]]
 
-:: Wow, I'mm literally terrified.
+:: Wow, I'm literally terrified.
 
 You hide your anxieties behind a cool, detached demeanor, and tell Byron flatly about how you're totally quaking in your boots.
 
 <%-s.bm?"He":"She"%> seems to lose <%-s.bm?"his":"her"%> temper slightly. <q.byron>My teeth will graze your weak skin, and my stomach will smother you until its acids . And you'll feel *every* moment of agony, until you're digested and absorbed as calories.</q> <%-s.bm?"He":"She"%> smiles wickedly, <q.byron>And I'm not even doing it because I'm hungry. I'm doing it to teach you where uppity prey like you belong.</q>
 
-:: [[Oh, cool. Whatever.]]
+* [[Oh, cool. Whatever.]]
 
 :: Oh, cool. Whatever.
 
@@ -331,9 +331,19 @@ You say that being covered in stomach acid and bile could not be even a tenth as
 
 :: Up yours.
 
-You raise both middle fingers.
+You raise both middle fingers. Byron lifts you up, and shoves your naked body head-first into his:her mouth. Your vision gets darker and darker as your face slides toward his:her gullet. Slick saliva covers your cheeks, and your ears flatten at the roof of his:her mouth. You break out in a cold sweat.
 
-// TODO: Byron swallows.
+<q.byron>Glrk. Glp. Glgg.</q>
+
+You hear a sickening series of squelches as the wolf swallows, and your head slips into his:her esophagus. You can feel the wolf's heartbeat pulsing, as you slowly slide head-long toward his:her gut. It's fast, powerful, and loud.
+
+* [[Ew...]]
+
+:: Ew...
+
+The whole process takes several minutes, you and spend every moment feeling wet and gross. Your feet are the last part of you to slide over his:her tongue, and down behind you. And with that, you're curled up in his:her gut.
+
+<q.byron>Hahhh... Mmmm.</q> Byron:Emily moans as his:her belly expands around you. You're surprised that you can hear his:her voice so clearly. It seems he:she really doesn't have much body fat. <q.byron>So, how's it feel to be engulfed, with absolutely no hope of escape?</q>
 
 * [[You're in control. You can still let me out.]]
 
@@ -347,23 +357,42 @@ You kick around for a moment. The red flesh of the wolf's belly ripples around y
 
 :: It doesn't have to be that way...
 
-<q.byron>Ah, what a splendid idea!</q> <%-s.bm?"he":"she"%> says, patting you on the head like a toddler, <q.byron>You've picked a wonderful time to sell me on this fantastic utopia. What do you propose? Peaceful, vegan coexistence? Pred and prey singing kumbayah? Getting our fix by swallowing eggs, and supressing our desires into <q>healthy outlets</q>, like rock songs about juicy, dripping flesh?</q>
+<q.byron>Ah, what a splendid idea!</q> <%-s.bm?"he":"she"%> says, patting you on the head like a toddler, <q.byron>You've picked a wonderful time to sell me on this fantastic utopia of yours!</q> Byron:Emily sits down on the bed.
+
+<q.byron>What do you propose? Peaceful, vegan coexistence? Pred and prey suddenly singing kumbayah? Getting our fix by swallowing eggs, and supressing our desires into <q>healthy outlets</q>, like rock songs about juicy, dripping flesh?</q>
+
+* [[Well, not exactly...]]
+
+:: Well, not exactly...
 
 You start to say, Well, it wouldn't be overnight, but maybe with some common-sense legal reforms-
 
-<%-s.bm?"Byrom":"Emily"%> interrupts. <q.byron>Hush. Don't you see, little rabbit? This *is* peaceful. No mauling, no bloodshed. Almost entirely painless. Activists talk a lot about 'safety' and 'respect', but  *this* is what you prey deserve. The strong take what they can, while the weak suffer what they must.</q>
+<%-s.bm?"Byron":"Emily"%> interrupts. <q.byron>Hush. Don't you see, little rabbit? This *is* peaceful. No mauling, no bloodshed. Almost entirely painless. Activists talk a lot about 'safety' and 'respect', but  *this* is what you prey deserve. The strong take what they can, while the weak suffer what they must.</q>
 
 * [[Get me out of here, you fuck.]]
 
 :: Get me out of here, you fuck.
 
-You can't see, but the wolf puts a paw on <%-s.bm?"his":"her"%> chin and says, <q.byron>Hm, what was that scintillating thing you said to me earlier? Ah yes. *Stop talking*.</q>
+You can't see, but the wolf puts a paw on <%-s.bm?"his":"her"%> chin and says, <q.byron>Oh, but I was really enjoying our spirited debate. What was that scintillating thing you said to me earlier? Ah yes. *Stop talking*.</q>
+
+You can't think of a retort. Rather, you're distracted by the sudden influx of fluids to the stomach. It smells acidic, and makes your fur tingle.
+
+You're probably going to be digested soon. If you have any plans on how to get out of here, now would be the time.
+
+* [[Kick Byron in the stomach.]]
+
+:: Kick Byron in the stomach.
+
+Eh, good enough.
+
+<q.byron>Ugh,</q> Byron:Emily groans, <q.byron>You little shit. I hate you. Have fun being a turd!</q> He:She adjusts his:her scarf.
 
 // TODO:
-* You go quiet.
+* You give Byron the silent treatment.
 * Digestive fluids begin flowing in.
+* You have to believe in a better world.
 * You get in one last kick, then pass out and begin digesting.
-* Byron goes back downstairs
+* Urgh.
 * Ending passage.
 
 ### The end.
