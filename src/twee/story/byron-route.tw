@@ -118,7 +118,7 @@ On the contrary, your favorite was their first live album, *Dingoes On Tour*.
 
 <%-s.bm?"Byron":"Emily"%> nods slyly. <q.byron>Yes, I think they sounded best with *Strauss* on the drums.</q>
 
-You sweat a little at the mention of the band's original drummer Strauss. A few weeks after their first tour, the band's original drummer, a sheep named Everett Strauss, mysteriously vanished. Eventually, it came out that he'd got into a drunken argument with the band's bassist, and was swallowed and digested. The ensuing scandal dominated headlines for several days.
+You sweat a little at the mention of the band's original drummer, Strauss. A few weeks after their first tour, he mysteriously vanished. Eventually, it came out that he'd got into a drunken argument with the band's bassist, and was swallowed and digested. The ensuing scandal dominated headlines for several days.
 
 * [[Yeah, it's a shame that he... left.]]
 
@@ -134,7 +134,7 @@ The wolf raises <%-s.bm?"his":"her"%> eyebrow. <q.byron>My dear rabbit, taboos o
 
 You say this turn of conversation is making you slightly uncomfortable.
 
-<q.byron>Say, Freely,</q> <%-s.bm?"he":"she"%> says, <q.byron>Why don't we head upstairs? Somewhere the two of us may speak more... privately?</q>
+<q.byron>Yes, this is a rather public place to have such an... intimate discussion.</q> <%-s.bm?"he":"she"%> says, <q.byron>Why don't we head upstairs? Somewhere the two of us may speak more... privately?</q>
 
 You're skeptical.
 
@@ -201,9 +201,9 @@ The labrador points a paw at the wolf, and asks you, "Hey dude, this dude bother
 
 "Let em talk, dude," the dog interrupts.
 
-* [[Well, um...|Well, um... (Byron)]]
+* [[Well, um...]]
 
-:: Well, um... (Byron) [checkpoint]
+:: Well, um... [checkpoint]
 
 You hesitate for a moment. Then, you feel <%-s.bm?"Byron":"Emily"%>'s paw tighten on your shoulder. The pointy claws of <%-s.bm?"his":"her"%> thumb prod you in the back, probably harder than <%-s.bm?"he":"she"%> meant it to. It stings. D-did <%-s.bm?"he":"she"%> just draw blood? You grimace slightly, and suck air through your teeth.
 
@@ -224,10 +224,12 @@ You gulp, as the wolf leads you from the room.
 
 :: Ow, get this creep away from me! [gore]
 <%-s.bm?"Byron":"Emily"%>'s claws instinctively dig into you as you try to pull away. You squeal as <%-s.bm?"he":"she"%> puts a huge bloody gash on your back.
+
 <q.byron>Oh dear,</q> <%-s.bm?"Byron":"Emily"%> mutters in surprise. <%-s.bm?"He":"She"%> stares down at <%-s.bm?"his":"her"%> claws, wet with your blood, seemingly more intrigued than bothered. <%-s.bm?"He":"She"%> wipes them on <%-s.bm?"his":"her"%> flannel, and says, <q.byron>I am ashamed, dear rabbit, that it has come to this. Perhaps we beasts truly are inseparable from our dark– *Ow!*</q>
+
 <%-s.bm?"Byron":"Emily"%> is interrupted by Gus's fist, as he completely clobbers <%-s.bm?"him":"her"%> in the face, knocking <%-s.bm?"him":"her"%> to the floor.
 
-"Party fuckin' foul, dude," Gus says, as <%-s.bm?"Byron":"Emily"%> collapses. He leans down to check on you. "You okay, bunny bro?"
+"Party fuckin' foul, dude," Gus says, as <%-s.bm?"Byron":"Emily"%> collapses. He leans down to check on you. "You okay, dawg?"
 
 You respond by fainting from blood loss.
 
@@ -293,15 +295,45 @@ You tell <%-s.bm?"Byron":"Emily"%>, oh my god, stop talking! Can <%-s.bm?"he":"s
 
 <%-s.bm?"Byron":"Emily"%> opens <%-s.bm?"his":"her"%> jaws wide in front of your face, close enough to see individual strands of saliva. <%-s.bm?"His":"Her"%> breath on your face is disgusting. You can tell <%-s.bm?"he":"she"%> is trying very hard to be intimidating.
 
-Wow, you say, hiding your anxieties behind a cool, cold demeanor. I'm literally terrified.
+* [[Wow, I'm literally terrified.]]
+
+:: Wow, I'mm literally terrified.
+
+You hide your anxieties behind a cool, detached demeanor, and tell Byron flatly about how you're totally quaking in your boots.
+
+<%-s.bm?"He":"She"%> seems to lose <%-s.bm?"his":"her"%> temper slightly. <q.byron>My teeth will graze your weak skin, and my stomach will smother you until its acids . And you'll feel *every* moment of agony, until you're digested and absorbed as calories.</q> <%-s.bm?"He":"She"%> smiles wickedly, <q.byron>And I'm not even doing it because I'm hungry. I'm doing it to teach you where uppity prey like you belong.</q>
+
+:: [[Oh, cool. Whatever.]]
+
+:: Oh, cool. Whatever.
+
+Yup, sounds terrifying, you say.
 
 The wolf glares at you, and snarls, <q.byron>You seem to be under the impression that pretending to be brave will make me lose interest.</q> <%-s.bm?"He":"She"%> smirks, <q.byron>I admit, I derive some satisfaction from a prey's unbridled fear of dying, but I *am* going to eat you, whether you struggle or not.</q>
 
-You fold your arms and say, Oh, cool. Whatever.
+You swallow nervously, and don't say anything.
 
-<q.byron>Besides, wolves can *smell* fear.</q>
+<%-s.bm?"He":"She"%> grabs you by the ears, and pulls them tight. <q.byron>That's enough talk. Any last words, dear rabbit?</q>
 
-TODO: Byron eats you, and describes in detail what his:her body will do to you.
+* [[Hope you choke and die!]]
+
+:: Hope you choke and die!
+
+You tell <%-s.bm?"Byron":"Emily"%> you hope <%-s.bm?"he":"she"%> chokes on you, because it would apparently the only thing in the world that could make <%-s.bm?"him":"her"%> shut the fuck up for a single second.
+
+<%-s.bm?"He":"She"%> frowns, and says, <q.byron>Well that's just-</q>
+
+You say that being covered in stomach acid and bile could not be even a tenth as repulsive as <%-s.bm?"his":"her"%> personality, and the self-aggrandizing bullshit <%-s.bm?"he's":"she's"%> constantly spewing.
+
+<%-s.bm?"Byron":"Emily"%> sighs, and grips you by the shoulders. <q.byron>'Twas foolish of me to expect grace and dignity from the graceless and undignified. All the same, I suppose... Farewell, Freely.</q>
+
+* [[Up yours.]]
+
+:: Up yours.
+
+You raise both middle fingers.
+
+// TODO: Byron swallows.
 
 * [[You're in control. You can still let me out.]]
 
@@ -325,11 +357,12 @@ You start to say, Well, it wouldn't be overnight, but maybe with some common-sen
 
 :: Get me out of here, you fuck.
 
-You can't see, but the wolf puts a paw on his:her chin and says, <q.byron>Hm, what was that scintillating thing you said to me earlier? Ah yes. *Stop talking*.</q>
+You can't see, but the wolf puts a paw on <%-s.bm?"his":"her"%> chin and says, <q.byron>Hm, what was that scintillating thing you said to me earlier? Ah yes. *Stop talking*.</q>
 
 // TODO:
-
-* Hollis gets in one last kick, then passes out and begins digesting.
+* You go quiet.
+* Digestive fluids begin flowing in.
+* You get in one last kick, then pass out and begin digesting.
 * Byron goes back downstairs
 * Ending passage.
 
@@ -341,36 +374,7 @@ You can't see, but the wolf puts a paw on his:her chin and says, <q.byron>Hm, wh
 
 :: Byron Epilogue.
 
-<script>
-story.state.previousCommand = "<i>Epilogue</i>"
-</script>
-
-<style>
-body {
-  --background: #ffc;
-  font-family: Tinos, Times New Roman, serif;
-}
-tw-passage {
-
-    background: repeating-linear-gradient(#886, #886 2px, transparent 2px, transparent 2rem);
-  background-attachment: local;
-  background-size: 2rem 2rem;
-  line-height: 2rem;
-}
-h1, h2, h3, h4 {
-  margin-bottom: 0;
-}
-tw-passage > * {
-  line-height: 2rem;
-  margin-block-end: 2rem;
-}
-</style>
-
-by Byron III
-
-A very bad vore-themed poem?<br>
-Unbearably terrible quatrains<br>
-Of wretched song lyrics.<br>
+// TODO: <%-s.bm?"Byron":"Emily"%> wakes up in a college dorm. <%-s.bm?"He":"She"%> takes a big shit, probably the most graphic one in the game.
 
 ### The end.
 
