@@ -1,10 +1,14 @@
+:: Max achievements [script]
+window.setup = window.setup || {};
+setup.totalAchievements = 9;
+
 :: Achievements list
 
 <% const achievements = setup.getAchievements().sort();
-   const story_max_achievements = 9; // TODO: change me!
+   ; // TODO: change me!
 %>
 
-### Achievements <%=`(${achievements.length} / ${story_max_achievements})`%>
+### Achievements <%=`(${achievements.length} / ${setup.totalAchievements})`%>
 
 <ul>
   <% achievements.map(a => { %>
@@ -14,9 +18,8 @@
 
 * <a0 onclick="setup.resetAchievementsPrompt();">Reset achievements.</a>
 
-
 <%
-const oneAchievementLeft = achievements.length == story_max_achievements - 1;
+const oneAchievementLeft = achievements.length == setup.totalAchievements - 1;
 const sawBroomClosetEnding = achievements.some(a => /Broom Closet/i.test(a));
 
 if (oneAchievementLeft && !sawBroomClosetEnding) { %>

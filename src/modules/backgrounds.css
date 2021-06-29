@@ -6,13 +6,6 @@ body[data-tags~="vore"] {
   --color: #fdd;
 }
 
-body[data-tags~="dreamy_1"] {
-  --background: #eef;
-}
-
-body[data-tags~="dreamy_2"] {
-  --background: #ddf;
-}
 
 body[data-tags~="morning"] {
   --background: #ffe;

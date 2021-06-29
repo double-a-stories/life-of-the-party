@@ -19,6 +19,7 @@ body {
   background: var(--background);
   transition: opacity 1s, background 2s;
   margin: 0.5rem;
+  min-height: calc(100vh + 1px);
 }
 
 /* Override default Twee styles */
@@ -109,12 +110,11 @@ a:active {
   outline: none;
 }
 
-.center-list, .center-list>ul {
-  text-align: center;
-  padding-inline-start: 0;
-  list-style-position: inside;
+.center-list {
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
 }
-
 /* Mobile mode */
 @media screen and (max-width:500px) {
   .commands-list a {

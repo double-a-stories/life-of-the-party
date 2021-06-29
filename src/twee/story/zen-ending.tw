@@ -3,14 +3,7 @@ You find an empty bench to sit on by yourself, distancing yourself from the chao
 
 * [[Watch the stars.]]
 
-<style>
-  body {
-   --background: #eef
-  }
-</style>
-
-
-:: Watch the stars. [dreamy_1]
+:: Watch the stars. [dreamy_2 stars]
 You do so.
 
 The night sky is peaceful. The clouds are clear, but you can only barely see the stars thanks to the light pollution of this suburban neighborhood.
@@ -26,7 +19,7 @@ Having had your fill of stargazing, you stand up from the bench.
 * [[Go back to the foyer.|The Foyer.]]
 
 
-:: Comprehend the endless cosmos. [dreamy_2]
+:: Comprehend the endless cosmos. [dreamy_3 stars]
 Sitting here alone, with your head tilted toward the starryish sky, you realize that nothing you've been doing at this party has been very important.
 
 You don't need to rescue your friend from being eaten. You don't need to find a hot date, and you definitely don't need to be seduced, swallowed, and privately digested by them. You don't even need to think about how you're getting home after this.
@@ -39,7 +32,7 @@ All you need to do is rest your eyes upon the swirling heavens, and relax. You r
 * [[Break these mortal chains.]]
 
 
-:: Break these mortal chains. [dreamy_2]
+:: Break these mortal chains. [dreamy_3 stars]
 <% setup.addAchievement("True Zen (Meditation Ending)") %>
 
 You shut your eyes tight.
@@ -50,7 +43,9 @@ You concentrate on your breathing. No wait. *Hollis* concentrates on *their* bre
 
 <div class="fadeout">
 
-In the backyard of a suburban house party, Hollis Freeley opens their eyes, and takes in their surroundings. They draw a deep breath, like a weight has suddenly been lifted from their shoulders. As the last of your influence wanes, Hollis blinks and mutters out loud, "What the fuck was all that about?"
+In the backyard of a suburban house party, Hollis Freeley opens their eyes, and takes in their surroundings. They draw a deep breath, like a weight has suddenly been lifted from their shoulders.
+
+"Woah..." As the last of your influence wanes, Hollis blinks and mutters out loud, "What the fuck was all that about?"
 
 <code>LotP encountered an error:<br>client connection lost. please contact manufacturer if problem persists. automated support is available at 1-800-813-621</code>
 
@@ -65,7 +60,7 @@ In the backyard of a suburban house party, Hollis Freeley opens their eyes, and 
 
 </div>
 
-:: Be the hyena. [dark otherstory]
+:: Be the hyena. [dark anastory]
 
 Your name is Ana. You're a spotted hyena, currently chilling on a bench outside a house party like a total loser.
 
@@ -80,7 +75,7 @@ What do you do?
 * [[Eat the rabbit.]]
 
 
-:: Eat the rabbit. [dark otherstory]
+:: Eat the rabbit. [dark anastory]
 
 <i.ana>Great idea, voice inside my head,</i> you think. You walk over to the rabbit.
 
@@ -94,7 +89,7 @@ They try to fight you at first, but eventually calm down.
 * [[Swallow them.]]
 * [[Swallow them.]]
 
-:: Swallow them. [dark otherstory]
+:: Swallow them. [dark anastory]
 
 With one huge gulp, you swallow the rabbit.
 
@@ -113,4 +108,3 @@ You begin to drift off to a nap. <i.ana>Wow,</i> you think, <i.ana>this route go
 ### The End.
 
 * [[Restart.|Start]]
-

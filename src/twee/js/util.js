@@ -37,6 +37,24 @@ $(window).on('sm.passage.shown', function (event, eventObject) {
 // This causes <q> to implicitly render as curly double quotes.
 $("html").attr("lang", "en-us");
 
+// All external links open in a new tab by default.
 $(window).on('sm.passage.shown', function (event, eventObject) {
     $("a[href^='https']").attr("target", "_blank");
 });
+
+// Debug feature
+// Set starting passage based on URL search params
+// /life-of-the-party/?passage=Warp%20zone
+$(window).on('sm.story.started', function(event, { story }) {
+    const params = new URLSearchParams(window.location.search);
+
+    if (story.passage(params.get("start"))) {
+        story.startPassage = params.get("start");
+    }
+})
+
+setup.setStart = () => {
+    const params = new URLSearchParams();
+    params.set("start", passage.name);
+    location.search = params.toString();
+}
