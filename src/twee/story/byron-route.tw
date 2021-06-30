@@ -130,7 +130,7 @@ The wolf raises <%-s.bm?"his":"her"%> eyebrow. <q.byron>My dear rabbit, taboos o
 
 :: Okay, it's a shame that he was eaten.
 
-<%-s.bm?"Byron":"Emily"%> nods, and looks off into the distance wistfully. <q.byron>Yes, I despise the heedless snuffing of herbivorous life. All those songs unwritten, words left unsaid... That you prey live for years, amassing knowledge, skills, and memories, only to be extinguished in an instant... It is the greatest pity.</q> <%-s.bm?"He":"She"%> gives you a rare moment of eye contact. <q.byron>It's a kind of sorrow few predators would understand, I imagine.</q>
+<%-s.bm?"Byron":"Emily"%> nods, and looks off into the distance wistfully. <q.byron>Yes, I despise the heedless snuffing of herbivorous life. All those songs unwritten, words left unsaid... That you prey live for years, amassing knowledge, skills, and memories, only to be extinguished in an instant... It is the greatest pity.</q> <%-s.bm?"He":"She"%> gives you a rare moment of eye contact. <q.byron>It is a kind of sorrow few predators would understand, I imagine.</q>
 
 You say this turn of conversation is making you slightly uncomfortable.
 
@@ -183,7 +183,7 @@ You tell <%-s.bm?"him":"her"%> you're not gonna-
 
 :: Stand up.
 
-<q.byron>Good.</q> <%-s.bm?"Byron":"Emily"%> places <%-s.bm?"his":"her"%> paw firmly on your lower back. You feel <%-s.bm?"his":"her"%> claws outstretched, as if threatening to shred through your clothes and into the flesh beneath. <q.byron>Let's go upstairs, shall we?</q>
+<q.byron>Good.</q> <%-s.bm?"Byron":"Emily"%> places <%-s.bm?"his":"her"%> paw firmly on your lower back. You feel <%-s.bm?"his":"her"%> claws outstretched, as if threatening to shred through your clothes and into the flesh beneath. <q.byron>Let us go upstairs, shall we?</q>
 
 You grit your teeth, and walk helplessly alongside <%-s.bm?"Byron":"Emily"%> as <%-s.bm?"he":"she"%> leads you back out of the living room. You're about to enter the foyer, when a golden labrador in a green jacket stops the two of you.
 
@@ -265,7 +265,7 @@ You shift uncomfortably, still trying not to look frightened. <%-s.bm?"Byron":"E
 
 <q.byron>How obedient. I think deep down, your body is eager to fulfill its purpose in feeding me...</q> <%-s.bm?"He":"She"%> looks you over, then notices the small red gash on your shoulder.
 
-<q.byron>Oh dear, let me have a look at this...</q> <%-s.bm?"He":"She"%> sticks <%-s.bm?"his":"her"%> nose into your fur, then drags <%-s.bm?"his":"her"%> tongue across your wound. You wince as <%-s.bm?"he":"she"%> tastes your blood. <q.byron>Hm, you're not exactly cabernet, but still... I can see why my ancestors liked this...</q>
+<q.byron>Oh dear, let me have a look at this...</q> <%-s.bm?"He":"She"%> sticks <%-s.bm?"his":"her"%> nose into your fur, then drags <%-s.bm?"his":"her"%> tongue across your wound. You wince as <%-s.bm?"he":"she"%> tastes your blood. <q.byron>Hm, you are not exactly a cabernet, but still... I can see why my ancestors liked this...</q>
 
 * [[G-gross...]]
 
@@ -313,7 +313,7 @@ The wolf glares at you, and snarls, <q.byron>You seem to be under the impression
 
 You swallow nervously, and don't say anything.
 
-<%-s.bm?"He":"She"%> grabs you by the ears, and pulls them tight. <q.byron>That's enough talk. Any last words, dear rabbit?</q>
+<%-s.bm?"He":"She"%> grabs you by the ears, and pulls them tight. <q.byron>That is enough talk. Any last words, dear rabbit?</q>
 
 * [[Hope you choke and die!]]
 
