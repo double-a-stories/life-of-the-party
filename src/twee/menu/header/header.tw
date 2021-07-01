@@ -1,14 +1,19 @@
 :: Header [hide header]
-<header.topbar.header-nav>
-	<ul.header-nav-group>
-    <li><a0 onclick="setup.restart()">Restart</a></li>
-	  <li><a0 onclick="setup.undo()">Undo</a></li>
-	</ul>
-	<ul.header-nav-group>
-	  <li><a0 class="help-button" onclick="setup.help();">Help</a></li>
-	  <li><%- story.version %></li>
-	</ul>
-  </div>
+<header.topbar.header-nav id="header">
+<%= story.render("Topbar controls") %>
 </header>
 
 <h2 id="recent-command"></h2>
+
+:: Topbar controls
+
+<ul.header-nav-group>
+	<li><a0 onclick="setup.restart()">Restart</a></li>
+	<li><a0 onclick="setup.undo()">Undo</a></li>
+</ul>
+<ul.header-nav-group>
+	<li><a0 class="mute-button" onclick="setup.toggleMute();" title="<%-setup.isFlagSet('enableSound')?'Mute':'Unmute'%>"><%=setup.isFlagSet("enableSound")?`🔊`:`🔇`%></a></li>
+	<li><a0 class="help-button" onclick="setup.help();">Help</a></li>
+	<li><%- story.version %></li>
+</ul>
+</div>

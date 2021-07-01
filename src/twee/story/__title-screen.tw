@@ -48,7 +48,6 @@ tw-passage > * {
 <div>
 <% const hasSomeAchievements = (setup.getAchievements().length > 0); %>
 <%= story.render(hasSomeAchievements ? "Achievements list" : "Content warning") %>
-
 </div>
 
 :: Content warning
