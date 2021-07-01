@@ -54,6 +54,7 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 <% } else {%>
 * [[Dance a little more.|Dance a little.]]
 <% } %>
+* [[Grab some punch.]]
 <% if (s.partyFlavorBasil || s.partySeenBasil || setup.isFlagSet("talkedToBasil")) {
   s.partySeenBasil = true; %>
 * [[Wink back at the horse.|Wink back at Basil.]]
@@ -61,7 +62,6 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
   s.partySeenByron = true; %>
 * [[Look at wolf.]]
 <% } %>
-* [[Grab some punch.]]
 <% } %>
 
 :: Randomized Party Flavor [hide]
@@ -78,7 +78,6 @@ if (!setup.partyDanceLiterals) {
 `A grey wolf with a huge protruding gut accidentally bumps into you. "S'cuse me," she mutters as she walks away.`,
 `Your ears perk up: the speakers are a slow-jam by the classic R&B duo, Thumper & Bang. You tap your furry toes happily.`,
 `The sound system blares with the shouty vocals and distorted guitar of "groupie gas (ft. some snack idk)" by LOÜD GRÜMBLE.`,
-`Tails wag and paws pump in the air as the subwoofer wubs and dubs the bass-drop of this one dubstep song, yet again.`,
 `A tall black wolf in a scarf and a flannel shirt brought an acoustic guitar to the party, and is playing "Wonderwall" with an extremely thoughtful expression.`,
 `A slightly chubby owl notices you from across the room and begins licking her beak.`,
 `A drunk labrador begins nuzzling you. "Oh my gooood dudes, this rabbit is soooo soft..." You blush. Surprisingly, his fur is extremely soft as well.`,
@@ -90,8 +89,11 @@ if (!setup.partyDanceLiterals) {
 `You see a catboy eagerly following a lioness out of the room. They both seem quite excited.`,
 ].sort(e => 0.5 - Math.random());
 
-setup.partyDanceLiterals.push(`A big brown stallion in a green jacket seems to take notice of your dancing. He winks at you from across the room.`);
-  }
+setup.partyDanceLiterals.push(`A big brown stallion in a green jacket seems to take notice of your dancing. He winks at you from across the room.`,
+`Tails wag and paws pump in the air as the subwoofer wubs and dubs the bass-drop of this one dubstep song, yet again. Is the playlist looping?`,
+);
+}
+
 
 
 const literals = setup.partyDanceLiterals;
