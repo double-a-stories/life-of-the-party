@@ -60,6 +60,7 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 <% } else {%>
 * [[Dance a little more.|Dance a little.]]
 <% } %>
+* [[Grab some punch.]]
 <% if (s.partyFlavorBasil || s.partySeenBasil || setup.isFlagSet("talkedToBasil")) {
   s.partySeenBasil = true; %>
 * [[Wink back at the horse.|Wink back at Basil.]]
@@ -67,7 +68,6 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
   s.partySeenByron = true; %>
 * [[Look at wolf.]]
 <% } %>
-* [[Grab some punch.]]
 <% } %>
 
 :: Randomized Party Flavor [hide]
