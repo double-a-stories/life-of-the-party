@@ -62,7 +62,6 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
   s.partySeenByron = true; %>
 * [[Look at wolf.]]
 <% } %>
-<% } %>
 
 :: Randomized Party Flavor [hide]
 <!-- wow, the code that controls this part sucks. -->

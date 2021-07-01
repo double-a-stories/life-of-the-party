@@ -40,7 +40,7 @@ tw-passage > * {
 
 * [[Life of the Party.]]
 <% if (setup.getAchievements().length >= setup.totalAchievements) { %>
-* [[Epilogue.]]
+* More content coming soon!
 <% } %>
 
 </div>
