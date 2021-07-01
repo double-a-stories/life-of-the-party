@@ -1,3 +1,8 @@
+// Mute on load.
+if (!setup.isFlagSet("enableSound")) {
+  Howler.volume(0.0);
+}
+
 /*
 Simple sound controller using howler.js
 */
@@ -8,14 +13,14 @@ class SoundInstance {
    */
   constructor(howlObject) {
     this.howl = howlObject;
-    this.id = howlObject.play();
-    this.howl.pause(this.id);
-    this.howl.mute(false, this.id)
   }
   fadeIn(duration = 1000) {
+    if (this.id == undefined) {
+      this.id = this.howl.play();
+      this.howl.fade(0.0, this.howl.volume(), duration, this.id);
+    }
     if (!this.howl.playing(this.id)) {
       this.howl.play(this.id);
-      this.howl.loop(true, this.id);
       this.howl.fade(0.0, this.howl.volume(), duration, this.id);
     }
   }
@@ -60,24 +65,28 @@ const birds = new Howl({
   loop: true,
   volume: 0.6,
   muted: true,
+  html5: true,
 });
 const gurgle = new Howl({
   src: ["assets/sound/gurgle.mp3"],
   loop: true,
   volume: 1.0,
-  muted: true
+  muted: true,
+  html5: true,
 });
 const crickets = new Howl({
   src: ["assets/sound/crickets.mp3"],
   loop: true,
   volume: 0.1,
-  muted: true
+  muted: true,
+  html5: true,
 });
 const zenMusic = new Howl({
   src: ["assets/sound/kevp888 - CD_YIN_001.mp3"],
   html5: true,
   volume: 1.0,
-  muted: true
+  muted: true,
+  html5: true,
 });
 passageAudio(birds, hasTags("morning"));
 passageAudio(gurgle, hasTags("vore"));
