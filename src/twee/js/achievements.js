@@ -34,6 +34,7 @@ class PersistentStorage {
     let base64 = utoa(json);
     if (!this.noStorage) {
       localStorage.setItem(this.key, base64);
+      this._cached = undefined;
     } else {
       this._cached = JSON.parse(json);
     }
