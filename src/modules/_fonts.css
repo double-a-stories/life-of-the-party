@@ -19,17 +19,19 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/comicneue/v2/4UaErEJDsxBrF37olUeD_xHMwps.ttf) format('truetype');
 }
+
 @font-face {
   font-family: 'Tinos';
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/tinos/v16/buE2poGnedXvwjX-fmE.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/tinos/v16/buEzpoGnedXvwjX-Rt1s0Co.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Tinos';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/tinos/v16/buE4poGnedXvwgX8.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/tinos/v16/buE1poGnedXvwj1AW0Fp.ttf) format('truetype'),
+  url(https://fonts.gstatic.com/s/tinos/v16/buE1poGnedXvwj1AW3Fu0C8V-txK.woff2) format('woff2');
 }

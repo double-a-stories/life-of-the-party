@@ -1,7 +1,5 @@
 :: Help [no_checkpoint]
 
-* <a0 onclick="setup.undo();">Go back</a>
-
 ### Keyboard controls
 
 * `S (J)` - *Select next link.*
