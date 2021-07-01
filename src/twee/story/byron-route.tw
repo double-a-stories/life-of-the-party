@@ -53,7 +53,7 @@ Right, you say, you never really saw the appeal either.
 
 :: Compliment shirt?
 
-You notice that underneath <%-s.bm?"his":"her"%> flannel, <%-s.bm?"he":"she"%>'s wearing a t-shirt from an emo rock group called Dingoes Ate My Girlfriend. You used to be pretty into them, back in junior high.
+You notice that underneath <%-s.bm?"his":"her"%> flannel, <%-s.bm?"he":"she"%>'s wearing a t-shirt from an emo rock group called Dingoes Ate My Girlfriend. You used to be pretty into them back in junior high.
 
 Cool shirt, you say.
 
@@ -83,20 +83,20 @@ You roll your eyes.
 
 * [[*Red Paranoia. Chained Up Illness. Bite My Kiss.*|Name 3 of their albums.]]
 * [[*Sucker F\*cker. Dingoes Must Die. Eat Eat Repeat.*|Name 3 of their albums.]]
-* [[*Food For Love. Pain Train. Tummy KO OK.*|Name 3 of their albums.]]
+* [[*Food for Love. Pain Train. Tummy KO OK.*|Name 3 of their albums.]]
 
 
 :: Name 3 of their albums.
 
 The wolf raises <%-s.bm?"his":"her"%> eyebrows as you correctly rattle off three D.A.M.G album titles.
 
-The wolf is silent for a moment, then says, <q.byron>Truly, I am impressed by your knowledge. It is good to see *someone* at this party is not a cultureless rut-head. With whom do I have the pleasure of speaking?</q>
+The wolf is silent for a moment, then says, <q.byron>Truly, I am impressed by your knowledge. It is good to see *someone* at this party is not a cultureless ruthead. With whom do I have the pleasure of speaking?</q>
 
 * [[The name's Freely. Hollis Freely.]]
 
 :: The name's Freely. Hollis Freely.
 
-<q.byron>Pleasure to make your acquaintance, dear rabbit,</q> the wolf says, now observing you with renewed interest. The wolf gestures for you to sit, and you oblige. <%-s.bm?"His":"Her"%> fluffy tail curls around your back. It makes you slightly nervous.
+<q.byron>Pleasure to make your acquaintance, dear rabbit,</q> the wolf says, now observing you with renewed interest. <%-s.bm?"He":"She"%> gestures for you to sit, and you oblige. <%-s.bm?"His":"Her"%> fluffy tail curls around your back. It makes you slightly nervous.
 
 Finally, <%-s.bm?"he":"she"%> deigns to introduce <%-s.bm?"himself":"herself"%> to you. <%-s.bm?"He":"She"%> gestures grandiosely to <%-s.bm?"his":"her"%> chest, and says, <q.byron>I am <%-s.bm?"Emmet":"Emily"%> Byron III, but you may call me simply <%-s.bm?"Byron":"Emily"%>.</q>
 
@@ -116,7 +116,7 @@ You politely return the pawshake. <%-s.bm?"Byron":"Emily"%>'s firm, professional
 
 On the contrary, your favorite was their first live album, *Dingoes On Tour*.
 
-<%-s.bm?"Byron":"Emily"%> nods slyly. <q.byron>Yes, I think they sounded best with *Strauss* on the drums.</q>
+<%-s.bm?"Byron":"Emily"%> nods slyly. <q.byron>Yes, I think they sounded best with Strauss on the drums.</q>
 
 You sweat a little at the mention of the band's original drummer, Strauss. A few weeks after their first tour, he mysteriously vanished. Eventually, it came out that he'd got into a drunken argument with the band's bassist, and was swallowed and digested. The ensuing scandal dominated headlines for several days.
 
@@ -154,7 +154,7 @@ Uh-huh, you say.
 
 <%-s.bm?"Byron":"Emily"%> blinks. <q.byron>Ex*cuse* me?</q>
 
-You tell Byron firmly that you're not gonna let <%-s.bm?"him":"her"%> eat you, or fuck you, or anything.
+You tell <%-s.bm?"him":"her"%> firmly that you're not gonna let <%-s.bm?"him":"her"%> eat you, or fuck you, or anything.
 
 <%-s.bm?"His":"Her"%> mouth seems to become slightly dry. <q.byron>Are... are you sure? I have been told it can be quite... pleasant, given the right participants. A sensual reminder of animal passions long forgotten, heightened by the cruel grip of mortality...</q>
 
@@ -162,7 +162,7 @@ You tell Byron firmly that you're not gonna let <%-s.bm?"him":"her"%> eat you, o
 
 :: Shut it!
 
-Ugh, stop talking like that, you say. The whole "sensitive musician" thing is obviously just a ploy to lure in prey. You tell <%-s.bm?"Byron":"Emily"%> <%-s.bm?"he":"she"%>'s just horny and hungry, like everybody else at this dumb party. A literal wolf in sheep's clothing!
+Ugh, stop talking like that, you say. The whole "sensitive musician" shtick is obviously just a ploy to lure in prey. You tell <%-s.bm?"Byron":"Emily"%> <%-s.bm?"he":"she"%>'s just horny and hungry, like everybody else at this dumb party. A literal wolf in sheep's clothing!
 
 <%-s.bm?"He":"She"%> narrows <%-s.bm?"his":"her"%> eyes, and scowls, <q.byron>...You insult me gravely, little thing. I have been nothing but a pinnacle of courtesy, and you rebuff both me and my pedigree.</q> <%-s.bm?"He":"She"%> sticks out a paw. <q.byron>Follow me.</q>
 
@@ -170,9 +170,9 @@ Ugh, stop talking like that, you say. The whole "sensitive musician" thing is ob
 
 :: Don't take it.
 
-The wolf is now openly scowling, but careful not to let the other partygoers take notice.
+You stay put. The wolf begins openly scowling, but remains careful not to let the other partygoers take notice.
 
-<q.byron>You slut!</q> <%-s.bm?"he":"she"%> snarls. The wolf pops <%-s.bm?"his":"her"%> collar, and mutters, <q.byron>You disgrace me and my family name! A gentle<%-s.bm?"man":"woman"%> cannot let a slight like that go unrepayed. I demand satisfaction.</q>
+<q.byron>You slut!</q> <%-s.bm?"he":"she"%> pops <%-s.bm?"his":"her"%> collar and snarls, <q.byron>You disgrace me and my family name! A gentle<%-s.bm?"man":"woman"%> cannot let a slight like that go unrepayed. I demand satisfaction.</q>
 
 <%-s.bm?"He":"She"%> rises to <%-s.bm?"his":"her"%> feet, slings <%-s.bm?"his":"her"%> guitar over <%-s.bm?"his":"her"%> back, and offers you <%-s.bm?"his":"her"%> paw. <q.byron>Stand up,</q> <%-s.bm?"he":"she"%> commands.
 
@@ -199,7 +199,7 @@ You grit your teeth, and walk helplessly alongside <%-s.bm?"Byron":"Emily"%> as 
 
 The labrador points a paw at the wolf, and asks you, "Hey dude, this dude bothering you, dude? Cause that's supes no bueno, dude."
 
-<%-s.bm?"Byron":"Emily"%> tightens <%-s.bm?"his":"her"%> grip on you and tries start walking again, and says, <q.byron>No, we were just-</q>
+<%-s.bm?"Byron":"Emily"%> tightens <%-s.bm?"his":"her"%> grip on you and tries to walk away. <%-s.bm?"He":"She"%> <q.byron>No, we were just-</q>
 
 "Let em talk, dude," the dog interrupts.
 
@@ -244,13 +244,15 @@ You respond by fainting from blood loss.
 
 <q.byron>Those damn dogs,</q> <%-s.bm?"Byron":"Emily"%> mutters as <%-s.bm?"he":"she"%> drags you through the foyer and up the stairs. <q.byron>Just interested in rutting and drinking... No respect for superior intellect, and no appreciation for the finer things in life...</q> <%-s.bm?"He":"She"%> opens the door to an upstairs bedroom, and ushers you in.
 
-<q.byron>There,</q> the wolf says, locking the door, <q.byron>Just the two of us now!</q>
+*Click*.
+
+<q.byron>There,</q> the wolf says, locking the door, behind you, <q.byron>Just the two of us now.</q>
 
 * [[You'll never get away with this.]]
 
 :: You'll never get away with this.
 
-The wolf chuckles. <q.byron>With what? Eating you? I guess you truly are stupider than you look.</q> <%-s.bm?"He":"She"%> gestures for you to take a seat on the bed. You oblige.
+The wolf chuckles. <q.byron>With what? Eating you? I guess you truly are stupider than you look.</q> <%-s.bm?"He":"She"%> gestures for you to take a seat on the bed. At risk of further injury, you oblige.
 
 <q.byron>I shan't bore your little mind with statistics, but did you know that 900,000 prey are reported missing every year? You might also be interested to know that only 2% of those cases are even investigated?</q>
 
@@ -295,6 +297,8 @@ You tell <%-s.bm?"Byron":"Emily"%>, oh my god, stop talking! Can <%-s.bm?"he":"s
 
 :: Do your worst.
 
+You put on a brave face, and tell your assailant to do <%-s.bm?"his":"her"%> worst.
+
 <%-s.bm?"Byron":"Emily"%> opens <%-s.bm?"his":"her"%> jaws wide in front of your face, close enough to see individual strands of saliva. <%-s.bm?"His":"Her"%> breath on your face is disgusting. You can tell <%-s.bm?"he":"she"%> is trying very hard to be intimidating.
 
 * [[Wow, I'm literally terrified.]]
@@ -303,7 +307,7 @@ You tell <%-s.bm?"Byron":"Emily"%>, oh my god, stop talking! Can <%-s.bm?"he":"s
 
 You hide your anxieties behind a cool, detached demeanor, and tell Byron flatly about how you're totally quaking in your boots.
 
-<%-s.bm?"He":"She"%> seems to lose <%-s.bm?"his":"her"%> temper slightly. <q.byron>My teeth will graze your weak skin, and my stomach will smother you until its acids . And you'll feel *every* moment of agony, until you're digested and absorbed as calories.</q> <%-s.bm?"He":"She"%> smiles wickedly, <q.byron>And I'm not even doing it because I'm hungry. I'm doing it to teach you where uppity prey like you belong.</q>
+<%-s.bm?"He":"She"%> seems to lose <%-s.bm?"his":"her"%> temper slightly. <q.byron>My teeth will graze your weak skin, and my stomach will smother you until its acids dissolve everything you ever were into slurry. You'll feel *every* moment of agony, until you're digested and absorbed as calories.</q> <%-s.bm?"He":"She"%> smiles wickedly, <q.byron>And I'm not even doing it because I'm hungry. I'm doing it to teach you where uppity prey like you belong.</q>
 
 * [[Oh, cool. Whatever.]]
 
@@ -325,7 +329,7 @@ You tell <%-s.bm?"Byron":"Emily"%> you hope <%-s.bm?"he":"she"%> chokes on you, 
 
 <%-s.bm?"He":"She"%> frowns, and says, <q.byron>Well that's just-</q>
 
-You say that being covered in stomach acid and bile could not be even a tenth as repulsive as <%-s.bm?"his":"her"%> personality, and the self-aggrandizing bullshit <%-s.bm?"he's":"she's"%> constantly spewing.
+You also say that being covered in stomach acid and bile could not be even a tenth as repulsive as <%-s.bm?"his":"her"%> personality, and the self-aggrandizing bullshit <%-s.bm?"he's":"she's"%> constantly spewing.
 
 <%-s.bm?"Byron":"Emily"%> sighs, and grips you by the shoulders. <q.byron>'Twas foolish of me to expect grace and dignity from the graceless and undignified. All the same, I suppose... Farewell, Freely.</q>
 
@@ -333,11 +337,11 @@ You say that being covered in stomach acid and bile could not be even a tenth as
 
 :: Up yours. [vore]
 
-You raise both middle fingers. Byron:Emily lifts you up, and shoves your naked body head-first into <%-s.bm?"his":"her"%> mouth. Your vision gets darker and darker as your face slides toward <%-s.bm?"his":"her"%> gullet. Slick saliva covers your cheeks, and your ears flatten at the roof of <%-s.bm?"his":"her"%> mouth. You break out in a cold sweat.
+You raise both middle fingers, as <%-s.bm?"Byron":"Emily"%> lifts you up and shoves your naked body head-first into <%-s.bm?"his":"her"%> gaping maw. Your vision gets darker and darker as your face slides toward <%-s.bm?"his":"her"%> gullet. Slick saliva covers your cheeks, and your ears flatten at the roof of <%-s.bm?"his":"her"%> mouth. You break out into a cold sweat.
 
 <q.byron>Glrk. Glp. Glgg.</q>
 
-You hear a sickening series of squelches as the wolf swallows, and your head slips into <%-s.bm?"his":"her"%> esophagus. You can feel the wolf's heartbeat pulsing, as you slowly slide head-long toward <%-s.bm?"his":"her"%> gut. It's fast, powerful, and loud.
+You hear a sickening series of squelches as the wolf swallows, and your head slips into <%-s.bm?"his":"her"%> esophagus. You can feel the pulsing of <%-s.bm?"his":"her"%> heartbeat as you slowly slide head-long toward <%-s.bm?"his":"her"%> gut. Your face splashes headfirst into a putrid cavern of <%-s.bm?"his":"her"%> stomach.
 
 * [[Ew...]]
 
@@ -513,7 +517,7 @@ lol hottt!! wanna eat me next? jk! unless... ;3
 
 ##### **dingo-fucker-311** - 15 minutes ago:
 
-Cool story, but I think you should stick to reviewing music bro:sis.
+Cool story, but I think you should stick to reviewing music <%-s.bm?"bro":"sis"%>.
 
 ##### **wannabe-dropout** - 13 minutes ago:
 

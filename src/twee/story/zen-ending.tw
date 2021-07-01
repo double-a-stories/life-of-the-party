@@ -1,9 +1,9 @@
-:: Sit by yourself. [dreamy_1]
+:: Sit by yourself. [outside dreamy_1]
 You find an empty bench to sit on by yourself, distancing yourself from the chaos of the party. Being out here on your own, it's actually quite peaceful.
 
 * [[Watch the stars.]]
 
-:: Watch the stars. [dreamy_2 stars]
+:: Watch the stars. [outside dreamy_2 stars zen]
 You do so.
 
 The night sky is peaceful. The clouds are clear, but you can only barely see the stars thanks to the light pollution of this suburban neighborhood.
@@ -12,14 +12,14 @@ The night sky is peaceful. The clouds are clear, but you can only barely see the
 * [[Comprehend the endless cosmos.]]
 
 
-:: Get up.
+:: Get up. [outside]
 Having had your fill of stargazing, you stand up from the bench.
 
 * [[Look at hyena.]]
 * [[Go back to the foyer.|The Foyer.]]
 
 
-:: Comprehend the endless cosmos. [dreamy_3 stars]
+:: Comprehend the endless cosmos. [outside dreamy_3 stars zen]
 Sitting here alone, with your head tilted toward the starryish sky, you realize that nothing you've been doing at this party has been very important.
 
 You don't need to rescue your friend from being eaten. You don't need to find a hot date, and you definitely don't need to be seduced, swallowed, and privately digested by them. You don't even need to think about how you're getting home after this.
@@ -32,7 +32,7 @@ All you need to do is rest your eyes upon the swirling heavens, and relax. You r
 * [[Break these mortal chains.]]
 
 
-:: Break these mortal chains. [dreamy_3 stars]
+:: Break these mortal chains. [dreamy_3 stars outside zen]
 <% setup.addAchievement("True Zen (Meditation Ending)") %>
 
 You shut your eyes tight.
@@ -60,7 +60,7 @@ In the backyard of a suburban house party, Hollis Freeley opens their eyes, and 
 
 </div>
 
-:: Be the hyena. [dark anastory]
+:: Be the hyena. [outside dark anastory]
 
 Your name is Ana. You're a spotted hyena, currently chilling on a bench outside a house party like a total loser.
 
@@ -75,7 +75,7 @@ What do you do?
 * [[Eat the rabbit.]]
 
 
-:: Eat the rabbit. [dark anastory]
+:: Eat the rabbit. [outside dark anastory]
 
 <i.ana>Great idea, voice inside my head,</i> you think. You walk over to the rabbit.
 
@@ -89,7 +89,7 @@ They try to fight you at first, but eventually calm down.
 * [[Swallow them.]]
 * [[Swallow them.]]
 
-:: Swallow them. [dark anastory]
+:: Swallow them. [outside dark anastory]
 
 With one huge gulp, you swallow the rabbit.
 

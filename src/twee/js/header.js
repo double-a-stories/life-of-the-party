@@ -6,11 +6,10 @@
 $(window).on('sm.story.started', function (event, {
   story
 }) {
-  const passages = story.passages.filter(p => p);
-  passages.filter(p => p.tags.includes("header")).forEach(p => {
-    const html = $.parseHTML(story.render(p.id));
-    $(html).insertBefore(story.$passageEl);
-  })
+  const headerWrapper = $("<div></div>")
+    .attr("id", "header-container")
+    .insertBefore(story.$passageEl)
+    .html(story.render("Header"));
 });
 
 // Make a passage loading work like page loading
@@ -59,3 +58,14 @@ $(window).on("sm.passage.shown", (event, {passage}) => {
     $(".help-button").text("Help");
   }
 })
+
+setup.toggleMute = () => {
+  if (!setup.isFlagSet("enableSound")) {
+    setup.setFlag("enableSound");
+    Howler.volume(1.0);
+  } else {
+    setup.unsetFlag("enableSound");
+    Howler.volume(0.0);
+  }
+  renderToSelector("#header", "Topbar controls")
+}
