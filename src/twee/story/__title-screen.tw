@@ -15,7 +15,7 @@
 
 :: Misc story variables [script]
 
-story.version = `v0.6.0-nightly`;
+story.version = `v0.7.0-indev`;
 
 :: StoryTitle
 Life of the Party
@@ -39,17 +39,19 @@ tw-passage > * {
 <div class="center-list">
 
 * [[Life of the Party.]]
+<% if (setup.getAchievements().length >= setup.totalAchievements) { %>
+* More content coming soon!
+<% } %>
 
 </div>
 
 <div>
 <% const hasSomeAchievements = (setup.getAchievements().length > 0); %>
 <%= story.render(hasSomeAchievements ? "Achievements list" : "Content warning") %>
-
 </div>
 
 :: Content warning
 
 ### ⚠ CONTENT WARNING ⚠️
 
-This story is for **ADULTS ONLY**. It contains **strong fetish content**, including but not limited to: *Soft vore. Unwilling digestion. Sadism. Sex. Masturbation. Dubious consent. Violence. Blood. Scat disposal. Death.* Proceed at your own discretion.
+This story is for **ADULTS ONLY**, and reader discretion is strongly advised. It contains **strong fetish content**, including but not limited to: *Soft vore. Dubious consent. Unwilling digestion. Sex. Violence. Sexual violence. Masturbation. Sadism. Blood. Post-vore scat disposal. Death.*

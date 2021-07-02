@@ -18,18 +18,32 @@ class PersistentStorage {
   // should be unique to this game
   constructor(key) {
     this.key = key;
+    try {
+      localStorage.getItem(this.key);
+    } catch (err) {
+      console.error("Failed reading from localStorage. Data will not be saved.")
+      this.noStorage = true;
+      console.error(err);
+    }
   }
   // Convert a JS object into JSON, then base64
   // Set it on localStorage.
   setData(object) {
     // Invalidate cache.
-    this._cached = undefined;
     let json = JSON.stringify(object);
     let base64 = utoa(json);
-    localStorage.setItem(this.key, base64);
+    if (!this.noStorage) {
+      localStorage.setItem(this.key, base64);
+      this._cached = undefined;
+    } else {
+      this._cached = JSON.parse(json);
+    }
   };
   // Get the value from localStorage, and attempt to decode.
   getData() {
+    if (this.noStorage) {
+      return this._cached;
+    }
     if (this._cached == undefined) {
       try {
         let base64 = localStorage.getItem(this.key);
@@ -40,8 +54,7 @@ class PersistentStorage {
         }
       } catch (err) {
         console.error(err);
-        console.error("Something went wrong parsing the .")
-        this._cached = undefined;
+        console.error("Something went wrong parsing localStorage.")
       }
     }
     return this._cached;
@@ -82,6 +95,7 @@ const achievementStorage = new PersistentStorageSet(story.name + "achievements")
 setup.getAchievements = () => achievementStorage.getData();
 setup.addAchievement = (name) => achievementStorage.add(name);
 setup.resetAchievements = () => achievementStorage.setData([]);
+setup.localStorageWorks = achievementStorage.noStorage;
 
 setup.resetAchievementsPrompt = function() {
   const message = `This will reset your save file, including the ${setup.getAchievements().length} achievement(s) you have acquired so far.

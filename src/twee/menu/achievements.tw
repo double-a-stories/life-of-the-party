@@ -1,6 +1,6 @@
 :: Max achievements [script]
 window.setup = window.setup || {};
-setup.totalAchievements = 9;
+setup.totalAchievements = 8;
 
 :: Achievements list
 

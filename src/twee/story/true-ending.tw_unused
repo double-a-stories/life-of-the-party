@@ -1,0 +1,193 @@
+:: Epilogue styles [stylesheet]
+
+body[data-tags~="epilogue"] {
+  --background: #002;
+  --light: rgba(255, 255, 255, 50%);
+  --color: #ccc;
+}
+[data-tags~="epilogue"] tw-story {
+  font-family: Times New Roman, serif;
+}
+[data-tags~="epilogue"] .topbar {
+  opacity: 0;
+}
+[data-tags~="epilogue"] .topbar:focus-within,
+[data-tags~="epilogue"] .topbar:hover {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+[data-tags~="epilogue"] h2 {
+  text-align: center;
+  line-height: 2;
+}
+
+.hollis,
+[data-tags~="epilogue"] .commands-list a {
+  font-family: var(--font-stack);
+  font-size: 90%;
+}
+
+
+:: Epilogue. [epilogue outside]
+
+It's early in the evening. Fall leaves scatter about the otherwise well-kempt lawns of a dozen suburban houses. Parked cars are lined up as far as the eye can see.
+
+A rabbit and a guinea pig walk along the sidewalk, and arrive in front of the Armstrong house.
+
+<q.reese>Well, this is the place,</q> says the guinea pig.
+
+* [[I don't think I'm ready for this...]]
+
+:: I don't think I'm ready for this... [epilogue outside]
+
+<q.hollis>I don't think I'm ready for this,</q> says the rabbit, awkwardly adjusting their shirt.
+
+<q.reese>There's nothing to be afraid of, Hol,</q> replies the guinea pig, patting his friend on the shoulder. <q.reese>The place will be crawling with drunk hotties. You just have to act natural, and they'll be begging for a taste of you!</q>
+
+The thumping bass, and a few whoops and hollers can be heard from outside.
+
+* [[I'm not great with crowds...]]
+
+:: I'm not great with crowds... [epilogue outside]
+
+<q.hollis>We both know I'm not really great with crowds...</q> the rabbit says, shifting uncomfortably.
+
+<q.reese>You can leave if you want to,</q> the guinea pig replies. <q.reese>But a party like this is the perfect way for a couple of dropouts like us to forget all our worries! Trust me, it'll be over before you know it!</q>
+
+Frightening images flash through the rabbit's mind; a wolf's fangs, a bear's maw, a horse's gullet. For a moment, they're confused about where those images came from.
+
+<q.reese>So,</q> the guinea pig asks, approaching the door, <q.reese>are you coming?</q>
+
+* [[I really don't want to!]]
+
+:: I really don't want to! [epilogue outside]
+
+<q.hollis>I really don't want to...</q> they say.
+
+The guinea pig frowns. <q.reese>Really? We can leave if you want.</q>
+
+<q.hollis>No, no,</q> says the rabbit, scratching their whiskers, <q.hollis>we came all this way...</q>
+
+The guinea pig smiles, and says, <q.reese>If you say so...</q> He goes to knock on the front door to be let in.
+
+* [[Wait, didn't we already do this?]]
+
+:: Wait, didn't we already do this? [epilogue outside]
+
+<q.hollis>Wait, didn't we already do this?</q> asks Hollis, confused. The sentence echoes strangely inside their head as they say it.
+
+A smile flickers on Reese's lips. He stops reaching for the door. <q.reese>What do you mean?</q>
+
+Hollis says, <q.hollis>I remember having this conversation before. You convinced me to go with you, and you knocked on the door.</q>
+
+<q.reese>And then what happened?</q> asks Reese.
+
+* [[We went inside...]]
+
+:: We went inside... [epilogue outside]
+
+Hollis frowns as they mentally retrace their steps. <q.hollis>We went inside... Then I got separated from you. And I went upstairs? No wait, outside... There was a horse involved? And I think...</q>
+
+They shiver for a moment, as they recall vividly the wet, hot sensation of being inside a predator's stomach. Several different stomachs, actually, which is confusing... They remember feeling a strange mixture of fear and excitement, as drowsiness became sleep, and sleep became oblivion.
+
+Reese nods, <q.reese>You think...?</q>
+
+* [[I think I died.]]
+
+:: I think I died. [epilogue outside stars]
+
+<q.hollis>I think I died?</q> says Hollis. Their heart sinks.
+
+Reese smirks, <q.reese>I was wondering when you'd catch on.</q>
+
+* [[What's happening?]]
+
+:: What's happening? [epilogue stars]
+
+<q.hollis>What's happening?</q> Hollis asks.
+
+Hollis looks around. The house is gone, as is the sidewalk. In every direction, it's just the twilit sky stretching out forever, slowly turning into night.
+
+Reese glances around, and shrugs nonchalantantly. <q.reese>If I had to guess, I'd say we've been digested.</q> He scratches the back of his head.
+
+Hollis looks out at the horizon.
+
+* [[Is this... the afterlife?]]
+
+:: Is this... the afterlife? [epilogue stars]
+
+Reese shrugs. <q.reese>I dunno, do you believe in that kind of thing? This definitely *looks* like some kind of liminal space in which souls are cleansed before reincarnation.</q>
+
+Hollis stares at him awkwardly. <q.hollis>Like some kind of purgatory?</q>
+
+<q.reese>Sure. On the other paw, it's equally likely that my life is flashing before my eyes, and you're just a figment of my imagination.</q>
+
+* [[I don't feel like a figment...]]
+
+:: I don't feel like a figment... [epilogue stars]
+
+Hollis touches the gray fur of their cheeks. <q.hollis>I don't feel like a figment,</q> they say.
+
+<q.reese>That's exactly what a figment would say,</q> Reese says, smiling, <q.reese>Oh, or maybe our souls have been combined into some kind of sentient turd!</q>
+
+Hollis folds their arms and chuckles. <q.hollis>If anyone's a sentient turd, it's you.</q> They both laugh. Hollis tries to remember the last time they really laughed.
+
+* [[I can't believe I'm dead...]]
+
+:: I can't believe I'm dead... [epilogue stars]
+
+<q.hollis>I can't believe I'm dead,</q> Hollis sighs wistfully.
+
+<q.reese>Oh, I can,</q> says Reese. Hollis shoots them a look. <q.reese>Let's face it. You were a young herbivore with no college education, no self defense skills, and a raging vore kink! It was practically destiny.</q>
+
+<q.hollis>Hey,</q> says Hollis, defensively, <q.hollis>You're the one with the vore kink! A kink which got both of us killed!</q>
+
+Reese looks at them smugly, <q.reese>It was pretty hot though, right?</q>
+
+* [[Well, I guess so...|Give feedback.]]
+* [[Actually it was kind of boring?|Give feedback.]]
+
+:: Give feedback. [epilogue stars]
+
+<q.reese>Heh, face it Hol. You loved being food.</q>
+
+The rabbit frowns, and stammers, <q.hollis>But... there was so much more I wanted to do with my life!</q>
+
+<q.reese>Oh, like what?</q>
+
+* [[Uh... Well...]]
+
+:: Uh... Well... [epilogue stars]
+
+Hollis hesitates, <q.hollis>...There was that one superhero movie I wanted to see... </q>
+
+Reese pats Hollis on the back, <q.reese>Well, I'm sorry I deprived you of your lifelong dream to see *Digestitron III: Return of Digestitron*, heh.</q>
+
+<q.hollis>And maybe I would've finally gotten a Chia Pet...</q> Hollis reflects for a moment, and says, <q.hollis>I guess I really was just a huge, worthless nerd?</q>
+
+* [[Hey, you weren't worthless!]]
+
+:: Hey, you weren't worthless! [epilogue stars]
+
+<q.reese>Hey, you weren't worthless!</q> Reese reassures them, <q.reese>Prey provide crucial calories and protein, for promoting healthy muscle growth in predators!</q>
+
+<q.hollis>And I'm probably keeping a plumber well-employed...</q> Hollis snickers.
+
+<q.reese>But seriously, this whole thing is pretty much entirely my fault. And... I'm sorry. If I'd respected your boundaries, you wouldn't have been eaten.</q>
+
+* [[Don't feel bad!]]
+
+:: Don't feel bad! [epilogue stars]
+
+<q.hollis>Hey, don't feel bad,</q> Hollis says, <q.hollis>Like you said, I think it was basically inevitable.</q>
+
+// TODO:
+* Give the player a chance to express feelings.
+* Glad I had a friend like you!
+
+You gain self-actualization and catharsis, and the two of you disintegrate.
+
+
+* <a0 onclick="setup.restart()">Restart</a>
+* [[Credits]]
