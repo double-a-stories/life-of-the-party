@@ -137,7 +137,6 @@ Kaia the mouse looks up at you with concern. <q.mouse>Uh, hi Hollis! I hear that
 
 * [[Good idea, thanks.]]
 * [[Get very very drunk.]]
-* [[Eat Kaia.]]
 
 <% } else { %>
 A labrador notices and elbows you. "Woahh, dude! Maybe go a little easy on the party sauce, kay dude?"
@@ -156,11 +155,4 @@ You nod, and thank her for looking out of your health.
 
 <q.mouse>No problem! Lemme know if you find faith. Er, Faith, my girlfriend.</q>
 
-* [[Go back.|Dance a little.]]
-
-:: Eat Kaia.
-
-What? No. I get that you're drunk, but why would you even think of something like that?
-
-* [[Get very very drunk.]]
 * [[Go back.|Dance a little.]]
