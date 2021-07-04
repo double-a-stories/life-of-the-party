@@ -30,6 +30,8 @@ You go back into the hallway. The loud music continues to bombard your ears. Tha
 
 
 :: Masturbate.
+Ha-ha.
+
 For just a moment, you consider masturbating in the bathroom of a stranger's house, while a gigantic house party rages on just outside. You realize however what a bad idea that is. After all, someone else might want to use the bathroom, or accidentally walk in on you.
 
 You take a deep breath, get your impulses under control, and...
@@ -39,7 +41,7 @@ You take a deep breath, get your impulses under control, and...
 
 
 :: Masturbate in the bathroom.
-You.. um... Okay.
+You... um... Okay.
 
 Your libido overcomes you. In the privacy of a stranger's house, you stick your hand down your underwear and begin to pleasure yourself for a minute or two.
 
@@ -52,6 +54,23 @@ Satisfied, you take your hands out and stop.
 ...Look, um, I'm not here to judge or anything. Maybe you're just here cause you're curious. Maybe you wanna see all the options. Get all the endings.
 
 Still, there's plenty of other stuff you could be doing at this party instead. This is kind of... weird?
+
+* [[Think about boobs instead.]] *(Female pred)*
+* [[Think about balls instead.]] *(Male pred)*
+
+:: Think about boobs instead.
+<% s.hg = false; %>
+<%= story.render("Think about...") %> <!-- [[Think about...]] -->
+
+:: Think about balls instead.
+<% s.hg = true; %>
+<%= story.render("Think about...") %> <!-- [[Think about...]] -->
+
+:: Think about...
+
+You try to quell the nagging voice in your head by visualizing a huge, voluptuous pair of <%-s.hg?"balls":"breasts"%>.
+
+In your mind's eye, you can see every drop of sweat covering their furry mass, just inches from your face. Perfectly round, firm, and begging to be worshipped. What you wouldn't give to be smothered by those tantalizing orbs...
 
 * [[Don't stop!!]]
 
@@ -285,63 +304,99 @@ setup.addAchievement("Grizzly End (Hazel Vore Ending)");
 * [[Epilogue.|Epilogue: Hazel Post Vore.]] *(CW: Scat.)*
 * [[Restart|Start]]
 
-
-:: Hazel Social Media Styles [stylesheet]
-
-
 :: Epilogue: Hazel Post Vore. [socmed]
 
 <!-- todo: consider trying to generate this HTML automatically-->
-<div class="social-card" tabindex="1">
-<p>Hazel Gently <small>@real_grizzy_grumbler –&nbsp;12h</small></p>
-<div class="placeholder-img" style="background: radial-gradient(ellipse at top, #b19164, transparent),
-            radial-gradient(ellipse at 50% 70%, black, transparent);">NSFW</div>
-<p>Just did a little "catching up" with an old friend! They were positively scrumptious, but I don't think this shirt fits anymore...</p>
+<div.social-card tabindex="1">
+
+Hazel Gently <small>@real_grizzy_grumbler –&nbsp;12h</small>
+
+<div.placeholder-img.belly-gradient role="img" alt="A blurred out image. The brown radial gradient which gives the faint suggestion of a bear's stomach">NSFW</div>
+
+Just did a little "catching up" with an old friend! They were positively scrumptious, but I don't think this shirt fits anymore...
+
 <small>#GirlBelly #Digestion #Yumm #SnackGoals</small>
-<p>♡ 926</p>
-<div style="font-size: smaller">
-<hr>
-<p><b>bellyfan_xox </b> hot tummy!! can you film it struggling?</p>
-<p><b>ally.hoppers6</b> dang hazel, u got huge! 😳😳💖 </p></div>
+
+♡ 926
+
+<div.social-card__comments>
+
+<b>bellyfan_xox </b> hot tummy!! can you film it struggling?
+
+<b>ally.hoppers6</b> dang hazel, u got huge! 😳😳💖
 
 </div>
-<div class="social-card" tabindex="1">
-<p>Hazel Gently <small>@real_grizzy_grumbler –&nbsp;7h</small></p>
-<p>🎉🐻💃 This party got wild! Gotten so many compliments on my huge tummy. Feels like Holly is finally starting to soften up... I swear, dorks always give me indigestion... </p>
+</div>
+
+<div.social-card tabindex="1">
+
+Hazel Gently <small>@real_grizzy_grumbler –&nbsp;7h</small>
+
+🎉🐻💃 This party got wild! Gotten so many compliments on my huge tummy. Feels like Holly is finally starting to soften up... I swear, dorks always give me indigestion...
+
 <small>#TGIF #Party #Lit #BellyDance #TummyRubsPlease</small>
-<p>♡ 219</p>
+
+♡ 219
+
 </div>
-<div class="social-card" tabindex="1">
-<p>Hazel Gently <small>@real_grizzy_grumbler – 5h</small></p>
-<p>There's nothing like falling asleep with a gut full of squirmy and squishy prey. Mmmm...</p>
+
+<div.social-card tabindex="1">
+
+Hazel Gently <small>@real_grizzy_grumbler – 5h</small>
+
+
+There's nothing like falling asleep with a gut full of squirmy and squishy prey. Mmmm...
+
 <small>#Burp #Sleepy #😴 #TopOfTheFoodChain</small>
-<p>♡ 39</p>
-<div style="font-size: smaller">
-<hr>
-<p><b>prey_rights_478</b> disgusting. #PreyArePeopleToo</p>
-<p><b>vorelord.6969</b> guess who's getting ate 2nite  👅☝️</p>
-<p><b>real_grizzy_grumbler</b> @prey_rights_478 💩 get blocked lol</p>
+
+♡ 39
+
+<div.social-card__comments>
+
+<b>prey_rights_478</b> disgusting. #PreyArePeopleToo
+
+
+<b>vorelord.6969</b> guess who's getting ate 2nite  👅☝️
+
+
+<b>real_grizzy_grumbler</b> @prey_rights_478 💩 get blocked lol
+
 </div>
 </div>
-<div class="social-card" tabindex="1">
-<p>Hazel Gently <small>@real_grizzy_grumbler – 1h</small></p>
-<p>Good morning **#GrizzGang!** My belly is so jiggly now, and I'm not even hung over! Time to pass the dweeb I digested last night. Pics incoming, xoxo</p>
+<div.social-card tabindex="1">
+
+Hazel Gently <small>@real_grizzy_grumbler – 1h</small>
+
+
+Good morning #GrizzGang! My belly is so jiggly now, and I'm not even hung over! Time to pass the dweeb I digested last night. Pics incoming, xoxo
+
 <small>#GrizzGang #Gurgling #🍑</small>
-<p>♡ 199</p>
+
+♡ 199
+
 </div>
-<div class="social-card" tabindex="1">
-<p>Hazel Gently <small>@real_grizzy_grumbler – 3m</small></p>
-<div class="placeholder-img" style="background: radial-gradient(ellipse at center, #5f3c0b, transparent),
-radial-gradient(ellipse at top, #eeeeee, transparent),
-            radial-gradient(ellipse at 50% 70%, #287486, transparent)">NSFW</div>
-<p>Wow, they were a bitch to push out, but they made my ass look fantastic. Oh well. Bye Holly, I always thought you were a little turd. 🐻💩🧻</p>
+<div.social-card tabindex="1">
+
+Hazel Gently <small>@real_grizzy_grumbler – 3m</small>
+
+<div.placeholder-img.poop-gradient role="img" alt="A blurred out image. The radial gradient gives the faint impression of a toilet with poop in it.">NSFW</div>
+
+Wow, they were a bitch to push out, but they made my ass look fantastic. Oh well. Bye Holly, I always thought you were a little turd. 🐻💩🧻
+
 <small>#Disposal #PostVore #PreyPoops #StillHungry</small>
-<p>♡ 621</p>
-<div style="font-size: smaller">
-<hr>
-<p><b>kal.mousie</b> woah, you ate someone?</p>
-<p><b>gut.filler.19m</b> Eat me next please!</p>
-<p><b>bigger.jb.21</b> god i'm glad that's not me.</p>
+
+♡ 621
+
+<div.social-card__comments>
+
+<b>kal.mousie</b> woah, you ate someone?
+
+
+<b>gut.filler.19m</b> Eat me next please!
+
+
+<b>bigger.jb.21</b> god i'm glad that's not me.
+
 </div>
 </div>
 
