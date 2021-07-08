@@ -13,21 +13,30 @@ class SoundInstance {
    */
   constructor(howlObject) {
     this.howl = howlObject;
+    this.playing = false;
   }
   fadeIn(duration = 1000) {
+    // If sound isn't playing yet, then fade in.
+    if (this.playing) {
+      return;
+    }
     if (this.id == undefined) {
       this.id = this.howl.play();
-      this.howl.fade(0.0, this.howl.volume(), duration, this.id);
-    }
-    if (!this.howl.playing(this.id)) {
+    } else {
       this.howl.play(this.id);
-      this.howl.fade(0.0, this.howl.volume(), duration, this.id);
     }
+    this.howl.fade(0.0, this.howl.volume(), duration, this.id);
+    this.playing = true;
+    this.howl.off("fade", this.id);
   }
   fadeOut(duration = 1000) {
     if (this.howl.playing(this.id)) {
       this.howl.fade(this.howl.volume(), 0.0, duration, this.id);
-      this.howl.once("fade", () => this.howl.mute(true, this.id), this.id);
+      this.playing = false;
+      this.howl.once("fade", () => {
+        this.playing = false;
+        this.howl.stop(this.id);
+      }, this.id);
     }
   }
 }
