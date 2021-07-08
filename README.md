@@ -39,8 +39,8 @@ This is a text-based interactive story written in [Twee 3](https://github.com/if
 
 * #### Byron route 🐺
   * Meet Emmet/Emily Byron, a ~~narcissistic jerk~~ <span title="sophisticated gentlewolf">𝐬𝐨𝐩𝐡𝐢𝐬𝐭𝐢𝐜𝐚𝐭𝐞𝐝 𝐠𝐞𝐧𝐭𝐥𝐞𝐰𝐨𝐥𝐟</span> with ~~facile, pretentious ideas~~ <span title="highly intellectual musings">𝐡𝐢𝐠𝐡𝐥𝐲 𝐢𝐧𝐭𝐞𝐥𝐥𝐞𝐜𝐭𝐮𝐚𝐥 𝐦𝐮𝐬𝐢𝐧𝐠𝐬</span> and ~~mediocre~~ <span title="impressive">𝐢𝐦𝐩𝐫𝐞𝐬𝐬𝐢𝐯𝐞</span> guitar skills.
-* Hang around the living room for a bit, and strike up a conversation. Just don't get too close.
-* *CW: Negging. Threats and violent coercion. Unwilling vore. Minor blood. Rape culture.*
+  * Hang around the living room for a bit, and strike up a conversation. Just don't get too close.
+  * *CW: Negging. Threats and violent coercion. Unwilling vore. Minor blood. Rape culture.*
 
 ## Building from source
 
