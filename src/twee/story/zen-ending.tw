@@ -33,7 +33,7 @@ All you need to do is rest your eyes upon the swirling heavens, and relax. You r
 
 
 :: Break these mortal chains. [dreamy_3 stars outside zen]
-<% setup.addAchievement("True Zen (Meditation Ending)") %>
+<% setup.addAchievement("Zen Ending", "") %>
 
 You shut your eyes tight.
 

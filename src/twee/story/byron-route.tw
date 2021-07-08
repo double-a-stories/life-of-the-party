@@ -469,7 +469,7 @@ The rabbit in <%-s.bm?"his":"her"%> stomach does not reply.
 
 ### The end.
 
-<% setup.addAchievement(`Anyway, here's... (Byron Vore Ending)`); %>
+<% setup.addAchievement("Byron Vore Ending", "Anyway, here's..."); %>
 
 * [[Epilogue.|Byron Epilogue.]]
 * [[Restart.|Start]]

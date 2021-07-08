@@ -3,6 +3,10 @@
 
 window.setup = window.setup || {};
 
+// Achievement version
+// Can be updated to introduce breaking changes with previous achievement formats.
+const ACHIEVEMENT_KEY_VERSION = 7;
+
 // Encode unicode to base64
 function utoa(str) {
   return window.btoa(unescape(encodeURIComponent(str)));
@@ -90,10 +94,14 @@ class PersistentStorageSet extends PersistentStorage {
   }
 }
 
-const achievementStorage = new PersistentStorageSet(story.name + "achievements");
+const achievementStorage = new PersistentStorageSet(story.name + ACHIEVEMENT_KEY_VERSION + "achievements");
 
 setup.getAchievements = () => achievementStorage.getData();
-setup.addAchievement = (name) => achievementStorage.add(name);
+setup.addAchievement = (name, desc) => {
+  if (!setup.getAchievements().some(a => a[0] == name)) {
+    achievementStorage.add([name, desc]);
+  }
+};
 setup.resetAchievements = () => achievementStorage.setData([]);
 setup.localStorageWorks = achievementStorage.noStorage;
 

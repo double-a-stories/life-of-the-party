@@ -263,7 +263,7 @@ Basil smiles as the party rages on. Another night well planned.
 
 ### The End.
 
-<% setup.addAchievement("Party Animal (Basil Vore Ending)"); %>
+<% setup.addAchievement("Basil Vore Ending", "Party Animals"); %>
 
 * [[Epilogue.|Epilogue: Basil Post Vore.]] *(CW: Scat Disposal.)*
 * <a0 data-passage="Start">Restart</a>
