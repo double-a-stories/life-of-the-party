@@ -220,14 +220,22 @@ That's horrible! you say.
 
 "Well," Nox says, "my sister can be a little intense with her food, but that's only if you decide not to partake!"
 
+* [[I thought you said you weren't predators!]]
+
+:: I thought you said you weren't predators!
+
 <% setup.addAchievement("Untitled (Nikki & Nox ending)")%>
 
 ## Game over.
 
+* [[Epilogue.|Faith: Epilogue.]]
 * [[Restart.|Start]]
 
-:: Be Kaia [mousestory]
+:: Faith: Epilogue. [mousestory]
 
-Your name is Kaia. You are a mouse.
+Your name is Faith. You are a mouse.
 
-* [[Link 1]]
+TODO:
+
+* Epilogue from Faith's perspective.
+* Beg for your life!
