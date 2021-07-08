@@ -138,7 +138,7 @@ You remember that Reese is still here, and possibly in danger. You can't just ab
 
 What? You ask <%=s.rm?"him":"her"%> how <%=s.rm?"he":"she"%> knows.
 
-<q class="ren"><!-- shrug --><%=s.rm?`🤷‍♂️`:`🤷‍♀️`%> Call it a hunch,</q> <%=s.rm?"he":"she"%> says, "No prey ever came to a party like this expecting to leave in one piece, right? Everyone's either here to 🐺 eat or be 🥩 eaten."
+<q class="ren"><!-- shrug --><%=s.rm?`🤷‍♂️`:`🤷‍♀️`%> Call it a hunch,</q> <%=s.rm?"he":"she"%> says, <q.ren>No prey ever came to a party like this expecting to leave in one piece, right? Everyone's either here to 🐺 eat or be 🥩 eaten.</q>
 
 You didn't realize this was that kind of party, you say.
 
