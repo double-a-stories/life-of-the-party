@@ -6,6 +6,7 @@
     "develop": "concurrently 'npm run twee-watch' 'npm run live-server'",
     "deploy-stable": "gh-pages -a -d dist",
     "deploy-indev": "gh-pages -a -d dist -e indev/",
+    "package-zip": "zip -r \"life-of-the-party-v\"$npm_package_version\"-dist.zip\" dist",
     "live-server": "light-server -s dist -w 'dist/*.html' -o",
     "twee-build": "tweego -m src/modules/ --head=src/head-content.html -o dist/index.html src/twee",
     "twee-build-proof": "tweego -f poof -m src/modules/ --head=src/head-content.html -o proofing/poof.html src/twee; tweego -f illume -m src/modules/ --head=src/head-content.html -o proofing/illume.html src/twee; tweego -f dotgraph -m src/modules/ --head=src/head-content.html -o proofing/dotgraph.html src/twee;",
