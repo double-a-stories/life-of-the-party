@@ -6,10 +6,14 @@
 $(window).on('sm.story.started', function (event, {
   story
 }) {
+  $(window).one('sm.passage.showing', function (event, {
+    passage
+  }) {
   const headerWrapper = $("<div></div>")
     .attr("id", "header-container")
     .insertBefore(story.$passageEl)
     .html(story.render("Header"));
+  });
 });
 
 // Make a passage loading work like page loading
@@ -53,9 +57,10 @@ setup.help = () => {
 
 $(window).on("sm.passage.shown", (event, {passage}) => {
   if (passage.name == "Help") {
-    $(".help-button").text("Back");
-  } else {
-    $(".help-button").text("Help");
+    renderToSelector("#header", "Topbar controls");
+    $(window).one("sm.passage.shown", () => {
+      renderToSelector("#header", "Topbar controls");
+    })
   }
 })
 
