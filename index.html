@@ -1032,21 +1032,30 @@ class SoundInstance {
    */
   constructor(howlObject) {
     this.howl = howlObject;
+    this.playing = false;
   }
   fadeIn(duration = 1000) {
+    // If sound isn't playing yet, then fade in.
+    if (this.playing) {
+      return;
+    }
     if (this.id == undefined) {
       this.id = this.howl.play();
-      this.howl.fade(0.0, this.howl.volume(), duration, this.id);
-    }
-    if (!this.howl.playing(this.id)) {
+    } else {
       this.howl.play(this.id);
-      this.howl.fade(0.0, this.howl.volume(), duration, this.id);
     }
+    this.howl.fade(0.0, this.howl.volume(), duration, this.id);
+    this.playing = true;
+    this.howl.off("fade", this.id);
   }
   fadeOut(duration = 1000) {
     if (this.howl.playing(this.id)) {
       this.howl.fade(this.howl.volume(), 0.0, duration, this.id);
-      this.howl.once("fade", () => this.howl.mute(true, this.id), this.id);
+      this.playing = false;
+      this.howl.once("fade", () => {
+        this.playing = false;
+        this.howl.stop(this.id);
+      }, this.id);
     }
   }
 }
@@ -1251,7 +1260,7 @@ document.addEventListener('pointerdown', function isTouching(ev) {
   } else {
     window.isTouching = !(ev.pointerType == "mouse");
   }
-});</script><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-tag name="TODO" color="red"></tw-tag><tw-passagedata pid="1" name="Achievements list" tags="" position="100,100" size="100,100">&lt;% const achievements = setup.getAchievements().sort((a1, a2) =&gt; a1[0].localeCompare(a2[0])); %&gt;
+});</script><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-passagedata pid="1" name="Achievements list" tags="" position="100,100" size="100,100">&lt;% const achievements = setup.getAchievements().sort((a1, a2) =&gt; a1[0].localeCompare(a2[0])); %&gt;
 
 ### Achievements (&lt;%-achievements.length%&gt; &lt;span aria-label=&quot;of&quot;&gt;/&lt;/span&gt; &lt;%-setup.totalAchievements%&gt;)
 
@@ -1277,13 +1286,12 @@ if (oneAchievementLeft &amp;&amp; !sawBroomClosetEnding) { %&gt;
 &lt;% const helpShown = window.passage &amp;&amp; window.passage.name === &quot;Help&quot;; %&gt;
 
 &lt;ul.header-nav-group&gt;
-	&lt;li&gt;&lt;a0 aria-label=&quot;restart&quot; onclick=&quot;setup.restart()&quot;&gt;⟲ Restart&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a0 aria-label=&quot;undo&quot; onclick=&quot;setup.undo()&quot;&gt;←
-	 Undo&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a0 aria-label=&quot;restart&quot; onclick=&quot;setup.restart()&quot;&gt;Restart&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a0 aria-label=&quot;undo&quot; onclick=&quot;setup.undo()&quot;&gt;Undo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul.header-nav-group&gt;
-	&lt;li&gt;&lt;a0 aria-label=&quot;&lt;%-muted?&#39;unmute&#39;:&#39;mute&#39;%&gt;&quot; class=&quot;mute-button&quot; onclick=&quot;setup.toggleMute();&quot; &gt;&lt;%=muted?`🔇`:`🔊`%&gt;&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a0 class=&quot;help-button&quot; onclick=&quot;setup.help();&quot;&gt;ⓘ &lt;%-!helpShown?&quot;Help&quot;:&quot;Back&quot;%&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a0 aria-label=&quot;&lt;%-muted?&#39;unmute&#39;:&#39;mute&#39;%&gt;&quot; class=&quot;mute-button&quot; onclick=&quot;setup.toggleMute();&quot; &gt;&lt;%=muted?`Enable`:`Disable`%&gt; sound (Beta)&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a0 class=&quot;help-button&quot; onclick=&quot;setup.help();&quot;&gt;&lt;%-!helpShown?&quot;Help&quot;:&quot;Back&quot;%&gt;&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;%- story.version %&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Help" tags="no_checkpoint" position="475,100" size="100,100">### Keyboard controls
