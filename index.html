@@ -81,48 +81,7 @@ body[data-tags~="drunk"] {
   50% { filter: blur (40px); }
   100% { filter: blur(0); }
 }</style>
-<style id="style-module-fake_social" type="text/css">/* Fake social cards for Hazel ending */
-
-[data-tags~="socmed"] tw-story {
-  max-width: 33rem;
-  margin: 0 auto;
-}
-
-.social-card {
-  padding: 1rem;
-  font-size: smaller;
-  font-family: sans-serif;
-background: white;
-  border: 1px solid var(--light);
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-box-sizing: border-box;
-cursor: default;
-}
-.social-card small {
-  opacity: 0.7;
-}
-
-.social-card * + * {
-margin-top: 1rem;
-}
-
-.social-card .placeholder-img {
-  width: 100%;
-  height: 15em;
-  border-radius: 0.5rem;
-}
-
-.placeholder-img {
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* Lacey ending */
+<style id="style-module-fake_social" type="text/css">/* Lacey ending */
 
 .textchat {
     padding: 1rem;
@@ -163,6 +122,65 @@ margin-top: 1rem;
 
 .textchat a, .textchat [role="img"] {
   cursor: not-allowed;
+}
+
+/* Fake social cards for Hazel ending */
+
+[data-tags~="socmed"] tw-story {
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+.social-card {
+  padding: 1rem;
+  font-size: smaller;
+  /* font-family: sans-serif; */
+  background: white;
+  border: 1px solid var(--light);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  cursor: default;
+}
+.social-card small {
+  opacity: 0.7;
+}
+.social-card__comments {
+  padding-top: 1rem;
+  border-top: 2px solid var(--light);
+  font-size: smaller;
+}
+.social-card__comments p {
+  margin-bottom: 0.25rem;
+}
+
+.social-card .placeholder-img {
+  max-width: 20em;
+  height: 20em;
+  margin-inline: auto;
+  border-radius: 0.5rem;
+  margin-block-end: 1rem;
+}
+
+.placeholder-img {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.belly-gradient {
+  background-image: radial-gradient(ellipse at top, #b19164, transparent),
+            radial-gradient(ellipse at 50% 70%, black, transparent);
+}
+
+.poop-gradient {
+  background-image: radial-gradient(ellipse at center, #5f3c0b, transparent),
+radial-gradient(ellipse at top, #eeeeee, transparent),
+            radial-gradient(ellipse at 50% 70%, #287486, transparent)
 }</style>
 <script id="script-module-howler" type="text/javascript">/*! howler.js v2.2.1 | (c) 2013-2020, James Simpson of GoldFire Studios | MIT License | howlerjs.com */
 !function(){"use strict";var e=function(){this.init()};e.prototype={init:function(){var e=this||n;return e._counter=1e3,e._html5AudioPool=[],e.html5PoolSize=10,e._codecs={},e._howls=[],e._muted=!1,e._volume=1,e._canPlayEvent="canplaythrough",e._navigator="undefined"!=typeof window&&window.navigator?window.navigator:null,e.masterGain=null,e.noAudio=!1,e.usingWebAudio=!0,e.autoSuspend=!0,e.ctx=null,e.autoUnlock=!0,e._setup(),e},volume:function(e){var o=this||n;if(e=parseFloat(e),o.ctx||_(),void 0!==e&&e>=0&&e<=1){if(o._volume=e,o._muted)return o;o.usingWebAudio&&o.masterGain.gain.setValueAtTime(e,n.ctx.currentTime);for(var t=0;t<o._howls.length;t++)if(!o._howls[t]._webAudio)for(var r=o._howls[t]._getSoundIds(),a=0;a<r.length;a++){var u=o._howls[t]._soundById(r[a]);u&&u._node&&(u._node.volume=u._volume*e)}return o}return o._volume},mute:function(e){var o=this||n;o.ctx||_(),o._muted=e,o.usingWebAudio&&o.masterGain.gain.setValueAtTime(e?0:o._volume,n.ctx.currentTime);for(var t=0;t<o._howls.length;t++)if(!o._howls[t]._webAudio)for(var r=o._howls[t]._getSoundIds(),a=0;a<r.length;a++){var u=o._howls[t]._soundById(r[a]);u&&u._node&&(u._node.muted=!!e||u._muted)}return o},stop:function(){for(var e=this||n,o=0;o<e._howls.length;o++)e._howls[o].stop();return e},unload:function(){for(var e=this||n,o=e._howls.length-1;o>=0;o--)e._howls[o].unload();return e.usingWebAudio&&e.ctx&&void 0!==e.ctx.close&&(e.ctx.close(),e.ctx=null,_()),e},codecs:function(e){return(this||n)._codecs[e.replace(/^x-/,"")]},_setup:function(){var e=this||n;if(e.state=e.ctx?e.ctx.state||"suspended":"suspended",e._autoSuspend(),!e.usingWebAudio)if("undefined"!=typeof Audio)try{var o=new Audio;void 0===o.oncanplaythrough&&(e._canPlayEvent="canplay")}catch(n){e.noAudio=!0}else e.noAudio=!0;try{var o=new Audio;o.muted&&(e.noAudio=!0)}catch(e){}return e.noAudio||e._setupCodecs(),e},_setupCodecs:function(){var e=this||n,o=null;try{o="undefined"!=typeof Audio?new Audio:null}catch(n){return e}if(!o||"function"!=typeof o.canPlayType)return e;var t=o.canPlayType("audio/mpeg;").replace(/^no$/,""),r=e._navigator&&e._navigator.userAgent.match(/OPR\/([0-6].)/g),a=r&&parseInt(r[0].split("/")[1],10)<33;return e._codecs={mp3:!(a||!t&&!o.canPlayType("audio/mp3;").replace(/^no$/,"")),mpeg:!!t,opus:!!o.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/,""),ogg:!!o.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/,""),oga:!!o.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/,""),wav:!!(o.canPlayType('audio/wav; codecs="1"')||o.canPlayType("audio/wav")).replace(/^no$/,""),aac:!!o.canPlayType("audio/aac;").replace(/^no$/,""),caf:!!o.canPlayType("audio/x-caf;").replace(/^no$/,""),m4a:!!(o.canPlayType("audio/x-m4a;")||o.canPlayType("audio/m4a;")||o.canPlayType("audio/aac;")).replace(/^no$/,""),m4b:!!(o.canPlayType("audio/x-m4b;")||o.canPlayType("audio/m4b;")||o.canPlayType("audio/aac;")).replace(/^no$/,""),mp4:!!(o.canPlayType("audio/x-mp4;")||o.canPlayType("audio/mp4;")||o.canPlayType("audio/aac;")).replace(/^no$/,""),weba:!!o.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/,""),webm:!!o.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/,""),dolby:!!o.canPlayType('audio/mp4; codecs="ec-3"').replace(/^no$/,""),flac:!!(o.canPlayType("audio/x-flac;")||o.canPlayType("audio/flac;")).replace(/^no$/,"")},e},_unlockAudio:function(){var e=this||n;if(!e._audioUnlocked&&e.ctx){e._audioUnlocked=!1,e.autoUnlock=!1,e._mobileUnloaded||44100===e.ctx.sampleRate||(e._mobileUnloaded=!0,e.unload()),e._scratchBuffer=e.ctx.createBuffer(1,1,22050);var o=function(n){for(;e._html5AudioPool.length<e.html5PoolSize;)try{var t=new Audio;t._unlocked=!0,e._releaseHtml5Audio(t)}catch(n){e.noAudio=!0;break}for(var r=0;r<e._howls.length;r++)if(!e._howls[r]._webAudio)for(var a=e._howls[r]._getSoundIds(),u=0;u<a.length;u++){var d=e._howls[r]._soundById(a[u]);d&&d._node&&!d._node._unlocked&&(d._node._unlocked=!0,d._node.load())}e._autoResume();var i=e.ctx.createBufferSource();i.buffer=e._scratchBuffer,i.connect(e.ctx.destination),void 0===i.start?i.noteOn(0):i.start(0),"function"==typeof e.ctx.resume&&e.ctx.resume(),i.onended=function(){i.disconnect(0),e._audioUnlocked=!0,document.removeEventListener("touchstart",o,!0),document.removeEventListener("touchend",o,!0),document.removeEventListener("click",o,!0);for(var n=0;n<e._howls.length;n++)e._howls[n]._emit("unlock")}};return document.addEventListener("touchstart",o,!0),document.addEventListener("touchend",o,!0),document.addEventListener("click",o,!0),e}},_obtainHtml5Audio:function(){var e=this||n;if(e._html5AudioPool.length)return e._html5AudioPool.pop();var o=(new Audio).play();return o&&"undefined"!=typeof Promise&&(o instanceof Promise||"function"==typeof o.then)&&o.catch(function(){console.warn("HTML5 Audio pool exhausted, returning potentially locked audio object.")}),new Audio},_releaseHtml5Audio:function(e){var o=this||n;return e._unlocked&&o._html5AudioPool.push(e),o},_autoSuspend:function(){var e=this;if(e.autoSuspend&&e.ctx&&void 0!==e.ctx.suspend&&n.usingWebAudio){for(var o=0;o<e._howls.length;o++)if(e._howls[o]._webAudio)for(var t=0;t<e._howls[o]._sounds.length;t++)if(!e._howls[o]._sounds[t]._paused)return e;return e._suspendTimer&&clearTimeout(e._suspendTimer),e._suspendTimer=setTimeout(function(){if(e.autoSuspend){e._suspendTimer=null,e.state="suspending";var n=function(){e.state="suspended",e._resumeAfterSuspend&&(delete e._resumeAfterSuspend,e._autoResume())};e.ctx.suspend().then(n,n)}},3e4),e}},_autoResume:function(){var e=this;if(e.ctx&&void 0!==e.ctx.resume&&n.usingWebAudio)return"running"===e.state&&"interrupted"!==e.ctx.state&&e._suspendTimer?(clearTimeout(e._suspendTimer),e._suspendTimer=null):"suspended"===e.state||"running"===e.state&&"interrupted"===e.ctx.state?(e.ctx.resume().then(function(){e.state="running";for(var n=0;n<e._howls.length;n++)e._howls[n]._emit("resume")}),e._suspendTimer&&(clearTimeout(e._suspendTimer),e._suspendTimer=null)):"suspending"===e.state&&(e._resumeAfterSuspend=!0),e}};var n=new e,o=function(e){var n=this;if(!e.src||0===e.src.length)return void console.error("An array of source files must be passed with any new Howl.");n.init(e)};o.prototype={init:function(e){var o=this;return n.ctx||_(),o._autoplay=e.autoplay||!1,o._format="string"!=typeof e.format?e.format:[e.format],o._html5=e.html5||!1,o._muted=e.mute||!1,o._loop=e.loop||!1,o._pool=e.pool||5,o._preload="boolean"!=typeof e.preload&&"metadata"!==e.preload||e.preload,o._rate=e.rate||1,o._sprite=e.sprite||{},o._src="string"!=typeof e.src?e.src:[e.src],o._volume=void 0!==e.volume?e.volume:1,o._xhr={method:e.xhr&&e.xhr.method?e.xhr.method:"GET",headers:e.xhr&&e.xhr.headers?e.xhr.headers:null,withCredentials:!(!e.xhr||!e.xhr.withCredentials)&&e.xhr.withCredentials},o._duration=0,o._state="unloaded",o._sounds=[],o._endTimers={},o._queue=[],o._playLock=!1,o._onend=e.onend?[{fn:e.onend}]:[],o._onfade=e.onfade?[{fn:e.onfade}]:[],o._onload=e.onload?[{fn:e.onload}]:[],o._onloaderror=e.onloaderror?[{fn:e.onloaderror}]:[],o._onplayerror=e.onplayerror?[{fn:e.onplayerror}]:[],o._onpause=e.onpause?[{fn:e.onpause}]:[],o._onplay=e.onplay?[{fn:e.onplay}]:[],o._onstop=e.onstop?[{fn:e.onstop}]:[],o._onmute=e.onmute?[{fn:e.onmute}]:[],o._onvolume=e.onvolume?[{fn:e.onvolume}]:[],o._onrate=e.onrate?[{fn:e.onrate}]:[],o._onseek=e.onseek?[{fn:e.onseek}]:[],o._onunlock=e.onunlock?[{fn:e.onunlock}]:[],o._onresume=[],o._webAudio=n.usingWebAudio&&!o._html5,void 0!==n.ctx&&n.ctx&&n.autoUnlock&&n._unlockAudio(),n._howls.push(o),o._autoplay&&o._queue.push({event:"play",action:function(){o.play()}}),o._preload&&"none"!==o._preload&&o.load(),o},load:function(){var e=this,o=null;if(n.noAudio)return void e._emit("loaderror",null,"No audio support.");"string"==typeof e._src&&(e._src=[e._src]);for(var r=0;r<e._src.length;r++){var u,d;if(e._format&&e._format[r])u=e._format[r];else{if("string"!=typeof(d=e._src[r])){e._emit("loaderror",null,"Non-string found in selected audio sources - ignoring.");continue}u=/^data:audio\/([^;,]+);/i.exec(d),u||(u=/\.([^.]+)$/.exec(d.split("?",1)[0])),u&&(u=u[1].toLowerCase())}if(u||console.warn('No file extension was found. Consider using the "format" property or specify an extension.'),u&&n.codecs(u)){o=e._src[r];break}}return o?(e._src=o,e._state="loading","https:"===window.location.protocol&&"http:"===o.slice(0,5)&&(e._html5=!0,e._webAudio=!1),new t(e),e._webAudio&&a(e),e):void e._emit("loaderror",null,"No codec support for selected audio sources.")},play:function(e,o){var t=this,r=null;if("number"==typeof e)r=e,e=null;else{if("string"==typeof e&&"loaded"===t._state&&!t._sprite[e])return null;if(void 0===e&&(e="__default",!t._playLock)){for(var a=0,u=0;u<t._sounds.length;u++)t._sounds[u]._paused&&!t._sounds[u]._ended&&(a++,r=t._sounds[u]._id);1===a?e=null:r=null}}var d=r?t._soundById(r):t._inactiveSound();if(!d)return null;if(r&&!e&&(e=d._sprite||"__default"),"loaded"!==t._state){d._sprite=e,d._ended=!1;var i=d._id;return t._queue.push({event:"play",action:function(){t.play(i)}}),i}if(r&&!d._paused)return o||t._loadQueue("play"),d._id;t._webAudio&&n._autoResume();var _=Math.max(0,d._seek>0?d._seek:t._sprite[e][0]/1e3),s=Math.max(0,(t._sprite[e][0]+t._sprite[e][1])/1e3-_),l=1e3*s/Math.abs(d._rate),c=t._sprite[e][0]/1e3,f=(t._sprite[e][0]+t._sprite[e][1])/1e3;d._sprite=e,d._ended=!1;var p=function(){d._paused=!1,d._seek=_,d._start=c,d._stop=f,d._loop=!(!d._loop&&!t._sprite[e][2])};if(_>=f)return void t._ended(d);var m=d._node;if(t._webAudio){var v=function(){t._playLock=!1,p(),t._refreshBuffer(d);var e=d._muted||t._muted?0:d._volume;m.gain.setValueAtTime(e,n.ctx.currentTime),d._playStart=n.ctx.currentTime,void 0===m.bufferSource.start?d._loop?m.bufferSource.noteGrainOn(0,_,86400):m.bufferSource.noteGrainOn(0,_,s):d._loop?m.bufferSource.start(0,_,86400):m.bufferSource.start(0,_,s),l!==1/0&&(t._endTimers[d._id]=setTimeout(t._ended.bind(t,d),l)),o||setTimeout(function(){t._emit("play",d._id),t._loadQueue()},0)};"running"===n.state&&"interrupted"!==n.ctx.state?v():(t._playLock=!0,t.once("resume",v),t._clearTimer(d._id))}else{var h=function(){m.currentTime=_,m.muted=d._muted||t._muted||n._muted||m.muted,m.volume=d._volume*n.volume(),m.playbackRate=d._rate;try{var r=m.play();if(r&&"undefined"!=typeof Promise&&(r instanceof Promise||"function"==typeof r.then)?(t._playLock=!0,p(),r.then(function(){t._playLock=!1,m._unlocked=!0,o||(t._emit("play",d._id),t._loadQueue())}).catch(function(){t._playLock=!1,t._emit("playerror",d._id,"Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction."),d._ended=!0,d._paused=!0})):o||(t._playLock=!1,p(),t._emit("play",d._id),t._loadQueue()),m.playbackRate=d._rate,m.paused)return void t._emit("playerror",d._id,"Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction.");"__default"!==e||d._loop?t._endTimers[d._id]=setTimeout(t._ended.bind(t,d),l):(t._endTimers[d._id]=function(){t._ended(d),m.removeEventListener("ended",t._endTimers[d._id],!1)},m.addEventListener("ended",t._endTimers[d._id],!1))}catch(e){t._emit("playerror",d._id,e)}};"data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA"===m.src&&(m.src=t._src,m.load());var y=window&&window.ejecta||!m.readyState&&n._navigator.isCocoonJS;if(m.readyState>=3||y)h();else{t._playLock=!0;var g=function(){h(),m.removeEventListener(n._canPlayEvent,g,!1)};m.addEventListener(n._canPlayEvent,g,!1),t._clearTimer(d._id)}}return d._id},pause:function(e){var n=this;if("loaded"!==n._state||n._playLock)return n._queue.push({event:"pause",action:function(){n.pause(e)}}),n;for(var o=n._getSoundIds(e),t=0;t<o.length;t++){n._clearTimer(o[t]);var r=n._soundById(o[t]);if(r&&!r._paused&&(r._seek=n.seek(o[t]),r._rateSeek=0,r._paused=!0,n._stopFade(o[t]),r._node))if(n._webAudio){if(!r._node.bufferSource)continue;void 0===r._node.bufferSource.stop?r._node.bufferSource.noteOff(0):r._node.bufferSource.stop(0),n._cleanBuffer(r._node)}else isNaN(r._node.duration)&&r._node.duration!==1/0||r._node.pause();arguments[1]||n._emit("pause",r?r._id:null)}return n},stop:function(e,n){var o=this;if("loaded"!==o._state||o._playLock)return o._queue.push({event:"stop",action:function(){o.stop(e)}}),o;for(var t=o._getSoundIds(e),r=0;r<t.length;r++){o._clearTimer(t[r]);var a=o._soundById(t[r]);a&&(a._seek=a._start||0,a._rateSeek=0,a._paused=!0,a._ended=!0,o._stopFade(t[r]),a._node&&(o._webAudio?a._node.bufferSource&&(void 0===a._node.bufferSource.stop?a._node.bufferSource.noteOff(0):a._node.bufferSource.stop(0),o._cleanBuffer(a._node)):isNaN(a._node.duration)&&a._node.duration!==1/0||(a._node.currentTime=a._start||0,a._node.pause(),a._node.duration===1/0&&o._clearSound(a._node))),n||o._emit("stop",a._id))}return o},mute:function(e,o){var t=this;if("loaded"!==t._state||t._playLock)return t._queue.push({event:"mute",action:function(){t.mute(e,o)}}),t;if(void 0===o){if("boolean"!=typeof e)return t._muted;t._muted=e}for(var r=t._getSoundIds(o),a=0;a<r.length;a++){var u=t._soundById(r[a]);u&&(u._muted=e,u._interval&&t._stopFade(u._id),t._webAudio&&u._node?u._node.gain.setValueAtTime(e?0:u._volume,n.ctx.currentTime):u._node&&(u._node.muted=!!n._muted||e),t._emit("mute",u._id))}return t},volume:function(){var e,o,t=this,r=arguments;if(0===r.length)return t._volume;if(1===r.length||2===r.length&&void 0===r[1]){t._getSoundIds().indexOf(r[0])>=0?o=parseInt(r[0],10):e=parseFloat(r[0])}else r.length>=2&&(e=parseFloat(r[0]),o=parseInt(r[1],10));var a;if(!(void 0!==e&&e>=0&&e<=1))return a=o?t._soundById(o):t._sounds[0],a?a._volume:0;if("loaded"!==t._state||t._playLock)return t._queue.push({event:"volume",action:function(){t.volume.apply(t,r)}}),t;void 0===o&&(t._volume=e),o=t._getSoundIds(o);for(var u=0;u<o.length;u++)(a=t._soundById(o[u]))&&(a._volume=e,r[2]||t._stopFade(o[u]),t._webAudio&&a._node&&!a._muted?a._node.gain.setValueAtTime(e,n.ctx.currentTime):a._node&&!a._muted&&(a._node.volume=e*n.volume()),t._emit("volume",a._id));return t},fade:function(e,o,t,r){var a=this;if("loaded"!==a._state||a._playLock)return a._queue.push({event:"fade",action:function(){a.fade(e,o,t,r)}}),a;e=Math.min(Math.max(0,parseFloat(e)),1),o=Math.min(Math.max(0,parseFloat(o)),1),t=parseFloat(t),a.volume(e,r);for(var u=a._getSoundIds(r),d=0;d<u.length;d++){var i=a._soundById(u[d]);if(i){if(r||a._stopFade(u[d]),a._webAudio&&!i._muted){var _=n.ctx.currentTime,s=_+t/1e3;i._volume=e,i._node.gain.setValueAtTime(e,_),i._node.gain.linearRampToValueAtTime(o,s)}a._startFadeInterval(i,e,o,t,u[d],void 0===r)}}return a},_startFadeInterval:function(e,n,o,t,r,a){var u=this,d=n,i=o-n,_=Math.abs(i/.01),s=Math.max(4,_>0?t/_:t),l=Date.now();e._fadeTo=o,e._interval=setInterval(function(){var r=(Date.now()-l)/t;l=Date.now(),d+=i*r,d=Math.round(100*d)/100,d=i<0?Math.max(o,d):Math.min(o,d),u._webAudio?e._volume=d:u.volume(d,e._id,!0),a&&(u._volume=d),(o<n&&d<=o||o>n&&d>=o)&&(clearInterval(e._interval),e._interval=null,e._fadeTo=null,u.volume(o,e._id),u._emit("fade",e._id))},s)},_stopFade:function(e){var o=this,t=o._soundById(e);return t&&t._interval&&(o._webAudio&&t._node.gain.cancelScheduledValues(n.ctx.currentTime),clearInterval(t._interval),t._interval=null,o.volume(t._fadeTo,e),t._fadeTo=null,o._emit("fade",e)),o},loop:function(){var e,n,o,t=this,r=arguments;if(0===r.length)return t._loop;if(1===r.length){if("boolean"!=typeof r[0])return!!(o=t._soundById(parseInt(r[0],10)))&&o._loop;e=r[0],t._loop=e}else 2===r.length&&(e=r[0],n=parseInt(r[1],10));for(var a=t._getSoundIds(n),u=0;u<a.length;u++)(o=t._soundById(a[u]))&&(o._loop=e,t._webAudio&&o._node&&o._node.bufferSource&&(o._node.bufferSource.loop=e,e&&(o._node.bufferSource.loopStart=o._start||0,o._node.bufferSource.loopEnd=o._stop)));return t},rate:function(){var e,o,t=this,r=arguments;if(0===r.length)o=t._sounds[0]._id;else if(1===r.length){var a=t._getSoundIds(),u=a.indexOf(r[0]);u>=0?o=parseInt(r[0],10):e=parseFloat(r[0])}else 2===r.length&&(e=parseFloat(r[0]),o=parseInt(r[1],10));var d;if("number"!=typeof e)return d=t._soundById(o),d?d._rate:t._rate;if("loaded"!==t._state||t._playLock)return t._queue.push({event:"rate",action:function(){t.rate.apply(t,r)}}),t;void 0===o&&(t._rate=e),o=t._getSoundIds(o);for(var i=0;i<o.length;i++)if(d=t._soundById(o[i])){t.playing(o[i])&&(d._rateSeek=t.seek(o[i]),d._playStart=t._webAudio?n.ctx.currentTime:d._playStart),d._rate=e,t._webAudio&&d._node&&d._node.bufferSource?d._node.bufferSource.playbackRate.setValueAtTime(e,n.ctx.currentTime):d._node&&(d._node.playbackRate=e);var _=t.seek(o[i]),s=(t._sprite[d._sprite][0]+t._sprite[d._sprite][1])/1e3-_,l=1e3*s/Math.abs(d._rate);!t._endTimers[o[i]]&&d._paused||(t._clearTimer(o[i]),t._endTimers[o[i]]=setTimeout(t._ended.bind(t,d),l)),t._emit("rate",d._id)}return t},seek:function(){var e,o,t=this,r=arguments;if(0===r.length)o=t._sounds[0]._id;else if(1===r.length){var a=t._getSoundIds(),u=a.indexOf(r[0]);u>=0?o=parseInt(r[0],10):t._sounds.length&&(o=t._sounds[0]._id,e=parseFloat(r[0]))}else 2===r.length&&(e=parseFloat(r[0]),o=parseInt(r[1],10));if(void 0===o)return t;if("number"==typeof e&&("loaded"!==t._state||t._playLock))return t._queue.push({event:"seek",action:function(){t.seek.apply(t,r)}}),t;var d=t._soundById(o);if(d){if(!("number"==typeof e&&e>=0)){if(t._webAudio){var i=t.playing(o)?n.ctx.currentTime-d._playStart:0,_=d._rateSeek?d._rateSeek-d._seek:0;return d._seek+(_+i*Math.abs(d._rate))}return d._node.currentTime}var s=t.playing(o);s&&t.pause(o,!0),d._seek=e,d._ended=!1,t._clearTimer(o),t._webAudio||!d._node||isNaN(d._node.duration)||(d._node.currentTime=e);var l=function(){t._emit("seek",o),s&&t.play(o,!0)};if(s&&!t._webAudio){var c=function(){t._playLock?setTimeout(c,0):l()};setTimeout(c,0)}else l()}return t},playing:function(e){var n=this;if("number"==typeof e){var o=n._soundById(e);return!!o&&!o._paused}for(var t=0;t<n._sounds.length;t++)if(!n._sounds[t]._paused)return!0;return!1},duration:function(e){var n=this,o=n._duration,t=n._soundById(e);return t&&(o=n._sprite[t._sprite][1]/1e3),o},state:function(){return this._state},unload:function(){for(var e=this,o=e._sounds,t=0;t<o.length;t++)o[t]._paused||e.stop(o[t]._id),e._webAudio||(e._clearSound(o[t]._node),o[t]._node.removeEventListener("error",o[t]._errorFn,!1),o[t]._node.removeEventListener(n._canPlayEvent,o[t]._loadFn,!1),o[t]._node.removeEventListener("ended",o[t]._endFn,!1),n._releaseHtml5Audio(o[t]._node)),delete o[t]._node,e._clearTimer(o[t]._id);var a=n._howls.indexOf(e);a>=0&&n._howls.splice(a,1);var u=!0;for(t=0;t<n._howls.length;t++)if(n._howls[t]._src===e._src||e._src.indexOf(n._howls[t]._src)>=0){u=!1;break}return r&&u&&delete r[e._src],n.noAudio=!1,e._state="unloaded",e._sounds=[],e=null,null},on:function(e,n,o,t){var r=this,a=r["_on"+e];return"function"==typeof n&&a.push(t?{id:o,fn:n,once:t}:{id:o,fn:n}),r},off:function(e,n,o){var t=this,r=t["_on"+e],a=0;if("number"==typeof n&&(o=n,n=null),n||o)for(a=0;a<r.length;a++){var u=o===r[a].id;if(n===r[a].fn&&u||!n&&u){r.splice(a,1);break}}else if(e)t["_on"+e]=[];else{var d=Object.keys(t);for(a=0;a<d.length;a++)0===d[a].indexOf("_on")&&Array.isArray(t[d[a]])&&(t[d[a]]=[])}return t},once:function(e,n,o){var t=this;return t.on(e,n,o,1),t},_emit:function(e,n,o){for(var t=this,r=t["_on"+e],a=r.length-1;a>=0;a--)r[a].id&&r[a].id!==n&&"load"!==e||(setTimeout(function(e){e.call(this,n,o)}.bind(t,r[a].fn),0),r[a].once&&t.off(e,r[a].fn,r[a].id));return t._loadQueue(e),t},_loadQueue:function(e){var n=this;if(n._queue.length>0){var o=n._queue[0];o.event===e&&(n._queue.shift(),n._loadQueue()),e||o.action()}return n},_ended:function(e){var o=this,t=e._sprite;if(!o._webAudio&&e._node&&!e._node.paused&&!e._node.ended&&e._node.currentTime<e._stop)return setTimeout(o._ended.bind(o,e),100),o;var r=!(!e._loop&&!o._sprite[t][2]);if(o._emit("end",e._id),!o._webAudio&&r&&o.stop(e._id,!0).play(e._id),o._webAudio&&r){o._emit("play",e._id),e._seek=e._start||0,e._rateSeek=0,e._playStart=n.ctx.currentTime;var a=1e3*(e._stop-e._start)/Math.abs(e._rate);o._endTimers[e._id]=setTimeout(o._ended.bind(o,e),a)}return o._webAudio&&!r&&(e._paused=!0,e._ended=!0,e._seek=e._start||0,e._rateSeek=0,o._clearTimer(e._id),o._cleanBuffer(e._node),n._autoSuspend()),o._webAudio||r||o.stop(e._id,!0),o},_clearTimer:function(e){var n=this;if(n._endTimers[e]){if("function"!=typeof n._endTimers[e])clearTimeout(n._endTimers[e]);else{var o=n._soundById(e);o&&o._node&&o._node.removeEventListener("ended",n._endTimers[e],!1)}delete n._endTimers[e]}return n},_soundById:function(e){for(var n=this,o=0;o<n._sounds.length;o++)if(e===n._sounds[o]._id)return n._sounds[o];return null},_inactiveSound:function(){var e=this;e._drain();for(var n=0;n<e._sounds.length;n++)if(e._sounds[n]._ended)return e._sounds[n].reset();return new t(e)},_drain:function(){var e=this,n=e._pool,o=0,t=0;if(!(e._sounds.length<n)){for(t=0;t<e._sounds.length;t++)e._sounds[t]._ended&&o++;for(t=e._sounds.length-1;t>=0;t--){if(o<=n)return;e._sounds[t]._ended&&(e._webAudio&&e._sounds[t]._node&&e._sounds[t]._node.disconnect(0),e._sounds.splice(t,1),o--)}}},_getSoundIds:function(e){var n=this;if(void 0===e){for(var o=[],t=0;t<n._sounds.length;t++)o.push(n._sounds[t]._id);return o}return[e]},_refreshBuffer:function(e){var o=this;return e._node.bufferSource=n.ctx.createBufferSource(),e._node.bufferSource.buffer=r[o._src],e._panner?e._node.bufferSource.connect(e._panner):e._node.bufferSource.connect(e._node),e._node.bufferSource.loop=e._loop,e._loop&&(e._node.bufferSource.loopStart=e._start||0,e._node.bufferSource.loopEnd=e._stop||0),e._node.bufferSource.playbackRate.setValueAtTime(e._rate,n.ctx.currentTime),o},_cleanBuffer:function(e){var o=this,t=n._navigator&&n._navigator.vendor.indexOf("Apple")>=0;if(n._scratchBuffer&&e.bufferSource&&(e.bufferSource.onended=null,e.bufferSource.disconnect(0),t))try{e.bufferSource.buffer=n._scratchBuffer}catch(e){}return e.bufferSource=null,o},_clearSound:function(e){/MSIE |Trident\//.test(n._navigator&&n._navigator.userAgent)||(e.src="data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA")}};var t=function(e){this._parent=e,this.init()};t.prototype={init:function(){var e=this,o=e._parent;return e._muted=o._muted,e._loop=o._loop,e._volume=o._volume,e._rate=o._rate,e._seek=0,e._paused=!0,e._ended=!0,e._sprite="__default",e._id=++n._counter,o._sounds.push(e),e.create(),e},create:function(){var e=this,o=e._parent,t=n._muted||e._muted||e._parent._muted?0:e._volume;return o._webAudio?(e._node=void 0===n.ctx.createGain?n.ctx.createGainNode():n.ctx.createGain(),e._node.gain.setValueAtTime(t,n.ctx.currentTime),e._node.paused=!0,e._node.connect(n.masterGain)):n.noAudio||(e._node=n._obtainHtml5Audio(),e._errorFn=e._errorListener.bind(e),e._node.addEventListener("error",e._errorFn,!1),e._loadFn=e._loadListener.bind(e),e._node.addEventListener(n._canPlayEvent,e._loadFn,!1),e._endFn=e._endListener.bind(e),e._node.addEventListener("ended",e._endFn,!1),e._node.src=o._src,e._node.preload=!0===o._preload?"auto":o._preload,e._node.volume=t*n.volume(),e._node.load()),e},reset:function(){var e=this,o=e._parent;return e._muted=o._muted,e._loop=o._loop,e._volume=o._volume,e._rate=o._rate,e._seek=0,e._rateSeek=0,e._paused=!0,e._ended=!0,e._sprite="__default",e._id=++n._counter,e},_errorListener:function(){var e=this;e._parent._emit("loaderror",e._id,e._node.error?e._node.error.code:0),e._node.removeEventListener("error",e._errorFn,!1)},_loadListener:function(){var e=this,o=e._parent;o._duration=Math.ceil(10*e._node.duration)/10,0===Object.keys(o._sprite).length&&(o._sprite={__default:[0,1e3*o._duration]}),"loaded"!==o._state&&(o._state="loaded",o._emit("load"),o._loadQueue()),e._node.removeEventListener(n._canPlayEvent,e._loadFn,!1)},_endListener:function(){var e=this,n=e._parent;n._duration===1/0&&(n._duration=Math.ceil(10*e._node.duration)/10,n._sprite.__default[1]===1/0&&(n._sprite.__default[1]=1e3*n._duration),n._ended(e)),e._node.removeEventListener("ended",e._endFn,!1)}};var r={},a=function(e){var n=e._src;if(r[n])return e._duration=r[n].duration,void i(e);if(/^data:[^;]+;base64,/.test(n)){for(var o=atob(n.split(",")[1]),t=new Uint8Array(o.length),a=0;a<o.length;++a)t[a]=o.charCodeAt(a);d(t.buffer,e)}else{var _=new XMLHttpRequest;_.open(e._xhr.method,n,!0),_.withCredentials=e._xhr.withCredentials,_.responseType="arraybuffer",e._xhr.headers&&Object.keys(e._xhr.headers).forEach(function(n){_.setRequestHeader(n,e._xhr.headers[n])}),_.onload=function(){var n=(_.status+"")[0];if("0"!==n&&"2"!==n&&"3"!==n)return void e._emit("loaderror",null,"Failed loading audio file with status: "+_.status+".");d(_.response,e)},_.onerror=function(){e._webAudio&&(e._html5=!0,e._webAudio=!1,e._sounds=[],delete r[n],e.load())},u(_)}},u=function(e){try{e.send()}catch(n){e.onerror()}},d=function(e,o){var t=function(){o._emit("loaderror",null,"Decoding audio data failed.")},a=function(e){e&&o._sounds.length>0?(r[o._src]=e,i(o,e)):t()};"undefined"!=typeof Promise&&1===n.ctx.decodeAudioData.length?n.ctx.decodeAudioData(e).then(a).catch(t):n.ctx.decodeAudioData(e,a,t)},i=function(e,n){n&&!e._duration&&(e._duration=n.duration),0===Object.keys(e._sprite).length&&(e._sprite={__default:[0,1e3*e._duration]}),"loaded"!==e._state&&(e._state="loaded",e._emit("load"),e._loadQueue())},_=function(){if(n.usingWebAudio){try{"undefined"!=typeof AudioContext?n.ctx=new AudioContext:"undefined"!=typeof webkitAudioContext?n.ctx=new webkitAudioContext:n.usingWebAudio=!1}catch(e){n.usingWebAudio=!1}n.ctx||(n.usingWebAudio=!1);var e=/iP(hone|od|ad)/.test(n._navigator&&n._navigator.platform),o=n._navigator&&n._navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/),t=o?parseInt(o[1],10):null;if(e&&t&&t<9){var r=/safari/.test(n._navigator&&n._navigator.userAgent.toLowerCase());n._navigator&&!r&&(n.usingWebAudio=!1)}n.usingWebAudio&&(n.masterGain=void 0===n.ctx.createGain?n.ctx.createGainNode():n.ctx.createGain(),n.masterGain.gain.setValueAtTime(n._muted?0:n._volume,n.ctx.currentTime),n.masterGain.connect(n.ctx.destination)),n._setup()}};"function"==typeof define&&define.amd&&define([],function(){return{Howler:n,Howl:o}}),"undefined"!=typeof exports&&(exports.Howler=n,exports.Howl=o),"undefined"!=typeof global?(global.HowlerGlobal=e,global.Howler=n,global.Howl=o,global.Sound=t):"undefined"!=typeof window&&(window.HowlerGlobal=e,window.Howler=n,window.Howl=o,window.Sound=t)}();
@@ -533,8 +551,6 @@ body[data-tags~="dreamy_3"] {
 
 <!-- Google fonts-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel="preload" crossorigin="anonymous" as="font" type="font/woff2"
-  href="https://fonts.gstatic.com/l/font?kit=ke80OhoaMkR6-hSn7kbHVoFf7ZfgMPr_nQIpNc4dKYIVGS7EEUTaQQUYGaPMsU6tqQ&skey=3f21dd19ddf0000a&v=v10">
 
 <!-- Opengraph tags for embeds -->
 <meta property="og:title" content="Life of the Party – A Furry Vore Adventure (18+)">
@@ -655,8 +671,7 @@ body[data-tags~="dreamy_3"] {
   font-weight: bold;
   font-size: 1.1em;
 }
-/* twine-user-stylesheet #5: "Hazel Social Media Styles" */
-/* twine-user-stylesheet #6: "Ren quirk" */
+/* twine-user-stylesheet #5: "Ren quirk" */
 .ren {
   font-family: "Comic Neue", "Comic Sans", "Comic Sans MS", sans-serif !important;
   font-weight: 700;
@@ -665,6 +680,10 @@ body[data-tags~="dreamy_3"] {
 // LICENSE: MIT-0
 
 window.setup = window.setup || {};
+
+// Achievement version
+// Can be updated to introduce breaking changes with previous achievement formats.
+const ACHIEVEMENT_KEY_VERSION = 7;
 
 // Encode unicode to base64
 function utoa(str) {
@@ -753,10 +772,14 @@ class PersistentStorageSet extends PersistentStorage {
   }
 }
 
-const achievementStorage = new PersistentStorageSet(story.name + "achievements");
+const achievementStorage = new PersistentStorageSet(story.name + ACHIEVEMENT_KEY_VERSION + "achievements");
 
 setup.getAchievements = () => achievementStorage.getData();
-setup.addAchievement = (name) => achievementStorage.add(name);
+setup.addAchievement = (name, desc) => {
+  if (!setup.getAchievements().some(a => a[0] == name)) {
+    achievementStorage.add([name, desc]);
+  }
+};
 setup.resetAchievements = () => achievementStorage.setData([]);
 setup.localStorageWorks = achievementStorage.noStorage;
 
@@ -800,10 +823,14 @@ $(window).on('sm.passage.shown', (ev, { passage }) => {
 $(window).on('sm.story.started', function (event, {
   story
 }) {
+  $(window).one('sm.passage.showing', function (event, {
+    passage
+  }) {
   const headerWrapper = $("<div></div>")
     .attr("id", "header-container")
     .insertBefore(story.$passageEl)
     .html(story.render("Header"));
+  });
 });
 
 // Make a passage loading work like page loading
@@ -847,9 +874,10 @@ setup.help = () => {
 
 $(window).on("sm.passage.shown", (event, {passage}) => {
   if (passage.name == "Help") {
-    $(".help-button").text("Back");
-  } else {
-    $(".help-button").text("Help");
+    renderToSelector("#header", "Topbar controls");
+    $(window).one("sm.passage.shown", () => {
+      renderToSelector("#header", "Topbar controls");
+    })
   }
 })
 
@@ -1214,7 +1242,7 @@ window.warpZone = function(){
   story.show("Warp zone");
 }
 /* twine-user-script #13: "Misc story variables" */
-story.version = `v0.6.0`;
+story.version = `v0.6.5`;
 /* twine-user-script #14: "Detect touch users" */
 document.addEventListener('pointerdown', function isTouching(ev) {
   // Call the appropriate pointer type handler
@@ -1223,15 +1251,13 @@ document.addEventListener('pointerdown', function isTouching(ev) {
   } else {
     window.isTouching = !(ev.pointerType == "mouse");
   }
-});</script><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-tag name="TODO" color="red"></tw-tag><tw-passagedata pid="1" name="Achievements list" tags="" position="100,100" size="100,100">&lt;% const achievements = setup.getAchievements().sort();
-   ; // TODO: change me!
-%&gt;
+});</script><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-tag name="TODO" color="red"></tw-tag><tw-passagedata pid="1" name="Achievements list" tags="" position="100,100" size="100,100">&lt;% const achievements = setup.getAchievements().sort((a1, a2) =&gt; a1[0].localeCompare(a2[0])); %&gt;
 
-### Achievements &lt;%=`(${achievements.length} / ${setup.totalAchievements})`%&gt;
+### Achievements (&lt;%-achievements.length%&gt; &lt;span aria-label=&quot;of&quot;&gt;/&lt;/span&gt; &lt;%-setup.totalAchievements%&gt;)
 
 &lt;ul&gt;
-  &lt;% achievements.map(a =&gt; { %&gt;
-    &lt;li&gt;&lt;%= a %&gt;&lt;/li&gt;
+  &lt;% achievements.map(([name, desc]) =&gt; { %&gt;
+    &lt;li&gt;&lt;%= desc %&gt; (&lt;%= name %&gt;)&lt;/li&gt;
   &lt;% }) %&gt;
 &lt;/ul&gt;
 
@@ -1239,7 +1265,7 @@ document.addEventListener('pointerdown', function isTouching(ev) {
 
 &lt;%
 const oneAchievementLeft = achievements.length == setup.totalAchievements - 1;
-const sawBroomClosetEnding = achievements.some(a =&gt; /Broom Closet/i.test(a));
+const sawBroomClosetEnding = achievements.some(a =&gt; /Closet/i.test(a));
 
 if (oneAchievementLeft &amp;&amp; !sawBroomClosetEnding) { %&gt;
 &lt;code&gt;Did you get the Broom Closet Ending? The Broom Closet Ending was my favorite!&lt;/code&gt;
@@ -1247,13 +1273,17 @@ if (oneAchievementLeft &amp;&amp; !sawBroomClosetEnding) { %&gt;
 &lt;%= story.render(&quot;Topbar controls&quot;) %&gt;
 &lt;/header&gt;
 
-&lt;h2 id=&quot;recent-command&quot;&gt;&lt;/h2&gt;</tw-passagedata><tw-passagedata pid="3" name="Topbar controls" tags="" position="350,100" size="100,100">&lt;ul.header-nav-group&gt;
-	&lt;li&gt;&lt;a0 onclick=&quot;setup.restart()&quot;&gt;Restart&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a0 onclick=&quot;setup.undo()&quot;&gt;Undo&lt;/a&gt;&lt;/li&gt;
+&lt;h2 id=&quot;recent-command&quot;&gt;&lt;/h2&gt;</tw-passagedata><tw-passagedata pid="3" name="Topbar controls" tags="" position="350,100" size="100,100">&lt;% const muted = !setup.isFlagSet(&#39;enableSound&#39;); %&gt;
+&lt;% const helpShown = window.passage &amp;&amp; window.passage.name === &quot;Help&quot;; %&gt;
+
+&lt;ul.header-nav-group&gt;
+	&lt;li&gt;&lt;a0 aria-label=&quot;restart&quot; onclick=&quot;setup.restart()&quot;&gt;⟲ Restart&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a0 aria-label=&quot;undo&quot; onclick=&quot;setup.undo()&quot;&gt;←
+	 Undo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul.header-nav-group&gt;
-	&lt;li&gt;&lt;a0 class=&quot;mute-button&quot; onclick=&quot;setup.toggleMute();&quot; title=&quot;&lt;%-setup.isFlagSet(&#39;enableSound&#39;)?&#39;Mute&#39;:&#39;Unmute&#39;%&gt;&quot;&gt;&lt;%=setup.isFlagSet(&quot;enableSound&quot;)?`🔊`:`🔇`%&gt;&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a0 class=&quot;help-button&quot; onclick=&quot;setup.help();&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a0 aria-label=&quot;&lt;%-muted?&#39;unmute&#39;:&#39;mute&#39;%&gt;&quot; class=&quot;mute-button&quot; onclick=&quot;setup.toggleMute();&quot; &gt;&lt;%=muted?`🔇`:`🔊`%&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a0 class=&quot;help-button&quot; onclick=&quot;setup.help();&quot;&gt;ⓘ &lt;%-!helpShown?&quot;Help&quot;:&quot;Back&quot;%&gt;&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;%- story.version %&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Help" tags="no_checkpoint" position="475,100" size="100,100">### Keyboard controls
@@ -1561,7 +1591,9 @@ Kaia the mouse looks up at you with concern. &quot;Uh, maybe take it slow, huh?&
 A labrador notices and elbows you. &quot;Woahh, dude! Maybe go a little easy on the party sauce, kay dude?&quot;
 &lt;% } %&gt;
 
-* [[Get very very drunk.]]</tw-passagedata><tw-passagedata pid="28" name="Go outside." tags="checkpoint" position="975,350" size="100,100">You walk outside and down the steps onto the back porch. It&#39;s quiet out here.
+**Upcoming route. Come back in the next version!*
+
+* [[Go back.|Dance a little.]]</tw-passagedata><tw-passagedata pid="28" name="Go outside." tags="checkpoint" position="975,350" size="100,100">You walk outside and down the steps onto the back porch. It&#39;s quiet out here.
 
 You see a large hyena sitting on a garden bench, next to a disused charcoal grill and some rumpled up camping equipment. She looks to be a little older than you, and way, way taller.
 
@@ -1959,9 +1991,7 @@ Ana giggles contendedly. &quot;...I&#39;ll take that as a yes.&quot;
 
 ### The End.
 
-&lt;% s.sawAnaVoreEnding = true;
-setup.addAchievement(&quot;No Laughing Matter (Ana Vore Ending)&quot;);
-%&gt;
+&lt;% setup.addAchievement(&quot;Ana Vore Ending&quot;, &quot;No Laughing Matter&quot;); %&gt;
 
 * [[Epilogue.|Epilogue: Ana Post Vore.]] *(Warning: Scat Disposal.)*
 * &lt;a0 data-passage=&quot;Start&quot;&gt;Restart&lt;/a&gt;</tw-passagedata><tw-passagedata pid="88" name="Epilogue: Ana Post Vore." tags="morning" position="975,1100" size="100,100">*CW: Desperate to poop. Graphic Scat. Urination. Chain restaurants.*
@@ -2215,7 +2245,7 @@ Basil smiles as the party rages on. Another night well planned.
 
 ### The End.
 
-&lt;% setup.addAchievement(&quot;Party Animal (Basil Vore Ending)&quot;); %&gt;
+&lt;% setup.addAchievement(&quot;Basil Vore Ending&quot;, &quot;Party Animals&quot;); %&gt;
 
 * [[Epilogue.|Epilogue: Basil Post Vore.]] *(CW: Scat Disposal.)*
 * &lt;a0 data-passage=&quot;Start&quot;&gt;Restart&lt;/a&gt;</tw-passagedata><tw-passagedata pid="123" name="Epilogue: Basil Post Vore." tags="morning" position="350,1600" size="100,100">The next morning, Basil goes to the bathroom.
@@ -2404,11 +2434,7 @@ You turn to the door and reach for the handle, only to realize that there isn&#3
 
 You&#39;re trapped, numb-nuts. I didn&#39;t even know that was possible.
 
-* [[Bang on the door.|ENDING: Broom Closet]]</tw-passagedata><tw-passagedata pid="140" name="ENDING: Broom Closet" tags="gameover" position="1225,1725" size="100,100">&lt;%
-if (!setup.getAchievements().some(s =&gt; s.includes(&quot;Broom Closet&quot;))) {
-  setup.addAchievement(&quot;Worth it? (Broom Closet Ending)&quot;)
-}
-%&gt;
+* [[Bang on the door.|ENDING: Broom Closet]]</tw-passagedata><tw-passagedata pid="140" name="ENDING: Broom Closet" tags="gameover" position="1225,1725" size="100,100">&lt;% setup.addAchievement(&quot;Closet Ending&quot;, &quot;Worth it?&quot;); %&gt;
 
 You bang on the door trying to get someone&#39;s attention, but with the loud music going on downstairs, no one can hear you. As a result of this incredibly stupid turn of events, you remain trapped in the broom closet for the rest of the night. Congrats, I guess, on finding the dumbest ending ever.
 
@@ -2712,7 +2738,7 @@ The rabbit in &lt;%-s.bm?&quot;his&quot;:&quot;her&quot;%&gt; stomach does not r
 
 ### The end.
 
-&lt;% setup.addAchievement(`Anyway, here&#39;s... (Byron Vore Ending)`); %&gt;
+&lt;% setup.addAchievement(&quot;Byron Vore Ending&quot;, &quot;Anyway, here&#39;s...&quot;); %&gt;
 
 * [[Epilogue.|Byron Epilogue.]]
 * [[Restart.|Start]]</tw-passagedata><tw-passagedata pid="188" name="Byron Epilogue." tags="blogspot socmed" position="975,2350" size="100,100">&lt;div.social-card&gt;
@@ -2779,12 +2805,14 @@ You didn&#39;t really need to pee anyway.
 * [[Go back|Go to the bathroom.]]</tw-passagedata><tw-passagedata pid="191" name="Leave the bathroom." tags="" position="100,2475" size="100,100">You go back into the hallway. The loud music continues to bombard your ears. That didn&#39;t really help much.
 
 * [[Go outside.]]
-* [[Return to the foyer.|The Foyer.]]</tw-passagedata><tw-passagedata pid="192" name="Masturbate." tags="" position="225,2475" size="100,100">For just a moment, you consider masturbating in the bathroom of a stranger&#39;s house, while a gigantic house party rages on just outside. You realize however what a bad idea that is. After all, someone else might want to use the bathroom, or accidentally walk in on you.
+* [[Return to the foyer.|The Foyer.]]</tw-passagedata><tw-passagedata pid="192" name="Masturbate." tags="" position="225,2475" size="100,100">Ha-ha.
+
+For just a moment, you consider masturbating in the bathroom of a stranger&#39;s house, while a gigantic house party rages on just outside. You realize however what a bad idea that is. After all, someone else might want to use the bathroom, or accidentally walk in on you.
 
 You take a deep breath, get your impulses under control, and...
 
 * [[Leave.|Leave the bathroom.]]
-* [[Masturbate in the bathroom.]]</tw-passagedata><tw-passagedata pid="193" name="Masturbate in the bathroom." tags="" position="350,2475" size="100,100">You.. um... Okay.
+* [[Masturbate in the bathroom.]]</tw-passagedata><tw-passagedata pid="193" name="Masturbate in the bathroom." tags="" position="350,2475" size="100,100">You... um... Okay.
 
 Your libido overcomes you. In the privacy of a stranger&#39;s house, you stick your hand down your underwear and begin to pleasure yourself for a minute or two.
 
@@ -2794,28 +2822,37 @@ Satisfied, you take your hands out and stop.
 
 Still, there&#39;s plenty of other stuff you could be doing at this party instead. This is kind of... weird?
 
-* [[Don&#39;t stop!!]]</tw-passagedata><tw-passagedata pid="195" name="Don&#39;t stop!!" tags="" position="600,2475" size="100,100">Okay! God.
+* [[Think about boobs instead.]] *(Female pred)*
+* [[Think about balls instead.]] *(Male pred)*</tw-passagedata><tw-passagedata pid="195" name="Think about boobs instead." tags="" position="600,2475" size="100,100">&lt;% s.hg = false; %&gt;
+&lt;%= story.render(&quot;Think about...&quot;) %&gt; &lt;!-- [[Think about...]] --&gt;</tw-passagedata><tw-passagedata pid="196" name="Think about balls instead." tags="" position="725,2475" size="100,100">&lt;% s.hg = true; %&gt;
+&lt;%= story.render(&quot;Think about...&quot;) %&gt; &lt;!-- [[Think about...]] --&gt;</tw-passagedata><tw-passagedata pid="197" name="Think about..." tags="" position="850,2475" size="100,100">You try to quell the nagging voice in your head by visualizing a huge, voluptuous pair of &lt;%-s.hg?&quot;balls&quot;:&quot;breasts&quot;%&gt;.
+
+In your mind&#39;s eye, you can see every drop of sweat covering their furry mass, just inches from your face. Perfectly round, firm, and begging to be worshipped. What you wouldn&#39;t give to be smothered by those tantalizing orbs...
+
+There. Happy?
+
+* [[Don&#39;t stop!!]]</tw-passagedata><tw-passagedata pid="198" name="Don&#39;t stop!!" tags="" position="975,2475" size="100,100">Okay! God.
 
 You keep on... uh, touching yourself, for a while longer. Your heavy panting gets faster and faster, and little moans escape your lips.
 
 Suddenly, you hear a loud pounding at the door.
 
-&quot;You&#39;ve been in there for like 15 minutes,&quot; says an annoyed female voice through the door, &quot;I gotta fuckin&#39; pee.&quot;
+&quot;You&#39;ve been in there for ten minutes,&quot; says an annoyed &lt;%-s.hg?&quot;male&quot;:&quot;female&quot;%&gt; voice through the door, &quot;I gotta fuckin&#39; pee.&quot;
 
-* [[Oh shit!]]</tw-passagedata><tw-passagedata pid="196" name="Oh shit!" tags="" position="725,2475" size="100,100">*CW: Humiliation. Non-consensual Vore. Blackmail.*
+* [[Oh shit!]]</tw-passagedata><tw-passagedata pid="199" name="Oh shit!" tags="" position="1100,2475" size="100,100">*CW: Humiliation. Non-consensual Vore. Blackmail.*
 
-She bangs impatiently on the door for a few more seconds. You realize with horror that you never locked the door behind you.
+&lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; bangs impatiently on the door for a few more seconds. You realize with horror that you never locked the door behind you.
 
-&quot;That&#39;s it!&quot; she says, &quot;I&#39;m coming in there.&quot;
+&quot;That&#39;s it!&quot; &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; says, &quot;I&#39;m coming in there.&quot;
 
 * [[Orgasm!!!|Finish!!!]]
-* [[Escape through window.|Escape through window.]]</tw-passagedata><tw-passagedata pid="197" name="Finish!!!" tags="" position="850,2475" size="100,100">Throwing care to the wind, you yank your pants down and continue abusing your gentials, steadily approaching climax... Getting closer and closer... Until...!!! You achieve orgasm. It feels wonderful. Your body convulses a little, and you let out a loud moan of satisfaction.
+* [[Escape through window.|Escape through window.]]</tw-passagedata><tw-passagedata pid="200" name="Finish!!!" tags="" position="1225,2475" size="100,100">Throwing care to the wind, you yank your pants down and continue abusing your gentials, steadily approaching climax... Getting closer and closer... Until...!!! You achieve orgasm. It feels wonderful. Your body convulses a little, and you let out a loud moan of satisfaction.
 
 Seconds later, the door swings open to reveal a gigantic brown bear wearing a tank top and shorts. &quot;...!!!&quot;
 
-The bear&#39;s face goes red, and she stares at you with what is clearly a combination of disgust and morbid curiosity. Suddenly though, she recognizes you. With a devious smirk, she closes the door behind her, and asks, &quot;Woah, Holly?&quot;
+The bear&#39;s face goes red, and &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; stares at you with what is clearly a combination of disgust and morbid curiosity. Suddenly though, &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; recognizes you. With a devious smirk, &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; closes the door behind &lt;%-s.hg?&quot;him&quot;:&quot;her&quot;%&gt;, and asks, &quot;Woah, Holly?&quot;
 
-* [[Wait, I can explain!]]</tw-passagedata><tw-passagedata pid="198" name="Escape through window." tags="" position="975,2475" size="100,100">&lt;div-&gt;&lt;/div&gt;
+* [[Wait, I can explain!]]</tw-passagedata><tw-passagedata pid="201" name="Escape through window." tags="" position="100,2600" size="100,100">&lt;div-&gt;&lt;/div&gt;
 
 Thinking quickly, you yank your pants up, pull the nearest window open, and dive through it to safety.
 
@@ -2828,73 +2865,73 @@ In your last waking seconds, you realize this was a very stupid idea.
 ### Game Over.
 
 * [[Undo|Oh shit!]]
-* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="199" name="Wait, I can explain!" tags="" position="1100,2475" size="100,100">&lt;% s.previousCommand = &quot;Wait, I-&quot; %&gt;
-The bear&#39;s hackles raise, and she gets a wild look in her eyes. Suddenly, you realize with horror exactly who she is. Standing across the bathroom from you is the captain of your high school&#39;s old tackle football league: Hazel Gently.
+* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="202" name="Wait, I can explain!" tags="" position="225,2600" size="100,100">&lt;% s.previousCommand = &quot;Wait, I-&quot; %&gt;
+The bear&#39;s hackles raise, and &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; gets a wild look in &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; eyes. Suddenly, you realize with horror exactly who &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; is. Standing across the bathroom from you is the captain of your high school&#39;s old tackle football league: Hazel Gently.
 
 You try to explain that you&#39;re–
 
 Thud. Before you can get a word in edge-ways, or even pull your underwear up, you feel an unbearable weight on your front, and cold tile on your back. Hazel has tackled you to the floor, and is now pinning you by the shoulders.
 
-&quot;Well well well,&quot; she says proudly, breathing hotly onto your face, &quot;if it isn&#39;t little Holly, still masturbating in the bathroom like the freak they are!&quot;
+&quot;Well well well,&quot; &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; says proudly, breathing hotly onto your face, &quot;if it isn&#39;t little Holly, still masturbating in the bathroom like the freak they are!&quot;
 
-You groan from under her oppressive mass, and try to say, actually my name is Hhh-...
+* [[Actually, my name is...]]</tw-passagedata><tw-passagedata pid="203" name="Actually, my name is..." tags="" position="350,2600" size="100,100">You groan from under &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; oppressive mass, and try to say, actually my name is Hhh-...
 
-She cuts you off by shifting her weight onto your wind pipe. &quot;Don&#39;t care. But I bet *you&#39;d* care a whole lot if I told everyone at this party I caught you jerking off in the bathroom like a total creep! Isn&#39;t that right?&quot;
-* [[Struggle under her.|Struggle under Hazel.]]</tw-passagedata><tw-passagedata pid="200" name="Struggle under Hazel." tags="" position="1225,2475" size="100,100">You attempt to struggle for breath, but as a petite rabbit, you&#39;re hopelessly outmatched. She realizes she&#39;s suffocating you, and slowly gets up, squishing her rumbling belly against you in the process.
+&lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; cuts you off by shifting &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; weight onto your wind pipe. &quot;Don&#39;t care. But I bet *you&#39;d* care a whole lot if I told everyone at this party I caught you jerking off in the bathroom like a total creep! Isn&#39;t that right?&quot;
+* [[Struggle under &lt;%-s.hg?&quot;him&quot;:&quot;her&quot;%&gt;.|Struggle under Hazel.]]</tw-passagedata><tw-passagedata pid="204" name="Struggle under Hazel." tags="" position="475,2600" size="100,100">You attempt to struggle for breath, but as a petite rabbit, you&#39;re hopelessly outmatched. &lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; realizes &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt;&#39;s suffocating you, and slowly gets up, squishing &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; rumbling belly against you in the process.
 
-She eventually towers proudly over your collapsed body. &quot;So. How about we make a little deal? I promise not to share the *embarassing* details of  how you jizzed yourself right in front of me, and in exchange...&quot; A twisted smile comes across her lips. &quot;I get to eat you.&quot;
+&lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; eventually towers proudly over your collapsed body. &quot;So. How about we make a little deal? I promise not to share the *embarassing* details of  how you jizzed yourself right in front of me, and in exchange...&quot; A twisted smile comes across &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; lips. &quot;I get to eat you.&quot;
 * [[What? Never!]]
-* [[O-okay...]]</tw-passagedata><tw-passagedata pid="201" name="What? Never!" tags="" position="100,2600" size="100,100">Gasping for air, you vehemently shake your head no.
+* [[O-okay...]]</tw-passagedata><tw-passagedata pid="205" name="What? Never!" tags="" position="600,2600" size="100,100">Gasping for air, you vehemently shake your head no.
 
-&quot;Hm, really?&quot; she says, &quot;I thought you&#39;d like it! Remember that time the librarian caught you touching yourself to &#39;Keeping Them Down: Tips and Tricks for the Adolescent Predator?&#39;&quot;
+&quot;Hm, really?&quot; &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; says, &quot;I thought you&#39;d like it! Remember that time the librarian caught you touching yourself to &#39;Keeping Them Down: Tips and Tricks for the Adolescent Predator?&#39;&quot;
 
-Hazel reaches down and scoops you up in her arms like a baby, although her grip is almost painfully tight. She begins to carry you toward the bathroom door.
+Hazel reaches down and scoops you up in &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; arms like a baby, although &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; grip is almost painfully tight. &lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; begins to carry you toward the bathroom door.
 
-&quot;But if you&#39;re so *wildly* opposed to becoming bear shit, I guess you wouldn&#39;t mind if I brought you out there and jerked you off in front of *everybody*! I&#39;m sure they&#39;d be delighted to watch after they hear about how you creamed your jeans in Basil Armstrong&#39;s bathroom!&quot;
+* [[(oh no oh no)]]</tw-passagedata><tw-passagedata pid="206" name="(oh no oh no)" tags="" position="725,2600" size="100,100">&quot;But if you&#39;re so *wildly* opposed to becoming bear shit, I guess you wouldn&#39;t mind if I brought you out there and jerked you off in front of *everybody*! I&#39;m sure they&#39;d be delighted to watch after they hear about how you creamed your jeans in Basil Armstrong&#39;s bathroom!&quot;
 
-She gives you a smack on the ass which sends shivers down your spine.
+&lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; gives you a smack on the ass which sends shivers down your spine.
 
 &quot;I bet there&#39;s loads of horny critters here who&#39;d just love a piece of this bottom! I mean, assuming you just can&#39;t *stand* the thought of being dinner for dear ol&#39; Hazel...&quot;
-* [[W-wait! I&#39;ll do it!]]</tw-passagedata><tw-passagedata pid="202" name="W-wait! I&#39;ll do it!" tags="" position="225,2600" size="100,100">Hazel smiles. &quot;Thought so.&quot;
+* [[W-wait! I&#39;ll do it!]]</tw-passagedata><tw-passagedata pid="207" name="W-wait! I&#39;ll do it!" tags="" position="850,2600" size="100,100">Hazel smiles. &quot;Thought so.&quot;
 
-She leans down and grabs you by the collar, holding you menacingly up to her face. Her stomach lets out a low, hungry grumble. &quot;Honestly, I&#39;m surprised I never ate you before; you would&#39;ve been a nice after-game snack!&quot;
+&lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; leans down and grabs you by the collar, holding you menacingly up to &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; face. &lt;%-s.hg?&quot;His&quot;:&quot;Her&quot;%&gt; stomach lets out a low, hungry grumble. &quot;Honestly, I&#39;m surprised I never ate you before; you would&#39;ve been a nice after-game snack!&quot;
 
-The bear&#39;s paws clench around your skinny shoulders, and lift you effortlessly from the ground. &quot;Don&#39;t worry Holly, this&#39;ll be our little secret.&quot; She stretches her jaw wide, giving you a clear look into the undulating red flesh of her slobbering maw.
-
-&quot;Ready to be bear-fat? Of course you are. Down the hatch!&quot;
-
-* [[Gulp.|Hazel noms you.]]</tw-passagedata><tw-passagedata pid="203" name="O-okay..." tags="" position="350,2600" size="100,100">Hazel laughs. &quot;I should&#39;ve known a little creep like you would say yes... For all I know, you&#39;re just begging to get inside this belly.&quot; She laughs and pats her gut, which grumbles loudly. &quot;I bet that makes you even hornier!&quot;
-
-The bear&#39;s paws clench around your skinny shoulders, and lift you effortlessly from the ground. &quot;Don&#39;t worry Holly, this&#39;ll be our little secret.&quot; She stretches her jaw wide, giving you a clear look into the undulating red flesh of her slobbering maw.
+The bear&#39;s paws clench around your skinny shoulders, and lift you effortlessly from the ground. &quot;Don&#39;t worry Holly, this&#39;ll be our little secret.&quot; &lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; stretches &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; jaw wide, giving you a clear look into the undulating red flesh of &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; slobbering maw.
 
 &quot;Ready to be bear-fat? Of course you are. Down the hatch!&quot;
 
-* [[Gulp.|Hazel noms you.]]</tw-passagedata><tw-passagedata pid="204" name="Hazel noms you." tags="vore" position="475,2600" size="100,100">You attempt to squeal out in fear, but Hazel&#39;s giant bear mouth has already clamped down hard over your head. Your face is pressed into her slobbery tongue as she effortlessly slides your head and shoulders into her maw.
+* [[Gulp.|Hazel noms you.]]</tw-passagedata><tw-passagedata pid="208" name="O-okay..." tags="" position="975,2600" size="100,100">Hazel laughs. &quot;I should&#39;ve known a little creep like you would say yes... For all I know, you&#39;re just begging to get inside this belly.&quot; &lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; laughs and pats &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; gut, which grumbles loudly. &quot;I bet that makes you even hornier!&quot;
 
-&quot;Mmmm,&quot; Hazel moans as she tastes your fur. You cringe as your face is slowly squeezed into the slimy, suffocating tunnel of her esophagus. You&#39;re still wearing your top, but you feel Hazel&#39;s paws effortlessly yank your jeans off as she devours you.
+The bear&#39;s paws clench around your skinny shoulders, and lift you effortlessly from the ground. &quot;Don&#39;t worry Holly, this&#39;ll be our little secret.&quot; &lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; stretches &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; jaw wide, giving you a clear look into the undulating red flesh of &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; slobbering maw.
+
+&quot;Ready to be bear-fat? Of course you are. Down the hatch!&quot;
+
+* [[Gulp.|Hazel noms you.]]</tw-passagedata><tw-passagedata pid="209" name="Hazel noms you." tags="vore" position="1100,2600" size="100,100">You attempt to squeal out in fear, but Hazel&#39;s giant bear mouth has already clamped down hard over your head. Your face is pressed into &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; slobbery tongue as &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; effortlessly slides your head and shoulders into &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; maw.
+
+&quot;Mmmm,&quot; Hazel moans as &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; tastes your fur. You cringe as your face is slowly squeezed into the slimy, suffocating tunnel of &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; esophagus. You&#39;re still wearing your top, but you feel Hazel&#39;s paws effortlessly yank your jeans off as &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; devours you.
 
 You remember reading once that while their stomach acids can easily dissolve fur, flesh, and bone, bears often struggle to digest denim and leather.
 
-* [[Get swallowed.|Get swallowed by Hazel.]]</tw-passagedata><tw-passagedata pid="205" name="Get swallowed by Hazel." tags="vore" position="600,2600" size="100,100">You flatten your ears against your head, and squeeze your eyes shut as your head begins to slide into Hazel&#39;s slick gullet. The big bear handles you effortlessly, now using her paws to grip your struggling legs so you can&#39;t kick her in the face. The slimy gulping sensation continues down your neck and her throat wraps around your shoulders as well.
+* [[Get swallowed.|Get swallowed by Hazel.]]</tw-passagedata><tw-passagedata pid="210" name="Get swallowed by Hazel." tags="vore" position="1225,2600" size="100,100">You flatten your ears against your head, and squeeze your eyes shut as your head begins to slide into Hazel&#39;s slick gullet. The big bear handles you effortlessly, now using &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; paws to grip your struggling legs so you can&#39;t kick &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; in the face. The slimy gulping sensation continues down your neck and &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; throat wraps around your shoulders as well.
 
-During your first (and only) year on the football team, you saw her use this exact technique on a wolf boy from a rival school. When she caught you watching, she called you a pervert, and threatened to do the same to you if you told anyone. She even made you lie and cover for her absence while she digested him.
+During your first (and only) year on the football team, you saw &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; use this exact technique on a wolf boy from a rival school. When &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; caught you watching, &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; called you a pervert, and threatened to do the same to you if you told anyone. &lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; even made you lie and cover for &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; absence while &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; digested him.
 
 You shudder to think that now you&#39;re going to become bear fat in the exact same way.
 
-* [[Enter Hazel&#39;s stomach.]]</tw-passagedata><tw-passagedata pid="206" name="Enter Hazel&#39;s stomach." tags="vore" position="725,2600" size="100,100">After what feels like an eternity, you open your eyes and find that you are now sliding head-first into the bear&#39;s cavernous, fleshy stomach. Well, it&#39;s not exactly cavernous, but there&#39;s at least enough room for you to curl up into a ball, soaking in a puddle of hot enzymes. Your hind paws slip over Hazel&#39;s tongue, and she eagerly slurps them up like noodles. A gulp sends them down to their resting spot, where you and your soaking-wet t-shirt are stewing inside her hot, uncomfortable gut.
+* [[Enter Hazel&#39;s stomach.]]</tw-passagedata><tw-passagedata pid="211" name="Enter Hazel&#39;s stomach." tags="vore" position="100,2725" size="100,100">After what feels like an eternity, you open your eyes and find that you are now sliding head-first into the bear&#39;s cavernous, fleshy stomach. Well, it&#39;s not exactly cavernous, but there&#39;s at least enough room for you to curl up into a ball, soaking in a puddle of hot enzymes. Your hind paws slip over Hazel&#39;s tongue, and &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; eagerly slurps them up like noodles. A gulp sends them down to their resting spot, where you and your soaking-wet t-shirt are stewing inside &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; hot, uncomfortable gut.
 
-Hazel opens her mouth, and lets out an obscene, spine-rattling &quot;BRAAAAAAAAAAAAAAP.&quot; Hazel laughs, &quot;Whew, &#39;scuse me,&quot; and looks down at the bulge your body makes in her belly. Surprisingly, it&#39;s not a very big bulge, though this speaks more to Hazel&#39;s size than it does to yours.  You&#39;re amazed that she can still stand up on two legs with you inside her.
+Hazel opens &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; mouth, and lets out an obscene, spine-rattling &quot;BRAAAAAAAAAAAAAAP.&quot; Hazel laughs, &quot;Whew, &#39;scuse me,&quot; and looks down at the bulge your body makes in &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; belly. Surprisingly, it&#39;s not a very big bulge, though this speaks more to Hazel&#39;s size than it does to yours.  You&#39;re amazed that &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; can still stand up on two legs with you inside &lt;%-s.hg?&quot;him&quot;:&quot;her&quot;%&gt;.
 
 * [[Hazel, let me out of here!]]
-* [[Why are you doing this?]]</tw-passagedata><tw-passagedata pid="207" name="Hazel, let me out of here!" tags="vore" position="850,2600" size="100,100">Hazel laughs, already occupied with snapping photos of her prey-filled gut for her social media account.
+* [[Why are you doing this?]]</tw-passagedata><tw-passagedata pid="212" name="Hazel, let me out of here!" tags="vore" position="225,2725" size="100,100">Hazel laughs, already occupied with snapping photos of &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; prey-filled gut for &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; social media account.
 
 &quot;Let you out? Gee, well, let me think about it... Uhhh... No.&quot;
 
-She gives her gut a couple of firm pats, causing your prison to jiggle and bounce. You struggle and kick out against the stomach walls with all your might.
+&lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; gives &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; gut a couple of firm pats, causing your prison to jiggle and bounce. You struggle and kick out against the stomach walls with all your might.
 
-&quot;Aahh! No!&quot; she squeals, &quot;Stoppit, that tickles! Hehehe!&quot;
+&quot;Aahh! No!&quot; &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; squeals, &quot;Stoppit, that tickles! Hehehe!&quot;
 
-You&#39;re hyperventilating now, using up whatever precious bit of air is left inside her noxious gut. Reluctantly, you stop struggling.
+You&#39;re hyperventilating now, using up whatever precious bit of air is left inside &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; noxious gut. Reluctantly, you stop struggling.
 
 &quot;Thank you. Now if you don&#39;t mind, I&#39;m *trying* to update my Snapchomp status.&quot;
 
@@ -2906,9 +2943,11 @@ You&#39;re hyperventilating now, using up whatever precious bit of air is left i
 
 * [[I don&#39;t want to be digested...]]
 
-&lt;% } %&gt;</tw-passagedata><tw-passagedata pid="208" name="Why are you doing this?" tags="vore" position="975,2600" size="100,100">Hazel smirks, and jiggles her gut around with you inside it. The result is extremely disorienting and unpleasant.
+&lt;% } %&gt;</tw-passagedata><tw-passagedata pid="213" name="Why are you doing this?" tags="vore" position="350,2725" size="100,100">Hazel smirks, and jiggles &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; gut around with you inside it. The result is extremely disorienting and unpleasant.
 
-Hazel&#39;s voice rumbles and reverberates around you. &quot;Well Holly, it&#39;s simple,&quot; she says, &quot;You&#39;re smaller and weaker than me. That makes you my food.&quot;
+Hazel&#39;s voice rumbles and reverberates around you. &lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; sits down on top of the toilet.
+
+&quot;Well Holly, it&#39;s simple,&quot; &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; says, &quot;You&#39;re smaller and weaker than me. That makes you my food.&quot;
 
 That&#39;s not fair, you cry!
 
@@ -2923,24 +2962,26 @@ That&#39;s not fair, you cry!
 
 * [[I don&#39;t want to be digested...]]
 
-&lt;% } %&gt;</tw-passagedata><tw-passagedata pid="209" name="I don&#39;t want to be digested..." tags="vore" position="1100,2600" size="100,100">Hazel groans, &quot;Oh, boo-friggin-hoo. I don&#39;t wanna lug ninety pounds of digested dork around with me all night, but you don&#39;t see me complaining...&quot;
+&lt;% } %&gt;</tw-passagedata><tw-passagedata pid="214" name="I don&#39;t want to be digested..." tags="vore" position="475,2725" size="100,100">Hazel groans, &quot;Oh, boo-friggin-hoo. I don&#39;t wanna lug ninety pounds of digested dork around with me all night, but you don&#39;t see me complaining...&quot;
 
-Her phone lets out a little celebratory chime. &quot;Woah, I got bonus tokens for eating five prey this week! I kept my streak up thanks to you. I guess I owe you one!&quot;
+&lt;%-s.hg?&quot;His&quot;:&quot;Her&quot;%&gt; phone lets out a little celebratory chime. &quot;Woah, I got bonus tokens for eating five prey this week! I kept my streak up thanks to you. I guess I owe you one!&quot;
 
-You optimistically ask if that means she&#39;ll let you out now.
+You optimistically ask if that means &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt;&#39;ll let you out now.
 
 &quot;I&#39;m *literally* rolling my eyes right now. I *have* to digest you now, or I&#39;ll lose my streak! My followers are gonna eat this up...&quot;
-* [[Please let me out of here!|Beg for Hazel to let you out.]]</tw-passagedata><tw-passagedata pid="210" name="Beg for Hazel to let you out." tags="vore" position="1225,2600" size="100,100">You tell her you&#39;re starting to feel short of breath, and very exhausted. The liquids around you are starting to sting your fur.
+* [[Please let me out of here!|Beg for Hazel to let you out.]]</tw-passagedata><tw-passagedata pid="215" name="Beg for Hazel to let you out." tags="vore" position="600,2725" size="100,100">You tell &lt;%-s.hg?&quot;him&quot;:&quot;her&quot;%&gt; you&#39;re starting to feel short of breath, and very exhausted. The liquids around you are starting to sting your fur.
 
 &quot;Awww,&quot; Hazel laughs, &quot;is widdle Holly-wolly going nap-naps in the big scary bear&#39;s tum-tum?&quot;
 
-You say you&#39;re being serious. If she doesn&#39;t let you out you&#39;re going to die. Your eyelids are getting very, very heavy. You need to... rest your head... Hazel&#39;s massive paws gently caress the stomach walls around you, lulling your anxious mind into a light slumber.
+You say you&#39;re being serious. If &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; doesn&#39;t let you out you&#39;re going to die. Your eyelids are getting very, very heavy. You need to... rest your head... Hazel&#39;s massive paws gently caress the stomach walls around you, lulling your anxious mind into a light slumber.
 
 &quot;Bye-bye Holly. You were lousy at football, but you make an excellent dinner.&quot;
 
-* [[Hazel: Digest.]]</tw-passagedata><tw-passagedata pid="211" name="Hazel: Digest." tags="" position="100,2725" size="100,100">Hazel tentatively pokes her stomach as it stops moving, then shrugs, and walks out of the bathroom and back into the party.
+* [[Hazel: Digest.]]</tw-passagedata><tw-passagedata pid="216" name="Hazel: Digest." tags="" position="725,2725" size="100,100">Hazel tentatively pokes &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; stomach as it stops moving. &lt;%-s.hg?&quot;He&quot;:&quot;She&quot;%&gt; shrugs, then drops &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; pants and pees.
 
-&quot;Hoo-hoo!&quot; says an owl, instantly noticing the bear&#39;s belly now poking out from underneath her tanktop. &quot;Looks like somebody caught a snack! Anybody I know?&quot;
+&quot;Oh god,&quot; &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; sighs with relief. Finally, &lt;%-s.hg?&quot;he&quot;:&quot;she&quot;%&gt; stands up, and walks out of the bathroom and back into the party.
+
+&quot;Hoo-hoo!&quot; says an owl, instantly noticing the bear&#39;s belly now poking out from underneath &lt;%-s.hg?&quot;his&quot;:&quot;her&quot;%&gt; tank top. &quot;Looks like somebody caught a snack! Anybody I know?&quot;
 
 Hazel grins. &quot;Remember Hollis Freeley?&quot;
 
@@ -2948,70 +2989,110 @@ The owl gazes back down at the bear&#39;s bloated belly, and suddenly looks dist
 
 &quot;Sorry sis, I *had* to.&quot; Hazel turns to whisper to the owl, &quot;You&#39;ll never believe this, but I walked in on them *masturbating* in the bathroom. Like, they literally creamed their jeans right in front of me!&quot;
 
-The owl snickers and grabs her by the arm. &quot;Hoo hoo hoo! Oh my god, that&#39;s insane! C&#39;mon, we gotta tell Basil.&quot;
+The owl snickers and grabs &lt;%-s.hg?&quot;him&quot;:&quot;her&quot;%&gt; by the arm. &quot;Hoo hoo hoo! Oh my god, that&#39;s insane! C&#39;mon, we gotta tell Basil.&quot;
 
 ### The End.
 
-&lt;% s.sawHazelVoreEnding = true;
-setup.addAchievement(&quot;Grizzly End (Hazel Vore Ending)&quot;);
-%&gt;
+&lt;% setup.addAchievement(&quot;Hazel Vore Ending&quot;, &quot;A Grizzly&#39;s End&quot;); %&gt;
 
 * [[Epilogue.|Epilogue: Hazel Post Vore.]] *(CW: Scat.)*
-* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="212" name="Epilogue: Hazel Post Vore." tags="socmed" position="225,2725" size="100,100">&lt;!-- todo: consider trying to generate this HTML automatically--&gt;
-&lt;div class=&quot;social-card&quot; tabindex=&quot;1&quot;&gt;
-&lt;p&gt;Hazel Gently 🐻🏈 &lt;small&gt;@real_grizzy_grumbler –&amp;nbsp;12h&lt;/small&gt;&lt;/p&gt;
-&lt;div class=&quot;placeholder-img&quot; style=&quot;background: radial-gradient(ellipse at top, #b19164, transparent),
-            radial-gradient(ellipse at 50% 70%, black, transparent);&quot;&gt;NSFW&lt;/div&gt;
-&lt;p&gt;Just did a little &quot;catching up&quot; with an old friend! They were positively scrumptious, but I don&#39;t think this shirt fits anymore. 🐇👅💦&lt;/p&gt;
-&lt;small&gt;#GirlBelly #Digestion #Yumm #SnackGoals #😋&lt;/small&gt;
-&lt;p&gt;♡ 926&lt;/p&gt;
-&lt;div style=&quot;font-size: smaller&quot;&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;b&gt;bellyfan_xox &lt;/b&gt; hot tummy!! can you film it struggling?&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;ally.hoppers6&lt;/b&gt; dang hazel, u got huge! 😳😳💖 &lt;/p&gt;&lt;/div&gt;
+* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="217" name="Epilogue: Hazel Post Vore." tags="socmed" position="850,2725" size="100,100">&lt;!-- todo: consider trying to generate this HTML automatically--&gt;
+&lt;div.social-card&gt;
+
+Hazel Gently &lt;small&gt;@real_grizzy_grumbler –&amp;nbsp;12h&lt;/small&gt;
+
+&lt;div.placeholder-img.belly-gradient role=&quot;img&quot; alt=&quot;A blurred out image. The brown radial gradient which gives the faint suggestion of a bear&#39;s stomach&quot;&gt;NSFW&lt;/div&gt;
+
+Just did a little &quot;catching up&quot; with an old friend! They were positively scrumptious, but I don&#39;t think this shirt fits anymore...
+
+&lt;small&gt;#&lt;%-s.hg?&quot;Girl&quot;:&quot;Boy&quot;%&gt;Belly #Digestion #Yumm #SnackGoals&lt;/small&gt;
+
+♡ 926
+
+&lt;div.social-card__comments&gt;
+
+&lt;b&gt;bellyfan_xox &lt;/b&gt; hot tummy!! can you film it struggling?
+
+&lt;b&gt;ally.hoppers6&lt;/b&gt; dang hazel, u got huge! 😳😳💖
 
 &lt;/div&gt;
-&lt;div class=&quot;social-card&quot; tabindex=&quot;1&quot;&gt;
-&lt;p&gt;Hazel Gently 🐻🏈 &lt;small&gt;@real_grizzy_grumbler –&amp;nbsp;7h&lt;/small&gt;&lt;/p&gt;
-&lt;p&gt;🎉💃 This party got wild! Gotten so many compliments on my huge tummy. Feels like Holly is finally starting to soften up... I swear, dorks always give me indigestion... &lt;/p&gt;
+&lt;/div&gt;
+
+* [[11h ago...]]</tw-passagedata><tw-passagedata pid="218" name="11h ago..." tags="socmed" position="975,2725" size="100,100">&lt;div.social-card&gt;
+
+Hazel Gently &lt;small&gt;@real_grizzy_grumbler –&amp;nbsp;11h&lt;/small&gt;
+
+🎉🐻💃 This party got wild! Gotten so many compliments on my huge tummy. Feels like Holly is finally starting to soften up... I swear, dorks always give me indigestion...
+
 &lt;small&gt;#TGIF #Party #Lit #BellyDance #TummyRubsPlease&lt;/small&gt;
-&lt;p&gt;♡ 219&lt;/p&gt;
+
+♡ 219
+
 &lt;/div&gt;
-&lt;div class=&quot;social-card&quot; tabindex=&quot;1&quot;&gt;
-&lt;p&gt;Hazel Gently 🐻🏈 &lt;small&gt;@real_grizzy_grumbler – 5h&lt;/small&gt;&lt;/p&gt;
-&lt;p&gt;There&#39;s nothing like falling asleep with a gut full of squirmy and squishy prey. Mmmm...&lt;/p&gt;
+
+* [[9h ago...]]</tw-passagedata><tw-passagedata pid="219" name="9h ago..." tags="socmed" position="1100,2725" size="100,100">&lt;div.social-card&gt;
+
+Hazel Gently &lt;small&gt;@real_grizzy_grumbler – 9h&lt;/small&gt;
+
+
+There&#39;s nothing like falling asleep with a gut full of squirmy and squishy prey. Mmmm...
+
 &lt;small&gt;#Burp #Sleepy #😴 #TopOfTheFoodChain&lt;/small&gt;
-&lt;p&gt;♡ 39&lt;/p&gt;
-&lt;div style=&quot;font-size: smaller&quot;&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;b&gt;prey_rights_478&lt;/b&gt; disgusting. #PreyArePeopleToo&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;vorelord.6969&lt;/b&gt; guess who&#39;s getting ate 2nite  👅☝️&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;real_grizzy_grumbler&lt;/b&gt; @prey_rights_478 💩 get blocked lol&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;social-card&quot; tabindex=&quot;1&quot;&gt;
-&lt;p&gt;Hazel Gently 🐻🏈 &lt;small&gt;@real_grizzy_grumbler – 1h&lt;/small&gt;&lt;/p&gt;
-&lt;p&gt;Good morning #GrizzGang! 🥓🥞🍳 My belly is so jiggly now, and I&#39;m not even hung over! Time to pass the dweeb I digested last night. Pics incoming, xoxo&lt;/p&gt;
-&lt;small&gt;#GrizzGang #Gurgling #🍑&lt;/small&gt;
-&lt;p&gt;♡ 199&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;social-card&quot; tabindex=&quot;1&quot;&gt;
-&lt;p&gt;Hazel Gently 🐻🏈 &lt;small&gt;@real_grizzy_grumbler – 3m&lt;/small&gt;&lt;/p&gt;
-&lt;div class=&quot;placeholder-img&quot; style=&quot;background: radial-gradient(ellipse at center, #5f3c0b, transparent),
-radial-gradient(ellipse at top, #eeeeee, transparent),
-            radial-gradient(ellipse at 50% 70%, #287486, transparent)&quot;&gt;NSFW&lt;/div&gt;
-&lt;p&gt;🚽 Wow, they were a bitch to push out, but they made my ass look fantastic. Oh well. Bye Holly, I always thought you were a little turd. 💩💩💩&lt;/p&gt;
-&lt;small&gt;#Disposal #PostVore #PreyPoops #StillHungry&lt;/small&gt;
-&lt;p&gt;♡ 621&lt;/p&gt;
-&lt;div style=&quot;font-size: smaller&quot;&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;b&gt;kal.mousie&lt;/b&gt; woah, you ate someone?&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;gut.filler.19m&lt;/b&gt; Eat me next please!&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;bigger.jb.21&lt;/b&gt; god i&#39;m glad that&#39;s not me.&lt;/p&gt;
+
+♡ 39
+
+&lt;div.social-card__comments&gt;
+
+&lt;b&gt;prey_rights_478&lt;/b&gt; disgusting. #PreyArePeopleToo
+
+
+&lt;b&gt;vorelord.6969&lt;/b&gt; guess who&#39;s getting ate 2nite  👅☝️
+
+
+&lt;b&gt;real_grizzy_grumbler&lt;/b&gt; @prey_rights_478 💩 get blocked lol
+
 &lt;/div&gt;
 &lt;/div&gt;
 
-* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="213" name="Open the door." tags="checkpoint" position="350,2725" size="100,100">*CW: Female Predator, Voyeur, Multi-prey, A dude&#39;s butt in your face*
+* [[1h ago...]]</tw-passagedata><tw-passagedata pid="220" name="1h ago..." tags="socmed" position="1225,2725" size="100,100">&lt;div.social-card&gt;
+
+Hazel Gently &lt;small&gt;@real_grizzy_grumbler – 1h&lt;/small&gt;
+
+
+Good morning #GrizzGang! My belly is so jiggly now, and I&#39;m not even hung over! Time to pass the dweeb I digested last night. Pics incoming, xoxo
+
+&lt;small&gt;#GrizzGang #Gurgling #🍑&lt;/small&gt;
+
+♡ 199
+
+&lt;/div&gt;
+
+* [[3m ago...]]</tw-passagedata><tw-passagedata pid="221" name="3m ago..." tags="socmed" position="100,2850" size="100,100">&lt;div.social-card&gt;
+
+Hazel Gently &lt;small&gt;@real_grizzy_grumbler – 3m&lt;/small&gt;
+
+&lt;div.placeholder-img.poop-gradient role=&quot;img&quot; alt=&quot;A blurred out image. The radial gradient gives the faint impression of a toilet with poop in it.&quot;&gt;NSFW&lt;/div&gt;
+
+Wow, they were a bitch to push out, but they made my ass look fantastic. Oh well. Bye Holly, I always thought you were a little turd. 🐻💩🧻
+
+&lt;small&gt;#Disposal #PostVore #PreyPoops #StillHungry&lt;/small&gt;
+
+♡ 621
+
+&lt;div.social-card__comments&gt;
+
+&lt;b&gt;kal.mousie&lt;/b&gt; woah, you ate someone?
+
+
+&lt;b&gt;gut.filler.19m&lt;/b&gt; Eat me next please!
+
+
+&lt;b&gt;bigger.jb.21&lt;/b&gt; god i&#39;m glad that&#39;s not me.
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="222" name="Open the door." tags="checkpoint" position="225,2850" size="100,100">*CW: Female Predator, Voyeur, Multi-prey, A dude&#39;s butt in your face*
 
 You swing the bedroom door open, and enter. There are three people in the room.
 
@@ -3025,7 +3106,7 @@ The third person, you realize, is your friend Reese. The guinea pig&#39;s head a
 
 The horse swallowing Reese suddenly smiles. &quot;Ohmigod, Holly!&quot; You recognize her: it&#39;s Lacey Armstrong, the girl who had volunteered to tutor you in math.
 
-* [[Do something!]]</tw-passagedata><tw-passagedata pid="214" name="Do something!" tags="" position="475,2725" size="100,100">Your friend is being devoured before your very eyes. You know you&#39;ve got to save him, but you hesitate. Under the pressure, your body freezes up.
+* [[Do something!]]</tw-passagedata><tw-passagedata pid="223" name="Do something!" tags="" position="350,2850" size="100,100">Your friend is being devoured before your very eyes. You know you&#39;ve got to save him, but you hesitate. Under the pressure, your body freezes up.
 
 &quot;You know them?&quot; asks the dog.
 
@@ -3037,7 +3118,7 @@ The dog stands up in a threatening manner.
 
 What will you do?
 
-* [[Attack Lacey!!]]</tw-passagedata><tw-passagedata pid="215" name="Attack Lacey!!" tags="checkpoint" position="600,2725" size="100,100">&quot;No, don&#39;t!&quot; cries Reese from inside the horse&#39;s throat.
+* [[Attack Lacey!!]]</tw-passagedata><tw-passagedata pid="224" name="Attack Lacey!!" tags="checkpoint" position="475,2850" size="100,100">&quot;No, don&#39;t!&quot; cries Reese from inside the horse&#39;s throat.
 
 Adrenaline rushes through your veins. You sidestep the dog, and fling yourself full force at the horse&#39;s bulging stomach, perhaps hoping to dislodge your friend via the Heimlich maneuver. Unfortunately, your small size makes this effort completely ineffective.
 
@@ -3046,13 +3127,13 @@ Adrenaline rushes through your veins. You sidestep the dog, and fling yourself f
 Lacey gives one last forceful swallow. You watch in horror as the bulge made by Reese&#39;s head drifts down her throat and disappears into the writhing bulge in her middle. &quot;Sure do,&quot; she smiles.
 
 * [[Struggle.|Struggle against Lacey.]]
-* [[Let her eat you.|Let Lacey eat you.]]</tw-passagedata><tw-passagedata pid="216" name="Struggle against Lacey." tags="" position="725,2725" size="100,100">You try to resist, but the dog only grips you tighter, and begins to undress you, presumably to make you easier on the stomach. He then lifts your naked body effortlessly into the air, and positions your bare feet in front of Lacey&#39;s awaiting maw.
+* [[Let her eat you.|Let Lacey eat you.]]</tw-passagedata><tw-passagedata pid="225" name="Struggle against Lacey." tags="" position="600,2850" size="100,100">You try to resist, but the dog only grips you tighter, and begins to undress you, presumably to make you easier on the stomach. He then lifts your naked body effortlessly into the air, and positions your bare feet in front of Lacey&#39;s awaiting maw.
 
 Lacey looks over your naked body with a bit of pity. &quot;Oh Hollis, I&#39;m real sorry for eating you. Vore just makes me *sooo* horny... And your friend&#39;s already squirming *soo* good inside me.&quot; She licks her lips. &quot;Plus, you kinda owe me for helping you get that A in Calculus.&quot;
 
 Lacey opens her quivering pink maw wide, and says, &quot;Anyway, buh-bye!&quot;
 
-* [[Gulp.|Lacey noms ur legs.]]</tw-passagedata><tw-passagedata pid="217" name="Let Lacey eat you." tags="" position="850,2725" size="100,100">You stop resisting, and go limp against Lacey&#39;s engorged belly. The dog stops forcing you against it.
+* [[Gulp.|Lacey noms ur legs.]]</tw-passagedata><tw-passagedata pid="226" name="Let Lacey eat you." tags="" position="725,2850" size="100,100">You stop resisting, and go limp against Lacey&#39;s engorged belly. The dog stops forcing you against it.
 
 &quot;Huh, this kid&#39;s smarter than I thought!&quot; he says, now lifting you towards the horse&#39;s awaiting maw. Lacey smiles.
 
@@ -3062,7 +3143,7 @@ Lacey opens her quivering pink maw wide, and says, &quot;Anyway, buh-bye!&quot;
 
 She opens her mouth wide. The dog positions your bare feet in front of her awaiting maw. He smiles. &quot;Time for dessert, babe!&quot;
 
-* [[Gulp.|Lacey noms ur legs.]]</tw-passagedata><tw-passagedata pid="218" name="Lacey noms ur legs." tags="vore checkpoint" position="975,2725" size="100,100">Your legs slide effortlessly into Lacey&#39;s mouth. It&#39;s almost like entering a sleeping bag, if that sleeping bag were extremely hot and wet. Your fur feels impossibly slimy. Lacey lets out little snorts and moans as more and more of your body slips into her throat.
+* [[Gulp.|Lacey noms ur legs.]]</tw-passagedata><tw-passagedata pid="227" name="Lacey noms ur legs." tags="vore checkpoint" position="850,2850" size="100,100">Your legs slide effortlessly into Lacey&#39;s mouth. It&#39;s almost like entering a sleeping bag, if that sleeping bag were extremely hot and wet. Your fur feels impossibly slimy. Lacey lets out little snorts and moans as more and more of your body slips into her throat.
 
 The dog watches with fascination and arousal; his girlfriend has already pulled you in up to your chest, then your neck, until only your head is sticking out of her mouth.
 
@@ -3070,27 +3151,27 @@ Lacey&#39;s boyfriend looks at your exposed head and smiles while unzipping his 
 &quot;Now, whaddya say we give our friend here a little goodbye present?&quot;
 
 * [[Absolutely not!|Refuse Clif&#39;s dick.]]
-* [[Suck his dick.|Don&#39;t refuse Clif&#39;s dick.]]</tw-passagedata><tw-passagedata pid="219" name="Refuse Clif&#39;s dick." tags="vore" position="1100,2725" size="100,100">You vehemently shake your head in protest.
+* [[Suck his dick.|Don&#39;t refuse Clif&#39;s dick.]]</tw-passagedata><tw-passagedata pid="228" name="Refuse Clif&#39;s dick." tags="vore" position="975,2850" size="100,100">You vehemently shake your head in protest.
 
 The dog sighs. &quot;Okay, jeez, I was just asking. Suit yourself.&quot; He sits on the bed next to Lacey, and begins to caress and massage her bloated stomach. &quot;Looks like your appetizer has already settled down a good bit! You&#39;re a real champion, Lace.&quot;
 
 Lacey continues dillegently slurping and swallowing you down.
 You feel your feet beginning to enter her stomach, bumping against a hard object which you can only assume is your unfortunate friend. Only your head and shoulders are still protruding from her lips; your body is paralyzed by the powerful muscles of her throat her throat.
 
-* [[Mmmph...|Lacey finishes swallowing.]]</tw-passagedata><tw-passagedata pid="220" name="Don&#39;t refuse Clif&#39;s dick." tags="vore" position="1225,2725" size="100,100">You remain silent as Lacey pulls you in further. Now only your head and shoulders are sticking out of her mouth. Obligingly, you open your mouth. The dog smiles.
+* [[Mmmph...|Lacey finishes swallowing.]]</tw-passagedata><tw-passagedata pid="229" name="Don&#39;t refuse Clif&#39;s dick." tags="vore" position="1100,2850" size="100,100">You remain silent as Lacey pulls you in further. Now only your head and shoulders are sticking out of her mouth. Obligingly, you open your mouth. The dog smiles.
 
 &quot;Allow me to introduce myself,&quot; he says, slowly bringing his erection closer to your mouth. &quot;The name&#39;s Clif, and this is my girlfriend Lace. I&#39;m the dog who&#39;s gonna destroy your tonsils.&quot;
 
 Lacey sees what her boyfriend is doing, and rolls her eyes with a little chuckle. She stops her swallowing, and you barely have time to take a breath before-
 
 *Glk.* Without warning, you feel Clif&#39;s enormous rod plunge against your lips, into your throat. Your mouth instantly coats his meat with saliva. His tip is practically dripping with salty pre, and you can do nothing but savor it. His thick, furry balls slap against your snout.
-* [[Swallow his cock.]]</tw-passagedata><tw-passagedata pid="221" name="Swallow his cock." tags="vore" position="100,2850" size="100,100">&quot;Woah, this kid&#39;s a natural! Mmmmh!&quot;
+* [[Swallow his cock.]]</tw-passagedata><tw-passagedata pid="230" name="Swallow his cock." tags="vore" position="1225,2850" size="100,100">&quot;Woah, this kid&#39;s a natural! Mmmmh!&quot;
 
 He moans in delight, spending a few seconds merely impressed that you were able to swallow his full length all in one go. However, his torment doesn&#39;t end there. Clif eagerly begins to slide his cock in and out of you. The motion quickly evolves into a rhythmic thrust. Each time he hilts in your mouth, you feel yourself getting pushed deeper inside Lacey&#39;s throat, until her lips are wrapped around your chin.
 
 &quot;Oh yeah,&quot; he moans, grabbing hold of your ears. &quot;I&#39;m gonna...&quot;
 
-* [[*Spurt.*|Clif jizzes in your mouth.]]</tw-passagedata><tw-passagedata pid="222" name="Clif jizzes in your mouth." tags="vore" position="225,2850" size="100,100">&quot;...!!!&quot;
+* [[*Spurt.*|Clif jizzes in your mouth.]]</tw-passagedata><tw-passagedata pid="231" name="Clif jizzes in your mouth." tags="vore" position="100,2975" size="100,100">&quot;...!!!&quot;
 
 Clif grips his cock, and sticks his tip between your lips. Spurt after spurt of warm jizz pumps into your mouth and paints your throat. He lets out a series of eager grunts and gasps as he empties his load into you, and you can tell he&#39;s resisting the urge to knot your mouth. You swallow reluctantly. Slowly, and with great satisfaction, he withdraws himself.
 
@@ -3098,18 +3179,18 @@ Clif grips his cock, and sticks his tip between your lips. Spurt after spurt of 
 
 Lacey lets out a happy noise, and opens her mouth wide.
 
-* [[Mmmph...|Lacey finishes swallowing.]]</tw-passagedata><tw-passagedata pid="223" name="Lacey finishes swallowing." tags="vore" position="350,2850" size="100,100">Your arms are pinned to your side. Lacey&#39;s gullet is squeezing tight around your body. You can&#39;t move. You couldn&#39;t fight back if you tried.
+* [[Mmmph...|Lacey finishes swallowing.]]</tw-passagedata><tw-passagedata pid="232" name="Lacey finishes swallowing." tags="vore" position="225,2975" size="100,100">Your arms are pinned to your side. Lacey&#39;s gullet is squeezing tight around your body. You can&#39;t move. You couldn&#39;t fight back if you tried.
 
 All you can do now is shut your eyes and hope this is all a dream. But you don&#39;t wake up. Instead, you feel Lacey stretch her mouth out wide, and...
 
 *Glomp.* Your vision goes dark. You feel her lips clamp down over your ears. Lacey&#39;s mouth has engulfed your whole head. She moans with delight. You feel yourself sinking deeper and deeper into her gullet.
-* [[Let me out...]]</tw-passagedata><tw-passagedata pid="224" name="Let me out..." tags="vore" position="475,2850" size="100,100">You cry out in vain, but nothing slows your slimy descent. You take a deep breath before the slimy tunnel of her throat slides over your neck, and eclipses your nose. For several seconds, you are unable to see or breathe. All you can hear are the sounds of Lacey gulping down your ears, accompanied by her thundrous heartbeat, and the squelching of her innards.
+* [[Let me out...]]</tw-passagedata><tw-passagedata pid="233" name="Let me out..." tags="vore" position="350,2975" size="100,100">You cry out in vain, but nothing slows your slimy descent. You take a deep breath before the slimy tunnel of her throat slides over your neck, and eclipses your nose. For several seconds, you are unable to see or breathe. All you can hear are the sounds of Lacey gulping down your ears, accompanied by her thundrous heartbeat, and the squelching of her innards.
 
 You can feel your legs pressing into Reese&#39;s naked fur, as Lacey&#39;s stomach effortlessly stretches to accomodate you. The tight accomodations means your body is forced to curl up against his. Finally, after what feels like an eternity, your head is deposited along with the rest of you inside the horse&#39;s belly.
 
 &quot;Oh, hey Hollis,&quot; says Reese, naked and squeezed tightly against you. &quot;...I think your ass is in my face.&quot;
 
-* [[Reese, what happened?]]</tw-passagedata><tw-passagedata pid="225" name="Reese, what happened?" tags="vore" position="600,2850" size="100,100">You try to reposition yourself, to no avail. Lacey&#39;s stomach is hugging you tightly. Your voice is muffled a little by what you now realize is the fur of his tail. Unwittingly, the two of you are sixty-nining.
+* [[Reese, what happened?]]</tw-passagedata><tw-passagedata pid="234" name="Reese, what happened?" tags="vore" position="475,2975" size="100,100">You try to reposition yourself, to no avail. Lacey&#39;s stomach is hugging you tightly. Your voice is muffled a little by what you now realize is the fur of his tail. Unwittingly, the two of you are sixty-nining.
 
 You ask Reese how the hell he got here.
 
@@ -3120,7 +3201,7 @@ You blink in astonishment. He said *yes*??
 &quot;Of course! Why do you think I came here?&quot; he pauses for a moment, and shifts uncomfortably. &quot;...You wanted to get eaten too, right?&quot;
 
 * [[No! No I did not!|I did not come here to be digested!]]
-* [[I certainly wasn&#39;t expecting to!|I did not come here to be digested!]]</tw-passagedata><tw-passagedata pid="226" name="I did not come here to be digested!" tags="vore" position="725,2850" size="100,100">&quot;...R-really? Then why did you agree to come along with me? I thought I told you there&#39;d be preds here.&quot;
+* [[I certainly wasn&#39;t expecting to!|I did not come here to be digested!]]</tw-passagedata><tw-passagedata pid="235" name="I did not come here to be digested!" tags="vore" position="600,2975" size="100,100">&quot;...R-really? Then why did you agree to come along with me? I thought I told you there&#39;d be preds here.&quot;
 
 You remind Reese of his exact words. He told you the party would be, and you quote, *crawling with drunk hotties just begging for a taste of you.*
 
@@ -3130,7 +3211,7 @@ So all that stuff from before... was just roleplaying?
 
 &quot;Yeah,&quot; he replies, &quot;all purely consenting fun. Well, except for the part where she ate you. I think she mistook your resistance for playfulness?&quot;
 
-* [[I need to get out of here!]]</tw-passagedata><tw-passagedata pid="227" name="I need to get out of here!" tags="vore" position="850,2850" size="100,100">Reese sucks air through his teeth. &quot;That&#39;s... not really an option.&quot;
+* [[I need to get out of here!]]</tw-passagedata><tw-passagedata pid="236" name="I need to get out of here!" tags="vore" position="725,2975" size="100,100">Reese sucks air through his teeth. &quot;That&#39;s... not really an option.&quot;
 
 What? You scramble indignantly, trying to get your friend&#39;s crotch out of your face for a second.
 
@@ -3142,7 +3223,7 @@ Reese hesitates. &quot;Well um, we *would*, but these two are really into hardco
 
 You roll your eyes. He&#39;s taking the whole &quot;being digested&quot; thing pretty well.
 
-* [[...So what happens now?]]</tw-passagedata><tw-passagedata pid="228" name="...So what happens now?" tags="vore" position="975,2850" size="100,100">Reese stretches a little against the tight, wet stomach walls around the two of you.
+* [[...So what happens now?]]</tw-passagedata><tw-passagedata pid="237" name="...So what happens now?" tags="vore" position="850,2975" size="100,100">Reese stretches a little against the tight, wet stomach walls around the two of you.
 
 &quot;Now, we digest. A big pred like Lacey should be able to completely convert our bodies to nutrients within about 7 hours.&quot;
 
@@ -3152,11 +3233,11 @@ You ask, will that be painful?
 
 You sigh. Despite your approaching demise, the warm cocoon of Lacey&#39;s belly is actually somewhat calming. In a way, it feels like you&#39;re fulfilling your purpose as a rabbit. You&#39;re starting to see the appeal of this kind of thing...
 
-* [[...And until then?]]</tw-passagedata><tw-passagedata pid="229" name="...And until then?" tags="vore checkpoint" position="1100,2850" size="100,100">Lacey&#39;s stomach lets out a little grumble. Reese shudders; you can tell the noise makes him a little excited. He tries to reposition himself, to no avail. The two of you remain stuck in a ying-yang of brown and gray fur.
+* [[...And until then?]]</tw-passagedata><tw-passagedata pid="238" name="...And until then?" tags="vore checkpoint" position="975,2975" size="100,100">Lacey&#39;s stomach lets out a little grumble. Reese shudders; you can tell the noise makes him a little excited. He tries to reposition himself, to no avail. The two of you remain stuck in a ying-yang of brown and gray fur.
 
 &quot;Well, I was hoping I&#39;d have a little more room in here...&quot; Reese says, and spends a moment thinking. &quot;This is gonna be kind of a dumb question, Hollis... But do you wanna suck *my* dick?&quot;
 * [[...Yeah, okay.|Suck Reese&#39;s dick.]]
-* [[Nope.|Don&#39;t suck Reese&#39;s dick.]]</tw-passagedata><tw-passagedata pid="230" name="Suck Reese&#39;s dick." tags="vore" position="1225,2850" size="100,100">&quot;Sweet,&quot; he says, spreading his legs as much as the stomach will allow. &quot;I really owe you one Hollis. You&#39;re the best prey-pal a guy could ever ask for.&quot;
+* [[Nope.|Don&#39;t suck Reese&#39;s dick.]]</tw-passagedata><tw-passagedata pid="239" name="Suck Reese&#39;s dick." tags="vore" position="1100,2975" size="100,100">&quot;Sweet,&quot; he says, spreading his legs as much as the stomach will allow. &quot;I really owe you one Hollis. You&#39;re the best prey-pal a guy could ever ask for.&quot;
 
 It doesn&#39;t take much work at all to get Reese&#39;s dick into your mouth;  you&#39;d practically been avoiding it this whole time. Its size is nowhere near as threatening as the dog&#39;s was.
 
@@ -3164,7 +3245,7 @@ Mm. You delicately tease your friend with your tongue. He throbs a little in res
 
 &quot;Nnnnnh,&quot; he moans, almost involuntarily. It&#39;s very cute. &quot;Hol, I&#39;m gonna...!!&quot;
 
-* [[Swallow his jizz.|Swallow Reese&#39;s jizz.]]</tw-passagedata><tw-passagedata pid="231" name="Don&#39;t suck Reese&#39;s dick." tags="vore" position="100,2975" size="100,100">&quot;Oh, duh,&quot; he says, clearly a little embarassed. &quot;Sorry I asked.&quot;
+* [[Swallow his jizz.|Swallow Reese&#39;s jizz.]]</tw-passagedata><tw-passagedata pid="240" name="Don&#39;t suck Reese&#39;s dick." tags="vore" position="1225,2975" size="100,100">&quot;Oh, duh,&quot; he says, clearly a little embarassed. &quot;Sorry I asked.&quot;
 
 You tell him no problem. You&#39;d imagine you&#39;d probably want to get off before being permanently digested as well. You feel yourself getting lightheaded.
 
@@ -3174,7 +3255,7 @@ You tell him not to worry about it; the whole thing was an almost comically absu
 
 Lacey&#39;s stomach grumbles eagerly around you. You now feel yourself getting very sleepy. The last thing you feel is a kind of reluctant contentment, before drifting into a peaceful rest.
 
-* [[Lacey: Digest.|Lacey: Digest.]]</tw-passagedata><tw-passagedata pid="232" name="Lacey: Digest." tags="" position="225,2975" size="100,100">Outside, Lacey gently caresses the hard masses of meat filling her stomach.
+* [[Lacey: Digest.|Lacey: Digest.]]</tw-passagedata><tw-passagedata pid="241" name="Lacey: Digest." tags="" position="100,3100" size="100,100">Outside, Lacey gently caresses the hard masses of meat filling her stomach.
 
 &quot;They stopped moving,&quot; she says, smiling and letting a burp escape her lips.
 
@@ -3186,9 +3267,9 @@ Clif grins, hugging his girlfriend, &quot;Clearly no match for my powerful preda
 
 She lets out another satisfied burp, and kisses him. &quot;Oh, stop.&quot;
 
-* [[\*gurgle\*|Lacey: Gurgle.]]</tw-passagedata><tw-passagedata pid="233" name="Lacey: Gurgle." tags="" position="350,2975" size="100,100">Over the next few hours, Clif and Lacey lay together in her bedroom, as her gut slowly melts Hollis&#39;s body into a soft, nutritious paste. Lacey grins as her body lets out a nigh-constant stream of belches.
+* [[\*gurgle\*|Lacey: Gurgle.]]</tw-passagedata><tw-passagedata pid="242" name="Lacey: Gurgle." tags="" position="225,3100" size="100,100">Over the next few hours, Clif and Lacey lay together in her bedroom, as her gut slowly melts Hollis&#39;s body into a soft, nutritious paste. Lacey grins as her body lets out a nigh-constant stream of belches.
 
-* [[The morning after...|ENDING: Lacey&#39;s Belly]]</tw-passagedata><tw-passagedata pid="234" name="Swallow Reese&#39;s jizz." tags="vore" position="475,2975" size="100,100">Unable to move your head, you have no choice but to allow Reese to hump your face, and after a few seconds, ejaculate into your mouth.
+* [[The morning after...|ENDING: Lacey&#39;s Belly]]</tw-passagedata><tw-passagedata pid="243" name="Swallow Reese&#39;s jizz." tags="vore" position="350,3100" size="100,100">Unable to move your head, you have no choice but to allow Reese to hump your face, and after a few seconds, ejaculate into your mouth.
 
 &quot;Mmmmm!&quot; he moans, as his cock spends several seconds erupting with warm semen, which you gulp down. He pants eagerly, likely using up a ton of your air, before finally settling down. &quot;Th-thanks Hol,&quot; he murmurs, attempting to pull his dick out of your mouth, and instead smearing your face with cum. &quot;Sorry,&quot; he snickers.
 
@@ -3196,114 +3277,112 @@ For a little while, Reese doesn&#39;t say anything. You&#39;re getting a little 
 
 You tell him not to worry about it. You feel yourself getting very sleepy. Lacey&#39;s stomach grumbles eagerly around you. The last thing you feel is a kind of reluctant contentment, before drifting into a peaceful rest.
 
-* [[Lacey: Digest.|Lacey: Digest.]]</tw-passagedata><tw-passagedata pid="235" name="ENDING: Lacey&#39;s Belly" tags="morning" position="600,2975" size="100,100">The sun rises through through a clear morning sky.
+* [[Lacey: Digest.|Lacey: Digest.]]</tw-passagedata><tw-passagedata pid="244" name="ENDING: Lacey&#39;s Belly" tags="morning" position="475,3100" size="100,100">The sun rises through through a clear morning sky.
 
 Lacey awakens to find that she has slightly outgrown her bra and pants. Clif rolls over in his sleep, still snoring loudly. As the mare rises to her feet, she feels a familiar rumbling in her gut.
 
 Lacey looks down at her dramatically shrunken belly, and recalls the night before. &quot;Phew,&quot; she remarks, &quot;What a night!&quot;
 
-&lt;% s.sawLaceyVoreEnding = true;
-setup.addAchievement(&quot;Two for One Meal (Lacey Vore Ending)&quot;);
-%&gt;
+&lt;% setup.addAchievement(&quot;Lacey Vore Ending&quot;, &quot;Two for One Meal&quot;); %&gt;
 
 ### The End.
 
 * [[Epilogue.|Epilogue: Lacey Post Vore.]] *(Warning: Scat)*
-* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="236" name="Epilogue: Lacey Post Vore." tags="morning" position="725,2975" size="100,100">An hour later, Lacey is sitting on the toilet, gradually squeezing out plop after plop of digested guinea pig and rabbit.&amp;nbsp;The mare&#39;s powerful intestines have already absorbed all the nutrients she could get out of them, and pulverised their remains into firm round balls of horse shit. The two aren&#39;t hard to pass, just a little time-consuming.
+* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="245" name="Epilogue: Lacey Post Vore." tags="morning" position="600,3100" size="100,100">An hour later, Lacey is sitting on the toilet, gradually squeezing out plop after plop of digested guinea pig and rabbit.&amp;nbsp;The mare&#39;s powerful intestines have already absorbed all the nutrients she could get out of them, and pulverised their remains into firm round balls of horse shit. The two aren&#39;t hard to pass, just a little time-consuming.
 
 Lacey feels her asshole squeeze out the last glob of leftover rodent, then clench shut with relief. She muses to herself that they were easier coming out in than they were to get out! Especially the rabbit, who squirmed way too much... On the other hand, she probably wouldn&#39;t mind eating a duo like that again... &lt;% if (visited(&quot;Swallow Reese&#39;s jizz.&quot;)) { %&gt;She even heard one of them moaning...&lt;% } %&gt; It was kind of exhilarating.
 
 She reaches for her phone.
 
-* [[Lacey: Text Clif.]]</tw-passagedata><tw-passagedata pid="237" name="Lacey: Text Clif." tags="morning" position="850,2975" size="100,100">&lt;div class=&quot;textchat&quot;&gt;
+* [[Lacey: Text Clif.]]</tw-passagedata><tw-passagedata pid="246" name="Lacey: Text Clif." tags="morning" position="725,3100" size="100,100">&lt;div.textchat&gt;
 
-&lt;p class=&quot;lacey&quot;&gt;Hey big dog, any new snacks on your radar?&lt;/p&gt;
+&lt;p.lacey&gt;Hey big dog, any new snacks on your radar?&lt;/p&gt;
 
-&lt;p class=&quot;clif&quot;&gt;not yet babe, but i can try to find some willing ones on the grumblegeek forums?&lt;/p&gt;
+&lt;p.clif&gt;not yet babe, but i can try to find some willing ones on the grumblegeek forums?&lt;/p&gt;
 
 &lt;/div&gt;
 
 Lacey stands up, and records a video as she nonchalantly flushes her latest &quot;handiwork&quot; down the toilet. It swirls away into her house&#39;s well-worn plumbing.
 
-&lt;div class=&quot;textchat&quot;&gt;
-&lt;div role=&quot;img&quot; class=&quot;placeholder-img lacey&quot; style=&quot;width: 20rem; height: 15rem; background: radial-gradient(ellipse at 60% 40%, #5f3c0b, transparent),   radial-gradient(ellipse at top, #eeeeee, transparent), radial-gradient(ellipse at 30% 70%, #287486, transparent), radial-gradient(ellipse at 40% 40%, white, transparent)&quot;&gt;&lt;span&gt;Could not load: attachment.vp8 (1.2 MiB)&lt;/span&gt;&lt;/div&gt;
-&lt;p class=&quot;clif&quot;&gt;woof, big one :*o&lt;/p&gt;
-&lt;p class=&quot;lacey&quot;&gt;Better find one soon, or this&#39;ll be you next! ;=V&lt;/p&gt;
-&lt;p class=&quot;clif&quot;&gt;lol, don&#39;t even joke babe ^ ^&lt;/p&gt;
-&lt;p class=&quot;lacey&quot;&gt;Who&#39;s joking? We both know you&#39;ve got a kink for preds...&lt;/p&gt;
-&lt;p class=&quot;clif&quot;&gt;...ur kidding&lt;/p&gt;
-&lt;p class=&quot;lacey&quot;&gt;Guess we&#39;ll find out tonight }:=)&lt;/p&gt;
-&lt;p class=&quot;clif&quot;&gt;o///o !!!&lt;/p&gt;
+&lt;div.textchat&gt;
+&lt;div.placeholder-img.poop-gradient.lacey role=&quot;img&quot; alt=&quot;A blurred out image. The radial gradient gives the faint impression of a toilet with poop in it.&quot; style=&quot;width: 20rem; height: 15rem;&quot;&gt;&lt;span&gt;Could not load: attachment.vp8 (1.2 MiB)&lt;/span&gt;&lt;/div&gt;
+&lt;p.clif&gt;woof, big one :*o&lt;/p&gt;
+&lt;p.lacey&gt;Better find one soon, or this&#39;ll be you next! ;=V&lt;/p&gt;
+&lt;p.clif&gt;lol, don&#39;t even joke babe ^ ^&lt;/p&gt;
+&lt;p.lacey&gt;Who&#39;s joking? We both know you&#39;ve got a kink for preds...&lt;/p&gt;
+&lt;p.clif&gt;...ur kidding&lt;/p&gt;
+&lt;p.lacey&gt;Guess we&#39;ll find out tonight }:=)&lt;/p&gt;
+&lt;p.clif&gt;o///o !!!&lt;/p&gt;
 &lt;/div&gt;
 
 Lacey Armstrong yawns and stretches, ready for a new day, full of new meals. Soon, she&#39;d forget all about the two delicious meals who comprised her last bowel movement.
 
 ### The End.
 
-* [[Restart.|Start]]</tw-passagedata><tw-passagedata pid="238" name="Preload Ren emojis" tags="" position="975,2975" size="100,100">&lt;!-- This hidden passage contains most emojis used in the Ren route. We attempt to cache them as early as possible, so they don&#39;t pop in on passages. --&gt;
+* [[Restart.|Start]]</tw-passagedata><tw-passagedata pid="247" name="Preload Ren emojis" tags="" position="850,3100" size="100,100">&lt;!-- This hidden passage contains most emojis used in the Ren route. We attempt to cache them as early as possible, so they don&#39;t pop in on passages. --&gt;
 &lt;div aria-hidden=&quot;true&quot; style=&quot;height: 0; overflow: hidden;&quot;&gt;
 &lt;q.ren&gt;Heeeeey!!!&lt;/q&gt;
 🍈 🍑 🏻 🐇 🐔 🐰 🐴 🐹 🐺 🐾 👅 👌 💢 💨 💰 🔑 🎮 🖼 🏎 👤 👩 👋 🔥 🐷 🐗 👮 👿 💦 😊 😃 🦊 🦹‍♂️ 🦹‍♀️ 🛻 🤨 🖼️ 🙈 🤷‍♂️ 🤷‍♀️ 😉 😎 ❓ ⏳ 🥒 😨 😦 😟 😔 😮‍ 🫂 😁 🤰 🥩 😠 😡 🤬 🩸 😈 🥱 ♨️ 😈‍ 🧛🏻️ 🧛🏻‍♀️ 🤤   😝 😌 😳 😕 😏 🤔 🤢 ☠️ 😒 😧 😬 🙊 ♂ 🚔 😾 🚓 🤫 😼 😩 😖 🙇‍♂️ 🙇‍♀️ 🙅‍♂️ 🙅‍♀️ ⏱ 🥺 ⛓
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="239" name="Go to the garage." tags="checkpoint" position="1100,2975" size="100,100">You walk down the hall and enter the garage. The garage door is open, looking out onto rows of similarly suburban houses. Cool fresh air enters. The smell of freedom.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="248" name="Go to the garage." tags="checkpoint" position="975,3100" size="100,100">You walk down the hall and enter the garage. The garage door is open, looking out onto rows of similarly suburban houses. Cool fresh air enters. The smell of freedom.
 
 Parked inside the garage is a clean and polished pickup truck from a luxury brand, and a similarly ostentatious boat.
 
 A few feet ahead of you, you see a red fox, who appears to be struggling to carry a huge cardboard box. Stacked haphazardly on top is a number of objects, including some electronics, a game console, two silver candelabras, and what appears to be a priceless oil painting. The fox notices you.
 
-&lt;q class=&quot;ren&quot;&gt;Hiya!!! 😊👋🐾&lt;/q&gt; the fox says, talking in an unusually 😃 excited and 😃😃 expressive manner.
+&lt;q.ren&gt;Hiya!!! 😊👋🐾&lt;/q&gt; the fox says, talking in an unusually 😃 excited and 😃😃 expressive manner.
 
 * [[Ask him what he&#39;s up to.]] *(Male Pred)*
-* [[What&#39;s she doing?]] *(Female Pred)*</tw-passagedata><tw-passagedata pid="240" name="Ask him what he&#39;s up to." tags="" position="1225,2975" size="100,100">&lt;% s.rm = true; %&gt;
+* [[What&#39;s she doing?]] *(Female Pred)*</tw-passagedata><tw-passagedata pid="249" name="Ask him what he&#39;s up to." tags="" position="1100,3100" size="100,100">&lt;% s.rm = true; %&gt;
 
 &lt;%= story.render(&quot;...What are you doing?&quot;) %&gt;
 
-&lt;div-&gt;[[...What are you doing?]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="241" name="What&#39;s she doing?" tags="" position="100,3100" size="100,100">&lt;% s.rm = false; %&gt;
+&lt;div-&gt;[[...What are you doing?]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="250" name="What&#39;s she doing?" tags="" position="1225,3100" size="100,100">&lt;% s.rm = false; %&gt;
 
 &lt;%= story.render(&quot;...What are you doing?&quot;)%&gt;
 
-&lt;div-&gt;[[...What are you doing?]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="242" name="...What are you doing?" tags="" position="225,3100" size="100,100">You ask &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt; what &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt;&#39;s doing.
+&lt;div-&gt;[[...What are you doing?]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="251" name="...What are you doing?" tags="" position="100,3225" size="100,100">You ask &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt; what &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt;&#39;s doing.
 
-&lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt; smiles and replies, &lt;q class=&quot;ren&quot;&gt;Stealing!!! 🦊&lt;%=s.rm?`🦹‍♂️`:`🦹‍♀️`%&gt;💰&lt;/q&gt;
+&lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt; smiles and replies, &lt;q.ren&gt;Stealing!!! 🦊&lt;%=s.rm?`🦹‍♂️`:`🦹‍♀️`%&gt;💰&lt;/q&gt;
 
 Yeah, you guess that was pretty obvious.
 
-&lt;q class=&quot;ren&quot;&gt;Your timing is 👌 perf,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, gesturing with &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; bushy tail towards the truck, &lt;q class=&quot;ren&quot;&gt;Could you unlatch the 🛻 tailgate for me?&lt;/q&gt;
+&lt;q.ren&gt;Your timing is 👌 perf,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, gesturing with &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; bushy tail towards the truck, &lt;q.ren&gt;Could you unlatch the 🛻 tailgate for me?&lt;/q&gt;
 
-* [[Is that a good idea?]]</tw-passagedata><tw-passagedata pid="243" name="Is that a good idea?" tags="" position="350,3100" size="100,100">&lt;q class=&quot;ren&quot;&gt;🤨  Um, it&#39;s a *great* idea? I&#39;ve always wanted some of this 🎮🖼️💰 stuff!!!&lt;/q&gt;
+* [[Is that a good idea?]]</tw-passagedata><tw-passagedata pid="252" name="Is that a good idea?" tags="" position="225,3225" size="100,100">&lt;q.ren&gt;🤨  Um, it&#39;s a *great* idea? I&#39;ve always wanted some of this 🎮🖼️💰 stuff!!!&lt;/q&gt;
 
 You say you meant, like, ethically. Won&#39;t the folks who live here be upset about this?
 
-&lt;q class=&quot;ren&quot;&gt;The 🐴 folks who live here are loaded. They probs won&#39;t even notice!!! 🙈&lt;%=s.rm?`🤷‍♂️`:`🤷‍♀️`%&gt; I&#39;m like Robin Hood! I steal from the 💰 rich, and give to the me!&lt;/q&gt;
+&lt;q.ren&gt;The 🐴 folks who live here are loaded. They probs won&#39;t even notice!!! 🙈&lt;%=s.rm?`🤷‍♂️`:`🤷‍♀️`%&gt; I&#39;m like Robin Hood! I steal from the 💰 rich, and give to the me!&lt;/q&gt;
 
 And what if they do notice? you ask.
 
-&lt;q class=&quot;ren&quot;&gt;Sounds like a problem for &lt;%=s.rm?`🦹‍♂️`:`🦹‍♀️`%&gt; Future Ren,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; chuckles, &lt;q class=&quot;ren&quot;&gt;I&#39;m Ren, btw. 😉&lt;/q&gt;
+&lt;q.ren&gt;Sounds like a problem for &lt;%=s.rm?`🦹‍♂️`:`🦹‍♀️`%&gt; Future Ren,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; chuckles, &lt;q.ren&gt;I&#39;m Ren, btw. 😉&lt;/q&gt;
 
-* [[Uh, I&#39;m Hollis.]]</tw-passagedata><tw-passagedata pid="244" name="Uh, I&#39;m Hollis." tags="checkpoint" position="475,3100" size="100,100">You&#39;re Hollis, you reply, scratching your ears nervously.
+* [[Uh, I&#39;m Hollis.]]</tw-passagedata><tw-passagedata pid="253" name="Uh, I&#39;m Hollis." tags="checkpoint" position="350,3225" size="100,100">You&#39;re Hollis, you reply, scratching your ears nervously.
 
-&lt;q class=&quot;ren&quot;&gt;Pleased to meet you 🐰😎 dude!!!&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says. &lt;q class=&quot;ren&quot;&gt;Sorry, can I call you 🐰 dude? Or are you more of a 🐰👩❓ dude-ess?&lt;/q&gt;
+&lt;q.ren&gt;Pleased to meet you 🐰😎 dude!!!&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says. &lt;q.ren&gt;Sorry, can I call you 🐰 dude? Or are you more of a 🐰👩❓ dude-ess?&lt;/q&gt;
 
 A-actually, you&#39;re neither? you reply.
 
-&lt;q class=&quot;ren&quot;&gt;Oh, neat!!! 🐰👤&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; smiles, carefully balancing the almost cartoonishly large pile of stolen goods, &lt;q class=&quot;ren&quot;&gt;Anyway, I could use some help with that latch. Any time now!!! ⏳&lt;/q&gt;
+&lt;q.ren&gt;Oh, neat!!! 🐰👤&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; smiles, carefully balancing the almost cartoonishly large pile of stolen goods, &lt;q.ren&gt;Anyway, I could use some help with that latch. Any time now!!! ⏳&lt;/q&gt;
 
 * [[Help with the latch.|Help Ren.]]
-* [[Don&#39;t.|Don&#39;t help Ren.]]</tw-passagedata><tw-passagedata pid="245" name="Don&#39;t help Ren." tags="" position="600,3100" size="100,100">You don&#39;t assist &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt;, instead choosing to carefully back toward the door, so as not to seem complicit in &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; burglary. If anyone asks, you were just looking to get some fresh air, when you stumbled upon this eccentric kitsune stealing a load of valuables. It&#39;s the perfect alibi, you think, because it&#39;s completely true.
+* [[Don&#39;t.|Don&#39;t help Ren.]]</tw-passagedata><tw-passagedata pid="254" name="Don&#39;t help Ren." tags="" position="475,3225" size="100,100">You don&#39;t assist &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt;, instead choosing to carefully back toward the door, so as not to seem complicit in &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; burglary. If anyone asks, you were just looking to get some fresh air, when you stumbled upon this eccentric kitsune stealing a load of valuables. It&#39;s the perfect alibi, you think, because it&#39;s completely true.
 
-Ren struggles to keep the box steady. &lt;q class=&quot;ren&quot;&gt;🛻 Trunk... Now... Please? ⏳⏳⏳ I&#39;m kind of in a 🥒 here, and if you don&#39;t, I&#39;m... gonna...&lt;/q&gt;
+Ren struggles to keep the box steady. &lt;q.ren&gt;🛻 Trunk... Now... Please? ⏳⏳⏳ I&#39;m kind of in a 🥒 here, and if you don&#39;t, I&#39;m... gonna...&lt;/q&gt;
 
-* [[Go back to the foyer...?|Ren drops the boxes.]]</tw-passagedata><tw-passagedata pid="246" name="Ren drops the boxes." tags="" position="725,3100" size="100,100">You inch toward the door.
+* [[Go back to the foyer...?|Ren drops the boxes.]]</tw-passagedata><tw-passagedata pid="255" name="Ren drops the boxes." tags="" position="600,3225" size="100,100">You inch toward the door.
 
 &lt;q.ren&gt;Ack!!! 😨😨😨&lt;/q&gt; Ren loses &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt;  balance and drops the box, sending all of its contents crashing to the ground, including a fine porcelain teapot and a GameStation 4 Pro. &lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt; watches helplessly as they smash into several pieces.
 
  &quot;😦😟😔&quot; &lt;%=s.rm?&quot;His&quot;:&quot;Her&quot;%&gt;  ears and whiskers droop with defeat. &lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt;  looks like &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt;&#39;s about to cry.
 
-Taking this as your cue to leave, you twist the knob to the garage door. Just as you do, Ren growls, &lt;q class=&quot;ren&quot;&gt;👿👿👿 *Don&#39;t move.* I&#39;m not done with you. 💢&lt;/q&gt;
-* [[Hollis: Escape.]]</tw-passagedata><tw-passagedata pid="247" name="Help Ren." tags="" position="850,3100" size="100,100">*CW: Crimes? Crimes.*
+Taking this as your cue to leave, you twist the knob to the garage door. Just as you do, Ren growls, &lt;q.ren&gt;👿👿👿 *Don&#39;t move.* I&#39;m not done with you. 💢&lt;/q&gt;
+* [[Hollis: Escape.]]</tw-passagedata><tw-passagedata pid="256" name="Help Ren." tags="" position="725,3225" size="100,100">*CW: Crimes? Crimes.*
 
 You can&#39;t fault &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; logic. Well, you can, but you probably shouldn&#39;t get on this fox&#39;s bad side. You walk over and unlatch the tailgate so Ren can load &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; pile of loot onto the flatbed.
 
-&lt;q class=&quot;ren&quot;&gt;😮‍💨 Phew,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, closing it up again, &lt;q class=&quot;ren&quot;&gt;I owe ya one!!! 🫂🫂&lt;/q&gt;
+&lt;q.ren&gt;😮‍💨 Phew,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, closing it up again, &lt;q.ren&gt;I owe ya one!!! 🫂🫂&lt;/q&gt;
 
 Ren suddenly grabs you into a warm hug, affectionately wrapping &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; tail around your whole body for a moment, before releasing you as if nothing happened.
 
@@ -3311,42 +3390,42 @@ N-no problem, you stammer!
 
 &lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt; walks around to the driver-side door, &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; tail already wagging with the excitement of a successful heist.
 
-* [[Is this your truck?]]</tw-passagedata><tw-passagedata pid="248" name="Is this your truck?" tags="checkpoint" position="975,3100" size="100,100">You ask Ren if this is &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; vehicle, even though you probably know the answer already.
+* [[Is this your truck?]]</tw-passagedata><tw-passagedata pid="257" name="Is this your truck?" tags="checkpoint" position="850,3225" size="100,100">You ask Ren if this is &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; vehicle, even though you probably know the answer already.
 
-Ren hops into the driver&#39;s seat, sniffs around a bit, and jingles a set of keys that was stashed in a cup-holder. &lt;q class=&quot;ren&quot;&gt;🔑😁  Is now!!!&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt;  laughs,  &lt;q class=&quot;ren&quot;&gt;Wanna take it for a little spin? 🛻😃&lt;/q&gt;
+Ren hops into the driver&#39;s seat, sniffs around a bit, and jingles a set of keys that was stashed in a cup-holder. &lt;q.ren&gt;🔑😁  Is now!!!&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt;  laughs,  &lt;q.ren&gt;Wanna take it for a little spin? 🛻😃&lt;/q&gt;
 
 * [[Hey, why not?]]
-* [[That seems like a bad idea...]]</tw-passagedata><tw-passagedata pid="249" name="Hey, why not?" tags="" position="1100,3100" size="100,100">You seriously consider &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; offer. You had reservations at first, but the more you think about it, the more excited you are to partake in a high-stakes getaway as this strange fox&#39;s unwitting accomplice. It almost feels like you&#39;re in some kind of video game.
+* [[That seems like a bad idea...]]</tw-passagedata><tw-passagedata pid="258" name="Hey, why not?" tags="" position="975,3225" size="100,100">You seriously consider &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; offer. You had reservations at first, but the more you think about it, the more excited you are to partake in a high-stakes getaway as this strange fox&#39;s unwitting accomplice. It almost feels like you&#39;re in some kind of video game.
 
 You don&#39;t want to be the only one here when someone notices everything that&#39;s missing, but it really feels like you&#39;re forgetting something.
 
-* [[I can&#39;t leave my friend...]]</tw-passagedata><tw-passagedata pid="250" name="I can&#39;t leave my friend..." tags="" position="1225,3100" size="100,100">You remember that Reese is still here, and possibly in danger. You can&#39;t just abandon him, not at a party full of predators!
+* [[I can&#39;t leave my friend...]]</tw-passagedata><tw-passagedata pid="259" name="I can&#39;t leave my friend..." tags="" position="1100,3225" size="100,100">You remember that Reese is still here, and possibly in danger. You can&#39;t just abandon him, not at a party full of predators!
 
-&lt;q class=&quot;ren&quot;&gt;Oh, ur 🐹 friend&#39;s totally in some pred&#39;s belly by now, 🐺🤰&lt;/q&gt; Ren says.
+&lt;q.ren&gt;Oh, ur 🐹 friend&#39;s totally in some pred&#39;s belly by now, 🐺🤰&lt;/q&gt; Ren says.
 
 What? You ask &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt; how &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; knows.
 
-&lt;q class=&quot;ren&quot;&gt;&lt;!-- shrug --&gt;&lt;%=s.rm?`🤷‍♂️`:`🤷‍♀️`%&gt; Call it a hunch,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, &quot;No prey ever came to a party like this expecting to leave in one piece, right? Everyone&#39;s either here to 🐺 eat or be 🥩 eaten.&quot;
+&lt;q.ren&gt;&lt;!-- shrug --&gt;&lt;%=s.rm?`🤷‍♂️`:`🤷‍♀️`%&gt; Call it a hunch,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, &lt;q.ren&gt;No prey ever came to a party like this expecting to leave in one piece, right? Everyone&#39;s either here to 🐺 eat or be 🥩 eaten.&lt;/q&gt;
 
 You didn&#39;t realize this was that kind of party, you say.
 
-Ren smirks, &lt;q class=&quot;ren&quot;&gt;Want a ride home?&lt;/q&gt;
+Ren smirks, &lt;q.ren&gt;Want a ride home?&lt;/q&gt;
 
-* [[No, I really shouldn&#39;t...]]</tw-passagedata><tw-passagedata pid="251" name="That seems like a bad idea..." tags="" position="100,3225" size="100,100">Ren looks at you, surprised.&lt;q class=&quot;ren&quot;&gt;What, you&#39;re backing out now? I thought you were a 🐇 rabbit, not 🐔 chicken.&lt;/q&gt;
+* [[No, I really shouldn&#39;t...]]</tw-passagedata><tw-passagedata pid="260" name="That seems like a bad idea..." tags="" position="1225,3225" size="100,100">Ren looks at you, surprised.&lt;q.ren&gt;What, you&#39;re backing out now? I thought you were a 🐇 rabbit, not 🐔 chicken.&lt;/q&gt;
 
 You say you&#39;d really love to... commit a crime, but as a rule, you try not to take rides from strangers.
 
-&lt;q class=&quot;ren&quot;&gt;C&#39;mon,&lt;/q&gt; the fox says with a vicious smile, &lt;q class=&quot;ren&quot;&gt;it&#39;ll be fun!!! A little joy-ride never hurt nobody!&lt;/q&gt;
+&lt;q.ren&gt;C&#39;mon,&lt;/q&gt; the fox says with a vicious smile, &lt;q.ren&gt;it&#39;ll be fun!!! A little joy-ride never hurt nobody!&lt;/q&gt;
 
-* [[I can&#39;t leave my friend...]]</tw-passagedata><tw-passagedata pid="252" name="No, I really shouldn&#39;t..." tags="" position="225,3225" size="100,100">Ren narrows &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; eyes. &lt;q class=&quot;ren&quot;&gt;You&#39;re just trying to snitch on me, aren&#39;t you. 😠&lt;/q&gt;
+* [[I can&#39;t leave my friend...]]</tw-passagedata><tw-passagedata pid="261" name="No, I really shouldn&#39;t..." tags="" position="100,3350" size="100,100">Ren narrows &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; eyes. &lt;q.ren&gt;You&#39;re just trying to snitch on me, aren&#39;t you. 😠&lt;/q&gt;
 
 What? No, you say. You might be a bit of a square, but you&#39;re not a narc.
 
-&lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt; climbs out of the truck and advances towards you. &lt;q class=&quot;ren&quot;&gt;😠😠 Don&#39;t lie!!! I can *smell* your lies, 🦊🦊🦊&lt;/q&gt; Ren says, nose twitching wildly, &lt;q class=&quot;ren&quot;&gt;You&#39;re practically *dripping* with deceit.&lt;/q&gt;
+&lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt; climbs out of the truck and advances towards you. &lt;q.ren&gt;😠😠 Don&#39;t lie!!! I can *smell* your lies, 🦊🦊🦊&lt;/q&gt; Ren says, nose twitching wildly, &lt;q.ren&gt;You&#39;re practically *dripping* with deceit.&lt;/q&gt;
 
 You nervously start to step toward the door.
 
-* [[Hollis: Escape.]]</tw-passagedata><tw-passagedata pid="253" name="Hollis: Escape." tags="" position="350,3225" size="100,100">*CW: Violent threat. Unwilling vore. Bad breath.*
+* [[Hollis: Escape.]]</tw-passagedata><tw-passagedata pid="262" name="Hollis: Escape." tags="" position="225,3350" size="100,100">*CW: Violent threat. Unwilling vore. Bad breath.*
 
 You take a deep breath and make a break for the door. away, praying you&#39;ll be fast enough to make it out of here alive.
 
@@ -3354,93 +3433,93 @@ You take a deep breath and make a break for the door. away, praying you&#39;ll b
 
 You&#39;re not fast enough. With incredible agility, Ren leaps at you and grabs you by the middle. &lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt; bares &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; claws and fangs.
 
-&lt;q class=&quot;ren&quot;&gt;😡 This is your fault,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; seethes, &lt;q class=&quot;ren&quot;&gt;You were about to go tell on me, weren&#39;t you?&lt;/q&gt;
+&lt;q.ren&gt;😡 This is your fault,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; seethes, &lt;q.ren&gt;You were about to go tell on me, weren&#39;t you?&lt;/q&gt;
 
-* [[What? No!]]</tw-passagedata><tw-passagedata pid="254" name="What? No!" tags="" position="475,3225" size="100,100">No! You cry out, trying to wrestle free, you&#39;re not gonna tell anyone! Promise!
+* [[What? No!]]</tw-passagedata><tw-passagedata pid="263" name="What? No!" tags="" position="350,3350" size="100,100">No! You cry out, trying to wrestle free, you&#39;re not gonna tell anyone! Promise!
 
-&lt;q class=&quot;ren&quot;&gt;🤬 Horsecrud!!!&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, bringing &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; sharp teeth right up against the exposed fur of your neck, licking saliva from &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; lips. This is a obscene gesture, uncommon among civilized anthros. &lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt; growls, &lt;q class=&quot;ren&quot;&gt;Gimme one good reason I shouldn&#39;t frigging eat you right now. 🥩🩸&lt;/q&gt;
+&lt;q.ren&gt;🤬 Horsecrud!!!&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, bringing &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; sharp teeth right up against the exposed fur of your neck, licking saliva from &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; lips. This is a obscene gesture, uncommon among civilized anthros. &lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt; growls, &lt;q.ren&gt;Gimme one good reason I shouldn&#39;t frigging eat you right now. 🥩🩸&lt;/q&gt;
 
 Your body is frozen. In the heat of the moment, flushed with fear, you try to reply. Your lips quiver, and your ears flatten, but your tongue won&#39;t form words.
 
-&lt;q class=&quot;ren&quot;&gt;Whoops, 😈&lt;/q&gt; Ren says, locking the door behind you with a *click*, &lt;q class=&quot;ren&quot;&gt;Too slow.&lt;/q&gt;
+&lt;q.ren&gt;Whoops, 😈&lt;/q&gt; Ren says, locking the door behind you with a *click*, &lt;q.ren&gt;Too slow.&lt;/q&gt;
 
-* [[Ren: No witnesses.]]</tw-passagedata><tw-passagedata pid="255" name="Ren: No witnesses." tags="vore" position="600,3225" size="100,100">Ren glomps &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; lips over your head (&lt;q.ren&gt;🦊🥱🐇&lt;/q&gt;), and begins working to squeeze it into &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; throat. You try to squirm free, but &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt;&#39;s gripping your body too tightly. Your vision goes dark. The fur on your ears feel slobbery. All you can smell is fish...
+* [[Ren: No witnesses.]]</tw-passagedata><tw-passagedata pid="264" name="Ren: No witnesses." tags="vore" position="475,3350" size="100,100">Ren glomps &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; lips over your head (&lt;q.ren&gt;🦊🥱🐇&lt;/q&gt;), and begins working to squeeze it into &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; throat. You try to squirm free, but &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt;&#39;s gripping your body too tightly. Your vision goes dark. The fur on your ears feel slobbery. All you can smell is fish...
 
 You look up at your destination, and wince slightly. The fox&#39;s pulsating throat keeps blasting you with ♨️ hot, ♨️♨️ putrid air. &lt;%=s.rm?&#39;He&#39;:&#39;She&#39;%&gt; seems to be hyperventilating as &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt; eats you.
 
 * [[Try persuasion?]]
-* [[Please! Don&#39;t do this!|Try persuasion?]]</tw-passagedata><tw-passagedata pid="256" name="Try persuasion?" tags="vore checkpoint" position="725,3225" size="100,100">Your voice is muffled by the slick tongue covering your face, but you try to call out to Ren: It&#39;s not too late! &lt;%=s.rm?&#39;He&#39;:&#39;She&#39;%&gt; doesn&#39;t have to do this!
+* [[Please! Don&#39;t do this!|Try persuasion?]]</tw-passagedata><tw-passagedata pid="265" name="Try persuasion?" tags="vore checkpoint" position="600,3350" size="100,100">Your voice is muffled by the slick tongue covering your face, but you try to call out to Ren: It&#39;s not too late! &lt;%=s.rm?&#39;He&#39;:&#39;She&#39;%&gt; doesn&#39;t have to do this!
 
-The fox lets out a low growl. (&lt;q class=&quot;ren&quot;&gt;😈&lt;%=s.rm?`‍🧛🏻`:`️🧛🏻‍♀️`%&gt;👅&lt;/q&gt;) You realize &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; teeth are now positioned directly around your throat, and &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt; could easily bite your head off if so inclined.
+The fox lets out a low growl. (&lt;q.ren&gt;😈&lt;%=s.rm?`‍🧛🏻`:`️🧛🏻‍♀️`%&gt;👅&lt;/q&gt;) You realize &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; teeth are now positioned directly around your throat, and &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt; could easily bite your head off if so inclined.
 
-You rationally decide to keep your mouth shut from now on. &lt;%=s.rm?&#39;He&#39;:&#39;She&#39;%&gt; responds with a happy murr (&lt;q class=&quot;ren&quot;&gt;🤤&lt;/q&gt;) and swallows again, so your shoulders fill &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; cheeks.
+You rationally decide to keep your mouth shut from now on. &lt;%=s.rm?&#39;He&#39;:&#39;She&#39;%&gt; responds with a happy murr (&lt;q.ren&gt;🤤&lt;/q&gt;) and swallows again, so your shoulders fill &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; cheeks.
 
 Your face is moments from sliding into &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; gullet.
 
 * [[Take a deep breath.]]
-* [[Struggle for freedom!]]</tw-passagedata><tw-passagedata pid="257" name="Take a deep breath." tags="vore" position="850,3225" size="100,100">Just before your head slips into the fox&#39;s slimy throat. You take in a big lungful of putrid air and hold it. &lt;%= story.render(&quot;Get swallowed by Ren.&quot;) %&gt;
+* [[Struggle for freedom!]]</tw-passagedata><tw-passagedata pid="266" name="Take a deep breath." tags="vore" position="725,3350" size="100,100">Just before your head slips into the fox&#39;s slimy throat. You take in a big lungful of putrid air and hold it. &lt;%= story.render(&quot;Get swallowed by Ren.&quot;) %&gt;
 
-&lt;div-&gt;[[Get swallowed by Ren.]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="258" name="Struggle for freedom!" tags="gore" position="975,3225" size="100,100">*CW: Accidental mauling. Blood.*
+&lt;div-&gt;[[Get swallowed by Ren.]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="267" name="Struggle for freedom!" tags="gore" position="850,3350" size="100,100">*CW: Accidental mauling. Blood.*
 
 You thrash your arms and legs, trying to free yourself. Instinctively, the fox sinks &lt;%=s.rm?&#39;his&#39;:&#39;her&#39;%&gt; teeth into the flesh of your neck, something &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt; immediately regrets.
 
 You feel stinging pain as Ren releases you, and you collapse weakly to the garage floor. Everything feels hot and blurry. Then you fall unconscious.
 
-&lt;q class=&quot;ren&quot;&gt;😨😨🥩🩸&lt;/q&gt;
+&lt;q.ren&gt;😨😨🥩🩸&lt;/q&gt;
 
 ### Game Over.
 
-* &lt;a0 onclick=&quot;setup.undo()&quot;&gt;Undo&lt;/a&gt;</tw-passagedata><tw-passagedata pid="259" name="Get swallowed by Ren." tags="vore" position="1100,3225" size="100,100">Your head slides into the tight fleshy tube with a slick *grlk* noise.
+* &lt;a0 onclick=&quot;setup.undo()&quot;&gt;Undo&lt;/a&gt;</tw-passagedata><tw-passagedata pid="268" name="Get swallowed by Ren." tags="vore" position="975,3350" size="100,100">Your head slides into the tight fleshy tube with a slick *grlk* noise.
 
-(&lt;q class=&quot;ren&quot;&gt;🤤💦💦💦&lt;/q&gt;)
+(&lt;q.ren&gt;🤤💦💦💦&lt;/q&gt;)
 
-Ren is pretty large for a fox, but not the biggest anthro you&#39;ve seen tonight. You get the feeling &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt;&#39;s somewhat struggling to devour you. Still, this doesn&#39;t prevent &lt;%=s.rm?&#39;him&#39;:&#39;her&#39;%&gt; from swallowing both your head and shoulders in a single powerful &lt;q class=&quot;ren&quot;&gt;😝 *gulp*~&lt;/q&gt;.
+Ren is pretty large for a fox, but not the biggest anthro you&#39;ve seen tonight. You get the feeling &lt;%=s.rm?&#39;he&#39;:&#39;she&#39;%&gt;&#39;s somewhat struggling to devour you. Still, this doesn&#39;t prevent &lt;%=s.rm?&#39;him&#39;:&#39;her&#39;%&gt; from swallowing both your head and shoulders in a single powerful &lt;q.ren&gt;😝 *gulp*~&lt;/q&gt;.
 
-* [[Enter Ren&#39;s stomach.]]</tw-passagedata><tw-passagedata pid="260" name="Enter Ren&#39;s stomach." tags="vore" position="1225,3225" size="100,100">Your head pokes into Ren&#39;s stomach. It&#39;s wet. It&#39;s hot. It&#39;s wet and hot. Your legs slide in behind you. Ren swallows them with a satisfied &lt;q class=&quot;ren&quot;&gt;👅 Murr...&lt;/q&gt;, and they slide down &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; throat like thick, furry noodles.
+* [[Enter Ren&#39;s stomach.]]</tw-passagedata><tw-passagedata pid="269" name="Enter Ren&#39;s stomach." tags="vore" position="1100,3350" size="100,100">Your head pokes into Ren&#39;s stomach. It&#39;s wet. It&#39;s hot. It&#39;s wet and hot. Your legs slide in behind you. Ren swallows them with a satisfied &lt;q.ren&gt;👅 Murr...&lt;/q&gt;, and they slide down &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; throat like thick, furry noodles.
 
 You&#39;ve never been eaten before, but it&#39;s basically exactly how you imagined it. Your body is packed tight into a curled up position, in a dank, squelching sac meant only for food.
 
 As you lie here, now completely encapsulated in this fox&#39;s body, you feel almost... at home? As if you are fulfilling an important role in the grand scheme of things. As though being devoured was exactly what was expected from you from the beginning.
 
-Ren burps (&lt;q class=&quot;ren&quot;&gt;😮‍💨😌&lt;/q&gt;) and &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; stomach walls clench tighter around you. You begin to suspect that getting out of here won&#39;t be easy.
+Ren burps (&lt;q.ren&gt;😮‍💨😌&lt;/q&gt;) and &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; stomach walls clench tighter around you. You begin to suspect that getting out of here won&#39;t be easy.
 
-&lt;q class=&quot;ren&quot;&gt;Woah, 😳&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, rubbing &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; huge belly, &lt;q class=&quot;ren&quot;&gt;That was intense. 😌😌&lt;/q&gt;
+&lt;q.ren&gt;Woah, 😳&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, rubbing &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; huge belly, &lt;q.ren&gt;That was intense. 😌😌&lt;/q&gt;
 
-* [[Wh-why did you do that?]]</tw-passagedata><tw-passagedata pid="261" name="Wh-why did you do that?" tags="vore" position="100,3350" size="100,100">You scramble around inside to get Ren&#39;s attention, and ask &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt; why &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; just ate you.
+* [[Wh-why did you do that?]]</tw-passagedata><tw-passagedata pid="270" name="Wh-why did you do that?" tags="vore" position="1225,3350" size="100,100">You scramble around inside to get Ren&#39;s attention, and ask &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt; why &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; just ate you.
 
-&lt;q class=&quot;ren&quot;&gt;😕 W-well,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, &lt;q class=&quot;ren&quot;&gt;I didn&#39;t want you to 🐇💨 escape and snitch on me. Then it was kinda like my body just took over? 🦊&lt;!-- shrug --&gt;&lt;%=s.rm?`🤷‍♂️`:`🤷‍♀️`%&gt;&lt;/q&gt;
+&lt;q.ren&gt;😕 W-well,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, &lt;q.ren&gt;I didn&#39;t want you to 🐇💨 escape and snitch on me. Then it was kinda like my body just took over? 🦊&lt;!-- shrug --&gt;&lt;%=s.rm?`🤷‍♂️`:`🤷‍♀️`%&gt;&lt;/q&gt;
 
 You say weren&#39;t gonna rat &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt; out, honestly.
 
-&lt;q class=&quot;ren&quot;&gt;Oh,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; replies, rubbing &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; gut bashfully. &lt;q class=&quot;ren&quot;&gt;Well, what&#39;s done is done... 😏&lt;/q&gt;
+&lt;q.ren&gt;Oh,&lt;/q&gt; &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; replies, rubbing &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; gut bashfully. &lt;q.ren&gt;Well, what&#39;s done is done... 😏&lt;/q&gt;
 
-* [[Can you get me out of here?]]</tw-passagedata><tw-passagedata pid="262" name="Can you get me out of here?" tags="vore" position="225,3350" size="100,100">Ren puts a paw on &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; chin. &lt;q class=&quot;ren&quot;&gt;Well, I... 🤔  don&#39;t actually know?&lt;/q&gt;
+* [[Can you get me out of here?]]</tw-passagedata><tw-passagedata pid="271" name="Can you get me out of here?" tags="vore" position="100,3475" size="100,100">Ren puts a paw on &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; chin. &lt;q.ren&gt;Well, I... 🤔  don&#39;t actually know?&lt;/q&gt;
 
 &lt;%=s.rm?&quot;He&quot;:&quot;She&quot;%&gt;... doesn&#39;t know?
 
-&lt;q class=&quot;ren&quot;&gt;This is actually my first time eating someone whole like this... 😳 Like, I could try throwing you up? But that sounds p gross tbh. 🤢&lt;/q&gt;
+&lt;q.ren&gt;This is actually my first time eating someone whole like this... 😳 Like, I could try throwing you up? But that sounds p gross tbh. 🤢&lt;/q&gt;
 
-* [[...Could you try?]]</tw-passagedata><tw-passagedata pid="263" name="...Could you try?" tags="vore" position="350,3350" size="100,100">You&#39;re surprised (and honestly, impressed) to hear this is &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; first time, considering how fast it went by. Still, your life and Reese&#39;s depends on you getting out of here. You ask Ren to try throwing you up.
+* [[...Could you try?]]</tw-passagedata><tw-passagedata pid="272" name="...Could you try?" tags="vore" position="225,3475" size="100,100">You&#39;re surprised (and honestly, impressed) to hear this is &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; first time, considering how fast it went by. Still, your life and Reese&#39;s depends on you getting out of here. You ask Ren to try throwing you up.
 
-&lt;q class=&quot;ren&quot;&gt;😕 I mean I guess...&lt;/q&gt;  &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says. &lt;q class=&quot;ren&quot;&gt;I&#39;d feel really bad if I ☠️ digested you, you seem nice... Although you might finally make my  &lt;%=s.rm?`🍑 ass`:`🍈 chest`%&gt; fill out...&lt;/q&gt;
+&lt;q.ren&gt;😕 I mean I guess...&lt;/q&gt;  &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says. &lt;q.ren&gt;I&#39;d feel really bad if I ☠️ digested you, you seem nice... Although you might finally make my  &lt;%=s.rm?`🍑 ass`:`🍈 chest`%&gt; fill out...&lt;/q&gt;
 
 Focus, you say! You need &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt; to get you out of here.
 
-&lt;q class=&quot;ren&quot;&gt;Fine... 😒 Here goes... 🤢&lt;/q&gt; Ren begins slowly sticking a claw into &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; throat. Suddenly, you hear the garage&#39;s doorknob rattle. &lt;q class=&quot;ren&quot;&gt;😧 Oh crap,&lt;/q&gt; Ren says.
+&lt;q.ren&gt;Fine... 😒 Here goes... 🤢&lt;/q&gt; Ren begins slowly sticking a claw into &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; throat. Suddenly, you hear the garage&#39;s doorknob rattle. &lt;q.ren&gt;😧 Oh crap,&lt;/q&gt; Ren says.
 
-* [[What now?]]</tw-passagedata><tw-passagedata pid="264" name="What now?" tags="vore" position="475,3350" size="100,100">You hear pounding on the door.
+* [[What now?]]</tw-passagedata><tw-passagedata pid="273" name="What now?" tags="vore" position="350,3475" size="100,100">You hear pounding on the door.
 
-&lt;q class=&quot;ren&quot;&gt;Y&#39;know those 🐴 horses I mentioned earlier?&lt;/q&gt;
+&lt;q.ren&gt;Y&#39;know those 🐴 horses I mentioned earlier?&lt;/q&gt;
 
 You squint. The ones &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; said would never notice?
 
-&lt;q class=&quot;ren&quot;&gt;Yeah, 😬&lt;/q&gt; Ren says, &lt;q class=&quot;ren&quot;&gt;they noticed. 🙊&lt;/q&gt;
+&lt;q.ren&gt;Yeah, 😬&lt;/q&gt; Ren says, &lt;q.ren&gt;they noticed. 🙊&lt;/q&gt;
 
 A &lt;%=s.rm?&quot;gruff&quot;:&quot;ladylike&quot;%&gt; voice yells through the door, &lt;q&gt;What&#39;s going on in there?&lt;/q&gt;
 
-&lt;q class=&quot;ren&quot;&gt;Nothing!!!&lt;/q&gt; Ren yells back, &lt;q class=&quot;ren&quot;&gt;Just normal, consensual vore!!! 🦊🤰&lt;%=s.rm?`♂`:``%&gt;&lt;/q&gt; You feel &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; belly sag and slosh around you, as &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; rushes over to the truck and climbs into the driver&#39;s seat.
+&lt;q.ren&gt;Nothing!!!&lt;/q&gt; Ren yells back, &lt;q.ren&gt;Just normal, consensual vore!!! 🦊🤰&lt;%=s.rm?`♂`:``%&gt;&lt;/q&gt; You feel &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; belly sag and slosh around you, as &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; rushes over to the truck and climbs into the driver&#39;s seat.
 
-* [[Ren: Getaway.]]</tw-passagedata><tw-passagedata pid="265" name="Ren: Getaway." tags="vore" position="600,3350" size="100,100">*CW: Grand theft auto.*
+* [[Ren: Getaway.]]</tw-passagedata><tw-passagedata pid="274" name="Ren: Getaway." tags="vore" position="475,3475" size="100,100">*CW: Grand theft auto.*
 
 Through the muffled fat of Ren&#39;s gut, you hear the truck&#39;s engine roar to life. The fox gets an excited smile plastered across &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; face (&lt;q.ren&gt;😃🏎🏎  !!!!&lt;/q&gt;) as &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; slams the truck into reverse, and peels out at full speed.
 
@@ -3452,7 +3531,7 @@ Ren pats your curled-up bulge. &lt;q.ren&gt;Don&#39;t worry little 🐰 guy... p
 
 You&#39;re really not feeling reassured.
 
-* [[H-have you done this before?]]</tw-passagedata><tw-passagedata pid="266" name="H-have you done this before?" tags="vore" position="725,3350" size="100,100">Ren smiles. &lt;q.ren&gt;Oh yeah, loads of times!!! 😉🛻💨 What did *you* do in high school?&lt;/q&gt;
+* [[H-have you done this before?]]</tw-passagedata><tw-passagedata pid="275" name="H-have you done this before?" tags="vore" position="600,3475" size="100,100">Ren smiles. &lt;q.ren&gt;Oh yeah, loads of times!!! 😉🛻💨 What did *you* do in high school?&lt;/q&gt;
 
 Getting involved in a car-jacking wasn&#39;t really in your evening plans, you say. If this goes poorly, you could be killed. Or worse, arrested!
 
@@ -3464,7 +3543,7 @@ Then, you hear sirens.
 
 &lt;q.ren&gt;Oh, fuzz. 🚔🚔🚔&lt;/q&gt; says Ren.
 
-* [[(oh gosh oh fluff)]]</tw-passagedata><tw-passagedata pid="267" name="(oh gosh oh fluff)" tags="vore checkpoint" position="850,3350" size="100,100">You can hear Ren&#39;s heart rate quickening as it pulses all around you. Your captor is now being chased by police.
+* [[(oh gosh oh fluff)]]</tw-passagedata><tw-passagedata pid="276" name="(oh gosh oh fluff)" tags="vore checkpoint" position="725,3475" size="100,100">You can hear Ren&#39;s heart rate quickening as it pulses all around you. Your captor is now being chased by police.
 
 &lt;q.ren&gt;Fudging bullshrimp! 😾🛻🚓🚓💨&lt;/q&gt; the fox mutters, noticing two police cars in the rear view mirror.
 
@@ -3472,14 +3551,14 @@ You poke &lt;%-s.rm?&quot;him&quot;:&quot;her&quot;%&gt; in the gut, and tell Re
 
 Ren pats you firmly, clearly not appreciating the distraction of having you inside &lt;%-s.rm?&quot;him&quot;:&quot;her&quot;%&gt; during this tense situation. &lt;q.ren&gt;🤫 Can&#39;t talk,&lt;/q&gt; &lt;%-s.rm?&quot;he&quot;:&quot;she&quot;%&gt; says, &lt;q.ren&gt;evading cops!!!&lt;/q&gt;
 
-* [[Seriously, slow down!]]</tw-passagedata><tw-passagedata pid="268" name="Seriously, slow down!" tags="vore" position="975,3350" size="100,100">You tell Ren to slow down, and kick your foot out to help your point. &lt;%=s.rm?&quot;His&quot;:&quot;Her&quot;%&gt; stomach seems to respond by growling a little. Is it getting hotter and wetter in here?
+* [[Seriously, slow down!]]</tw-passagedata><tw-passagedata pid="277" name="Seriously, slow down!" tags="vore" position="850,3475" size="100,100">You tell Ren to slow down, and kick your foot out to help your point. &lt;%=s.rm?&quot;His&quot;:&quot;Her&quot;%&gt; stomach seems to respond by growling a little. Is it getting hotter and wetter in here?
 
 &lt;q.ren&gt;😼 Good idea, but I got a better one.&lt;/q&gt; Ren replies, ignoring your advice completely. Instead, &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; floors it, and begins  rapidly gaining speed.
 
 You groan. You&#39;re now starting to run low on air, and fizzy liquids are beginning to tickle your toes. You tell Ren that &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt;&#39;s gotta turn &lt;%=s.rm?&quot;him&quot;:&quot;her&quot;%&gt;self in, and puke you up.
 
 Instead, Ren turns the truck&#39;s lights off, allowing it to disappear into the darkness. &lt;q.ren&gt;My exit&#39;s coming up next. Let&#39;s see them cop *this!* 😼🛻🔥💨&lt;/q&gt;
-* [[Struggle desperately inside Ren.]]</tw-passagedata><tw-passagedata pid="269" name="Struggle desperately inside Ren." tags="vore" position="1100,3350" size="100,100">*CW: Police negligence. Fatal digestion. Betrayal.*
+* [[Struggle desperately inside Ren.]]</tw-passagedata><tw-passagedata pid="278" name="Struggle desperately inside Ren." tags="vore" position="975,3475" size="100,100">*CW: Police negligence. Fatal digestion. Betrayal.*
 
 Ren prepares to crank the wheel to the right, and shake the fuzz.
 
@@ -3495,7 +3574,7 @@ Defeated, &lt;%=s.rm?&quot;he&quot;:&quot;she&quot;%&gt; has no choice but to pu
 
 &lt;q.ren&gt;😡 Grr...&lt;/q&gt; You hear Ren produce a deep, low growl.
 
-* [[Uh-oh...]]</tw-passagedata><tw-passagedata pid="270" name="Uh-oh..." tags="vore" position="1225,3350" size="100,100">A wildebeast and a boar step out of the foremost police car to apprehend Ren.
+* [[Uh-oh...]]</tw-passagedata><tw-passagedata pid="279" name="Uh-oh..." tags="vore" position="1100,3475" size="100,100">A wildebeast and a boar step out of the foremost police car to apprehend Ren.
 
 &quot;Outta the car,&quot; the wildebeast yells, &quot;You have the right to remain silent.&quot;
 
@@ -3509,7 +3588,7 @@ Ren shakes &lt;%=s.rm?&quot;his&quot;:&quot;her&quot;%&gt; head. &lt;q.ren&gt;&l
 
 &quot;We&#39;re probably too late,&quot; the boar says, &quot;it seems pretty far along in the digestive process...&quot;
 
-* [[N-no I&#39;m not!]]</tw-passagedata><tw-passagedata pid="271" name="N-no I&#39;m not!" tags="vore" position="100,3475" size="100,100">You struggle vehemently. You do feel weaker after being trapped in here for so long, but you&#39;re still perfectly and completely alive. Although it&#39;s starting to get pretty wet in here, and you&#39;re really starting to feel light-headed.
+* [[N-no I&#39;m not!]]</tw-passagedata><tw-passagedata pid="280" name="N-no I&#39;m not!" tags="vore" position="1225,3475" size="100,100">You struggle vehemently. You do feel weaker after being trapped in here for so long, but you&#39;re still perfectly and completely alive. Although it&#39;s starting to get pretty wet in here, and you&#39;re really starting to feel light-headed.
 
 The wildebeast scratches her head and asks Ren, &quot;We&#39;re too far out to get an ambulance here. Can you puke up this prey?&quot;
 
@@ -3519,7 +3598,7 @@ You squirm and kick harder, letting out kicks and muffled yells.
 
 The officers look awkwardly amongst themselves, then back at Ren&#39;s bulging gut. &quot;Sounds like the prey is in pain,&quot; says the boar uneasily. &quot;Maybe we should just let things take their course?&quot;
 
-* [[No! Get me out of here!!]]</tw-passagedata><tw-passagedata pid="272" name="No! Get me out of here!!" tags="vore" position="225,3475" size="100,100">You cry out. No I&#39;m not! Let me out! Please!
+* [[No! Get me out of here!!]]</tw-passagedata><tw-passagedata pid="281" name="No! Get me out of here!!" tags="vore" position="100,3600" size="100,100">You cry out. No I&#39;m not! Let me out! Please!
 
 &quot;Alright,&quot; says the wildebeast, &quot;just don&#39;t tell the PRA&#39;s. Media will be all over our ass if they catch a whiff of this...&quot;
 
@@ -3529,10 +3608,10 @@ The boar snaps a pair of handcuffs onto &lt;%=s.rm?&quot;his&quot;:&quot;her&quo
 
 Ren&#39;s stomach pulses around you happily (&lt;q.ren&gt;⛓&lt;%=s.rm?`🤷‍♂️`:`🤷‍♀️`%&gt;😏☠️&lt;/q&gt;). As Ren is hauled away, you feel yourself... beginning to... pass out.
 
-&lt;% setup.addAchievement(`🦊🥱🐇 (Ren Vore Ending)`); %&gt;
+&lt;% setup.addAchievement(&quot;Ren Vore Ending&quot;, `&lt;span.ren&gt;🦊🥱🐇&lt;/span&gt;!!!`); %&gt;
 
 * [[Epilogue.|Epilogue: Ren route.]]
-* &lt;a0 onclick=&quot;setup.restart();&quot;&gt;Restart&lt;/a&gt;</tw-passagedata><tw-passagedata pid="273" name="Epilogue: Ren route." tags="morning" position="350,3475" size="100,100">The late morning sun pours through a square window, between steel bars, and onto a big, fat-gutted fox who is sleeping soundly inside a concrete cell at the St. Buckwheat Corrections Facility.
+* &lt;a0 onclick=&quot;setup.restart();&quot;&gt;Restart&lt;/a&gt;</tw-passagedata><tw-passagedata pid="282" name="Epilogue: Ren route." tags="morning" position="225,3600" size="100,100">The late morning sun pours through a square window, between steel bars, and onto a big, fat-gutted fox who is sleeping soundly inside a concrete cell at the St. Buckwheat Corrections Facility.
 
 &lt;q.ren&gt;🥱... What a party!&lt;/q&gt; &lt;%-s.rm?&quot;he&quot;:&quot;she&quot;%&gt; murmurs.
 
@@ -3553,17 +3632,17 @@ Ren pats &lt;%-s.rm?&quot;his&quot;:&quot;her&quot;%&gt; gut. &lt;q.ren&gt;Oh, a
 ### The End.
 
 * &lt;a0 onclick=&quot;setup.restart();&quot;&gt;Restart&lt;/a&gt;
-* [[Credits]]</tw-passagedata><tw-passagedata pid="274" name="Sit by yourself." tags="outside dreamy_1" position="475,3475" size="100,100">You find an empty bench to sit on by yourself, distancing yourself from the chaos of the party. Being out here on your own, it&#39;s actually quite peaceful.
+* [[Credits]]</tw-passagedata><tw-passagedata pid="283" name="Sit by yourself." tags="outside dreamy_1" position="350,3600" size="100,100">You find an empty bench to sit on by yourself, distancing yourself from the chaos of the party. Being out here on your own, it&#39;s actually quite peaceful.
 
-* [[Watch the stars.]]</tw-passagedata><tw-passagedata pid="275" name="Watch the stars." tags="outside dreamy_2 stars zen" position="600,3475" size="100,100">You do so.
+* [[Watch the stars.]]</tw-passagedata><tw-passagedata pid="284" name="Watch the stars." tags="outside dreamy_2 stars zen" position="475,3600" size="100,100">You do so.
 
 The night sky is peaceful. The clouds are clear, but you can only barely see the stars thanks to the light pollution of this suburban neighborhood.
 
 * [[Get up.]]
-* [[Comprehend the endless cosmos.]]</tw-passagedata><tw-passagedata pid="276" name="Get up." tags="outside" position="725,3475" size="100,100">Having had your fill of stargazing, you stand up from the bench.
+* [[Comprehend the endless cosmos.]]</tw-passagedata><tw-passagedata pid="285" name="Get up." tags="outside" position="600,3600" size="100,100">Having had your fill of stargazing, you stand up from the bench.
 
 * [[Look at hyena.]]
-* [[Go back to the foyer.|The Foyer.]]</tw-passagedata><tw-passagedata pid="277" name="Comprehend the endless cosmos." tags="outside dreamy_3 stars zen" position="850,3475" size="100,100">Sitting here alone, with your head tilted toward the starryish sky, you realize that nothing you&#39;ve been doing at this party has been very important.
+* [[Go back to the foyer.|The Foyer.]]</tw-passagedata><tw-passagedata pid="286" name="Comprehend the endless cosmos." tags="outside dreamy_3 stars zen" position="725,3600" size="100,100">Sitting here alone, with your head tilted toward the starryish sky, you realize that nothing you&#39;ve been doing at this party has been very important.
 
 You don&#39;t need to rescue your friend from being eaten. You don&#39;t need to find a hot date, and you definitely don&#39;t need to be seduced, swallowed, and privately digested by them. You don&#39;t even need to think about how you&#39;re getting home after this.
 
@@ -3572,7 +3651,7 @@ All you need to do is rest your eyes upon the swirling heavens, and relax. You r
  You need not need cling to the edges of your liminal reality.
 
 * [[Stop meditating.|Get up.]]
-* [[Break these mortal chains.]]</tw-passagedata><tw-passagedata pid="278" name="Break these mortal chains." tags="dreamy_3 stars outside zen" position="975,3475" size="100,100">&lt;% setup.addAchievement(&quot;True Zen (Meditation Ending)&quot;) %&gt;
+* [[Break these mortal chains.]]</tw-passagedata><tw-passagedata pid="287" name="Break these mortal chains." tags="dreamy_3 stars outside zen" position="850,3600" size="100,100">&lt;% setup.addAchievement(&quot;Zen Ending&quot;, &quot;Starry Night&quot;) %&gt;
 
 You shut your eyes tight.
 
@@ -3597,7 +3676,7 @@ In the backyard of a suburban house party, Hollis Freeley opens their eyes, and 
 
 * [[Be the hyena.]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="279" name="Be the hyena." tags="outside dark anastory" position="1100,3475" size="100,100">Your name is Ana. You&#39;re a spotted hyena, currently chilling on a bench outside a house party like a total loser.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="288" name="Be the hyena." tags="outside dark anastory" position="975,3600" size="100,100">Your name is Ana. You&#39;re a spotted hyena, currently chilling on a bench outside a house party like a total loser.
 
 You showed up about an hour ago, but big crowds freak you out, so you came out here to get some air and clear your head. You&#39;re here because, like most young predators, you want to eat someone. You want to feel prey writhing around inside your belly. You&#39;d go in there and grab one, but the noise is too overwhelming.
 
@@ -3607,7 +3686,7 @@ What do you do?
 
 * [[Eat the rabbit.]]
 * [[Eat the rabbit.]]
-* [[Eat the rabbit.]]</tw-passagedata><tw-passagedata pid="280" name="Eat the rabbit." tags="outside dark anastory" position="1225,3475" size="100,100">&lt;i.ana&gt;Great idea, voice inside my head,&lt;/i&gt; you think. You walk over to the rabbit.
+* [[Eat the rabbit.]]</tw-passagedata><tw-passagedata pid="289" name="Eat the rabbit." tags="outside dark anastory" position="1100,3600" size="100,100">&lt;i.ana&gt;Great idea, voice inside my head,&lt;/i&gt; you think. You walk over to the rabbit.
 
 &lt;q.hollistalk&gt;Um, hi there!&lt;/q&gt; they say, clearly slightly nervous to see you. You have that effect on people sometimes. Probably because you&#39;re 6′10″ and your whole body was designed for shredding meat into tiny pieces.
 
@@ -3617,7 +3696,7 @@ They try to fight you at first, but eventually calm down.
 
 * [[Swallow them.]]
 * [[Swallow them.]]
-* [[Swallow them.]]</tw-passagedata><tw-passagedata pid="281" name="Swallow them." tags="outside dark anastory" position="100,3600" size="100,100">With one huge gulp, you swallow the rabbit.
+* [[Swallow them.]]</tw-passagedata><tw-passagedata pid="290" name="Swallow them." tags="outside dark anastory" position="1225,3600" size="100,100">With one huge gulp, you swallow the rabbit.
 
 Burp. In under a minute, they&#39;re all the way inside you. A familiar fullness fills your belly, and you sigh with relief.
 
@@ -3633,7 +3712,7 @@ You begin to drift off to a nap. &lt;i.ana&gt;Wow,&lt;/i&gt; you think, &lt;i.an
 
 ### The End.
 
-* [[Restart.|Start]]</tw-passagedata><tw-passagedata pid="282" name="logo-horse-left" tags="Twine.image" position="225,3600" size="100,100">data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjM4IDg1IDk1MCA4NTciPjxwYXRoIGQ9Ik01NDAgOTQxYy0xMjYgMC0yMzEtMi0yMzMtNHMxMC0zOCAyNy03OCAzOS0xMDcgNDctMTQ5YzktNDIgMTUtOTYgMTMtMTI0LTItNDktMi00OS00Mi01NC0yMi0zLTcwLTYtMTA3LTYtNTIgMC03NiAzLTEwMyAxNi0zMCAxMy0zOSAxNC01OCA2LTEyLTUtMjgtMTYtMzQtMjZzLTEyLTMzLTEyLTUzIDUtNDQgMTAtNTQgMzMtMjkgNjItNDQgOTMtNTQgMTQzLTg4bDEyMy04NGMzMC0yMSAzMS0yMyAyOS02NC0xLTIzIDIzLTUwIDIzLTUwcy00IDE1IDQgMjRjMTEgMTMgMTYgMTQgMjEgNnM4LTcgMTUgMmM0IDcgOSAxNSAxMCAyMHMxNC0xIDI3LTEwIDM2LTIzIDQyLTI2YzMtMSAxMC0zIDYgMS0zIDIgMyA5IDUgMTkgNCAxNyA5IDIwIDE5IDE2IDgtNCAyNi04IDQxLTEwbDI1LTQtNSAxN2MtMiA2IDE5IDEzIDQ4IDI4IDIwIDExIDYyIDYyIDYyIDYycy0xOS01LTI0LTVjLTEwIDAtNCA2IDIwIDMzbDUyIDYwIDI2IDI3cy0xNSAwLTIyIDNjLTE1IDYtMTMgOSAyMCAzOCAyMCAxOCA0NCA0NSA1MyA2MWEyMTYgMjE2IDAgMDEyNSA5NHMtMTQtMTUtMjktMjRjLTI4LTE3LTMwLTE4LTI2LTNsMTMgNDMgMjEgNzNjOSAzNSAyMCA1MyA1MiA4NCAyMiAyMiA0MCA0MiA0MCA0NXMtNiA2LTEzIDZjLTExIDAtMTAgNCAzIDI2IDkgMTUgMTggNDEgMjEgNTggNiAzMiA3IDUwIDcgNTBzLTUyLTU3LTEwMi01NGMtMTAgMS0xMiA0LTggMTQgMyA4IDEzIDIzIDIzIDMzczIwIDI0IDI0IDMxYzIgMyA0IDE0IDQgMTRzLTgtNC0yMS03Yy0xNC0zLTI3LTItMzAgMy0yIDUtMTMgOC0yMiA4SDU0MHoiLz48L3N2Zz4=</tw-passagedata><tw-passagedata pid="283" name="logo-horse-right" tags="Twine.image" position="350,3600" size="100,100">data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjEgMTEwIDEwMjEgODI4Ij48cGF0aCBkPSJNNTQxIDkzN2MtMjkyLTEtMjkyLTEtMjkyLTE5cy0xLTE5LTMwLTExYy0xNyA0LTQ5IDYtNzIgNC0yNy0zLTUxLTExLTcxLTI1LTE3LTExLTQwLTM0LTUxLTUxQTE0NiAxNDYgMCAwMTYgNzIwczE1IDQyIDM4IDYzYzEyIDExIDMwIDI0IDQyIDI5czMyIDggNDUgOCAyOS0zIDM0LTdjOC00IDUtNy0xMC0xMWExMzAgMTMwIDAgMDEtNzUtNjBjLTctMTMtOS0yNy05LTI3czI0IDE4IDQxIDI1YzE4IDggMjkgMTEgNDEgMTFzMzktOSA2MC0xOSAzNy0yMiAzNS0yNC0xNCAyLTI3IDgtMzEgMTItNDIgMTItNDEtMTQtNDEtMTRsMzItNmMxMC0zIDI1LTExIDMyLTE5IDEzLTE0IDEyLTE0LTI2LTE1LTIyIDAtNTItNS02Ny0xMnMtMzgtMjEtNTAtMzMtMjYtMzEtMzMtNDQtMTQtMzMtMTctNDYgMS01MiAxLTUybDIyIDMxYzE1IDIxIDI4IDM4IDQ5IDQ4IDE3IDkgNDMgMTYgNTcgMTZzMzEtMyAzNi02YzctNSAwLTEwLTE5LTE2LTE2LTUtMzgtMTktNTAtMzFzLTIzLTMwLTI1LTQwLTEtMjItMS0yMiAyMiAxOSAzNyAyOCAzNSAxOCA0NyAxOCAzNS03IDUyLTE2IDI5LTE3IDI4LTE4LTE3IDEtMzQgNS01OC01LTU4LTUgMTItNiAyNy05YzE2LTIgMzgtMTcgNTAtMjZzMjktMjkgMzgtNDVsMjItNDRjNS0xNCA1LTE0LTE2IDAtMTEgNy0yMyAxMi0yNSAxMHM4LTMwIDIyLTYxIDQwLTcwIDU4LTg4YzIwLTIxIDI4LTMzIDIwLTMzLTYgMC0xMC00LTgtOXMyNi0yMiA1NC0zN2M0NC0yMiA2MC0yNiAxMDMtMjYgMzkgMCA2MSA1IDk1IDIxIDMyIDE1IDYyIDIyIDEwNiAyNiA1MyA0IDYyIDMgNjYtOCAzLTggOC0xMCAxMi02czkgMjEgMTIgMzggMTAgNDIgMTUgNTYgMjAgMzggMzMgNTMgMjkgMzkgMzYgNTUgMTkgNDIgMjUgNjAgMjkgNTcgNTMgODkgNTAgNzIgNTggOTBjOSAxOSAxNSA0NyAxNSA3MiAwIDIzLTUgNDgtMTEgNTYtOSAxMy0xNCAxMy0zMCA1LTE5LTgtMjAtOC0yMCAxNCAwIDE2LTUgMjMtMTYgMjctMTAgMy0yMCAxLTI2LTVsLTI1LTM1Yy0xMS0xNy0yOC0yOS01Ni0zOC0yMi03LTYzLTI3LTkyLTQzcy02MC0zMS03MC0zNGMtMTYtNS0xNy0zLTE3IDM5IDAgMjQgNCA1OCA5IDc1IDYgMjIgMjUgNDggNjEgODYgMjkgMzAgNjMgNjkgNzUgODdsMjYgNDFjMSA0LTExMSA2LTI4OSA1eiIvPjwvc3ZnPg==</tw-passagedata></tw-storydata>
+* [[Restart.|Start]]</tw-passagedata><tw-passagedata pid="291" name="logo-horse-left" tags="Twine.image" position="100,3725" size="100,100">data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjM4IDg1IDk1MCA4NTciPjxwYXRoIGQ9Ik01NDAgOTQxYy0xMjYgMC0yMzEtMi0yMzMtNHMxMC0zOCAyNy03OCAzOS0xMDcgNDctMTQ5YzktNDIgMTUtOTYgMTMtMTI0LTItNDktMi00OS00Mi01NC0yMi0zLTcwLTYtMTA3LTYtNTIgMC03NiAzLTEwMyAxNi0zMCAxMy0zOSAxNC01OCA2LTEyLTUtMjgtMTYtMzQtMjZzLTEyLTMzLTEyLTUzIDUtNDQgMTAtNTQgMzMtMjkgNjItNDQgOTMtNTQgMTQzLTg4bDEyMy04NGMzMC0yMSAzMS0yMyAyOS02NC0xLTIzIDIzLTUwIDIzLTUwcy00IDE1IDQgMjRjMTEgMTMgMTYgMTQgMjEgNnM4LTcgMTUgMmM0IDcgOSAxNSAxMCAyMHMxNC0xIDI3LTEwIDM2LTIzIDQyLTI2YzMtMSAxMC0zIDYgMS0zIDIgMyA5IDUgMTkgNCAxNyA5IDIwIDE5IDE2IDgtNCAyNi04IDQxLTEwbDI1LTQtNSAxN2MtMiA2IDE5IDEzIDQ4IDI4IDIwIDExIDYyIDYyIDYyIDYycy0xOS01LTI0LTVjLTEwIDAtNCA2IDIwIDMzbDUyIDYwIDI2IDI3cy0xNSAwLTIyIDNjLTE1IDYtMTMgOSAyMCAzOCAyMCAxOCA0NCA0NSA1MyA2MWEyMTYgMjE2IDAgMDEyNSA5NHMtMTQtMTUtMjktMjRjLTI4LTE3LTMwLTE4LTI2LTNsMTMgNDMgMjEgNzNjOSAzNSAyMCA1MyA1MiA4NCAyMiAyMiA0MCA0MiA0MCA0NXMtNiA2LTEzIDZjLTExIDAtMTAgNCAzIDI2IDkgMTUgMTggNDEgMjEgNTggNiAzMiA3IDUwIDcgNTBzLTUyLTU3LTEwMi01NGMtMTAgMS0xMiA0LTggMTQgMyA4IDEzIDIzIDIzIDMzczIwIDI0IDI0IDMxYzIgMyA0IDE0IDQgMTRzLTgtNC0yMS03Yy0xNC0zLTI3LTItMzAgMy0yIDUtMTMgOC0yMiA4SDU0MHoiLz48L3N2Zz4=</tw-passagedata><tw-passagedata pid="292" name="logo-horse-right" tags="Twine.image" position="225,3725" size="100,100">data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjEgMTEwIDEwMjEgODI4Ij48cGF0aCBkPSJNNTQxIDkzN2MtMjkyLTEtMjkyLTEtMjkyLTE5cy0xLTE5LTMwLTExYy0xNyA0LTQ5IDYtNzIgNC0yNy0zLTUxLTExLTcxLTI1LTE3LTExLTQwLTM0LTUxLTUxQTE0NiAxNDYgMCAwMTYgNzIwczE1IDQyIDM4IDYzYzEyIDExIDMwIDI0IDQyIDI5czMyIDggNDUgOCAyOS0zIDM0LTdjOC00IDUtNy0xMC0xMWExMzAgMTMwIDAgMDEtNzUtNjBjLTctMTMtOS0yNy05LTI3czI0IDE4IDQxIDI1YzE4IDggMjkgMTEgNDEgMTFzMzktOSA2MC0xOSAzNy0yMiAzNS0yNC0xNCAyLTI3IDgtMzEgMTItNDIgMTItNDEtMTQtNDEtMTRsMzItNmMxMC0zIDI1LTExIDMyLTE5IDEzLTE0IDEyLTE0LTI2LTE1LTIyIDAtNTItNS02Ny0xMnMtMzgtMjEtNTAtMzMtMjYtMzEtMzMtNDQtMTQtMzMtMTctNDYgMS01MiAxLTUybDIyIDMxYzE1IDIxIDI4IDM4IDQ5IDQ4IDE3IDkgNDMgMTYgNTcgMTZzMzEtMyAzNi02YzctNSAwLTEwLTE5LTE2LTE2LTUtMzgtMTktNTAtMzFzLTIzLTMwLTI1LTQwLTEtMjItMS0yMiAyMiAxOSAzNyAyOCAzNSAxOCA0NyAxOCAzNS03IDUyLTE2IDI5LTE3IDI4LTE4LTE3IDEtMzQgNS01OC01LTU4LTUgMTItNiAyNy05YzE2LTIgMzgtMTcgNTAtMjZzMjktMjkgMzgtNDVsMjItNDRjNS0xNCA1LTE0LTE2IDAtMTEgNy0yMyAxMi0yNSAxMHM4LTMwIDIyLTYxIDQwLTcwIDU4LTg4YzIwLTIxIDI4LTMzIDIwLTMzLTYgMC0xMC00LTgtOXMyNi0yMiA1NC0zN2M0NC0yMiA2MC0yNiAxMDMtMjYgMzkgMCA2MSA1IDk1IDIxIDMyIDE1IDYyIDIyIDEwNiAyNiA1MyA0IDYyIDMgNjYtOCAzLTggOC0xMCAxMi02czkgMjEgMTIgMzggMTAgNDIgMTUgNTYgMjAgMzggMzMgNTMgMjkgMzkgMzYgNTUgMTkgNDIgMjUgNjAgMjkgNTcgNTMgODkgNTAgNzIgNTggOTBjOSAxOSAxNSA0NyAxNSA3MiAwIDIzLTUgNDgtMTEgNTYtOSAxMy0xNCAxMy0zMCA1LTE5LTgtMjAtOC0yMCAxNCAwIDE2LTUgMjMtMTYgMjctMTAgMy0yMCAxLTI2LTVsLTI1LTM1Yy0xMS0xNy0yOC0yOS01Ni0zOC0yMi03LTYzLTI3LTkyLTQzcy02MC0zMS03MC0zNGMtMTYtNS0xNy0zLTE3IDM5IDAgMjQgNCA1OCA5IDc1IDYgMjIgMjUgNDggNjEgODYgMjkgMzAgNjMgNjkgNzUgODdsMjYgNDFjMSA0LTExMSA2LTI4OSA1eiIvPjwvc3ZnPg==</tw-passagedata></tw-storydata>
 		<script>
 		(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";window.either=function(){for(var n=[],t=0;t<arguments.length;t++)if(arguments[t]instanceof Array)for(var r=0;r<arguments[t].length;r++)n.push(arguments[t][r]);else n.push(arguments[t]);return n[_.random(n.length-1)]},window.hasVisited=function(){var n=null;if(1==arguments.length)return null!=(n=window.story.passage(arguments[0]))&&window.story.history.includes(n.id);for(var t=0;t<arguments.length;t++)if(null==(n=window.story.passage(arguments[t]))||0==window.story.history.includes(n.id))return!1;return!0},window.visited=function(){for(var n=[],t=[],r=0;r<arguments.length;r++){var e=window.story.passage(arguments[r]);null!=e&&(t=window.story.history.filter(function(n){return n==e.id})),n.push(t.length)}return Math.min.apply(Math,n)},window.renderToSelector=function(n,t){var r=window.story.passage(t);null!=r&&$(n).html(r.render())},window.getStyles=function(){return $.when.apply($,$.map(arguments,function(n){return $.get(n,function(n){$("<style>"+n+"</style>").appendTo("head")})}))};
