@@ -122,13 +122,13 @@ You scoot over toward the thoughtfully placed snack table, and grab a small cup 
 You grab another cup of punch, and down it. After tasting it again, the flavor starts to grow on you.
 <% else if (punchCount == 3) %>
 You get a second drink of punch. Maybe it's your weak tolerance, but you're feeling pretty tipsy right now.
-<% else if (punchCount == 4) %>
 You walk over to the snack table, and slam down a third cup of vodka punch. You feel like you're about to lose your balance. Wow. That was probably a bad idea.
 <% else if (punchCount == 5) %>
 On your way to get a fourth cup of punch, you see a jackrabbit grab a tiny mouse off the floor, and dangle it teasingly over her snout. Should you... do something?
 
-* [[Do nothing.]]
 * [[H-hey, don't do that!]]
+* [[Do nothing.]]
+
 <% else { %>
 You walk over the punch bowl, look down at the vat of boozy kool-aid, and scowl with disgust. You get the nagging feeling that one more drink will make something very bad happen.
 

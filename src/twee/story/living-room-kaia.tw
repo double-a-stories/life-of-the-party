@@ -68,23 +68,26 @@ She releases the mouse into your outstretched paws. You hold it- actually, *her*
 
 :: A-are you hurt?
 
-<% s.rescuedKaia = true; %>
+The little white mouse rises to her feet. At full height, she's a mere 6-inches tall. You ask if she's hurt.
 
-The mouse rises to her feet, and dusts herself off. At full height, she's a mere 6-inches tall.
+<% s.rescuedKaia = true; %>
 
 She replies in a small voice, <q.mouse>Not physically, but I think my life might have flashed before my eyes...</q>
 
-That's... good? you guess. You tell her you're sorry about Snowbell. You promise, not all rabbits are like that.
+That's... good? you guess. You tell her you're really sorry. You promise, not all rabbits are like that. You set her down on the punch table.
 
-"No, no, it's totally my fault. Honestly, it'd be really embarassing if my whole purpose in life was to be a meal for some rando at a college party!</q>
+<q.mouse>No, no, it's totally my fault for not being careful.</q> She dusts herself off. <q.mouse>Thanks for the rescue me! I really owe you one.</q>
 
-* [[Yeah, it would...]]
+* [[Don't worry about it!]]
+* [[You're welcome!|Don't worry about it!]]
 
-:: Yeah, it would...
+:: Don't worry about it!
 
-You nod awkwardly.
+Kaia smiles up at you, and takes the opportunity . <q.mouse>Honestly, it'd be really embarassing if my whole purpose in life was to be a meal for some rando at a college party!</q>
 
-<q.mouse>Oh, how rude of me. My name's Kaia. Thanks for rescuing me!</q>
+You scratch your head, and say yeah. Yeah it would. You're awkwardly silent for a moment.
+
+<q.mouse>Oh, how rude of me. My name's Kaia. Pleased to meet you!</q>
 
 You reply that your name is Hollis, and ask the mouse if she's here with anybody else.
 
@@ -92,7 +95,7 @@ You reply that your name is Hollis, and ask the mouse if she's here with anybody
 
 You nod again.
 
-<q.mouse>Awesome! I'll be hanging out by the punch bowl.</q>
+<q.mouse>Awesome! I'll be hanging out over here.</q>
 
 You gain **+15 morality points**. 30 more of those, and you'll unlock the good ending!
 
