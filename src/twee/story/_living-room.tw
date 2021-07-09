@@ -127,8 +127,8 @@ You walk over to the snack table, and slam down a third cup of vodka punch. You 
 <% else if (punchCount == 5) %>
 On your way to get a fourth cup of punch, you see a jackrabbit grab a tiny mouse off the floor, and dangle it teasingly over her snout. Should you... do something?
 
-* [[Do nothing.|Watch the jackrabbit eat.]]
-* [[H-hey, don't do that!|Intervene on the jackrabbit.]]
+* [[Do nothing.]]
+* [[H-hey, don't do that!]]
 <% else { %>
 You walk over the punch bowl, look down at the vat of boozy kool-aid, and scowl with disgust. You get the nagging feeling that one more drink will make something very bad happen.
 

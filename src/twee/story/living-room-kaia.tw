@@ -4,7 +4,7 @@
   font-size: 80%;
 }
 
-:: Watch the jackrabbit eat.
+:: Do nothing.
 
 <% s.rescuedKaia = false; s.partyFlavorMicroMouse = false; %>
 
@@ -14,7 +14,7 @@ You feel slightly guilty for not intervening. And somehow... aroused?
 
 * [[Go back.|Dance a little.]]
 
-:: Intervene on the jackrabbit.
+:: H-hey, don't do that!
 
 You timidly shout at the jackrabbit not to eat the mouse.
 
