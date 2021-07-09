@@ -224,7 +224,7 @@ That's horrible! you say.
 
 :: I thought you said you weren't predators!
 
-<% setup.addAchievement("Untitled (Nikki & Nox ending)")%>
+<% setup.addAchievement("Nikki & Nox Ending", "Untitled")%>
 
 ## Game over.
 

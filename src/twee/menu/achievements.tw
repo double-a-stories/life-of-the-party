@@ -4,15 +4,13 @@ setup.totalAchievements = 8;
 
 :: Achievements list
 
-<% const achievements = setup.getAchievements().sort();
-   ; // TODO: change me!
-%>
+<% const achievements = setup.getAchievements().sort((a1, a2) => a1[0].localeCompare(a2[0])); %>
 
-### Achievements <%=`(${achievements.length} / ${setup.totalAchievements})`%>
+### Achievements (<%-achievements.length%> <span aria-label="of">/</span> <%-setup.totalAchievements%>)
 
 <ul>
-  <% achievements.map(a => { %>
-    <li><%= a %></li>
+  <% achievements.map(([name, desc]) => { %>
+    <li><%= desc %> (<%= name %>)</li>
   <% }) %>
 </ul>
 
@@ -20,7 +18,7 @@ setup.totalAchievements = 8;
 
 <%
 const oneAchievementLeft = achievements.length == setup.totalAchievements - 1;
-const sawBroomClosetEnding = achievements.some(a => /Broom Closet/i.test(a));
+const sawBroomClosetEnding = achievements.some(a => /Closet/i.test(a));
 
 if (oneAchievementLeft && !sawBroomClosetEnding) { %>
 <code>Did you get the Broom Closet Ending? The Broom Closet Ending was my favorite!</code>

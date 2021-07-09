@@ -33,7 +33,7 @@ All you need to do is rest your eyes upon the swirling heavens, and relax. You r
 
 
 :: Break these mortal chains. [dreamy_3 stars outside zen]
-<% setup.addAchievement("True Zen (Meditation Ending)") %>
+<% setup.addAchievement("Zen Ending", "Starry Night") %>
 
 You shut your eyes tight.
 
@@ -81,7 +81,7 @@ What do you do?
 
 <q.hollistalk>Um, hi there!</q> they say, clearly slightly nervous to see you. You have that effect on people sometimes. Probably because you're 6′10″ and your whole body was designed for shredding meat into tiny pieces.
 
-They flinch as you nonchalantly grab them up in my paws. <q.hollistalk>Woah, wait!</q> they cry out, but you're too hungry to listen. Their eyes go wide as you stuff their ears into your mouth.
+They flinch as you nonchalantly grab them up in your paws. <q.hollistalk>Woah, wait!</q> they cry out, but you're too hungry to listen. Their eyes go wide as you stuff their ears into your mouth.
 
 They try to fight you at first, but eventually calm down.
 

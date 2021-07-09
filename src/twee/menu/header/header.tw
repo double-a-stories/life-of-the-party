@@ -7,13 +7,16 @@
 
 :: Topbar controls
 
+<% const muted = !setup.isFlagSet('enableSound'); %>
+<% const helpShown = window.passage && window.passage.name === "Help"; %>
+
 <ul.header-nav-group>
-	<li><a0 onclick="setup.restart()">Restart</a></li>
-	<li><a0 onclick="setup.undo()">Undo</a></li>
+	<li><a0 aria-label="restart" onclick="setup.restart()">Restart</a></li>
+	<li><a0 aria-label="undo" onclick="setup.undo()">Undo</a></li>
 </ul>
 <ul.header-nav-group>
-	<li><a0 class="mute-button" onclick="setup.toggleMute();" title="<%-setup.isFlagSet('enableSound')?'Mute':'Unmute'%>"><%=setup.isFlagSet("enableSound")?`🔊`:`🔇`%></a></li>
-	<li><a0 class="help-button" onclick="setup.help();">Help</a></li>
+	<li><a0 aria-label="<%-muted?'unmute':'mute'%>" class="mute-button" onclick="setup.toggleMute();" ><%=muted?`Enable`:`Disable`%> sound (Beta)</a></li>
+	<li><a0 class="help-button" onclick="setup.help();"><%-!helpShown?"Help":"Back"%></a></li>
 	<li><%- story.version %></li>
 </ul>
 </div>

@@ -96,11 +96,7 @@ You're trapped, numb-nuts. I didn't even know that was possible.
 
 
 :: ENDING: Broom Closet [gameover]
-<%
-if (!setup.getAchievements().some(s => s.includes("Broom Closet"))) {
-  setup.addAchievement("Worth it? (Broom Closet Ending)")
-}
-%>
+<% setup.addAchievement("Closet Ending", "Worth it?"); %>
 
 You bang on the door trying to get someone's attention, but with the loud music going on downstairs, no one can hear you. As a result of this incredibly stupid turn of events, you remain trapped in the broom closet for the rest of the night. Congrats, I guess, on finding the dumbest ending ever.
 
