@@ -1,46 +1,19 @@
-# life-of-the-party
+# double-a-stories / life-of-the-party
 
-This is a text-based interactive story written in [Twee 3](https://github.com/iftechfoundation/twine-specs/blob/master/twee-3-specification.md). It contains prose content which **may be unsuitable for all except a unique adult audience**, including references to vore, sex, and death. Reader discretion is strongly advised.
+This repository hosts source code for *Life of the Party*, a NSFW interactive story written in [Twee 3](https://github.com/iftechfoundation/twine-specs/blob/master/twee-3-specification.md).
 
-## About
+⚠️ **CONTENT WARNING:** This story is for **adults only**, and reader discretion is strongly advised. It contains **strong fetish content**, including but not limited to: *Soft vore. Dubious consent. Unwilling digestion. Sex. Violence. Sexual violence. Masturbation. Sadism. Blood. Post-vore scat disposal. Death.*
 
-> Your name is Hollis. You are a small gray rabbit, standing meekly in the foyer of a big, loud suburban house party. Your ears hurt, and in the mere twenty minutes since you've arrived, you've already completely lost sight of your friend who brought you here. Even worse, you're surrounded by huge, drunk anthros who could probably swallow you in seconds. Most alarming of all, one of them is your old high school bully. It's hardly a question of *if* you're gonna get eaten, but rather, by whom.
->
-> What will you do?
+By proceeding, you agree
 
-\> Play at https://double-a-stories.github.io/life-of-the-party/
+## About the story (18+)
 
-## Features
+* [ABOUT.MD](ABOUT.md)
+## License
 
-### 8 unique story routes:
-* #### Outdoors route 🌳
-  * Meet Ana Rose, a loner hyena chick with a penchant for punk rock, hugs, and digesting you.
-  * *CW: Revoked consent. Accidental digestion. Woman with penis. Masturbation (by predator). Scat (optional).*
-* #### Basil route 🐴🍻
-  * Get a little drunk, and hit it off with a mighty stallion.
-  * *CW: Exhibitionism. Masturbation (by player). Willing vore. Unwilling digestion.*
-* #### Upstairs route 🎠🐕🐹
-  * Rescue your friend from Lacey the horse and Clif the dog.
-  * *CW: Unwilling vore. Fatal misunderstandings. Semi-willing digestion. Oral sex (optional).*
-* #### Bathroom route 🐻🚽
-  * Have an unexpected encounter with Hazel Gently, a 500 pound grizzly bear who used to be captain of the football team.
-  * *CW: Humiliation. Masturbation (by player). Unwilling vore/digestion.*
-* #### Zen route 🐰🧘
-  * Sit on a bench, and think about life and stuff.
-  * *CW: Non-vore. Dissociation. Weird meta bullshit.*
-* #### Broom closet route 🧹
-  * There is no content in the broom closet.
-  * *CW: ????*
+All prose and image content in *Life of the Party* is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). You are free to share and adapt this content in any medium or format **with attribution** for **non-commercial purposes** under **the same license**.
 
-* #### Garage route 🦊
-  * Meet Ren Davis, a 🦊 with an 😃 upbeat attitude and a knack for 💰💎 "borrowing".
-  * Assist in 🦹 crimes! Flee the 🚔 cops! Get 🥱 eaten!
-  * *CW: Grand theft auto. Unwilling vore/digestion. Threats of physical violence.*
-
-* #### Byron route 🐺
-  * Meet Emmet/Emily Byron, a ~~narcissistic jerk~~ <span title="sophisticated gentlewolf">𝐬𝐨𝐩𝐡𝐢𝐬𝐭𝐢𝐜𝐚𝐭𝐞𝐝 𝐠𝐞𝐧𝐭𝐥𝐞𝐰𝐨𝐥𝐟</span> with ~~facile, pretentious ideas~~ <span title="highly intellectual musings">𝐡𝐢𝐠𝐡𝐥𝐲 𝐢𝐧𝐭𝐞𝐥𝐥𝐞𝐜𝐭𝐮𝐚𝐥 𝐦𝐮𝐬𝐢𝐧𝐠𝐬</span> and ~~mediocre~~ <span title="impressive">𝐢𝐦𝐩𝐫𝐞𝐬𝐬𝐢𝐯𝐞</span> guitar skills.
-  * Hang around the living room for a bit, and strike up a conversation. Just don't get too close.
-  * *CW: Negging. Threats and violent coercion. Unwilling vore. Minor blood. Rape culture.*
+All non-textual source code underlying this project (excluding the prose content described above), including configuration files and scripts, is licensed under the [MIT-0 license](/LICENSE-CODE). You may use any or all of this code for any purpose **without attribution**.
 
 ## Building from source
 
@@ -54,22 +27,3 @@ This is a text-based interactive story written in [Twee 3](https://github.com/if
     * [dotgraph](https://github.com/mcdemarco/dotgraph/releases/tag/v2.2.0) – Generates story graphs
 5. `npm run develop` - Launch live server for development
 6. `npm run twee-build` - Generates game at ./dist/index.html
-
-## Credits
-
-This story was written and developed by me, [▽ Double-A ▽](https://aryion.com/g4/user/DoubleA). If you liked it, leave me feedback at [Eka's Portal](https://aryion.com/forum/viewtopic.php?f=79&t=59177) or [textadventures.co.uk](http://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/life-of-the-party-a-furry-vore-adventure-18)!
-
-If you really enjoyed this, and want me to spend more time making things like it, consider supporting me at [☕ Ko-fi](https://ko-fi.com/doublea).
-
-Special thanks to the creators and contributors of the following open source projects:
-
-* 📖 [Twine and Twee](https://github.com/tweecode) by Chris Klimas and the IFTF
-* 😃 [Twemoji](https://github.com/twitter/twemoji) – Open source Emoji set by Twitter.
-* 🏍️ [Tweego](https://github.com/tmedwards/tweego) – Compiler for Twee 3 by T.M. Edwards
-* ⛄️ [Snowman](https://github.com/videlais/snowman) – Story format by Videlais
-
-## License
-
-All prose and image content in *Life of the Party* is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). You are free to share and adapt this content in any medium or format **with attribution** for **non-commercial purposes** under **the same license**.
-
-All non-textual source code underlying this project (excluding the prose content described above), including configuration files and scripts, is licensed under the [MIT-0 license](/LICENSE-CODE). You may use any or all of this code for any purpose **without attribution**.
