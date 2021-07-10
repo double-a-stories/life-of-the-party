@@ -22,10 +22,8 @@ if (!window.twemoji) {
 
 :: Twemoji style [stylesheet]
 .emoji {
-  object-fit: contain;
-  width: 1.2em;
-  height: 1.2em;
+  width: 1em;
+  height: 1em;
   vertical-align: -0.1em;
   font-size: 1.2em;
-  line-height: 1
 }
