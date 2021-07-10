@@ -1,9 +1,9 @@
 :: Tweeomoji [script]
 // Load Twemoji script
 
+
 const TWEMOJI_OPTIONS = {
-  folder: 'svg',
-  ext: '.svg'
+  size: 72, // Use 72x72 png graphics, since they're slightly smaller.
 };
 
 // Replace all emojis in the script with Twemoji HTML
@@ -14,6 +14,7 @@ if (!window.twemoji) {
     p.source = twemoji.parse(p.source, TWEMOJI_OPTIONS);
   });
 }
+
 // NOTE: Any emoji character inside a passage will be replaced with <img src="...">. If there are emojis inside of double-quotes, it WILL BREAK the surrounding code.
 
 // BAD: <%s.rm?"⚠️":"⚠️"%>
@@ -25,5 +26,6 @@ if (!window.twemoji) {
   width: 1.2em;
   height: 1.2em;
   vertical-align: -0.1em;
-  text-shadow: black 1px 1px;
+  font-size: 1.2em;
+  line-height: 1
 }
