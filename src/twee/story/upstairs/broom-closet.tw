@@ -1,8 +1,6 @@
 <!-- You get trapped in a broom closet. Stanley Parable, eat your heart out. -->
 
 :: Check the broom closet. [no_fade]
-<div-></div>
-
 You enter the broom closet.
 
 <div style="min-height: 6em" id="broom-closet-text">
@@ -84,8 +82,6 @@ s.broomClosetCount += 1;
 %>
 
 :: Try to leave.
-<div-></div>
-
 After wasting an inordinate amount of time doing absolutely nothing, you rationally decide that yes, it is now finally time to leave the broom closet.
 
 You turn to the door and reach for the handle, only to realize that there isn't one. The broom closet only opens from the outside. Whoever designed this tiny, pointlesss room apparently did not expect that anyone would ever be stupid enough to walk inside and close the door behind them.

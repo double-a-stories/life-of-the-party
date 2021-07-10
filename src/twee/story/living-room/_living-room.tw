@@ -1,7 +1,5 @@
 <!-- You go to the living room and dance. This room has a bunch of random world-building flavor text, and can branch off into a few different routes. The script that manages this part is really really awful. -->
 :: Dance a little.
-<div-></div>
-
 <%
 const visits = visited(passage.id);
 
