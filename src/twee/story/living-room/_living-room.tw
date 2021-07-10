@@ -1,4 +1,5 @@
 <!-- You go to the living room and dance. This room has a bunch of random world-building flavor text, and can branch off into a few different routes. The script that manages this part is really really awful. -->
+
 :: Dance a little.
 <%
 const visits = visited(passage.id);
@@ -42,7 +43,6 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 <%= story.render("Living room commands") %>
 
 :: Living room commands
-
 <!-- LIVING ROOM COMMANDS -->
 
 <% if (s.partyFlavorOwl || s.partyFlavorGutbump) %>
@@ -111,7 +111,6 @@ return text;
 })() %>
 
 :: Grab some punch.
-
 <%
 const punchCount = visited(passage.id);
 if (punchCount == 1) %>
@@ -148,7 +147,6 @@ A labrador notices and elbows you. "Woahh, dude! Maybe go a little easy on the p
 * [[Go back.|Dance a little.]]
 
 :: Good idea, thanks.
-
 You nod, and thank her for looking out of your health.
 
 <q.mouse>No problem! Lemme know if you find faith. Er, Faith, my girlfriend.</q>

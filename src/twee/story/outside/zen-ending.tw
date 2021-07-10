@@ -11,13 +11,11 @@ The night sky is peaceful. The clouds are clear, but you can only barely see the
 * [[Get up.]]
 * [[Comprehend the endless cosmos.]]
 
-
 :: Get up. [outside]
 Having had your fill of stargazing, you stand up from the bench.
 
 * [[Look at hyena.]]
 * [[Go back to the foyer.|The Foyer.]]
-
 
 :: Comprehend the endless cosmos. [outside dreamy_3 stars zen]
 Sitting here alone, with your head tilted toward the starryish sky, you realize that nothing you've been doing at this party has been very important.
@@ -30,7 +28,6 @@ All you need to do is rest your eyes upon the swirling heavens, and relax. You r
 
 * [[Stop meditating.|Get up.]]
 * [[Break these mortal chains.]]
-
 
 :: Break these mortal chains. [dreamy_3 stars outside zen]
 <% setup.addAchievement("Zen Ending", "Starry Night") %>
@@ -61,7 +58,6 @@ In the backyard of a suburban house party, Hollis Freeley opens their eyes, and 
 </div>
 
 :: Be the hyena. [outside dark anastory]
-
 Your name is Ana. You're a spotted hyena, currently chilling on a bench outside a house party like a total loser.
 
 You showed up about an hour ago, but big crowds freak you out, so you came out here to get some air and clear your head. You're here because, like most young predators, you want to eat someone. You want to feel prey writhing around inside your belly. You'd go in there and grab one, but the noise is too overwhelming.
@@ -74,9 +70,7 @@ What do you do?
 * [[Eat the rabbit.]]
 * [[Eat the rabbit.]]
 
-
 :: Eat the rabbit. [outside dark anastory]
-
 <i.ana>Great idea, voice inside my head,</i> you think. You walk over to the rabbit.
 
 <q.hollistalk>Um, hi there!</q> they say, clearly slightly nervous to see you. You have that effect on people sometimes. Probably because you're 6′10″ and your whole body was designed for shredding meat into tiny pieces.
@@ -90,7 +84,6 @@ They try to fight you at first, but eventually calm down.
 * [[Swallow them.]]
 
 :: Swallow them. [outside dark anastory]
-
 With one huge gulp, you swallow the rabbit.
 
 Burp. In under a minute, they're all the way inside you. A familiar fullness fills your belly, and you sigh with relief.

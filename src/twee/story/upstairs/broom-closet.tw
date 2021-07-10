@@ -12,7 +12,6 @@ Inside is a shelf with some towels, linens, and some cleaning supplies. Leaning 
 
 <div->[[Upstairs Hallway]] [[Try to leave.]]</div>
 
-
 :: Detect touch users [script]
 document.addEventListener('pointerdown', function isTouching(ev) {
   // Call the appropriate pointer type handler
@@ -24,7 +23,6 @@ document.addEventListener('pointerdown', function isTouching(ev) {
 });
 
 :: Broom closet status
-
 <%
 
 // Initialize variables
@@ -90,7 +88,6 @@ You're trapped, numb-nuts. I didn't even know that was possible.
 
 * [[Bang on the door.|ENDING: Broom Closet]]
 
-
 :: ENDING: Broom Closet [gameover]
 <% setup.addAchievement("Closet Ending", "Worth it?"); %>
 
@@ -99,7 +96,6 @@ You bang on the door trying to get someone's attention, but with the loud music 
 ### Game Over.
 
 * [[Epilogue?|Epilogue: Broom Closet Ending.]]
-
 
 :: Epilogue: Broom Closet Ending. [morning]
 Sure, why not.
@@ -111,7 +107,6 @@ Lacey enters the hallway, and opens the broom closet to grab some clean bedsheet
 She laughs. "Wait a minute, is that... Hollis?"
 
 * [[Hollis: Wake up.]]
-
 
 :: Hollis: Wake up. [morning]
 You squint your eyes, woken up by the blinding light streaming in from outside. You slowly and look up at the horse, who is beaming at you with a big smile. "Hey there! Remember me? It's Lacey, from Calc II!"

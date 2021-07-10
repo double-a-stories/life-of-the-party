@@ -9,7 +9,6 @@ About twenty minutes ago, you showed up with your friend Reese. At some point yo
 
 * [[Look around the foyer.|The Foyer.]]
 
-
 :: The Foyer.
 <% s.partyFlavorState = 0; %>
 
@@ -20,7 +19,6 @@ What will you do?
 * [[Find someplace quieter.]]
 * [[Search for your friend.]]
 * [[Dance a little.]] <!-- _living_room.tw-->
-
 
 :: Find someplace quieter.
 The incessant loud music is starting to hurt your sensitive ears. You decide to look for a place away from the noise where you can clear your thoughts.
@@ -33,9 +31,7 @@ This house is huge, and its upscale furnishings seem almost too fancy for the mo
 
 <%= story.render("Preload Ren emojis")%>
 
-
 :: Search for your friend.
-
 You make a quick circle of the first floor, but Reese is nowhere in sight.
 
 <% if (!setup.isFlagSet("upstairsUnlocked")) { %>

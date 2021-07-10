@@ -3,7 +3,6 @@ window.setup = window.setup || {};
 setup.totalAchievements = 9;
 
 :: Achievements list
-
 <% const achievements = setup.getAchievements().sort((a1, a2) => a1[0].localeCompare(a2[0])); %>
 
 ### Achievements (<%-achievements.length%> <span aria-label="of">/</span> <%-setup.totalAchievements%>)

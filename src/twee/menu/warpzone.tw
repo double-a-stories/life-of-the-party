@@ -20,7 +20,6 @@ window.warpZone = function(){
 }
 
 :: Debug message
-
 > Open developer console
 
 You decide to stick your nose where it doesn't belong, and enter the developer's room. It's a vast, abstract expanse full of confusing syntax, spaghetti code, and runtime errors. Oh dear, how did you even get in here?
@@ -28,7 +27,6 @@ You decide to stick your nose where it doesn't belong, and enter the developer's
   story.show("Warp zone");
 
 :: Warp zone
-
 You've entered a time warp! This is a list of every passage in *<%= story.name %>*. Obviously, there are **spoilers ahead**.
 
 <table class="table">
@@ -54,9 +52,7 @@ You've entered a time warp! This is a list of every passage in *<%= story.name %
 </tbody>
 </table>
 
-
 :: Warp zone stylesheet [stylesheet]
-
 .tag-badge {
   display: inline-block;
   background-color: #555;
@@ -103,5 +99,4 @@ You've entered a time warp! This is a list of every passage in *<%= story.name %
 }
 
 :: Debug room.
-
 Hollis walks into the debug room, which is impossible, because there are no doors to either enter or exit the debug room. It literally does not exist.

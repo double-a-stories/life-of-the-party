@@ -8,7 +8,6 @@
 }
 
 :: Do nothing.
-
 <% s.rescuedKaia = false; %>
 
 You watch as the jackrabbit snarfs down the little white mouse with a satisfied smile. At first it squeaks out in fear, but the sound stops instantly as it begins snaking down her throat.
@@ -18,7 +17,6 @@ You feel slightly guilty for not intervening. And somehow... aroused?
 * [[Go back.|Dance a little.]]
 
 :: H-hey, don't do that!
-
 You nervously shout at the jackrabbit not to eat the mouse.
 
 She stops dangling the little white mouse girl over her mouth, and turns to look at you. Despite you both being rabbits, she has a carnivore affect. She's a little bit taller than you, and judging by the length of her claws, she seems to have neglected trimming them for a few weeks.
@@ -29,14 +27,12 @@ She stops dangling the little white mouse girl over her mouth, and turns to look
 * [[That's a living person!]]
 
 :: She's not food!
-
 The jackrabbit narrows her eyes and says, <q.jackrabbit>Dunno know what rock you've been livin' under, bud. We're *all* food. This one's mine.</q>
 
 * [[That's a living person!]]
 * [[Grab the mouse out of her claws.]]
 
 :: That's a living person!
-
 She rolls her eyes and says, <q.jackrabbit>Oh, you're one of those micro-rights hippies? Come to tell me about peace, love, 'n co-existence?</q>
 
 You start to speak, but she interrupts, <q.jackrabbit>Or maybe you're jus' jealous'a me nabbing an easy snack?</q>
@@ -44,20 +40,17 @@ You start to speak, but she interrupts, <q.jackrabbit>Or maybe you're jus' jealo
 * [[No, I don't eat people!]]
 
 :: No, I don't eat people!
-
 She smiles and says, <q.jackrabbit>Your loss. Either way, you're not gettin' your paws on it. Got that?</q>
 
 * [[G-got it. Nevermind.]] *(Do nothing.)*
 * [[Grab the mouse out of her claws.]]
 
 :: G-got it. Nevermind.
-
 <q.jackrabbit>Good,</q> she says, <q.jackrabbit>You're smarter than you look, kid.</q>
 
 <%= story.render("Do nothing.") /* [[Do nothing.]] */ %>
 
 :: Grab the mouse out of her claws.
-
 The jackrabbit looks with surprise as you attempt to free the mouse by force. She lifts the mouse higher, just out of your reach.
 
 <q.jackrabbit>Ugh, if you're really that desperate, just take it.</q>
@@ -67,7 +60,6 @@ She releases the mouse into your outstretched paws. You hold it- actually, *her*
 * [[A-are you hurt?]]
 
 :: A-are you hurt?
-
 The little white mouse rises to her feet. At full height, she's a mere 6-inches tall. You ask if she's hurt.
 
 <% s.rescuedKaia = true; %>
@@ -82,7 +74,6 @@ That's... good? you guess. You tell her you're really sorry. You promise, not al
 * [[You're welcome!|Don't worry about it!]]
 
 :: Don't worry about it!
-
 Kaia smiles up at you, and takes the opportunity . <q.mouse>Honestly, it'd be really embarassing if my whole purpose in life was to be a meal for some rando at a college party!</q>
 
 You scratch your head, and say yeah. Yeah it would. You're awkwardly silent for a moment.
