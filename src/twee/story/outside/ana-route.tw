@@ -128,9 +128,7 @@ For a little while, neither of you say anything. The two of you sit there in com
 :: Sorry for trying to kiss you.
 "No," she says, smiling again, "I get it." She gives you another hug.
 
-<%= story.render("A quiet moment.") %>
-
-<div->[[A quiet moment.]]</div>
+<%= story.render("A quiet moment.") /* [[A quiet moment.]] */ %>
 
 :: I came here with a friend...
 Ana scratches her head. "I probably haven't seen 'em. What's this friend of yours look like?"

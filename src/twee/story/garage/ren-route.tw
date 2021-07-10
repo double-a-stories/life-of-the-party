@@ -26,16 +26,12 @@ A few feet ahead of you, you see a red fox, who appears to be struggling to carr
 :: Ask him what he's up to.
 <% s.rm = true; %>
 
-<%= story.render("...What are you doing?") %>
-
-<div->[[...What are you doing?]]</div>
+<%= story.render("...What are you doing?") /* [[...What are you doing?]] */ %>
 
 :: What's she doing?
 <% s.rm = false; %>
 
-<%= story.render("...What are you doing?")%>
-
-<div->[[...What are you doing?]]</div>
+<%= story.render("...What are you doing?") /* [[...What are you doing?]] */ %>
 
 :: ...What are you doing?
 You ask <%=s.rm?"him":"her"%> what <%=s.rm?"he":"she"%>'s doing.
@@ -200,9 +196,7 @@ Your face is moments from sliding into <%=s.rm?'his':'her'%> gullet.
 * [[Struggle for freedom!]]
 
 :: Take a deep breath. [vore]
-Just before your head slips into the fox's slimy throat. You take in a big lungful of putrid air and hold it. <%= story.render("Get swallowed by Ren.") %>
-
-<div->[[Get swallowed by Ren.]]</div>
+Just before your head slips into the fox's slimy throat. You take in a big lungful of putrid air and hold it. <%= story.render("Get swallowed by Ren.") /* [[Get swallowed by Ren.]] */%>
 
 :: Struggle for freedom! [gore]
 *CW: Accidental mauling. Blood.*

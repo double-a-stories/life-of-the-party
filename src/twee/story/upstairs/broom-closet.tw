@@ -8,9 +8,10 @@ Inside is a shelf with some towels, linens, and some cleaning supplies. Leaning 
 </div>
 
 * <a0 onclick="renderToSelector('#broom-closet-text', 'Broom closet status')">Check the broom closet.</a>
-* <a0 id="broom-closet-exit" data-passage="Upstairs Hallway">Go back to the hallway.</a>
+* [[Go back to the hallway.|Upstairs Hallway]]{#broom-closet-exit}
 
-<div->[[Upstairs Hallway]] [[Try to leave.]]</div>
+
+<div->[[Try to leave.]]</div>
 
 :: Detect touch users [script]
 document.addEventListener('pointerdown', function isTouching(ev) {
