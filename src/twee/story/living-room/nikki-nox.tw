@@ -175,7 +175,7 @@ For just a second, you catch yourself looking at the tiny mouse as an object, ra
 :: H-hello there, I'm Hollis.
 You introduce yourself to the mouse.
 
-<q.mouse>H-hi!</q> says the brown mouse, glancing at Nikki, as if asking for permission to speak. <q.mouse>I'm Faith.</q>
+<q.mouse>H-hi!</q> says the brown mouse, glancing at Nikki, as if asking for permission to speak. <q.mouse>I'm Faith.</q> <% if (s.rescuedKaia) { %> The name sounds familiar. You try to remember where you heard it, but everything from the last hour is too much of a blur.<% } %>
 
 You ask Faith if she wants to be eaten.
 
