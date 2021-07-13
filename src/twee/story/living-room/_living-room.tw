@@ -143,7 +143,7 @@ A labrador notices and elbows you. "Woahh, dude! Maybe go a little easy on the p
 <% } %>
 <% } %>
 
-<% if (punchCount <= 4) %>
+<% if (punchCount <= 5) %>
 * [[Go back.|Dance a little.]]
 
 :: Good idea, thanks.
