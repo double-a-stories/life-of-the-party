@@ -168,10 +168,13 @@ Reese pats Hollis on the back, <q.reese>Well, I'm sorry I deprived you of your l
 
 // TODO:
 * Give the player a chance to express feelings.
-* Glad I had a friend like you!
-
-You gain self-actualization and catharsis, and the two of you disintegrate.
-
+* Glad I had a friend like you.
+* You gain self-actualization and catharsis, and begin to disintegrate.
+* Wait, no. It doesn't have to end like this!
+* You restart the story again, march up the stairs, and pull Reese from Lacey's mouth. Then you find the jackrabbit and Nikki/Nox, and reunite Faith and Kaia.
+* Then you go outside, and talk Ana into giving all of you a ride home.
+* You ride off into the night, and go out for a slice of pizza.
+* The End.
 
 * <a0 onclick="setup.restart()">Restart</a>
 * [[Credits]]
