@@ -4,14 +4,7 @@
 /* Tinos is used for Byron's text, and Comic Neue is used for Ren's. */
 /* @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Tinos:ital@0;1&display=swap"); */
 
-@font-face {
-  font-family: 'Playfair Display SC';
-  font-style: normal;
-  font-weight: 700;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/l/font?kit=ke80OhoaMkR6-hSn7kbHVoFf7ZfgMPr_nQIpNc4dKYIVGS7EEUTaQQUYGaPMsU6tqQ&skey=3f21dd19ddf0000a&v=v10) format('woff2'),
-  url(https://fonts.gstatic.com/l/font?kit=ke80OhoaMkR6-hSn7kbHVoFf7ZfgMPr_nQIpNcsFJa8lGWyxQBPweQ0SDb_c&skey=3f21dd19ddf0000a&v=v10) format('truetype');
-}
+
 @font-face {
   font-family: 'Comic Neue';
   font-style: normal;
