@@ -10,40 +10,19 @@
   /* Link hover color */
   --accent: #d93;
   /* Default body font */
-  --font-stack: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Segoe UI, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Arial, sans-serif;
+  --font-stack: -apple-system, BlinkMacSystemFont,  Helvetica Neue, Helvetica, Segoe UI, Roboto, Noto, Arial, sans-serif;
 }
 
 body {
-  font: 1.2rem/1.6 var(--font-stack);
-  color: var(--color);
   background: var(--background);
-  transition: opacity 1s, background 2s;
+  box-sizing: border-box;
+  color: var(--color);
+  font: 1.2rem/1.6 var(--font-stack);
   margin: 0.5rem;
-  min-height: calc(100vh + 1px);
+  overflow: scroll;
+  transition: opacity 1s, background 2s;
 }
 
-/* Override default Twee styles */
-
-tw-story {
-  line-height: inherit;
-  position: unset !important;
-  margin: 0 auto;
-  padding-bottom: 4rem;
-  max-width: 35em;
-}
-
-/* Typography and spacing */
-
-h1, h2, h3, h4, h5, h6, p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.15;
-}
-
-/* Responsive typography */
 
 @media screen and (max-width:700px) {
   body {
@@ -51,16 +30,32 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Links */
+tw-story {
+  line-height: inherit;
+  margin: 0 auto;
+  /* padding-bottom: 4rem; */
+  max-width: 35em;
+}
 
-a {
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+
+/*  Headings */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+/* Links */
+a[href] {
   color: var(--color, #111);
   text-decoration-color: var(--light, rgba(0, 0, 0, 20%));
 }
 
-a:hover,
-a:focus,
-a:active {
+a[href]:hover, a[href]:focus, a[href]:active {
   color: var(--accent, #d93);
   text-decoration-color: var(--accent, #d93);
 }
@@ -88,22 +83,23 @@ a:active {
   margin-bottom: 1rem;
 }
 
-.commands-list a {
+.commands-list :any-link {
+  color: var(--color);
   display: inline-block;
   padding: 0.25rem 0.5rem;
-  text-decoration-color: transparent;
+  text-decoration-line: none;
   border: 1px solid var(--light);
   border-radius: 0.5rem;
 }
 
-.commands-list a:hover {
+.commands-list :any-link:hover {
   color: var(--color);
   border-color: var(--color);
-  border-width: 1px;
-  text-decoration: underline;
+  text-decoration-color: var(--light);
+  text-decoration-line: underline;
 }
 
-.commands-list a:focus {
+.commands-list :any-link:focus {
   color: var(--background);
   background: var(--color);
   border-color: transparent;
