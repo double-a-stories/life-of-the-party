@@ -38,7 +38,7 @@ You're on the floor of the kitchen. What will you do?
 * [[Get up.|Wake up in the kitchen.]]
 
 :: Wake up in the kitchen. [checkpoint]
-*CW: Player pred. Sadism. Micro prey. Violent coercion.*
+*CW: Player pred. Sadism. Unwilling pred. Micro prey. Violent coercion.*
 
 "Ooh! They're waking up!" says a voice.
 
@@ -53,11 +53,13 @@ Two identical black cats are hovering over you expectantly, their tails wiggling
 :: Wh-who are you guys?
 <% s.knowNikkiNoxNames = true; %>
 
-"Oh, how rude of us! I'm Nox, and she's Nikki." says the first cat.
+"Oh, how rude of us! I'm Nox, and she's Nikki!" says the first cat.
 
 "I'm Nikki, he's Nox," repeats the other cat.
 
-"A pleasure to make your acquaintance!" says Nikki.
+You're still too hungover to try and tell them apart, but you nod.
+
+"A pleasure to make your acquaintance," says Nikki.
 
 * [[What happened?]]
 
@@ -84,7 +86,7 @@ You feel your cheeks flush with embarassment.
 :: Oh jeez...
 Nox chimes in, "A couple of the jocks tried to take a lick, but this labrador guy was really insistent that 'None of you dudes try and take advantage of this little rabbit dude in their inebriated state, kay dudes?'"
 
-Nikki continues, "Afterwards, you stumbled into the kitchen, grabbed even more booze and snacks, and fell asleep. And here you are now!"
+Nikki continues, "Afterwards, you stumbled into the kitchen, grabbed even more booze and snacks, and fell asleep. And here you are now."
 
 "We've been watching you ever since," Nox says, smiling, "Just to make sure you didn't die, or anything!"
 
@@ -129,7 +131,7 @@ Nox reaches into his front pockets and produces a brown dwarf mouse. She struggl
 
 A mouse? you ask.
 
-"A meal!" Nikki smiles.
+"A meal." Nikki smiles.
 
 "A morsel!" Nox beams.
 
@@ -140,7 +142,7 @@ Nikki nods.
 
 Nox says, "We figured that since you're feeling sauced and snacky, you'd enjoy feeling this lovely lady wriggling down your throat!"
 
-"Not to mention, our little friend here is perfectly and completely willing!" Nikki shoots a glare at the mouse in Nox's paws. "Isn't that right?
+"Not to mention, our little friend here is perfectly and completely willing." Nikki shoots a glare at the mouse in Nox's paws. "Isn't that right."
 
 <q.mouse>Yes, that's right!</q> the mouse replies with a forced smile.
 
@@ -149,13 +151,13 @@ You look nervously at the tiny mouse. She looks back at you hopefully.
 * [[Oh, um, I don't... do that.]]
 
 :: Oh, um, I don't... do that.
-But you're not a predator, you say. You don't eat people.
+But you're not a predator, you say. You don't eat people. Nor eggs, fish, or dairy, for that matter.
 
-"Of course you don't," says Nikki, "That's actually why we're so interested!"
+"Of course you don't," says Nikki, "That's actually why we're so interested."
 
-Nox smirks, blushing slightly, "There's nothing quite the thrill of like watching someone's first time!"
+Nox smirks, "There's nothing quite the thrill of like watching someone's first time!"
 
-"Especially you herbivores! You get so conflicted and twisted up over it!" Nikki adds, clearly betraying her excitement.
+"Especially you herbivores! You get so conflicted and twisted up over it..." Nikki adds, betraying her own excitement with a blush.
 
 "Why not give it a try?" asks Nox, bringing the brown mouse up to your paws, "A small, vulnerable thing like you may not get another chance before someone snatches *you* up!"
 
@@ -166,9 +168,9 @@ You hold your paws flat, and the brown mouse dutifully walks from Nikki's paws o
 
 You haven't really seen such a small person up close before. Unsurprisingly, tinyfolk (that is, very small anthros) tend not to spend very much time around bigger folk, who could accidentally crush them with a single misstep.
 
-You've also lived your whole life as a small, weak thing. Is it wrong to feel morbidly intrigued by the thought of devouring something even smaller and weaker?
+You've also lived your whole life as a small, weak thing. Is it wrong to feel morbidly intrigued by the thought of devouring something even smaller and weaker? Devouring... Swallowing... Digesting... Hm.
 
-For just a second, you catch yourself looking at the tiny mouse as an object, rather than a person.  You see her tiny body tremble slightly. Your stomach ties in knots.
+For just a second, your mind races with images of yourself as a predator. You catch yourself looking down at the tiny mouse as an object, rather than a person. You see her tiny body tremble slightly in your paw, and your stomach ties in knots.
 
 * [[H-hello there, I'm Hollis.]]
 
@@ -179,16 +181,18 @@ You introduce yourself to the mouse.
 
 You ask Faith if she wants to be eaten.
 
-Faith swallows and says, <q.mouse>Yup, haha! Totally!</q> while looking halfway over her shoulder. Then she blinks several times. You're pretty sure you get the picture.
+Faith swallows and says, <q.mouse>Yup, haha!!</q> while looking halfway over her shoulder. <q.mouse>Totally!</q> You're pretty sure you get the picture.
 
 * [[I won't do it!]]
 
 :: I won't do it!
-You say you refuse to participate in something so barbaric as devouring two helpless mice against their wills.
+You say you refuse to participate in something so barbaric as devouring a helpless mouse against her will.
 
 Nox seems disappointed. "Well, I guess there was always a possibility you'd say no. We can't force you, after all!"
 
-Nikki snatches Faith back out of your paws, who replies with a startled squeak. The cat examines her coldly, and muses, "I suppose there are other ways we could have our fun with them..."
+Nikki snatches Faith back out of your paws, causing her to let out a startled squeak. The cat examines her coldly, and muses, "I suppose there are other ways we could have our fun with them..."
+
+Your eyes go wide, as you recall several news stories of people doing hideous, awful things to micros, but not getting caught for lack of evidence.
 
 * [[You mean like torture??]]
 
@@ -197,7 +201,7 @@ Nikki looks back to you, "Well, torture is such a strong word..."
 
 That's horrible! you say.
 
-"Well," Nox says, "my sister can be a little intense with her food, but that's only if you decide not to partake!"
+"Well," Nox says, "my sister can be a little intense with her food. But that's only if you decide not to partake yourself!"
 
 * [[I thought you said you weren't predators!]]
 
