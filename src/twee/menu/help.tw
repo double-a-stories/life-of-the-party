@@ -2,11 +2,11 @@
 
 ### Keyboard controls
 
-* `S (J)` - *Select next link.*
-* `W (K)` - *Select previous link.*
-* `E (Space)` - *Use selected link.*
-* `A (H)` - *Undo last command.*
-* `D (L) ` - *Redo last command.*
+* <kbd>W (K)</kbd> - *Select previous link.*
+* <kbd>A (H)</kbd> - *Undo last command.*
+* <kbd>S (J)</kbd> - *Select next link.*
+* <kbd>D (L) </kbd> - *Redo last command.*
+* <kbd>E (Space)</kbd> - *Use selected link.*
 
 ### Play offline
 
