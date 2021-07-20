@@ -50,30 +50,36 @@ controls.goNext = () => {
 }
 
 $(document).keydown((e) => {
+  // If we're focusing on a text field, don't intercept any keys.
   if ($(e.target).is("input[type!='button'], [contenteditable]")) {
     return
   }
   switch (e.key.toLowerCase()) {
+    // Space | E = Select.
     case "e":
     case " ":
       controls.selectFocused();
       e.preventDefault();
       break;
+    // H | A = Undo
     case "h":
     case "a":
       setup.undo();
       e.preventDefault();
       break;
+    // D | L = Redo
     case "d":
     case "l":
       controls.goNext();
       e.preventDefault();
       break;
+    // W | K = Focus previous link
     case "w":
     case "k":
       controls.focusPrev();
       e.preventDefault();
       break;
+    // S | J = Focus next link.
     case "s":
     case "j":
       controls.focusNext();
