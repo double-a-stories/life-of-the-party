@@ -13,28 +13,29 @@ setup.undo = () => {
 setup.restart = () => {
   story.history = []; // erase history (resets page visit counts)
   story.state = {}; // reset state
-
-  // reset the startPassage variable to a passage with the tag 'start'
-  const passages = story.passages.filter(p => p);
-  const start = passages.find(p => p.tags.includes("start"));
-  story.startPassage = start ? start.id : story.startPassage;
   story.show(story.startPassage); // load startPassage
 }
 // save a Snowman checkpoint on every passage.
 $(window).on('sm.passage.shown', (e, {passage}) => {
-  if (!passage.tags.includes("no_checkpoint"))
-  story.checkpoint(); // required for "undo" to restore previous state
+  if (!passage.tags.includes("no_checkpoint")) {
+    story.checkpoint(); // required for "undo" to restore previous state
+  }
 })
 
 setup.rewind = () => {
   if (story.history.length >= 1) {
-    let idx = _.findLastIndex(story.history.slice(0, -1),
-    id => story.passage(id).tags.includes("checkpoint"));
-    if (idx != -1) {
-      story.show(story.history[idx]);
-      story.history = story.history.slice(0, idx + 1);
-    } else {
-      setup.restart();
+    // find the most recent passage with tag "checkpoint"
+    for (let i = story.history.length - 2; i >= 0; i--) {
+      let pid = story.history[i];
+      if (story.passages[pid].tags.includes("checkpoint")) {
+        // load it now, while still preserving story state.
+        story.show(pid);
+        // clip history up until that passage
+        story.history = story.history.slice(0, i + 1);
+        return;
+      }
     }
+    // else:
+    setup.restart();
   }
 }
