@@ -385,7 +385,7 @@ Yes, you reply wearily.
 
 You ask if you can come out now, not feeling hopeful.
 
-<%-s.bm?"He":"She"%> pats her gut. <q.byron>...No, I think the lesson will be much more effective this way. Besides, I just had this flannel dry-cleaned. I doubt a pissant like you would understand how inconvenient it is to clean out vomit.</q>
+<%-s.bm?"He":"She"%> pats <%-s.bm?"his":"her"%> gut. <q.byron>...No, I think the lesson will be much more effective this way. Besides, I just had this flannel dry-cleaned. I doubt a pissant like you would understand how inconvenient it is to clean out vomit.</q>
 
 You clench your knuckles with white hot rage. You're feeling rather delirious now, and can hardly think of a response.
 
@@ -396,14 +396,14 @@ You're about to die at the hands of an extremely annoying and conceited wolf. Yo
 
 <%-s.bm?"Byron":"Emily"%> sits on the bed, and continues to blather. <q.byron>You know, it's a shame we got off on the wrong foot, rabbit. Really, you were quite delicious, and I think we could have both had a very enjoyable experience if you only knew how to mind your manners.</q>
 
-You wheeze out your last words, shut your eyes tight, and fall unconscious for eternity.
+Fuck... you... You wheeze out your last words, shut your eyes tight, and fall unconscious for eternity.
 
 * [[<%-s.bm?"Byron":"Emily"%>: Digest.|Byron: Digest.]]
 
 :: Byron: Digest.
 <q.byron>Sorry, did you say something?</q>
 
-The rabbit in <%-s.bm?"his":"her"%> stomach does not reply.
+There is no reply.
 
 <q.byron>Hello? Still listening?</q> <%-s.bm?"Byron":"Emily"%> prods and presses on <%-s.bm?"his":"her"%> stomach, only to feel a sickening wet crunch in response. <q.byron>Ah, I suppose they're finished. What a pity.</q>
 
@@ -471,7 +471,7 @@ Cool story, but I think you should stick to reviewing music <%-s.bm?"bro":"sis"%
 
 ##### **wannabe-dropout** - 13 minutes ago:
 
-wow,, you sound so suave,,, any tips for getting prey to let me eat them,,,?
+wow,,, you sound so suave,,, any tips for getting prey to let me eat them,,,?
 
 </div>
 
