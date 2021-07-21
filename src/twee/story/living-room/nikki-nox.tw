@@ -40,7 +40,7 @@ You're on the floor of the kitchen. What will you do?
 :: Wake up in the kitchen. [checkpoint]
 *CW: Player pred. Sadism. Unwilling pred. Micro prey. Violent coercion.*
 
-"Ooh! They're waking up!" says a voice.
+"Hey! They're finally awake!" says a voice.
 
 "Quiet," says another voice.
 
@@ -194,13 +194,14 @@ You say you refuse to participate in something so barbaric as devouring a helple
 
 Nox seems disappointed. "Well, I guess there was always a possibility you'd say no. We can't force you, after all!"
 
-Nikki snatches Faith back out of your paws, causing her to let out a startled squeak. The cat examines her coldly, and muses, "I suppose there are other ways we could have our fun with them..."
-
-Your eyes go wide, as you recall several news stories of people doing hideous, awful things to micros, but not getting caught for lack of evidence.
+Nikki snatches Faith back out of your paws, causing her to let out a startled squeak. The cat examines her coldly, and muses, "I suppose there are other ways we could have our fun with her.."
 
 * [[You mean like torture??]]
 
 :: You mean like torture??
+
+Your eyes go wide, as you recall several news stories of people doing hideous, awful things to micros, but not getting caught for lack of evidence.
+
 Nikki looks back to you, "Well, torture is such a strong word..."
 
 That's horrible! you say.
@@ -208,19 +209,75 @@ That's horrible! you say.
 "Well," Nox says, "my sister can be a little intense with her food. But that's only if you decide not to partake yourself!"
 
 * [[I thought you said you weren't predators!]]
+* [[You're blackmailing me?!]]
 
 :: I thought you said you weren't predators!
-<% setup.addAchievement("Nikki & Nox Ending", "Untitled")%>
+"Not quite," says Nikki.
+
+"We only said we *preferred* to watch!" says Nox.
+
+Nikki gently carsesses Faith's cheek with her claw. The mouse recoils slightly, but tries not to move too much. She gives you an evil smile, making her sharp feline teeth visible between her lips.
+
+* [[You're blackmailing me?!]]
+
+:: You're blackmailing me?!
+Nikki shakes her head. "Oh no, we're not *forcing* you to consume her."
+
+"Think of it as more of an opportunity! If you swallow her, she'll hardly even suffer a little!" says Nox.
+
+Nikki jumps in, "Whereas *I* can make no such promises!"
+
+Nox chimes in, "But either way, she'll be in a belly. So really, you might as well, right?"
+
+* [[Shouldn't she get a say too?]]
+
+:: Shouldn't she get a say too?
+"Ugh, personifying your food never ends well..." Nikki moans.
+
+"No, no, they've got a point," says Nox, "Dear mousie, would you rather be eaten by Hollis or my sister?"
+
+All eyes fall on Faith, who stands nervously atop Nikki's paw.
+
+<q.mouse>Um... Well...</q> the mouse hesitates, <q.mouse>P-preferably neither?</q> She can tell by the cats' expressions that this is not a satisfactory answer. She looks up at you nervously, and says, <q.mouse>I-I'd feel safer with you? But I don't want you to feel responsible for um... what's going to happen to me. So, I guess I'll leave it in your hands. Sorry.</q>
+
+"There, she's had her say," says Nikki, "Time to choose, Hollis."
+
+Your heart pounds. You feel like you're at the helm of a speeding trolley, and no matter what you do now, someone will get hurt. You shut your eyes, and make a decision.
+
+* [[Fine, I'll do it.]] *(CW: Player pred.)*
+* [[No. Final answer.]] *(CW: Voyeurism. Sadism.)*
+
+:: No. Final answer.
+// TODO: You refuse to be a predator. Faith is disappointed, but forgives you. We watch Nikki taunt and tease her meal to the point of tears, then swallow her very slowly. Faith begs you to find her girlfriend Kaia and let her know what happened to her.
+
+<%= story.render("Nikki & Nox ending") /* [[Nikki & Nox ending]] */ %>
+
+
+:: Fine, I'll do it.
+<% s.ateFaith = true; %>
+// TODO: You apologize, and Faith forgives you. Then you stick her in your mouth, and swallow.
+// Nikki and Nox both feel *really* happy after that, and give you belly rubs. The whole thing is very sensual.
+
+<%= story.render("Nikki & Nox ending") /* [[Nikki & Nox ending]] */ %>
+
+:: Nikki & Nox ending
+With that ordeal over with, the two siblings are highly satisfied. You feel nauesous, maybe inspired slightly by all the pretzels. They kindly offer to walk you home.
 
 ## Game over.
+
+<% setup.addAchievement("Nikki & Nox Ending", "Untitled"); %>
 
 * [[Be Faith.|Faith: Epilogue.]] *(Epilogue)*
 * [[Restart.|Start]]
 
-:: Faith: Epilogue. [mousestory]
-Your name is Faith. You are a mouse.
+:: Faith: Epilogue. [vore mousestory]
+Your name is Faith. You are a mouse. You're inside a <%= s.ateFaith?"rabbit":"cat" %>'s stomach, surrounded by <%= s.ateFaith?"a mush of pretzels and beer":"dark red fleshy walls" %>.
 
 TODO:
 
 * Epilogue from Faith's perspective.
 * Beg for your life!
+
+## The end.
+
+* [[Restart.|Start]]
