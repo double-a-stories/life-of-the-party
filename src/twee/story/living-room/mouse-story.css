@@ -1,12 +1,8 @@
 [data-tags~="mousestory"] {
   font-size: 1.6rem;
   font-family: 'Trebuchet MS', var(--font-stack);
-  --color: #E6D1AB;
-  --background: #1d1103;
-  --light: #D8B370;
-  --accent: #D8B370;
-}
-
-[data-tags~="mousestory"] h2 {
-  text-align: center;
+  --color: #E6D1AB !important;
+  --background: #1d1103 !important;
+  --light: #D8B370 !important;
+  --accent: #D8B370 !important;
 }
