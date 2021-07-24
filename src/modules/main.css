@@ -10,7 +10,7 @@
   /* Link hover color */
   --accent: #d93;
   /* Default body font */
-  --font-stack: -apple-system, BlinkMacSystemFont,  Helvetica Neue, Helvetica, Segoe UI, Roboto, Noto, Arial, sans-serif;
+  --font-stack: -apple-system, BlinkMacSystemFont,  Segoe UI, Roboto, Helvetica Neue, sans-serif;
 }
 
 body {
