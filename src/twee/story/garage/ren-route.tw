@@ -386,7 +386,7 @@ You cry out. No I'm not! Let me out! Please!
 
 Ren sighs with relief, <q.ren>😌😌😌</q>. You guess <%=s.rm?"he":"she"%>'s really mad at you.
 
-The boar snaps a pair of handcuffs onto <%=s.rm?"his":"her"%> wrists and says, "We recieved a report from one <%=s.rm?"Basil":"Lacey"%> Armstrong of a stolen vehicle with this tag. Ren Davis, you are under arrest, and have the right to remain silent.
+The boar snaps a pair of handcuffs onto <%=s.rm?"his":"her"%> wrists and says, "We recieved a report from one <%=s.rm?"Basil":"Lacey"%> Armstrong of a stolen vehicle with this tag. Ren Davis, you are under arrest."
 
 Ren's stomach pulses around you happily (<q.ren>⛓<%=s.rm?`🤷‍♂️`:`🤷‍♀️`%>😏☠️</q>). As Ren is hauled away, you feel yourself... beginning to... pass out.
 
