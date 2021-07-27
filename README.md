@@ -3,9 +3,6 @@
 This repository hosts source code for *Life of the Party*, a NSFW interactive story written in [Twee 3](https://github.com/iftechfoundation/twine-specs/blob/master/twee-3-specification.md).
 
 ⚠️ **CONTENT WARNING:** This story is for **adults only**, and reader discretion is strongly advised. It contains **strong fetish content**, including but not limited to: *Soft vore. Dubious consent. Unwilling digestion. Sex. Violence. Sexual violence. Masturbation. Sadism. Blood. Post-vore scat disposal. Death.*
-
-By proceeding, you agree
-
 ## About the story (18+)
 
 * [ABOUT.MD](ABOUT.md)
