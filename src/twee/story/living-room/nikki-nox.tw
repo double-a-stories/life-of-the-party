@@ -1,41 +1,4 @@
-<!-- Planned route:
-You get extremely drunk in the living room, and black out. You awake to find two black cat siblings (Nikki & Nox) have dragged your unconscious body into the broom closet.
 
-They're vore voyeurs, and try to talk you into eating a micro.
--->
-
-:: Get very very drunk. [dark drunk]
-You decide to grab one more cup of spiked punch, and shudder as you swallow the contents of the cup.
-
-As you do, you begin to feel slightly off-balance, as if the room is spinning. You stagger back from the table like an exaggerated cartoon depiction of a drunk person.
-
-Surprisingly, being drunk feels pretty good. You feel ready to take on the world! Ready to finally become the extroverted social butterfly you were always meant to be.
-
-You slick your ears back behind your head, and confidently stride back into the party. And then...
-
-Uh...
-
-* [[What?|Drunk route bullshit]]
-
-:: Drunk route bullshit [dark drunk]
-You remember drinking a fifth cup of punch, probably five more than your tiny rabbit body could handle. Then you went back onto the dance floor... and...
-
-It's kind of a blur after that?
-
-You remember streaks of light and sound... Black fur... You can't quite make heads or tails of it, although you're pretty sure there were a lot of heads and tails there.
-
-You must have blacked out.
-
-* [[Where am I now?]]
-
-:: Where am I now? [dark drunk]
-You're at a very crowded house party. Or, you were. Uh, maybe you're somewhere else now?
-
-Right now you're lying flat on your back. Your stomach feels a little gross, and your eyes are shut tightly. A few feet away is a stainless steel oven, fridge, and dishwasher, complimented by a midcentury modern marble countertop.
-
-You're... on the floor of the kitchen. What will you do?
-
-* [[Get up.|Wake up in the kitchen.]]
 
 :: Wake up in the kitchen. [checkpoint]
 *CW: Player pred. Sadism. Unwilling pred. Micro prey. Violent coercion.*
@@ -232,7 +195,7 @@ Nox chimes in, "But either way, she'll be in a belly. So really, you might as we
 * [[Shouldn't she get a say too?]]
 
 :: Shouldn't she get a say too?
-"Ugh, personifying your food never ends well..." Nikki moans.
+Nikki groans, "Personifying your food never ends well..."
 
 "No, no, they've got a point," says Nox, "Dear mousie, would you rather be eaten by Hollis or my sister?"
 
@@ -244,16 +207,28 @@ All eyes fall on Faith, who stands nervously atop Nikki's paw.
 
 Your heart pounds. You feel like you're at the helm of a speeding trolley, and no matter what you do now, someone will get hurt. You shut your eyes, and make a decision.
 
-* [[Fine, I'll do it.]] *(CW: Player pred.)*
-* [[No. Final answer.]] *(CW: Voyeurism. Sadism.)*
+* [[Fine, I'll eat her.]] *(CW: Player pred.)*
+* [[No. Final answer.]] *(CW: Implied gore.)*
 
 :: No. Final answer.
+*CW: Implied gore.*
+
+No, you say. You just can't do it. You look sadly at Faith, and say that you're sorry.
+
+Faith forces a smile. <q.mouse>That's okay Hollis, I forgive you.</q>
+
+"U"
+
+* [[Cover your eyes.]]
+
+:: Cover your eyes.
+
 // TODO: You refuse to be a predator. Faith is disappointed, but forgives you. We watch Nikki taunt and tease her meal to the point of tears, then swallow her very slowly. Faith begs you to find her girlfriend Kaia and let her know what happened to her.
 
 <%= story.render("Nikki & Nox ending") /* [[Nikki & Nox ending]] */ %>
 
 
-:: Fine, I'll do it.
+:: Fine, I'll eat her.
 <% s.ateFaith = true; %>
 // TODO: You apologize, and Faith forgives you. Then you stick her in your mouth, and swallow.
 // Nikki and Nox both feel *really* happy after that, and give you belly rubs. The whole thing is very sensual.
