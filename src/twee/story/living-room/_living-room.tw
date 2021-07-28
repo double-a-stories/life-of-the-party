@@ -52,7 +52,7 @@ You're usually a little uncomfortable in big groups, but right now, you're feeli
 <% else %>
 * [[Dance a little more.|Dance a little.]]
 <% %>
-* [[Grab some punch.]]
+* <%= story.render("Punch command") /* [[Punch commands]] */ %>
 <% if (s.partyFlavorBasil || s.partySeenBasil || setup.isFlagSet("talkedToBasil")) {
   s.partySeenBasil = true; %>
 * [[Wink back at the horse.|Wink back at Basil.]]
@@ -110,46 +110,3 @@ s.partyFlavorBasil = text.includes("brown stallion");
 return text;
 })() %>
 
-:: Grab some punch.
-<%
-const punchCount = visited(passage.id);
-if (punchCount == 1) { %>
-You scoot over toward the thoughtfully placed snack table, and grab a small cup of fruit punch. Taking a little sip, you observe that it tastes mostly like vodka, with a little hint of kool-aid. ...Yuck.
-<% } else if (punchCount == 2) { %>
-You grab another cup of punch, and down it. After tasting it again, the flavor starts to grow on you.
-
-Maybe it's your weak tolerance, but you're feeling pretty tipsy right now.
-<% } else if (punchCount == 3) { %>
-You walk over to the snack table, and slam down a third cup of vodka punch. You feel like you're about to lose your balance. Wow. That was probably a bad idea.
-<% } else if (punchCount == 4) { %>
-On your way to get a fourth cup of punch, you see a jackrabbit grab a tiny mouse off the floor, and dangle it teasingly over her snout. Should you... do something?
-
-* [[H-hey, don't do that!]]
-* [[Do nothing.]]
-
-<% } else { %>
-You walk over the punch bowl, look down at the vat of boozy kool-aid, and scowl with disgust. You get the nagging feeling that one more drink will make something very bad happen.
-
-<% if (s.rescuedKaia) { %>
-Kaia the mouse looks up at you with concern. <q.mouse>Uh, hi Hollis! I hear that puch can be pretty strong. Maybe you should take it slow?</q>
-
-* [[Good idea, thanks.]]
-* [[Get very very drunk.]]
-
-<% } else { %>
-A labrador notices and elbows you. "Woahh, dude! Maybe go a little easy on the party sauce, kay dude?"
-
-* [[Get very very drunk.]] *(CW: Alcohol abuse.)*
-* [[Decide not to.|Dance a little.]]
-<% } %>
-<% } %>
-
-<% if (punchCount < 4) %>
-* [[Go back.|Dance a little.]]
-
-:: Good idea, thanks.
-You nod, and thank her for looking out of your health.
-
-<q.mouse>No problem! Lemme know if you find faith. Er, Faith, my girlfriend.</q>
-
-* [[Go back.|Dance a little.]]
