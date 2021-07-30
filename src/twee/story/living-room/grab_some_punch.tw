@@ -21,18 +21,23 @@ They're vore voyeurs, and try to talk you into eating a micro.
 story.state.punchCount = visited(passage.id);
 if (s.punchCount == 1) { %>
 You scoot over toward the thoughtfully placed snack table, and grab a small cup of fruit punch. Taking a little sip, you observe that it tastes mostly like vodka, with a little hint of kool-aid. ...Yuck.
+
+* [[Go back.|Dance a little.]]
 <% } else if (s.punchCount == 2) { %>
 You grab another cup of punch, and down it. After tasting it again, the flavor starts to grow on you.
 
 Maybe it's your weak tolerance, but you're feeling pretty tipsy right now.
+
+* [[Go back.|Dance a little.]]
 <% } else if (s.punchCount == 3) { %>
-You walk over to the snack table, and slam down a third cup of vodka punch. You feel like you're about to lose your balance. Wow. That was probably a bad idea.
-<% } else if (s.punchCount == 4) { %>
-On your way to get a fourth cup of punch, you see a jackrabbit grab a tiny mouse off the floor, and dangle it teasingly over her snout. Should you... do something?
+On your way to get a third cup of punch, you see a jackrabbit grab a tiny mouse off the floor, and dangle it teasingly over her snout. Should you... do something?
 
 * [[H-hey, don't do that!]] <!-- living-room-kaia.tw --> 
 * [[Do nothing.]] <!-- living-room-kaia.tw --> 
+<% } else if (s.punchCount == 4) { %>
+You walk over to the snack table, and slam down a fourth cup of vodka punch. You feel like you're about to lose your balance. Wow. That was probably a bad idea.
 
+* [[Go back.|Dance a little.]]
 <% } else { %>
 You walk over the punch bowl, look down at the vat of boozy kool-aid, and scowl with disgust. You get the nagging feeling that if you have one more drink, something bad will happen.
 
@@ -49,9 +54,6 @@ A labrador notices and elbows you. "Woahh, dude! Sick moves, but maybe you shoul
 * [[Probably for the best...|Dance a little.]]
 <% } %>
 <% } %>
-
-<% if (s.punchCount < 4) %>
-* [[Go back.|Dance a little.]]
 
 :: Good idea, thanks.
 You nod, and thank her for looking out of your health.
