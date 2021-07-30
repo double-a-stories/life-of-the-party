@@ -45,6 +45,7 @@ Kaia the mouse looks up at you with concern. <q.mouse>Uh, hi Hollis! I hear that
 <% } else { %>
 A labrador notices and elbows you. "Woahh, dude! Sick moves, but maybe you should go easy on the party sauce, kay dude?"
 
+* [[Get very very drunk.]] *(CW: Alcohol abuse, Player pred)*
 * [[Probably for the best...|Dance a little.]]
 <% } %>
 <% } %>
@@ -72,9 +73,15 @@ You nod, and thank her for looking out of your health.
 :: Do nothing.
 <% s.rescuedKaia = false; %>
 
-You watch as the jackrabbit snarfs down the little white mouse with a satisfied smile. At first it squeaks out in fear, but the sound stops instantly as it begins snaking down her throat.
+You watch as the jackrabbit snarfs down the little white mouse with a satisfied smile. At first the thing squeaks out in fear, but the sound stops instantly as she begins snaking down her throat.
 
 You feel slightly guilty for not intervening. And somehow... aroused?
+
+The jackrabbit moans, <q.jackrabbit>Mmm... Hrgh!</q> then suddenly clutches at her throat. You see the bulge in her esophagus writhing around. The mouse didn't go down. Somehow, she's fighting her way back up! <q.jackrabbit>Kaff-kaff-kaff! Hork! Bleh!</q> the jackrabbit coughs and wheezes, and finally, spits the mouse onto the floor.
+
+The mouse nimbly lands in a roll, and scampers off out of the living room.
+
+<q.jackrabbit>Eugh...</q> groans the jackrabbit, then she narrows her eyes on you. <q.jackrabbit>...What're you lookin' at, buster?</q>
 
 * [[Go back.|Dance a little.]]
 
@@ -104,8 +111,8 @@ You start to speak, but she interrupts, <q.jackrabbit>Or maybe you're jus' jealo
 :: No, I don't eat people!
 She smiles and says, <q.jackrabbit>Your loss. Either way, you're not gettin' your paws on it. Got that?</q>
 
-* [[G-got it. Nevermind.]] *(Do nothing.)*
 * [[Grab the mouse out of her claws.]]
+* [[G-got it. Nevermind.]] *(Do nothing.)*
 
 :: G-got it. Nevermind.
 <q.jackrabbit>Good,</q> she says, <q.jackrabbit>You're smarter than you look, kid.</q>
