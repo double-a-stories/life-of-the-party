@@ -188,6 +188,8 @@ Nikki jumps in, "Whereas *I* can make no such promises!"
 
 Nox chimes in, "But either way, she'll be in a belly. So really, you might as well, right?"
 
+Nikki glances toward the kitchen door, "Quick, before anyone comes in."
+
 * [[Shouldn't she get a say too?]]
 
 :: Shouldn't she get a say too?
@@ -215,12 +217,19 @@ Faith forces a smile. <q.mouse>That's okay Hollis, I forgive you.</q>
 
 "Oh boy," Nox gushes, "Can't wait!"
 
-"Don't worry, little thing," Nikki coos at Faith, baring her fangs  "This will only hurt for a second."
+"Don't worry, little thing," Nikki coos at Faith, baring her fangs tenderly,  "I'll be extra gentle."
 
 * [[Cover your eyes.]]
 
 :: Cover your eyes.
-You put your paws in front of your face.
+
+It's too much to watch. You put your paws in front of your eyes.
+
+You hear Faith beg, <q.mouse>Please, um, Miss, you don't have to do this...</q>
+
+"No," says Nox, "But she clearly really wants to! And I wanna watch."
+
+"Mmm, c'mere cutie..."
 
 // TODO: You refuse to be a predator. Faith is disappointed, but forgives you. We watch Nikki taunt and tease her meal to the point of tears, then swallow her very slowly. Faith begs you to find her girlfriend Kaia and let her know what happened to her.
 
@@ -235,6 +244,8 @@ You put your paws in front of your face.
 <%= story.render("Nikki & Nox ending") /* [[Nikki & Nox ending]] */ %>
 
 :: Nikki & Nox ending
+// TODO: Just then, Kaia bursts in, and forces you to eat her so she can be with Faith.
+
 With that ordeal over with, the two siblings are highly satisfied. You feel nauesous, maybe inspired slightly by all the pretzels. They kindly offer to walk you home.
 
 ## Game over.
@@ -250,7 +261,7 @@ Your name is Faith. You are a mouse. You're inside a <%= s.ateFaith?"rabbit":"ca
 TODO:
 
 * Epilogue from Faith's perspective.
-* Beg for your life!
+* Kaia and Faith sadly reunite.
 
 ## The end.
 
