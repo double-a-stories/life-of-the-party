@@ -100,7 +100,7 @@ A mouse? you ask.
 
 "A meal." Nikki smiles.
 
-"A morsel!" Nox beams.
+"Nya! A morsel!" Nox beams.
 
 * [[You want me to eat her??]]
 
@@ -177,7 +177,7 @@ That's horrible! you say.
 :: I thought you said you weren't predators!
 "Not quite," says Nikki.
 
-"We only said we *preferred* to watch!" says Nox.
+"We only said we *preferred* to watch! Nyaha~!" says Nox.
 
 Nikki gently carsesses Faith's cheek with her claw. The mouse recoils slightly, but tries not to move too much. She gives you an evil smile, making her sharp feline teeth visible between her lips.
 
@@ -215,11 +215,13 @@ Your heart pounds. You feel like you're at the helm of a speeding trolley, and n
 :: No. Final answer.
 No, you say. You just can't do it. You look sadly at Faith, and say that you're sorry.
 
-Faith forces a smile. <q.mouse>That's okay Hollis, I forgive you.</q>
+Faith forces a smile. <q.mouse>That's okay Hollis, I forgive you. Just, um, promise to tell my girlfriend what happened, if you see her. She's a white mouse.</q>
+
+<% if (s.rescuedKaia) { %>You remember. Of course, Kaia! How could you have forgotten?<% } %>
 
 "Finally," Nikki says, bringing Faith toward her lips, "Let's get this show on the road!"
 
-"Oh boy," Nox gushes, "Can't wait!"
+"Oh boy," Nox gushes, "Can't wait! Nyah!"
 
 "Don't worry, little thing," Nikki coos at Faith, baring her fangs tenderly,  "I'll be extra gentle."
 
@@ -235,20 +237,31 @@ You hear Faith beg, <q.mouse>Please, um, Miss, you don't have to do this...</q>
 
 "Mmm, c'mere cutie..."
 
-// TODO: You refuse to be a predator. Faith is disappointed, but forgives you. We watch Nikki taunt and tease her meal to the point of tears, then swallow her very slowly. Faith begs you to find her girlfriend Kaia and let her know what happened to her.
+// TODO:
+* We watch Nikki taunt and tease her meal to the point of tears,
+* then swallow her very slowly.
+* Faith begs you to find her girlfriend Kaia and let her know what happened to her.
+* Gulp.
 
 <%= story.render("Nikki & Nox ending") /* [[Nikki & Nox ending]] */ %>
 
 
 :: Fine, I'll eat her.
 <% s.ateFaith = true; %>
-// TODO: You apologize, and Faith forgives you. Then you stick her in your mouth, and swallow.
-// Nikki and Nox both feel *really* happy after that, and give you belly rubs. The whole thing is very sensual.
+// TODO:
+* You apologize, and Faith forgives you. She'll try not to struggle much.
+* Then you stick her in your mouth, and swallow.
+* She actually tastes kind of good, and it feels really interesting.
+* Nikki and Nox both feel *really* happy after that, and give you belly rubs.
+* The whole thing is very sensual.
+* Just then, Kaia bursts in.
+* You're forced to explain what you've done and why.
+* She cries a little, but accepts it as a fact of life.
+* She begs you to swallow her too, and reuinite her with Faith.
 
 <%= story.render("Nikki & Nox ending") /* [[Nikki & Nox ending]] */ %>
 
 :: Nikki & Nox ending
-// TODO: Just then, Kaia bursts in, and forces you to eat her so she can be with Faith.
 
 With that ordeal over with, the two siblings are highly satisfied. You feel nauesous, maybe inspired slightly by all the pretzels. They kindly offer to walk you home.
 
