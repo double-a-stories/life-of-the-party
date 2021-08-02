@@ -1,4 +1,7 @@
-
+:: Twinspeak [stylesheet]
+.twinspeak {
+    text-shadow: #aaa 0.125em 0.125em;
+}
 
 :: Wake up in the kitchen. [checkpoint]
 
