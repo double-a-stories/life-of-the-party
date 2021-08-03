@@ -147,7 +147,7 @@ That's... good? you guess. You tell her you're really sorry. You promise, not al
 * [[You're welcome!|Don't worry about it!]]
 
 :: Don't worry about it!
-Kaia smiles up at you, and takes the opportunity . <q.mouse>Honestly, it'd be really embarassing if my whole purpose in life was to be a meal for some rando at a college party!</q>
+Kaia smiles up at you. <q.mouse>Honestly, it'd be really embarassing if my whole purpose in life was to be a meal for some rando at a college party!</q>
 
 You scratch your head, and say yeah, it would. You're awkwardly silent for a moment.
 
@@ -244,7 +244,8 @@ body {
   "Check it, bun’s gettin’ completely blasted!",
   "I’d like a piece of that...",
   "I would too if I was about to be eaten...",
-  `<span class="byron">Damned drunken rutheads...</span>`,
+  s.rescuedKaia ? `<span class="mouse">Uh Hollis, you okay?</q>` 
+    : `<span class="byron">Damned drunken rutheads...</span>`,
   "Woah, back off dudes. Little dude’s had too much.",
   "Tch. Buzzkill..."
 ].map((s, i) => `<span class="slidey-string" style="--delay: ${(i * 2 - 3) + Math.random()}s">${s}</span>`).join("") %>
