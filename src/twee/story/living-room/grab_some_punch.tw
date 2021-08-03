@@ -244,7 +244,7 @@ body {
   "Check it, bun’s gettin’ completely blasted!",
   "I’d like a piece of that...",
   "I would too if I was about to be eaten...",
-  s.rescuedKaia ? `<span class="mouse">Uh Hollis, you okay?</q>` 
+  s.rescuedKaia ? `<span class="mouse">Uh Hollis, you okay?</span>` 
     : `<span class="byron">Damned drunken rutheads...</span>`,
   "Woah, back off dudes. Little dude’s had too much.",
   "Tch. Buzzkill..."
