@@ -11,7 +11,7 @@ They're vore voyeurs, and try to talk you into eating a micro.
 [[Grab some more punch.|Grab some punch.]]
 <% else if (s.punchCount == 2) %>
 [[Grab a third punch.|Grab some punch.]]
-<% else if (s.punchCount == 3) %>
+<% else if (s.punchCount == 3)%>
 [[Grab a fourth punch.|Grab some punch.]]
 <% else %>
 [[Just one more punch...|Grab some punch.]]
@@ -183,7 +183,9 @@ Uh...
 :: Drunk route bullshit [dark drunk]
 You remember drinking a fifth cup of punch, probably five more than your tiny rabbit body could handle. Then you went back onto the dance floor... and...
 
-It's kind of a blur after that?
+After that, everything blurs together in your head...
+
+<%= story.render("Drunk background strings") %>
 
 You remember streaks of light and sound... Black fur... You can't quite make heads or tails of it, although you're pretty sure there were a lot of heads and tails there.
 
@@ -192,10 +194,58 @@ You must have blacked out.
 * [[Where am I now?]]
 
 :: Where am I now? [dark drunk]
-You're at a very crowded house party. Or, you were. Uh, maybe you're somewhere else now?
+You're at a very crowded house party. Or, you were. Uh, maybe you're somewhere else now? It's quieter here...
 
 Right now you're lying flat on your back. Your stomach feels a little gross, and your eyes are shut tightly. A few feet away is a stainless steel oven, fridge, and dishwasher, complimented by a midcentury modern marble countertop.
 
 You're... on the floor of the kitchen. What will you do?
 
 * [[Get up.|Wake up in the kitchen.]] <!-- nikki-nox.tw -->
+
+:: Drunk background [stylesheet]
+.slidey-string {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  z-index: -2;
+  opacity: 0.5;
+  animation: 15s linear slide;
+  width: 30em;
+  animation-delay: var(--delay);
+}
+.slidey-string:nth-child(even) {
+  animation-direction: reverse;
+}
+
+@keyframes slide {
+  from {
+    visibility: visible;
+    transform: translateX(100vw);
+  }
+  to {
+    visibility: visible;
+    transform: translateX(-30em);
+  }
+}
+
+:: Drunk background strings
+<style>
+body {
+  overflow-x: hidden;
+}
+</style>
+<%= [
+  "Chug! Chug! Chug!",
+  "Dance… Dance… Dance…",
+  "Oh dear, I spilled my drink all over you…",
+  `<span class="byron">Because maybeeee...</span>`,
+  "Haha, sweet party Basil!",
+  "Did they just take off their top?",
+  "Check it, bun’s gettin’ completely blasted!",
+  "I’d like a piece of that...",
+  "I would too if I was about to be eaten...",
+  `<span class="byron">Damned drunken rutheads...</span>`,
+  "Woah, back off dudes. Little dude’s had too much.",
+  "Tch. Buzzkill..."
+].map((s, i) => `<span class="slidey-string" style="--delay: ${(i * 2 - 3) + Math.random()}s">${s}</span>`).join("") %>
+<br>
