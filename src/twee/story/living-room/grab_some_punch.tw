@@ -236,17 +236,16 @@ body {
 </style>
 <%= [
   "Chug! Chug! Chug!",
-  "Dance… Dance… Dance…",
-  "Oh dear, I spilled my drink all over you…",
-  `<span class="byron">Because maybeeee...</span>`,
-  "Haha, sweet party Basil!",
-  "Did they just take off their top?",
+  "Dance... Dance... Dance...",
   "Check it, bun’s gettin’ completely blasted!",
-  "I’d like a piece of that...",
+  "Haha, sweet party Basil!",
   "I would too if I was about to be eaten...",
-  s.rescuedKaia ? `<span class="mouse">Uh Hollis, you okay?</span>` 
-    : `<span class="byron">Damned drunken rutheads...</span>`,
+  `<span class="byron">Because maybeeee...</span>`,
+  "Oh dear, I spilled my drink all over you,,, Sorry,,,",  
+  "Omigod, did they just take off their top?",
+  "I’d like a piece of that...",
+  s.rescuedKaia ? `<span class="mouse">Uh Hollis, you okay?</span>` : `<span class="byron">Damned drunken rutheads...</span>`,
   "Woah, back off dudes. Little dude’s had too much.",
-  "Tch. Buzzkill..."
-].map((s, i) => `<span class="slidey-string" style="--delay: ${(i * 2 - 3) + Math.random()}s">${s}</span>`).join("") %>
+  "Tch. You're such a buzzkill, Gus..."
+].map((s, i) => `<span class="slidey-string" style="--delay: ${i * 2 + Math.random()}s">${s}</span>`).join("") %>
 <br>
