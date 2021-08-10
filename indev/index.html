@@ -271,7 +271,7 @@ var twemoji=function(){"use strict";var twemoji={base:"https://twemoji.maxcdn.co
 </head>
 	<body>
 		<tw-story tags></tw-story>
-		<!-- UUID://63C20183-3B4C-4AA8-956D-FC3721F85803// --><tw-storydata name="Life of the Party" startnode="172" creator="Tweego" creator-version="2.1.1" ifid="63C20183-3B4C-4AA8-956D-FC3721F85803" zoom="1" format="Snowman" format-version="2.0.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Twemoji style" */
+		<!-- UUID://63C20183-3B4C-4AA8-956D-FC3721F85803// --><tw-storydata name="Life of the Party" startnode="1" creator="Tweego" creator-version="2.1.1" ifid="63C20183-3B4C-4AA8-956D-FC3721F85803" zoom="1" format="Snowman" format-version="2.0.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Twemoji style" */
 .emoji {
   width: 1em;
   height: 1em;
@@ -1306,7 +1306,7 @@ document.addEventListener('pointerdown', function isTouching(ev) {
   } else {
     window.isTouching = !(ev.pointerType == "mouse");
   }
-});</script><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-passagedata pid="1" name="Start" tags="no_heading start" position="100,100" size="100,100">&lt;style&gt;
+});</script><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="no_heading start" position="100,100" size="100,100">&lt;style&gt;
 tw-passage &gt; * {
   margin-bottom: 5rem;
 }
@@ -3185,19 +3185,20 @@ Faith looks sad. &lt;q.mouse&gt;I&#39;m, um, worried about my girlfriend Kaia. S
 
 &lt;q.mouse&gt;Umm, it really doesn&#39;t...?
 
-Nikki turns to you, and adds, &quot;Oh, and &lt;%= s.ateFaith?&quot;that&quot;:&quot;tha&#39;&quot;%&gt; &lt;%= s.ateFaith?&quot;goes&quot;:&quot;goesh&quot;%&gt; for your buddy &lt;%= s.ateFaith?&quot;Reese&quot;:&quot;Reesh&quot;%&gt; too.&quot;
+Nikki turns to you, and adds, &quot;Oh, and &lt;%= s.ateFaith?&quot;that&quot;:&quot;tha&#39;&quot; %&gt; &lt;%= s.ateFaith?&quot;goes&quot;:&quot;goesh&quot;%&gt; for your buddy &lt;%= s.ateFaith?&quot;Reese&quot;:&quot;Reesh&quot; %&gt; too.&quot;
 
 * [[...How do you know about Reese?]]</tw-passagedata><tw-passagedata pid="217" name="...How do you know about Reese?" tags="" position="850,2725" size="100,100">You ask Nikki how she knows about Reese.
 
 &lt;% setup.setFlag(&quot;upstairsUnlocked&quot;); %&gt;
 
 // TODO:
-* Nox: &quot;Well, you were out for a while...&quot;&quot;
+
+* Nox: &quot;Well, you were out for a while...&quot;
 * Coincidentally, they pair of them happened to catch a brief glimpse of Lacey, Clif, and Reese going upstairs. They also happened to catch a very prolonged glimpse of Reese allowing Lacey to eat him.
 * You&#39;re shocked that he&#39;d let himself get eaten, but they swear it&#39;s true.
 * Wait, why were you guys watching to begin with?
 * Nox: &quot;Eheh, there&#39;s a perfectly reasonable explanation for that, which is-&quot;
-* &lt;q.mouse&gt;Ahem...&lt;/q&gt; Faith says, &lt;q.mouse&gt;We&#39;re uh, kind of in the middle of something... I&#39;d really like to get out of here,&lt;/q&gt; Faith says, frowning. She shifts her arms slightly, attempting to pull herself free. &lt;% !s.ateFaith?&quot;Nikki&#39;s&quot;:&quot;Your&quot;&gt; mouth instinctively sucks her backward.
+* &lt;q.mouse&gt;Ahem...&lt;/q&gt; Faith says, &lt;q.mouse&gt;We&#39;re uh, kind of in the middle of something... I&#39;d really like to get out of here,&lt;/q&gt; Faith says, frowning. She shifts her arms slightly, attempting to pull herself free. &lt;% !s.ateFaith?&quot;Nikki&#39;s&quot;:&quot;Your&quot; %&gt; mouth instinctively sucks her backward.
 * Nikki: &quot;Oh, you&#39;ll be &#39;coming out&#39; sooner or later.&quot;
 
 &lt;% if (s.ateFaith) { %&gt;
