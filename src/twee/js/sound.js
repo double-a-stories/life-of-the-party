@@ -72,7 +72,7 @@ const hasTags = (...tags) => (passage) => tags.every(t => passage.tags.includes(
 const birds = new Howl({
   src: ["assets/sound/birds.mp3"],
   loop: true,
-  volume: 0.6,
+  volume: 0.1,
   muted: true,
   html5: true,
 });
