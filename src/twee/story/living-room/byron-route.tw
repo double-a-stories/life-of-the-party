@@ -23,7 +23,7 @@ A black-furred wolf, about six feet tall, wearing in a stylish scarf and a check
 
 You walk over to the wolf. <%-s.bm?"He":"She"%> continues sitting on the couch, strumming bar chords on <%-s.bm?"his":"her"%> guitar. <%-s.bm?"He":"She"%> looks really into it, but finally stops playing and acknowledges you with a nod.
 
-<q.byron>Ahh,</q> <%-s.bm?"he":"she"%> says, speaking with a deep, aristocratic accent, <q.byron>The countenance of a lone rabbit amidst a grim setting is an unexpected pleasure. Perhaps... 'twas fate that united us?</q>
+<q.byron>Ahh,</q> <%-s.bm?"he":"she"%> says, speaking with a <span.byron>deep, aristocratic accent</span>, <q.byron>The countenance of a lone rabbit amidst a grim setting is an unexpected pleasure. Perhaps... 'twas fate that united us?</q>
 
 * [[Uh, what?]]
 
@@ -164,7 +164,7 @@ You tell <%-s.bm?"him":"her"%> you're not gonna-
 :: Stand up.
 <q.byron>Good.</q> <%-s.bm?"Byron":"Emily"%> places <%-s.bm?"his":"her"%> paw firmly on your lower back. You feel <%-s.bm?"his":"her"%> claws outstretched, as if threatening to shred through your clothes and into the flesh beneath. <q.byron>Let us go upstairs, shall we?</q>
 
-You grit your teeth, and walk helplessly alongside <%-s.bm?"Byron":"Emily"%> as <%-s.bm?"he":"she"%> leads you back out of the living room. You're about to enter the foyer, when a golden labrador in a green jacket stops the two of you.
+You grit your teeth, and walk helplessly alongside <%-s.bm?"Byron":"Emily"%> as <%-s.bm?"he":"she"%> leads you back out of the living room. You're about to enter the foyer, when a golden Labrador in a green jacket stops the two of you.
 
 * [[Blink twice.]]
 
@@ -173,7 +173,7 @@ You grit your teeth, and walk helplessly alongside <%-s.bm?"Byron":"Emily"%> as 
 
 <q.byron><%-s.bm?"Byron":"Emily"%> Byron,</q> the wolf smiles, giving you a friendly pat on the shoulder. <q.byron>And this is my charming friend, Hollis!</q>
 
-The labrador points a paw at the wolf, and asks you, "Hey dude, this dude bothering you, dude? Cause that's supes no bueno, dude."
+The Labrador points a paw at the wolf, and asks you, "Hey dude, this dude bothering you, dude? Cause that's supes no bueno, dude."
 
 <%-s.bm?"Byron":"Emily"%> tightens <%-s.bm?"his":"her"%> grip on you and tries to walk away. <%-s.bm?"He":"She"%> <q.byron>No, we were just-</q>
 
