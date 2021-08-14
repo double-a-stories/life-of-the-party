@@ -69,21 +69,21 @@ s.partyFlavorState = +s.partyFlavorState || 0;
 
 if (!setup.partyDanceLiterals) {
   setup.partyDanceLiterals = [
-    "You see a group of labradors cheering on their friend as he attempts to do a keg-stand.",
+    "You see a group of Labradors cheering on their friend as he attempts to do a keg-stand.",
 "A pair of black cats are looking on with awe as a dog proudly presents his enormous, swollen belly.",
 `The speakers start playing a techno remix of Marie Predatora's latest rap single: "Belly Drop, Belly Drop (Belly Drop)."`,
-`A grey wolf with a huge protruding gut accidentally bumps into you. "S'cuse me," she mutters as she walks away.`,
+`A grey wolf with a huge protruding gut accidentally bumps into you. "'Scuse me," she mutters as she walks away.`,
 `Your ears perk up: the speakers are a slow-jam by the classic R&B duo, Thumper & Bang. You tap your furry toes happily.`,
 `The sound system blares with the shouty vocals and distorted guitar of "groupie gas (ft. some snack idk)" by LOÜD GRÜMBLE.`,
 `A tall black wolf in a scarf and a flannel shirt brought an acoustic guitar to the party, and is playing "Wonderwall" with an extremely thoughtful expression.`,
 `A slightly chubby owl notices you from across the room and begins licking her beak.`,
-`A drunk labrador begins nuzzling you. "Oh my gooood dudes, this rabbit is soooo soft..." You blush. Surprisingly, his fur is extremely soft as well.`,
+`A drunk Labrador begins nuzzling you. "Oh my gooood dudes, this rabbit is soooo soft..." You blush. Surprisingly, his fur is extremely soft as well.`,
 `A green anaconda wags her tail in time with the music, and accidentally trips two people. "Oh, sorry!" she stammers, ",,,Sorry again!"`,
 `There aren't many other prey at this party. You feel a little small by comparison to all the huge anthros here.`,
 `A nice, easy song starts playing. You consider offering to dance with one of the guys around you, but most of them are several feet taller than you.`,
 `A heavy-set bear with a selfie stick is recording herself as she shakes her massive hips. You try not to stare, but it's absolutely hypnotic.`,
 `A lioness whispers to her friend, "Did you know there's a rabbit here?" They snicker. "Woah. Do you think it has a vore fetish?"`,
-`You see a catboy eagerly following a lioness out of the room. They both seem quite excited.`,
+`You see a cat boy eagerly following a lioness out of the room. They both seem quite excited.`,
 `A big brown stallion in a green jacket seems to take notice of your dancing. He winks at you from across the room.`,
 ].sort(e => 0.5 - Math.random());
 
@@ -105,7 +105,7 @@ s.partyFlavorDragon = text.includes("green dragon girl");
 s.partyFlavorOwl = text.includes("owl");
 s.partyFlavorWonderwolf = text.includes("wolf in a scarf");
 s.partyFlavorLioness = text.includes("lioness");
-s.partyFlavorLabrador = text.includes("A drunk labrador");
+s.partyFlavorLabrador = text.includes("A drunk Labrador");
 s.partyFlavorGutbump = text.includes("accidentally bumps into you");
 s.partyFlavorBasil = text.includes("brown stallion");
 return text;
