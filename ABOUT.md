@@ -1,4 +1,3 @@
-
 # ![Life of the Party: A Furry Vore Adventure by Double-A](https://i.imgur.com/4LLEUa3.png)
 
 > Your name is Hollis. You are a small gray rabbit, standing meekly in the foyer of a big, loud suburban house party. Your ears hurt, and in the mere twenty minutes since you've arrived, you've already completely lost sight of your friend who brought you here. Even worse, you're surrounded by huge, drunk anthros who could probably swallow you in seconds. Most alarming of all, one of them is your old high school bully. It's hardly a question of *if* you're gonna get eaten, but rather, by whom.
@@ -7,10 +6,9 @@
 
 \> [Play at github.io](https://double-a-stories.github.io/life-of-the-party/)
 
-\> [Play at textadventures.co.uk](https://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/)
+\> [Play at textadventures.co.uk](https://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/) *(Mirror. Requires sign-in.)*
 
-\> [Releases](https://github.com/double-a-stories/life-of-the-party/releases)
-
+\> [Download for offline play](https://github.com/double-a-stories/life-of-the-party/releases)
 ## About
 
 *Life of the Party* is a text-based interactive story, focused on **oral vore with dubious consent, unwilling digestion, and (optional) scat disposal**.
@@ -18,6 +16,14 @@
 You play as Hollis Freely, a nonbinary rabbit in their late teens. Explore the party, search for your friend, or unwind a little. Along the way, you'll meet some new faces and reunite with some old ones. Just try not to get eaten, unless you're into that! Who am I kidding, of course you're into that.
 
 The story currently features at least 6 unique predators, and 8 possible endings. Some of these are easier to find than others! It's not very long (~30,000 words), but it's not short either.
+## Feedback
+
+Here are places around the web where you can leave comments on this.
+
+* [FurAffinity.net](https://www.furaffinity.net/view/42991202/) *(Gallery post)*
+* [Aryion.com](https://aryion.com/forum/viewtopic.php?f=79&t=59177) *(Discussion thread)*
+* [Textadventures.co.uk](https://textadventures.co.uk/games/view/fcvdqsoz7u2edrju9wb6ba/) *(Reviews)*
+* [voreda.live](https://voreda.live/game.php?id=49) *(Reviews)*
 
 ## Credits
 
