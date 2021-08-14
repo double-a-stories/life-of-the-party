@@ -1,5 +1,4 @@
 :: Epilogue styles [stylesheet]
-
 body[data-tags~="epilogue"] {
   --background: #002;
   --light: rgba(255, 255, 255, 50%);

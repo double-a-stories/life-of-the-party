@@ -1,5 +1,4 @@
 :: Debug console message [script]
-
 $(window).on('sm.story.started', function (event, {
   story
 }) {

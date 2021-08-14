@@ -20,7 +20,7 @@ They're vore voyeurs, and try to talk you into eating a micro.
 <%
 story.state.punchCount = visited(passage.id);
 if (s.punchCount == 1) { %>
-You scoot over toward the thoughtfully placed snack table, and grab a small cup of fruit punch. Taking a little sip, you observe that it tastes mostly like vodka, with a little hint of kool-aid. ...Yuck.
+You scoot over toward the thoughtfully placed snack table, and grab a small cup of fruit punch. Taking a little sip, you observe that it tastes mostly like vodka, with a little hint of Kool-Aid. ...Yuck.
 
 * [[Go back.|Dance a little.]]
 <% } else if (s.punchCount == 2) { %>
@@ -39,7 +39,7 @@ You walk over to the snack table, and slam down a fourth cup of vodka punch. You
 
 * [[Go back.|Dance a little.]]
 <% } else { %>
-You walk over the punch bowl, look down at the vat of boozy kool-aid, and scowl with disgust. You get the nagging feeling that if you have one more drink, something bad will happen.
+You walk over the punch bowl, look down at the vat of boozy Kool-Aid, and scowl with disgust. You get the nagging feeling that if you have one more drink, something bad will happen.
 
 <% if (s.rescuedKaia) { %>
 Kaia the mouse looks up at you with concern. <q.mouse>Uh, hi Hollis! I hear that punch can be pretty strong. Maybe you should take it slow?</q>
@@ -48,7 +48,7 @@ Kaia the mouse looks up at you with concern. <q.mouse>Uh, hi Hollis! I hear that
 * [[Drink it anyway.|Get very very drunk.]] *(CW: Alcohol abuse, Player pred)*
 
 <% } else { %>
-A labrador notices and elbows you. "Woahh, dude! Sick moves, but maybe you should go easy on the party sauce, kay dude?"
+A Labrador notices and elbows you. "Woahh, dude! Sick moves, but maybe you should go easy on the party sauce, kay dude?"
 
 * [[Get very very drunk.]] *(CW: Alcohol abuse, Player pred)*
 * [[Probably for the best...|Dance a little.]]
@@ -77,7 +77,7 @@ You nod, and thank her for looking out of your health.
 
 You watch as the jackrabbit snarfs down the little white mouse with a satisfied smile. At first the thing squeaks out in fear, but the sound stops instantly as she begins snaking down her throat.
 
-You feel slightly guilty for not intervening. And somehow... aroused?
+You feel slightly guilty about not intervening. And somehow... aroused?
 
 The jackrabbit moans, <q.jackrabbit>Mmm... Hrgh!</q> then suddenly clutches at her throat. You see the bulge in her esophagus writhing around. The mouse didn't go down. Somehow, she's fighting her way back up! <q.jackrabbit>Kaff-kaff-kaff! Hork! Bleh!</q> the jackrabbit coughs and wheezes, and finally, spits the mouse onto the floor.
 
@@ -90,7 +90,7 @@ The mouse nimbly lands in a roll, and scampers off out of the living room.
 :: H-hey, don't do that!
 You nervously shout at the jackrabbit not to eat the mouse.
 
-She stops dangling the little white mouse girl over her mouth, and turns to look at you. Despite being another rabbit, she has a carnivorous affect to her. She's a little bit taller than you, and judging by the length of her claws, she seems to have neglected trimming them for a few weeks.
+She stops dangling the little white mouse girl over her mouth, and turns to look at you. Despite being another rabbit, she has a carnivorous affect to her. She's a bit taller than you, and judging by the length of her claws, she seems to have neglected trimming them for a few weeks.
 
  With an annoyed glare, she asks, <q.jackrabbit>Hmph. Whatsit to ya?</q>
 
@@ -147,7 +147,7 @@ That's... good? you guess. You tell her you're really sorry. You promise, not al
 * [[You're welcome!|Don't worry about it!]]
 
 :: Don't worry about it!
-Kaia smiles up at you. <q.mouse>Honestly, it'd be really embarassing if my whole purpose in life was to be a meal for some rando at a college party!</q>
+Kaia smiles up at you. <q.mouse>Honestly, it'd be really ç if my whole purpose in life was to be a meal for some rando at a college party!</q>
 
 You scratch your head, and say yeah, it would. You're awkwardly silent for a moment.
 
@@ -196,7 +196,7 @@ You must have blacked out.
 :: Where am I now? [dark drunk]
 You're at a very crowded house party. Or, you were. Uh, maybe you're somewhere else now? It's quieter here...
 
-Right now you're lying flat on your back. Your stomach feels a little gross, and your eyes are shut tightly. A few feet away is a stainless steel oven, fridge, and dishwasher, complimented by a midcentury modern marble countertop.
+Right now you're lying flat on your back. Your stomach feels a little gross, and your eyes are shut tightly. A few feet away is a stainless steel oven, fridge, and dishwasher, complimented by a mid-century modern marble countertop.
 
 You're... on the floor of the kitchen. What will you do?
 
