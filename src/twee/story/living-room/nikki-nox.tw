@@ -318,26 +318,63 @@ Faith looks sad. <q.mouse>I'm, um, worried about my girlfriend Kaia. She's reall
 
 "Oh," Nox says, "You're scared you might never see her again! How deliciously tragic, nyaha! If it makes you feel any better, at a party like this, there's pretty good odds your little friend was also eaten."
 
-<q.mouse>Umm, it really doesn't...?
+<q.mouse>Umm, it really doesn't...?</q>
 
 Nikki turns to you, and adds, "Oh, and <%= s.ateFaith?"that":"tha'" %> <%= s.ateFaith?"goes":"goesh"%> for your buddy <%= s.ateFaith?"Reese":"Reesh" %> too."
 
-* [[...How do you know about Reese?]]
+* [[...How do you know Reese?]]
 
-:: ...How do you know about Reese? 
-You ask Nikki how she knows about Reese.
+
+:: ...How do you know Reese? 
+You ask the two cats how they know Reese's name. <%= s.ateFaith?"Faith wriggles uncomfortably inside your mouth.":"" %>
 
 <% setup.setFlag("upstairsUnlocked"); %>
 
-// TODO:
+Nox smiles, "Reese is—well, *was*—an active member of the GrumbleGeek predatory discussion forums, just like us! Although we mostly know him as *GuineaPuff8*."
 
-* Nox: "Well, you were out for a while..."
-* Coincidentally, they pair of them happened to catch a brief glimpse of Lacey, Clif, and Reese going upstairs. They also happened to catch a very prolonged glimpse of Reese allowing Lacey to eat him.
-* You're shocked that he'd let himself get eaten, but they swear it's true.
-* Wait, why were you guys watching to begin with?
-* Nox: "Eheh, there's a perfectly reasonable explanation for that, which is-"
-* <q.mouse>Ahem...</q> Faith says, <q.mouse>We're uh, kind of in the middle of something... I'd really like to get out of here,</q> Faith says, frowning. She shifts her arms slightly, attempting to pull herself free. <% !s.ateFaith?"Nikki's":"Your" %> mouth instinctively sucks her backward.
-* Nikki: "Oh, you'll be 'coming out' sooner or later."
+Nikki nods, <%= s.ateFaith?"and says,":"and squeezes Faith into her cheek so she can speak articulately." %> "He's<%= s.ateFaith?"":"h" %> been raving about going to this party with you for weeks!" <%= s.ateFaith?"":"Faith's outline wriggles uncomfortably." %>
+
+* [[Where did he go!?]]
+
+:: Where did he go!?
+Nikki thinks back, and says, "I'm pretty sure I caught a short glimpse of Basil's sister bringing him upstairs."
+
+Nox grins, "And I caught a very long glimpse of Lacey and her boyfriend going to town swallowing that yummy boy bod!"
+
+You rocket to your feet. Reese is Upstairs? Maybe there's still time to get him out of there! <%= s.ateFaith?"Faith lets out an uncomfortable yelp, as if reminding you to be careful as she's still inside your mouth.":"" %>
+
+Nox shakes his head, "Sorry, that was like three hours ago. He's probably been digested already."
+
+* [[O-oh. I see.]]
+
+:: O-oh. I see.
+You collapse to your knees. You can't believe it; you were so busy getting wasted, you couldn't save him...
+
+Nox seems confused, "Save? Knowing Reese, the whole thing was 100% consensual. That dude was a vorny freak, even by our standards! It's weird that he would bring you here without telling you that..."
+
+* [[Actually... that would explain a lot.]]
+
+:: Actually... that would explain a lot.
+You think back to when you and Reese first arrived, and he ventured off into the living room without you. At the time, it seemed like he was just excited to do underage drinking, but his exact words were, "I'm gonna go get myself fucking annihilated!"
+
+...What a silly weirdo, you think. Still, you say, being digested must have been painful.
+
+Nox reassures you, "I can assure you, Lacey was really gentle with him. Your friend died surrounded by a horse stomach, doing what he loved. Be glad for him! Circle of Life, and all that."
+
+Nikki nods. "Circle <%= s.ateFaith?"of":"uh" %> Life." 
+
+* [[Wait, why were you watching to begin with?]]
+
+:: Wait, why were you watching to begin with?
+Nox smiles weakly, "Eheh, there's a perfectly reasonable explanation for that, which is-"
+
+<q.mouse>Ahem...</q> Faith says, still sticking out from between <%= s.ateFaith?"your":"Nikki's"%> lips. <q.mouse>We're uh, kind of in the middle of something... I'd really like to get out of here,</q> She shifts her arms slightly, attempting to pull herself free. <% !s.ateFaith?"Nikki's":"Your" %> mouth instinctively sucks her backward.
+
+Nikki smiles, "Oh, you'll be 'coming out' <%= s.ateFaith?"sooner":"shooner"%> or later."
+
+Nox laughs, "Yeah, sounds like someone's eager to get swallowed!"
+
+TODO MAKE TWINSPEAK HERE CONDITIONAL. "Gulp! Gulp!" <%= s.ateFaith?"Nikki and Nox chant":"Nox chants"%> excitedly.
 
 <% if (s.ateFaith) { %>
 * [[Hollis: Swallow.]]
@@ -366,9 +403,9 @@ You ask Nikki how she knows about Reese.
 
 :: Hollis: Swallow.
 // TODO:
-* Gulp.
-* Nikki and Nox both feel *really* happy after that, and give you belly rubs.
+* Reluctantly, you swallow. Faith slides gently down your gullet.
 * The whole thing is very sensual.
+* Nikki and Nox both feel *really* happy after that, and give you belly rubs.
 * Just then, Kaia bursts in.
 * You're forced to explain what you've done and why.
 * She cries a little, but accepts it as a fact of life.
@@ -377,12 +414,14 @@ You ask Nikki how she knows about Reese.
 
 * [[Hollis: Eat Kaia.]]
 
+:: Hollis: Eat Kaia.
+
 <%= story.render("Nikki & Nox ending") /* [[Nikki & Nox ending]] */ %>
 
 :: Nikki & Nox ending
 With that ordeal over with, the two siblings are highly satisfied. You feel nauesous, maybe inspired slightly by all the pretzels. They kindly offer to walk you home.
 
-* [[Be Faith.]] *(Epilogue)*
+* [[Be Faith.]]
 * [[Restart.|Start]]
 
 :: Be Faith. [vore mousestory]
@@ -392,9 +431,17 @@ TODO:
 
 * Epilogue from Faith's perspective.
 * Kaia and Faith sadly reunite.
+* Hollis is invited out for pizza, but gets swept up by a jock who they promised could eat them.
 
 ## The end.
 
 <% setup.addAchievement("Nikki & Nox Ending", "Untitled"); %>
 
+* [[Hollis: Epilogue.]]
 * [[Restart.|Start]]
+
+:: Hollis: Epilogue.
+
+Uhm, Hollis doesn't do epilogues.
+
+* [[Epilogue, now.]]
