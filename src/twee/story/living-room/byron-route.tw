@@ -4,7 +4,7 @@ Hollis realizes that Byron's sensitive exterior is just a front for <%-s.bm?"his
 
 :: Byron's font quirk [stylesheet]
 .byron {
-  font-family: 'Tinos', "Times New Roman", serif;
+  font-family: "Times New Roman", "Tinos", "Times", serif;
   font-weight: bold;
   font-size: 1.1em;
 }
