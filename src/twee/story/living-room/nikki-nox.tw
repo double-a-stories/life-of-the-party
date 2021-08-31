@@ -253,6 +253,16 @@ You feel like you're at the helm of a speeding trolley, and no matter what you d
 * [[No. Final answer.]] *(CW: Voyeurism)*
 * [[Fine, I'll eat her.]] *(CW: Player pred)*
 
+:: Fine, I'll eat her.
+<% s.ateFaith = true; %>
+// TODO:
+* You apologize, and Faith forgives you. She'll try not to struggle much.
+* Nox walks over to the fridge, dangles her by the tail, and dips her lower half in ranch sauce.
+* Then you stick her in your mouth.
+* She actually tastes kind of good, and it feels interesting.
+
+* [[Nox: Tease.]]
+
 :: No. Final answer.
 No, you say. You just can't do it. You look sadly at Faith, and say that you're sorry, but she's in Nikki's hands.
 
@@ -373,76 +383,137 @@ Nox smiles weakly, "Eheh, there's a perfectly reasonable explanation for that. Y
 
 Nikki smiles, "Oh, you'll be 'coming out' <%= s.ateFaith?"sooner":"shooner"%> or later."
 
-Nox laughs, "Yeah, sounds like someone's eager to get swallowed!"
+Nox laughs, "Sounds like someone's eager to get swallowed! Shall we?"
 
-TODO MAKE TWINSPEAK HERE CONDITIONAL. "Gulp! Gulp!" <%= s.ateFaith?"Nikki and Nox chant":"Nox chants"%> excitedly.
+Faith stammers, <q.mouse>No, wait, just think about this-</q>
 
-<% if (s.ateFaith) { %>
-* [[Hollis: Swallow.]]
+* [[<% if (s.ateFaith) %>Nikki and Nox<% else %>Nox<%;%>: Peer pressure.|Nox: Peer pressure.]]
+
+:: Nox: Peer pressure.
+
+<q class="<% if (s.ateFaith) %>twinspeak<%;%>">Gulp! Gulp!</q> <% if (s.ateFaith) %>Nikki and Nox chant<% else %>Nox chants<%;%> excitedly. <% if (s.ateFaith) %>Your cheeks flush bright red. The cats stare at you expectantly, eagerly clutching their chins with their paws. Nikki's claws extend, as if to remind you how easily she and her brother could overpower you.<% else %>You watch silently, your cheeks flushing bright red.<%;%> 
+
+<q.mouse>J-just please promise me,</q> says Faith, from inside <%-s.ateFaith?"your":"Nikki's"%> mouth, <q.mouse>If you find my girlfriend, you'll tell her what happened to me.</q>
+
+You nod. Based on the cats' expressions, you can tell it's definitely too late to <% if (s.ateFaith) %>back out<% else %>stop them<%;%> now. At least, that's what you have to tell yourself to keep from being utterly appalled and disgusted by the thought of what you're about to <% if (s.ateFaith) %>do<% else %>see<%;%>.
+
+<% if (s.ateFaith) %>
+Here goes nothing...
+<% else %>
+You can't bear to look...
+<%;%>.
+
+<% if (s.ateFaith) %>
+* [[Hollis: Swallow.|Swallow Faith.]]
+<% else %>
+* [[Nikki: Swallow.|Swallow Faith.]]
+<% ; %>
+
+:: Swallow Faith.
+<% if (!s.ateFaith) %>
+Nikki carelessly flings her head back. The squealing mouse goes careening into her gullet. With a single "gulp", she becomes nothing but a bulge beneath the black fur of the cat's throat. It's... fascinating to watch.
+<% else %>
+Reluctantly, you close your lips and tip your chin back. Faith's body gently glides down your tongue, and into the back of your throat. You choke on her briefly, but after a series of slow, considered gulps, you swallow her. It feels... fascinating.
+<% ; %>
+
+"Mmm," Nikki moans. "Oooh!" Nox giggles.
+
+// TODO: More swallowing happens.
+
+* Faith winds up in <%- s.ateFaith ? "your" : "Nikki's"%> stomach.
+<% if (!s.ateFaith) %>
+* You're invited to rub and touch the squirming outline.
+<% else %>
+* The cats rub and touch the squirming outline in your stomach.
+<% ; %>
+* You try very hard to pretend like this doesn't arouse you. The cats are not fooled.
+* Faith continues to squirm and struggle. The cats are highly satisfied.
+* "We better clear out of here before someone comes in."
+* Then, the door slowly swings open...
+
+
+* [[Kaia: Enter.]]
+
+:: Kaia: Enter.
+
+* Suddenly, <%- s.rescuedKaia ? "Kaia" : "a white mouse "%> bursts into the room. <%- s.rescuedKaia ? "" : "Kaia, you presume."%>
+* <q.mouse>There you are, you monsters,</q> she growls at the cats, <q.mouse>I've been looking for you two for hours. Where's Faith?</q>
+* Nox can't help but stifle a snicker, as he slowly gestures toward <%- s.ateFaith ? "your" : "Nikki's" %> stomach. It squirms violently in response.
+* She's shocked. The white fur of her face seems to become red with rage. She turns toward you.
+* <% if (s.rescuedKaia) %><q.mouse>H-Hollis?</q> Kaia blinks in disbelief.<% else %>She points an accusatory claw at you, and says, <q.mouse>You! You're the rabbit from earlier!</q><% ; %> She seems to be at a loss for words. <q.muse>H-how could you <%- s.ateFaith ? "do this" : "let this happen" %>?</q>
+* Your heart feels ready to sink into the floor from guilt. You're fairly certain that even if you were better at speaking, there are no words in the world which could answer that question to her satisfaction.
+
+* [[I... I'm sorry...|Sorry for eating your girlfriend...]]
+* [[I-it wasn't my fault...|Sorry for eating your girlfriend...]]
+
+:: Sorry for eating your girlfriend...
+* "Oh-ho," smiles Nikki, patting you on the back. "The rabbit is hardly to blame! We basically forced them to <% if (s.ateFaith) %>eat her<% else %>watch us<% ; %>."
+* Nox adds with a knowing smile, "Plus, they were extremely drunk at the time! We're the ones you should be angry at."
+* She cries a little, but accepts it as a fact of life.
+* After a moment of deliberation, she begs <%- s.ateFaith ? "you" : "Nikki" %> to swallow her as well, so she can reunite with Faith and spend their last few moments together.
+
+
+* [[Y-you wanna be eaten too?]]
+
+:: Y-you wanna be eaten too?
+* <q.mouse>I don't want to,</q> says Kaia, resolutely, <q.mouse>But all I have in the world is Faith- er, my girlfriend. If she's going to be digested, I'd do anything to comfort her in her last moments.</q>
+<% if (s.ateFaith) { %> 
+* You're really conflicted over the whole thing, but Nikki and Nox persuade you that it's the least you can do after the horrible, awful thing you've done.
+* They lay it on extremely thick, for comedy.
+* You nod, and grant Kaia the request.
+* A-are you ready? you ask.
+* Kaia smiles weakly, <q.mouse>Ready as I'll ever be.</q> 
 <% } else { %>
-* [[Nikki: Swallow.]]
+* Without even another word, Nikki snatches her up, and starts bringing her toward her mouth. "Sure, whatever," smiles the cat.
+* "Nngh-" she says, squirming slightly, "I um- maybe had a few more things I wanted to say first..."
+* Nikki does not slow down, and raises the mouse
+<q.mouse>This was kind of a dramatic moment for me- but- urgh, fine.</q> She turns to you. <q.mouse><% if (s.rescuedMouse) %>Goodbye, Hollis, thanks for everything.<% else %>Goodbye, rabbit. Thanks for nothing.<%;%></q>
 <% } %>
 
-:: Nikki: Swallow.
-* We watch Nikki taunt and tease her meal to the point of tears,
-* then swallow her very slowly.
-* Faith begs you to find her girlfriend Kaia and let her know what happened to her.
-* Gulp.
 
-<%= story.render("Nikki & Nox ending") /* [[Nikki & Nox ending]] */ %>
+* [[<%-s.ateFaith?"Hollis":"Nikki"%>: Eat Kaia.|Hollis/Nikki: Eat Kaia.]]
 
+:: Hollis/Nikki: Eat Kaia.
 
-:: Fine, I'll eat her.
-<% s.ateFaith = true; %>
-// TODO:
-* You apologize, and Faith forgives you. She'll try not to struggle much.
-* Nox walks over to the fridge, dangles her by the tail, and dips her lower half in ranch sauce.
-* Then you stick her in your mouth.
-* She actually tastes kind of good, and it feels really interesting.
-
-* [[Nox: Tease.]]
-
-:: Hollis: Swallow.
-// TODO:
-* Reluctantly, you swallow. Faith slides gently down your gullet.
-* The whole thing is very sensual.
-* Nikki and Nox both feel *really* happy after that, and give you belly rubs.
-* Just then, Kaia bursts in.
-* You're forced to explain what you've done and why.
-* She cries a little, but accepts it as a fact of life.
-* She begs you to swallow her too, so she can reuinite with Faith.
-* You're really conflicted over the whole thing.
-
-* [[Hollis: Eat Kaia.]]
-
-:: Hollis: Eat Kaia.
+// TODO: You or Nikki does that.
 
 <%= story.render("Nikki & Nox ending") /* [[Nikki & Nox ending]] */ %>
 
 :: Nikki & Nox ending
-With that ordeal over with, the two siblings are highly satisfied. You feel nauesous, maybe inspired slightly by all the pretzels. They kindly offer to walk you home.
+// TODO:
 
-* [[Be Faith.]]
+* You feel nauesous, maybe inspired slightly by all the pretzels. They invite you out for pizza.
+* You return to the living room, but suddenly get swept up by Henrietta, the owl. While you were drunk, you promised her she could eat you.
+
+
+<% setup.addAchievement("Nikki & Nox Ending", "Untitled"); %>
+
+## The End.
+
+* [[Faith: Epilogue.]]
 * [[Restart.|Start]]
 
-:: Be Faith. [vore mousestory]
+:: Faith: Epilogue. [vore mousestory]
 Your name is Faith. You are a mouse. You're inside a <%= s.ateFaith?"rabbit":"cat" %>'s stomach, surrounded by <%= s.ateFaith?"a mush of pretzels and beer":"dark red fleshy walls" %>.
 
 TODO:
 
 * Epilogue from Faith's perspective.
 * Kaia and Faith sadly reunite.
-* Hollis is invited out for pizza, but gets swept up by a jock who they promised could eat them.
+
 
 ## The end.
 
-<% setup.addAchievement("Nikki & Nox Ending", "Untitled"); %>
 
 * [[Hollis: Epilogue.]]
 * [[Restart.|Start]]
 
 :: Hollis: Epilogue.
 
-Uhm, Hollis doesn't do epilogues.
+Sorry, but Hollis doesn't do Epilogues. It's only for the predator NPC's.
 
 * [[Epilogue, now.]]
+
+
+:: Epilogue, now.
+
