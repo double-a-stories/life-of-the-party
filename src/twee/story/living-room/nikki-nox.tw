@@ -279,7 +279,7 @@ You hear Faith beg, <q.mouse>It's not too late to let me go. I won't tell anyone
 
 "Mmm, c'mere cutie..." Nikki purrs, drawing Faith closer and closer to her lips. "I need you inside me..." The mouse shudders and instinctively kicks a little as the cat places her tiny feet delicately onto her outstretched tongue.
 
-You shudder... It's too much to even listen to. You're anticipating the awful, horrible sound of a cat's mouth gorily eviscerating its prey. Something not even a million content warnings could prepare you for.
+You shudder... It's too much to even listen to. You're anticipating the awful, horrible sound of a cat's mouth gorily eviscerating its prey. Not even all the content warnings could prepare you for what's was to come.
 
 * [[Nikki: Chomp.]]
 
@@ -297,9 +297,11 @@ You peek at the scene from between your paws. There's... less teeth involved tha
 :: You're... not chewing her?
 "Chew?" Nikki asks, still speaking in a dignified manner despite her mouth muffled with mouse, "Whyever woul' I do tha'?" As she talks, her grip on Faith loosens slightly, and she's able to flip onto her belly, and poke her head out between Nikki's lips. She's clearly very frightened, but seemingly unharmed.
 
-You say, uh, you assumed they'd be, erm, hurting her.
+You say you thought they'd be, erm, mauling her.
 
-"Ew no, we're not bloodthirsty monsters!" says Nox, "Just regular sadists. The only physical pain she'll experience is slowly and painfully digesting! Although she'll probably be unconscious for that... We mostly just like watching prey feel scared and helpless!"
+"You ashumed..." says Nikki. "...And we saw no need to correct," says Nox.
+
+"Besides," Nox continues, " we're not bloodthirsty monsters!" says Nox, "Just regular sadists. The only physical pain she'll experience is slowly and painfully digesting! Although she'll probably be unconscious for that... We mostly just like watching prey feel scared and helpless!"
 
 Th-that's still pretty bad, you say.
 
@@ -324,49 +326,48 @@ Nikki turns to you, and adds, "Oh, and <%= s.ateFaith?"that":"tha'" %> <%= s.ate
 
 * [[...How do you know Reese?]]
 
-
 :: ...How do you know Reese? 
 You ask the two cats how they know Reese's name. <%= s.ateFaith?"Faith wriggles uncomfortably inside your mouth.":"" %>
 
 <% setup.setFlag("upstairsUnlocked"); %>
 
-Nox smiles, "Reese is—well, *was*—an active member of the GrumbleGeek predatory discussion forums, just like us! Although we mostly know him as *GuineaPuff8*."
+Nox smiles, "Reese is—well, *was*—an active member of the GrumbleGeek forums, just like us! Although we mostly know him as *GuineaPuff8*. It's a great community for prey and voyeurs to chat and find consensual vore meetups!"
 
-Nikki nods, <%= s.ateFaith?"and says,":"and squeezes Faith into her cheek so she can speak articulately." %> "He's<%= s.ateFaith?"":"h" %> been raving about going to this party with you for weeks!" <%= s.ateFaith?"":"Faith's outline wriggles uncomfortably." %>
+Nikki nods, <%= s.ateFaith?"and says,":"and squeezes Faith into her cheek so she can speak articulately." %> "He's<%= s.ateFaith?"":"h" %> been raving about going to this party for weeks<%= s.ateFaith?"":"h" %>!" <%= s.ateFaith?"":"Faith's outline wriggles uncomfortably." %>
 
 * [[Where did he go!?]]
 
 :: Where did he go!?
 Nikki thinks back, and says, "I'm pretty sure I caught a short glimpse of Basil's sister bringing him upstairs."
 
-Nox grins, "And I caught a very long glimpse of Lacey and her boyfriend going to town swallowing that yummy boy bod!"
+Nox grins, "And I caught a very *long* glimpse of Lacey and her boyfriend going to town swallowing that yummy boy bod!"
 
-You rocket to your feet. Reese is Upstairs? Maybe there's still time to get him out of there! <%= s.ateFaith?"Faith lets out an uncomfortable yelp, as if reminding you to be careful as she's still inside your mouth.":"" %>
+You rocket to your feet. <% if (s.ateFaith) %>Faith lets out an uncomfortable yelp, as if reminding you to be careful as she's still inside your mouth.<%;%> Reese is upstairs? Maybe there's still time to get him out of there! 
 
 Nox shakes his head, "Sorry, that was like three hours ago. He's probably been digested already."
 
 * [[O-oh. I see.]]
 
 :: O-oh. I see.
-You collapse to your knees. You can't believe it; you were so busy getting wasted, you couldn't save him...
+You collapse to your knees. You can't believe it; you were so busy getting wasted, you couldn't save him! It's all your fault.
 
 Nox seems confused, "Save? Knowing Reese, the whole thing was 100% consensual. That dude was a vorny freak, even by our standards! It's weird that he would bring you here without telling you that..."
 
 * [[Actually... that would explain a lot.]]
 
 :: Actually... that would explain a lot.
-You think back to when you and Reese first arrived, and he ventured off into the living room without you. At the time, it seemed like he was just excited to do underage drinking, but his exact words were, "I'm gonna go get myself fucking annihilated!"
+You think back to when you and Reese first arrived, and he ventured off into the living room without you. At the time, it seemed like he was just excited to do underage drinking, but you recall his exact words were, "Bye Hollis, I'm gonna go get fucking annihilated!"
 
-...What a silly weirdo, you think. Still, you say, being digested must have been painful.
+...What a weirdo, you think. Still, you say, being digested must have been painful, right?
 
-Nox reassures you, "I can assure you, Lacey was really gentle with him. Your friend died surrounded by a horse stomach, doing what he loved. Be glad for him! Circle of Life, and all that."
+Nox pats you on the shoulder, "I can assure you, Lacey was really gentle with him. Your friend died doing what he loved! It's all part of the Circle of Life."
 
-Nikki nods. "Circle <%= s.ateFaith?"of":"uh" %> Life." 
+Nikki nods. "Circle <%= s.ateFaith?"of":"uh" %> Life," she repeats.
 
 * [[Wait, why were you watching to begin with?]]
 
 :: Wait, why were you watching to begin with?
-Nox smiles weakly, "Eheh, there's a perfectly reasonable explanation for that, which is-"
+Nox smiles weakly, "Eheh, there's a perfectly reasonable explanation for that. You see-"
 
 <q.mouse>Ahem...</q> Faith says, still sticking out from between <%= s.ateFaith?"your":"Nikki's"%> lips. <q.mouse>We're uh, kind of in the middle of something... I'd really like to get out of here,</q> She shifts her arms slightly, attempting to pull herself free. <% !s.ateFaith?"Nikki's":"Your" %> mouth instinctively sucks her backward.
 
