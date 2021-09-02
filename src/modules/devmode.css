@@ -1,0 +1,29 @@
+.dev-info {
+    background-color: white;
+    bottom: 0;
+    color: #333;
+    font-family: monospace;
+    font-size: 60%;
+    padding: 1rem;
+    position: fixed;
+    right: 0;
+    width: 40em;
+}
+
+.dev-info dt {
+    display: inline;
+    font-weight: bold;
+}
+.dev-info dt::after {
+    content: ":";
+    margin-right: 0.5rem;
+}
+.dev-info dd {
+    display:  inline;
+    margin: 0;
+}
+
+.dev-info dd::after {
+    content: '';
+    display: block;
+}
