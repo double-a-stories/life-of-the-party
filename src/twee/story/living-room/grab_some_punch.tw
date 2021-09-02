@@ -4,19 +4,9 @@ You get extremely drunk in the living room, and black out. You awake to find two
 They're vore voyeurs, and try to talk you into eating a micro.
 -->
 
-:: Punch command
-<% if (!s.punchCount) %>
-[[Grab some punch.|Grab some punch.]]
-<% else if (s.punchCount == 1) %>
-[[Grab some more punch.|Grab some punch.]]
-<% else if (s.punchCount == 2) %>
-[[Grab a third punch.|Grab some punch.]]
-<% else if (s.punchCount == 3)%>
-[[Grab a fourth punch.|Grab some punch.]]
-<% else %>
-[[Just one more punch...|Grab some punch.]]
-
 :: Grab some punch.
+<% setup.setFlag("grabbedPunch") %>
+
 <%
 story.state.punchCount = visited(passage.id);
 if (s.punchCount == 1) { %>
@@ -39,6 +29,9 @@ You walk over to the snack table, and slam down a fourth cup of vodka punch. You
 
 * [[Go back.|Dance a little.]]
 <% } else { %>
+
+<% setup.setFlag("alcoholAbuseUnlocked"); %>
+
 You walk over the punch bowl, look down at the vat of boozy Kool-Aid, and scowl with disgust. You get the nagging feeling that if you have one more drink, something bad will happen.
 
 <% if (s.rescuedKaia) { %>
@@ -128,12 +121,14 @@ The jackrabbit looks with surprise as you attempt to free the mouse by force. Sh
 
 <q.jackrabbit>Ugh, if you're really that desperate, just take it.</q>
 
-She releases the mouse into your outstretched paws. You hold her, very carefully.
+She drops the mouse into your outstretched paws. You hold her very carefully.
+
+The little white mouse rises to her feet. At full height, she's a mere 6-inches tall.
 
 * [[A-are you hurt?]]
 
 :: A-are you hurt?
-The little white mouse rises to her feet. At full height, she's a mere 6-inches tall. You ask if she's hurt.
+You ask if she's hurt.
 
 <% s.rescuedKaia = true; %>
 
@@ -166,6 +161,7 @@ You gain **+15 morality points**. Only 30 more of those, and you'll unlock the T
 * [[Dance a little more.|Dance a little.]]
 
 :: Get very very drunk. [dark drunk]
+
 *CW: Alcohol abuse. Micro prey. Player pred. Sadism. Peer pressure.*
 
 You decide to grab one more cup of spiked punch, and shudder as you swallow its contents.
@@ -213,18 +209,18 @@ You're... on the floor of the kitchen. What will you do?
   width: 30em;
   animation-delay: var(--delay);
 }
-.slidey-string:nth-child(even) {
+.slidey-string:nth-child(odd) {
   animation-direction: reverse;
 }
 
 @keyframes slide {
   from {
     visibility: visible;
-    transform: translateX(100vw);
+    transform: translateX(-100vw);
   }
   to {
     visibility: visible;
-    transform: translateX(-30em);
+    transform: translateX(100vw);
   }
 }
 
@@ -239,13 +235,13 @@ body {
   "Dance... Dance... Dance...",
   "Check it, bun’s gettin’ completely blasted!",
   "Haha, sweet party Basil!",
-  "I would too if I was about to be eaten...",
+  "I would be too if I was about to be eaten...",
   `<span class="byron">Because maybeeee...</span>`,
   "Oh dear, I spilled my drink all over you,,, Sorry,,,",  
   "Omigod, did they just take off their top?",
-  "I’d like a piece of that...",
   s.rescuedKaia ? `<span class="mouse">Uh Hollis, you okay?</span>` : `<span class="byron">Damned drunken rutheads...</span>`,
+  "I’d like a piece of that...",
   "Woah, back off dudes. Little dude’s had too much.",
   "Tch. You're such a buzzkill, Gus..."
-].map((s, i) => `<span class="slidey-string" style="--delay: ${i * 2 + Math.random()}s">${s}</span>`).join("") %>
+].map((s, i) => `<span class="slidey-string" style="--delay: ${i * 2 + Math.random()/2 - 2}s">${s}</span>`).join("") %>
 <br>
