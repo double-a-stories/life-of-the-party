@@ -20,7 +20,7 @@ body[data-tags~="gore"] {
 
 /* Drunk effect (for Nikki/Nox route) */
 
-body[data-tags~="drunk"] {
+[data-tags~="drunk"] tw-story {
   animation: rock 5s ease-in-out infinite, blur 3s ease-in-out infinite;
 }
 
