@@ -39,7 +39,7 @@ To undo this, type \`disableDevMode();\``);
     $(window).on("sm.passage.shown", (ev, {passage}) => {
         $devInfoList.find("[data-exec]")
           .each((i, el) => {
-              $(el).text(JSON.stringify(eval($(el).attr("data-exec"))));
+              $(el).text(JSON.stringify(eval($(el).attr("data-exec")), null, 2));
           });
     })
 }
