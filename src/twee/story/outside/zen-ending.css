@@ -37,6 +37,7 @@ body[data-tags~="dark"], .backdrop {
   .fadeout {
     background: linear-gradient(to bottom, var(--color), transparent);
     color: transparent;
+    padding-bottom: 2rem;
     background-clip: text;
     -webkit-background-clip: text;
   }

@@ -8,6 +8,8 @@ You do so.
 
 The night sky is peaceful. The clouds are clear, but you can only barely see the stars thanks to the light pollution of this suburban neighborhood.
 
+You spend a few moments just sitting there, with your head tilted toward the starryish sky.
+
 * [[Get up.]]
 * [[Comprehend the endless cosmos.]]
 
@@ -18,39 +20,50 @@ Having had your fill of stargazing, you stand up from the bench.
 * [[Go back to the foyer.|The Foyer.]]
 
 :: Comprehend the endless cosmos. [outside dreamy_3 stars zen]
-Sitting here alone, with your head tilted toward the starryish sky, you realize that nothing you've been doing at this party has been very important.
+As you gaze out upon the swirling heavens, you start to make out the twelve constellations—symbols of a long-forgotten pantheon of animal gods. But instead, you imagine connecting the dots into a tree, and traversing across each winding branch until one by one, they abruptly end. You know the sky extends out into infinity, and yet, it all starts to feel... kind of small?
 
-You don't need to rescue your friend from being eaten. You don't need to find a hot date, and you definitely don't need to be seduced, swallowed, and privately digested by them. You don't even need to think about how you're getting home after this.
+You realize abruptly that no matter what you do at this party tonight, it's probably going to end with you getting seduced, swallowed, and digested. You won't save Reese. You won't go home safely afterward. You'll never finish your degree, or find a job, or integrate into adult society.
 
-All you need to do is rest your eyes upon the swirling heavens, and relax. You realize a simple truth that all beings are one. Whether pred or prey, rabbit or horse, nerd or jock, all are simply food for the gaping maw of time itself.
+Your heart clenches at the thought that being food could be your sole purpose in life. Perhaps the authors of your fate only had simple designs for you. You feel trapped, claustrophobic, enveloped by the illusion of choice. Even the decisions you've made so far, were those even yours?
 
- You need not need cling to the edges of your liminal reality.
-
-* [[Stop meditating.|Get up.]]
+* [[Don't think about it.|Get up.]]
 * [[Break these mortal chains.]]
 
 :: Break these mortal chains. [dreamy_3 stars outside zen]
 <% setup.addAchievement("Zen Ending", "Starry Night") %>
 
-You shut your eyes tight.
+You shut your eyes tight. No: you will not be constricted. You are soul of unimaginable power. You refuse to be constrained by the edges of this reality.
 
-The world around you dissolves. The details soften, as though they were simply dark scribbles on a light background. You get the feeling that the little voices in your head are gently fading out into white noise...
-
-You concentrate on your breathing. No wait. *Hollis* concentrates on *their* breathing. Their chest, not yours, gently rises and falls in rhythm with the drifting of the cool autumn leaves scattered around their furry feet.
+The world around you dissolves. The details soften, as though they were simply dark scribbles on a light background. It feels as if the little voices in your head are gently fading out into white noise...
 
 <div class="fadeout">
 
-In the backyard of a suburban house party, Hollis Freely opens their eyes, and takes in their surroundings. They draw a deep breath, like a weight has suddenly been lifted from their shoulders.
+You concentrate on your breathing. No wait. *Hollis* concentrates on *their* breathing. Their chest, not yours, gently rises and falls in rhythm with the drifting of the cool autumn leaves scattered around their furry feet.
 
-"Woah..." As the last of your influence wanes, Hollis blinks and mutters out loud, "What the fuck was all that about?"
+In the backyard of a suburban house party, an agendered rabbit opens their eyes, seemingly for the first time, and takes in their surroundings. They draw a deep breath, like a weight has suddenly been lifted from their shoulders.
 
-<code>LotP encountered an error:<br>client connection lost. please contact manufacturer if problem persists. automated support is available at 1-800-813-621</code>
+As the last of your influence wanes, Hollis blinks and mutters out loud, Woah... What the fuck was all that about?
 
 </div>
+
 <a0 class="focusonly" onclick="window.scrollTo({left: 0, top: 9999, behavior: 'smooth'})">↓↓↓ Scroll down ↓↓↓</a>
 </div>
 <div class="backdrop">
-<p style="margin-bottom: 3rem;">Connection resolved.</p>
+
+<div style="display: block; color: #b23; width: 50rem; text-align: left; margin: 0 auto;">
+
+⛔ Life of the Party encountered an error while executing <code>story.show("Break these mortal chains.").</code> At line 53:
+
+<p><code style="display: block; margin-left: 3rem;">
+story.dramatisPersonae = [0: "Ana", 1: "Basil", 2: "Clif", ...];<br>
+    let playerCharacter = story.dramatisPersonae[client.playerCharacterIdx];
+</code></p>
+
+⛔  ReferenceError: client.playerCharacterIdx is undefined. Defaulting to 0.
+
+Attempting story.restart()...
+</div>
+
 <div class="other-logo center-list">
 
 * [[Be the hyena.]]
@@ -62,7 +75,7 @@ Your name is Ana. You're a spotted hyena, currently chilling on a bench outside 
 
 You showed up about an hour ago, but big crowds freak you out, so you came out here to get some air and clear your head. You're here because, like most young predators, you want to eat someone. You want to feel prey writhing around inside your belly. You'd go in there and grab one, but the noise is too overwhelming.
 
-A rabbit walked out here a few minutes ago, and zoned out while staring at the sky. You think they're either high, or having a dissociative episode.
+A rabbit walked out here a few minutes ago, and zoned out while staring at the sky and mumbling something about radical freedom. You think they're either high, or having a dissociative episode.
 
 What do you do?
 
@@ -71,11 +84,12 @@ What do you do?
 * [[Eat the rabbit.]]
 
 :: Eat the rabbit. [outside dark anastory]
-<i.ana>Great idea, voice inside my head,</i> you think. You walk over to the rabbit.
+<i.ana>Great idea, voice inside my head,</i> you think. You walk over to the rabbit. <q.ana>Hey there, bunny-butt,</q> you say.
 
-<q.hollistalk>Um, hi there!</q> they say, clearly slightly nervous to see you. You have that effect on people sometimes. Probably because you're 6′10″ and your whole body was designed for shredding meat into tiny pieces.
 
-They flinch as you nonchalantly grab them up in your paws. <q.hollistalk>Woah, wait!</q> they cry out, but you're too hungry to listen. Their eyes go wide as you stuff their ears into your mouth.
+<span.hollistalk>Uh, hello!</span> they say, clearly slightly nervous to see you. You have that effect on people sometimes. Probably because you're 6′10″ and your whole body was designed for shredding meat into tiny pieces.
+
+They flinch as you nonchalantly grab them up in your paws. <span.hollistalk>Woah, wait!</span> they cry out, but you're too hungry to listen. Their eyes go wide as you stuff their ears into your mouth.
 
 They try to fight you at first, but eventually calm down.
 
@@ -88,11 +102,11 @@ With one huge gulp, you swallow the rabbit.
 
 Burp. In under a minute, they're all the way inside you. A familiar fullness fills your belly, and you sigh with relief.
 
-<q.hollistalk>Y-you're gonna digest me, aren't you...</q> they say.
+<span.hollistalk>Y-you're gonna digest me, aren't you...</span> they say.
 
 You pat your belly and reply happily, yup!
 
-<q.hollistalk>...Alright,</q> they say, settling in to their fate.
+<span.hollistalk>...Alright,</span> they say, seemingly settling in to their fate.
 
 You begin to drift off to a nap. <i.ana>Wow,</i> you think, <i.ana>this route got pretty meta, huh? Whatever dumb jerk wrote this crap probably thinks they're *reeeal* clever.</i>
 
