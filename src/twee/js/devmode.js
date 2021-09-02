@@ -16,10 +16,10 @@ This feature is almost exclusively useful for me, the person who wrote this game
 To undo this, type \`disableDevMode();\``);
 
     // Create devInfo element
-    const $devInfo = $(`<div class="dev-info"></div>`)
+    const $devInfo = $(`<details class="dev-info" open></details>`)
     $devInfo.appendTo($("body"));
     // Title
-    $devInfo.append($("<h2>Developer Tools</h2>"));
+    $devInfo.append($("<summary>Developer Tools</summary>"));
     // Console for showing useful data.
     const $devInfoList = $(`<dl></dl>`);
     $devInfoList.appendTo($devInfo);
