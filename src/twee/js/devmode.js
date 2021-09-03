@@ -1,20 +1,4 @@
-window.enableDevMode = () => {
-    setup.setFlag("devmode");
-    story.save();
-    window.location.reload();
-  }
-  window.disableDevMode = () => {
-      setup.unsetFlag("devmode");
-      console.info("Dev mode disabled. Reload page.")
-  }
-
 if (setup.isFlagSet("devmode") && !$(".dev-info")[0]) {
-    console.warn(`Developer mode enabled!
-    
-This feature is almost exclusively useful for me, the person who wrote this game, but I suppose it might sate your curiosity. By enabling this feature, you understand that you are putting yourself at risk of spoilers. Please don't enable this until you've fully enjoyed a normal playthrough of the game.
-
-To undo this, type \`disableDevMode();\``);
-
     // Create devInfo element
     const $devInfo = $(`<details class="dev-info" open></details>`)
     $devInfo.appendTo($("body"));
@@ -43,3 +27,4 @@ To undo this, type \`disableDevMode();\``);
           });
     })
 }
+
