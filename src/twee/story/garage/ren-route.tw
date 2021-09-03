@@ -406,7 +406,7 @@ Ren's cellmate, a small fennec fox, looks over. <q.fennec>Oh good, you're finall
 
 <%-!s.rm?"Xander":"Xandra"%> chuckles, <q.fennec>Wow, sounds like you had quite the evening.</q>
 
-Ren pats <%-s.rm?"his":"her"%> gut. <q.ren>Oh, and I ate a 🐇 nonbinary rabbit at a party!!! I'll probs need to use that toilet over there in a few hours...</q>
+<q.ren>Oh, and I ate an <img class="emoji" alt="(agender pride flag)" src="assets/images/emoji-agender-flag.svg"></a> agender 🐇 rabbit at a 🎈 party!!! </q> Ren pats <%-s.rm?"his":"her"%> gut, and it grumbles back in response. <q.ren>I'll probs need to use that 🚽 toilet over there in a few hours...</q>
 
 <q.fennec>Wait, you're a-</q> <%-!s.rm?"Xander":"Xandra"%> frowns, now becoming very cognizant of the fact that <%-!s.rm?"he":"she"%>'s all alone with <%-s.rm?"him":"her"%>. <%-!s.rm?"He":"She"%> can't help but finish the sentence, <q.fennec>...Predator?</q>
 
