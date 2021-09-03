@@ -2,6 +2,7 @@
 .ren {
   font-family: "Comic Neue", "Comic Sans", "Comic Sans MS", sans-serif !important;
   font-weight: 700;
+  text-transform: lowercase;
 }
 
 :: Preload Ren emojis
@@ -186,7 +187,7 @@ You look up at your destination, and wince slightly. The fox's pulsating throat 
 :: Try persuasion? [vore checkpoint]
 Your voice is muffled by the slick tongue covering your face, but you try to call out to Ren: It's not too late! <%=s.rm?'He':'She'%> doesn't have to do this!
 
-The fox lets out a low growl. (<q.ren>😈<%=s.rm?`‍🧛🏻`:`️🧛🏻‍♀️`%>👅</q>) You realize <%=s.rm?'his':'her'%> teeth are now positioned directly around your throat, and <%=s.rm?'he':'she'%> could easily bite your head off if so inclined.
+The fox lets out a low growl. (<q.ren>😈<%=s.rm?`‍🧛🏻`:`️🧛🏻‍♀️`%>👅</q>) You realize <%=s.rm?'his':'her'%> teeth are now positioned directly around your throat, and <%=s.rm?'he':'she'%> could easily bite your head off if so inclined.n
 
 You rationally decide to keep your mouth shut from now on. <%=s.rm?'He':'She'%> responds with a happy murr (<q.ren>🤤</q>) and swallows again, so your shoulders fill <%=s.rm?'his':'her'%> cheeks.
 
@@ -395,24 +396,47 @@ Ren's stomach pulses around you happily (<q.ren>⛓<%=s.rm?`🤷‍♂️`:`🤷
 * [[Epilogue.|Epilogue: Ren route.]]
 * <a0 onclick="setup.restart();">Restart</a>
 
+:: Xander [stylesheet]
+.xander {
+  font-family: 
+}
+
+.small-dollar-sign { font-size: 80%; }
+.small-cent-sign { vertical-align: -0.1em; }
+
+:: Xander quirk2 [script]
+$(window).on("sm.passage.shown", () => {
+  $(".xander").each((i, el) => {
+    // Preserve original text for screen readers
+    el.title = el.innerText;
+    // Substitute characters
+    el.innerHTML = el.innerText
+          .replace(/s/g, "$")
+          .replace(/c/g, "¢")
+          .replace(/\$/g, "<span class='small-dollar-sign'>$</span>")
+          .replace(/¢/g, "<span class='small-cent-sign'>¢</span>")
+          .replace(/S/g, "$")
+  })
+})
+
 :: Epilogue: Ren route. [morning]
 The late morning sun pours through a square window, between steel bars, and onto a big, fat-gutted fox who is sleeping soundly inside a concrete cell at the St. Buckwheat Corrections Facility.
 
-<q.ren>🥱... What a party!</q> <%-s.rm?"he":"she"%> murmurs.
+<q.ren>🥱... What a party!</q> <%-s.rm?"he":"she"%> yawns.
 
-Ren's cellmate, a small fennec fox, looks over. <q.fennec>Oh good, you're finally awake,</q> <%-!s.rm?"he":"she"%> says, <q.fennec>I'm <%=!s.rm?"Xander":"Xandra"%>, renowned serial tax evader. What're you in for?</q>
+Ren's cellmate—a small copper-colored fennec fox—looks over. <%-!s.rm?"He":"She"%> says with hard, metallic lisp, <q.xander>Look who decided to wake up,</q> <%-!s.rm?"he":"she"%> says, <q.xander>The name is <%=!s.rm?"Xander":"Xandra"%>, serial tax evader. What is a cute thing like you doing in a place like this?</q>
 
-<q.ren>🤔 Well, I got caught stealing a cool 🛻 truck from some horses, plus several hundreds of dollars of 💰 valuable goods. So basically... nothing!!!</q>
+<q.ren>🤔 Well, I got caught stealing a cool 🛻 truck from some horses, plus several hundreds of dollars of 💰 valuable goods. So basically... <!-- shrug --><%=s.rm?`🤷‍♂️`:`🤷‍♀️`%> nothing!!!</q>
 
-<%-!s.rm?"Xander":"Xandra"%> chuckles, <q.fennec>Wow, sounds like you had quite the evening.</q>
+<%-!s.rm?"Xander":"Xandra"%> chuckles, <q.xander>Crikey, sounds like quite the evening.</q>
 
 <q.ren>Oh, and I ate an <img class="emoji" alt="(agender pride flag)" src="assets/images/emoji-agender-flag.svg"></a> agender 🐇 rabbit at a 🎈 party!!! </q> Ren pats <%-s.rm?"his":"her"%> gut, and it grumbles back in response. <q.ren>I'll probs need to use that 🚽 toilet over there in a few hours...</q>
 
-<q.fennec>Wait, you're a-</q> <%-!s.rm?"Xander":"Xandra"%> frowns, now becoming very cognizant of the fact that <%-!s.rm?"he":"she"%>'s all alone with <%-s.rm?"him":"her"%>. <%-!s.rm?"He":"She"%> can't help but finish the sentence, <q.fennec>...Predator?</q>
+<q.xander>Wait, you can eat and digest people?</q> <%-!s.rm?"Xander":"Xandra"%> frowns, now becoming very cognizant of the fact that <%-!s.rm?"he":"she"%>'s all alone with <%-s.rm?"him":"her"%>.
 
-<q.ren>Yeah!!! 😃😃 I'm not happy to be here, but it was actually really nice of the prison system to serve me breakfast in bed!</q>
+<q.ren>Only as of recently, but yeah!!! 😃😃 I'm not overly happy to be here, but it was actually really nice of the 🏛 prison system to serve me 🍳 breakfast in bed!</q>
 
-<%-!s.rm?"Xander":"Xandra"%> blinks. <q.fennec>...!!! (OxO;)</q>
+<q.xander>Uh, what do you mean breakfast in...</q> <%-!s.rm?"Xander":"Xandra"%> blinks at the realization. <q.xander>...Oh shit.</span></q>
 
 ### The End.
 
