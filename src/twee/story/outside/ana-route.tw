@@ -338,7 +338,7 @@ She looks at the fur of your naked body with intrigue, her eyes drifting towards
 <%= story.render("Any questions?") %>
 
 :: ...I don't have a dick.
-Ana hesitates for a second. "Y-yeah. Me neither."
+Ana hesitates for a second. "Y-yeah, haha." She scratches the mohawk on the back of her neck. "M-me neither..."
 
 <% s.uhYeahMeNeither = true; %>
 
