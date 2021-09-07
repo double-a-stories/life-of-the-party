@@ -141,17 +141,11 @@ body[data-tags~="dreamy_3"] {
 }
 
 @keyframes space {
-  40% {
-    opacity: 0.75;
-  }
-  50% {
-    opacity: 0.25;
-  }
-  60% {
-    opacity: 0.75;
+  from {
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(359deg);
   }
 }
 

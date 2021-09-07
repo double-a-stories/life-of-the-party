@@ -10,7 +10,7 @@ $(window).on("sm.story.started", (ev, { passage }) => {
   const space = document.createElement("div");
   space.id = "space-bg";
   space.setAttribute("role", "presentation");
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 2; i++) {
     const stars = document.createElement("div");
     stars.classList.add("space", `stars${i}`);
     space.appendChild(stars);
