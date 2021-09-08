@@ -59,7 +59,7 @@ You nod, and thank her for looking out of your health.
 :: Kaia quirk [stylesheet]
 /* She talks small. */
 .mouse {
-  font-size: 80%;
+  font-size: 85%;
 }
 .jackrabbit {
   /* No quirk for now. */
