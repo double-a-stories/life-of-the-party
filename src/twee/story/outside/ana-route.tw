@@ -624,13 +624,17 @@ Ana parks and power-walks inside, her nose suddenly accosted by the thick stench
 
 :: Employee: Hi! [morning]
 <% s.previousCommand = "Hi! Welcome to-"; %>
-"Oh goddammit, *move*!" Ana shoves past the employee and makes a bee-line for the restrooms. Like most bathrooms, the toilets are segregated by size, offering one toilet each for smallerfolk (anthros under 4 feet), largerfolk (7 feet and up), and "medium," all the anthros in between.
+"Oh goddammit, *move*!" Ana shoves past the employee and makes a bee-line for the restroom doors.
 
-Ana, desperately holding a load of ex-rabbit inside her bowels, knocks on the medium door. "Sorry, occupied."
+Like most public bathrooms, they're segregated by size, offering one stall labeled *gentlekind* (a traditional term for anthros taller than 7 feet), one marked *noblekind*, for anthros of medium height, and one marked *littlekind*, for those smaller than 4 feet. Some mixed-use establishments like airports will also have special *Tinykind* toilets, which are barely three inches tall, but it's rare to see one out in the suburbs.
 
-She tries the handle for the largerfolk toilet, but it's out of service for cleaning.
+Ana, desperately holding a load of ex-rabbit inside her bowels, and not needing such common knowledge narrated to her, knocks on the middle door.
 
-<em.ana>Fucking dammit,</em> she thinks, eyeing the smaller restroom.
+"Sorry, occupied," comes the reply.
+
+Groaning, she checks the gentlekind door, but it's out of service for cleaning.
+
+<em.ana>Fucking dammit,</em> she thinks, eyeing the slightly diminished door leading into the smallest of the three restrooms.
 
 * [[Ana: Poop in the tiny toilet.]]
 * [[Ana: Wait until they're finished.]]
@@ -641,7 +645,7 @@ She tries the handle for the largerfolk toilet, but it's out of service for clea
 * [[Ana: Shit Hollis out in the tiny toilet.|Ana: Poop in the tiny toilet.]]
 
 :: Ana: Poop in the tiny toilet. [morning]
-Ana bursts into the smallerfolk restroom, and naturally finds a toilet designed for anthros much smaller than herself. She yanks down her pants, hovers her large ass over the small toilet bowl, and...
+Ana crouches to enter the littlekind restroom, and naturally finds a toilet designed for anthros much smaller than herself. She yanks down her pants, hovers her large ass over the small toilet bowl, and...
 
 * [[<em.ana>Haaaaaaaahh.</em>|Ana: Squeeze out Hollis.]]
 

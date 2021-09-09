@@ -3,9 +3,9 @@
 :: Wink back at Basil. [checkpoint]
 <% setup.setFlag("talkedToBasil"); %>
 
-The horse smiles, and walks over to you, carrying two bottles of beer.
+The horse smiles, and walks over to you, carrying two bottles of beer. Like most draft horses, he's an absolute giant, although it's more polite to refer to larger anthros using euphemisms like "gentle", whereas smaller anthros are "noble".
 
-"Hey, thanks for coming," he says, squatting down to offer you one. This gesture makes you realize that he's basically twice your height, and easily the biggest person in the room. "I'm Basil."
+"Hey, thanks for coming," he says, squatting down to offer you one. It's this gesture makes you realize that he's truly twice your height, and easily the biggest person in the room. "I'm Basil."
 
 * [[Take drink.]]
 * [[Don't take drink.]]
