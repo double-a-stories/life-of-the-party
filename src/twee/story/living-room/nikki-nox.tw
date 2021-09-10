@@ -3,10 +3,14 @@
     text-shadow: rgba(0, 0, 0, 0.25) 0.25em 0.25em;
 }
 
-:: Wake up in the kitchen. [checkpoint]
-"Hey! They're waking up!" says a voice.
+.nox {}
+.nikki {}
 
-"Quiet," says another voice.
+
+:: Wake up in the kitchen. [checkpoint]
+<q.nox>Hey! They're waking up!</q> says a voice.
+
+<q.nikki>Shhh,</q> says another voice.
 
 Your ears twitch, and you groan as you slowly sit up. A warm fluorescent lightbulb blasts you in the eyes. Lying beside you is a pile of plastic cups, a jumbo bag of vegan pretzels, and a large silicon horse dildo.
 
@@ -14,7 +18,7 @@ Like everything else in this house, the kitchen is vast and elegantly furnished.
 
 Two identical black cats are hovering over you expectantly, their tails wiggling with interest.
 
-"Ah, welcome back to the realm of the living!" one of the cats says. He has an excited, yet formal-sounding way of speaking. You might describe it as an English accent, or maybe Londonian, if you were a crazy person who believed in obviously made-up, non-existent places like "England" and "London".
+<q.nox>Ah, welcome back to the realm of the living!</q> one of the cats says. He has an excited, yet formal-sounding way of speaking. You might describe it as an English accent, or maybe Londonian, if you were a crazy person who believed in obviously made-up, non-existent places like "England" and "London".
 
 Both of them hop down to the floor.
 
@@ -23,9 +27,9 @@ Both of them hop down to the floor.
 :: Wh-who are you guys?
 <% s.knowNikkiNoxNames = true; %>
 
-"Oh, how rude of us!" says the first cat, beaming at you with soft eyes, the color of marigolds. He's wearing a black collared shirt and a white vest.  "I'm Nox Chessie, and she's Nikki!"
+<q.nox>Oh, how rude of us!</q> says the first cat, beaming at you with soft eyes, the color of marigolds. He's wearing a black collared shirt and a white vest.  <q.nox>I'm Nox Chessie, and she's Nikki!</q>
 
-"I'm Nikki Chessie. This is my sibling, Nox," reiterates the second cat, matter-of-factly. She stares at you with piercing yellow eyes. She's wearing a charcoal dress shirt and an ivory vest. "A pleasure to make your acquaintance," she says.
+<q.nikki>I'm Nikki Chessie. This is my sibling, Nox,</q> reiterates the second cat, matter-of-factly. She stares at you with piercing yellow eyes. She's wearing a charcoal dress shirt and an ivory vest. <q.nikki>A pleasure to make your acquaintance,</q> she says.
 
 Both cats are basically the same height as you, although Nikki seems to stand with slightly taller posture, while Nox seems to fiddle with his pockets. You're still too hungover to try and tell them apart, but you nod at them politely.
 
@@ -63,13 +67,13 @@ Both cats are basically the same height as you, although Nikki seems to stand wi
 <!-- CONVERSATION PATH 1 -->
 
 :: How did I get here?
-Both cats give you a genial smile. "You... don't remember?" asks Nox, scratching his whiskers nervously.
+Both cats give you a genial smile. <q.nox>You... don't remember?</q> asks Nox, scratching his whiskers nervously.
 
 You shake your head. The last few hours are mostly a blur, you say.
 
-Nikki clears her throat. "The short version is that you got incredibly wasted, wandered in to the kitchen, and passed out on the floor. We've been watching you ever since, just to make sure you didn't die, or anything."
+Nikki clears her throat. <q.nikki>The short version is that you got incredibly wasted, wandered in to the kitchen, and passed out on the floor. We've been watching you ever since, just to make sure you didn't die, or anything.</q>
 
-"No other reason!" Nox adds with a Chesire smile.
+<q.nox>No other reason!</q> Nox adds with a Chesire smile.
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
@@ -79,22 +83,22 @@ Nikki and Nox smile. <q.twinspeak>No problem, Hollis,</q> they both say in uniso
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: How do you know my name?
-"Oh," says Nox, "this is kind of awkward, but you actually said it, like, four times. You kept on insisting, 'My name is Hollis! I am an androgynous-looking gray rabbit!"
+<q.nox>Oh,</q> says Nox, <q.nox>this is kind of awkward, but you actually said it, like, four times. You kept on insisting, 'My name is Hollis! I am an androgynous-looking gray rabbit!</q>
 
 ...Huh.
 
-"Anyway," Nikki continues, "you danced a lot, then ran around for a while flirting with preds."
+<q.nikki>Anyway,</q> Nikki continues, <q.nikki>you danced a lot, then ran around for a while flirting with preds.</q>
 
-Nox pulls an expensive-looking smartphone out of their back pocket. "Oh, and you took off your shirt at one point! I caught it all on video! Wanna see?"
+Nox pulls an expensive-looking smartphone out of their back pocket. <q.nox>Oh, and you took off your shirt at one point! I caught it all on video! Wanna see?</q>
 
 You shake your head no, and cover your face with your paws. Your cheeks flush with embarrassment.
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: Oh jeez...
-Nox continues, "A couple of the jocks tried to take a lick, but this Labrador guy was really insistent that 'None of you dudes better try and take advantage of this little rabbit dude in their inebriated state, 'kay dudes?'"
+Nox continues, <q.nox>A couple of the jocks tried to take a lick, but this Labrador guy was really insistent that 'None of you dudes better try and take advantage of this little rabbit dude in their inebriated state, 'kay dudes?'</q>
 
-Nikki continues, "After that, you stumbled into the kitchen, grabbed even more booze and snacks, and passed out. And here you are now."
+Nikki continues, <q.nikki>After that, you stumbled into the kitchen, grabbed even more booze and snacks, and passed out. And here you are now.</q>
 
 You gradually stand up, dusting some pretzel crumbs off your back. You look down by your feet, kicking aside some of the trash that surrounds you.
 
@@ -103,42 +107,42 @@ You gradually stand up, dusting some pretzel crumbs off your back. You look down
 :: ...And the dildo?
 All three of you look down at the flared 14-incher lying limply beside you. The cats exchange a confused glance.
 
-"...I actually have no idea where you got that from," says Nikki.
+<q.nikki>...I actually have no idea where you got that from,</q> says Nikki.
 
-"A riddle for the ages," says Nox.
+<q.nox>A riddle for the ages,</q> says Nox.
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 <!-- CONVERSATION ROUTE 2 -->
 :: Have you guys seen my friend?
 
-"Oh, you mean Reese?" Nikki's face lights up.
+<q.nikki>Oh, you mean Reese?</q> Nikki's face lights up.
 
 You incredulously ask the cats how they know Reese's name.
 
 <% setup.setFlag("upstairsUnlocked"); %>
 
-Nox smiles, "We mostly know him as guinea_puff_2B8. He's been a pretty active member of the Grumble Geek forums, just like us! It's a worldwide community for preds and prey to chat, and find consensual vore meetups!"
+Nox smiles, <q.nox>We mostly know him as guinea_puff_2B8. He's been a pretty active member of the Grumble Geek forums, just like us! It's a worldwide community for preds and prey to chat, and find consensual vore meetups!</q>
 
-Nikki nods, "He's been raving about going to this party for weeks." 
+Nikki nods, <q.nikki>He's been raving about going to this party for weeks.</q> 
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %>
 
 :: Where did he go!? Maybe I can still save him!
-Nikki thinks back, and says, "I'm pretty sure I caught a short glimpse of Basil's sister bringing him upstairs..."
+Nikki thinks back, and says, <q.nikki>I'm pretty sure I caught a short glimpse of Basil's sister bringing him upstairs...</q>
 
-Nox grins, "And I caught a very *long* glimpse of Lacey and her boyfriend going to town swallowing that yummy boy bod!"
+Nox grins, <q.nox>And I caught a very *long* glimpse of Lacey and her boyfriend going to town swallowing that yummy boy bod!</q>
 
 You rocket to your feet. <% if (s.ateFaith) %>Faith lets out an uncomfortable yelp, as if reminding you to be careful as she's still inside your mouth.<%;%> Reese is upstairs? Maybe there's still time to get him out of there!
 
-Nox shakes his head, "Sorry, that was like three hours ago. Knowing Lacey, he's probably been digested already."
+Nox shakes his head, <q.nox>Sorry, that was like three hours ago. Knowing Lacey, he's probably been digested already.</q>
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: Oh. I see...
 You collapse to your knees. You can't believe it; you were so busy getting wasted, you couldn't save him! It's all your fault.
 
-Nox seems confused, "Save? Knowing Reese, the whole thing was 100% consensual. That dude was a vorny freak, even by our standards! It's weird that he would bring you here without telling you that..."
+Nox seems confused, <q.nox>Save? Knowing Reese, the whole thing was 100% consensual. That dude was a vorny freak, even by our standards! It's weird that he would bring you here without telling you that...</q>
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
@@ -147,36 +151,36 @@ You think back to when you and Reese first arrived, and he ventured off into the
 
 ...What a weirdo, you think. Still, being digested must have been painful, right?
 
-Nox pats you on the shoulder, "I can assure you, Lacey was really gentle with him. Your friend died doing what he loved! It's all part of the Circle of Life."
+Nox pats you on the shoulder, <q.nox>I can assure you, Lacey was really gentle with him. Your friend died doing what he loved! It's all part of the Circle of Life.</q>
 
-Nikki nods. "Circle of Life," she repeats.
+Nikki nods. <q.nikki>Circle of Life,</q> she repeats.
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: Wait, why were you watching to begin with?
-Nox smiles weakly, "Eheh, there's a perfectly reasonable explanation for that. You see-"
+Nox smiles weakly, <q.nox>Eheh, there's a perfectly reasonable explanation for that. You see-</q>
 
-Nikki interrupts, "Ahem, I'm sure our friend doesn't need to hear about this... Why don't we tell them about *that thing* we had in mind?"
+Nikki interrupts, <q.nikki>Ahem, I'm sure our friend doesn't need to hear about this... Why don't we tell them about *that thing* we had in mind?</q>
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: Are you guys predators...?
-Nikki smiles coyly. "We're not going to eat you, if that's what you're wondering."
+Nikki smiles coyly. <q.nikki>We're not going to eat you, if that's what you're wondering.</q>
 
-"Oh, heavens no!" says Nox, "You're way too big!"
+<q.nox>Oh, heavens no!</q> says Nox, <q.nox>You're way too big!</q>
 
-Nikki nods, "My sibling and I don't much fancy ourselves as carnivores, per se..."
+Nikki nods, <q.nikki>My sibling and I don't much fancy ourselves as carnivores, per se...</q>
 
-Nox smiles enthusiastically, "We prefer to think of ourselves as encouraging observers!"
+Nox smiles enthusiastically, <q.nox>We prefer to think of ourselves as encouraging observers!</q>
 
 * [[That's... good?]]
 
 :: That's... good?
-"I'm glad you think so," Nikki says, taking a few powerful steps closer to you.
+<q.nikki>I'm glad you think so,</q> Nikki says, taking a few powerful steps closer to you.
 
 You're filled with a sense of dread as Nikki draws near, as if she and her brother were somehow an incarnation of Death. Soon, she's fully invaded your personal space, her narrow yellow eyes peering and probing into your soul, and her mostly flat chest level with your own.
 
-"But that reminds me, Hollis," says Nikki, "While we've got you here, my sibling and I have an... interesting proposition for you," She runs her paw gently up the fur of your arm, giving you goosebumps.
+<q.nikki>But that reminds me, Hollis,</q> says Nikki, <q.nikki>While we've got you here, my sibling and I have an... interesting proposition for you,</q> She runs her paw gently up the fur of your arm, giving you goosebumps.
 
 * [[Well I'm flattered, but...]]
 * [[Oh, tell me more!]]
@@ -192,16 +196,16 @@ You perk your eyebrows up.
 <%= story.render("Interesting proposition.") /* [[Interesting proposition.]] */ %>
 
 :: Interesting proposition.
-Nox immediately blurts out, "It's not sex!"
+Nox immediately blurts out, <q.nox>It's not sex!</q>
 
 Nikki shoots him a look.
 
-"Sorry, it sounded like you were talking about sex. Which we're not."
+<q.nox>Sorry, it sounded like you were talking about sex. Which we're not.</q>
 
 * [[Wh-what is it then?]]
 
 :: Wh-what is it then?
-"Glad you asked," says Nikki, "Nox, if you will?"
+<q.nikki>Glad you asked,</q> says Nikki, <q.nikki>Nox, if you will?</q>
 
 Nox reaches into his breast pocket and pulls out something small and brown, and presents it toward you. You squint to examine it, and your eyes go wide.
 
@@ -210,16 +214,16 @@ Nox reaches into his breast pocket and pulls out something small and brown, and 
 :: A mouse!?
 In Nox's paws stands a dwarf mouse. The creature is about six inches tall. She's naked, which isn't unnatural for mice, or tinykind in general. Her body is covered from head to toe with light brown fur. She struggles to balance, and shields her face at the sudden exposure to light.
 
-"A meal!" Nikki smiles.
+<q.nikki>A meal!</q> Nikki smiles.
 
-"Nya! A morsel!" Nox beams. "For you!"
+<q.nox>Nya! A morsel!</q> Nox beams. <q.nox>For you!</q>
 
 * [[You want me to eat her??]]
 
 :: You want me to eat her??
-Nikki nods, "Oh yes, yes we do."
+Nikki nods, <q.nikki>Oh yes, yes we do.</q>
 
-Nox says, "We figured that since you're feeling sauced and snacky, you'd enjoy feeling this lovely little lady wriggling down your throat!"
+Nox says, <q.nox>We figured that since you're feeling sauced and snacky, you'd enjoy feeling this lovely little lady wriggling down your throat!</q>
 
 Your mouth goes completely dry.
 
@@ -230,22 +234,22 @@ You look nervously at the tiny mouse. She looks back at you hopefully.
 :: Oh, um, I don't... do that.
 But you're not a predator, you say. You don't eat people. Nor eggs, fish, or dairy, for that matter.
 
-"Of course you don't," says Nikki, "That's actually why we're so interested."
+<q.nikki>Of course you don't,</q> says Nikki, <q.nikki>That's actually why we're so interested.</q>
 
-Nox smirks, "There's nothing quite the thrill of like watching someone's first time!"
+Nox smirks, <q.nox>There's nothing quite the thrill of like watching someone's first time!</q>
 
-"Especially you herbivores! You get so conflicted and twisted up over it inside..." Nikki adds, betraying her own excitement with a blush. "But at the end of the day, no one can resist a snack!"
+<q.nikki>Especially you herbivores! You get so conflicted and twisted up over it inside...</q> Nikki adds, betraying her own excitement with a blush. <q.nikki>But at the end of the day, no one can resist a snack!</q>
 
 * [[Um, I'd rather not...]]
 
 :: Um, I'd rather not...
 You're about to say you'd rather not, but Nikki interrupts you.
 
-"Not to mention, our little friend here is perfectly and completely willing." Nikki shoots a glare at the mouse in Nox's paws. "Isn't that right?"
+<q.nikki>Not to mention, our little friend here is perfectly and completely willing.</q> Nikki shoots a glare at the mouse in Nox's paws. <q.nikki>Isn't that right?</q>
 
 <q.mouse>Yes, that's right! Ha ha!</q> the mouse replies with a forced smile.
 
-"So, why not give it a try?" asks Nox, "A small, vulnerable thing like you may not get another chance before someone eats *you* all up!" He brings the mouse girl up to your paws, gesturing for you to hold her. "Maybe just a little taste?"
+<q.nox>So, why not give it a try?</q> asks Nox, <q.nox>A small, vulnerable thing like you may not get another chance before someone eats *you* all up!</q> He brings the mouse girl up to your paws, gesturing for you to hold her. <q.nox>Maybe just a little taste?</q>
 
 * [[Examine mouse.]]
 
@@ -274,9 +278,9 @@ Faith swallows and says, <q.mouse>Yup, haha!!</q> once again looking halfway ove
 :: I won't do it!
 You can't believe they lied to you. You tell the cats that you refuse to participate in something so barbaric as devouring a helpless mouse against her will.
 
-Nox seems disappointed. "I guess there was always a possibility you'd say no. We can't force you, after all!"
+Nox seems disappointed. <q.nox>I guess there was always a possibility you'd say no. We can't force you, after all!</q>
 
-Nikki snatches Faith back out of your paws, causing her to let out a startled squeak. The cat examines her coldly, and muses, "I suppose there are other ways we could have our fun with her..."
+Nikki snatches Faith back out of your paws, causing her to let out a startled squeak. The cat examines her coldly, and muses, <q.nikki>I suppose there are other ways we could have our fun with her...</q>
 
 Your eyes go wide. 
 
@@ -285,53 +289,53 @@ Your eyes go wide.
 :: You mean like torture??
 You recall terrible news stories of people doing hideous, awful things to micros, but not getting caught for lack of evidence. Once in middle school, someone dared you to search for "micro hard vore" on a school computer. You didn't see anything, but you were banned from the computer lab for a few weeks after that.
 
-Nikki looks back to you, "Torture is such a strong word... But yeah, pretty much."
+Nikki looks back to you, <q.nikki>Torture is such a strong word... But yeah, pretty much.</q>
 
 That's horrible! you say.
 
-"Well," Nox says, "my sister can be a little intense with her food. But that's only if you decide not to partake yourself!"
+<q.nox>Well,</q> Nox says, <q.nox>my sister can be a little intense with her food. But that's only if you decide not to partake yourself!</q>
 
 * [[I thought you said you weren't predators!]]
 * [[You're blackmailing me?!]]
 
 :: I thought you said you weren't predators!
-"Not quite," says Nikki.
+<q.nikki>Not quite,</q> says Nikki.
 
-"We only said we *preferred* to watch! Nyaha~!" says Nox.
+<q.nox>We only said we *preferred* to watch! Nyaha~!</q> says Nox.
 
 Nikki gently caresses Faith's cheek with her paw. The mouse recoils slightly, but tries not to move too much. She gives you an evil smile.
 
-"Oh, and don't try to stop us either," she says, making her sharp feline teeth visible between her lips, "My claws are a little sharp, and I'd hate to have an... unfortunate accident. You know how it is."
+<q.nikki>Oh, and don't try to stop us either,</q> she says, making her sharp feline teeth visible between her lips, <q.nikki>My claws are a little sharp, and I'd hate to have an... unfortunate accident. You know how it is.</q>
 
 * [[You're blackmailing me?!]]
 
 :: You're blackmailing me?!
-Nikki shakes her head. "Oh no, not blackmail! We're not *forcing* you to consume her."
+Nikki shakes her head. <q.nikki>Oh no, not blackmail! We're not *forcing* you to consume her.</q>
 
-"Think of it as more of an opportunity to reduce potential harm! If you swallow her, she'll hardly even suffer a little!" says Nox.
+<q.nox>Think of it as more of an opportunity to reduce potential harm! If you swallow her, she'll hardly even suffer a little!</q> says Nox.
 
-Nikki jumps in, "Whereas *I* can make no such promises!"
+Nikki jumps in, <q.nikki>Whereas *I* can make no such promises!</q>
 
-Nox chimes in, "But either way, she'll be in a belly. So really, you might as well, right?"
+Nox chimes in, <q.nox>But either way, she'll be in a belly. So really, you might as well, right?</q>
 
-Nikki glances toward the kitchen door, "And you better decide quick, before anyone comes in."
+Nikki glances toward the kitchen door, <q.nikki>And you better decide quick, before anyone comes in.</q>
 
 * [[Shouldn't she get a say too?]]
 
 :: Shouldn't she get a say too?
-Nikki groans, "Personifying your food never ends well..."
+Nikki groans, <q.nikki>Personifying your food never ends well...</q>
 
-"No, no, they've got a point," says Nox, "Little mouse, would you rather be eaten by Hollis or my sibling?"
+<q.nox>No, no, they've got a point,</q> says Nox, <q.nox>Little mouse, would you rather be eaten by Hollis or my sibling?</q>
 
 All eyes fall on Faith, who stands nervously atop Nikki's paw.
 
 <q.mouse>Um... Well...</q> the mouse hesitates, <q.mouse>P-preferably neither?</q>
 
-She can tell from the cats' expressions that this is not a satisfactory answer. Nikki bares her fangs, and uses a claw to tug your lips aside, exposing your flat, herbivorous teeth. "Be honest, dear," she says, "Would you rather be at my mercy, or theirs?"
+She can tell from the cats' expressions that this is not a satisfactory answer. Nikki bares her fangs, and uses a claw to tug your lips aside, exposing your flat, herbivorous teeth. <q.nikki>Be honest, dear,</q> she says, <q.nikki>Would you rather be at my mercy, or theirs?</q>
 
 Faith looks up at you nervously, and stammers, <q.mouse>I-I'd feel safer if it was with you, Hollis? But I don't want you to feel responsible for um... what's going to happen to me... Sorry, but I guess I'll leave the choice it in your hands.</q>
 
-"There, she's had her say," says Nikki, "Time to choose, Hollis. You gonna eat her or not?"
+<q.nikki>There, she's had her say,</q> says Nikki, <q.nikki>Time to choose, Hollis. You gonna eat her or not?</q>
 
 * [[Hollis: Decide.]]
 
@@ -382,26 +386,26 @@ Faith forces a smile. <q.mouse>That's okay Hollis, I forgive you. If you see my 
 
 <% if (s.rescuedKaia) { %>You remember Kaia. Of course! How could you have forgotten? You nod to <% } %>
 
-"Finally," Nikki says, clutching Faith by the middle, and drawing her toward her lips, "Let's get this show on the road!"
+<q.nikki>Finally,</q> Nikki says, clutching Faith by the middle, and drawing her toward her lips, <q.nikki>Let's get this show on the road!</q>
 
-"Oh boy," Nox gushes, "Can't wait! Nyah!"
+<q.nox>Oh boy,</q> Nox gushes, <q.nox>Can't wait! Nyah!</q>
 
-"Don't worry, dear," Nikki coos at Faith, baring her fangs tenderly,  "You'll hardly feel a thing."
+<q.nikki>Don't worry, dear,</q> Nikki coos at Faith, baring her fangs tenderly,  <q.nikki>You'll hardly feel a thing.</q>
 
 * [[Cover your eyes.]]
 
 :: Cover your eyes. [checkpoint]
 It's too much to watch. You put your paws in front of your eyes. Nox points his phone camera at Faith, and presses record.
 
-"Any last words, my ignoble morsel?" asks Nikki, grinning from ear to ear.
+<q.nikki>Any last words, my ignoble morsel?</q> asks Nikki, grinning from ear to ear.
 
 You hear Faith beg, <q.mouse>Ms. N-Nikki, it's not too late to let me go. I won't tell anyone about this, honest!</q> Her tiny eyes staring deep at Nikki's, hoping to find just a hint of compassion within the carnivore.
 
 In response, Nikki narrows her eyes and begins to impatiently dangle Faith by the tail. <q.mouse>O-ow... Please, you don't have to do this...</q>
 
-"No," says Nox, "But she clearly really wants to! And I wanna watch. Nyaha!"
+<q.nox>No,</q> says Nox, <q.nox>But she clearly really wants to! And I wanna watch. Nyaha!</q>
 
-"Mmm, c'mere cutie..." Nikki purrs, drawing Faith closer and closer to her lips. "I need you inside me..." The mouse shudders and instinctively kicks a little as the cat places her tiny feet delicately onto her outstretched tongue.
+<q.nikki>Mmm, c'mere cutie...</q> Nikki purrs, drawing Faith closer and closer to her lips. <q.nikki>I need you inside me...</q> The mouse shudders and instinctively kicks a little as the cat places her tiny feet delicately onto her outstretched tongue.
 
 You shudder... It's too much to even listen to. You're anticipating the awful, horrible sound of a cat's mouth gorily eviscerating its prey. All the content warnings could prepare you for what's to come.
 
@@ -417,7 +421,7 @@ Reacting suddenly to this unexpected movement, she instinctively bites down, sin
 
 Faith can only manage to squeak out, <q.mouse>O-ow...</q> before she falls unconscious.
 
-Nox's eyes go wide, as he stops the recording, and deletes it. "Th-that wasn't supposed to happen..."
+Nox's eyes go wide, as he stops the recording, and deletes it. <q.nox>Th-that wasn't supposed to happen...</q>
 
 Seems like you're too little, too late. But who could blame you for trying?
 
@@ -428,53 +432,53 @@ Seems like you're too little, too late. But who could blame you for trying?
 
 Nikki delicately lifts her chin, placing more of Faith's tiny body into her mouth. Her tongue is slick with spit, and occasionally pulses underneath her prey, making all kinds of slobbery wet sounds.
 
-Nox watches with awe and excitement, while Faith lets out a series of uncomfortable grunts and cries. "Yesss," he says, "Ooh, I bet she's delicious!"
+Nox watches with awe and excitement, while Faith lets out a series of uncomfortable grunts and cries. <q.nox>Yesss,</q> he says, <q.nox>Ooh, I bet she's delicious!</q>
 
-Nikki closes her lips around Faith's tail, but does not swallow her yet. Instead, she simply takes a moment to saver the taste. "Mmmnn," she moans, pressing Faith against the roof of her mouth and swallowing saliva. Her tongue tickles and wraps around the mouse.
+Nikki closes her lips around Faith's tail, but does not swallow her yet. Instead, she simply takes a moment to saver the taste. <q.nikki>Mmmnn,</q> she moans, pressing Faith against the roof of her mouth and swallowing saliva. Her tongue tickles and wraps around the mouse.
 
 You peek at the scene from between your paws. There's... less teeth involved than you expected...
 
 * [[You're... not chewing her?]]
 
 :: You're... not chewing her?
-"Chew?" Nikki asks, still speaking in a dignified manner despite her mouth muffled with mouse, "Whyever woul' I do tha'?" As she talks, her grip on Faith loosens slightly. The mouse able to flip onto her belly, and poke her head out between Nikki's lips. She's clearly very frightened, but seemingly unharmed.
+<q.nikki>Chew?</q> Nikki asks, still speaking in a dignified manner despite her mouth muffled with mouse, <q.nikki>Whyever woul' I do tha'?</q> As she talks, her grip on Faith loosens slightly. The mouse able to flip onto her belly, and poke her head out between Nikki's lips. She's clearly very frightened, but seemingly unharmed.
 
 You say you thought they'd be, erm, mauling her.
 
-"You assumed..." says Nox.
+<q.nox>You assumed...</q> says Nox.
 
-"...And we shaw no need to correct," says Nikki.
+<q.nikki>...And we shaw no need to correct,</q> says Nikki.
 
-"Besides," Nox continues, "we're not bloodthirsty, sadistic monsters!" says Nox, "Just regular sadists. The only physical pain she'll experience is slowly and painfully digesting! Although she'll probably be unconscious for that... We mostly just like watching prey feel scared and helpless!"
+<q.nox>Besides,</q> Nox continues, <q.nox>we're not bloodthirsty, sadistic monsters!</q> says Nox, <q.nox>Just regular sadists. The only physical pain she'll experience is slowly and painfully digesting! Although she'll probably be unconscious for that... We mostly just like watching prey feel scared and helpless!</q>
 
 Th-that's still pretty bad, you say.
 
-Nox rolls his eyes, and points toward the dining room. "If you wanna be judgmental, the door's that way. Otherwise, shush. This is my favorite part!"
+Nox rolls his eyes, and points toward the dining room. <q.nox>If you wanna be judgmental, the door's that way. Otherwise, shush. This is my favorite part!</q>
 
 * [[Nox: Tease.]]
 
 :: Nox: Tease.
-Nox puts his eyes level with Faith's tiny face, still sticking out of <%= !s.ateFaith?"his sister's":"your"%> mouth. "So, little mousey, how do you feel about being digested?"
+Nox puts his eyes level with Faith's tiny face, still sticking out of <%= !s.ateFaith?"his sister's":"your"%> mouth. <q.nox>So, little mousey, how do you feel about being digested?</q>
 
 <q.mouse>Uhm... Scared?</q> the mouse responds.
 
-Nox nods, "Good, good! Your little body's gonna be dissolved inside of <%= !s.ateFaith?"my sister's":"this rabbit's"%> stomach, so a little fear is perfectly natural! What else?"
+Nox nods, <q>Good, good! Your little body's gonna be dissolved inside of <%= !s.ateFaith?"my sister's":"this rabbit's"%> stomach, so a little fear is perfectly natural! What else?</q>
 
 Faith looks sad now. <q.mouse>I'm worried about my girlfriend Kaia. She's really strong, but I think she'll worry about me if I disappear...</q>
 
-"Oh," Nox says, "You're scared you might never see her again! How deliciously tragic, nyaha!""
+<q.nox>Oh,</q> Nox says, <q.nox>You're scared you might never see her again! How deliciously tragic, nyaha!</q>
 
-"If it makes you feel any better," says Nikki, "at a party like this, there's pretty good odds your little friend was also eaten."
+<q.nikki>If it makes you feel any better,</q> says Nikki, <q.nikki>at a party like this, there's pretty good odds your little friend was also eaten.</q>
 
-<q.mouse>Er, that really doesn't help at all?</q>
+* [[Continue.|Nox: Tease II]]
 
-Nikki laughs, turns to you, and adds, "Oh, and <%= s.ateFaith?"that":"tha'" %> <%= s.ateFaith?"goes":"goesh"%> for your buddy <%= s.ateFaith?"Reese":"Reesh" %> too."
+:: Nox: Tease II
 
-<q.mouse>I'd really like to get out of here,</q> She shifts her arms slightly, attempting to pull herself free. <%- !s.ateFaith?"Nikki's":"Your" %> mouth instinctively sucks her backward.
+<q.mouse>That doesn't help at all? I'd actually really like to get out of here,</q> She shifts her arms slightly, attempting to pull herself free. <%- !s.ateFaith?"Nikki's":"Your" %> mouth instinctively sucks her backward.
 
-Nikki smiles, "Oh, you'll be 'coming out' <%= s.ateFaith?"sooner":"shooner"%> or later."
+Nikki smiles, <q.nikki>Oh, you'll be 'coming out' <%= s.ateFaith?"sooner":"shooner"%> or later.</q>
 
-Nox laughs, and restarts the recording. "Sounds like someone's eager to get swallowed! Shall we?"
+Nox laughs, and restarts the recording. <q.nox>Sounds like someone's eager to get swallowed! Shall we?</q>
 
 Faith stammers, <q.mouse>No, wait, just think about this-</q>
 
@@ -502,16 +506,16 @@ You can't bear to look...
 
 :: Swallow Faith.
 <% if (!s.ateFaith) %>
-Nikki carelessly flings her head back. The squealing mouse goes careening into her gullet. With a single "gulp", she becomes nothing but a bulge beneath the black fur of the cat's throat. It's... fascinating to watch.
+Nikki carelessly flings her head back. The squealing mouse goes careening into her gullet. With a single gulp, she becomes nothing but a bulge beneath the black fur of the cat's throat. It's... fascinating to watch.
 <% else %>
 Reluctantly, you close your lips and tip your chin back. Faith's body gently glides down your tongue, and into the back of your throat. You choke on her briefly, but after a series of slow, considered gulps, you swallow her. It feels... fascinating.
 <% ; %>
 
-"Mmm," Nikki moans. "Oooh!" Nox giggles.
+<q.nikki>Mmm,</q> Nikki moans. <q.nox>Oooh!</q> Nox giggles.
 
 // TODO: More swallowing happens.
 
-* Faith eventually winds up in <%- s.ateFaith ? "your" : "Nikki's"%> stomach.
+* Faith eventually winds up in <%-s.ateFaith?"your":"Nikki's"%> stomach.
 <% if (!s.ateFaith) %>
 * You're invited to rub and touch the squirming outline.
 * Choice time.
@@ -520,33 +524,33 @@ Reluctantly, you close your lips and tip your chin back. Faith's body gently gli
 <% ; %>
 * You try very hard to pretend like this doesn't arouse you. The cats are not fooled.
 * Faith continues to squirm and struggle. The cats are highly satisfied.
-* "We better clear out of here before someone comes in."
+* <q.nox>We better clear out of here before someone comes in.</q>
 * Then, the door to the dining room slowly swings open...
 
 
 * [[Kaia: Enter.]]
 
 :: Kaia: Enter.
-Suddenly, <%- s.rescuedKaia ? "Kaia" : "a white mouse "%> bursts into the room. <%- s.rescuedKaia ? "" : "Kaia, you presume."%> <q.mouse>There you are, you monsters,</q> she growls at the cats, <q.mouse>I've been looking for you two for hours. Where's Faith?</q>
+Suddenly, <%-s.rescuedKaia?"Kaia":"a white mouse"%> bursts into the room. <%-s.rescuedKaia ?"":"Kaia, you presume."%> <q.mouse>There you are, you monsters,</q> she growls at the cats, <q.mouse>I've been looking for you two for hours. Where's Faith?</q>
 
-Nox can't help but grin widely. He wordlessly points a claw toward <%- s.ateFaith ? "your" : "Nikki's" %> stomach, clearly stifling a snicker. It squirms violently in response.
+Nox can't help but grin widely. He wordlessly points a claw toward <%-s.ateFaith?"your":"Nikki's"%> stomach, clearly stifling a snicker. It squirms violently in response.
 
-Kaia blinks in shock. The white fur of her face seems to become puffy red with rage. She turns her tiny, powerful gaze toward you. <% if (s.rescuedKaia) %><q.mouse>H-Hollis?</q> blinks in disbelief.<% else %>She points an accusatory claw at you, and says, <q.mouse>You! You're the rabbit from earlier!</q><% ; %> She seems to be at a loss for words. <q.muse>H-how could you <%- s.ateFaith ? "do this" : "let this happen" %>?</q>
+Kaia blinks in shock. The white fur of her face seems to become puffy red with rage. She turns her tiny, powerful gaze toward you. <% if (s.rescuedKaia) %><q.mouse>H-Hollis?</q> blinks in disbelief.<% else %>She points an accusatory claw at you, and says, <q.mouse>You! You're the rabbit from earlier!</q><% ; %> She seems to be at a loss for words. <q.muse>H-how could you <%-s.ateFaith?"do this":"let this happen"%>?</q>
 
 Your heart feels ready to sink into the floor from guilt over what you <% if (s.ateFaith) %>did<% else %>failed to stop<% ; %>. You're certain that no words in the world which could answer that damning question to her satisfaction.
 
 * [[I... I'm sorry...|Sorry for eating your girlfriend...]]
 
 :: Sorry for eating your girlfriend...
-"Oh-ho," laughs Nikki, patting you on the back. "This dear rabbit is hardly to blame. We basically forced them to <% if (s.ateFaith) %>eat her<% else %>watch us<% ; %>."
+<q.nikki>Oh-ho,</q> laughs Nikki, patting you on the back. "This dear rabbit is hardly to blame. We basically forced them to <% if (s.ateFaith) %>eat her<% else %>watch us<% ; %>."
 
-Nox adds with a smile, "Plus, they were extremely drunk at the time! We're the ones you should be angry at."
+Nox adds with a smile, <q.nox>Plus, they were extremely drunk at the time! We're the ones you should be angry at.</q>
 
 Tears begin to stream down Kaia's face, and for a moment, she is silent. Expressionless. <q.mouse>I... I guess this was always going to one of us sooner or later...</q> She covers her face, still sobbing, and cries out, <q.mouse>Oh, why on earth did I bring her to a place like this??</q>
 
-Nox helpfully jumps in, "Is it because your youthful sense of invulernability, combined with a general sense of dissatisfaction toward the world, causes you to seek out self-destructive thrills?"
+Nox helpfully jumps in, <q.nox>Is it because your youthful sense of invulernability, combined with a general sense of dissatisfaction toward the world, causes you to seek out self-destructive thrills?</q>
 
-Kaia stares at him, baffled, and dries her tears on her arm. After only a second of deliberation, she points a claw at you <%-s.ateFaith?"you":"Nikki"%>. "You. You disgusting, nauseous carnivore. If you have any humanity left, swallow me, and reunite me with my Faith."
+Kaia stares at him, baffled, and dries her tears on her arm. After only a second of deliberation, she points a claw at you <%-s.ateFaith?"you":"Nikki"%>. <q.mouse>You. You disgusting, nauseous carnivore. If you have any humanity left, swallow me, and reunite me with my Faith.</q>
 
 * [[Y-you wanna be eaten too?]]
 
@@ -556,15 +560,15 @@ Kaia stares at him, baffled, and dries her tears on her arm. After only a second
 <% if (s.ateFaith) { %> 
 You feel really conflicted at this request, but Nikki and Nox both look at you expectantly.
 
-"I mean," says Nikki, "You did eat her girlfriend..."
+<q.nikki>I mean,</q> says Nikki, <q.nikki>You did eat her girlfriend...</q>
 
-"After doing something so horrible, awful, and immoral... it's really the least you could do," says Nox.
+<q.nox>After doing something so horrible, awful, and immoral... it's really the least you could do,</q> says Nox.
 
 Alright, you say, you get it. You nod at Kaia, and lift her up into your paws. A-are you ready? you ask.
 
 Kaia smiles weakly, <q.mouse>Ready as I'll ever be.</q> 
 <% } else { %>
-Without even another word, Nikki snatches Kaia up, and starts bringing her toward her mouth. "More food? Sure, whatever," smiles the cat.
+Without even another word, Nikki snatches Kaia up, and starts bringing her toward her mouth. <q.nikki>More food? Sure, whatever,</q> smiles the cat.
 
 <q.mouse>Nngh-</q>  Kaia says, squirming slightly, <q.mouse>I um- maybe had a few more things I wanted to say first...</q>
 
@@ -589,9 +593,9 @@ You're completely silent, as your mind processes and replays the heartbreaking e
 
 Two mice—two *people* who would have otherwise lived long, fulfilling lives—have been devoured, <%-s.ateFaith?"*by you*":"and you did nothing to stop it"%>. You feel ready to vomit, either from the unspeakable loss you've been made complicit in, or possibly from the amount of pretzels and vodka filling your stomach.
 
-Finally, Nox stops recording on his phone, and breaks the silence. "Goodness," he says, wearing a satisfied grinning from ear-to-ear, "That was soo hot!"
+Finally, Nox stops recording on his phone, and breaks the silence. <q.nox>Goodness,</q> he says, wearing a satisfied grinning from ear-to-ear, <q.nox>That was soo hot!</q>
 
-Nikki pats <%-s.ateFaith?"your":"her"%> gut, and nods, "Yes, I enjoyed it greatly too." You can't muster words to describe how apalled you are by their nonchalant demeanor. 
+Nikki pats <%-s.ateFaith?"your":"her"%> gut, and nods, <q.nikki>Yes, I enjoyed it greatly too.</q> You can't muster words to describe how apalled you are by their nonchalant demeanor. 
 
 <%= story.render("Nikki & Nox ending") /* [[Nikki & Nox ending]] */ %>
 
