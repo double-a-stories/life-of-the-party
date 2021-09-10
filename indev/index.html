@@ -452,7 +452,7 @@ radial-gradient(ellipse at top, #eeeeee, transparent),
 /* twine-user-stylesheet #8: "Kaia quirk" */
 /* She talks small. */
 .mouse {
-  font-size: 80%;
+  font-size: 85%;
 }
 .jackrabbit {
   /* No quirk for now. */
@@ -639,17 +639,11 @@ body[data-tags~="dreamy_3"] {
 }
 
 @keyframes space {
-  40% {
-    opacity: 0.75;
-  }
-  50% {
-    opacity: 0.25;
-  }
-  60% {
-    opacity: 0.75;
+  from {
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(359deg);
   }
 }
 
@@ -1354,7 +1348,7 @@ $(window).on("sm.story.started", (ev, { passage }) => {
   const space = document.createElement("div");
   space.id = "space-bg";
   space.setAttribute("role", "presentation");
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 2; i++) {
     const stars = document.createElement("div");
     stars.classList.add("space", `stars${i}`);
     space.appendChild(stars);
@@ -1369,7 +1363,7 @@ document.addEventListener('pointerdown', function isTouching(ev) {
   } else {
     window.isTouching = !(ev.pointerType == "mouse");
   }
-});</script><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="no_heading start" position="100,100" size="100,100">&lt;style&gt;
+});</script><tw-tag name="vore" color="red"></tw-tag><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-passagedata pid="1" name="Start" tags="no_heading start" position="100,100" size="100,100">&lt;style&gt;
 tw-passage &gt; * {
   margin-bottom: 5rem;
 }
@@ -1534,7 +1528,7 @@ The room&#39;s every surface is flush with immaculate porcelain and gaudy gold t
 
 * [[Masturbate.]] &lt;!-- hazel-route.tw --&gt;
 * [[Use toilet.]]
-* [[Leave.|Leave the bathroom.]]</tw-passagedata><tw-passagedata pid="17" name="Use toilet." tags="" position="850,225" size="100,100">You consider using the toilet. However, upon examining it, you realize that the bowl is almost twice your size, and you could easily fall in. You realize that this house is probably owned by a family of rhinoceroses, or maybe big horses.
+* [[Leave.|Leave the bathroom.]]</tw-passagedata><tw-passagedata pid="17" name="Use toilet." tags="" position="850,225" size="100,100">You consider using the toilet. However, at a second glance, you realize it not designed for someone of your little stature. The bowl is almost twice your size, and you could easily fall in. Based on the size, you presume that this house is owned by a family of rhinoceroses, or maybe big horses.
 
 You didn&#39;t really need to pee anyway.
 
@@ -1930,7 +1924,7 @@ You nervously start to step toward the door.
 
 * [[Hollis: Escape.]]</tw-passagedata><tw-passagedata pid="64" name="Hollis: Escape." tags="" position="475,850" size="100,100">*CW: Violent threat. Unwilling vore. Bad breath.*
 
-You take a deep breath and make a break for the door. away, praying you&#39;ll be fast enough to make it out of here alive.
+You take a deep breath and make a break for the door, praying you&#39;ll be fast enough to make it out of here alive.
 
 &lt;q.ren&gt;😠😠😠 Graaaah!&lt;/q&gt;
 
@@ -2256,9 +2250,9 @@ if (text.includes(&quot;brown stallion&quot;)) s.partySeenBasil = true;
 return text;
 })() %&gt;</tw-passagedata><tw-passagedata pid="88" name="Wink back at Basil." tags="checkpoint" position="975,1100" size="100,100">&lt;% setup.setFlag(&quot;talkedToBasil&quot;); %&gt;
 
-The horse smiles, and walks over to you, carrying two bottles of beer.
+The horse smiles, and walks over to you, carrying two bottles of beer. Like most draft horses, he&#39;s an absolute giant, although it&#39;s more polite to refer to larger anthros using euphemisms like &quot;gentle&quot;, whereas smaller anthros are &quot;noble&quot;.
 
-&quot;Hey, thanks for coming,&quot; he says, squatting down to offer you one. This gesture makes you realize that he&#39;s basically twice your height, and easily the biggest person in the room. &quot;I&#39;m Basil.&quot;
+&quot;Hey, thanks for coming,&quot; he says, squatting down to offer you one. It&#39;s this gesture makes you realize that he&#39;s truly twice your height, and easily the biggest person in the room. &quot;I&#39;m Basil.&quot;
 
 * [[Take drink.]]
 * [[Don&#39;t take drink.]]</tw-passagedata><tw-passagedata pid="89" name="Take drink." tags="" position="1100,1100" size="100,100">You take the bottle and have a few courteous sips. He chugs his immediately, swallowing the whole beer in only a few gulps. It&#39;s impressive to watch. He wipes his mouth.
@@ -2592,7 +2586,7 @@ You roll your eyes.
 
 The wolf is silent for a moment, then says, &lt;q.byron&gt;Truly, I am impressed by your knowledge. It is good to see *someone* at this party is not a culture-less ruthead. With whom do I have the pleasure of speaking?&lt;/q&gt;
 
-* [[The name&#39;s Freely. Hollis Freely.]]</tw-passagedata><tw-passagedata pid="133" name="The name&#39;s Freely. Hollis Freely." tags="" position="350,1725" size="100,100">&lt;q.byron&gt;Pleasure to make your acquaintance, dear rabbit,&lt;/q&gt; the wolf says, now observing you with renewed interest. &lt;%-s.bm?&quot;He&quot;:&quot;She&quot;%&gt; gestures for you to sit, and you oblige. &lt;%-s.bm?&quot;His&quot;:&quot;Her&quot;%&gt; fluffy tail curls around your back. It makes you slightly nervous.
+* [[The name&#39;s Freely. Hollis Freely.]]</tw-passagedata><tw-passagedata pid="133" name="The name&#39;s Freely. Hollis Freely." tags="" position="350,1725" size="100,100">&lt;q.byron&gt;Pleasure to make your acquaintance, noble rabbit,&lt;/q&gt; the wolf says, now observing you with renewed interest. &lt;%-s.bm?&quot;He&quot;:&quot;She&quot;%&gt; gestures for you to sit, and you oblige. &lt;%-s.bm?&quot;His&quot;:&quot;Her&quot;%&gt; fluffy tail curls around your back. It makes you slightly nervous.
 
 Finally, &lt;%-s.bm?&quot;he&quot;:&quot;she&quot;%&gt; deigns to introduce &lt;%-s.bm?&quot;himself&quot;:&quot;herself&quot;%&gt; to you. &lt;%-s.bm?&quot;He&quot;:&quot;She&quot;%&gt; gestures grandiosely to &lt;%-s.bm?&quot;his&quot;:&quot;her&quot;%&gt; chest, and says, &lt;q.byron&gt;I am &lt;%-s.bm?&quot;Emmet&quot;:&quot;Emily&quot;%&gt; Byron III, but you may call me simply &lt;%-s.bm?&quot;Byron&quot;:&quot;Emily&quot;%&gt;.&lt;/q&gt;
 
@@ -2618,25 +2612,25 @@ You say this turn of conversation is making you slightly uncomfortable.
 
 You&#39;re skeptical.
 
-* [[Why? So you can eat me?]]</tw-passagedata><tw-passagedata pid="138" name="Why? So you can eat me?" tags="" position="975,1725" size="100,100">&lt;q.byron&gt;What?&lt;/q&gt; &lt;%-s.bm?&quot;He&quot;:&quot;She&quot;%&gt; acts offended, and says, &lt;q.byron&gt;I had hoped that through my manners, I had proven myself above such silly suspicions. Unlike *some* of the savages here, I would never attempt to take advantage of a small, helpless herbivore in such a savage, uncivilized manner. It is beneath me.&lt;/q&gt;
+* [[Why? So you can eat me?]]</tw-passagedata><tw-passagedata pid="138" name="Why? So you can eat me?" tags="" position="975,1725" size="100,100">&lt;q.byron&gt;What?&lt;/q&gt; &lt;%-s.bm?&quot;He&quot;:&quot;She&quot;%&gt; acts offended, and says, &lt;q.byron&gt;I had hoped that through my manners, I had proven myself above such silly suspicions. Unlike *some* of the savages here, I would never attempt to take advantage of a helpless little person in such a savage, ungentle manner. It is beneath me.&lt;/q&gt;
 
 Uh-huh, you say.
 
 &lt;%-s.bm?&quot;He&quot;:&quot;She&quot;%&gt; raises a claw to &lt;%-s.bm?&quot;his&quot;:&quot;her&quot;%&gt; chin. &lt;q.byron&gt;But, if *you* were interested in such a thing, I suppose I would have no choice but to accept...&lt;/q&gt;
-* [[God, you&#39;re pathetic!]]
-* [[Ew, no!|God, you&#39;re pathetic!]]</tw-passagedata><tw-passagedata pid="139" name="God, you&#39;re pathetic!" tags="" position="1100,1725" size="100,100">&lt;%-s.bm?&quot;Byron&quot;:&quot;Emily&quot;%&gt; blinks. &lt;q.byron&gt;Ex*cuse* me?&lt;/q&gt;
+* [[God, you&#39;re pathetic!]]</tw-passagedata><tw-passagedata pid="139" name="God, you&#39;re pathetic!" tags="" position="1100,1725" size="100,100">&lt;%-s.bm?&quot;Byron&quot;:&quot;Emily&quot;%&gt; blinks. &lt;q.byron&gt;Ex*cuse* me?&lt;/q&gt;
 
 You tell &lt;%-s.bm?&quot;him&quot;:&quot;her&quot;%&gt; firmly that you&#39;re not gonna let &lt;%-s.bm?&quot;him&quot;:&quot;her&quot;%&gt; eat you, or fuck you, or anything.
 
-&lt;%-s.bm?&quot;His&quot;:&quot;Her&quot;%&gt; mouth seems to become slightly dry. &lt;q.byron&gt;Are... are you sure? I have been told it can be quite... pleasant, given the right participants. A sensual reminder of animal passions long forgotten, heightened by the cruel grip of mortality...&lt;/q&gt;
+&lt;%-s.bm?&quot;His&quot;:&quot;Her&quot;%&gt; mouth seems to become slightly dry. &lt;q.byron&gt;Are... are you sure? I have been told it can be quite... pleasant, given the right participants. A sensual reminder of animal passions long forgotten, a pleasure so greatly heightened by the cruel grip of mortality... Was I wrong to presume that your arrival here was a result of these incurable passions?&lt;/q&gt;
 
+* [[Ew, no!|Shut it!]]
 * [[Shut it!]]</tw-passagedata><tw-passagedata pid="140" name="Shut it!" tags="" position="1225,1725" size="100,100">Ugh, stop talking like that, you say. The whole &quot;sensitive musician&quot; shtick is obviously just a ploy to lure in prey. You tell &lt;%-s.bm?&quot;Byron&quot;:&quot;Emily&quot;%&gt; &lt;%-s.bm?&quot;he&quot;:&quot;she&quot;%&gt;&#39;s just horny and hungry, like everybody else at this dumb party. A literal wolf in sheep&#39;s clothing!
 
-&lt;%-s.bm?&quot;He&quot;:&quot;She&quot;%&gt; narrows &lt;%-s.bm?&quot;his&quot;:&quot;her&quot;%&gt; eyes, and scowls, &lt;q.byron&gt;...You insult me gravely, little thing. I have been nothing but a pinnacle of courtesy, and you rebuff both me and my pedigree.&lt;/q&gt; &lt;%-s.bm?&quot;He&quot;:&quot;She&quot;%&gt; sticks out a paw. &lt;q.byron&gt;Follow me.&lt;/q&gt;
+&lt;%-s.bm?&quot;He&quot;:&quot;She&quot;%&gt; narrows &lt;%-s.bm?&quot;his&quot;:&quot;her&quot;%&gt; eyes, and scowls, &lt;q.byron&gt;...You insult me gravely, little thing. I have been nothing but a pinnacle of noble courtesy, and you rebuff both me and my pedigree.&lt;/q&gt; &lt;%-s.bm?&quot;He&quot;:&quot;She&quot;%&gt; sticks out a paw. &lt;q.byron&gt;Follow me.&lt;/q&gt;
 
 * [[Don&#39;t take it.]]</tw-passagedata><tw-passagedata pid="141" name="Don&#39;t take it." tags="" position="100,1850" size="100,100">You stay put. The wolf begins openly scowling, but remains careful not to let the other party goers take notice.
 
-&lt;q.byron&gt;You slut!&lt;/q&gt; &lt;%-s.bm?&quot;he&quot;:&quot;she&quot;%&gt; pops &lt;%-s.bm?&quot;his&quot;:&quot;her&quot;%&gt; collar and snarls, &lt;q.byron&gt;You disgrace me and my family name! A gentle&lt;%-s.bm?&quot;man&quot;:&quot;woman&quot;%&gt; cannot let a slight like that go unpunished. I demand satisfaction.&lt;/q&gt;
+&lt;q.byron&gt;You ignoble &lt;!-- tiny --&gt; slut!&lt;/q&gt; the wolf curses at you, popping &lt;%-s.bm?&quot;his&quot;:&quot;her&quot;%&gt; collar. &lt;%-s.bm?&quot;Byron&quot;:&quot;Emily&quot;%&gt; snarls, &lt;q.byron&gt;You disgrace me and my family name! A gentle&lt;%-s.bm?&quot;man&quot;:&quot;woman&quot;%&gt; like myself cannot let a slight like that go unpunished. I demand satisfaction!&lt;/q&gt;
 
 &lt;%-s.bm?&quot;He&quot;:&quot;She&quot;%&gt; rises to &lt;%-s.bm?&quot;his&quot;:&quot;her&quot;%&gt; feet, slings &lt;%-s.bm?&quot;his&quot;:&quot;her&quot;%&gt; guitar over &lt;%-s.bm?&quot;his&quot;:&quot;her&quot;%&gt; back, and offers you &lt;%-s.bm?&quot;his&quot;:&quot;her&quot;%&gt; paw. &lt;q.byron&gt;Stand up,&lt;/q&gt; &lt;%-s.bm?&quot;he&quot;:&quot;she&quot;%&gt; commands.
 
@@ -2836,15 +2830,19 @@ There is no reply.
 
 &lt;div.byron&gt;
 
-Last night, out of a selfless desire to share my music with the world, I stooped to visiting a predation party. Everyone there was slightly boorish and ill-bred, save for this rabbit, who was slightly above average. We talked about music for a bit, then it started coming onto me. Like a true gentlewolf, I of course declined, but it was highly insistent, and I was feeling slightly hungry, so eventually I had no choice but to give it what it wanted.
+Last night, out of a selfless desire to share my music with the world, I stooped to visiting a local predation party. Everyone in attendance there struck me as slightly boorish and ill-bred, save for this little rabbit, which was slightly above average. It spoke with me about music for a bit, and before I knew it, it was coming onto me, practically begging to be digested by me! Alas, we lupines are eternally cursed by our inexorable pulchritude.
 
-This rabbit was a lithe creature of gray fur, and ears that stuck straight up. It had a sort of... nondescript fashion sense, which didn&#39;t matter much after it stripped naked right in front of me! There also wasn&#39;t long before it leapt right into my mouth, so I didn&#39;t get a good glimpse at its &quot;furrier&quot; regions. At first I suspected it was entirely sexless.
+Like a true gentlewolf, I of course declined the creature&#39;s plaintive exortions, yet its persistence was so insuperable, I had no choice but to oblige its ungentle demands of me! Besides, I *was* feeling a touch hungry.
 
-Once it was inside me, it proved to be quite the struggler. I will not lie to you, dear reader, I found it utterly exquisite to shamelessly play my role as a predator, something we wolves are so rarely able to do. Likewise, it played its part to perfection, although it seemingly didn&#39;t have the stamina to last very long. A pity, but not a huge surprise.
+The rabbit was an lithe being of gray fur, and possessing a sort of non-descript fashion sense. This ceased to matter once we were alone, for it soon stripped itself naked without hesitation! There is no nobler being than a prey who accepts its inevitable fates with zeal and ardor. In the commmotion, I hardly caught a glimpse of its &quot;furrier&quot; regions, and even now I suspect my partner was entirely sexless. There too wasn&#39;t long before it placed itself right into my mouth.
 
-As I type this, it&#39;s half past eleven on a Saturday. I will spare you the unpleasant details, but it appears the rabbit&#39;s feistiness carried on long after their death. My guts were rumbling all night as I digested it. Did I mention that it even consented to letting me digest it? Truly, I was flattered.
+How can I describe the multitude of flavors which graced my tongue at the rabbit&#39;s entry? The twin ecstacies I experienced in savoring and swallowing my meal are seldom fit for prose.
 
-It was only recently that I evacuated its remains into my dormitory&#39;s toilet. It wasn&#39;t pretty, but I eventually managed to squeeze everything out in the longest, firmest excretion of my life.
+Once it was inside me, it proved to be quite the struggler. I will not conceal the fact: it felt utterly exquisite to shamelessly play my role as a predator, something we wolves are so rarely able to do. Likewise, it played its part to perfection, although it seemingly didn&#39;t have the stamina to last very long. A pity, but not a huge surprise.
+
+As I type this, it&#39;s half past eleven on a Saturday. I will spare you the unpleasant details, but it appears the rabbit&#39;s feistiness carried on long after my body extinguished the passionate fires in its breast. My glutted guts were rumbling and groaning all night as they processed their latest quarry.
+
+It was only recently that I evacuated its remains into my dormitory&#39;s toilet. It wasn&#39;t pretty, but I eventually managed to squeeze everything out in the longest, firmest excretion of my life. For those with more perverse desires than I, I may share some photographs of the dear rabbit&#39;s remains, upon private request.
 
 Until next time,&lt;br&gt;
 ~E.B. III
@@ -3069,6 +3067,8 @@ Nikki clears her throat. &quot;The short version is that you got incredibly wast
 
 * [[...Thanks?]]</tw-passagedata><tw-passagedata pid="189" name="...Thanks?" tags="" position="1100,2350" size="100,100">Nikki and Nox smile. &lt;q.twinspeak&gt;No problem, Hollis,&lt;/q&gt; they both say in unison. It&#39;s not creepy at all.
 
+&lt;!-- TODO: Convert this conversation into a multiple choice question system, like Ana has. Just two paths, I think. --&gt;
+
 * [[How do you know my name?]]</tw-passagedata><tw-passagedata pid="190" name="How do you know my name?" tags="" position="1225,2350" size="100,100">&quot;Oh,&quot; says Nox, &quot;this is kind of awkward, but you actually said it, like, four times. You kept on insisting, &#39;My name is Hollis! I am an androgynous-looking gray rabbit!&quot;
 
 ...Huh.
@@ -3093,38 +3093,40 @@ You gradually stand up, dusting some pretzel crumbs off your back. You look down
 
 * [[Are you guys predators...?]]</tw-passagedata><tw-passagedata pid="193" name="Are you guys predators...?" tags="" position="350,2475" size="100,100">Nikki smiles coyly. &quot;We&#39;re not going to eat you, if that&#39;s what you&#39;re wondering.&quot;
 
-&quot;Oh, no!&quot; says Nox, &quot;You&#39;re way too big!&quot;
+&quot;Oh, heavens no!&quot; says Nox, &quot;You&#39;re way too big!&quot;
 
-&quot;Truth be told,&quot; Nikki says, &quot;My sibling and I don&#39;t much fancy ourselves as carnivores, per se...&quot;
+Nikki nods, &quot;My sibling and I don&#39;t much fancy ourselves as carnivores, per se...&quot;
 
-&quot;We prefer to think of ourselves as encouraging observers!&quot; Nox adds with an enthusiastic smile.
+Nox smiles enthusiastically, &quot;We prefer to think of ourselves as encouraging observers!&quot;
 
-You&#39;re filled with dread as Nikki brings herself closer to you, until she&#39;s fully invaded your personal space, her narrow yellow eyes peering and probing into your soul, and her flat chest level with your own.
+* [[That&#39;s... good?]]</tw-passagedata><tw-passagedata pid="194" name="That&#39;s... good?" tags="" position="475,2475" size="100,100">&quot;I&#39;m glad you think so,&quot; Nikki says, taking a few powerful steps closer to you.
+
+You&#39;re filled with a sense of dread as Nikki draws near, as if she and her brother were somehow an incarnation of Death. Soon, she&#39;s fully invaded your personal space, her narrow yellow eyes peering and probing into your soul, and her flat chest level with your own.
 
 &quot;But that reminds me, Hollis,&quot; says Nikki, &quot;While we&#39;ve got you here, my sibling and I have an... interesting proposition for you,&quot; She runs her paw gently up the fur of your arm, giving you goosebumps.
 
 * [[Well I&#39;m flattered, but...]]
-* [[Oh, tell me more!]]</tw-passagedata><tw-passagedata pid="194" name="Well I&#39;m flattered, but..." tags="" position="475,2475" size="100,100">You start to say that you&#39;re flattered, but you&#39;re not-
+* [[Oh, tell me more!]]</tw-passagedata><tw-passagedata pid="195" name="Well I&#39;m flattered, but..." tags="" position="600,2475" size="100,100">You start to say that you&#39;re flattered, but you&#39;re not-
 
-&lt;%= story.render(&quot;Interesting proposition.&quot;) /* [[Interesting proposition.]] */ %&gt;</tw-passagedata><tw-passagedata pid="195" name="Oh, tell me more!" tags="" position="600,2475" size="100,100">You perk your eyebrows up.
+&lt;%= story.render(&quot;Interesting proposition.&quot;) /* [[Interesting proposition.]] */ %&gt;</tw-passagedata><tw-passagedata pid="196" name="Oh, tell me more!" tags="" position="725,2475" size="100,100">You perk your eyebrows up.
 
-&lt;%= story.render(&quot;Interesting proposition.&quot;) /* [[Interesting proposition.]] */ %&gt;</tw-passagedata><tw-passagedata pid="196" name="Interesting proposition." tags="" position="725,2475" size="100,100">Nox immediately blurts out, &quot;It&#39;s not sex!&quot;
+&lt;%= story.render(&quot;Interesting proposition.&quot;) /* [[Interesting proposition.]] */ %&gt;</tw-passagedata><tw-passagedata pid="197" name="Interesting proposition." tags="" position="850,2475" size="100,100">Nox immediately blurts out, &quot;It&#39;s not sex!&quot;
 
 Nikki shoots him a look.
 
 &quot;Sorry, it sounded like you were talking about sex. Which we&#39;re not.&quot;
 
-* [[Wh-what is it then?]]</tw-passagedata><tw-passagedata pid="197" name="Wh-what is it then?" tags="" position="850,2475" size="100,100">&quot;Glad you asked,&quot; says Nikki, &quot;Nox, if you will?&quot;
+* [[Wh-what is it then?]]</tw-passagedata><tw-passagedata pid="198" name="Wh-what is it then?" tags="" position="975,2475" size="100,100">&quot;Glad you asked,&quot; says Nikki, &quot;Nox, if you will?&quot;
 
 Nox reaches into his breast pocket and pulls out something small and brown, and presents it toward you. You squint to examine it, and your eyes go wide.
 
-* [[A mouse!?]]</tw-passagedata><tw-passagedata pid="198" name="A mouse!?" tags="" position="975,2475" size="100,100">In Nox&#39;s paws stands a brown female dwarf mouse, about six inches tall. She struggles to balance, and shields her face at the sudden exposure to light.
+* [[A mouse!?]]</tw-passagedata><tw-passagedata pid="199" name="A mouse!?" tags="" position="1100,2475" size="100,100">In Nox&#39;s paws stands a dwarf mouse. The creature is about six inches tall. She&#39;s naked, which isn&#39;t unnatural for mice, or tinykind in general. Her body is covered from head to toe with light brown fur. She struggles to balance, and shields her face at the sudden exposure to light.
 
 &quot;A meal!&quot; Nikki smiles.
 
 &quot;Nya! A morsel!&quot; Nox beams. &quot;For you!&quot;
 
-* [[You want me to eat her??]]</tw-passagedata><tw-passagedata pid="199" name="You want me to eat her??" tags="" position="1100,2475" size="100,100">Nikki nods, &quot;Oh yes, yes we do.&quot;
+* [[You want me to eat her??]]</tw-passagedata><tw-passagedata pid="200" name="You want me to eat her??" tags="" position="1225,2475" size="100,100">Nikki nods, &quot;Oh yes, yes we do.&quot;
 
 Nox says, &quot;We figured that since you&#39;re feeling sauced and snacky, you&#39;d enjoy feeling this lovely little lady wriggling down your throat!&quot;
 
@@ -3132,7 +3134,7 @@ Your mouth goes completely dry.
 
 You look nervously at the tiny mouse. She looks back at you hopefully.
 
-* [[Oh, um, I don&#39;t... do that.]]</tw-passagedata><tw-passagedata pid="200" name="Oh, um, I don&#39;t... do that." tags="" position="1225,2475" size="100,100">But you&#39;re not a predator, you say. You don&#39;t eat people. Nor eggs, fish, or dairy, for that matter.
+* [[Oh, um, I don&#39;t... do that.]]</tw-passagedata><tw-passagedata pid="201" name="Oh, um, I don&#39;t... do that." tags="" position="100,2600" size="100,100">But you&#39;re not a predator, you say. You don&#39;t eat people. Nor eggs, fish, or dairy, for that matter.
 
 &quot;Of course you don&#39;t,&quot; says Nikki, &quot;That&#39;s actually why we&#39;re so interested.&quot;
 
@@ -3140,7 +3142,7 @@ Nox smirks, &quot;There&#39;s nothing quite the thrill of like watching someone&
 
 &quot;Especially you herbivores! You get so conflicted and twisted up over it inside...&quot; Nikki adds, betraying her own excitement with a blush. &quot;But at the end of the day, no one can resist a snack!&quot;
 
-* [[Um, I&#39;d rather not...]]</tw-passagedata><tw-passagedata pid="201" name="Um, I&#39;d rather not..." tags="" position="100,2600" size="100,100">You&#39;re about to say you&#39;d rather not, but Nikki interrupts you.
+* [[Um, I&#39;d rather not...]]</tw-passagedata><tw-passagedata pid="202" name="Um, I&#39;d rather not..." tags="" position="225,2600" size="100,100">You&#39;re about to say you&#39;d rather not, but Nikki interrupts you.
 
 &quot;Not to mention, our little friend here is perfectly and completely willing.&quot; Nikki shoots a glare at the mouse in Nox&#39;s paws. &quot;Isn&#39;t that right?&quot;
 
@@ -3150,15 +3152,13 @@ Nox smirks, &quot;There&#39;s nothing quite the thrill of like watching someone&
 
 He brings the mouse girl up to your paws, gesturing for you to hold her. &quot;Maybe just a little taste?&quot;
 
-* [[Examine mouse.]]</tw-passagedata><tw-passagedata pid="202" name="Examine mouse." tags="" position="225,2600" size="100,100">You hold your paws flat, and the mouse dutifully scampers from Nox&#39;s paws onto yours. She stands with her paws nervously behind her back, and continues to smile with only her teeth.
-
-She is about six inches tall. She&#39;s naked, which isn&#39;t unnatural for mice. Her body is covered from head to toe with light brown fur.
+* [[Examine mouse.]]</tw-passagedata><tw-passagedata pid="203" name="Examine mouse." tags="" position="350,2600" size="100,100">You hold your paws flat, and the mouse dutifully scampers from Nox&#39;s paws onto yours. She stands with her paws nervously behind her back, and continues to smile with only her teeth.
 
 You haven&#39;t really seen such a small anthro up close before. Unsurprisingly, tinyfolk tend not to spend very much time around bigger folk, who could accidentally crush them with a single misstep, or, as you&#39;ve seen, snatch them up for a quick snack.
 
 You too have lived your whole life as a small, weak thing, desperately avoiding the digestive fate you know will someday await you. Is it wrong to feel morbidly intrigued by the thought of devouring someone even smaller and weaker? Devouring, swallowing, digesting...
 
-* [[H-hello there, I&#39;m Hollis.]]</tw-passagedata><tw-passagedata pid="203" name="H-hello there, I&#39;m Hollis." tags="" position="350,2600" size="100,100">You introduce yourself to the mouse. She glances back at Nikki, as if checking for permission to speak.
+* [[H-hello there, I&#39;m Hollis.]]</tw-passagedata><tw-passagedata pid="204" name="H-hello there, I&#39;m Hollis." tags="" position="475,2600" size="100,100">You introduce yourself to the mouse. She glances back at Nikki, as if checking for permission to speak.
 
 &lt;q.mouse&gt;H-hi!&lt;/q&gt; she replies, &lt;q.mouse&gt;I&#39;m Faith.&lt;/q&gt; &lt;% if (s.rescuedKaia) { %&gt; *Faith*... The name sounds familiar. You try to remember where you&#39;ve heard it before, but you&#39;re unable to.&lt;% } %&gt;
 
@@ -3168,7 +3168,7 @@ You ask Faith if she wants to be eaten.
 
 Faith swallows and says, &lt;q.mouse&gt;Yup, haha!!&lt;/q&gt; once again looking halfway over her shoulder at Nikki for approval. &lt;q.mouse&gt;Totally!&lt;/q&gt; You&#39;re pretty sure you get the picture.
 
-* [[I won&#39;t do it!]]</tw-passagedata><tw-passagedata pid="204" name="I won&#39;t do it!" tags="" position="475,2600" size="100,100">You can&#39;t believe they lied to you. You tell the cats that you refuse to participate in something so barbaric as devouring a helpless mouse against her will.
+* [[I won&#39;t do it!]]</tw-passagedata><tw-passagedata pid="205" name="I won&#39;t do it!" tags="" position="600,2600" size="100,100">You can&#39;t believe they lied to you. You tell the cats that you refuse to participate in something so barbaric as devouring a helpless mouse against her will.
 
 Nox seems disappointed. &quot;I guess there was always a possibility you&#39;d say no. We can&#39;t force you, after all!&quot;
 
@@ -3176,7 +3176,7 @@ Nikki snatches Faith back out of your paws, causing her to let out a startled sq
 
 Your eyes go wide. 
 
-* [[You mean like torture??]]</tw-passagedata><tw-passagedata pid="205" name="You mean like torture??" tags="" position="600,2600" size="100,100">You recall terrible news stories of people doing hideous, awful things to micros, but not getting caught for lack of evidence. Once in middle school, someone dared you to search for &quot;micro hard vore&quot; on a school computer. You didn&#39;t see anything, but you were banned from the computer lab for a few weeks after that.
+* [[You mean like torture??]]</tw-passagedata><tw-passagedata pid="206" name="You mean like torture??" tags="" position="725,2600" size="100,100">You recall terrible news stories of people doing hideous, awful things to micros, but not getting caught for lack of evidence. Once in middle school, someone dared you to search for &quot;micro hard vore&quot; on a school computer. You didn&#39;t see anything, but you were banned from the computer lab for a few weeks after that.
 
 Nikki looks back to you, &quot;Torture is such a strong word... But yeah, pretty much.&quot;
 
@@ -3185,13 +3185,13 @@ That&#39;s horrible! you say.
 &quot;Well,&quot; Nox says, &quot;my sister can be a little intense with her food. But that&#39;s only if you decide not to partake yourself!&quot;
 
 * [[I thought you said you weren&#39;t predators!]]
-* [[You&#39;re blackmailing me?!]]</tw-passagedata><tw-passagedata pid="206" name="I thought you said you weren&#39;t predators!" tags="" position="725,2600" size="100,100">&quot;Not quite,&quot; says Nikki.
+* [[You&#39;re blackmailing me?!]]</tw-passagedata><tw-passagedata pid="207" name="I thought you said you weren&#39;t predators!" tags="" position="850,2600" size="100,100">&quot;Not quite,&quot; says Nikki.
 
 &quot;We only said we *preferred* to watch! Nyaha~!&quot; says Nox.
 
 Nikki gently caresses Faith&#39;s cheek with her paw. The mouse recoils slightly, but tries not to move too much. &quot;Oh, and don&#39;t try to stop us either. My claws are a little sharp, and I&#39;d hate to have an... unfortunate accident.&quot; She gives you an evil smile, making her sharp feline teeth visible between her lips. 
 
-* [[You&#39;re blackmailing me?!]]</tw-passagedata><tw-passagedata pid="207" name="You&#39;re blackmailing me?!" tags="" position="850,2600" size="100,100">Nikki shakes her head. &quot;Oh no, not blackmail! We&#39;re not *forcing* you to consume her.&quot;
+* [[You&#39;re blackmailing me?!]]</tw-passagedata><tw-passagedata pid="208" name="You&#39;re blackmailing me?!" tags="" position="975,2600" size="100,100">Nikki shakes her head. &quot;Oh no, not blackmail! We&#39;re not *forcing* you to consume her.&quot;
 
 &quot;Think of it as more of an opportunity to reduce potential harm! If you swallow her, she&#39;ll hardly even suffer a little!&quot; says Nox.
 
@@ -3201,7 +3201,7 @@ Nox chimes in, &quot;But either way, she&#39;ll be in a belly. So really, you mi
 
 Nikki glances toward the kitchen door, &quot;And you better decide quick, before anyone comes in.&quot;
 
-* [[Shouldn&#39;t she get a say too?]]</tw-passagedata><tw-passagedata pid="208" name="Shouldn&#39;t she get a say too?" tags="" position="975,2600" size="100,100">Nikki groans, &quot;Personifying your food never ends well...&quot;
+* [[Shouldn&#39;t she get a say too?]]</tw-passagedata><tw-passagedata pid="209" name="Shouldn&#39;t she get a say too?" tags="" position="1100,2600" size="100,100">Nikki groans, &quot;Personifying your food never ends well...&quot;
 
 &quot;No, no, they&#39;ve got a point,&quot; says Nox, &quot;Little mouse, would you rather be eaten by Hollis or my sibling?&quot;
 
@@ -3215,19 +3215,19 @@ Faith looks up at you nervously, and stammers, &lt;q.mouse&gt;I-I&#39;d feel saf
 
 &quot;There, she&#39;s had her say,&quot; says Nikki, &quot;Time to choose, Hollis. You gonna eat her or not?&quot;
 
-* [[Hollis: Decide.]]</tw-passagedata><tw-passagedata pid="209" name="Hollis: Decide." tags="" position="1100,2600" size="100,100">Your heart pounds. Should you swallow Faith yourself, and be directly responsible for digesting her? You&#39;d live with the guilt of that deed for the rest of your life... On the other paw, would you let Nikki have her way, and risk letting her get painfully chewed and gored?
+* [[Hollis: Decide.]]</tw-passagedata><tw-passagedata pid="210" name="Hollis: Decide." tags="" position="1225,2600" size="100,100">Your heart pounds. Should you swallow Faith yourself, and be directly responsible for digesting her? You&#39;d live with the guilt of that deed for the rest of your life... On the other paw, would you let Nikki have her way, and risk letting her get painfully chewed and gored?
 
 You feel like you&#39;re at the helm of a speeding trolley, and no matter what you do now, someone will get hurt. You shut your eyes, and make a decision.
 
 * [[No. Final answer.]] *(CW: Voyeurism)*
-* [[Fine, I&#39;ll eat her.]] *(CW: Player pred)*</tw-passagedata><tw-passagedata pid="210" name="Fine, I&#39;ll eat her." tags="" position="1225,2600" size="100,100">&lt;% s.ateFaith = true; %&gt;
+* [[Fine, I&#39;ll eat her.]] *(CW: Player pred)*</tw-passagedata><tw-passagedata pid="211" name="Fine, I&#39;ll eat her." tags="" position="100,2725" size="100,100">&lt;% s.ateFaith = true; %&gt;
 // TODO:
 * You apologize, and Faith forgives you. She&#39;ll try not to struggle much.
 * Nox walks over to the fridge, dangles her by the tail, and dips her lower half in ranch sauce.
 * Then you stick her in your mouth.
 * She actually tastes kind of good, and it feels interesting.
 
-* [[Nox: Tease.]]</tw-passagedata><tw-passagedata pid="211" name="No. Final answer." tags="" position="100,2725" size="100,100">No, you say. You just can&#39;t do it. You look sadly at Faith, and say that you&#39;re sorry, but she&#39;s in Nikki&#39;s hands.
+* [[Nox: Tease.]]</tw-passagedata><tw-passagedata pid="212" name="No. Final answer." tags="" position="225,2725" size="100,100">No, you say. You just can&#39;t do it. You look sadly at Faith, and say that you&#39;re sorry, but she&#39;s in Nikki&#39;s hands.
 
 Faith forces a smile. &lt;q.mouse&gt;That&#39;s okay Hollis, I forgive you. Just, um, promise to tell my girlfriend what happened, if you see her. She&#39;s a white mouse. Small, like me.&lt;/q&gt;
 
@@ -3239,11 +3239,11 @@ Faith forces a smile. &lt;q.mouse&gt;That&#39;s okay Hollis, I forgive you. Just
 
 &quot;Don&#39;t worry, dear,&quot; Nikki coos at Faith, baring her fangs tenderly,  &quot;You&#39;ll hardly feel a thing.&quot;
 
-* [[Cover your eyes.]]</tw-passagedata><tw-passagedata pid="212" name="Cover your eyes." tags="" position="225,2725" size="100,100">It&#39;s too much to watch. You put your paws in front of your eyes.
+* [[Cover your eyes.]]</tw-passagedata><tw-passagedata pid="213" name="Cover your eyes." tags="" position="350,2725" size="100,100">It&#39;s too much to watch. You put your paws in front of your eyes.
 
-&quot;Any last words, my dear morsel?&quot; asks Nikki, grinning from ear to ear.
+&quot;Any last words, my ignoble morsel?&quot; asks Nikki, grinning from ear to ear.
 
-You hear Faith beg, &lt;q.mouse&gt;It&#39;s not too late to let me go. I won&#39;t tell anyone about this, honest!&lt;/q&gt; Her tiny eyes staring deep at Nikki&#39;s, hoping to find just a hint of compassion from the carnivore. In response, Nikki narrows her eyes and begins to impatiently dangle Faith by the tail. &lt;q.mouse&gt;O-ow... Please, um, Miss, you don&#39;t have to do this...&lt;/q&gt;
+You hear Faith beg, &lt;q.mouse&gt;It&#39;s not too late to let me go. I won&#39;t tell anyone about this, honest!&lt;/q&gt; Her tiny eyes staring deep at Nikki&#39;s, hoping to find just a hint of compassion from the carnivore. In response, Nikki narrows her eyes and begins to impatiently dangle Faith by the tail. &lt;q.mouse&gt;O-ow... Please, um, Miss Nikki, you don&#39;t have to do this...&lt;/q&gt;
 
 &quot;No,&quot; says Nox, &quot;But she clearly really wants to! And I wanna watch. Nyaha!&quot;
 
@@ -3251,7 +3251,7 @@ You hear Faith beg, &lt;q.mouse&gt;It&#39;s not too late to let me go. I won&#39
 
 You shudder... It&#39;s too much to even listen to. You&#39;re anticipating the awful, horrible sound of a cat&#39;s mouth gorily eviscerating its prey. All the content warnings could prepare you for what&#39;s to come.
 
-* [[Nikki: Chomp.]] *(CW: ?????)*</tw-passagedata><tw-passagedata pid="213" name="Nikki: Chomp." tags="" position="350,2725" size="100,100">Nikki delicately lifts her chin, placing more of Faith&#39;s tiny body into her mouth. Her tongue is slick with spit, and occasionally pulses underneath her prey, making all kinds of slobbery wet sounds.
+* [[Nikki: Chomp.]] *(CW: ?????)*</tw-passagedata><tw-passagedata pid="214" name="Nikki: Chomp." tags="" position="475,2725" size="100,100">Nikki delicately lifts her chin, placing more of Faith&#39;s tiny body into her mouth. Her tongue is slick with spit, and occasionally pulses underneath her prey, making all kinds of slobbery wet sounds.
 
 Nox watches with awe and excitement, while Faith lets out a series of uncomfortable grunts and cries. &quot;Yesss,&quot; he says, &quot;Ooh, I bet she&#39;s delicious!&quot;
 
@@ -3259,7 +3259,7 @@ Nikki closes her lips around Faith&#39;s tail, but does not swallow her yet. Ins
 
 You peek at the scene from between your paws. There&#39;s... less teeth involved than you expected...
 
-* [[You&#39;re... not chewing her?]]</tw-passagedata><tw-passagedata pid="214" name="You&#39;re... not chewing her?" tags="" position="475,2725" size="100,100">&quot;Chew?&quot; Nikki asks, still speaking in a dignified manner despite her mouth muffled with mouse, &quot;Whyever woul&#39; I do tha&#39;?&quot; As she talks, her grip on Faith loosens slightly. The mouse able to flip onto her belly, and poke her head out between Nikki&#39;s lips. She&#39;s clearly very frightened, but seemingly unharmed.
+* [[You&#39;re... not chewing her?]]</tw-passagedata><tw-passagedata pid="215" name="You&#39;re... not chewing her?" tags="" position="600,2725" size="100,100">&quot;Chew?&quot; Nikki asks, still speaking in a dignified manner despite her mouth muffled with mouse, &quot;Whyever woul&#39; I do tha&#39;?&quot; As she talks, her grip on Faith loosens slightly. The mouse able to flip onto her belly, and poke her head out between Nikki&#39;s lips. She&#39;s clearly very frightened, but seemingly unharmed.
 
 You say you thought they&#39;d be, erm, mauling her.
 
@@ -3273,7 +3273,7 @@ Th-that&#39;s still pretty bad, you say.
 
 Nox rolls his eyes, and points toward the dining room. &quot;If you wanna be judgmental, the door&#39;s that way. Otherwise, shush. This is my favorite part!&quot;
 
-* [[Nox: Tease.]]</tw-passagedata><tw-passagedata pid="215" name="Nox: Tease." tags="" position="600,2725" size="100,100">Nox puts his eyes level with Faith&#39;s tiny face, still sticking out of &lt;%= !s.ateFaith?&quot;his sister&#39;s&quot;:&quot;your&quot;%&gt; mouth. He points his phone camera at Faith, and presses record. &quot;So, little mousey, how do you feel about being digested?&quot;
+* [[Nox: Tease.]]</tw-passagedata><tw-passagedata pid="216" name="Nox: Tease." tags="" position="725,2725" size="100,100">Nox puts his eyes level with Faith&#39;s tiny face, still sticking out of &lt;%= !s.ateFaith?&quot;his sister&#39;s&quot;:&quot;your&quot;%&gt; mouth. He points his phone camera at Faith, and presses record. &quot;So, little mousey, how do you feel about being digested?&quot;
 
 &lt;q.mouse&gt;Uhm... Scared?&lt;/q&gt; the mouse responds.
 
@@ -3287,7 +3287,7 @@ Faith looks sad. &lt;q.mouse&gt;I&#39;m, um, worried about my girlfriend Kaia. S
 
 Nikki turns to you, and adds, &quot;Oh, and &lt;%= s.ateFaith?&quot;that&quot;:&quot;tha&#39;&quot; %&gt; &lt;%= s.ateFaith?&quot;goes&quot;:&quot;goesh&quot;%&gt; for your buddy &lt;%= s.ateFaith?&quot;Reese&quot;:&quot;Reesh&quot; %&gt; too.&quot;
 
-* [[How do you know about Reese?]]</tw-passagedata><tw-passagedata pid="216" name="How do you know about Reese?" tags="" position="725,2725" size="100,100">You ask the two cats how they know Reese&#39;s name. &lt;%= s.ateFaith?&quot;Faith wriggles uncomfortably inside your mouth.&quot;:&quot;&quot; %&gt;
+* [[How do you know about Reese?]]</tw-passagedata><tw-passagedata pid="217" name="How do you know about Reese?" tags="" position="850,2725" size="100,100">You ask the two cats how they know Reese&#39;s name. &lt;%= s.ateFaith?&quot;Faith wriggles uncomfortably inside your mouth.&quot;:&quot;&quot; %&gt;
 
 &lt;% setup.setFlag(&quot;upstairsUnlocked&quot;); %&gt;
 
@@ -3296,7 +3296,7 @@ Nox pauses the recording, and smiles, &quot;We mostly know him as *GuineaPuff8*.
 Nikki nods, &lt;%= s.ateFaith?&quot;and says,&quot;:&quot;and squeezes Faith into her cheek so she can speak articulately.&quot; %&gt; &quot;He&#39;s&lt;%= s.ateFaith?&quot;&quot;:&quot;h&quot; %&gt; been raving about going to this party for weeks&lt;%= s.ateFaith?&quot;&quot;:&quot;h&quot; %&gt;!&quot; &lt;%= s.ateFaith?&quot;&quot;:&quot;Faith&#39;s outline wriggles uncomfortably.&quot; %&gt;
 
 * [[Where did he go!? Maybe I can still save him!]]
-* [[Good for him, I guess?|Faith: Interrupt.]]</tw-passagedata><tw-passagedata pid="217" name="Where did he go!? Maybe I can still save him!" tags="" position="850,2725" size="100,100">Nikki thinks back, and says, &quot;I&#39;m pretty sure I caught a short glimpse of Basil&#39;s sister bringing him upstairs.&quot;
+* [[Good for him, I guess?|Faith: Interrupt.]]</tw-passagedata><tw-passagedata pid="218" name="Where did he go!? Maybe I can still save him!" tags="" position="975,2725" size="100,100">Nikki thinks back, and says, &quot;I&#39;m pretty sure I caught a short glimpse of Basil&#39;s sister bringing him upstairs.&quot;
 
 Nox grins, &quot;And I caught a very *long* glimpse of Lacey and her boyfriend going to town swallowing that yummy boy bod!&quot;
 
@@ -3304,11 +3304,11 @@ You rocket to your feet. &lt;% if (s.ateFaith) %&gt;Faith lets out an uncomforta
 
 Nox shakes his head, &quot;Sorry, that was like three hours ago. Knowing Lacey, he&#39;s probably been digested already.&quot;
 
-* [[Oh. I see...]]</tw-passagedata><tw-passagedata pid="218" name="Oh. I see..." tags="" position="975,2725" size="100,100">You collapse to your knees. You can&#39;t believe it; you were so busy getting wasted, you couldn&#39;t save him! It&#39;s all your fault.
+* [[Oh. I see...]]</tw-passagedata><tw-passagedata pid="219" name="Oh. I see..." tags="" position="1100,2725" size="100,100">You collapse to your knees. You can&#39;t believe it; you were so busy getting wasted, you couldn&#39;t save him! It&#39;s all your fault.
 
 Nox seems confused, &quot;Save? Knowing Reese, the whole thing was 100% consensual. That dude was a vorny freak, even by our standards! It&#39;s weird that he would bring you here without telling you that...&quot;
 
-* [[Actually... that would explain a lot.]]</tw-passagedata><tw-passagedata pid="219" name="Actually... that would explain a lot." tags="" position="1100,2725" size="100,100">You think back to when you and Reese first arrived, and he ventured off into the living room without you. At the time, it seemed like he was just excited to do underage drinking, but you recall his exact words at the time were: *I&#39;m gonna go get fucking annihilated!*
+* [[Actually... that would explain a lot.]]</tw-passagedata><tw-passagedata pid="220" name="Actually... that would explain a lot." tags="" position="1225,2725" size="100,100">You think back to when you and Reese first arrived, and he ventured off into the living room without you. At the time, it seemed like he was just excited to do underage drinking, but you recall his exact words at the time were: *I&#39;m gonna go get fucking annihilated!*
 
 ...What a weirdo, you think. Still, being digested must have been painful, right?
 
@@ -3316,9 +3316,9 @@ Nox pats you on the shoulder, &quot;I can assure you, Lacey was really gentle wi
 
 Nikki nods. &quot;Circle &lt;%= s.ateFaith?&quot;of&quot;:&quot;uh&quot; %&gt; Life,&quot; she repeats.
 
-* [[Wait, why were you watching to begin with?]]</tw-passagedata><tw-passagedata pid="220" name="Wait, why were you watching to begin with?" tags="" position="1225,2725" size="100,100">Nox smiles weakly, &quot;Eheh, there&#39;s a perfectly reasonable explanation for that. You see-&quot;
+* [[Wait, why were you watching to begin with?]]</tw-passagedata><tw-passagedata pid="221" name="Wait, why were you watching to begin with?" tags="" position="100,2850" size="100,100">Nox smiles weakly, &quot;Eheh, there&#39;s a perfectly reasonable explanation for that. You see-&quot;
 
-&lt;%= story.render(&quot;Faith: Interrupt.&quot;) /* [[Faith: Interrupt.]] */ %&gt;</tw-passagedata><tw-passagedata pid="221" name="Faith: Interrupt." tags="" position="100,2850" size="100,100">&lt;q.mouse&gt;Ahem...&lt;/q&gt; Faith says, still sticking out from between &lt;%- s.ateFaith?&quot;your&quot;:&quot;Nikki&#39;s&quot;%&gt; lips. &lt;q.mouse&gt;We&#39;re uh, kind of in the middle of something... I&#39;d really like to get out of here,&lt;/q&gt; She shifts her arms slightly, attempting to pull herself free. &lt;%- !s.ateFaith?&quot;Nikki&#39;s&quot;:&quot;Your&quot; %&gt; mouth instinctively sucks her backward.
+&lt;%= story.render(&quot;Faith: Interrupt.&quot;) /* [[Faith: Interrupt.]] */ %&gt;</tw-passagedata><tw-passagedata pid="222" name="Faith: Interrupt." tags="" position="225,2850" size="100,100">&lt;q.mouse&gt;Ahem...&lt;/q&gt; Faith says, still sticking out from between &lt;%- s.ateFaith?&quot;your&quot;:&quot;Nikki&#39;s&quot;%&gt; lips. &lt;q.mouse&gt;We&#39;re uh, kind of in the middle of something... I&#39;d really like to get out of here,&lt;/q&gt; She shifts her arms slightly, attempting to pull herself free. &lt;%- !s.ateFaith?&quot;Nikki&#39;s&quot;:&quot;Your&quot; %&gt; mouth instinctively sucks her backward.
 
 Nikki smiles, &quot;Oh, you&#39;ll be &#39;coming out&#39; &lt;%= s.ateFaith?&quot;sooner&quot;:&quot;shooner&quot;%&gt; or later.&quot;
 
@@ -3326,7 +3326,7 @@ Nox laughs, and restarts the recording. &quot;Sounds like someone&#39;s eager to
 
 Faith stammers, &lt;q.mouse&gt;No, wait, just think about this-&lt;/q&gt;
 
-* [[&lt;% if (s.ateFaith) %&gt;Nikki and Nox&lt;% else %&gt;Nox&lt;%;%&gt;: Peer pressure.|Nox: Peer pressure.]]</tw-passagedata><tw-passagedata pid="222" name="Nox: Peer pressure." tags="" position="225,2850" size="100,100">&lt;q class=&quot;&lt;% if (s.ateFaith) %&gt;twinspeak&lt;%;%&gt;&quot;&gt;Gulp! Gulp!&lt;/q&gt; &lt;% if (s.ateFaith) %&gt;Nikki and Nox chant&lt;% else %&gt;Nox chants&lt;%;%&gt; excitedly. &lt;% if (s.ateFaith) %&gt;Your cheeks flush bright red. The cats stare at you expectantly, eagerly clutching their chins with their paws. Nikki&#39;s claws extend, as if to remind you how easily she and her brother could overpower you.&lt;% else %&gt;You watch silently, your cheeks flushing bright red.&lt;%;%&gt; 
+* [[&lt;% if (s.ateFaith) %&gt;Nikki and Nox&lt;% else %&gt;Nox&lt;%;%&gt;: Peer pressure.|Nox: Peer pressure.]]</tw-passagedata><tw-passagedata pid="223" name="Nox: Peer pressure." tags="" position="350,2850" size="100,100">&lt;q class=&quot;&lt;% if (s.ateFaith) %&gt;twinspeak&lt;%;%&gt;&quot;&gt;Gulp! Gulp!&lt;/q&gt; &lt;% if (s.ateFaith) %&gt;Nikki and Nox chant&lt;% else %&gt;Nox chants&lt;%;%&gt; excitedly. &lt;% if (s.ateFaith) %&gt;Your cheeks flush bright red. The cats stare at you expectantly, eagerly clutching their chins with their paws. Nikki&#39;s claws extend, as if to remind you how easily she and her brother could overpower you.&lt;% else %&gt;You watch silently, your cheeks flushing bright red.&lt;%;%&gt; 
 
 &lt;q.mouse&gt;J-just please promise me,&lt;/q&gt; says Faith, from inside &lt;%-s.ateFaith?&quot;your&quot;:&quot;Nikki&#39;s&quot;%&gt; mouth, &lt;q.mouse&gt;If you find my girlfriend, you&#39;ll tell her what happened to me.&lt;/q&gt;
 
@@ -3336,13 +3336,13 @@ You nod. Based on the cats&#39; expressions, you can tell it&#39;s definitely to
 Here goes nothing...
 &lt;% else %&gt;
 You can&#39;t bear to look...
-&lt;%;%&gt;.
+&lt;%;%&gt;
 
 &lt;% if (s.ateFaith) %&gt;
 * [[Hollis: Swallow.|Swallow Faith.]]
 &lt;% else %&gt;
 * [[Nikki: Swallow.|Swallow Faith.]]
-&lt;% ; %&gt;</tw-passagedata><tw-passagedata pid="223" name="Swallow Faith." tags="" position="350,2850" size="100,100">&lt;% if (!s.ateFaith) %&gt;
+&lt;% ; %&gt;</tw-passagedata><tw-passagedata pid="224" name="Swallow Faith." tags="" position="475,2850" size="100,100">&lt;% if (!s.ateFaith) %&gt;
 Nikki carelessly flings her head back. The squealing mouse goes careening into her gullet. With a single &quot;gulp&quot;, she becomes nothing but a bulge beneath the black fur of the cat&#39;s throat. It&#39;s... fascinating to watch.
 &lt;% else %&gt;
 Reluctantly, you close your lips and tip your chin back. Faith&#39;s body gently glides down your tongue, and into the back of your throat. You choke on her briefly, but after a series of slow, considered gulps, you swallow her. It feels... fascinating.
@@ -3352,11 +3352,12 @@ Reluctantly, you close your lips and tip your chin back. Faith&#39;s body gently
 
 // TODO: More swallowing happens.
 
-* Faith winds up in &lt;%- s.ateFaith ? &quot;your&quot; : &quot;Nikki&#39;s&quot;%&gt; stomach.
+* Faith eventually winds up in &lt;%- s.ateFaith ? &quot;your&quot; : &quot;Nikki&#39;s&quot;%&gt; stomach.
 &lt;% if (!s.ateFaith) %&gt;
 * You&#39;re invited to rub and touch the squirming outline.
+* Choice time.
 &lt;% else %&gt;
-* The cats rub and touch the squirming outline in your stomach.
+* The cats eagerly rub and touch the squirming outline in your stomach.
 &lt;% ; %&gt;
 * You try very hard to pretend like this doesn&#39;t arouse you. The cats are not fooled.
 * Faith continues to squirm and struggle. The cats are highly satisfied.
@@ -3364,7 +3365,7 @@ Reluctantly, you close your lips and tip your chin back. Faith&#39;s body gently
 * Then, the door to the dining room slowly swings open...
 
 
-* [[Kaia: Enter.]]</tw-passagedata><tw-passagedata pid="224" name="Kaia: Enter." tags="" position="475,2850" size="100,100">Suddenly, &lt;%- s.rescuedKaia ? &quot;Kaia&quot; : &quot;a white mouse &quot;%&gt; bursts into the room. &lt;%- s.rescuedKaia ? &quot;&quot; : &quot;Kaia, you presume.&quot;%&gt; &lt;q.mouse&gt;There you are, you monsters,&lt;/q&gt; she growls at the cats, &lt;q.mouse&gt;I&#39;ve been looking for you two for hours. Where&#39;s Faith?&lt;/q&gt;
+* [[Kaia: Enter.]]</tw-passagedata><tw-passagedata pid="225" name="Kaia: Enter." tags="" position="600,2850" size="100,100">Suddenly, &lt;%- s.rescuedKaia ? &quot;Kaia&quot; : &quot;a white mouse &quot;%&gt; bursts into the room. &lt;%- s.rescuedKaia ? &quot;&quot; : &quot;Kaia, you presume.&quot;%&gt; &lt;q.mouse&gt;There you are, you monsters,&lt;/q&gt; she growls at the cats, &lt;q.mouse&gt;I&#39;ve been looking for you two for hours. Where&#39;s Faith?&lt;/q&gt;
 
 Nox can&#39;t help but grin widely. He wordlessly points a claw toward &lt;%- s.ateFaith ? &quot;your&quot; : &quot;Nikki&#39;s&quot; %&gt; stomach, clearly stifling a snicker. It squirms violently in response.
 
@@ -3372,7 +3373,7 @@ Kaia blinks in shock. The white fur of her face seems to become puffy red with r
 
 Your heart feels ready to sink into the floor from guilt over what you &lt;% if (s.ateFaith) %&gt;did&lt;% else %&gt;failed to stop&lt;% ; %&gt;. You&#39;re certain that no words in the world which could answer that damning question to her satisfaction.
 
-* [[I... I&#39;m sorry...|Sorry for eating your girlfriend...]]</tw-passagedata><tw-passagedata pid="225" name="Sorry for eating your girlfriend..." tags="" position="600,2850" size="100,100">&quot;Oh-ho,&quot; laughs Nikki, patting you on the back. &quot;This dear rabbit is hardly to blame. We basically forced them to &lt;% if (s.ateFaith) %&gt;eat her&lt;% else %&gt;watch us&lt;% ; %&gt;.&quot;
+* [[I... I&#39;m sorry...|Sorry for eating your girlfriend...]]</tw-passagedata><tw-passagedata pid="226" name="Sorry for eating your girlfriend..." tags="" position="725,2850" size="100,100">&quot;Oh-ho,&quot; laughs Nikki, patting you on the back. &quot;This dear rabbit is hardly to blame. We basically forced them to &lt;% if (s.ateFaith) %&gt;eat her&lt;% else %&gt;watch us&lt;% ; %&gt;.&quot;
 
 Nox adds with a smile, &quot;Plus, they were extremely drunk at the time! We&#39;re the ones you should be angry at.&quot;
 
@@ -3380,9 +3381,9 @@ Tears begin to stream down Kaia&#39;s face, and for a moment, she is silent. Exp
 
 Nox helpfully jumps in, &quot;Is it because your youthful sense of invulernability, combined with a general sense of dissatisfaction toward the world, causes you to seek out self-destructive thrills?&quot;
 
-Kaia stares at him, baffled, and dries her tears on her arm. After only a second of deliberation, she points a claw at you &lt;%- s.ateFaith ? &quot;you&quot; : &quot;Nikki&quot; %&gt;. &quot;You. You disgusting, nauseous carnivore. If you have any humanity left, swallow me, and reunite me with my Faith.&quot;
+Kaia stares at him, baffled, and dries her tears on her arm. After only a second of deliberation, she points a claw at you &lt;%-s.ateFaith?&quot;you&quot;:&quot;Nikki&quot;%&gt;. &quot;You. You disgusting, nauseous carnivore. If you have any humanity left, swallow me, and reunite me with my Faith.&quot;
 
-* [[Y-you wanna be eaten too?]]</tw-passagedata><tw-passagedata pid="226" name="Y-you wanna be eaten too?" tags="" position="725,2850" size="100,100">&lt;q.mouse&gt;I don&#39;t *want* to,&lt;/q&gt; says Kaia, resolutely, &lt;q.mouse&gt;But she&#39;s all I have in the world. If she&#39;s going to be digested, I&#39;d do anything to comfort her in her last moments.&lt;/q&gt;
+* [[Y-you wanna be eaten too?]]</tw-passagedata><tw-passagedata pid="227" name="Y-you wanna be eaten too?" tags="" position="850,2850" size="100,100">&lt;q.mouse&gt;I don&#39;t *want* to,&lt;/q&gt; says Kaia, resolutely, &lt;q.mouse&gt;But she&#39;s all I have in the world. If she&#39;s going to be digested, I&#39;d do anything to comfort her in her last moments.&lt;/q&gt;
 
 &lt;% if (s.ateFaith) { %&gt; 
 You feel really conflicted at this request, but Nikki and Nox both look at you expectantly.
@@ -3391,9 +3392,7 @@ You feel really conflicted at this request, but Nikki and Nox both look at you e
 
 &quot;After doing something so horrible, awful, and immoral... it&#39;s really the least you could do,&quot; says Nox.
 
-Alright, you say, you get it. You nod at Kaia, and lift her up into your paws. 
-
-A-are you ready? you ask.
+Alright, you say, you get it. You nod at Kaia, and lift her up into your paws. A-are you ready? you ask.
 
 Kaia smiles weakly, &lt;q.mouse&gt;Ready as I&#39;ll ever be.&lt;/q&gt; 
 &lt;% } else { %&gt;
@@ -3403,12 +3402,22 @@ Without even another word, Nikki snatches Kaia up, and starts bringing her towar
 
 Nikki does not slow down, and only continues raising the mouse toward her lips.
 
-&lt;q.mouse&gt;This was kind of a dramatic moment for me- but- urgh, fine.&lt;/q&gt; She turns to you. &lt;q.mouse&gt;&lt;% if (s.rescuedMouse) %&gt;Goodbye, Hollis, thanks for everything.&lt;% else %&gt;Goodbye, rabbit. Thanks for nothing.&lt;%;%&gt;&lt;/q&gt;
+&lt;q.mouse&gt;This was kind of a dramatic moment for me- but- urgh, fine.&lt;/q&gt; She turns to you, and says simply, &lt;q.mouse&gt;&lt;% if (s.rescuedMouse) %&gt;Goodbye, Hollis, thanks for everything.&lt;% else %&gt;Goodbye, rabbit. Thanks for nothing.&lt;%;%&gt;&lt;/q&gt;
 &lt;% } %&gt;
 
-* [[&lt;%-s.ateFaith?&quot;Hollis&quot;:&quot;Nikki&quot;%&gt;: Eat Kaia.|Hollis/Nikki: Eat Kaia.]]</tw-passagedata><tw-passagedata pid="227" name="Hollis/Nikki: Eat Kaia." tags="" position="850,2850" size="100,100">// TODO: You or Nikki does that.
+* [[&lt;%-s.ateFaith?&quot;Hollis&quot;:&quot;Nikki&quot;%&gt;: Swallow Kaia.|Pred: Swallow Kaia.]]</tw-passagedata><tw-passagedata pid="228" name="Pred: Swallow Kaia." tags="" position="975,2850" size="100,100">&lt;%-s.ateFaith?&quot;You do&quot;:&quot;Nikki does&quot;%&gt; do that, much as &lt;%-s.ateFaith?&quot;you&quot;:&quot;she&quot;%&gt; did before. &lt;%-s.ateFaith?&quot;You finish&quot;:&quot;Nikki finishes&quot;%&gt; the deed quickly, with only a few swallows, then &lt;%-s.ateFaith?&quot;open your&quot;:&quot;opens her&quot;%&gt; mouth with a sigh. &lt;%-s.ateFaith?&quot;You feel like you&#39;re getting the hang of predation, awful though it may be.&quot;:&quot;Nikki smiles, and caresses her throat, neckbone, then stomach with satisfaction.&quot;%&gt;
 
-&lt;%= story.render(&quot;Nikki &amp; Nox ending&quot;) /* [[Nikki &amp; Nox ending]] */ %&gt;</tw-passagedata><tw-passagedata pid="228" name="Nikki &amp; Nox ending" tags="" position="975,2850" size="100,100">&lt;% setup.addAchievement(&quot;Nikki &amp; Nox Ending&quot;, &quot;Untitled&quot;); %&gt;
+Soon, Kaia is inside &lt;%-s.ateFaith?&quot;you&quot;:&quot;Nikki&quot;%&gt;. You &lt;%-s.ateFaith?&quot;feel&quot;:&quot;see&quot;%&gt; little movements inside &lt;%-s.ateFaith?&quot;your&quot;:&quot;Nikki&#39;s&quot;%&gt; stomach, but they settle down quickly, with a dramatic sense of finality. Nox keeps his phone camera pointed at the little bulge for several seconds, then stops the recording.
+
+You&#39;re completely silent, as your mind processes and replays the heartbreaking events that just unfolded before you. 
+
+* [[W-wow...]]</tw-passagedata><tw-passagedata pid="229" name="W-wow..." tags="" position="1100,2850" size="100,100">Two mice—two *people* who would have otherwise lived long, fulfilling lives—have been devoured, &lt;%-s.ateFaith?&quot;*by you*&quot;:&quot;and you did nothing to stop it&quot;%&gt;. You feel ready to vomit, either from the unspeakable loss you&#39;ve been made complicit in, or possibly from the amount of pretzels and vodka filling your stomach.
+
+Finally, Nox stops recording on his phone, and breaks the silence. &quot;Goodness,&quot; he says, wearing a satisfied grinning from ear-to-ear, &quot;That was soo hot!&quot;
+
+Nikki pats &lt;%-s.ateFaith?&quot;your&quot;:&quot;her&quot;%&gt; gut, and nods, &quot;Yes, I enjoyed it greatly too.&quot; You can&#39;t muster words to describe how apalled you are by their nonchalant demeanor. 
+
+&lt;%= story.render(&quot;Nikki &amp; Nox ending&quot;) /* [[Nikki &amp; Nox ending]] */ %&gt;</tw-passagedata><tw-passagedata pid="230" name="Nikki &amp; Nox ending" tags="" position="1225,2850" size="100,100">&lt;% setup.addAchievement(&quot;Nikki &amp; Nox Ending&quot;, &quot;Untitled&quot;); %&gt;
 
 // TODO:
 * You feel nauesous, maybe inspired slightly by all the pretzels. They invite you out for pizza.
@@ -3418,19 +3427,19 @@ Nikki does not slow down, and only continues raising the mouse toward her lips.
 ## The End.
 
 * [[Faith: Epilogue.]]
-* [[Restart.|Start]]</tw-passagedata><tw-passagedata pid="229" name="Faith: Epilogue." tags="vore mousestory" position="1100,2850" size="100,100">Your name is Faith. You are a mouse. You&#39;re inside the ample cavern of &lt;%= s.ateFaith?&quot;rabbit&quot;:&quot;cat&quot; %&gt;&#39;s stomach, surrounded by &lt;%= s.ateFaith?&quot;a mush of pretzels and beer&quot;:&quot;dark red fleshy walls&quot; %&gt;, and swimming in awful smelling liquids. You hear a splash.
+* [[Restart.|Start]]</tw-passagedata><tw-passagedata pid="231" name="Faith: Epilogue." tags="vore mousestory" position="100,2975" size="100,100">Your name is Faith. You are a mouse. You&#39;re inside the ample cavern of &lt;%= s.ateFaith?&quot;rabbit&quot;:&quot;cat&quot; %&gt;&#39;s stomach, surrounded by &lt;%= s.ateFaith?&quot;a mush of pretzels and beer&quot;:&quot;dark red fleshy walls&quot; %&gt;, and swimming in awful smelling liquids. You hear a splash.
 
 &lt;q.mouse&gt;Kaia?&lt;/q&gt; you ask, &lt;q.mouse&gt;It&#39;s so dark... Is that you?&lt;/q&gt;
 
 &lt;q.mouse&gt;Hey, it&#39;s okay,&lt;/q&gt; says Kaia, embracing you, &lt;q.mouse&gt;I&#39;m here.&lt;/q&gt;
 
-* [[I don&#39;t want to die...]]</tw-passagedata><tw-passagedata pid="230" name="I don&#39;t want to die..." tags="vore mousestory" position="1225,2850" size="100,100">&lt;q.mouse&gt;I don&#39;t want to die,&lt;/q&gt; you say.
+* [[I don&#39;t want to die...]]</tw-passagedata><tw-passagedata pid="232" name="I don&#39;t want to die..." tags="vore mousestory" position="225,2975" size="100,100">&lt;q.mouse&gt;I don&#39;t want to die,&lt;/q&gt; you say.
 
 &lt;q.mouse&gt;Nobody does,&lt;/q&gt; Kaia says, smiling weakly, &lt;q.mouse&gt;Except for weirdos, obviously. Besides, it&#39;s all just the Circle of Life, right?&lt;/q&gt;
 
 You recall what you were taught in Sunday school about Circlearianism. About how predation was a natural and beautiful part of the Circle of Life. About how after death, your soul would outlast your mortal, mousey form, and reincarnate as yet another form of being. Perhaps a mindless ant, perhaps a mighty dragon. You never really bought into all that, but in this moment, the thought of it brings you some comfort.
 
-* [[Do you think we&#39;ll see each other again?]]</tw-passagedata><tw-passagedata pid="231" name="Do you think we&#39;ll see each other again?" tags="vore mousestory" position="100,2975" size="100,100">&lt;%= s.ateFaith?&quot;Hollis&quot;:&quot;Nikki&quot; %&gt;&#39;s stomach glorps and tightens around you.
+* [[Do you think we&#39;ll see each other again?]]</tw-passagedata><tw-passagedata pid="233" name="Do you think we&#39;ll see each other again?" tags="vore mousestory" position="350,2975" size="100,100">&lt;%= s.ateFaith?&quot;Hollis&quot;:&quot;Nikki&quot; %&gt;&#39;s stomach glorps and tightens around you.
 
 You ask, &lt;q.mouse&gt;Do you think we&#39;ll see each other again?&lt;/q&gt;
 
@@ -3441,60 +3450,60 @@ You laugh, and snuggle your head into Kaia&#39;s fur, and sigh. As the slurry of
 ## The end.
 
 * [[Restart.|Start]]
-* [[Credits]]</tw-passagedata><tw-passagedata pid="232" name="Go outside." tags="checkpoint" position="225,2975" size="100,100">You walk outside and down the steps onto the back porch. It&#39;s quiet out here.
+* [[Credits]]</tw-passagedata><tw-passagedata pid="234" name="Go outside." tags="checkpoint" position="475,2975" size="100,100">You walk outside and down the steps onto the back porch. It&#39;s quiet out here.
 
 You see a large hyena sitting on a garden bench, next to a disused charcoal grill and some rumpled up camping equipment. She looks to be a little older than you, and way, way taller.
 
 There&#39;s also another bench a little further into the yard.
 
 * [[Look at hyena.]] &lt;!-- ana-route.tw --&gt;
-* [[Sit by yourself.]] &lt;!-- zen-ending.tw --&gt;</tw-passagedata><tw-passagedata pid="233" name="Look at hyena." tags="checkpoint" position="350,2975" size="100,100">*CW: Revoked consent. Woman with penis. Masturbation.*
+* [[Sit by yourself.]] &lt;!-- zen-ending.tw --&gt;</tw-passagedata><tw-passagedata pid="235" name="Look at hyena." tags="checkpoint" position="600,2975" size="100,100">*CW: Revoked consent. Woman with penis. Masturbation.*
 
 She&#39;s wearing acid-wash jeans and a black t-shirt that reads &quot;Bad Bitch&quot;. She has sandy-colored fur with brown spots, and a thick long neck.
 
 The hyena sees you staring, and looks up from her phone. She notices you, and says, &quot;Oh. Sup.&quot;
 
 * [[What are you doing out here alone?]]
-* [[Have you seen my friend?]]</tw-passagedata><tw-passagedata pid="234" name="What are you doing out here alone?" tags="" position="475,2975" size="100,100">She folds her arms and and flips her mohawk non-chalantly. &quot;Could ask you the same question.&quot;
+* [[Have you seen my friend?]]</tw-passagedata><tw-passagedata pid="236" name="What are you doing out here alone?" tags="" position="725,2975" size="100,100">She folds her arms and and flips her mohawk non-chalantly. &quot;Could ask you the same question.&quot;
 
 * [[I&#39;m not really one for parties...]]
-* [[Just... getting some air?]]</tw-passagedata><tw-passagedata pid="235" name="Just... getting some air?" tags="" position="600,2975" size="100,100">Ana kicks her feet up on the bench, and says, &quot;Well, there&#39;s a free bench over there.&quot;
+* [[Just... getting some air?]]</tw-passagedata><tw-passagedata pid="237" name="Just... getting some air?" tags="" position="850,2975" size="100,100">Ana kicks her feet up on the bench, and says, &quot;Well, there&#39;s a free bench over there.&quot;
 
 * [[Sit by yourself.]]
-* [[Have you seen my friend?]]</tw-passagedata><tw-passagedata pid="236" name="I&#39;m not really one for parties..." tags="" position="725,2975" size="100,100">She lets out a little sigh. &quot;Yeah, me either. It&#39;s like, I&#39;m supposed to be enjoying myself here? Making friends and eating people? But all the noise, and the crowds, I get freaked out. I guess I&#39;m just trying to get away from it all for a moment.&quot;
+* [[Have you seen my friend?]]</tw-passagedata><tw-passagedata pid="238" name="I&#39;m not really one for parties..." tags="" position="975,2975" size="100,100">She lets out a little sigh. &quot;Yeah, me either. It&#39;s like, I&#39;m supposed to be enjoying myself here? Making friends and eating people? But all the noise, and the crowds, I get freaked out. I guess I&#39;m just trying to get away from it all for a moment.&quot;
 
 * [[Same here...]]
-* [[Wait, eating people?]]</tw-passagedata><tw-passagedata pid="237" name="Wait, eating people?" tags="" position="850,2975" size="100,100">&quot;Meeting,&quot; Ana corrects herself, &quot;Making friends and *meeting* people. I don&#39;t eat people, despite what you may have heard.&quot; She clears her throat awkwardly. &quot;I&#39;m Ana, by the way. Ana Rose.&quot; She pats spot on the bench next to her. &quot;...You can sit if you want.&quot;
-* [[I&#39;m Hollis.|Tell Ana your name.]]</tw-passagedata><tw-passagedata pid="238" name="Same here..." tags="" position="975,2975" size="100,100">She nods, looking wistfully off into the distance. The moonlight reflects in her amber-colored eyes.
+* [[Wait, eating people?]]</tw-passagedata><tw-passagedata pid="239" name="Wait, eating people?" tags="" position="1100,2975" size="100,100">&quot;Meeting,&quot; Ana corrects herself, &quot;Making friends and *meeting* people. I don&#39;t eat people, despite what you may have heard.&quot; She clears her throat awkwardly. &quot;I&#39;m Ana, by the way. Ana Rose.&quot; She pats spot on the bench next to her. &quot;...You can sit if you want.&quot;
+* [[I&#39;m Hollis.|Tell Ana your name.]]</tw-passagedata><tw-passagedata pid="240" name="Same here..." tags="" position="1225,2975" size="100,100">She nods, looking wistfully off into the distance. The moonlight reflects in her amber-colored eyes.
 
 &quot;I&#39;m Ana, by the way. Ana Rose.&quot; She pats spot on the bench next to her. &quot;...You can sit if you want.&quot;
 
-* [[My name&#39;s Hollis!|Tell Ana your name.]]</tw-passagedata><tw-passagedata pid="239" name="Tell Ana your name." tags="" position="1100,2975" size="100,100">You sit down on the bench, and tell Ana your name.
+* [[My name&#39;s Hollis!|Tell Ana your name.]]</tw-passagedata><tw-passagedata pid="241" name="Tell Ana your name." tags="" position="100,3100" size="100,100">You sit down on the bench, and tell Ana your name.
 
 &quot;Hollis,&quot; she repeats, smiling slightly. &quot;Cute name.&quot;
 
 You&#39;re flustered, and not sure how to respond.
 
 * [[Charm.]]
-* [[I... um... think you&#39;re... also... cute?|(oh god oh fuck)]]</tw-passagedata><tw-passagedata pid="240" name="Charm." tags="" position="1225,2975" size="100,100">Ana cocks an eyebrow at you. &quot;...What did you say?&quot;
+* [[I... um... think you&#39;re... also... cute?|(oh god oh fuck)]]</tw-passagedata><tw-passagedata pid="242" name="Charm." tags="" position="225,3100" size="100,100">Ana cocks an eyebrow at you. &quot;...What did you say?&quot;
 
 You realize that instead of saying or doing something charming, you literally just said the word *charm* out loud.
 
 Thinking quickly you tell her, uh, you meant, that she seems very charming! No, wait, you&#39;re *charmed* to meet her! That&#39;s it. Her name&#39;s Ana, yours is Hollis. Charmed.
 
-* [[(oh god oh fuck)]]</tw-passagedata><tw-passagedata pid="241" name="(oh god oh fuck)" tags="" position="100,3100" size="100,100">She snickers as you helplessly tumble over your words. For a moment, she hesitates, delicately running her tongue between her lips and over her pointy white teeth.
+* [[(oh god oh fuck)]]</tw-passagedata><tw-passagedata pid="243" name="(oh god oh fuck)" tags="" position="350,3100" size="100,100">She snickers as you helplessly tumble over your words. For a moment, she hesitates, delicately running her tongue between her lips and over her pointy white teeth.
 
 &quot;Okay, Hollis. I... think you&#39;re kinda cute too,&quot; she says, &quot;for a herbivore at least...&quot; She smiles at you, and brushes her hair out of her eyes. She seems to be a little more comfortable around you now. &quot;Kinda cold out here, huh?&quot;
 
 * [[Do you want a hug?]]
-* [[Anyway, I&#39;m looking for this friend of mine?|I came here with a friend...]]</tw-passagedata><tw-passagedata pid="242" name="Do you want a hug?" tags="" position="225,3100" size="100,100">&quot;...Sure, whatever,&quot; she replies, with a little smile, and stretches out her arms. You give Ana a hug. You can tell she&#39;s wearing a lot of deodorant, but it&#39;s actually quite nice. You don&#39;t remember the last time you were hugged.
+* [[Anyway, I&#39;m looking for this friend of mine?|I came here with a friend...]]</tw-passagedata><tw-passagedata pid="244" name="Do you want a hug?" tags="" position="475,3100" size="100,100">&quot;...Sure, whatever,&quot; she replies, with a little smile, and stretches out her arms. You give Ana a hug. You can tell she&#39;s wearing a lot of deodorant, but it&#39;s actually quite nice. You don&#39;t remember the last time you were hugged.
 
 After a what feels like a wonderful eternity, she lets go. &quot;That was nice,&quot; she says, slouching down a little.
 
 Yeah, you say, and tentatively rest your head against her shoulder.
 
 * [[A quiet moment.]]
-* [[Kiss her.]]</tw-passagedata><tw-passagedata pid="243" name="Kiss her." tags="" position="350,3100" size="100,100">You&#39;ve seen enough romance movies to know where this is going.
+* [[Kiss her.]]</tw-passagedata><tw-passagedata pid="245" name="Kiss her." tags="" position="600,3100" size="100,100">You&#39;ve seen enough romance movies to know where this is going.
 You&#39;re sure of it–this is the moment where you lean in, and both share a sudden yet dramatic first kiss.
 
 You turn toward her big furry face, and attempt to kiss her on the mouth. She immediately leans away, letting out a small, surprised growl.
@@ -3502,13 +3511,13 @@ You turn toward her big furry face, and attempt to kiss her on the mouth. She im
 &quot;Woah there, casanova, that&#39;s, uh...&quot; She frowns. &quot;I&#39;m not really comfortable with that right now?&quot;
 
 * [[S-sorry!|Sorry for trying to kiss you.]]
-* [[Try to kiss her again.|Kiss her again.]]</tw-passagedata><tw-passagedata pid="244" name="Kiss her again." tags="" position="475,3100" size="100,100">Ana is visibly uncomfortable, and showing her teeth.
+* [[Try to kiss her again.|Kiss her again.]]</tw-passagedata><tw-passagedata pid="246" name="Kiss her again." tags="" position="725,3100" size="100,100">Ana is visibly uncomfortable, and showing her teeth.
 
 You reflect upon the obvious subtext of her response, and decide instead to delicately run a paw through her dark brown mohawk.
 
 &quot;...No seriously don&#39;t-...!!!&quot;
 
-* [[Stroke hair.|ENDING: Can&#39;t Take a Hint]]</tw-passagedata><tw-passagedata pid="245" name="ENDING: Can&#39;t Take a Hint" tags="vore" position="600,3100" size="100,100">&quot;...!!!&quot;
+* [[Stroke hair.|ENDING: Can&#39;t Take a Hint]]</tw-passagedata><tw-passagedata pid="247" name="ENDING: Can&#39;t Take a Hint" tags="vore" position="850,3100" size="100,100">&quot;...!!!&quot;
 
 The second you touch her hair, the hyena immediately lets out an vicious bark, and reflexively glomps her mouth down over your head. You faint from surprise. Ana quickly swallows your unconscious body, making sure no one else was around to see.
 
@@ -3520,7 +3529,7 @@ The second you touch her hair, the hyena immediately lets out an vicious bark, a
 
 ### Game Over
 
-* [[Do you want a hug?]] *(Rewind)*</tw-passagedata><tw-passagedata pid="246" name="A quiet moment." tags="" position="725,3100" size="100,100">For a little while, neither of you say anything. The two of you sit there in comfortable silence, watching the stars.
+* [[Do you want a hug?]] *(Rewind)*</tw-passagedata><tw-passagedata pid="248" name="A quiet moment." tags="" position="975,3100" size="100,100">For a little while, neither of you say anything. The two of you sit there in comfortable silence, watching the stars.
 
 &quot;So,&quot; she giggles eventually, &quot;some party, huh.&quot;
 
@@ -3531,49 +3540,49 @@ The second you touch her hair, the hyena immediately lets out an vicious bark, a
 &quot;I don&#39;t even know why I came here, honestly. It&#39;s just a bunch of horny rich college kids,&quot; she says, &quot;-No offense.&quot; Ana looks over at you. &quot;Why&#39;d you even come here in the first place?&quot;
 
 * [[I came here with a friend...]]
-* [[I think I want you to eat me...|Ana, I want you to eat me.]]</tw-passagedata><tw-passagedata pid="247" name="Sorry for trying to kiss you." tags="" position="850,3100" size="100,100">&quot;No,&quot; she says, smiling again, &quot;I get it.&quot; She gives you another hug.
+* [[I think I want you to eat me...|Ana, I want you to eat me.]]</tw-passagedata><tw-passagedata pid="249" name="Sorry for trying to kiss you." tags="" position="1100,3100" size="100,100">&quot;No,&quot; she says, smiling again, &quot;I get it.&quot; She gives you another hug.
 
-&lt;%= story.render(&quot;A quiet moment.&quot;) /* [[A quiet moment.]] */ %&gt;</tw-passagedata><tw-passagedata pid="248" name="I came here with a friend..." tags="" position="975,3100" size="100,100">Ana scratches her head. &quot;I probably haven&#39;t seen &#39;em. What&#39;s this friend of yours look like?&quot;
+&lt;%= story.render(&quot;A quiet moment.&quot;) /* [[A quiet moment.]] */ %&gt;</tw-passagedata><tw-passagedata pid="250" name="I came here with a friend..." tags="" position="1225,3100" size="100,100">Ana scratches her head. &quot;I probably haven&#39;t seen &#39;em. What&#39;s this friend of yours look like?&quot;
 
-* [[He&#39;s a guinea pig, about this tall...|Describe Reese.]]</tw-passagedata><tw-passagedata pid="249" name="Have you seen my friend?" tags="" position="1100,3100" size="100,100">She takes a thoughtful sip from a plastic cup.
+* [[He&#39;s a guinea pig, about this tall...|Describe Reese.]]</tw-passagedata><tw-passagedata pid="251" name="Have you seen my friend?" tags="" position="100,3225" size="100,100">She takes a thoughtful sip from a plastic cup.
 
 &quot;Depends who&#39;s asking,&quot; she replies.
 
-* [[Tell her your name.]]</tw-passagedata><tw-passagedata pid="250" name="Tell her your name." tags="" position="1225,3100" size="100,100">You say your name is Hollis.
+* [[Tell her your name.]]</tw-passagedata><tw-passagedata pid="252" name="Tell her your name." tags="" position="225,3225" size="100,100">You say your name is Hollis.
 
 &quot;Pleased to meet you, Hollis, I&#39;m Ana.&quot; From her tone, you suspect she&#39;s being at least a little sarcastic. &quot;Now, this friend of yours?&quot;
 
-* [[He&#39;s a guinea pig, about this tall...|Describe Reese.]]</tw-passagedata><tw-passagedata pid="251" name="Describe Reese." tags="" position="100,3225" size="100,100">You give her a brief description of your friend, Reese.
+* [[He&#39;s a guinea pig, about this tall...|Describe Reese.]]</tw-passagedata><tw-passagedata pid="253" name="Describe Reese." tags="" position="350,3225" size="100,100">You give her a brief description of your friend, Reese.
 
 &quot;Sorry, haven&#39;t seen him,&quot; she shrugs and says, &quot;But at a party like this, I wouldn&#39;t be surprised if he was already in some pred&#39;s gut.&quot;
 
-* [[What!?|What do you mean?]]</tw-passagedata><tw-passagedata pid="252" name="What do you mean?" tags="" position="225,3225" size="100,100">&lt;% setup.setFlag(&quot;upstairsUnlocked&quot;); %&gt;
+* [[What!?|What do you mean?]]</tw-passagedata><tw-passagedata pid="254" name="What do you mean?" tags="" position="475,3225" size="100,100">&lt;% setup.setFlag(&quot;upstairsUnlocked&quot;); %&gt;
 
 She gives you a slightly patronizing stare.
 
 &quot;C&#39;mon, you&#39;d have to be an idiot not to realize. This whole place is practically crawling with preds. Your bud probably got dragged into a broom closet somewhere and gurgled. That&#39;s all there is to it.&quot;
 
 * [[But, um, if he wasn&#39;t...?]]
-* [[That&#39;s kind of hot...]]</tw-passagedata><tw-passagedata pid="253" name="But, um, if he wasn&#39;t...?" tags="" position="350,3225" size="100,100">She shrugs.
+* [[That&#39;s kind of hot...]]</tw-passagedata><tw-passagedata pid="255" name="But, um, if he wasn&#39;t...?" tags="" position="600,3225" size="100,100">She shrugs.
 
 &quot;I mean, you could probably check in the rooms upstairs. Somewhere secluded and private, that&#39;s probably where I&#39;d go... *if* I was trying to eat someone...&quot;
 
 She clears her throat. &quot;Not that that&#39;s like, a thing that I&#39;ve ever done, or anything.&quot;
 
 * [[Y-you could eat me, if you wanted to...|Ana, I want you to eat me.]]
-* [[Thank you, goodbye.]]</tw-passagedata><tw-passagedata pid="254" name="Thank you, goodbye." tags="" position="475,3225" size="100,100">You excuse yourself politely, and head back into the house. Ana gives a casual wave as you leave.
+* [[Thank you, goodbye.]]</tw-passagedata><tw-passagedata pid="256" name="Thank you, goodbye." tags="" position="725,3225" size="100,100">You excuse yourself politely, and head back into the house. Ana gives a casual wave as you leave.
 
-* [[Go back to the foyer.|The Foyer.]]</tw-passagedata><tw-passagedata pid="255" name="Ana, I want you to eat me." tags="" position="600,3225" size="100,100">You brain tells to you to stop. That you&#39;re making a big mistake. After hesitating for a second, you finally open your mouth, and manage to get the words out.
+* [[Go back to the foyer.|The Foyer.]]</tw-passagedata><tw-passagedata pid="257" name="Ana, I want you to eat me." tags="" position="850,3225" size="100,100">You brain tells to you to stop. That you&#39;re making a big mistake. After hesitating for a second, you finally open your mouth, and manage to get the words out.
 
 The hyena looks at you with astonishment. &quot;R-really?&quot; Her confusion turns into something of a bemused smile.
 
 &quot;You *want* me to eat you? Like, &#39;eat you&#39; eat you? Digestion and all?&quot;
 * [[...Yes please.]]
-* [[No, wait.]]</tw-passagedata><tw-passagedata pid="256" name="That&#39;s kind of hot..." tags="" position="725,3225" size="100,100">Ana blushes, but looks at you interestedly.
+* [[No, wait.]]</tw-passagedata><tw-passagedata pid="258" name="That&#39;s kind of hot..." tags="" position="975,3225" size="100,100">Ana blushes, but looks at you interestedly.
 
 &quot;You... think vore is *hot*? I guess that&#39;s not a surprise, considering you&#39;re *here*. You just didn&#39;t strike me as that kind of rabbit.&quot;
 
-* [[N-no! I meant...]]</tw-passagedata><tw-passagedata pid="257" name="N-no! I meant..." tags="" position="850,3225" size="100,100">Thinking quickly you tell her, uh, you meant, that you think predators are hot! Not that you&#39;re assuming she&#39;s a— no, fuck, um...
+* [[N-no! I meant...]]</tw-passagedata><tw-passagedata pid="259" name="N-no! I meant..." tags="" position="1100,3225" size="100,100">Thinking quickly you tell her, uh, you meant, that you think predators are hot! Not that you&#39;re assuming she&#39;s a— no, fuck, um...
 
 &quot;Deep breaths, pal.&quot;
 
@@ -3582,16 +3591,16 @@ You clear your throat. What you meant to say was that digesting inside is a stom
 Ana pauses thoughtfully for a moment. Her sharp, shiny teeth glint in the moonlight. &quot;...Hollis, do you want me to digest you?&quot;
 
 * [[...Yes please.]]
-* [[No, wait.]]</tw-passagedata><tw-passagedata pid="258" name="No, wait." tags="" position="975,3225" size="100,100">You tell her she might&#39;ve gotten the wrong idea. You&#39;re not interested in being digested.
+* [[No, wait.]]</tw-passagedata><tw-passagedata pid="260" name="No, wait." tags="" position="1225,3225" size="100,100">You tell her she might&#39;ve gotten the wrong idea. You&#39;re not interested in being digested.
 
 &quot;Oh,&quot; she says, clearly a little disappointed. &quot;Sorry, but I don&#39;t spit my prey up.&quot; Ana gestures to her slightly chubby belly, and says, &quot;There&#39;s only one way outta here, and it&#39;s not pretty. I take it you&#39;re not interested anymore?&quot;
 
 * [[No, thank you though.]]
-* [[You can digest me, if you want...]]</tw-passagedata><tw-passagedata pid="259" name="No, thank you though." tags="" position="1100,3225" size="100,100">&quot;Oh, no problem,&quot; Ana says, clearly a little crestfallen.
+* [[You can digest me, if you want...]]</tw-passagedata><tw-passagedata pid="261" name="No, thank you though." tags="" position="100,3350" size="100,100">&quot;Oh, no problem,&quot; Ana says, clearly a little crestfallen.
 
 You awkwardly excuse yourself, and walk back into the foyer. She waves half-heartedly as you leave.
 
-* &lt;a0 data-passage=&quot;The Foyer.&quot;&gt;Go back to the foyer.&lt;/a&gt;</tw-passagedata><tw-passagedata pid="260" name="...Yes please." tags="" position="1225,3225" size="100,100">You can&#39;t believe you&#39;re saying this.
+* &lt;a0 data-passage=&quot;The Foyer.&quot;&gt;Go back to the foyer.&lt;/a&gt;</tw-passagedata><tw-passagedata pid="262" name="...Yes please." tags="" position="225,3350" size="100,100">You can&#39;t believe you&#39;re saying this.
 
 Ana chuckles, &quot;Gee, I&#39;m that obvious as a predator, huh?&quot; She stands up and gives you a big smile. &quot;Y&#39;know, talking to you was making me *really* hungry.&quot; You blush, and she gives you a paw and helps you up. Her tail is wagging eagerly. &quot;You&#39;re sure about this?&quot;
 
@@ -3599,17 +3608,17 @@ You nod.
 
 &quot;Okay!&quot; she says, &quot;follow me!&quot;
 
-* [[Follow Ana into the yard.]]</tw-passagedata><tw-passagedata pid="261" name="You can digest me, if you want..." tags="" position="100,3350" size="100,100">You blushingly tell Ana you&#39;ve had a change of heart. You&#39;re ready to get gurgled.
+* [[Follow Ana into the yard.]]</tw-passagedata><tw-passagedata pid="263" name="You can digest me, if you want..." tags="" position="350,3350" size="100,100">You blushingly tell Ana you&#39;ve had a change of heart. You&#39;re ready to get gurgled.
 
 Ana stands up and gives you a big smile. &quot;You sure? Awesome! Y&#39;know, talking to you was making me *really* hungry.&quot; You blush, and she gives you a paw and helps you up. Her tail is wagging eagerly.
 
 &quot;Okay!&quot; she says, &quot;follow me!&quot;
 
-* [[Follow Ana into the yard.]]</tw-passagedata><tw-passagedata pid="262" name="Follow Ana into the yard." tags="" position="225,3350" size="100,100">Ana leads you by the paw further into a darker part of the backyard, out of view. &quot;Nobody should bother us out here,&quot; she says. You shiver with excitement.
+* [[Follow Ana into the yard.]]</tw-passagedata><tw-passagedata pid="264" name="Follow Ana into the yard." tags="" position="475,3350" size="100,100">Ana leads you by the paw further into a darker part of the backyard, out of view. &quot;Nobody should bother us out here,&quot; she says. You shiver with excitement.
 
 &quot;Now, just one condition for me to eat you. Once I eat you, you&#39;re mine. If you change your mind, you can kick and squirm all you like, but you&#39;re not coming out. No backsies. Got it?&quot;
 
-* [[Okay.|Any questions?]]</tw-passagedata><tw-passagedata pid="263" name="Any questions?" tags="" position="350,3350" size="100,100">&lt;% const hasSeen = [&quot;Will you be gentle?&quot;, &quot;How does it feel to have live prey inside you?&quot;, &quot;Should I get naked first?&quot;, &quot;Will I taste okay?&quot;].map(e =&gt; +visited(e)).reduce((a, b) =&gt; a+b, 0);
+* [[Okay.|Any questions?]]</tw-passagedata><tw-passagedata pid="265" name="Any questions?" tags="" position="600,3350" size="100,100">&lt;% const hasSeen = [&quot;Will you be gentle?&quot;, &quot;How does it feel to have live prey inside you?&quot;, &quot;Should I get naked first?&quot;, &quot;Will I taste okay?&quot;].map(e =&gt; +visited(e)).reduce((a, b) =&gt; a+b, 0);
 
 if (hasSeen === 0) { %&gt;
 Ana smiles. &quot;Good. Any other questions before you become hyena food?&quot;
@@ -3650,50 +3659,50 @@ Ana smiles. &quot;Good. Any other questions before you become hyena food?&quot;
 &lt;% } %&gt;
 &lt;% if (hasSeen &gt; 3 || visited(&quot;You have a penis?&quot;)) { %&gt;
 * [[I&#39;ve changed my mind.]]
-&lt;% } %&gt;</tw-passagedata><tw-passagedata pid="264" name="Will you be gentle?" tags="" position="475,3350" size="100,100">&quot;No teeth, I promise.&quot; She gives you a cute smile. &quot;My belly definitely won&#39;t go easy on you, but you&#39;ll probably pass out before you start digesting anyway. I definitely won&#39;t bite or scratch you.&quot;
+&lt;% } %&gt;</tw-passagedata><tw-passagedata pid="266" name="Will you be gentle?" tags="" position="725,3350" size="100,100">&quot;No teeth, I promise.&quot; She gives you a cute smile. &quot;My belly definitely won&#39;t go easy on you, but you&#39;ll probably pass out before you start digesting anyway. I definitely won&#39;t bite or scratch you.&quot;
 
 She murmurs, &quot;Not hard, anyway...&quot;
 
-* [[Should I feel reassured?]]</tw-passagedata><tw-passagedata pid="265" name="Should I feel reassured?" tags="" position="600,3350" size="100,100">&quot;Well, people say I can be pretty feisty. At least, when they&#39;re not saying things like, &#39;Aah stop!!&#39; and, &#39;Ana you said you weren&#39;t gonna digest me!&#39;&quot;
+* [[Should I feel reassured?]]</tw-passagedata><tw-passagedata pid="267" name="Should I feel reassured?" tags="" position="850,3350" size="100,100">&quot;Well, people say I can be pretty feisty. At least, when they&#39;re not saying things like, &#39;Aah stop!!&#39; and, &#39;Ana you said you weren&#39;t gonna digest me!&#39;&quot;
 
 You give her a horrified expression.
 
 &quot;Kidding!&quot; she says, &quot;Honestly, I don&#39;t bite.&quot;
 
-* [[Okay...|Any questions?]]</tw-passagedata><tw-passagedata pid="266" name="How does it feel to have live prey inside you?" tags="" position="725,3350" size="100,100">As you ask her this, Ana&#39;s belly grumbles expectantly. She pats it, and looks thoughtful for a second.
+* [[Okay...|Any questions?]]</tw-passagedata><tw-passagedata pid="268" name="How does it feel to have live prey inside you?" tags="" position="975,3350" size="100,100">As you ask her this, Ana&#39;s belly grumbles expectantly. She pats it, and looks thoughtful for a second.
 
 &quot;It&#39;s uh, kinda hard to describe, beyond saying it feels *super* good. Like, imagine getting a shiatsu massage from the *inside*. Except, the masseuse is made out of *bacon*... or like, carrots, or whatever rabbits eat. I&#39;m not explaining it right.&quot;
-* [[Root vegetables, mostly...?]]</tw-passagedata><tw-passagedata pid="267" name="Root vegetables, mostly...?" tags="" position="850,3350" size="100,100">&quot;Like, from the ground? Weird.&quot;
+* [[Root vegetables, mostly...?]]</tw-passagedata><tw-passagedata pid="269" name="Root vegetables, mostly...?" tags="" position="1100,3350" size="100,100">&quot;Like, from the ground? Weird.&quot;
 
-&lt;%= story.render(&quot;Any questions?&quot;) %&gt;</tw-passagedata><tw-passagedata pid="268" name="Should I get naked first?" tags="" position="975,3350" size="100,100">&quot;Nah,&quot; she says, &quot;I can digest clothes no problem. You&#39;re lucky you&#39;re dealing with an experienced predator!&quot;
+&lt;%= story.render(&quot;Any questions?&quot;) %&gt;</tw-passagedata><tw-passagedata pid="270" name="Should I get naked first?" tags="" position="1225,3350" size="100,100">&quot;Nah,&quot; she says, &quot;I can digest clothes no problem. You&#39;re lucky you&#39;re dealing with an experienced predator!&quot;
 
 &quot;I mean, you could get naked if you *wanted* to, but, it&#39;s not like you&#39;re gonna impress me with your dick.&quot; She winks. &quot;I guarantee mine&#39;s bigger.&quot;
 * [[Take off clothes.|Undress in front of Ana outside.]]
 * [[...I don&#39;t have a dick.]]
-* [[I&#39;ll stay clothed.]]</tw-passagedata><tw-passagedata pid="269" name="Undress in front of Ana outside." tags="" position="1100,3350" size="100,100">You remove your clothes, in the hopes that it&#39;ll make you easier on Ana&#39;s stomach.
+* [[I&#39;ll stay clothed.]]</tw-passagedata><tw-passagedata pid="271" name="Undress in front of Ana outside." tags="" position="100,3475" size="100,100">You remove your clothes, in the hopes that it&#39;ll make you easier on Ana&#39;s stomach.
 
 She looks at the fur of your naked body with intrigue, her eyes drifting towards your crotch. &quot;O-oh! That&#39;s uh, very considerate of you.&quot;
 
-&lt;%= story.render(&quot;Any questions?&quot;) %&gt;</tw-passagedata><tw-passagedata pid="270" name="...I don&#39;t have a dick." tags="" position="1225,3350" size="100,100">Ana hesitates for a second. &quot;Y-yeah, haha.&quot; She scratches the mohawk on the back of her neck. &quot;M-me neither...&quot;
+&lt;%= story.render(&quot;Any questions?&quot;) %&gt;</tw-passagedata><tw-passagedata pid="272" name="...I don&#39;t have a dick." tags="" position="225,3475" size="100,100">Ana hesitates for a second. &quot;Y-yeah, haha.&quot; She scratches the mohawk on the back of her neck. &quot;M-me neither...&quot;
 
 &lt;% s.uhYeahMeNeither = true; %&gt;
 
-&lt;%= story.render(&quot;Any questions?&quot;) %&gt;</tw-passagedata><tw-passagedata pid="271" name="I&#39;ll stay clothed." tags="" position="100,3475" size="100,100">&quot;Suit yourself,&quot; Ana says, &quot;pun intended.&quot;
+&lt;%= story.render(&quot;Any questions?&quot;) %&gt;</tw-passagedata><tw-passagedata pid="273" name="I&#39;ll stay clothed." tags="" position="350,3475" size="100,100">&quot;Suit yourself,&quot; Ana says, &quot;pun intended.&quot;
 
-&lt;%= story.render(&quot;Any questions?&quot;) %&gt;</tw-passagedata><tw-passagedata pid="272" name="You have a penis?" tags="" position="225,3475" size="100,100">Ana clears her throat awkwardly. &quot;Yes!&quot;
+&lt;%= story.render(&quot;Any questions?&quot;) %&gt;</tw-passagedata><tw-passagedata pid="274" name="You have a penis?" tags="" position="475,3475" size="100,100">Ana clears her throat awkwardly. &quot;Yes!&quot;
 
 * [[Is it because you&#39;re a hyena?]]
-* [[Okay, cool.|Any questions?]]</tw-passagedata><tw-passagedata pid="273" name="Is it because you&#39;re a hyena?" tags="" position="350,3475" size="100,100">&quot;No, it&#39;s because I&#39;m... Huh. Actually yeah, let&#39;s go with that.&quot;
+* [[Okay, cool.|Any questions?]]</tw-passagedata><tw-passagedata pid="275" name="Is it because you&#39;re a hyena?" tags="" position="600,3475" size="100,100">&quot;No, it&#39;s because I&#39;m... Huh. Actually yeah, let&#39;s go with that.&quot;
 
-* [[Okay, cool.|Any questions?]]</tw-passagedata><tw-passagedata pid="274" name="Will I taste okay?" tags="" position="475,3475" size="100,100">Ana sticks her nose into your neck, smelling you over with a slightly invasive tenacity.
+* [[Okay, cool.|Any questions?]]</tw-passagedata><tw-passagedata pid="276" name="Will I taste okay?" tags="" position="725,3475" size="100,100">Ana sticks her nose into your neck, smelling you over with a slightly invasive tenacity.
 
 &quot;Yeah, rabbit fur is usually really soft and delicious. Oh, and those ears!&quot; She playfully licks one, which sends a shiver down your spine. &quot;Yeah, you taste great.&quot;
 
 She puts a paw on her chin. &quot;...Although maybe you could dump a bottle of salad dressing on yourself... Oh! Or do a quick beer baste!&quot;
 
-* [[I&#39;m good, I think.]]</tw-passagedata><tw-passagedata pid="275" name="I&#39;m good, I think." tags="" position="600,3475" size="100,100">Ana cheerfully licks your face, wetting your nose a little with slobber. &quot;Yeah, you&#39;re good.&quot;
+* [[I&#39;m good, I think.]]</tw-passagedata><tw-passagedata pid="277" name="I&#39;m good, I think." tags="" position="850,3475" size="100,100">Ana cheerfully licks your face, wetting your nose a little with slobber. &quot;Yeah, you&#39;re good.&quot;
 
-&lt;%= story.render(&quot;Any questions?&quot;) %&gt;</tw-passagedata><tw-passagedata pid="276" name="I&#39;ve changed my mind." tags="" position="725,3475" size="100,100">You tell Ana that you&#39;ve had a change of heart, and don&#39;t want to be eaten after all.
+&lt;%= story.render(&quot;Any questions?&quot;) %&gt;</tw-passagedata><tw-passagedata pid="278" name="I&#39;ve changed my mind." tags="" position="975,3475" size="100,100">You tell Ana that you&#39;ve had a change of heart, and don&#39;t want to be eaten after all.
 
 &lt;% if (visited(&quot;Undress in front of Ana outside.&quot;)) { %&gt;
 &quot;R-really?&quot; she asks, looking at down at your naked body, &quot;*after* you took your clothes off?&quot;
@@ -3706,11 +3715,11 @@ She frowns, and puts a paw on her chin. &quot;Well, it&#39;s your choice after a
 
 She pats her gut, and says, &quot;So, you&#39;re *completely* sure you don&#39;t wanna be my shit? Even if I&#39;m *extra* gentle when I eat you?&quot;
 * [[No, thank you though.]]
-* [[...I&#39;m ready to be eaten.|Okay, I&#39;m ready.]]</tw-passagedata><tw-passagedata pid="277" name="Okay, I&#39;m ready." tags="" position="850,3475" size="100,100">Ana grins. She&#39;s practically drooling just from looking at you.
+* [[...I&#39;m ready to be eaten.|Okay, I&#39;m ready.]]</tw-passagedata><tw-passagedata pid="279" name="Okay, I&#39;m ready." tags="" position="1100,3475" size="100,100">Ana grins. She&#39;s practically drooling just from looking at you.
 
 &quot;Thanks for doing this. I promise to be extra careful as I digest you into my shit.&quot;
 
-* [[You&#39;re welcome!|Get vored by Ana.]]</tw-passagedata><tw-passagedata pid="278" name="Get vored by Ana." tags="vore" position="975,3475" size="100,100">&lt;% s.previousCommand = &quot;You&#39;re w-&quot;; %&gt;
+* [[You&#39;re welcome!|Get vored by Ana.]]</tw-passagedata><tw-passagedata pid="280" name="Get vored by Ana." tags="vore" position="1225,3475" size="100,100">&lt;% s.previousCommand = &quot;You&#39;re w-&quot;; %&gt;
 You&#39;re about to say she&#39;s welcome, when Ana suddenly lunges at you and clamps her slobbering maw down over your head. Your world suddenly becomes dark, wet, and smelling faintly like mint toothpaste. True to her word, she&#39;s feisty, but not actually using teeth.
 
 Ana deftly wraps her paws around your torso, and with a firm thrust, pushes your head, neck, and shoulders into her slimy esophagus, swallowing them almost instantly. You consider that as a hyena, maybe she&#39;s predisposed to consuming as much food as possible before someone else gets to it. Or maybe she&#39;s just experienced. Either way, the speed and ravenousness with which she traps you in her stomach is almost incredible.
@@ -3719,13 +3728,13 @@ Before you know it, Ana is eagerly gulping down your feet, leaving you curled up
 
 &quot;BUUUURP,&quot; Ana concludes, licking her lips. &quot;How was that?&quot;
 
-* [[...F-fast?]]</tw-passagedata><tw-passagedata pid="279" name="...F-fast?" tags="vore" position="1100,3475" size="100,100">Ana snickers, patting the huge furry bulge you&#39;ve made in her gut. &quot;What, did you want me to &lt;%= (visited(&quot;...I don&#39;t have a dick.&quot;)) ? &quot;jill&quot; : &quot;jack&quot; %&gt; you off on the way down?&quot;
+* [[...F-fast?]]</tw-passagedata><tw-passagedata pid="281" name="...F-fast?" tags="vore" position="100,3600" size="100,100">Ana snickers, patting the huge furry bulge you&#39;ve made in her gut. &quot;What, did you want me to &lt;%= (visited(&quot;...I don&#39;t have a dick.&quot;)) ? &quot;jill&quot; : &quot;jack&quot; %&gt; you off on the way down?&quot;
 
 Her mention of the possibility arouses you a little. However, cramped as you are, you&#39;re fairly certain you can&#39;t quite reach your privates anymore. Curled up in the pit of the hyena&#39;s belly, you&#39;re surrounded by liquids which coat your fur, and sting your skin a little bit.
 
 &quot;So, my little morsel, do you like it in there?&quot;
 
-* [[It&#39;s... very tight.]]</tw-passagedata><tw-passagedata pid="280" name="It&#39;s... very tight." tags="vore" position="1225,3475" size="100,100">&quot;Hfff,&quot; she sighs, &quot;well *I&#39;m* enjoying you in there.&amp;nbsp;You really were a yummy snack, Hollis.&quot;
+* [[It&#39;s... very tight.]]</tw-passagedata><tw-passagedata pid="282" name="It&#39;s... very tight." tags="vore" position="225,3600" size="100,100">&quot;Hfff,&quot; she sighs, &quot;well *I&#39;m* enjoying you in there.&amp;nbsp;You really were a yummy snack, Hollis.&quot;
 
 Absentmindedly, Ana sticks a paw down her jeans, and begins stroking herself. You can feel the impact of each stroke bumping against her engorged belly.
 
@@ -3737,25 +3746,25 @@ You ask her if she&#39;s jerking off.
 
 It&#39;s not pleasant.
 
-* [[I didn&#39;t realize how hot it would be...]]</tw-passagedata><tw-passagedata pid="281" name="I didn&#39;t realize how hot it would be..." tags="vore" position="100,3600" size="100,100">Ana asks, &quot;Hot as in sexy, or hot like temperature-wise?&quot;
+* [[I didn&#39;t realize how hot it would be...]]</tw-passagedata><tw-passagedata pid="283" name="I didn&#39;t realize how hot it would be..." tags="vore" position="350,3600" size="100,100">Ana asks, &quot;Hot as in sexy, or hot like temperature-wise?&quot;
 
 You tell her temperature-wise.
 
 She scoffs, &quot;Well *I* didn&#39;t realize I had eaten a sensitive pansy!&quot; Ana places a hand over her belly to stabilize it while she continues jerking off. &quot;Don&#39;t tell me you&#39;re already having second thoughts about this whole digestion thing.&quot;
 * [[...Maybe?]]
-* [[N-no! I&#39;m loving it!]]</tw-passagedata><tw-passagedata pid="282" name="...Maybe?" tags="vore" position="225,3600" size="100,100">&quot;Mmmm, that&#39;s a shame,&quot; Ana says, &quot;because you&#39;re way too delicious to let go. A deal&#39;s a deal, bucko. You&#39;re hyena fat now.&quot;
+* [[N-no! I&#39;m loving it!]]</tw-passagedata><tw-passagedata pid="284" name="...Maybe?" tags="vore" position="475,3600" size="100,100">&quot;Mmmm, that&#39;s a shame,&quot; Ana says, &quot;because you&#39;re way too delicious to let go. A deal&#39;s a deal, bucko. You&#39;re hyena fat now.&quot;
 
 You cough and choke on a little more stomach fluids. They&#39;re getting deeper, and it&#39;s gradually becoming harder to breathe.
 
 * [[...Please let me out?]]
-* [[Digest willingly.]]</tw-passagedata><tw-passagedata pid="283" name="N-no! I&#39;m loving it!" tags="vore checkpoint" position="350,3600" size="100,100">Ana lightly jiggles her belly again, this time letting out a husky moan.
+* [[Digest willingly.]]</tw-passagedata><tw-passagedata pid="285" name="N-no! I&#39;m loving it!" tags="vore checkpoint" position="600,3600" size="100,100">Ana lightly jiggles her belly again, this time letting out a husky moan.
 
 &quot;Good,&quot; she says, &quot;because you feel *fantastic* in there.&quot;
 
 You open your mouth to speak, but you accidentally swallow some of her stomach juices.
 
 * [[...Please let me out?]]
-* [[Digest willingly.]]</tw-passagedata><tw-passagedata pid="284" name="...Please let me out?" tags="vore" position="475,3600" size="100,100">Ana lets out an exasperated groan, but her masturbation doesn&#39;t stop.
+* [[Digest willingly.]]</tw-passagedata><tw-passagedata pid="286" name="...Please let me out?" tags="vore" position="725,3600" size="100,100">Ana lets out an exasperated groan, but her masturbation doesn&#39;t stop.
 
 &quot;Oh my god. I had literally *one* rule.&quot; She gives your body a firm pat, which makes you shudder. &quot;I dunno how to put this politely Hollis, but you&#39;re just food now. You&#39;re my food, and I&#39;m digesting you, end of discussion. Any further comments, your *majesty*?&quot;
 
@@ -3763,17 +3772,17 @@ You can only let out a small whimper.
 
 &quot;Good,&quot; Ana says, and resumes jerking off.
 
-* [[(oh god oh fuck.)|Move around inside Ana.]]</tw-passagedata><tw-passagedata pid="285" name="Move around inside Ana." tags="vore" position="600,3600" size="100,100">Your pulse quickens as you feel Ana&#39;s stomach acids gradually filling up beneath you.  This isn&#39;t anything like you imagined it would be. You try to reposition to keep your paws out of the liquid, but slip and accidentally kick into her thick stomach walls.
+* [[(oh god oh fuck.)|Move around inside Ana.]]</tw-passagedata><tw-passagedata pid="287" name="Move around inside Ana." tags="vore" position="850,3600" size="100,100">Your pulse quickens as you feel Ana&#39;s stomach acids gradually filling up beneath you.  This isn&#39;t anything like you imagined it would be. You try to reposition to keep your paws out of the liquid, but slip and accidentally kick into her thick stomach walls.
 
 &quot;Woah,&quot; she says, letting out a surprised little moan, &quot;Urp, I love strugglers...!&quot;
 
-* [[Ana, please let me out!]]</tw-passagedata><tw-passagedata pid="286" name="Ana, please let me out!" tags="vore" position="725,3600" size="100,100">You scramble against the walls of Ana&#39;s belly, choking on enzymes and stomach fluid. Whatever limited air is left around you is being used up pretty fast. In response, Ana simply lets out a fierce, excited grunt as she pleasures herself. She&#39;s clearly approaching orgasm.
+* [[Ana, please let me out!]]</tw-passagedata><tw-passagedata pid="288" name="Ana, please let me out!" tags="vore" position="975,3600" size="100,100">You scramble against the walls of Ana&#39;s belly, choking on enzymes and stomach fluid. Whatever limited air is left around you is being used up pretty fast. In response, Ana simply lets out a fierce, excited grunt as she pleasures herself. She&#39;s clearly approaching orgasm.
 
 You&#39;re now feeling woozy and light-headed, and massively regret offering yourself as a meal. In desperation, you yell out to get the hyena&#39;s attention, but she merely growls back, &quot;Oh my god, do you ever stop whining?&quot;
 
 &quot;Look,&quot; she grunts, &quot;I&#39;ll let you out after I orgasm, okay? Just gimme a second. I&#39;m so... freakin&#39;... close...!!!&quot;
 
-* [[I can&#39;t breathe...]]</tw-passagedata><tw-passagedata pid="287" name="I can&#39;t breathe..." tags="vore" position="850,3600" size="100,100">Ana strokes herself faster and faster. Her eagerness even seems to increase as she realizes you&#39;re already being affected by her digestive juices.
+* [[I can&#39;t breathe...]]</tw-passagedata><tw-passagedata pid="289" name="I can&#39;t breathe..." tags="vore" position="1100,3600" size="100,100">Ana strokes herself faster and faster. Her eagerness even seems to increase as she realizes you&#39;re already being affected by her digestive juices.
 
 &quot;Hnng, mmm, yeah... Right... There...&quot;
 
@@ -3783,7 +3792,7 @@ Frantically, you begin to struggle with the last remaining bit of strength you h
 
 You shut your eyes, as you begin to dissolve into oblivion. You decide to take... just a teeny tiny nap... until...
 
-* [[Ana: Cum.]]</tw-passagedata><tw-passagedata pid="288" name="Digest willingly." tags="vore" position="975,3600" size="100,100">You remain silent, and take a few deep breaths to relax yourself. Maybe this isn&#39;t really so bad. It&#39;s certainly warm in here, and the sound of Ana&#39;s racing heart reminds you of some ASMR videos you watched one time.
+* [[Ana: Cum.]]</tw-passagedata><tw-passagedata pid="290" name="Digest willingly." tags="vore" position="1225,3600" size="100,100">You remain silent, and take a few deep breaths to relax yourself. Maybe this isn&#39;t really so bad. It&#39;s certainly warm in here, and the sound of Ana&#39;s racing heart reminds you of some ASMR videos you watched one time.
 
 Besides, you did agree that you wouldn&#39;t change your mind. It&#39;s your fetish, after all.
 
@@ -3791,7 +3800,7 @@ Ana lets out a relieved sigh, and resumes jerking off. &quot;Say, um, do you thi
 
 You don&#39;t see why not.
 
-* [[Squirm.|Squirm for Ana&#39;s pleasure.]]</tw-passagedata><tw-passagedata pid="289" name="Squirm for Ana&#39;s pleasure." tags="vore" position="1100,3600" size="100,100">You wriggle your body around, hoping to maybe reposition yourself into a more comfortable position.
+* [[Squirm.|Squirm for Ana&#39;s pleasure.]]</tw-passagedata><tw-passagedata pid="291" name="Squirm for Ana&#39;s pleasure." tags="vore" position="100,3725" size="100,100">You wriggle your body around, hoping to maybe reposition yourself into a more comfortable position.
 
 &quot;Woah,&quot; Ana says, letting out a surprised little moan, &quot;I love strugglers...! Mmmmph!&quot;
 
@@ -3801,7 +3810,7 @@ You tell Ana, um, you think she&#39;s starting to digest you.
 
 Ana stifles a moan. &quot;Do you need me to let you out?&quot;
 
-* [[N-no, I&#39;m okay.|N-no, I&#39;m okay. (Ana)]]</tw-passagedata><tw-passagedata pid="290" name="N-no, I&#39;m okay. (Ana)" tags="vore" position="1225,3600" size="100,100">&quot;Good,&quot; Ana says, &quot;Keep struggling, prey.&quot;
+* [[N-no, I&#39;m okay.|N-no, I&#39;m okay. (Ana)]]</tw-passagedata><tw-passagedata pid="292" name="N-no, I&#39;m okay. (Ana)" tags="vore" position="225,3725" size="100,100">&quot;Good,&quot; Ana says, &quot;Keep struggling, prey.&quot;
 
 You begin to kick and squirm against the slick walls of flesh around you. You make an effort to avoid touching the pool of digestive enzymes when possible, but as they continue to flood the chamber, this becomes increasingly difficult.
 
@@ -3811,7 +3820,7 @@ You shut your eyes, and resign to fulfill your role as food. It truly is a wonde
 
 Ana growls out, &quot;Oh... yess... I&#39;m gonna... fucking...&quot;
 
-* [[Ana: Cum.]]</tw-passagedata><tw-passagedata pid="291" name="Ana: Cum." tags="" position="100,3725" size="100,100">&quot;Mmmmh!&quot; Ana lets out a long, satisfied grunt, and yanks her pants down, just as she begins to shoot off spurt after spurt of jizz onto &lt;% if (visited(&quot;Undress in front of Ana outside.&quot;)) { %&gt;your discarded clothes&lt;% } else { %&gt;the grass&lt;% } %&gt;. She moans out, &quot;Mmmm, yeahhh...&quot; and collapses back on the garden bench, hoisting her swollen belly.
+* [[Ana: Cum.]]</tw-passagedata><tw-passagedata pid="293" name="Ana: Cum." tags="" position="350,3725" size="100,100">&quot;Mmmmh!&quot; Ana lets out a long, satisfied grunt, and yanks her pants down, just as she begins to shoot off spurt after spurt of jizz onto &lt;% if (visited(&quot;Undress in front of Ana outside.&quot;)) { %&gt;your discarded clothes&lt;% } else { %&gt;the grass&lt;% } %&gt;. She moans out, &quot;Mmmm, yeahhh...&quot; and collapses back on the garden bench, hoisting her swollen belly.
 
 &lt;% if (visited(&quot;Digest willingly.&quot;) || visited(&quot;N-no, I&#39;m okay. (Ana)&quot;)) { %&gt;
 
@@ -3839,7 +3848,7 @@ Ana giggles contendedly. &quot;...I&#39;ll take that as a yes.&quot;
 &lt;% setup.addAchievement(&quot;Ana Vore Ending&quot;, &quot;No Laughing Matter&quot;); %&gt;
 
 * [[Epilogue.|Epilogue: Ana Post Vore.]] *(Warning: Scat Disposal.)*
-* &lt;a0 data-passage=&quot;Start&quot;&gt;Restart&lt;/a&gt;</tw-passagedata><tw-passagedata pid="292" name="Epilogue: Ana Post Vore." tags="morning" position="225,3725" size="100,100">*CW: Desperate to poop. Graphic Scat. Urination. Chain restaurants.*
+* &lt;a0 data-passage=&quot;Start&quot;&gt;Restart&lt;/a&gt;</tw-passagedata><tw-passagedata pid="294" name="Epilogue: Ana Post Vore." tags="morning" position="475,3725" size="100,100">*CW: Desperate to poop. Graphic Scat. Urination. Chain restaurants.*
 
 The morning sun beats down. A hung-over hyena wakes up on a bench in the backyard of the Armstrong household.
 
@@ -3851,16 +3860,16 @@ She&#39;s soon distracted by the more pressing matter of that rabbit&#39;s remai
 
 &quot;Ah, shit,&quot; she mutters.
 
-* [[Ana: Go inside to poop?]]</tw-passagedata><tw-passagedata pid="293" name="Ana: Go inside to poop?" tags="morning" position="350,3725" size="100,100">At your command, Ana looks towards the house, but quickly rules that out as an option. It&#39;d be extremely awkward to invite herself inside just to take a dump. She has a feeling that any toilet she uses will probably be out of service afterward.
+* [[Ana: Go inside to poop?]]</tw-passagedata><tw-passagedata pid="295" name="Ana: Go inside to poop?" tags="morning" position="600,3725" size="100,100">At your command, Ana looks towards the house, but quickly rules that out as an option. It&#39;d be extremely awkward to invite herself inside just to take a dump. She has a feeling that any toilet she uses will probably be out of service afterward.
 
 She wracks her brain, trying to think of the best place to squeeze her ex-prey out.
 
 * [[Ana: Shit in the backyard.]]
-* [[Ana: Drive somewhere with public restrooms.]]</tw-passagedata><tw-passagedata pid="294" name="Ana: Shit in the backyard." tags="morning" position="475,3725" size="100,100">Not an option. While the trees out here provided some good cover last night, in broad daylight Ana would still be fairly visible. Not to mention, she&#39;d be leaving behind a massive turd in the backyard of a complete stranger.
+* [[Ana: Drive somewhere with public restrooms.]]</tw-passagedata><tw-passagedata pid="296" name="Ana: Shit in the backyard." tags="morning" position="725,3725" size="100,100">Not an option. While the trees out here provided some good cover last night, in broad daylight Ana would still be fairly visible. Not to mention, she&#39;d be leaving behind a massive turd in the backyard of a complete stranger.
 
 Ana clutches her head. &lt;em.ana&gt;Yeah,&lt;/em&gt; she thinks, &lt;em.ana&gt;not the best idea...&lt;/em&gt;
 
-* [[Drive somewhere with a public restrooms.|Ana: Drive somewhere with public restrooms.]]</tw-passagedata><tw-passagedata pid="295" name="Ana: Drive somewhere with public restrooms." tags="morning" position="600,3725" size="100,100">Ana growls. &lt;em.ana&gt;Wow, that&#39;s really my only option? Fine.&lt;/em&gt;
+* [[Drive somewhere with a public restrooms.|Ana: Drive somewhere with public restrooms.]]</tw-passagedata><tw-passagedata pid="297" name="Ana: Drive somewhere with public restrooms." tags="morning" position="850,3725" size="100,100">Ana growls. &lt;em.ana&gt;Wow, that&#39;s really my only option? Fine.&lt;/em&gt;
 
 The hyena scampers discretely through the yard, around the massive house, and onto the sidewalk. Every step makes her swollen gut squish uncomfortably. Her meal wants out, *now*. She walks to her car with the determined yet careful stride of someone who desperately needs a toilet.
 
@@ -3868,7 +3877,7 @@ Ana&#39;s car is a dinged up, ancient vehicle. She inherited it from her mother,
 
 &lt;em.ana&gt;Hey,&lt;/em&gt; Ana thinks, &lt;em.ana&gt;quit narrating my tragic backstory, I need to take a shit, NOW.&lt;/em&gt;
 
-* [[Ana: Fine, whatever, just drive.]]</tw-passagedata><tw-passagedata pid="296" name="Ana: Fine, whatever, just drive." tags="morning" position="725,3725" size="100,100">She starts the car and drives for a few minutes, breathing slowly and scanning for the nearest possible location. That happens to be Pizza Shack, the world-famous purveyor of greasy low-price &#39;zza.
+* [[Ana: Fine, whatever, just drive.]]</tw-passagedata><tw-passagedata pid="298" name="Ana: Fine, whatever, just drive." tags="morning" position="975,3725" size="100,100">She starts the car and drives for a few minutes, breathing slowly and scanning for the nearest possible location. That happens to be Pizza Shack, the world-famous purveyor of greasy low-price &#39;zza.
 
 Ana parks and power-walks inside, her nose suddenly accosted by the thick stench of pepperoni. Upon entering, she is immediately accosted by a friendly dog wearing the uniform of a Pizza Shack employee.
 
@@ -3878,37 +3887,41 @@ Ana parks and power-walks inside, her nose suddenly accosted by the thick stench
 * [[&quot;I&#39;m Chet, I&#39;ll be your server today.&quot;|Employee: Hi!]]
 * [[&quot;Have you dined with us before?&quot;|Employee: Hi!]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="297" name="Employee: Hi!" tags="morning" position="850,3725" size="100,100">&lt;% s.previousCommand = &quot;Hi! Welcome to-&quot;; %&gt;
-&quot;Oh goddammit, *move*!&quot; Ana shoves past the employee and makes a bee-line for the restrooms. Like most bathrooms, the toilets are segregated by size, offering one toilet each for smallerfolk (anthros under 4 feet), largerfolk (7 feet and up), and &quot;medium,&quot; all the anthros in between.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="299" name="Employee: Hi!" tags="morning" position="1100,3725" size="100,100">&lt;% s.previousCommand = &quot;Hi! Welcome to-&quot;; %&gt;
+&quot;Oh goddammit, *move*!&quot; Ana shoves past the employee and makes a bee-line for the restroom doors.
 
-Ana, desperately holding a load of ex-rabbit inside her bowels, knocks on the medium door. &quot;Sorry, occupied.&quot;
+Like most public bathrooms, they&#39;re segregated by size, offering one stall labeled *gentlekind* (a traditional term for anthros taller than 7 feet), one marked *noblekind*, for anthros of medium height, and one marked *littlekind*, for those smaller than 4 feet. Some mixed-use establishments like airports will also have special *Tinykind* toilets, which are barely three inches tall, but it&#39;s rare to see one out in the suburbs.
 
-She tries the handle for the largerfolk toilet, but it&#39;s out of service for cleaning.
+Ana, desperately holding a load of ex-rabbit inside her bowels, and not needing such common knowledge narrated to her, knocks on the middle door.
 
-&lt;em.ana&gt;Fucking dammit,&lt;/em&gt; she thinks, eyeing the smaller restroom.
+&quot;Sorry, occupied,&quot; comes the reply.
+
+Groaning, she checks the gentlekind door, but it&#39;s out of service for cleaning.
+
+&lt;em.ana&gt;Fucking dammit,&lt;/em&gt; she thinks, eyeing the slightly diminished door leading into the smallest of the three restrooms.
 
 * [[Ana: Poop in the tiny toilet.]]
-* [[Ana: Wait until they&#39;re finished.]]</tw-passagedata><tw-passagedata pid="298" name="Ana: Wait until they&#39;re finished." tags="morning" position="975,3725" size="100,100">&lt;em.ana&gt;Haha, fuck that.&lt;/em&gt;
+* [[Ana: Wait until they&#39;re finished.]]</tw-passagedata><tw-passagedata pid="300" name="Ana: Wait until they&#39;re finished." tags="morning" position="1225,3725" size="100,100">&lt;em.ana&gt;Haha, fuck that.&lt;/em&gt;
 
-* [[Ana: Shit Hollis out in the tiny toilet.|Ana: Poop in the tiny toilet.]]</tw-passagedata><tw-passagedata pid="299" name="Ana: Poop in the tiny toilet." tags="morning" position="1100,3725" size="100,100">Ana bursts into the smallerfolk restroom, and naturally finds a toilet designed for anthros much smaller than herself. She yanks down her pants, hovers her large ass over the small toilet bowl, and...
+* [[Ana: Shit Hollis out in the tiny toilet.|Ana: Poop in the tiny toilet.]]</tw-passagedata><tw-passagedata pid="301" name="Ana: Poop in the tiny toilet." tags="morning" position="100,3850" size="100,100">Ana crouches to enter the littlekind restroom, and naturally finds a toilet designed for anthros much smaller than herself. She yanks down her pants, hovers her large ass over the small toilet bowl, and...
 
-* [[&lt;em.ana&gt;Haaaaaaaahh.&lt;/em&gt;|Ana: Squeeze out Hollis.]]</tw-passagedata><tw-passagedata pid="300" name="Ana: Squeeze out Hollis." tags="morning" position="1225,3725" size="100,100">...Immediately begins squeezing out a thick, solid turd.
+* [[&lt;em.ana&gt;Haaaaaaaahh.&lt;/em&gt;|Ana: Squeeze out Hollis.]]</tw-passagedata><tw-passagedata pid="302" name="Ana: Squeeze out Hollis." tags="morning" position="225,3850" size="100,100">...Immediately begins squeezing out a thick, solid turd.
 
 The shit is smooth, but speckled with gray fur and partially-dissolved bones. The telltale signs of a fast metabolism, and a low-fiber diet. The sensation of squeezing it out is almost euphoric. Partially due to how bad she needed to do it, and partially a result of her natural inclinations as a predator.
 
 The hyena grunts as a shit-packed, partially cracked rabbit skull begins to stretch her asshole impossibly wide.
 
-* [[&lt;em.ana&gt;Hhhrrrrrrnnnng!&lt;/em&gt;|Ana: Poop out skull.]]</tw-passagedata><tw-passagedata pid="301" name="Ana: Poop out skull." tags="morning" position="100,3850" size="100,100">After straining for several seconds, the skull finally passes through with a loud &quot;plop&quot;. Ana breathes a sigh of relief.
+* [[&lt;em.ana&gt;Hhhrrrrrrnnnng!&lt;/em&gt;|Ana: Poop out skull.]]</tw-passagedata><tw-passagedata pid="303" name="Ana: Poop out skull." tags="morning" position="350,3850" size="100,100">After straining for several seconds, the skull finally passes through with a loud &quot;plop&quot;. Ana breathes a sigh of relief.
 
 As Ana&#39;s asshole squeezes them out, Hollis&#39;s remains pile up in the small toilet bowl, well past the point at which they&#39;d be reasonable to flush. The hyena is panting softly, almost overjoyed to get her prey out of her.
 
 As she pinches off the last turd, her asshole finally relaxes, and she lets loose a heavy stream of piss, splashing wildly atop the disgusting mound of what was formerly a living, breathing person.
 
-* [[&lt;em.ana&gt;Phew...&lt;/em&gt;|Ana: Done pooping.]]</tw-passagedata><tw-passagedata pid="302" name="Ana: Done pooping." tags="morning" position="225,3850" size="100,100">Ana wipes her ass, which is now slightly fatter than it was last night. She stands up, and takes a moment to admire her brown handiwork.
+* [[&lt;em.ana&gt;Phew...&lt;/em&gt;|Ana: Done pooping.]]</tw-passagedata><tw-passagedata pid="304" name="Ana: Done pooping." tags="morning" position="475,3850" size="100,100">Ana wipes her ass, which is now slightly fatter than it was last night. She stands up, and takes a moment to admire her brown handiwork.
 
 &quot;Wow, way bigger than I thought it&#39;d be,&quot; she remarks, &quot;Well, goodbye, uh, whatever your name was!&quot;
 
-* [[Ana: Flush...?]]</tw-passagedata><tw-passagedata pid="303" name="Ana: Flush...?" tags="morning" position="350,3850" size="100,100">Anticipating the worst, she pushes her claw down the handle to flush. The small toilet sputters, but makes no effort to swallow the massive turd. It remains perfectly still in the bowl.
+* [[Ana: Flush...?]]</tw-passagedata><tw-passagedata pid="305" name="Ana: Flush...?" tags="morning" position="600,3850" size="100,100">Anticipating the worst, she pushes her claw down the handle to flush. The small toilet sputters, but makes no effort to swallow the massive turd. It remains perfectly still in the bowl.
 
 &quot;Shit,&quot; the hyena sighs, &quot;Well, looks like you&#39;re Chet&#39;s problem now.&quot; She washes her paws, turns toward the door, and walks out with her tail held high, and a satisfied smile on her face.
 
@@ -3916,26 +3929,26 @@ As she pinches off the last turd, her asshole finally relaxes, and she lets loos
 
 ### The End.
 
-* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="304" name="Sit by yourself." tags="outside dreamy_1" position="475,3850" size="100,100">You find an empty bench to sit on by yourself, distancing yourself from the chaos of the party. Being out here on your own, it&#39;s actually quite peaceful.
+* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="306" name="Sit by yourself." tags="outside dreamy_1" position="725,3850" size="100,100">You find an empty bench to sit on by yourself, distancing yourself from the chaos of the party. Being out here on your own, it&#39;s actually quite peaceful.
 
-* [[Watch the stars.]]</tw-passagedata><tw-passagedata pid="305" name="Watch the stars." tags="outside dreamy_2 stars zen" position="600,3850" size="100,100">You do so.
+* [[Watch the stars.]]</tw-passagedata><tw-passagedata pid="307" name="Watch the stars." tags="outside dreamy_2 stars zen" position="850,3850" size="100,100">You do so.
 
 The night sky is peaceful. The clouds are clear, but you can only barely see the stars thanks to the light pollution of this suburban neighborhood.
 
 You spend a few moments just sitting there, with your head tilted toward the starryish sky.
 
 * [[Get up.]]
-* [[Comprehend the endless cosmos.]]</tw-passagedata><tw-passagedata pid="306" name="Get up." tags="outside" position="725,3850" size="100,100">Having had your fill of stargazing, you stand up from the bench.
+* [[Comprehend the endless cosmos.]]</tw-passagedata><tw-passagedata pid="308" name="Get up." tags="outside" position="975,3850" size="100,100">Having had your fill of stargazing, you stand up from the bench.
 
 * [[Look at hyena.]]
-* [[Go back to the foyer.|The Foyer.]]</tw-passagedata><tw-passagedata pid="307" name="Comprehend the endless cosmos." tags="outside dreamy_3 stars zen" position="850,3850" size="100,100">As you gaze out upon the swirling heavens, you start to make out the twelve constellations—symbols of a long-forgotten pantheon of animal gods. But instead, you imagine connecting the dots into a tree, and traversing across each winding branch until one by one, they abruptly end. You know the sky extends out into infinity, and yet, it all starts to feel... kind of small?
+* [[Go back to the foyer.|The Foyer.]]</tw-passagedata><tw-passagedata pid="309" name="Comprehend the endless cosmos." tags="outside dreamy_3 stars zen" position="1100,3850" size="100,100">As you gaze out upon the swirling heavens, you start to make out the twelve constellations—symbols of a long-forgotten pantheon of animal gods. But instead, you imagine connecting the dots into a tree, and traversing across each winding branch until one by one, they abruptly end. You know the sky extends out into infinity, and yet, it all starts to feel... kind of small?
 
 You realize abruptly that no matter what you do at this party tonight, it&#39;s probably going to end with you getting seduced, swallowed, and digested. You won&#39;t save Reese. You won&#39;t go home safely afterward. You&#39;ll never finish your degree, or find a job, or integrate into adult society.
 
 Your heart clenches at the thought that being food could be your sole purpose in life. Perhaps the authors of your fate only had simple designs for you. You feel trapped, claustrophobic, enveloped by the illusion of choice. Even the decisions you&#39;ve made so far, were those even yours?
 
 * [[Don&#39;t think about it.|Get up.]]
-* [[Break these mortal chains.]]</tw-passagedata><tw-passagedata pid="308" name="Break these mortal chains." tags="dreamy_3 stars outside zen" position="975,3850" size="100,100">&lt;% setup.addAchievement(&quot;Zen Ending&quot;, &quot;Starry Night&quot;) %&gt;
+* [[Break these mortal chains.]]</tw-passagedata><tw-passagedata pid="310" name="Break these mortal chains." tags="dreamy_3 stars outside zen" position="1225,3850" size="100,100">&lt;% setup.addAchievement(&quot;Zen Ending&quot;, &quot;Starry Night&quot;) %&gt;
 
 You shut your eyes tight. No: you will not be constricted. You are soul of unimaginable power. You refuse to be constrained by the edges of this reality.
 
@@ -3973,7 +3986,7 @@ Attempting story.restart()...
 
 * [[Be the hyena.]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="309" name="Be the hyena." tags="outside dark anastory" position="1100,3850" size="100,100">Your name is Ana. You&#39;re a spotted hyena, currently chilling on a bench outside a house party like a total loser.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="311" name="Be the hyena." tags="outside dark anastory" position="100,3975" size="100,100">Your name is Ana. You&#39;re a spotted hyena, currently chilling on a bench outside a house party like a total loser.
 
 You showed up about an hour ago, but big crowds freak you out, so you came out here to get some air and clear your head. You&#39;re here because, like most young predators, you want to eat someone. You want to feel prey writhing around inside your belly. You&#39;d go in there and grab one, but the noise is too overwhelming.
 
@@ -3983,7 +3996,7 @@ What do you do?
 
 * [[Eat the rabbit.]]
 * [[Eat the rabbit.]]
-* [[Eat the rabbit.]]</tw-passagedata><tw-passagedata pid="310" name="Eat the rabbit." tags="outside dark anastory" position="1225,3850" size="100,100">&lt;i.ana&gt;Great idea, voice inside my head,&lt;/i&gt; you think. You walk over to the rabbit. &lt;q.ana&gt;Hey there, bunny-butt,&lt;/q&gt; you say.
+* [[Eat the rabbit.]]</tw-passagedata><tw-passagedata pid="312" name="Eat the rabbit." tags="outside dark anastory" position="225,3975" size="100,100">&lt;i.ana&gt;Great idea, voice inside my head,&lt;/i&gt; you think. You walk over to the rabbit. &lt;q.ana&gt;Hey there, bunny-butt,&lt;/q&gt; you say.
 
 
 &lt;span.hollistalk&gt;Uh, hello!&lt;/span&gt; they say, clearly slightly nervous to see you. You have that effect on people sometimes. Probably because you&#39;re 6′10″ and your whole body was designed for shredding meat into tiny pieces.
@@ -3994,7 +4007,7 @@ They try to fight you at first, but eventually calm down.
 
 * [[Swallow them.]]
 * [[Swallow them.]]
-* [[Swallow them.]]</tw-passagedata><tw-passagedata pid="311" name="Swallow them." tags="outside dark anastory" position="100,3975" size="100,100">With one huge gulp, you swallow the rabbit.
+* [[Swallow them.]]</tw-passagedata><tw-passagedata pid="313" name="Swallow them." tags="outside dark anastory" position="350,3975" size="100,100">With one huge gulp, you swallow the rabbit.
 
 Burp. In under a minute, they&#39;re all the way inside you. A familiar fullness fills your belly, and you sigh with relief.
 
@@ -4010,22 +4023,22 @@ You begin to drift off to a nap. &lt;i.ana&gt;Wow,&lt;/i&gt; you think, &lt;i.an
 
 ### The End.
 
-* [[Restart.|Start]]</tw-passagedata><tw-passagedata pid="312" name="Look upstairs." tags="" position="225,3975" size="100,100">You head up the stairs looking for your friend.
+* [[Restart.|Start]]</tw-passagedata><tw-passagedata pid="314" name="Look upstairs." tags="" position="475,3975" size="100,100">You head up the stairs looking for your friend.
 
-&lt;%= story.render(&quot;Upstairs Hallway&quot;) /* [[Upstairs Hallway]] */ %&gt;</tw-passagedata><tw-passagedata pid="313" name="Upstairs Hallway" tags="checkpoint" position="350,3975" size="100,100">The upstairs hallway has a few doors. You can see two bedrooms: one is marked with a &quot;B&quot;, the other with an &quot;L&quot;. In between them is a small broom closet.
+&lt;%= story.render(&quot;Upstairs Hallway&quot;) /* [[Upstairs Hallway]] */ %&gt;</tw-passagedata><tw-passagedata pid="315" name="Upstairs Hallway" tags="checkpoint" position="600,3975" size="100,100">The upstairs hallway has a few doors. You can see two bedrooms: one is marked with a &quot;B&quot;, the other with an &quot;L&quot;. In between them is a small broom closet.
 
 Where will you look?
 
 * [[Examine B&#39;s bedroom door.]]
 * [[Check the broom closet.]]
-* [[Examine L&#39;s bedroom door.]]</tw-passagedata><tw-passagedata pid="314" name="Examine B&#39;s bedroom door." tags="" position="475,3975" size="100,100">You don&#39;t hear anyone inside. Carefully, you prop the door open and peer inside.
+* [[Examine L&#39;s bedroom door.]]</tw-passagedata><tw-passagedata pid="316" name="Examine B&#39;s bedroom door." tags="" position="725,3975" size="100,100">You don&#39;t hear anyone inside. Carefully, you prop the door open and peer inside.
 
 There&#39;s no one in there. The shelves are sporting a number of trophies from various marathons and track events.
 
 &lt;div-&gt;[[Look in Basil&#39;s drawers.]]&lt;/div&gt;
 
 * &lt;a0 data-passage=&quot;Look in Basil&#39;s drawers.&quot; data-command=&quot;Snoop in drawers.&quot;&gt;Check drawers.&lt;/a&gt;
-* [[Go back.|Upstairs Hallway]]</tw-passagedata><tw-passagedata pid="315" name="Look in Basil&#39;s drawers." tags="" position="600,3975" size="100,100">You decide it couldn&#39;t hurt to take a discrete little peek in the dresser. You pull open the top drawer.
+* [[Go back.|Upstairs Hallway]]</tw-passagedata><tw-passagedata pid="317" name="Look in Basil&#39;s drawers." tags="" position="850,3975" size="100,100">You decide it couldn&#39;t hurt to take a discrete little peek in the dresser. You pull open the top drawer.
 
 #### Items found:
 
@@ -4036,21 +4049,21 @@ There&#39;s no one in there. The shelves are sporting a number of trophies from 
 
 You close the drawer. Probably shouldn&#39;t touch any of these...
 
-* [[Go back.|Upstairs Hallway]]</tw-passagedata><tw-passagedata pid="316" name="Examine L&#39;s bedroom door." tags="" position="725,3975" size="100,100">You covertly bring one of your ears to the first bedroom door. There are definitely people inside. You can hear a muffled moaning.
+* [[Go back.|Upstairs Hallway]]</tw-passagedata><tw-passagedata pid="318" name="Examine L&#39;s bedroom door." tags="" position="975,3975" size="100,100">You covertly bring one of your ears to the first bedroom door. There are definitely people inside. You can hear a muffled moaning.
 
 What do you do?
 
 * [[Knock politely on the door.]]
-* [[Ignore it.]]</tw-passagedata><tw-passagedata pid="317" name="Knock politely on the door." tags="" position="850,3975" size="100,100">&quot;Um, go away,&quot; says a male voice from inside the room.
+* [[Ignore it.]]</tw-passagedata><tw-passagedata pid="319" name="Knock politely on the door." tags="" position="1100,3975" size="100,100">&quot;Um, go away,&quot; says a male voice from inside the room.
 
 Alongside it, you hear a few more muffled grunts, as well as a kind of slick slurping noise. Is someone... swallowing?
 
 * [[Open it.|Open the door.]] &lt;!-- lacey-cliff-route.tw --&gt;
-* [[Ignore it.]]</tw-passagedata><tw-passagedata pid="318" name="Ignore it." tags="" position="975,3975" size="100,100">Sounds like it&#39;s just people having sex. You should probably leave them alone.
+* [[Ignore it.]]</tw-passagedata><tw-passagedata pid="320" name="Ignore it." tags="" position="1225,3975" size="100,100">Sounds like it&#39;s just people having sex. You should probably leave them alone.
 
 &lt;%= story.render(&quot;Upstairs Hallway&quot;) %&gt;
 
-* [[Go back to the foyer.|The Foyer.]]</tw-passagedata><tw-passagedata pid="319" name="Check the broom closet." tags="no_fade" position="1100,3975" size="100,100">You enter the broom closet.
+* [[Go back to the foyer.|The Foyer.]]</tw-passagedata><tw-passagedata pid="321" name="Check the broom closet." tags="no_fade" position="100,4100" size="100,100">You enter the broom closet.
 
 &lt;div style=&quot;min-height: 6em&quot; id=&quot;broom-closet-text&quot;&gt;
 Inside is a shelf with some towels, linens, and some cleaning supplies. Leaning against the wall is a broom and a vacuum cleaner.
@@ -4060,7 +4073,7 @@ Inside is a shelf with some towels, linens, and some cleaning supplies. Leaning 
 * [[Go back to the hallway.|Upstairs Hallway]]{#broom-closet-exit}
 
 
-&lt;div-&gt;[[Try to leave.]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="320" name="Broom closet status" tags="" position="1225,3975" size="100,100">&lt;%
+&lt;div-&gt;[[Try to leave.]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="322" name="Broom closet status" tags="" position="225,4100" size="100,100">&lt;%
 
 // Initialize variables
 
@@ -4114,19 +4127,19 @@ if (state == 14) {
 
 // Increment upon each visit
 s.broomClosetCount += 1;
-%&gt;</tw-passagedata><tw-passagedata pid="321" name="Try to leave." tags="" position="100,4100" size="100,100">After wasting an inordinate amount of time doing absolutely nothing, you rationally decide that yes, it is now finally time to leave the broom closet.
+%&gt;</tw-passagedata><tw-passagedata pid="323" name="Try to leave." tags="" position="350,4100" size="100,100">After wasting an inordinate amount of time doing absolutely nothing, you rationally decide that yes, it is now finally time to leave the broom closet.
 
 You turn to the door and reach for the handle, only to realize that there isn&#39;t one. The broom closet only opens from the outside. Whoever designed this tiny, pointlesss room apparently did not expect that anyone would ever be stupid enough to walk inside and close the door behind them.
 
 You&#39;re trapped, numb-nuts. I didn&#39;t even know that was possible.
 
-* [[Bang on the door.|ENDING: Broom Closet]]</tw-passagedata><tw-passagedata pid="322" name="ENDING: Broom Closet" tags="gameover" position="225,4100" size="100,100">&lt;% setup.addAchievement(&quot;Closet Ending&quot;, &quot;Worth it?&quot;); %&gt;
+* [[Bang on the door.|ENDING: Broom Closet]]</tw-passagedata><tw-passagedata pid="324" name="ENDING: Broom Closet" tags="gameover" position="475,4100" size="100,100">&lt;% setup.addAchievement(&quot;Closet Ending&quot;, &quot;Worth it?&quot;); %&gt;
 
 You bang on the door trying to get someone&#39;s attention, but with the loud music going on downstairs, no one can hear you. As a result of this incredibly stupid turn of events, you remain trapped in the broom closet for the rest of the night. Congrats, I guess, on finding the dumbest ending ever.
 
 ### Game Over.
 
-* [[Epilogue?|Epilogue: Broom Closet Ending.]]</tw-passagedata><tw-passagedata pid="323" name="Epilogue: Broom Closet Ending." tags="morning" position="350,4100" size="100,100">Sure, why not.
+* [[Epilogue?|Epilogue: Broom Closet Ending.]]</tw-passagedata><tw-passagedata pid="325" name="Epilogue: Broom Closet Ending." tags="morning" position="600,4100" size="100,100">Sure, why not.
 
 Elsewhere in the house, the morning sun comes blazing through the windows, and lands warmly on the cream-colored fur of a horse, lying in bed while her boyfriend snores loudly next to her. Lacey Armstrong stretches and yawns as she climbs out of bed, her guts filled with the digested remains of a guinea pig. Specifically, the remains of your friend, a guinea pig named Reese.
 
@@ -4134,7 +4147,7 @@ Lacey enters the hallway, and opens the broom closet to grab some clean bedsheet
 
 She laughs. &quot;Wait a minute, is that... Hollis?&quot;
 
-* [[Hollis: Wake up.]]</tw-passagedata><tw-passagedata pid="324" name="Hollis: Wake up." tags="morning" position="475,4100" size="100,100">You squint your eyes, woken up by the blinding light streaming in from outside. You slowly and look up at the horse, who is beaming at you with a big smile. &quot;Hey there! Remember me? It&#39;s Lacey, from Calc II!&quot;
+* [[Hollis: Wake up.]]</tw-passagedata><tw-passagedata pid="326" name="Hollis: Wake up." tags="morning" position="725,4100" size="100,100">You squint your eyes, woken up by the blinding light streaming in from outside. You slowly and look up at the horse, who is beaming at you with a big smile. &quot;Hey there! Remember me? It&#39;s Lacey, from Calc II!&quot;
 
 Instinctually, you try to leap to your feet and escape, but Lacey lightly places a foot (er, hoof, actually) on your stomach, keeping you in place.
 
@@ -4146,7 +4159,7 @@ Lacey smirks as the dog notices you, and says, &quot;...My *boyfriend* on the ot
 
 #### The End.
 
-* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="325" name="Open the door." tags="checkpoint" position="600,4100" size="100,100">*CW: Female Predator, Voyeur, Multi-prey, A dude&#39;s butt in your face*
+* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="327" name="Open the door." tags="checkpoint" position="850,4100" size="100,100">*CW: Female Predator, Voyeur, Multi-prey, A dude&#39;s butt in your face*
 
 You swing the bedroom door open, and enter. There are three people in the room.
 
@@ -4160,7 +4173,7 @@ The third person, you realize, is your friend Reese. The guinea pig&#39;s head a
 
 The horse swallowing Reese suddenly smiles. &quot;Ohmigod, Holly!&quot; You recognize her: it&#39;s Lacey Armstrong, the girl who had volunteered to tutor you in math.
 
-* [[Do something!]]</tw-passagedata><tw-passagedata pid="326" name="Do something!" tags="" position="725,4100" size="100,100">Your friend is being devoured before your very eyes. You know you&#39;ve got to save him, but you hesitate. Under the pressure, your body freezes up.
+* [[Do something!]]</tw-passagedata><tw-passagedata pid="328" name="Do something!" tags="" position="975,4100" size="100,100">Your friend is being devoured before your very eyes. You know you&#39;ve got to save him, but you hesitate. Under the pressure, your body freezes up.
 
 &quot;You know them?&quot; asks the dog.
 
@@ -4172,7 +4185,7 @@ The dog stands up in a threatening manner.
 
 What will you do?
 
-* [[Attack Lacey!!]]</tw-passagedata><tw-passagedata pid="327" name="Attack Lacey!!" tags="checkpoint" position="850,4100" size="100,100">&quot;No, don&#39;t!&quot; cries Reese from inside the horse&#39;s throat.
+* [[Attack Lacey!!]]</tw-passagedata><tw-passagedata pid="329" name="Attack Lacey!!" tags="checkpoint" position="1100,4100" size="100,100">&quot;No, don&#39;t!&quot; cries Reese from inside the horse&#39;s throat.
 
 Adrenaline rushes through your veins. You sidestep the dog, and fling yourself full force at the horse&#39;s bulging stomach, perhaps hoping to dislodge your friend via the Heimlich maneuver. Unfortunately, your small size makes this effort completely ineffective.
 
@@ -4181,13 +4194,13 @@ Adrenaline rushes through your veins. You sidestep the dog, and fling yourself f
 Lacey gives one last forceful swallow. You watch in horror as the bulge made by Reese&#39;s head drifts down her throat and disappears into the writhing bulge in her middle. &quot;Sure do,&quot; she smiles.
 
 * [[Struggle.|Struggle against Lacey.]]
-* [[Let her eat you.|Let Lacey eat you.]]</tw-passagedata><tw-passagedata pid="328" name="Struggle against Lacey." tags="" position="975,4100" size="100,100">You try to resist, but the dog only grips you tighter, and begins to undress you, presumably to make you easier on the stomach. He then lifts your naked body effortlessly into the air, and positions your bare feet in front of Lacey&#39;s awaiting maw.
+* [[Let her eat you.|Let Lacey eat you.]]</tw-passagedata><tw-passagedata pid="330" name="Struggle against Lacey." tags="" position="1225,4100" size="100,100">You try to resist, but the dog only grips you tighter, and begins to undress you, presumably to make you easier on the stomach. He then lifts your naked body effortlessly into the air, and positions your bare feet in front of Lacey&#39;s awaiting maw.
 
 Lacey looks over your naked body with a bit of pity. &quot;Oh Hollis, I&#39;m real sorry for eating you. Vore just makes me *sooo* horny... And your friend&#39;s already squirming *soo* good inside me.&quot; She licks her lips. &quot;Plus, you kinda owe me for helping you get that A in Calculus.&quot;
 
 Lacey opens her quivering pink maw wide, and says, &quot;Anyway, buh-bye!&quot;
 
-* [[Gulp.|Lacey noms ur legs.]]</tw-passagedata><tw-passagedata pid="329" name="Let Lacey eat you." tags="" position="1100,4100" size="100,100">You stop resisting, and go limp against Lacey&#39;s engorged belly. The dog stops forcing you against it.
+* [[Gulp.|Lacey noms ur legs.]]</tw-passagedata><tw-passagedata pid="331" name="Let Lacey eat you." tags="" position="100,4225" size="100,100">You stop resisting, and go limp against Lacey&#39;s engorged belly. The dog stops forcing you against it.
 
 &quot;Huh, this kid&#39;s smarter than I thought!&quot; he says, now lifting you towards the horse&#39;s awaiting maw. Lacey smiles.
 
@@ -4197,7 +4210,7 @@ Lacey opens her quivering pink maw wide, and says, &quot;Anyway, buh-bye!&quot;
 
 She opens her mouth wide. The dog positions your bare feet in front of her awaiting maw. He smiles. &quot;Time for dessert, babe!&quot;
 
-* [[Gulp.|Lacey noms ur legs.]]</tw-passagedata><tw-passagedata pid="330" name="Lacey noms ur legs." tags="vore checkpoint" position="1225,4100" size="100,100">Your legs slide effortlessly into Lacey&#39;s mouth. It&#39;s almost like entering a sleeping bag, if that sleeping bag were extremely hot and wet. Your fur feels impossibly slimy. Lacey lets out little snorts and moans as more and more of your body slips into her throat.
+* [[Gulp.|Lacey noms ur legs.]]</tw-passagedata><tw-passagedata pid="332" name="Lacey noms ur legs." tags="vore checkpoint" position="225,4225" size="100,100">Your legs slide effortlessly into Lacey&#39;s mouth. It&#39;s almost like entering a sleeping bag, if that sleeping bag were extremely hot and wet. Your fur feels impossibly slimy. Lacey lets out little snorts and moans as more and more of your body slips into her throat.
 
 The dog watches with fascination and arousal; his girlfriend has already pulled you in up to your chest, then your neck, until only your head is sticking out of her mouth.
 
@@ -4205,14 +4218,14 @@ Lacey&#39;s boyfriend looks at your exposed head and smiles while unzipping his 
 &quot;Now, whaddya say we give our friend here a little goodbye present?&quot;
 
 * [[Absolutely not!|Refuse Clif&#39;s dick.]]
-* [[Suck his dick.|Don&#39;t refuse Clif&#39;s dick.]]</tw-passagedata><tw-passagedata pid="331" name="Refuse Clif&#39;s dick." tags="vore" position="100,4225" size="100,100">You vehemently shake your head in protest.
+* [[Suck his dick.|Don&#39;t refuse Clif&#39;s dick.]]</tw-passagedata><tw-passagedata pid="333" name="Refuse Clif&#39;s dick." tags="vore" position="350,4225" size="100,100">You vehemently shake your head in protest.
 
 The dog sighs. &quot;Okay, jeez, I was just asking. Suit yourself.&quot; He sits on the bed next to Lacey, and begins to caress and massage her bloated stomach. &quot;Looks like your appetizer has already settled down a good bit! You&#39;re a real champion, Lace.&quot;
 
 Lacey continues dillegently slurping and swallowing you down.
 You feel your feet beginning to enter her stomach, bumping against a hard object which you can only assume is your unfortunate friend. Only your head and shoulders are still protruding from her lips; your body is paralyzed by the powerful muscles of her throat her throat.
 
-* [[Mmmph...|Lacey finishes swallowing.]]</tw-passagedata><tw-passagedata pid="332" name="Don&#39;t refuse Clif&#39;s dick." tags="vore" position="225,4225" size="100,100">You remain silent as Lacey pulls you in further. Now only your head and shoulders are sticking out of her mouth. Obligingly, you open your mouth. The dog smiles.
+* [[Mmmph...|Lacey finishes swallowing.]]</tw-passagedata><tw-passagedata pid="334" name="Don&#39;t refuse Clif&#39;s dick." tags="vore" position="475,4225" size="100,100">You remain silent as Lacey pulls you in further. Now only your head and shoulders are sticking out of her mouth. Obligingly, you open your mouth. The dog smiles.
 
 &quot;Allow me to introduce myself,&quot; he says, slowly bringing his erection closer to your mouth. &quot;The name&#39;s Clif, and this is my girlfriend Lace. I&#39;m the dog who&#39;s gonna destroy your tonsils.&quot;
 
@@ -4220,13 +4233,13 @@ Lacey sees what her boyfriend is doing, and rolls her eyes with a little chuckle
 
 *Glk.* Without warning, you feel Clif&#39;s enormous rod plunge against your lips, into your throat. Your mouth instantly coats his meat with saliva. His tip is practically dripping with salty pre, and you can do nothing but savor it. His thick, furry balls slap against your snout.
 
-* [[Swallow his cock.]]</tw-passagedata><tw-passagedata pid="333" name="Swallow his cock." tags="vore" position="350,4225" size="100,100">&quot;Woah, this kid&#39;s a natural! Mmmmh!&quot;
+* [[Swallow his cock.]]</tw-passagedata><tw-passagedata pid="335" name="Swallow his cock." tags="vore" position="600,4225" size="100,100">&quot;Woah, this kid&#39;s a natural! Mmmmh!&quot;
 
 He moans in delight, spending a few seconds merely impressed that you were able to swallow his full length all in one go. However, his torment doesn&#39;t end there. Clif eagerly begins to slide his cock in and out of you. The motion quickly evolves into a rhythmic thrust. Each time he hilts in your mouth, you feel yourself getting pushed deeper inside Lacey&#39;s throat, until her lips are wrapped around your chin.
 
 &quot;Oh yeah,&quot; he moans, grabbing hold of your ears. &quot;I&#39;m gonna...&quot;
 
-* [[*Spurt.*|Clif jizzes in your mouth.]]</tw-passagedata><tw-passagedata pid="334" name="Clif jizzes in your mouth." tags="vore" position="475,4225" size="100,100">&quot;...!!!&quot;
+* [[*Spurt.*|Clif jizzes in your mouth.]]</tw-passagedata><tw-passagedata pid="336" name="Clif jizzes in your mouth." tags="vore" position="725,4225" size="100,100">&quot;...!!!&quot;
 
 Clif grips his cock, and sticks his tip between your lips. Spurt after spurt of warm jizz pumps into your mouth and paints your throat. He lets out a series of eager grunts and gasps as he empties his load into you, and you can tell he&#39;s resisting the urge to knot your mouth. You swallow reluctantly. Slowly, and with great satisfaction, he withdraws himself.
 
@@ -4234,19 +4247,19 @@ Clif grips his cock, and sticks his tip between your lips. Spurt after spurt of 
 
 Lacey lets out a happy noise, and opens her mouth wide.
 
-* [[Mmmph...|Lacey finishes swallowing.]]</tw-passagedata><tw-passagedata pid="335" name="Lacey finishes swallowing." tags="vore" position="600,4225" size="100,100">Your arms are pinned to your side. Lacey&#39;s gullet is squeezing tight around your body. You can&#39;t move. You couldn&#39;t fight back if you tried.
+* [[Mmmph...|Lacey finishes swallowing.]]</tw-passagedata><tw-passagedata pid="337" name="Lacey finishes swallowing." tags="vore" position="850,4225" size="100,100">Your arms are pinned to your side. Lacey&#39;s gullet is squeezing tight around your body. You can&#39;t move. You couldn&#39;t fight back if you tried.
 
 All you can do now is shut your eyes and hope this is all a dream. But you don&#39;t wake up. Instead, you feel Lacey stretch her mouth out wide, and...
 
 *Glomp.* Your vision goes dark. You feel her lips clamp down over your ears. Lacey&#39;s mouth has engulfed your whole head. She moans with delight. You feel yourself sinking deeper and deeper into her gullet.
 
-* [[Let me out...]]</tw-passagedata><tw-passagedata pid="336" name="Let me out..." tags="vore" position="725,4225" size="100,100">You cry out in vain, but nothing slows your slimy descent. You take a deep breath before the slimy tunnel of her throat slides over your neck, and eclipses your nose. For several seconds, you are unable to see or breathe. All you can hear are the sounds of Lacey gulping down your ears, accompanied by her thundrous heartbeat, and the squelching of her innards.
+* [[Let me out...]]</tw-passagedata><tw-passagedata pid="338" name="Let me out..." tags="vore" position="975,4225" size="100,100">You cry out in vain, but nothing slows your slimy descent. You take a deep breath before the slimy tunnel of her throat slides over your neck, and eclipses your nose. For several seconds, you are unable to see or breathe. All you can hear are the sounds of Lacey gulping down your ears, accompanied by her thundrous heartbeat, and the squelching of her innards.
 
 You can feel your legs pressing into Reese&#39;s naked fur, as Lacey&#39;s stomach effortlessly stretches to accomodate you. The tight accomodations means your body is forced to curl up against his. Finally, after what feels like an eternity, your head is deposited along with the rest of you inside the horse&#39;s belly.
 
 &quot;Oh, hey Hollis,&quot; says Reese, naked and squeezed tightly against you. &quot;...I think your ass is in my face.&quot;
 
-* [[Reese, what happened?]]</tw-passagedata><tw-passagedata pid="337" name="Reese, what happened?" tags="vore" position="850,4225" size="100,100">You try to reposition yourself, to no avail. Lacey&#39;s stomach is hugging you tightly. Your voice is muffled a little by what you now realize is the fur of his tail. Unwittingly, the two of you are sixty-nining.
+* [[Reese, what happened?]]</tw-passagedata><tw-passagedata pid="339" name="Reese, what happened?" tags="vore" position="1100,4225" size="100,100">You try to reposition yourself, to no avail. Lacey&#39;s stomach is hugging you tightly. Your voice is muffled a little by what you now realize is the fur of his tail. Unwittingly, the two of you are sixty-nining.
 
 You ask Reese how the hell he got here.
 
@@ -4257,7 +4270,7 @@ You blink in astonishment. He said *yes*??
 &quot;Of course! Why do you think I came here?&quot; he pauses for a moment, and shifts uncomfortably. &quot;...You wanted to get eaten too, right?&quot;
 
 * [[No! No I did not!|I did not come here to be digested!]]
-* [[I certainly wasn&#39;t expecting to!|I did not come here to be digested!]]</tw-passagedata><tw-passagedata pid="338" name="I did not come here to be digested!" tags="vore" position="975,4225" size="100,100">&quot;...R-really? Then why did you agree to come along with me? I thought I told you there&#39;d be preds here.&quot;
+* [[I certainly wasn&#39;t expecting to!|I did not come here to be digested!]]</tw-passagedata><tw-passagedata pid="340" name="I did not come here to be digested!" tags="vore" position="1225,4225" size="100,100">&quot;...R-really? Then why did you agree to come along with me? I thought I told you there&#39;d be preds here.&quot;
 
 You remind Reese of his exact words. He told you the party would be, and you quote, *crawling with drunk hotties just begging for a taste of you.*
 
@@ -4267,7 +4280,7 @@ So all that stuff from before... was just roleplaying?
 
 &quot;Yeah,&quot; he replies, &quot;all purely consenting fun. Well, except for the part where she ate you. I think she mistook your resistance for playfulness?&quot;
 
-* [[I need to get out of here!]]</tw-passagedata><tw-passagedata pid="339" name="I need to get out of here!" tags="vore" position="1100,4225" size="100,100">Reese sucks air through his teeth. &quot;That&#39;s... not really an option.&quot;
+* [[I need to get out of here!]]</tw-passagedata><tw-passagedata pid="341" name="I need to get out of here!" tags="vore" position="100,4350" size="100,100">Reese sucks air through his teeth. &quot;That&#39;s... not really an option.&quot;
 
 What? You scramble indignantly, trying to get your friend&#39;s crotch out of your face for a second.
 
@@ -4279,7 +4292,7 @@ Reese hesitates. &quot;Well um, we *would*, but these two are really into hardco
 
 You roll your eyes. He&#39;s taking the whole &quot;being digested&quot; thing pretty well.
 
-* [[...So what happens now?]]</tw-passagedata><tw-passagedata pid="340" name="...So what happens now?" tags="vore" position="1225,4225" size="100,100">Reese stretches a little against the tight, wet stomach walls around the two of you.
+* [[...So what happens now?]]</tw-passagedata><tw-passagedata pid="342" name="...So what happens now?" tags="vore" position="225,4350" size="100,100">Reese stretches a little against the tight, wet stomach walls around the two of you.
 
 &quot;Now, we digest. A big pred like Lacey should be able to completely convert our bodies to nutrients within about 7 hours.&quot;
 
@@ -4289,11 +4302,11 @@ You ask, will that be painful?
 
 You sigh. Despite your approaching demise, the warm cocoon of Lacey&#39;s belly is actually somewhat calming. In a way, it feels like you&#39;re fulfilling your purpose as a rabbit. You&#39;re starting to see the appeal of this kind of thing...
 
-* [[...And until then?]]</tw-passagedata><tw-passagedata pid="341" name="...And until then?" tags="vore checkpoint" position="100,4350" size="100,100">Lacey&#39;s stomach lets out a little grumble. Reese shudders; you can tell the noise makes him a little excited. He tries to reposition himself, to no avail. The two of you remain stuck in a ying-yang of brown and gray fur.
+* [[...And until then?]]</tw-passagedata><tw-passagedata pid="343" name="...And until then?" tags="vore checkpoint" position="350,4350" size="100,100">Lacey&#39;s stomach lets out a little grumble. Reese shudders; you can tell the noise makes him a little excited. He tries to reposition himself, to no avail. The two of you remain stuck in a ying-yang of brown and gray fur.
 
 &quot;Well, I was hoping I&#39;d have a little more room in here...&quot; Reese says, and spends a moment thinking. &quot;This is gonna be kind of a dumb question, Hollis... But do you wanna suck *my* dick?&quot;
 * [[...Yeah, okay.|Suck Reese&#39;s dick.]]
-* [[Nope.|Don&#39;t suck Reese&#39;s dick.]]</tw-passagedata><tw-passagedata pid="342" name="Suck Reese&#39;s dick." tags="vore" position="225,4350" size="100,100">&quot;Sweet,&quot; he says, spreading his legs as much as the stomach will allow. &quot;I really owe you one Hollis. You&#39;re the best prey-pal a guy could ever ask for.&quot;
+* [[Nope.|Don&#39;t suck Reese&#39;s dick.]]</tw-passagedata><tw-passagedata pid="344" name="Suck Reese&#39;s dick." tags="vore" position="475,4350" size="100,100">&quot;Sweet,&quot; he says, spreading his legs as much as the stomach will allow. &quot;I really owe you one Hollis. You&#39;re the best prey-pal a guy could ever ask for.&quot;
 
 It doesn&#39;t take much work at all to get Reese&#39;s dick into your mouth;  you&#39;d practically been avoiding it this whole time. Its size is nowhere near as threatening as the dog&#39;s was.
 
@@ -4301,7 +4314,7 @@ Mm. You delicately tease your friend with your tongue. He throbs a little in res
 
 &quot;Nnnnnh,&quot; he moans, almost involuntarily. It&#39;s very cute. &quot;Hol, I&#39;m gonna...!!&quot;
 
-* [[Swallow his jizz.|Swallow Reese&#39;s jizz.]]</tw-passagedata><tw-passagedata pid="343" name="Don&#39;t suck Reese&#39;s dick." tags="vore" position="350,4350" size="100,100">&quot;Oh, duh,&quot; he says, clearly a little embarassed. &quot;Sorry I asked.&quot;
+* [[Swallow his jizz.|Swallow Reese&#39;s jizz.]]</tw-passagedata><tw-passagedata pid="345" name="Don&#39;t suck Reese&#39;s dick." tags="vore" position="600,4350" size="100,100">&quot;Oh, duh,&quot; he says, clearly a little embarassed. &quot;Sorry I asked.&quot;
 
 You tell him no problem. You&#39;d imagine you&#39;d probably want to get off before being permanently digested as well. You feel yourself getting lightheaded.
 
@@ -4311,7 +4324,7 @@ You tell him not to worry about it; the whole thing was an almost comically absu
 
 Lacey&#39;s stomach grumbles eagerly around you. You now feel yourself getting very sleepy. The last thing you feel is a kind of reluctant contentment, before drifting into a peaceful rest.
 
-* [[Lacey: Digest.|Lacey: Digest.]]</tw-passagedata><tw-passagedata pid="344" name="Lacey: Digest." tags="" position="475,4350" size="100,100">Outside, Lacey gently caresses the hard masses of meat filling her stomach.
+* [[Lacey: Digest.|Lacey: Digest.]]</tw-passagedata><tw-passagedata pid="346" name="Lacey: Digest." tags="" position="725,4350" size="100,100">Outside, Lacey gently caresses the hard masses of meat filling her stomach.
 
 &quot;They stopped moving,&quot; she says, smiling and letting a burp escape her lips.
 
@@ -4323,9 +4336,9 @@ Clif grins, hugging his girlfriend, &quot;Clearly no match for my powerful preda
 
 She lets out another satisfied burp, and kisses him. &quot;Oh, stop.&quot;
 
-* [[\*gurgle\*|Lacey: Gurgle.]]</tw-passagedata><tw-passagedata pid="345" name="Lacey: Gurgle." tags="" position="600,4350" size="100,100">Over the next few hours, Clif and Lacey lay together in her bedroom, as her gut slowly melts Hollis&#39;s body into a soft, nutritious paste. Lacey grins as her body lets out a nigh-constant stream of belches.
+* [[\*gurgle\*|Lacey: Gurgle.]]</tw-passagedata><tw-passagedata pid="347" name="Lacey: Gurgle." tags="" position="850,4350" size="100,100">Over the next few hours, Clif and Lacey lay together in her bedroom, as her gut slowly melts Hollis&#39;s body into a soft, nutritious paste. Lacey grins as her body lets out a nigh-constant stream of belches.
 
-* [[The morning after...|ENDING: Lacey&#39;s Belly]]</tw-passagedata><tw-passagedata pid="346" name="Swallow Reese&#39;s jizz." tags="vore" position="725,4350" size="100,100">Unable to move your head, you have no choice but to allow Reese to hump your face, and after a few seconds, ejaculate into your mouth.
+* [[The morning after...|ENDING: Lacey&#39;s Belly]]</tw-passagedata><tw-passagedata pid="348" name="Swallow Reese&#39;s jizz." tags="vore" position="975,4350" size="100,100">Unable to move your head, you have no choice but to allow Reese to hump your face, and after a few seconds, ejaculate into your mouth.
 
 &quot;Mmmmm!&quot; he moans, as his cock spends several seconds erupting with warm semen, which you gulp down. He pants eagerly, likely using up a ton of your air, before finally settling down. &quot;Th-thanks Hol,&quot; he murmurs, attempting to pull his dick out of your mouth, and instead smearing your face with cum. &quot;Sorry,&quot; he snickers.
 
@@ -4333,7 +4346,7 @@ For a little while, Reese doesn&#39;t say anything. You&#39;re getting a little 
 
 You tell him not to worry about it. You feel yourself getting very sleepy. Lacey&#39;s stomach grumbles eagerly around you. The last thing you feel is a kind of reluctant contentment, before drifting into a peaceful rest.
 
-* [[Lacey: Digest.|Lacey: Digest.]]</tw-passagedata><tw-passagedata pid="347" name="ENDING: Lacey&#39;s Belly" tags="morning" position="850,4350" size="100,100">The sun rises through through a clear morning sky.
+* [[Lacey: Digest.|Lacey: Digest.]]</tw-passagedata><tw-passagedata pid="349" name="ENDING: Lacey&#39;s Belly" tags="morning" position="1100,4350" size="100,100">The sun rises through through a clear morning sky.
 
 Lacey awakens to find that she has slightly outgrown her bra and pants. Clif rolls over in his sleep, still snoring loudly. As the mare rises to her feet, she feels a familiar rumbling in her gut.
 
@@ -4344,13 +4357,13 @@ Lacey looks down at her dramatically shrunken belly, and recalls the night befor
 ### The End.
 
 * [[Epilogue.|Epilogue: Lacey Post Vore.]] *(Warning: Scat)*
-* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="348" name="Epilogue: Lacey Post Vore." tags="morning" position="975,4350" size="100,100">An hour later, Lacey is sitting on the toilet, gradually squeezing out plop after plop of digested guinea pig and rabbit.&amp;nbsp;The mare&#39;s powerful intestines have already absorbed all the nutrients she could get out of them, and pulverised their remains into firm round balls of horse shit. The two aren&#39;t hard to pass, just a little time-consuming.
+* [[Restart|Start]]</tw-passagedata><tw-passagedata pid="350" name="Epilogue: Lacey Post Vore." tags="morning" position="1225,4350" size="100,100">An hour later, Lacey is sitting on the toilet, gradually squeezing out plop after plop of digested guinea pig and rabbit.&amp;nbsp;The mare&#39;s powerful intestines have already absorbed all the nutrients she could get out of them, and pulverised their remains into firm round balls of horse shit. The two aren&#39;t hard to pass, just a little time-consuming.
 
 Lacey feels her asshole squeeze out the last glob of leftover rodent, then clench shut with relief. She muses to herself that they were easier coming out in than they were to get out! Especially the rabbit, who squirmed way too much... On the other hand, she probably wouldn&#39;t mind eating a duo like that again... &lt;% if (visited(&quot;Swallow Reese&#39;s jizz.&quot;)) { %&gt;She even heard one of them moaning...&lt;% } %&gt; It was kind of exhilarating.
 
 She reaches for her phone.
 
-* [[Lacey: Text Clif.]]</tw-passagedata><tw-passagedata pid="349" name="Lacey: Text Clif." tags="morning" position="1100,4350" size="100,100">&lt;div.textchat&gt;
+* [[Lacey: Text Clif.]]</tw-passagedata><tw-passagedata pid="351" name="Lacey: Text Clif." tags="morning" position="100,4475" size="100,100">&lt;div.textchat&gt;
 
 &lt;p.lacey&gt;Hey big dog, any new snacks on your radar?&lt;/p&gt;
 
@@ -4375,7 +4388,7 @@ Lacey Armstrong yawns and stretches, ready for a new day, full of new meals. Soo
 
 ### The End.
 
-* [[Restart.|Start]]</tw-passagedata><tw-passagedata pid="350" name="logo-horse-left" tags="Twine.image" position="1225,4350" size="100,100">data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjM4IDg1IDk1MCA4NTciPjxwYXRoIGQ9Ik01NDAgOTQxYy0xMjYgMC0yMzEtMi0yMzMtNHMxMC0zOCAyNy03OCAzOS0xMDcgNDctMTQ5YzktNDIgMTUtOTYgMTMtMTI0LTItNDktMi00OS00Mi01NC0yMi0zLTcwLTYtMTA3LTYtNTIgMC03NiAzLTEwMyAxNi0zMCAxMy0zOSAxNC01OCA2LTEyLTUtMjgtMTYtMzQtMjZzLTEyLTMzLTEyLTUzIDUtNDQgMTAtNTQgMzMtMjkgNjItNDQgOTMtNTQgMTQzLTg4bDEyMy04NGMzMC0yMSAzMS0yMyAyOS02NC0xLTIzIDIzLTUwIDIzLTUwcy00IDE1IDQgMjRjMTEgMTMgMTYgMTQgMjEgNnM4LTcgMTUgMmM0IDcgOSAxNSAxMCAyMHMxNC0xIDI3LTEwIDM2LTIzIDQyLTI2YzMtMSAxMC0zIDYgMS0zIDIgMyA5IDUgMTkgNCAxNyA5IDIwIDE5IDE2IDgtNCAyNi04IDQxLTEwbDI1LTQtNSAxN2MtMiA2IDE5IDEzIDQ4IDI4IDIwIDExIDYyIDYyIDYyIDYycy0xOS01LTI0LTVjLTEwIDAtNCA2IDIwIDMzbDUyIDYwIDI2IDI3cy0xNSAwLTIyIDNjLTE1IDYtMTMgOSAyMCAzOCAyMCAxOCA0NCA0NSA1MyA2MWEyMTYgMjE2IDAgMDEyNSA5NHMtMTQtMTUtMjktMjRjLTI4LTE3LTMwLTE4LTI2LTNsMTMgNDMgMjEgNzNjOSAzNSAyMCA1MyA1MiA4NCAyMiAyMiA0MCA0MiA0MCA0NXMtNiA2LTEzIDZjLTExIDAtMTAgNCAzIDI2IDkgMTUgMTggNDEgMjEgNTggNiAzMiA3IDUwIDcgNTBzLTUyLTU3LTEwMi01NGMtMTAgMS0xMiA0LTggMTQgMyA4IDEzIDIzIDIzIDMzczIwIDI0IDI0IDMxYzIgMyA0IDE0IDQgMTRzLTgtNC0yMS03Yy0xNC0zLTI3LTItMzAgMy0yIDUtMTMgOC0yMiA4SDU0MHoiLz48L3N2Zz4=</tw-passagedata><tw-passagedata pid="351" name="logo-horse-right" tags="Twine.image" position="100,4475" size="100,100">data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjEgMTEwIDEwMjEgODI4Ij48cGF0aCBkPSJNNTQxIDkzN2MtMjkyLTEtMjkyLTEtMjkyLTE5cy0xLTE5LTMwLTExYy0xNyA0LTQ5IDYtNzIgNC0yNy0zLTUxLTExLTcxLTI1LTE3LTExLTQwLTM0LTUxLTUxQTE0NiAxNDYgMCAwMTYgNzIwczE1IDQyIDM4IDYzYzEyIDExIDMwIDI0IDQyIDI5czMyIDggNDUgOCAyOS0zIDM0LTdjOC00IDUtNy0xMC0xMWExMzAgMTMwIDAgMDEtNzUtNjBjLTctMTMtOS0yNy05LTI3czI0IDE4IDQxIDI1YzE4IDggMjkgMTEgNDEgMTFzMzktOSA2MC0xOSAzNy0yMiAzNS0yNC0xNCAyLTI3IDgtMzEgMTItNDIgMTItNDEtMTQtNDEtMTRsMzItNmMxMC0zIDI1LTExIDMyLTE5IDEzLTE0IDEyLTE0LTI2LTE1LTIyIDAtNTItNS02Ny0xMnMtMzgtMjEtNTAtMzMtMjYtMzEtMzMtNDQtMTQtMzMtMTctNDYgMS01MiAxLTUybDIyIDMxYzE1IDIxIDI4IDM4IDQ5IDQ4IDE3IDkgNDMgMTYgNTcgMTZzMzEtMyAzNi02YzctNSAwLTEwLTE5LTE2LTE2LTUtMzgtMTktNTAtMzFzLTIzLTMwLTI1LTQwLTEtMjItMS0yMiAyMiAxOSAzNyAyOCAzNSAxOCA0NyAxOCAzNS03IDUyLTE2IDI5LTE3IDI4LTE4LTE3IDEtMzQgNS01OC01LTU4LTUgMTItNiAyNy05YzE2LTIgMzgtMTcgNTAtMjZzMjktMjkgMzgtNDVsMjItNDRjNS0xNCA1LTE0LTE2IDAtMTEgNy0yMyAxMi0yNSAxMHM4LTMwIDIyLTYxIDQwLTcwIDU4LTg4YzIwLTIxIDI4LTMzIDIwLTMzLTYgMC0xMC00LTgtOXMyNi0yMiA1NC0zN2M0NC0yMiA2MC0yNiAxMDMtMjYgMzkgMCA2MSA1IDk1IDIxIDMyIDE1IDYyIDIyIDEwNiAyNiA1MyA0IDYyIDMgNjYtOCAzLTggOC0xMCAxMi02czkgMjEgMTIgMzggMTAgNDIgMTUgNTYgMjAgMzggMzMgNTMgMjkgMzkgMzYgNTUgMTkgNDIgMjUgNjAgMjkgNTcgNTMgODkgNTAgNzIgNTggOTBjOSAxOSAxNSA0NyAxNSA3MiAwIDIzLTUgNDgtMTEgNTYtOSAxMy0xNCAxMy0zMCA1LTE5LTgtMjAtOC0yMCAxNCAwIDE2LTUgMjMtMTYgMjctMTAgMy0yMCAxLTI2LTVsLTI1LTM1Yy0xMS0xNy0yOC0yOS01Ni0zOC0yMi03LTYzLTI3LTkyLTQzcy02MC0zMS03MC0zNGMtMTYtNS0xNy0zLTE3IDM5IDAgMjQgNCA1OCA5IDc1IDYgMjIgMjUgNDggNjEgODYgMjkgMzAgNjMgNjkgNzUgODdsMjYgNDFjMSA0LTExMSA2LTI4OSA1eiIvPjwvc3ZnPg==</tw-passagedata></tw-storydata>
+* [[Restart.|Start]]</tw-passagedata><tw-passagedata pid="352" name="logo-horse-left" tags="Twine.image" position="225,4475" size="100,100">data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjM4IDg1IDk1MCA4NTciPjxwYXRoIGQ9Ik01NDAgOTQxYy0xMjYgMC0yMzEtMi0yMzMtNHMxMC0zOCAyNy03OCAzOS0xMDcgNDctMTQ5YzktNDIgMTUtOTYgMTMtMTI0LTItNDktMi00OS00Mi01NC0yMi0zLTcwLTYtMTA3LTYtNTIgMC03NiAzLTEwMyAxNi0zMCAxMy0zOSAxNC01OCA2LTEyLTUtMjgtMTYtMzQtMjZzLTEyLTMzLTEyLTUzIDUtNDQgMTAtNTQgMzMtMjkgNjItNDQgOTMtNTQgMTQzLTg4bDEyMy04NGMzMC0yMSAzMS0yMyAyOS02NC0xLTIzIDIzLTUwIDIzLTUwcy00IDE1IDQgMjRjMTEgMTMgMTYgMTQgMjEgNnM4LTcgMTUgMmM0IDcgOSAxNSAxMCAyMHMxNC0xIDI3LTEwIDM2LTIzIDQyLTI2YzMtMSAxMC0zIDYgMS0zIDIgMyA5IDUgMTkgNCAxNyA5IDIwIDE5IDE2IDgtNCAyNi04IDQxLTEwbDI1LTQtNSAxN2MtMiA2IDE5IDEzIDQ4IDI4IDIwIDExIDYyIDYyIDYyIDYycy0xOS01LTI0LTVjLTEwIDAtNCA2IDIwIDMzbDUyIDYwIDI2IDI3cy0xNSAwLTIyIDNjLTE1IDYtMTMgOSAyMCAzOCAyMCAxOCA0NCA0NSA1MyA2MWEyMTYgMjE2IDAgMDEyNSA5NHMtMTQtMTUtMjktMjRjLTI4LTE3LTMwLTE4LTI2LTNsMTMgNDMgMjEgNzNjOSAzNSAyMCA1MyA1MiA4NCAyMiAyMiA0MCA0MiA0MCA0NXMtNiA2LTEzIDZjLTExIDAtMTAgNCAzIDI2IDkgMTUgMTggNDEgMjEgNTggNiAzMiA3IDUwIDcgNTBzLTUyLTU3LTEwMi01NGMtMTAgMS0xMiA0LTggMTQgMyA4IDEzIDIzIDIzIDMzczIwIDI0IDI0IDMxYzIgMyA0IDE0IDQgMTRzLTgtNC0yMS03Yy0xNC0zLTI3LTItMzAgMy0yIDUtMTMgOC0yMiA4SDU0MHoiLz48L3N2Zz4=</tw-passagedata><tw-passagedata pid="353" name="logo-horse-right" tags="Twine.image" position="350,4475" size="100,100">data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjEgMTEwIDEwMjEgODI4Ij48cGF0aCBkPSJNNTQxIDkzN2MtMjkyLTEtMjkyLTEtMjkyLTE5cy0xLTE5LTMwLTExYy0xNyA0LTQ5IDYtNzIgNC0yNy0zLTUxLTExLTcxLTI1LTE3LTExLTQwLTM0LTUxLTUxQTE0NiAxNDYgMCAwMTYgNzIwczE1IDQyIDM4IDYzYzEyIDExIDMwIDI0IDQyIDI5czMyIDggNDUgOCAyOS0zIDM0LTdjOC00IDUtNy0xMC0xMWExMzAgMTMwIDAgMDEtNzUtNjBjLTctMTMtOS0yNy05LTI3czI0IDE4IDQxIDI1YzE4IDggMjkgMTEgNDEgMTFzMzktOSA2MC0xOSAzNy0yMiAzNS0yNC0xNCAyLTI3IDgtMzEgMTItNDIgMTItNDEtMTQtNDEtMTRsMzItNmMxMC0zIDI1LTExIDMyLTE5IDEzLTE0IDEyLTE0LTI2LTE1LTIyIDAtNTItNS02Ny0xMnMtMzgtMjEtNTAtMzMtMjYtMzEtMzMtNDQtMTQtMzMtMTctNDYgMS01MiAxLTUybDIyIDMxYzE1IDIxIDI4IDM4IDQ5IDQ4IDE3IDkgNDMgMTYgNTcgMTZzMzEtMyAzNi02YzctNSAwLTEwLTE5LTE2LTE2LTUtMzgtMTktNTAtMzFzLTIzLTMwLTI1LTQwLTEtMjItMS0yMiAyMiAxOSAzNyAyOCAzNSAxOCA0NyAxOCAzNS03IDUyLTE2IDI5LTE3IDI4LTE4LTE3IDEtMzQgNS01OC01LTU4LTUgMTItNiAyNy05YzE2LTIgMzgtMTcgNTAtMjZzMjktMjkgMzgtNDVsMjItNDRjNS0xNCA1LTE0LTE2IDAtMTEgNy0yMyAxMi0yNSAxMHM4LTMwIDIyLTYxIDQwLTcwIDU4LTg4YzIwLTIxIDI4LTMzIDIwLTMzLTYgMC0xMC00LTgtOXMyNi0yMiA1NC0zN2M0NC0yMiA2MC0yNiAxMDMtMjYgMzkgMCA2MSA1IDk1IDIxIDMyIDE1IDYyIDIyIDEwNiAyNiA1MyA0IDYyIDMgNjYtOCAzLTggOC0xMCAxMi02czkgMjEgMTIgMzggMTAgNDIgMTUgNTYgMjAgMzggMzMgNTMgMjkgMzkgMzYgNTUgMTkgNDIgMjUgNjAgMjkgNTcgNTMgODkgNTAgNzIgNTggOTBjOSAxOSAxNSA0NyAxNSA3MiAwIDIzLTUgNDgtMTEgNTYtOSAxMy0xNCAxMy0zMCA1LTE5LTgtMjAtOC0yMCAxNCAwIDE2LTUgMjMtMTYgMjctMTAgMy0yMCAxLTI2LTVsLTI1LTM1Yy0xMS0xNy0yOC0yOS01Ni0zOC0yMi03LTYzLTI3LTkyLTQzcy02MC0zMS03MC0zNGMtMTYtNS0xNy0zLTE3IDM5IDAgMjQgNCA1OCA5IDc1IDYgMjIgMjUgNDggNjEgODYgMjkgMzAgNjMgNjkgNzUgODdsMjYgNDFjMSA0LTExMSA2LTI4OSA1eiIvPjwvc3ZnPg==</tw-passagedata></tw-storydata>
 		<script>
 		(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";window.either=function(){for(var n=[],t=0;t<arguments.length;t++)if(arguments[t]instanceof Array)for(var r=0;r<arguments[t].length;r++)n.push(arguments[t][r]);else n.push(arguments[t]);return n[_.random(n.length-1)]},window.hasVisited=function(){var n=null;if(1==arguments.length)return null!=(n=window.story.passage(arguments[0]))&&window.story.history.includes(n.id);for(var t=0;t<arguments.length;t++)if(null==(n=window.story.passage(arguments[t]))||0==window.story.history.includes(n.id))return!1;return!0},window.visited=function(){for(var n=[],t=[],r=0;r<arguments.length;r++){var e=window.story.passage(arguments[r]);null!=e&&(t=window.story.history.filter(function(n){return n==e.id})),n.push(t.length)}return Math.min.apply(Math,n)},window.renderToSelector=function(n,t){var r=window.story.passage(t);null!=r&&$(n).html(r.render())},window.getStyles=function(){return $.when.apply($,$.map(arguments,function(n){return $.get(n,function(n){$("<style>"+n+"</style>").appendTo("head")})}))};
