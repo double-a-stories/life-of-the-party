@@ -221,7 +221,9 @@ That's horrible! you say.
 
 "We only said we *preferred* to watch! Nyaha~!" says Nox.
 
-Nikki gently caresses Faith's cheek with her paw. The mouse recoils slightly, but tries not to move too much. "Oh, and don't try to stop us either. My claws are a little sharp, and I'd hate to have an... unfortunate accident." She gives you an evil smile, making her sharp feline teeth visible between her lips. 
+Nikki gently caresses Faith's cheek with her paw. The mouse recoils slightly, but tries not to move too much. She gives you an evil smile.
+
+"Oh, and don't try to stop us either," she says, making her sharp feline teeth visible between her lips, "My claws are a little sharp, and I'd hate to have an... unfortunate accident. You know how it is."
 
 * [[You're blackmailing me?!]]
 
@@ -247,7 +249,7 @@ All eyes fall on Faith, who stands nervously atop Nikki's paw.
 
 <q.mouse>Um... Well...</q> the mouse hesitates, <q.mouse>P-preferably neither?</q>
 
-She can tell from the cats' expressions that this is not a satisfactory answer. Nikki bares her fangs, and uses a claw to tug your lips aside, exposing your flat, herbivorous teeth. "Be honest, dear," she says, " Would you rather be at my mercy, or theirs?"
+She can tell from the cats' expressions that this is not a satisfactory answer. Nikki bares her fangs, and uses a claw to tug your lips aside, exposing your flat, herbivorous teeth. "Be honest, dear," she says, "Would you rather be at my mercy, or theirs?"
 
 Faith looks up at you nervously, and stammers, <q.mouse>I-I'd feel safer if it was with you, Hollis? But I don't want you to feel responsible for um... what's going to happen to me... Sorry, but I guess I'll leave the choice it in your hands.</q>
 
@@ -260,12 +262,32 @@ Your heart pounds. Should you swallow Faith yourself, and be directly responsibl
 
 You feel like you're at the helm of a speeding trolley, and no matter what you do now, someone will get hurt. You shut your eyes, and make a decision.
 
-* [[No. Final answer.]] *(CW: Voyeurism)*
-* [[Fine, I'll eat her.]] *(CW: Player pred)*
+* [[Fine, I'll do it.]]
+* [[No. Final answer.]]
 
-:: Fine, I'll eat her.
+*These routes are pretty different. You might wanna come back here to see both of them. -AA*
+
+:: Fine, I'll do it.
+*CW: Player pred. Sadism.*
+
 <% s.ateFaith = true; %>
-// TODO:
+Okay, you say, heart pounding. As long as it means protecting her from greater harm, you'll do it. You'll swallow Faith, and she will be the first and last person you ever eat.
+
+<q.twinspeak>Yaaaay!</q> the cats cheer.
+
+<q.mouse>Thank you Hollis,</q> Faith says. You look into her tiny eyes, and sense in them equal parts despair and gratitude. <q.mouse>D-don't worry about me, I'll be fine. Just do what you have to do.</q>
+
+Her words do little to soothe you, as Nox takes Faith over to the fridge.
+
+Nox walks over to the fridge, and pulls open the door.
+
+* [[Ranch.|Choose a sauce.]]
+* [[Honey mustard.|Choose a sauce.]]
+* [[Catsup.|Choose a sauce.]]
+
+:: Choose a sauce.
+
+<q.mouse>I forgive you,</q> Faith 
 * You apologize, and Faith forgives you. She'll try not to struggle much.
 * Nox walks over to the fridge, dangles her by the tail, and dips her lower half in ranch sauce.
 * Then you stick her in your mouth.
@@ -274,11 +296,13 @@ You feel like you're at the helm of a speeding trolley, and no matter what you d
 * [[Nox: Tease.]]
 
 :: No. Final answer.
+*CW: Voyeurism. Implied gore. Sadism.*
+
 No, you say. You just can't do it. You look sadly at Faith, and say that you're sorry, but she's in Nikki's hands.
 
-Faith forces a smile. <q.mouse>That's okay Hollis, I forgive you. Just, um, promise to tell my girlfriend what happened, if you see her. She's a white mouse. Small, like me.</q>
+Faith forces a smile. <q.mouse>That's okay Hollis, I forgive you. If you see my girlfriend, just promise you'll tell her what happened to me. She's a white mouse, and small, like me.</q>
 
-<% if (s.rescuedKaia) { %>You remember. Of course, Kaia! How could you have forgotten?<% } %>
+<% if (s.rescuedKaia) { %>You remember Kaia. Of course! How could you have forgotten? You nod to <% } %>
 
 "Finally," Nikki says, clutching Faith by the middle, and drawing her toward her lips, "Let's get this show on the road!"
 
@@ -288,12 +312,14 @@ Faith forces a smile. <q.mouse>That's okay Hollis, I forgive you. Just, um, prom
 
 * [[Cover your eyes.]]
 
-:: Cover your eyes.
-It's too much to watch. You put your paws in front of your eyes.
+:: Cover your eyes. [checkpoint]
+It's too much to watch. You put your paws in front of your eyes. Nox points his phone camera at Faith, and presses record.
 
 "Any last words, my ignoble morsel?" asks Nikki, grinning from ear to ear.
 
-You hear Faith beg, <q.mouse>It's not too late to let me go. I won't tell anyone about this, honest!</q> Her tiny eyes staring deep at Nikki's, hoping to find just a hint of compassion from the carnivore. In response, Nikki narrows her eyes and begins to impatiently dangle Faith by the tail. <q.mouse>O-ow... Please, um, Miss Nikki, you don't have to do this...</q>
+You hear Faith beg, <q.mouse>Ms. N-Nikki, it's not too late to let me go. I won't tell anyone about this, honest!</q> Her tiny eyes staring deep at Nikki's, hoping to find just a hint of compassion within the carnivore.
+
+In response, Nikki narrows her eyes and begins to impatiently dangle Faith by the tail. <q.mouse>O-ow... Please, you don't have to do this...</q>
 
 "No," says Nox, "But she clearly really wants to! And I wanna watch. Nyaha!"
 
@@ -302,8 +328,26 @@ You hear Faith beg, <q.mouse>It's not too late to let me go. I won't tell anyone
 You shudder... It's too much to even listen to. You're anticipating the awful, horrible sound of a cat's mouth gorily eviscerating its prey. All the content warnings could prepare you for what's to come.
 
 * [[Nikki: Chomp.]] *(CW: ?????)*
+* [[Rescue her!!!]]  *(CW: ?????)*
+
+:: Rescue her!!! [gore]
+*CW: Implied gore.*
+
+In a last ditch effort to save Faith from a bloody fate, you lunge forward and try to snatch the mouse from Nikki's mouth.
+
+Reacting suddenly to this unexpected movement, she instinctively bites down, sinking her teeth into both you... It's, uh, not pleasant, and there's blood involved.
+
+Faith can only manage to squeak out, <q.mouse>O-ow...</q> before she falls unconscious.
+
+Nox's eyes go wide, as he stops the recording, and deletes it. "Th-that wasn't supposed to happen..."
+
+Seems like you're too little, too late. But who could blame you for trying?
+
+* <a0 onclick="setup.rewind()">Rewind.</a>
 
 :: Nikki: Chomp.
+*CW: Soft vore. Teasing.*
+
 Nikki delicately lifts her chin, placing more of Faith's tiny body into her mouth. Her tongue is slick with spit, and occasionally pulses underneath her prey, making all kinds of slobbery wet sounds.
 
 Nox watches with awe and excitement, while Faith lets out a series of uncomfortable grunts and cries. "Yesss," he says, "Ooh, I bet she's delicious!"
@@ -332,7 +376,7 @@ Nox rolls his eyes, and points toward the dining room. "If you wanna be judgment
 * [[Nox: Tease.]]
 
 :: Nox: Tease.
-Nox puts his eyes level with Faith's tiny face, still sticking out of <%= !s.ateFaith?"his sister's":"your"%> mouth. He points his phone camera at Faith, and presses record. "So, little mousey, how do you feel about being digested?"
+Nox puts his eyes level with Faith's tiny face, still sticking out of <%= !s.ateFaith?"his sister's":"your"%> mouth. "So, little mousey, how do you feel about being digested?"
 
 <q.mouse>Uhm... Scared?</q> the mouse responds.
 
@@ -409,9 +453,9 @@ Faith stammers, <q.mouse>No, wait, just think about this-</q>
 
 <q class="<% if (s.ateFaith) %>twinspeak<%;%>">Gulp! Gulp!</q> <% if (s.ateFaith) %>Nikki and Nox chant<% else %>Nox chants<%;%> excitedly. <% if (s.ateFaith) %>Your cheeks flush bright red. The cats stare at you expectantly, eagerly clutching their chins with their paws. Nikki's claws extend, as if to remind you how easily she and her brother could overpower you.<% else %>You watch silently, your cheeks flushing bright red.<%;%> 
 
-<q.mouse>J-just please promise me,</q> says Faith, from inside <%-s.ateFaith?"your":"Nikki's"%> mouth, <q.mouse>If you find my girlfriend, you'll tell her what happened to me.</q>
+<q.mouse>J-just please promise me,</q> says Faith, from inside <%-s.ateFaith?"your":"Nikki's"%> mouth, <q.mouse>If you find Kaia, you'll tell her what happened to me. I promise, none of this is your fault.</q>
 
-You nod. Based on the cats' expressions, you can tell it's definitely too late to <% if (s.ateFaith) %>back out<% else %>stop them<%;%> now. At least, that's what you have to tell yourself to keep from being utterly appalled and disgusted by the thought of what you're about to <% if (s.ateFaith) %>do<% else %>see<%;%>.
+You nod. Based on the cats' wild, excited expressions, you can tell it's definitely too late to <% if (s.ateFaith) %>back out<% else %>stop them<%;%> now. At least, that's what you have to tell yourself to keep from being utterly appalled and disgusted by the thought of what you're about to <% if (s.ateFaith) %>do<% else %>see<%;%>.
 
 <% if (s.ateFaith) %>
 Here goes nothing...
