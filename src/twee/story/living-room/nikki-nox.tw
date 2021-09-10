@@ -27,11 +27,42 @@ Both of them hop down to the floor.
 
 "I'm Nikki Chessie. This is my sibling, Nox," reiterates the second cat, matter-of-factly. She stares at you with piercing yellow eyes. She's wearing a charcoal dress shirt and an ivory vest. "A pleasure to make your acquaintance," she says.
 
-Both cats are basically the same height as you, although Nikki seems to stand with slightly taller posture, while Nox keeps his hands in pockets. You're still too hungover to try and tell them apart, but you nod at them politely.
+Both cats are basically the same height as you, although Nikki seems to stand with slightly taller posture, while Nox seems to fiddle with his pockets. You're still too hungover to try and tell them apart, but you nod at them politely.
 
-* [[How did I here?]]
+<%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
-:: How did I here?
+:: Nikki/Nox commands
+<!-- PATH 1 -->
+<% if (!visited("How did I get here?")) %>
+* [[How did I get here?]]
+<% else if (!visited("...Thanks?")) %>
+* [[...Thanks?]]
+<% else if (!visited("How do you know my name?")) %>
+* [[How do you know my name?]]
+<% else if (!visited("Oh jeez...")) %>
+* [[Oh jeez...]]
+<% else if (!visited("...And the dildo?")) %>
+* [[...And the dildo?]]
+<%;%><!-- 
+    PATH 2 -->
+<% if (!visited("Have you guys seen my friend?")) %>
+* [[Have you guys seen my friend?]]
+<% else if (!visited("Where did he go!? Maybe I can still save him!")) %>
+* [[Where did he go!? Maybe I can still save him!]]
+<% else if (!visited("Oh. I see...")) %>
+* [[Oh. I see...]]
+<% else if (!visited("Actually... that would explain a lot.")) %>
+* [[Actually... that would explain a lot.]]
+<% else if (!visited("Wait, why were you watching to begin with?")) %>
+* [[Wait, why were you watching to begin with?]]
+<% ; %>
+<% if (visited("...And the dildo?") && visited("Wait, why were you watching to begin with?")) %>
+* [[Are you guys predators...?]]
+
+
+<!-- CONVERSATION PATH 1 -->
+
+:: How did I get here?
 Both cats give you a genial smile. "You... don't remember?" asks Nox, scratching his whiskers nervously.
 
 You shake your head. The last few hours are mostly a blur, you say.
@@ -40,14 +71,12 @@ Nikki clears her throat. "The short version is that you got incredibly wasted, w
 
 "No other reason!" Nox adds with a Chesire smile.
 
-* [[...Thanks?]]
+<%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: ...Thanks?
 Nikki and Nox smile. <q.twinspeak>No problem, Hollis,</q> they both say in unison. It's not creepy at all.
 
-<!-- TODO: Convert this conversation into a multiple choice question system, like Ana has. Just two paths, I think. -->
-
-* [[How do you know my name?]]
+<%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: How do you know my name?
 "Oh," says Nox, "this is kind of awkward, but you actually said it, like, four times. You kept on insisting, 'My name is Hollis! I am an androgynous-looking gray rabbit!"
@@ -56,11 +85,11 @@ Nikki and Nox smile. <q.twinspeak>No problem, Hollis,</q> they both say in uniso
 
 "Anyway," Nikki continues, "you danced a lot, then ran around for a while flirting with preds."
 
-Nox pulls an expensive-looking smartphone out of their front pocket. "Oh, and you took off your shirt at one point! I caught it all on video! Wanna see?"
+Nox pulls an expensive-looking smartphone out of their back pocket. "Oh, and you took off your shirt at one point! I caught it all on video! Wanna see?"
 
 You shake your head no, and cover your face with your paws. Your cheeks flush with embarrassment.
 
-* [[Oh jeez...]]
+<%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: Oh jeez...
 Nox continues, "A couple of the jocks tried to take a lick, but this Labrador guy was really insistent that 'None of you dudes better try and take advantage of this little rabbit dude in their inebriated state, 'kay dudes?'"
@@ -69,7 +98,7 @@ Nikki continues, "After that, you stumbled into the kitchen, grabbed even more b
 
 You gradually stand up, dusting some pretzel crumbs off your back. You look down by your feet, kicking aside some of the trash that surrounds you.
 
-* [[...And the dildo?]]
+<%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: ...And the dildo?
 All three of you look down at the flared 14-incher lying limply beside you. The cats exchange a confused glance.
@@ -78,7 +107,58 @@ All three of you look down at the flared 14-incher lying limply beside you. The 
 
 "A riddle for the ages," says Nox.
 
-* [[Are you guys predators...?]]
+<%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
+
+<!-- CONVERSATION ROUTE 2 -->
+:: Have you guys seen my friend?
+
+"Oh, you mean Reese?" Nikki's face lights up.
+
+You incredulously ask the cats how they know Reese's name.
+
+<% setup.setFlag("upstairsUnlocked"); %>
+
+Nox smiles, "We mostly know him as guinea_puff_2B8. He's been a pretty active member of the Grumble Geek forums, just like us! It's a worldwide community for preds and prey to chat, and find consensual vore meetups!"
+
+Nikki nods, "He's been raving about going to this party for weeks." 
+
+<%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %>
+
+:: Where did he go!? Maybe I can still save him!
+Nikki thinks back, and says, "I'm pretty sure I caught a short glimpse of Basil's sister bringing him upstairs..."
+
+Nox grins, "And I caught a very *long* glimpse of Lacey and her boyfriend going to town swallowing that yummy boy bod!"
+
+You rocket to your feet. <% if (s.ateFaith) %>Faith lets out an uncomfortable yelp, as if reminding you to be careful as she's still inside your mouth.<%;%> Reese is upstairs? Maybe there's still time to get him out of there!
+
+Nox shakes his head, "Sorry, that was like three hours ago. Knowing Lacey, he's probably been digested already."
+
+<%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
+
+:: Oh. I see...
+You collapse to your knees. You can't believe it; you were so busy getting wasted, you couldn't save him! It's all your fault.
+
+Nox seems confused, "Save? Knowing Reese, the whole thing was 100% consensual. That dude was a vorny freak, even by our standards! It's weird that he would bring you here without telling you that..."
+
+<%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
+
+:: Actually... that would explain a lot.
+You think back to when you and Reese first arrived, and he ventured off into the living room without you. At the time, it seemed like he was just excited to do underage drinking, but you recall his exact words at the time were: *I'm gonna go get fucking annihilated!*
+
+...What a weirdo, you think. Still, being digested must have been painful, right?
+
+Nox pats you on the shoulder, "I can assure you, Lacey was really gentle with him. Your friend died doing what he loved! It's all part of the Circle of Life."
+
+Nikki nods. "Circle of Life," she repeats.
+
+<%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
+
+:: Wait, why were you watching to begin with?
+Nox smiles weakly, "Eheh, there's a perfectly reasonable explanation for that. You see-"
+
+Nikki interrupts, "Ahem, I'm sure our friend doesn't need to hear about this... Why don't we tell them about *that thing* we had in mind?"
+
+<%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: Are you guys predators...?
 Nikki smiles coyly. "We're not going to eat you, if that's what you're wondering."
@@ -94,7 +174,7 @@ Nox smiles enthusiastically, "We prefer to think of ourselves as encouraging obs
 :: That's... good?
 "I'm glad you think so," Nikki says, taking a few powerful steps closer to you.
 
-You're filled with a sense of dread as Nikki draws near, as if she and her brother were somehow an incarnation of Death. Soon, she's fully invaded your personal space, her narrow yellow eyes peering and probing into your soul, and her flat chest level with your own.
+You're filled with a sense of dread as Nikki draws near, as if she and her brother were somehow an incarnation of Death. Soon, she's fully invaded your personal space, her narrow yellow eyes peering and probing into your soul, and her mostly flat chest level with your own.
 
 "But that reminds me, Hollis," says Nikki, "While we've got you here, my sibling and I have an... interesting proposition for you," She runs her paw gently up the fur of your arm, giving you goosebumps.
 
@@ -165,9 +245,7 @@ You're about to say you'd rather not, but Nikki interrupts you.
 
 <q.mouse>Yes, that's right! Ha ha!</q> the mouse replies with a forced smile.
 
-"So, why not give it a try?" asks Nox, "A small, vulnerable thing like you may not get another chance before someone eats *you* all up!"
-
-He brings the mouse girl up to your paws, gesturing for you to hold her. "Maybe just a little taste?"
+"So, why not give it a try?" asks Nox, "A small, vulnerable thing like you may not get another chance before someone eats *you* all up!" He brings the mouse girl up to your paws, gesturing for you to hold her. "Maybe just a little taste?"
 
 * [[Examine mouse.]]
 
@@ -380,66 +458,19 @@ Nox puts his eyes level with Faith's tiny face, still sticking out of <%= !s.ate
 
 <q.mouse>Uhm... Scared?</q> the mouse responds.
 
-Nox nods, "Good, good! That's perfectly natural. What else?"
+Nox nods, "Good, good! Your little body's gonna be dissolved inside of <%= !s.ateFaith?"my sister's":"this rabbit's"%> stomach, so a little fear is perfectly natural! What else?"
 
-Faith looks sad. <q.mouse>I'm, um, worried about my girlfriend Kaia. She's really strong, but I think she'll be worried about me if I disappear...</q>
+Faith looks sad now. <q.mouse>I'm worried about my girlfriend Kaia. She's really strong, but I think she'll worry about me if I disappear...</q>
 
-"Oh," Nox says, "You're scared you might never see her again! How deliciously tragic, nyaha! If it makes you feel any better, at a party like this, there's pretty good odds your little friend was also eaten."
+"Oh," Nox says, "You're scared you might never see her again! How deliciously tragic, nyaha!""
+
+"If it makes you feel any better," says Nikki, "at a party like this, there's pretty good odds your little friend was also eaten."
 
 <q.mouse>Er, that really doesn't help at all?</q>
 
-Nikki turns to you, and adds, "Oh, and <%= s.ateFaith?"that":"tha'" %> <%= s.ateFaith?"goes":"goesh"%> for your buddy <%= s.ateFaith?"Reese":"Reesh" %> too."
+Nikki laughs, turns to you, and adds, "Oh, and <%= s.ateFaith?"that":"tha'" %> <%= s.ateFaith?"goes":"goesh"%> for your buddy <%= s.ateFaith?"Reese":"Reesh" %> too."
 
-* [[How do you know about Reese?]]
-
-:: How do you know about Reese? 
-You ask the two cats how they know Reese's name. <%= s.ateFaith?"Faith wriggles uncomfortably inside your mouth.":"" %>
-
-<% setup.setFlag("upstairsUnlocked"); %>
-
-Nox pauses the recording, and smiles, "We mostly know him as *GuineaPuff8*. Reese is—well, *was*—an active member of the GrumbleGeek forums, just like us! It's a worldwide community for prey and voyeurs to chat, and find consensual vore meetups!"
-
-Nikki nods, <%= s.ateFaith?"and says,":"and squeezes Faith into her cheek so she can speak articulately." %> "He's<%= s.ateFaith?"":"h" %> been raving about going to this party for weeks<%= s.ateFaith?"":"h" %>!" <%= s.ateFaith?"":"Faith's outline wriggles uncomfortably." %>
-
-* [[Where did he go!? Maybe I can still save him!]]
-* [[Good for him, I guess?|Faith: Interrupt.]]
-
-:: Where did he go!? Maybe I can still save him!
-Nikki thinks back, and says, "I'm pretty sure I caught a short glimpse of Basil's sister bringing him upstairs."
-
-Nox grins, "And I caught a very *long* glimpse of Lacey and her boyfriend going to town swallowing that yummy boy bod!"
-
-You rocket to your feet. <% if (s.ateFaith) %>Faith lets out an uncomfortable yelp, as if reminding you to be careful as she's still inside your mouth.<%;%> Reese is upstairs? Maybe there's still time to get him out of there! 
-
-Nox shakes his head, "Sorry, that was like three hours ago. Knowing Lacey, he's probably been digested already."
-
-* [[Oh. I see...]]
-
-:: Oh. I see...
-You collapse to your knees. You can't believe it; you were so busy getting wasted, you couldn't save him! It's all your fault.
-
-Nox seems confused, "Save? Knowing Reese, the whole thing was 100% consensual. That dude was a vorny freak, even by our standards! It's weird that he would bring you here without telling you that..."
-
-* [[Actually... that would explain a lot.]]
-
-:: Actually... that would explain a lot.
-You think back to when you and Reese first arrived, and he ventured off into the living room without you. At the time, it seemed like he was just excited to do underage drinking, but you recall his exact words at the time were: *I'm gonna go get fucking annihilated!*
-
-...What a weirdo, you think. Still, being digested must have been painful, right?
-
-Nox pats you on the shoulder, "I can assure you, Lacey was really gentle with him. Your friend died doing what he loved! It's all part of the Circle of Life."
-
-Nikki nods. "Circle <%= s.ateFaith?"of":"uh" %> Life," she repeats.
-
-* [[Wait, why were you watching to begin with?]]
-
-:: Wait, why were you watching to begin with?
-Nox smiles weakly, "Eheh, there's a perfectly reasonable explanation for that. You see-"
-
-<%= story.render("Faith: Interrupt.") /* [[Faith: Interrupt.]] */ %>
-
-:: Faith: Interrupt.
-<q.mouse>Ahem...</q> Faith says, still sticking out from between <%- s.ateFaith?"your":"Nikki's"%> lips. <q.mouse>We're uh, kind of in the middle of something... I'd really like to get out of here,</q> She shifts her arms slightly, attempting to pull herself free. <%- !s.ateFaith?"Nikki's":"Your" %> mouth instinctively sucks her backward.
+<q.mouse>I'd really like to get out of here,</q> She shifts her arms slightly, attempting to pull herself free. <%- !s.ateFaith?"Nikki's":"Your" %> mouth instinctively sucks her backward.
 
 Nikki smiles, "Oh, you'll be 'coming out' <%= s.ateFaith?"sooner":"shooner"%> or later."
 
