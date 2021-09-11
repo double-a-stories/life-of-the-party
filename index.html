@@ -1297,7 +1297,7 @@ setup.setStart = () => {
     location.search = params.toString();
 }
 /* twine-user-script #10: "Misc story variables" */
-story.version = `v0.7.0`;
+story.version = `v0.7.0b`;
 /* twine-user-script #11: "Max achievements" */
 window.setup = window.setup || {};
 setup.totalAchievements = 9;
@@ -1379,7 +1379,7 @@ document.addEventListener('pointerdown', function isTouching(ev) {
   } else {
     window.isTouching = !(ev.pointerType == "mouse");
   }
-});</script><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-tag name="TODO" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="no_heading start" position="100,100" size="100,100">&lt;style&gt;
+});</script><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="no_heading start" position="100,100" size="100,100">&lt;style&gt;
 tw-passage &gt; * {
   margin-bottom: 5rem;
 }
@@ -3337,7 +3337,7 @@ Nox aims his phone camera into your mouth, and presses record. &lt;q.nox&gt;Now,
 
 You try to say no, but you can&#39;t speak with your mouth full. Failing that, you consider shaking your head, but you&#39;re worried it would disorient Faith. Nox happily interprets your silence as a yes.
 
-* [[Nox: Tease.]]</tw-passagedata><tw-passagedata pid="221" name="No. Final answer." tags="" position="100,2850" size="100,100">*CW: Voyeurism. Implied gore. Sadism.*
+* [[Nox: Taunt.|Nox: Tease.]]</tw-passagedata><tw-passagedata pid="221" name="No. Final answer." tags="" position="100,2850" size="100,100">*CW: Voyeurism. Implied gore. Sadism.*
 
 No, you say. You just can&#39;t do it. You look sadly at Faith, and say that you&#39;re sorry, but she&#39;s in Nikki&#39;s paws now.
 
@@ -3479,11 +3479,11 @@ Just then, the door to the dining room swings open slightly.
 
 Nox can&#39;t help but grin widely. He wordlessly points a claw toward &lt;%-s.ateFaith?&quot;your&quot;:&quot;Nikki&#39;s&quot;%&gt; stomach, clearly stifling a snicker. It squirms violently in response.
 
-Kaia blinks in shock. The white fur of her face seems to become puffy red with rage. She turns her tiny, powerful gaze toward you. &lt;% if (s.rescuedKaia) %&gt;&lt;q.mouse&gt;H-Hollis?&lt;/q&gt; blinks in disbelief.&lt;% else %&gt;She points an accusatory claw at you, and says, &lt;q.mouse&gt;You! You&#39;re the rabbit from earlier!&lt;/q&gt;&lt;% ; %&gt; She seems to be at a loss for words. &lt;q.muse&gt;H-how could you &lt;%-s.ateFaith?&quot;do this&quot;:&quot;let this happen&quot;%&gt;?&lt;/q&gt;
+Kaia blinks in shock. The white fur of her face seems to become puffy red with rage. She turns her tiny, powerful gaze toward you. &lt;% if (s.rescuedKaia) %&gt;&lt;q.mouse&gt;H-Hollis?&lt;/q&gt; blinks in disbelief.&lt;% else %&gt;She points an accusatory claw at you, and says, &lt;q.mouse&gt;You! You&#39;re the rabbit from earlier!&lt;/q&gt;&lt;% ; %&gt; She seems to be at a loss for words. &lt;q.mouse&gt;H-how could you &lt;%-s.ateFaith?&quot;do this&quot;:&quot;let this happen&quot;%&gt;?&lt;/q&gt;
 
 Your heart feels ready to sink into the floor from guilt over what you &lt;% if (s.ateFaith) %&gt;did&lt;% else %&gt;failed to stop&lt;% ; %&gt;. You&#39;re certain that no words in the world which could answer that damning question to her satisfaction.
 
-* [[I... I&#39;m sorry...|Sorry for eating your girlfriend...]]</tw-passagedata><tw-passagedata pid="234" name="Sorry for eating your girlfriend..." tags="" position="475,2975" size="100,100">&lt;q.nikki&gt;Oh-ho,&lt;/q&gt; laughs Nikki, patting you on the back. &quot;This dear rabbit is hardly to blame. We basically forced them to &lt;% if (s.ateFaith) %&gt;eat her&lt;% else %&gt;watch us&lt;% ; %&gt;.&quot;
+* [[I... I&#39;m sorry...|Sorry for eating your girlfriend...]]</tw-passagedata><tw-passagedata pid="234" name="Sorry for eating your girlfriend..." tags="" position="475,2975" size="100,100">&lt;q.nikki&gt;Oh-ho,&lt;/q&gt; laughs Nikki, patting you on the back. &lt;q.nikki&gt;This dear rabbit is hardly to blame. We basically forced them to &lt;% if (s.ateFaith) %&gt;eat her&lt;% else %&gt;watch us&lt;% ; %&gt;.&lt;/q&gt;
 
 Nox adds with a smile, &lt;q.nox&gt;Plus, they were extremely drunk at the time! We&#39;re the ones you should be angry at.&lt;/q&gt;
 
@@ -3523,14 +3523,14 @@ Nikki does not slow down, and only continues raising the mouse toward her lips.
 &lt;%-s.ateFaith?&quot;You only have&quot;:&quot;Nikki only has&quot;%&gt; a moment to react, before Kaia leaps from &lt;%-s.ateFaith?&quot;your&quot;:&quot;her&quot;%&gt; tongue, and onto &lt;%-s.ateFaith?&quot;your&quot;:&quot;her&quot;%&gt; uvula, in an attempt to induce vomiting. &lt;%-s.ateFaith?&quot;You choke and gag&quot;:&quot;The cat chokes and gags&quot;%&gt; at this.
 
 * [[&lt;%-s.ateFaith?&quot;Oww! Getoutgetout!&quot;:&quot;Nikki: Gulp.&quot;%&gt;|Pred: Force Kaia down.]]</tw-passagedata><tw-passagedata pid="237" name="Pred: Force Kaia down." tags="" position="850,2975" size="100,100">&lt;% if (s.ateFaith) %&gt;
-&lt;q.nikki&gt;Ack! You little shit!&lt;/q&gt; Nikki growls, whipping her head around, hoping to dislodge the mouse. &lt;q.nikki&gt;I can&#39;t believe you thought that would work on me... The insolence!&lt;/q&gt;
-&lt;% else %&gt;
 You groan with pain and discomfort. Your brain tells you should go with her gambit. You should vomit up Kaia and Faith, and let them scamper to freedom. And yet... You don&#39;t.
 
 Is it because you&#39;re a predator now? Is it just instinct? Either way, your mouth won&#39;t let her go. Your throat repeatedly gulps and glrks, trying to get her down. You shake your head wildly, even as Kaia clings to the back of your throat.
+&lt;% else %&gt;
+&lt;q.nikki&gt;Ack! You little shit!&lt;/q&gt; Nikki growls, whipping her head around, hoping to dislodge the mouse. &lt;q.nikki&gt;I can&#39;t believe you thought that would work on me... The insolence!&lt;/q&gt;
 &lt;%;%&gt;
 
-Soon, Kaia loses her grip. Nox zooms the camera into &lt;%-s.ateFaith?&quot;your&quot;:&quot;his sister&#39;s&quot;%&gt; mouth, and watches as she is successfully dislodged, and sent plummeting into that slick gullet.
+Soon, Kaia loses her grip. Nox zooms the camera into &lt;%-s.ateFaith?&quot;your&quot;:&quot;his sister&#39;s&quot;%&gt; mouth, and watches as she is successfully dislodged, and sent plummeting into &lt;%-s.ateFaith?&quot;your&quot;:&quot;that&quot;%&gt; slick gullet.
 
 &lt;q.mouse&gt;D-dammit...&lt;/q&gt; Kaia sighs, struggling no further.
 
