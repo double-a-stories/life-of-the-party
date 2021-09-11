@@ -600,7 +600,7 @@ Your heart feels ready to sink into the floor from guilt over what you <% if (s.
 * [[I... I'm sorry...|Sorry for eating your girlfriend...]]
 
 :: Sorry for eating your girlfriend...
-<q.nikki>Oh-ho,</q> laughs Nikki, patting you on the back. "This dear rabbit is hardly to blame. We basically forced them to <% if (s.ateFaith) %>eat her<% else %>watch us<% ; %>."
+<q.nikki>Oh-ho,</q> laughs Nikki, patting you on the back. <q.nikki>This dear rabbit is hardly to blame. We basically forced them to <% if (s.ateFaith) %>eat her<% else %>watch us<% ; %>.</q>
 
 Nox adds with a smile, <q.nox>Plus, they were extremely drunk at the time! We're the ones you should be angry at.</q>
 
