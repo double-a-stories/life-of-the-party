@@ -593,7 +593,7 @@ Suddenly, <%-s.rescuedKaia?"Kaia":"a white mouse"%> bursts into the room. <%-s.r
 
 Nox can't help but grin widely. He wordlessly points a claw toward <%-s.ateFaith?"your":"Nikki's"%> stomach, clearly stifling a snicker. It squirms violently in response.
 
-Kaia blinks in shock. The white fur of her face seems to become puffy red with rage. She turns her tiny, powerful gaze toward you. <% if (s.rescuedKaia) %><q.mouse>H-Hollis?</q> blinks in disbelief.<% else %>She points an accusatory claw at you, and says, <q.mouse>You! You're the rabbit from earlier!</q><% ; %> She seems to be at a loss for words. <q.muse>H-how could you <%-s.ateFaith?"do this":"let this happen"%>?</q>
+Kaia blinks in shock. The white fur of her face seems to become puffy red with rage. She turns her tiny, powerful gaze toward you. <% if (s.rescuedKaia) %><q.mouse>H-Hollis?</q> blinks in disbelief.<% else %>She points an accusatory claw at you, and says, <q.mouse>You! You're the rabbit from earlier!</q><% ; %> She seems to be at a loss for words. <q.mouse>H-how could you <%-s.ateFaith?"do this":"let this happen"%>?</q>
 
 Your heart feels ready to sink into the floor from guilt over what you <% if (s.ateFaith) %>did<% else %>failed to stop<% ; %>. You're certain that no words in the world which could answer that damning question to her satisfaction.
 
