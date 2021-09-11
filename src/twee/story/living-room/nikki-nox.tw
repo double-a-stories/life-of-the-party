@@ -440,7 +440,7 @@ In response, Nikki narrows her eyes and begins to impatiently dangle Faith by th
 
 <q.nox>No,</q> says Nox, <q.nox>But she clearly really wants to! And I wanna watch. Nyaha!</q>
 
-<q.nikki>Mmm, c'mere cutie...</q> Nikki purrs, drawing Faith closer and closer to her lips. <q.nikki>I wanna see what's inside you...</q> The mouse shudders and instinctively kicks a little as the cat places her tiny feet delicately onto her outstretched tongue.
+<q.nikki>Mmm, c'mere cutie...</q> Nikki purrs, drawing Faith closer and closer to her lips. <q.nikki>I wanna see what's inside of you...</q> The mouse shudders and instinctively kicks a little as the cat places her tiny feet delicately onto her outstretched tongue.
 
 You shudder... It's too much to even listen to. You're anticipating the awful, horrible sound of a cat's mouth gorily eviscerating its prey. All the content warnings could prepare you for what's to come.
 
@@ -448,11 +448,11 @@ You shudder... It's too much to even listen to. You're anticipating the awful, h
 * [[Rescue her!!!]]  *(CW: ?????)*
 
 :: Rescue her!!! [gore]
-*CW: Implied gore.*
+*CW: Blood. Personal injury.*
 
 In a last ditch effort to save Faith from a bloody fate, you lunge forward and try to snatch the mouse from Nikki's mouth.
 
-Reacting suddenly to this unexpected movement, she instinctively bites down, sinking her teeth into both you... It's, uh, not pleasant, and there's blood involved.
+Reacting suddenly to this unexpected movement, she instinctively bites down, sinking her teeth into both you and Faith... It's, uh, not pleasant, and there's blood involved.
 
 Faith can only manage to squeak out, <q.mouse>O-ow...</q> before she falls unconscious.
 
@@ -469,7 +469,7 @@ Nikki delicately lifts her chin, placing more of Faith's tiny body into her mout
 
 Nox watches with awe and excitement, while Faith lets out a series of uncomfortable grunts and cries. <q.nox>Yesss,</q> he says, <q.nox>Ooh, I bet she's delicious!</q>
 
-Nikki closes her lips around Faith's tail, but does not swallow her yet. Instead, she simply takes a moment to saver the taste. <q.nikki>Mmmnn,</q> she moans, pressing Faith against the roof of her mouth and swallowing saliva. Her tongue tickles and wraps around the mouse.
+Nikki closes her lips around Faith's tail, but does not swallow her yet. Instead, she simply takes a moment to savor the taste. <q.nikki>Mmmnn,</q> she moans, pressing Faith against the roof of her mouth and swallowing saliva. Her tongue tickles and wraps around the mouse.
 
 You peek at the scene from between your paws. There's... less teeth involved than you expected...
 
@@ -493,7 +493,7 @@ Nox rolls his eyes, and points toward the dining room. <q.nox>If you wanna be ju
 * [[Nox: Tease.]]
 
 :: Nox: Tease.
-Nox puts his eyes level with Faith's tiny face, still sticking out of <%= !s.ateFaith?"his sister's":"your"%> mouth. <q.nox>So, little mousey, how do you feel about being digested?</q>
+Nox puts his eyes level with Faith's tiny face, still sticking out of <%= !s.ateFaith?"his sister's":"your"%> mouth, and aims his camera at her. <q.nox>So, little mousey, how do you feel about being digested?</q>
 
 <q.mouse>Uhm... Scared?</q> the mouse responds.
 
@@ -552,7 +552,7 @@ You <%-s.ateFaith?"feel":"see"%> the bulge going down <%-s.ateFaith?"your":"Nikk
 
 <q.nox>Mind if I...?</q> Nox, clearly dripping with excitement and arousal, gently touches <%-s.ateFaith?"your":"Nikki's"%> throat, as its undulations bring Faith's outline down, beneath <%-s.ateFaith?"your":"her"%> collarbone, chest, and into <%-s.ateFaith?"your":"her"%> stomach.
 
-<q.nox>Oh yes..., Good mousie...</q> he murmurs.
+<q.nox>Oh yes... Good mousie...</q> he murmurs.
 
 * [[Continue.|Swallow Faith II]]
 
@@ -576,7 +576,7 @@ You protest, trying very hard to pretend like you're not aroused by the <%-s.ate
 * [[I guess...|Tummy rubs.]]
 
 :: Tummy rubs.
-<%-s.ateFaith?"You stand over Nikki":"The cats stand over you"%>, and rub the little bulge Faith makes in <%-s.ateFaith?"your":"her"%> stomach. It feels equal-parts taboo and thrilling, and <%-s.ateFaith?"they seem":"she seems"%> to feel the same, sighing happily.
+<%-s.ateFaith?"The cats stand over you":"You stand over Nikki"%>, and rub the little bulge Faith makes in <%-s.ateFaith?"your":"her"%> stomach. It feels equal-parts taboo and thrilling, and <%-s.ateFaith?"they seem":"she seems"%> to feel the same, sighing happily.
 
 In response to touch, Faith's movements get more and more intense. You despise yourself for taking pleasure from the mouse's discomfort. You feel as if you've utterly betrayed her... But, if she's going to be digested anyway, is it so wrong?
 
@@ -584,7 +584,7 @@ In response to touch, Faith's movements get more and more intense. You despise y
 
 <q.nox>Ooooh... She's gonna digest really nicely,</q> Nox coos. <q.nox>That was a lot of fun, but maybe we should clear out of here before someone comes in.</q>
 
-Suddenly, the door to the dining room slowly swings open.
+Just then, the door to the dining room swings open slightly.
 
 * [[Kaia: Enter.]]
 
@@ -676,7 +676,7 @@ You're completely silent, as your mind processes and replays the heartbreaking e
 
 :: W-wow...
 
-Two mice—two *people* who would have otherwise lived long, fulfilling lives—have been devoured, <%-s.ateFaith?"*by you*":"and you did nothing to stop it"%>. You feel ready to vomit, either from the unspeakable loss you've been made complicit in, or possibly from the amount of pretzels and vodka filling your stomach.
+Two mice—two *people* who would have otherwise lived long, fulfilling lives—have been devoured, <%-s.ateFaith?"*by you*":"and you did nothing to stop it"%>, even when you could have. You feel ready to vomit, either from the unspeakable loss you've been made complicit in, or possibly from the amount of pretzels and vodka filling your stomach.
 
 Finally, Nox stops recording on his phone, and breaks the silence. <q.nox>Goodness,</q> he says, wearing a satisfied grinning from ear-to-ear, <q.nox>That was soo hot!</q>
 
