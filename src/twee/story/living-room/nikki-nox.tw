@@ -635,13 +635,40 @@ Nikki does not slow down, and only continues raising the mouse toward her lips.
 <q.mouse>This was kind of a dramatic moment for me- but- urgh, fine.</q> She turns to you, and says simply, <q.mouse><% if (s.rescuedMouse) %>Goodbye, Hollis, thanks for everything.<% else %>Goodbye, rabbit. Thanks for nothing.<%;%></q>
 <% } %>
 
-* [[<%-s.ateFaith?"Hollis":"Nikki"%>: Swallow Kaia.|Pred: Swallow Kaia.]]
+* [[<%-s.ateFaith?"Hollis":"Nikki"%>: Eat Kaia.|Pred: Eat Kaia.]]
+
+:: Pred: Eat Kaia.
+
+<!-- TODO: Kaia attempts to break free, and induce vomiting. Nikki gets her back down and calls her a little shit. You have the choice to keep her down, or puke her up. -->
+<%-s.ateFaith?"You gently bring":"Nikki swiftly brings"%> Kaia to <%-s.ateFaith?"your":"her"%> lips, and <%-s.ateFaith?"places":"her"%> her onto <%-s.ateFaith?"your":"her"%> tongue. She slides down it intently. Strangely, the mouse's expression now looks much more determined, and less resigned to her fate.
+
+<q.mouse>Sorry about this!</q> she shouts, <q.mouse>This is gonna suck for the both of us!</q>
+
+<%-s.ateFaith?"You only have":"Nikki only has"%> a moment to react, before Kaia leaps from <%-s.ateFaith?"your":"her"%> tongue, and onto <%-s.ateFaith?"your":"her"%> uvula, in an attempt to induce vomiting. <%-s.ateFaith?"You choke and gag":"The cat chokes and gags"%> at this.
+
+* [[<%-s.ateFaith?"Oww! Getoutgetout!":"Nikki: Gulp."%>|Pred: Force Kaia down.]]
+
+:: Pred: Force Kaia down.
+
+<% if (s.ateFaith) %>
+<q.nikki>Ack! You little shit!</q> Nikki growls, whipping her head around, hoping to dislodge the mouse. <q.nikki>I can't believe you thought that would work on me... The insolence!</q>
+<% else %>
+You groan with pain and discomfort. Your brain tells you should go with her gambit. You should vomit up Kaia and Faith, and let them scamper to freedom. And yet... You don't.
+
+Is it because you're a predator now? Is it just instinct? Either way, your mouth won't let her go. Your throat repeatedly gulps and glrks, trying to get her down. You shake your head wildly, even as Kaia clings to the back of your throat.
+<%;%>
+
+Soon, Kaia loses her grip. Nox zooms the camera into <%-s.ateFaith?"your":"his sister's"%> mouth, and watches as she is successfully dislodged, and sent plummeting into that slick gullet.
+
+<q.mouse>D-dammit...</q> Kaia sighs, struggling no further.
+
+* [[<%-s.ateFaith?"Hollis":"Nikki"%>: Swallow.|Pred: Swallow Kaia.]]
+<% ; %>
 
 :: Pred: Swallow Kaia.
+<%-s.ateFaith?"You do":"Nikki does"%> do that. <%-s.ateFaith?"You finish":"Nikki finishes"%> the deed with only a few swallows, then <%-s.ateFaith?"open your":"opens her"%> mouth with a sigh. <%-s.ateFaith?"You feel like you're getting the hang of predation, awful though it may be.":"Nikki smiles, and caresses her throat, neckbone, then stomach with satisfaction."%>
 
-<%-s.ateFaith?"You do":"Nikki does"%> do that, much as <%-s.ateFaith?"you":"she"%> did before. <%-s.ateFaith?"You finish":"Nikki finishes"%> the deed quickly, with only a few swallows, then <%-s.ateFaith?"open your":"opens her"%> mouth with a sigh. <%-s.ateFaith?"You feel like you're getting the hang of predation, awful though it may be.":"Nikki smiles, and caresses her throat, neckbone, then stomach with satisfaction."%>
-
-Soon, Kaia is inside <%-s.ateFaith?"you":"Nikki"%>. You <%-s.ateFaith?"feel":"see"%> little movements inside <%-s.ateFaith?"your":"Nikki's"%> stomach, but they settle down quickly, with a dramatic sense of finality. Nox keeps his phone camera pointed at the little bulge for several seconds, then stops the recording.
+Soon, Kaia is inside <%-s.ateFaith?"you":"Nikki"%>, alongside Faith. You <%-s.ateFaith?"feel":"see"%> little movements inside <%-s.ateFaith?"your":"Nikki's"%> stomach, but they settle down quickly, with a dramatic sense of finality. Nox keeps his phone camera pointed at the little bulge for several seconds, then stops the recording.
 
 You're completely silent, as your mind processes and replays the heartbreaking events that just unfolded before you. 
 
