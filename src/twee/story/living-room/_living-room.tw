@@ -99,7 +99,7 @@ if (!setup.partyDanceLiterals || s.partyFlavorState == 0) {
 `A nice, easy song starts playing. You consider offering to dance with one of the guys around you, but most of them are several feet taller than you.`,
 `A heavy-set bear with a selfie stick is recording herself as she shakes her massive hips. You try not to stare, but it's absolutely hypnotic.`,
 `A lioness whispers to her friend, "Did you know there's a rabbit here?" They snicker. "Woah. Do you think it has a vore fetish?"`,
-`You see a cat boy eagerly following a lioness out of the room. They both seem quite excited.`,
+`You see a cow boy eagerly following a lioness out of the room. They both seem quite excited.`,
 `A <strong>big brown stallion</strong> in a green jacket seems to take notice of your dancing. He winks at you from across the room.`,
 ].sort(e => 0.5 - Math.random());
 
