@@ -14,7 +14,7 @@
 }
 
 :: Misc story variables [script]
-story.version = `v0.7.0`;
+story.version = `v0.7.0b`;
 
 :: StoryTitle
 Life of the Party
