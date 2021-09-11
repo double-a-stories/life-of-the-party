@@ -651,14 +651,14 @@ Nikki does not slow down, and only continues raising the mouse toward her lips.
 :: Pred: Force Kaia down.
 
 <% if (s.ateFaith) %>
-<q.nikki>Ack! You little shit!</q> Nikki growls, whipping her head around, hoping to dislodge the mouse. <q.nikki>I can't believe you thought that would work on me... The insolence!</q>
-<% else %>
 You groan with pain and discomfort. Your brain tells you should go with her gambit. You should vomit up Kaia and Faith, and let them scamper to freedom. And yet... You don't.
 
 Is it because you're a predator now? Is it just instinct? Either way, your mouth won't let her go. Your throat repeatedly gulps and glrks, trying to get her down. You shake your head wildly, even as Kaia clings to the back of your throat.
+<% else %>
+<q.nikki>Ack! You little shit!</q> Nikki growls, whipping her head around, hoping to dislodge the mouse. <q.nikki>I can't believe you thought that would work on me... The insolence!</q>
 <%;%>
 
-Soon, Kaia loses her grip. Nox zooms the camera into <%-s.ateFaith?"your":"his sister's"%> mouth, and watches as she is successfully dislodged, and sent plummeting into that slick gullet.
+Soon, Kaia loses her grip. Nox zooms the camera into <%-s.ateFaith?"your":"his sister's"%> mouth, and watches as she is successfully dislodged, and sent plummeting into <%-s.ateFaith?"your":"that"%> slick gullet.
 
 <q.mouse>D-dammit...</q> Kaia sighs, struggling no further.
 
