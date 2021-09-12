@@ -723,7 +723,7 @@ Ivy finishes wrapping you, until only your head remains. <q.nox>Ooh, good form!<
 ## The End.
 
 * [[Faith: Epilogue.]]
-* [[Restart.|Start]]
+* <a0 onclick="setup.restart()">Restart.</a>
 
 :: Faith: Epilogue. [vore mousestory]
 Your name is Faith. You are a mouse. You're inside the ample cavern of <%= s.ateFaith?"rabbit":"cat" %>'s stomach, surrounded by <%= s.ateFaith?"a mush of pretzels and beer":"dark red fleshy walls" %>, and swimming in awful smelling liquids. You hear a splash.
@@ -756,5 +756,5 @@ You laugh, and snuggle your head into Kaia's fur, and sigh. As the slurry of aci
 
 ## The end.
 
-* [[Restart.|Start]]
+* <a0 onclick="setup.restart()">Restart.</a>
 * [[Credits]]

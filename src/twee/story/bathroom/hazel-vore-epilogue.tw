@@ -107,5 +107,5 @@ Wow, they were a bitch to push out, but they made my ass look fantastic. Oh well
 </div>
 </div>
 
-* [[Restart|Start]]
+* <a0 onclick="setup.restart()">Restart.</a>
 

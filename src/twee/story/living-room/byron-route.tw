@@ -212,7 +212,7 @@ You respond by fainting from blood loss.
 ### Game Over.
 
 * <a0 onclick="setup.rewind()">Rewind</a>
-* [[Restart|Start]]
+* <a0 onclick="setup.restart()">Restart.</a>
 
 :: Follow Byron upstairs.
 <q.byron>Those damn dogs,</q> <%-s.bm?"Byron":"Emily"%> mutters as <%-s.bm?"he":"she"%> drags you through the foyer and up the stairs. <q.byron>Just interested in rutting and drinking... No respect for superior intellect, and no appreciation for the finer things in life...</q> <%-s.bm?"He":"She"%> opens the door to an upstairs bedroom, and ushers you in.
@@ -427,7 +427,7 @@ There is no reply.
 <% setup.addAchievement("Byron Vore Ending", "Anyway, here's..."); %>
 
 * [[Epilogue.|Byron Epilogue.]]
-* [[Restart.|Start]]
+* <a0 onclick="setup.restart()">Restart.</a>
 
 :: Byron Epilogue. [blogspot socmed]
 <div.social-card>
@@ -483,4 +483,4 @@ Wow,,, You sound so suave,,, Any tips for getting prey to let me eat them,,,?
 
 </div>
 
-* [[Restart.|Start]]
+* <a0 onclick="setup.restart()">Restart.</a>

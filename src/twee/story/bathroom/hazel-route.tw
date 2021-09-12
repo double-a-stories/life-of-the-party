@@ -88,7 +88,7 @@ In your last waking seconds, you realize this was a very stupid idea.
 ### Game Over.
 
 * [[Undo|Oh shit!]]
-* [[Restart|Start]]
+* <a0 onclick="setup.restart()">Restart.</a>
 
 :: Wait, I can explain!
 <% s.previousCommand = "Wait, I-" %>
@@ -264,5 +264,5 @@ The owl snickers and grabs <%-s.hg?"him":"her"%> by the arm. "Hoo hoo hoo! Omigo
 <% setup.addAchievement("Hazel Vore Ending", "A Grizzly's End"); %>
 
 * [[Epilogue.|Epilogue: Hazel Post Vore.]] *(CW: Scat.)*
-* [[Restart|Start]]
+* <a0 onclick="setup.restart()">Restart.</a>
 

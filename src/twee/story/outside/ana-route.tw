@@ -683,4 +683,4 @@ Anticipating the worst, she pushes her claw down the handle to flush. The small 
 
 ### The End.
 
-* [[Restart|Start]]
+* <a0 onclick="setup.restart()">Restart.</a>
