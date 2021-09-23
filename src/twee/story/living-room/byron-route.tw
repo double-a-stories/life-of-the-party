@@ -171,7 +171,7 @@ You grit your teeth, and walk helplessly alongside <%-s.bm?"Byron":"Emily"%> as 
 :: Blink twice.
 "Yoo, dude!" the dog chuckles, "If it isn't Emory <%-s.bm?"Whatshisname":"Whatserface"%>, from the chess club! It's Gus! Long time no see, dude!"
 
-<q.byron><%-s.bm?"Byron":"Emily"%> Byron,</q> the wolf smiles, giving you a friendly pat on the shoulder. <q.byron>And this is my charming friend, Hollis!</q>
+<q.byron><%-s.bm?"Emmet":"Emily"%> Byron,</q> the wolf smiles painedly, giving you a friendly pat on the shoulder. <q.byron>And this is my charming friend, Hollis!</q>
 
 The Labrador points a paw at the wolf, and asks you, "Hey dude, this dude bothering you, dude? Cause that's supes no bueno, dude."
 
