@@ -1173,7 +1173,7 @@ class SoundInstance {
       this.playing = false;
       this.howl.once("fade", () => {
         this.playing = false;
-        this.howl.stop(this.id);
+        this.howl.pause(this.id);
       }, this.id);
     }
   }
@@ -1210,8 +1210,7 @@ const hasTags = (...tags) => (passage) => tags.every(t => passage.tags.includes(
 const howlDefaults = {
   loop: true,
   volume: 0.1,
-  muted: true,
-  html5: true,
+  autoplay: false,
   preload: 'metadata'
 }
 // Chirping birds from freesound
