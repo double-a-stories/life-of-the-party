@@ -984,10 +984,10 @@ $(window).on("sm.passage.shown", (event, {passage}) => {
 setup.toggleMute = () => {
   if (!setup.isFlagSet("enableSound")) {
     setup.setFlag("enableSound");
-    Howler.volume(1.0);
+    Howler.mute(false);
   } else {
     setup.unsetFlag("enableSound");
-    Howler.volume(0.0);
+    Howler.mute(true);
   }
   renderToSelector("#header", "Topbar controls")
 }
@@ -1133,8 +1133,10 @@ $(window).on('sm.passage.shown', () => {
 });
 /* twine-user-script #8: "sound.js" */
 // Mute on load.
-if (!setup.isFlagSet("enableSound")) {
-  Howler.volume(0.0);
+$(document).on("sm.passage.shown") {
+  if (!setup.isFlagSet("enableSound")) {
+    Howler.mute(true);
+  }
 }
 
 /*
@@ -1302,7 +1304,7 @@ setup.setStart = () => {
     location.search = params.toString();
 }
 /* twine-user-script #10: "Misc story variables" */
-story.version = `v0.7.0b`;
+story.version = `v0.7.0c`;
 /* twine-user-script #11: "Max achievements" */
 window.setup = window.setup || {};
 setup.totalAchievements = 9;
@@ -1384,7 +1386,7 @@ document.addEventListener('pointerdown', function isTouching(ev) {
   } else {
     window.isTouching = !(ev.pointerType == "mouse");
   }
-});</script><tw-tag name="vore" color="red"></tw-tag><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-passagedata pid="1" name="Start" tags="no_heading start" position="100,100" size="100,100">&lt;style&gt;
+});</script><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="no_heading start" position="100,100" size="100,100">&lt;style&gt;
 tw-passage &gt; * {
   margin-bottom: 5rem;
 }
