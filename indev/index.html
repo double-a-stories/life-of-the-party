@@ -1132,12 +1132,14 @@ $(window).on('sm.passage.shown', () => {
   })
 });
 /* twine-user-script #8: "sound.js" */
-// Mute on load.
-$(document).on("sm.passage.shown") {
+// Mute and unmute on load.
+$(document).on("sm.passage.shown", () => {
   if (!setup.isFlagSet("enableSound")) {
     Howler.mute(true);
+  } else {
+    Howler.mute(false);
   }
-}
+});
 
 /*
 Simple sound controller using howler.js
@@ -1386,7 +1388,7 @@ document.addEventListener('pointerdown', function isTouching(ev) {
   } else {
     window.isTouching = !(ev.pointerType == "mouse");
   }
-});</script><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="no_heading start" position="100,100" size="100,100">&lt;style&gt;
+});</script><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-passagedata pid="1" name="Start" tags="no_heading start" position="100,100" size="100,100">&lt;style&gt;
 tw-passage &gt; * {
   margin-bottom: 5rem;
 }
