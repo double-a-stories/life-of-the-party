@@ -548,11 +548,10 @@ body[data-tags~="dark"], .backdrop {
   font-variant-caps: small-caps;
 }
 
-@supports (-webkit-background-clip: text) {
+@supports (background-clip: text) {
   .fadeout {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
     background: linear-gradient(to bottom, var(--color), transparent);
     padding-bottom: 2rem;
   }
