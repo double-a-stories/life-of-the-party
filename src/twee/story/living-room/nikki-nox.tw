@@ -368,8 +368,6 @@ You feel like you're at the helm of a speeding trolley, and no matter what you d
 *These routes are pretty different. You might wanna come back here to see both of them. -AA*
 
 :: Fine, I'll do it.
-*CW: Player pred. Sadism.*
-
 <% s.ateFaith = true; %>
 Okay, you say, heart pounding. As long as it means protecting her from greater harm, you'll do it. You'll swallow Faith, and she will be the first and last person you ever eat. You feel nauseous just thinking about it.
 
@@ -421,8 +419,6 @@ You try to tell them no, but you can't speak with your mouth full. Failing that,
 * [[Nox: Taunt.|Nox: Tease.]]
 
 :: No. Final answer.
-*CW: Voyeurism. Implied gore. Sadism.*
-
 No, you say. You just can't do it. You look sadly at Faith, and say that you're sorry, but she's in Nikki's paws now.
 
 Faith forces a smile. <q.mouse>That's okay Hollis, I forgive you. If you see my girlfriend, just promise you'll tell her what happened to me. She's a white mouse, and small, like me.</q>
@@ -456,7 +452,7 @@ You shudder... It's too much to even listen to. You're anticipating the awful, h
 * [[Rescue her!!!]]  *(CW: ?????)*
 
 :: Rescue her!!! [gore]
-*CW: Blood. Personal injury.*
+*CW: Blood. Accidental mauling.*
 
 In a last ditch effort to save Faith from a bloody fate, you lunge forward and try to snatch the mouse from Nikki's mouth.
 
