@@ -548,12 +548,11 @@ body[data-tags~="dark"], .backdrop {
   font-variant-caps: small-caps;
 }
 
-@supports (background-clip: text) or (-webkit-background-clip: text) {
+@supports (background-clip: text) {
   .fadeout {
     background: linear-gradient(to bottom, var(--color), transparent);
     color: transparent;
     padding-bottom: 2rem;
-    -webkit-background-clip: text;
     background-clip: text;
   }
 }
@@ -1387,7 +1386,7 @@ document.addEventListener('pointerdown', function isTouching(ev) {
   } else {
     window.isTouching = !(ev.pointerType == "mouse");
   }
-});</script><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-tag name="vore" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="no_heading start" position="100,100" size="100,100">&lt;style&gt;
+});</script><tw-tag name="vore" color="red"></tw-tag><tw-tag name="TODO" color="red"></tw-tag><tw-tag name="hide" color="blue"></tw-tag><tw-tag name="morning" color="yellow"></tw-tag><tw-tag name="todo" color="orange"></tw-tag><tw-passagedata pid="1" name="Start" tags="no_heading start" position="100,100" size="100,100">&lt;style&gt;
 tw-passage &gt; * {
   margin-bottom: 5rem;
 }
