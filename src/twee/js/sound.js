@@ -1,7 +1,11 @@
-// Mute on load.
-if (!setup.isFlagSet("enableSound")) {
-  Howler.volume(0.0);
-}
+// Mute and unmute on load.
+$(document).on("sm.passage.shown", () => {
+  if (!setup.isFlagSet("enableSound")) {
+    Howler.mute(true);
+  } else {
+    Howler.mute(false);
+  }
+});
 
 /*
 Simple sound controller using howler.js
@@ -35,7 +39,7 @@ class SoundInstance {
       this.playing = false;
       this.howl.once("fade", () => {
         this.playing = false;
-        this.howl.stop(this.id);
+        this.howl.pause(this.id);
       }, this.id);
     }
   }
@@ -69,35 +73,39 @@ const passageAudio = (howlObject, ...predicates) => {
  */
 const hasTags = (...tags) => (passage) => tags.every(t => passage.tags.includes(t));
 
+const howlDefaults = {
+  loop: true,
+  volume: 0.1,
+  autoplay: false,
+  preload: 'metadata'
+}
+// Chirping birds from freesound
+// Used in the "morning after" passages
 const birds = new Howl({
+  ...howlDefaults,
   src: ["assets/sound/birds.mp3"],
-  loop: true,
-  volume: 0.1,
-  muted: true,
-  html5: true,
-});
-const gurgle = new Howl({
-  src: ["assets/sound/gurgle.mp3"],
-  loop: true,
-  volume: 1.0,
-  muted: true,
-  html5: true,
-});
-const crickets = new Howl({
-  src: ["assets/sound/crickets.mp3"],
-  loop: true,
-  volume: 0.1,
-  muted: true,
-  html5: true,
-});
-const zenMusic = new Howl({
-  src: ["assets/sound/kevp888 - CD_YIN_001.mp3"],
-  html5: true,
-  volume: 1.0,
-  muted: true,
-  html5: true,
+  volume: 0.05,
 });
 passageAudio(birds, hasTags("morning"));
+// Stomach sounds from freesound
+const gurgle = new Howl({
+  ...howlDefaults,
+  src: ["assets/sound/gurgle.mp3"],
+  volume: 1.0,
+});
 passageAudio(gurgle, hasTags("vore"));
+// Crickets and suburban outdoor noises from freesound
+const crickets = new Howl({
+  ...howlDefaults,
+  src: ["assets/sound/crickets.mp3"],
+  volume: 0.1,
+});
 passageAudio(crickets, hasTags("outside"));
+// Ambient noise by CD_YIN_001.mp3 by kevp888
+// Used in the zen scene
+const zenMusic = new Howl({
+  ...howlDefaults,
+  src: ["assets/sound/kevp888 - CD_YIN_001.mp3"],
+  volume: 1.0,
+});
 passageAudio(zenMusic, hasTags("zen"));
