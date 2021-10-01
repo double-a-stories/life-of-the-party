@@ -387,13 +387,13 @@ Yes, you reply wearily.
 * [[Yes, <%-s.bm?"sir":"ma'am"%>.|Yes, sir.]]
 
 :: Yes, sir. [vore]
-<%-s.bm?"Byron":"Emily"%> smiles. <q.byron>There, was that so hard? I'm only asking for a little decency. For the record, I would have accepted <q>yes <%-s.bm?"master":"mistress"%></q> as well, but I don't want you to get the wrong idea, now.</q>
+<%-s.bm?"Byron":"Emily"%> smiles. <q.byron>There, was that so hard? I'm only asking for a little decency. For the record, I would have accepted <q>yes <%-s.bm?"master":"mistress"%></q> as well, heh.</q>
 
-You ask if you can come out now, not feeling hopeful.
+Resentfully, you ask if this means you can come out now.
 
-<%-s.bm?"He":"She"%> pats <%-s.bm?"his":"her"%> gut. <q.byron>...No, I think the lesson will be much more effective this way. Besides, I just had this flannel dry-cleaned. I doubt a pissant like you would understand how inconvenient it is to clean out vomit.</q>
+<%-s.bm?"He":"She"%> pats <%-s.bm?"his":"her"%> gut. <q.byron>...No, I think the lesson will be much more effective this way. Besides, I just had this flannel dry-cleaned, and I doubt a pissant like you would understand how inconvenient it is to clean out vomit.</q>
 
-You clench your knuckles with white-hot rage. You're feeling rather delirious now, and can hardly think of a response.
+You clench your knuckles with white-hot rage. Your breathing quickens as you struggle for breath. You're feeling rather delirious now, and can hardly think of a response.
 
 * [[Fuck... you...]]
 
@@ -422,11 +422,13 @@ Oh well. Time to return to the party.
 * [[<%-s.bm?"Byron":"Emily"%>: Go back downstairs.|Byron: Go back downstairs.]]
 
 :: Byron: Go back downstairs.
-<%-s.bm?"Byron":"Emily"%> opens the bedroom door. Standing patiently outside is Gus, the golden Lab, and a gigantic, towering horse with his arms folded.
+<%-s.bm?"Byron":"Emily"%> opens the bedroom door. <q.byron>O-oh!</q>
 
-<q.byron>...Ah! Basil Armstrong! What a lovely surprise!</q> <%-s.bm?"He":"She"%> fruitlessly tries to adjust <%-s.bm?"his":"her"%> shirt to hide <%-s.bm?"his":"her"%> massive bulging gut, and begins to exit. <q.byron>I'll have you know I was just leav- ack!</q> Basil nonchalantly shoves the wolf aside as he leads Gus inside.
+Standing patiently outside is Gus the dog, alongside a gigantic, towering horse with his arms folded.
 
-"...Stay out of my room," the horse mutters gruffly, then slams the door shut behind him.
+<q.byron>Basil Armstrong! What a lovely surprise!</q> <%-s.bm?"Byron":"Emily"%> fruitlessly tries to adjust <%-s.bm?"his":"her"%> shirt to hide <%-s.bm?"his":"her"%> massive bulging gut, and begins to exit. <q.byron>I'll have you know I was just leav- ack!</q> Basil nonchalantly shoves the wolf aside as he and Gus walk in.
+
+"...Stay out of my room," Basil mutters, and slams the door shut behind him.
 
 <%-s.bm?"Byron":"Emily"%> stands silently in the hallway. A few seconds pass. <q.byron>O-okay,</q> <%-s.bm?"he":"she"%> murmurs meekly.
 
