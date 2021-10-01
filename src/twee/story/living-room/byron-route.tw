@@ -422,11 +422,11 @@ There is no reply.
 :: Byron: Go back downstairs.
 <%-s.bm?"Byron":"Emily"%> opens the bedroom door. Standing patiently outside is Gus, the golden Lab, and a gigantic, towering horse with his arms folded.
 
-<q.byron>...Ah! Basil Armstrong! What a lovely surprise!</q> <%-s.bm?"He":"She"%> fruitlessly tries to adjust <%-s.bm?"his":"her"%> shirt to hide <%-s.bm?"his":"her"%> massive bulging gut, and begins to exit. <q.byron>I'll have you know I was just l- ack!</q> Basil nonchalantly shoves the wolf aside as he leads Gus inside.
+<q.byron>...Ah! Basil Armstrong! What a lovely surprise!</q> <%-s.bm?"He":"She"%> fruitlessly tries to adjust <%-s.bm?"his":"her"%> shirt to hide <%-s.bm?"his":"her"%> massive bulging gut, and begins to exit. <q.byron>I'll have you know I was just leav- ack!</q> Basil nonchalantly shoves the wolf aside as he leads Gus inside.
 
 "...Stay out of my room," the horse mutters gruffly, then slams the door shut behind him.
 
-<%-s.bm?"Byron":"Emily"%> stands silently in the hallway. A few seconds pass. <q.byron>O-okay,</q> <%-s.bm?"he":"she"%> murmurs. <q.byron>I hope nobody stole my guitar...</q>
+<%-s.bm?"Byron":"Emily"%> stands silently in the hallway. A few seconds pass. <q.byron>O-okay,</q> <%-s.bm?"he":"she"%> murmurs meekly.
 
 ### The end.
 
