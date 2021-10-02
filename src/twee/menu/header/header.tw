@@ -14,7 +14,7 @@
 	<li><a0 aria-label="undo" onclick="setup.undo()">Undo</a></li>
 </ul>
 <ul.header-nav-group>
-	<li><a0 aria-label="<%-muted?'unmute':'mute'%>" class="mute-button" onclick="setup.toggleMute();" ><%=muted?`Enable`:`Disable`%> sound (Beta)</a></li>
+	<li><a0 aria-label="<%-muted?'unmute':'mute'%>" class="mute-button" onclick="setup.toggleMute();" ><%=muted?`Enable`:`Disable`%> sound</a></li>
 	<li><a0 class="help-button" onclick="setup.help();"><%-!helpShown?"Help":"Back"%></a></li>
 	<li><%- story.version %></li>
 </ul>
