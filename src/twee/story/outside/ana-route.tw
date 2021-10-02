@@ -1,8 +1,6 @@
 <!-- You go outside and talk to Ana Rose, a hungry hyena with some self-esteem issues. You get familiar, and eventually offer to be eaten. She agrees on the condition that you can't change your mind, and snarfs you down quickly. You begin to have second thoughts, but it's too late. -->
 
 :: Look at hyena. [checkpoint]
-*CW: Revoked consent. Woman with penis. Masturbation.*
-
 She's wearing acid-wash jeans and a black t-shirt that reads "Bad Bitch". She has sandy-colored fur with brown spots, and a thick long neck.
 
 The hyena sees you staring, and looks up from her phone. She notices you, and says, "Oh. Sup."
@@ -565,7 +563,7 @@ Ana giggles contendedly. "...I'll take that as a yes."
 
 <% setup.addAchievement("Ana Vore Ending", "No Laughing Matter"); %>
 
-* [[Epilogue.|Epilogue: Ana Post Vore.]] *(Warning: Scat Disposal.)*
+* [[Epilogue.|Epilogue: Ana Post Vore.]] *(CW: Scat Disposal.)*
 * <a0 data-passage="Start">Restart</a>
 
 :: Epilogue: Ana Post Vore. [morning]

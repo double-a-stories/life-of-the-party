@@ -67,10 +67,10 @@ $(window).on("sm.passage.shown", (event, {passage}) => {
 setup.toggleMute = () => {
   if (!setup.isFlagSet("enableSound")) {
     setup.setFlag("enableSound");
-    Howler.volume(1.0);
+    Howler.mute(false);
   } else {
     setup.unsetFlag("enableSound");
-    Howler.volume(0.0);
+    Howler.mute(true);
   }
   renderToSelector("#header", "Topbar controls")
 }

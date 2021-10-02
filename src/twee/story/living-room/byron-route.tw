@@ -10,8 +10,6 @@ Hollis realizes that Byron's sensitive exterior is just a front for <%-s.bm?"his
 }
 
 :: Look at wolf. [checkpoint]
-*CW: Negging. Threats and coercion. Non-consensual. Blood.*
-
 A black-furred wolf, about six feet tall, wearing in a stylish scarf and a checkered red flannel shirt. They're sitting aloofly on a couch, and serenading the party with an acoustic guitar.
 
 * <a0 onclick="story.state.bm = true;" data-passage="Talk to Byron.">Talk to him.</a> *(Male pred)*
@@ -171,18 +169,20 @@ You grit your teeth, and walk helplessly alongside <%-s.bm?"Byron":"Emily"%> as 
 :: Blink twice.
 "Yoo, dude!" the dog chuckles, "If it isn't Emory <%-s.bm?"Whatshisname":"Whatserface"%>, from the chess club! It's Gus! Long time no see, dude!"
 
-<q.byron><%-s.bm?"Byron":"Emily"%> Byron,</q> the wolf smiles, giving you a friendly pat on the shoulder. <q.byron>And this is my charming friend, Hollis!</q>
+<q.byron><%-s.bm?"Emmet":"Emily"%> Byron,</q> the wolf smiles painedly, giving you a friendly pat on the shoulder. <q.byron>And this is my charming friend, Hollis!</q>
 
 The Labrador points a paw at the wolf, and asks you, "Hey dude, this dude bothering you, dude? Cause that's supes no bueno, dude."
 
-<%-s.bm?"Byron":"Emily"%> tightens <%-s.bm?"his":"her"%> grip on you and tries to walk away. <%-s.bm?"He":"She"%> <q.byron>No, we were just-</q>
+<%-s.bm?"Byron":"Emily"%> tightens <%-s.bm?"his":"her"%> grip on you and tries to walk away. <%-s.bm?"He":"She"%> grunts, <q.byron>No, we were just-</q>
 
 "Let em talk, dude," the dog interrupts.
 
 * [[Well, um...]]
 
 :: Well, um... [checkpoint]
-You hesitate for a moment. Then, you feel <%-s.bm?"Byron":"Emily"%>'s paw tighten on your shoulder. The pointy claws of <%-s.bm?"his":"her"%> thumb prod you in the back, probably harder than <%-s.bm?"he":"she"%> meant it to. It stings. D-did <%-s.bm?"he":"she"%> just draw blood? You grimace slightly, and suck air through your teeth.
+You hesitate for a moment. Then, you feel <%-s.bm?"Byron":"Emily"%>'s paw tighten on your shoulder. The pointy claws of <%-s.bm?"his":"her"%> thumb prod you in the back, probably harder than <%-s.bm?"he":"she"%> meant to. It stings! D-did <%-s.bm?"he":"she"%> just draw blood?
+
+You grimace slightly, suck air through your teeth, and answer.
 
 * [[Haha! We're totally cool! Yup!]]
 * [[Ow, get this creep away from me!]]
@@ -199,13 +199,19 @@ You gulp, as the wolf leads you from the room.
 * [[Follow Byron upstairs.]]
 
 :: Ow, get this creep away from me! [gore]
-<%-s.bm?"Byron":"Emily"%>'s claws instinctively dig into you as you try to pull away. You squeal as <%-s.bm?"he":"she"%> puts a huge bloody gash on your back.
+You cry out and try to yank yourself free.
 
-<q.byron>Oh dear,</q> <%-s.bm?"Byron":"Emily"%> mutters in surprise. <%-s.bm?"He":"She"%> stares down at <%-s.bm?"his":"her"%> claws, wet with your blood, seemingly more intrigued than bothered. <%-s.bm?"He":"She"%> wipes them on <%-s.bm?"his":"her"%> flannel, and says, <q.byron>I am ashamed, dear rabbit, that it has come to this. Perhaps we beasts truly are inseparable from our dark– *Ow!*</q>
+<%-s.bm?"Byron":"Emily"%>'s claws instinctively dig deep into you. You squeal in pain as <%-s.bm?"he":"she"%> puts a huge bloody gash on your back.
 
-<%-s.bm?"Byron":"Emily"%> is interrupted by Gus's fist, as he completely clobbers <%-s.bm?"him":"her"%> in the face, knocking <%-s.bm?"him":"her"%> to the floor.
+<q.byron>Oh dear,</q> <%-s.bm?"Byron":"Emily"%> flatly mutters in surprise. <%-s.bm?"He":"She"%> stares down at <%-s.bm?"his":"her"%> claws, wet with your blood, seemingly more intrigued than bothered.
 
-"Party fuckin' foul, dude," Gus says, as <%-s.bm?"Byron":"Emily"%> collapses. He leans down to check on you. "You okay, dawg?"
+Gus stares in shock.
+
+<%-s.bm?"He":"She"%> wipes them on <%-s.bm?"his":"her"%> flannel, and says, <q.byron>I am ashamed, dear rabbit, that it has come to this. Perhaps we beasts truly are inseparable from our dark– *Ow!*</q>
+
+<%-s.bm?"Byron":"Emily"%> is interrupted by Gus's fist, as he completely clobbers <%-s.bm?"him":"her"%> in the <%-s.bm?"groin":"face"%>, knocking <%-s.bm?"him":"her"%> to the floor.
+
+"Party fuckin' foul, dude," Gus says, shaking out his fist while <%-s.bm?"Byron":"Emily"%> collapses. He leans down to check on you. "You okay, dawg?"
 
 You respond by fainting from blood loss.
 
@@ -381,13 +387,13 @@ Yes, you reply wearily.
 * [[Yes, <%-s.bm?"sir":"ma'am"%>.|Yes, sir.]]
 
 :: Yes, sir. [vore]
-<%-s.bm?"Byron":"Emily"%> smiles. <q.byron>There, was that so hard? I'm only asking for a little decency. For the record, I would have accepted <q>yes <%-s.bm?"master":"mistress"%></q> as well, but I don't want you to get the wrong idea, now.</q>
+<%-s.bm?"Byron":"Emily"%> smiles. <q.byron>There, was that so hard? I'm only asking for a little decency. For the record, I would have accepted <q>yes <%-s.bm?"master":"mistress"%></q> as well, heh.</q>
 
-You ask if you can come out now, not feeling hopeful.
+Resentfully, you ask if this means you can come out now.
 
-<%-s.bm?"He":"She"%> pats <%-s.bm?"his":"her"%> gut. <q.byron>...No, I think the lesson will be much more effective this way. Besides, I just had this flannel dry-cleaned. I doubt a pissant like you would understand how inconvenient it is to clean out vomit.</q>
+<%-s.bm?"He":"She"%> pats <%-s.bm?"his":"her"%> gut. <q.byron>...No, I think the lesson will be much more effective this way. Besides, I just had this flannel dry-cleaned, and I doubt a pissant like you would understand how inconvenient it is to clean out vomit.</q>
 
-You clench your knuckles with white-hot rage. You're feeling rather delirious now, and can hardly think of a response.
+You clench your knuckles with white-hot rage. Your breathing quickens as you struggle for breath. You're feeling rather delirious now, and can hardly think of a response.
 
 * [[Fuck... you...]]
 
@@ -407,20 +413,24 @@ There is no reply.
 
 <q.byron>Hello? Still listening?</q> <%-s.bm?"Byron":"Emily"%> prods and presses on <%-s.bm?"his":"her"%> stomach, only to feel a sickening wet crunch in response. <q.byron>Ah, I suppose you're finished. What a pity.</q>
 
-<%-s.bm?"He":"She"%> heaves <%-s.bm?"his":"her"%> huge belly off <%-s.bm?"his":"her"%> lap, and rises from the bed, satisfied with <%-s.bm?"his":"her"%> righteous punishment of the rabbit inside <%-s.bm?"him":"her"%>. The feeling of fullness is almost orgasmic as <%-s.bm?"his":"her"%> body begins to digest.
+<%-s.bm?"He":"She"%> heaves <%-s.bm?"his":"her"%> huge belly off <%-s.bm?"his":"her"%> lap, and rises from the bed, satisfied with <%-s.bm?"his":"her"%> righteous punishment of the rabbit inside <%-s.bm?"him":"her"%>. The feeling of fullness is almost orgasmic, as <%-s.bm?"his":"her"%> body begins to digest.
 
-<%-s.bm?"He":"She"%> glances at <%-s.bm?"his":"her"%> watch—an expensive antique. The wolf wondered, had it really only been a whole hour since <%-s.bm?"he":"she"%> met Hollis? It felt longer than that. Oh well. Time to return to the party.
+<%-s.bm?"He":"She"%> glances at <%-s.bm?"his":"her"%> watch—an expensive antique. The wolf wonders, has it really only been half an hour since <%-s.bm?"he":"she"%> met the rabbit who is now dissolving inside <%-s.bm?"him":"her"%>? It felt longer than that...
+
+Oh well. Time to return to the party.
 
 * [[<%-s.bm?"Byron":"Emily"%>: Go back downstairs.|Byron: Go back downstairs.]]
 
 :: Byron: Go back downstairs.
-<%-s.bm?"Byron":"Emily"%> opens the bedroom door. Standing patiently outside is Gus, the golden Lab, and a gigantic, towering horse with his arms folded.
+<%-s.bm?"Byron":"Emily"%> opens the bedroom door. <q.byron>O-oh!</q>
 
-<q.byron>...Ah! Basil Armstrong! What a lovely surprise!</q> <%-s.bm?"He":"She"%> fruitlessly tries to adjust <%-s.bm?"his":"her"%> shirt to hide <%-s.bm?"his":"her"%> massive bulging gut, and begins to exit. <q.byron>I'll have you know I was just l- ack!</q> Basil nonchalantly shoves the wolf aside as he leads Gus inside.
+Standing patiently outside is Gus the dog, alongside a gigantic, towering horse with his arms folded.
 
-"...Stay out of my room," the horse mutters gruffly, then slams the door shut behind him.
+<q.byron>Basil Armstrong! What a lovely surprise!</q> <%-s.bm?"Byron":"Emily"%> fruitlessly tries to adjust <%-s.bm?"his":"her"%> shirt to hide <%-s.bm?"his":"her"%> massive bulging gut, and begins to exit. <q.byron>I'll have you know I was just leav- ack!</q> Basil nonchalantly shoves the wolf aside as he and Gus walk in.
 
-<%-s.bm?"Byron":"Emily"%> stands silently in the hallway. A few seconds pass. <q.byron>O-okay,</q> <%-s.bm?"he":"she"%> murmurs. <q.byron>I hope nobody stole my guitar...</q>
+"...Stay out of my room," Basil mutters, and slams the door shut behind him.
+
+<%-s.bm?"Byron":"Emily"%> stands silently in the hallway. A few seconds pass. <q.byron>O-okay,</q> <%-s.bm?"he":"she"%> murmurs meekly.
 
 ### The end.
 
