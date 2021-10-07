@@ -1,6 +1,6 @@
 {
   "name": "life-of-the-party",
-  "version": "0.7.5",
+  "version": "0.8.0-indev",
   "description": "A furry vore adventure",
   "scripts": {
     "develop": "concurrently 'npm run twee-watch' 'npm run live-server'",
