@@ -11,7 +11,7 @@ if (setup.isFlagSet("devmode") && !$(".dev-info")[0]) {
     $devInfoList.append(`<dt>passage.tags</dt><dd data-exec="passage.tags"></dd>`);
     $devInfoList.append(`<dt>story.state (<a href="javascript:void(0)"  onclick="story.state = {};">reset</a>)</dt><dd data-exec="story.state"></dd>`);
     $devInfoList.append(`<dt>story.history.length</dt><dd data-exec="story.history.length"></dd>`);
-    $devInfoList.append(`<dt>setup.getFlags()</dt><dd data-exec="setup.getFlags()"></dd>`);
+    $devInfoList.append(`<dt>setup.getFlags() (<a href="javascript:void(0)"  onclick="setup.resetAchievements(); setup.resetFlags(); setup.setFlag('devmode')">reset</a>)</dt><dd data-exec="setup.getFlags()"></dd>`);
     // Commands
     $devInfo.append(`<ul class="header-nav-group">
     <li><a href="javascript:void(0)" onclick="story.show('Warp zone')">Warp zone</a></li>
