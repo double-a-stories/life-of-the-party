@@ -8,8 +8,8 @@
     "publish-stable": "gh-pages -a -d dist",
     "publish-indev": "gh-pages -a -d dist -e indev/",
     "live-server": "light-server -s dist -w 'dist/*.html' -o",
-    "twee-build": "tweego -m src/modules/ --head=src/head-content.html -o dist/index.html src/twee",
-    "twee-build-proof": "tweego -f poof -m src/modules/ --head=src/head-content.html -o proofing/poof.html src/twee; tweego -f illume -m src/modules/ --head=src/head-content.html -o proofing/illume.html src/twee; tweego -f dotgraph -m src/modules/ --head=src/head-content.html -o proofing/dotgraph.html src/twee;",
+    "twee-build": "tweego -m modules/ --head=head-content.html -o dist/index.html twee",
+    "twee-build-proof": "tweego -f poof -m modules/ --head=head-content.html -o proofing/poof.html twee; tweego -f illume -m modules/ --head=head-content.html -o proofing/illume.html twee; tweego -f dotgraph -m modules/ --head=head-content.html -o proofing/dotgraph.html twee;",
     "twee-watch": "npm run twee-build -- -w"
   },
   "devDependencies": {
