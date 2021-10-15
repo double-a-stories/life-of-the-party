@@ -446,7 +446,7 @@ In response, Nikki narrows her eyes and begins to impatiently dangle Faith by th
 
 <q.nikki>Mmm, c'mere cutie...</q> Nikki purrs, drawing Faith closer and closer to her lips. <q.nikki>I wanna see what's inside of you...</q> The mouse shudders and instinctively kicks a little as the cat places her tiny feet delicately onto her outstretched tongue.
 
-You shudder... It's too much to even listen to. You're anticipating the awful, horrible sound of a cat's mouth gorily eviscerating its prey. All the content warnings could prepare you for what's to come.
+You shudder... It's too much to even listen to. You're anticipating the awful, horrible sound of a cat's mouth gorily eviscerating its prey. All the content warnings in the world couldn't prepare you for what's to come.
 
 * [[Nikki: Chomp.]] *(CW: ?????)*
 * [[Rescue her!!!]]  *(CW: ?????)*
@@ -527,7 +527,7 @@ Faith stammers, <q.mouse>No, wait, just think about this-</q>
 
 :: Nox: Peer pressure.
 
-<q class="<% if (s.ateFaith) %>twinspeak<%;%>">Gulp! Gulp!</q> <% if (s.ateFaith) %>Nikki and Nox chant<% else %>Nox chants<%;%> excitedly. <% if (s.ateFaith) %>Your cheeks flush bright red. The cats stare at you expectantly. Nikki's claws extend, as if to remind you how easily she and her brother could overpower you.<% else %>You watch silently, your cheeks flushing bright red.<%;%> 
+<q class="<%=s.ateFaith?'twinspeak':'nox'%>">Gulp! Gulp!</q> <% if (s.ateFaith) %>Nikki and Nox chant<% else %>Nox chants<%;%> excitedly. <% if (s.ateFaith) %>Your cheeks flush bright red. The cats stare at you expectantly. Nikki's claws extend, as if to remind you how easily she and her brother could overpower you.<% else %>You watch silently, your cheeks flushing bright red.<%;%> 
 
 <q.mouse>None of this is your fault, Hollis,</q> Faith calls from inside of <%-s.ateFaith?"your":"Nikki's"%> mouth, <q.mouse> J-just please promise me, if you find Kaia, you'll tell her what happened to me. </q>
 
@@ -649,7 +649,7 @@ Nikki does not slow down, and only continues raising the mouse toward her lips.
 
 Strangely, the mouse's expression now looks much more determined, and less resigned to her fate. <q.mouse>Sorry about this!</q> she shouts, <q.mouse>This is gonna suck for the both of us!</q> Steadying her hind paws on <%-s.ateFaith?"your":"Nikki's"%> slobbery tongue, she leaps.
 
-<%-s.ateFaith?"You only have":"Nikki only has"%> a moment to react, before Kaia jumps and grabs hold of <%-s.ateFaith?"your":"her"%> uvula to induce vomiting. <%-s.ateFaith?"You choke and gag":"The cat chokes and gags"%> in response. 
+<%-s.ateFaith?"You only have":"Nikki only has"%> a moment to react, before Kaia jumps and grabs hold of <%-s.ateFaith?"your":"her"%> uvula, in an attempt to induce vomiting. <%-s.ateFaith?"You choke and gag":"The cat chokes and gags"%> in response. 
 
 * [[<%-s.ateFaith?"Oww! Getoutgetout!":"Nikki: Gulp."%>|Pred: Force Kaia down.]]
 
@@ -671,7 +671,7 @@ Soon, Kaia loses her grip. Nox zooms the camera into <%-s.ateFaith?"your":"his s
 <% ; %>
 
 :: Pred: Swallow Kaia.
-<%-s.ateFaith?"You do":"Nikki does"%> that. <%-s.ateFaith?"You finish":"Nikki finishes"%> the deed with only a few swallows, then <%-s.ateFaith?"open your":"opens her"%> mouth with a sigh. <%-s.ateFaith?"You feel like you're getting the hang of predation, awful though it may be.":"Nikki smiles, and caresses her throat, neckbone, then stomach with satisfaction."%>
+<%-s.ateFaith?"You do":"Nikki does"%> that. <%-s.ateFaith?"You finish":"She finishes"%> the deed with only a few swallows, then <%-s.ateFaith?"open your":"opens her"%> mouth with a sigh. <%-s.ateFaith?"You feel like you're getting the hang of predation, awful though it may be.":"Nikki smiles, and caresses her throat, neckbone, then stomach with satisfaction."%>
 
 Soon, Kaia is inside <%-s.ateFaith?"you":"Nikki"%>, alongside Faith. You <%-s.ateFaith?"feel":"see"%> little movements inside <%-s.ateFaith?"your":"Nikki's"%> stomach, but they settle down quickly, with a dramatic sense of finality. Nox keeps his phone camera pointed at the little bulge for several seconds, then stops the recording.
 
