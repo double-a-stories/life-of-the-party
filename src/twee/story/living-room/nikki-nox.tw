@@ -527,7 +527,7 @@ Faith stammers, <q.mouse>No, wait, just think about this-</q>
 
 :: Nox: Peer pressure.
 
-<q class="<% if (s.ateFaith) %>twinspeak<%;%>">Gulp! Gulp!</q> <% if (s.ateFaith) %>Nikki and Nox chant<% else %>Nox chants<%;%> excitedly. <% if (s.ateFaith) %>Your cheeks flush bright red. The cats stare at you expectantly. Nikki's claws extend, as if to remind you how easily she and her brother could overpower you.<% else %>You watch silently, your cheeks flushing bright red.<%;%> 
+<q class="<%=s.ateFaith?'twinspeak':'nox'%>">Gulp! Gulp!</q> <% if (s.ateFaith) %>Nikki and Nox chant<% else %>Nox chants<%;%> excitedly. <% if (s.ateFaith) %>Your cheeks flush bright red. The cats stare at you expectantly. Nikki's claws extend, as if to remind you how easily she and her brother could overpower you.<% else %>You watch silently, your cheeks flushing bright red.<%;%> 
 
 <q.mouse>None of this is your fault, Hollis,</q> Faith calls from inside of <%-s.ateFaith?"your":"Nikki's"%> mouth, <q.mouse> J-just please promise me, if you find Kaia, you'll tell her what happened to me. </q>
 
