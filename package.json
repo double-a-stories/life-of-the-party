@@ -3,7 +3,7 @@
   "version": "0.7.0c",
   "description": "A furry vore adventure",
   "scripts": {
-    "develop": "concurrently 'npm run twee-watch' 'npm run live-server'",
+    "develop": "concurrently \"npm run twee-watch\" \"npm run live-server\"",
     "package-zip": "zip -r \"life-of-the-party-v\"$npm_package_version\"-dist.zip\" dist",
     "publish-stable": "gh-pages -a -d dist",
     "publish-indev": "gh-pages -a -d dist -e indev/",
@@ -15,8 +15,7 @@
   "devDependencies": {
     "concurrently": "^6.1.0",
     "gh-pages": "^3.1.0",
-    "light-server": "^2.9.1",
-    "tweego-bin": "^0.1.0"
+    "light-server": "^2.9.1"
   },
   "repository": {
     "type": "git",
