@@ -1,19 +1,28 @@
 :: Tweeomoji [script]
 // Load Twemoji script
+// NOTE: Any emoji character inside a passage will be replaced with <img src="...">. If there are emojis inside of double-quotes, it WILL BREAK the surrounding code.
 
+// BAD: <%s.rm?"⚠️":"⚠️"%>
+// OK: <%s.rm?`⚠️:`⚠️`%>
 
+ // Use 72x72 png graphics, since they're slightly smaller.
 const TWEMOJI_OPTIONS = {
-  size: 72, // Use 72x72 png graphics, since they're slightly smaller.
+  size: 72
 };
 
-// Replace all emojis in the script with Twemoji HTML
-if (!window.twemoji) {
-  console.error("Twemoji script not loaded! Emoji will fallback to system font.");
-} else {
-  story.passages.forEach(p => {
-    p.source = twemoji.parse(p.source, TWEMOJI_OPTIONS);
-  });
-}
+
+$(document).on("sm.story.started sm.passage.showing", () => {
+  if (window.twemoji && !twemojiParsed) {
+    story.passages.forEach(p => {
+      p.source = twemoji.parse(p.source, TWEMOJI_OPTIONS);
+    });
+    console.log(`Twemoji parsed all ${story.passages.length} passages successfully! 🥳`)
+      twemojiParsed = true;
+  }
+});
+
+let twemojiParsed = false;
+
 
 // NOTE: Any emoji character inside a passage will be replaced with <img src="...">. If there are emojis inside of double-quotes, it WILL BREAK the surrounding code.
 
