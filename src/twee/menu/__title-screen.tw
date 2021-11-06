@@ -28,9 +28,9 @@ tw-passage > * {
 
 <div class="logo">
 <h1 class="logo__title">
-<img class="logo__horse" role="presentation" src="<%=story.render("logo-horse-left") %>"><!--
+<img class="logo__horse" role="presentation" src="assets/images/logo-horse-left.svg" width="50" height="45"><!--
 --><span><%- story.name %></span><!--
---><img class="logo__horse" role="presentation" src="<%=story.render("logo-horse-right") %>">
+--><img class="logo__horse" role="presentation" src="assets/images/logo-horse-right.svg" width="56" height="45">
 </h1>
 <p class="logo__subtitle">A Furry Vore Adventure by Double-A</p>
 </div>
@@ -50,6 +50,6 @@ tw-passage > * {
 </div>
 
 :: Content warning
-### ⚠️ CONTENT WARNING ⚠️
+### <img class="emoji" draggable="false" alt="&#x26A0;&#xFE0F;" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/26a0.png"> CONTENT WARNING <img class="emoji" draggable="false" alt="&#x26A0;&#xFE0F;" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/26a0.png">
 
 This story is for **ADULTS ONLY**, and reader discretion is strongly advised. It contains **niche fetish content**, including unmarked instances of: *Soft vore. Dubious/revoked consent. Unwilling digestion. Sex. Violence. Sexual violence. Sadism. Blood. Post-vore scat disposal. Death.*

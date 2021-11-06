@@ -4,11 +4,17 @@
 
 /* Comic Neue is used for Ren's text, as it's slightly more legible than Comic Sans. */
 
+@font-face {
+	font-family: "PlayfairDisplaySC-Bold-LotP";
+  font-display: block;
+	src: url(assets/font/PlayfairDisplaySC-Bold-LotP.woff2) format("woff2");
+}
+
 /* @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Tinos:ital@0;1&display=swap"); */
 @font-face {
   font-family: 'Comic Neue';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/comicneue/v2/4UaErEJDsxBrF37olUeD_xHMwps.ttf) format('truetype');
+  src: url(assets/font/ComicNeue-Bold.ttf) format('truetype');
 }
