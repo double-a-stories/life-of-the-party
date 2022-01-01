@@ -1,125 +1,151 @@
-// Persistent Storage API
-// LICENSE: MIT-0
+/**
+ * achievements.js
+ *
+ * A plugin for "Life of the Party". Manages story flags which are preserved
+ * between sessions.
+ * Provides an API for persistent browser storage, using Lockr
+ * License: MIT-0
+ */
 
+/**
+ * setup - Global object.
+ */
 window.setup = window.setup || {};
 
-// Achievement version
-// Can be updated to introduce breaking changes with previous achievement formats.
-const ACHIEVEMENT_KEY_VERSION = 7;
-
-// Encode unicode to base64
-function utoa(str) {
-  return window.btoa(unescape(encodeURIComponent(str)));
-}
-// Decode base64 to unicode
-function atou(str) {
-  return decodeURIComponent(escape(window.atob(str)));
+if (window.Lockr == undefined) {
+  // make sure Lockr is loaded.
+  throw new Error("achievements.js: Lockr.js was not loaded in time!");
 }
 
-// A helper class for reading and writing JSON objects to localStorage
-class PersistentStorage {
-  // key: the value used in localStorage
-  // should be unique to this game
-  constructor(key) {
-    this.key = key;
-    try {
-      localStorage.getItem(this.key);
-    } catch (err) {
-      console.error("Failed reading from localStorage. Data will not be saved.")
-      this.noStorage = true;
-      console.error(err);
-    }
-  }
-  // Convert a JS object into JSON, then base64
-  // Set it on localStorage.
-  setData(object) {
-    // Invalidate cache.
-    let json = JSON.stringify(object);
-    let base64 = utoa(json);
-    if (!this.noStorage) {
-      localStorage.setItem(this.key, base64);
-      this._cached = undefined;
-    } else {
-      this._cached = JSON.parse(json);
-    }
-  };
-  // Get the value from localStorage, and attempt to decode.
-  getData() {
-    if (this.noStorage) {
-      return this._cached;
-    }
-    if (this._cached == undefined) {
-      try {
-        let base64 = localStorage.getItem(this.key);
-        // Check that we got a value out.
-        if (base64) {
-          let json = atou(base64);
-          this._cached = JSON.parse(json);
-        }
-      } catch (err) {
-        console.error(err);
-        console.error("Something went wrong parsing localStorage.")
-      }
-    }
-    return this._cached;
-  };
-}
+// Savegame format version
+// Can be updated to introduce breaking changes with previous achievement storage formats.
+setup.ACHIEVEMENT_KEY_VERSION = 8;
 
-// An array containing a set of unique values
-// Used for achievements, story flags, et cetera.
-class PersistentStorageSet extends PersistentStorage {
-  constructor(key) {
-    super(key);
-    if (this.getData() == undefined) {
-      this.clear();
-    }
-  }
-  add(value) {
-    const arr = this.getData();
-    if (!this.includes(value)) {
-      this.setData([...arr, value]);
-    }
-  }
-  remove(value) {
-    const arr = this.getData();
-    if (arr.includes(value)) {
-      this.setData(arr.filter(v => v !== value));
-    }
-  }
-  includes(value) {
-    return this.getData().includes(value);
-  }
-  clear() {
-    this.setData([]);
-  }
-}
+/**
+ * These achievements are used in Life of the Party
+ * Lotp Achievements are stored like [emoji, location, title, description]
+ */
+setup.ALL_ACHIEVEMENTS = setup.ALL_ACHIEVEMENTS || {};
 
-const achievementStorage = new PersistentStorageSet(story.name + ACHIEVEMENT_KEY_VERSION + "achievements");
+// Lockr key is the name of the story, plus the savegame version.
+Lockr.prefix = `${story.name} ${setup.ACHIEVEMENT_KEY_VERSION} `.replace(
+  /\s/g,
+  "_"
+);
 
-setup.getAchievements = () => achievementStorage.getData();
-setup.addAchievement = (name, desc) => {
-  if (!setup.getAchievements().some(a => a[0] == name)) {
-    achievementStorage.add([name, desc]);
+/**
+ * @returns {string[]} The list of achievements which are currently unlocked.
+ */
+setup.getAchievements = () => Lockr.smembers("achievements");
+/**
+ * @returns {string[]} The list of all achievements, with unlocked ones first.
+ */
+setup.getAllAchievementsSorted = () => {
+  return [
+    ...Object.keys(setup.ALL_ACHIEVEMENTS).filter((k) =>
+      setup.hasAchievement(k)
+    ),
+    ...Object.keys(setup.ALL_ACHIEVEMENTS).filter(
+      (k) => !setup.hasAchievement(k)
+    ),
+  ];
+};
+/**
+ * @returns {[number, number]} The number of active achievements, and the total.
+ */
+setup.getAchievementCount = () => {
+  return [
+    setup.getAchievements().length,
+    Object.keys(setup.ALL_ACHIEVEMENTS).length,
+  ];
+};
+/**
+ * @param {string} name The name of a valid achievement.
+ * @throws If the name is not a defined achievement.
+ */
+setup.addAchievement = (name) => {
+  if (name in setup.ALL_ACHIEVEMENTS) {
+    Lockr.sadd("achievements", name);
+  } else {
+    throw new Error(`${name} is not a valid achievement.`);
   }
 };
-setup.resetAchievements = () => achievementStorage.setData([]);
-setup.localStorageWorks = achievementStorage.noStorage;
+/**
+ * @param {string} name The name of an achievement
+ * @returns Whether the given achievement has been acquired.
+ */
+setup.hasAchievement = (name) => Lockr.sismember("achievements", name);
 
-setup.resetAchievementsPrompt = function() {
-  const message = `This will reset your save file, including the ${setup.getAchievements().length} achievement(s) you have acquired so far.
+setup.addAllAchievements = () => {
+  Object.keys(setup.ALL_ACHIEVEMENTS).forEach(setup.addAchievement);
+  story.show(passage.id);
+};
+setup.resetAchievements = () => Lockr.set("achievements", []);
 
-Are you sure you want to continue?`;
-  if(window.confirm(message)) {
-    setup.resetAchievements();
-    setup.resetFlags();
+setup.resetAchievementsPrompt = function () {
+  const message = `This will reset your save file, including the ${
+    setup.getAchievements().length
+  } achievement(s) you have acquired so far.\n\nAre you sure you want to continue?`;
+  if (window.confirm(message)) {
+    Lockr.flush();
     setup.restart();
   }
-}
+};
 
-const flagStorage = new PersistentStorageSet(story.name + "flags");
+/*
+ * Story Flags API. These are represented as a hashset on an object.
+ */
 
-setup.getFlags = () => flagStorage.getData();
-setup.isFlagSet = (name) => flagStorage.includes(name);
-setup.setFlag = (name) => flagStorage.add(name);
-setup.unsetFlag = (name) => flagStorage.remove(name);
-setup.resetFlags = () => flagStorage.clear([]);
+/** Get all flags which are set.
+ * @returns {object} Returns an object { [flagName]: count, ... }
+ */
+setup.getFlags = () => Lockr.get("flags", {});
+/**
+ *
+ * @param {string} name The flag to check
+ * @returns
+ */
+// Returns whether a flag is set to a non-zero value
+setup.isFlagSet = (name) => {
+  return !!Lockr.get("flags", {})[name];
+};
+/** Gets the count of a flag
+ * @param {string} name The name of the flag to check
+ * @returns {number} The number of times the flag was set
+ */
+setup.getFlag = (name) => {
+  let flags = Lockr.get("flags", {});
+  return +flags[name] | 0;
+};
+/**
+ * @param {string} name The flag to set
+ * @param {number} count The number to set it to (integer >= 0)
+ */
+setup.setFlag = (name, count = 1) => {
+  let flags = Lockr.get("flags", {});
+  flags[name] = Math.max(0, +count | 0); // increment
+  Lockr.set("flags", flags);
+};
+/**
+ * Adds a flag with the given name to the set of flags.
+ * @param {string} name The flag to increment
+ * @param {number} amt An integer number to add/subtract
+ */
+setup.addFlag = (name, amt = 1) => {
+  let count = setup.getFlag(name);
+  count = Math.max(0, (count + +amt) | 0); // increment
+  setup.setFlag(name, count);
+};
+/**
+ * Unsets a flag
+ * @param {string} name The flag to unset
+ */
+setup.unsetFlag = (name) => {
+  let flags = Lockr.get("flags", {});
+  flags[name] = undefined;
+  Lockr.set("flags", flags);
+};
+/**
+ * Unsets all flags.
+ */
+setup.resetFlags = () => Lockr.set("flags", {});

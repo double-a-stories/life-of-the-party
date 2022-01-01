@@ -378,7 +378,7 @@ The boar snaps a pair of handcuffs onto <%=s.rm?"his":"her"%> wrists and says, "
 
 Ren's stomach pulses around you happily (<q.ren>⛓<%=s.rm?"🤷‍♂️":"🤷‍♀️"%>😏☠️</q>). As Ren is hauled away, you feel yourself... beginning to... pass out.
 
-<% setup.addAchievement("Ren Vore Ending", `🦊🥱🐇!!!`); %>
+<% setup.addAchievement("REN_VORE_ENDING"); %>
 
 * [[Epilogue.|Epilogue: Ren route.]]
 * <a0 onclick="setup.restart();">Restart</a>

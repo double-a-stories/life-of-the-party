@@ -563,7 +563,7 @@ Ana giggles contendedly. "...I'll take that as a yes."
 
 ### The End.
 
-<% setup.addAchievement("Ana Vore Ending", "No Laughing Matter"); %>
+<% setup.addAchievement("ANA_VORE_ENDING"); %>
 
 * [[Epilogue.|Epilogue: Ana Post Vore.]] *(CW: Scat Disposal.)*
 * <a0 data-passage="Start">Restart</a>

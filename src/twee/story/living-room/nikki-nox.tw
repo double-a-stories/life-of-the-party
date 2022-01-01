@@ -729,7 +729,7 @@ Ivy finishes wrapping you, until only your head remains. Nikki observes the skil
 
 The snake stretches her maw wide to engulf your face, sending you slithering down her long, wet throat, and into her coils.
 
-<% setup.addAchievement("Nikki & Nox Ending", "Sauced and Swallowed"); %>
+<% setup.addAchievement("NIKKI_NOX_VORE_ENDING"); %>
 
 ## The End.
 
