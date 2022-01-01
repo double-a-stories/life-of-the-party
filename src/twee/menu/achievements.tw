@@ -1,24 +1,49 @@
-:: Max achievements [script]
-window.setup = window.setup || {};
-setup.totalAchievements = 9;
+<!-- achievements.tw ~ provides UI for achievements in Life of the Party -->
+:: Achievements from LOTP [script]
+// Defines achievements used in Life of the Party
+setup.ALL_ACHIEVEMENTS = {
+  ANA_VORE_ENDING: ["🗑️", "Outside Route", "No Laughing Matter", "Ana Ending"],
+  BASIL_VORE_ENDING: ["🐴", "Party Route", "Party Animals", "Basil Ending"],
+  HAZEL_VORE_ENDING: ["🐻", "Bathroom Route", "A Grizzly End", "Hazel Ending", "..."],
+  LACEY_VORE_ENDING: [`🎠`, "Bedroom Route", "Two for One Meal", "Lacey Ending", "Search...?"],
+  REN_VORE_ENDING: ["🦊", "Garage Route", "🐇🥱😊!!!", "Ren Ending"],
+  BYRON_VORE_ENDING: ["🐺", "Wolf Route", "Anyway, Here's...", "Byron Ending"],
+  NIKKI_NOX_VORE_ENDING: ["🍸", "Sauce Route", "Sauced & Swallowed", "Nikki & Nox Ending"],
+  MARCY_VORE_ENDING: ["🦨", "Stink Route", "WIP", "Marcy Ending"],
+  CLOSET_ENDING: ["🧹", "Closet Route", "Worth it?", "Broom Closet Ending"],
+  ZEN_ENDING: ["🌌", "Bench Route", "Space Out", "Zen Ending"],
+};
 
 :: Achievements list
-<% const achievements = setup.getAchievements().sort((a1, a2) => a1[0].localeCompare(a2[0])); %>
+<%
+const achieveCount = setup.getAchievements().length;
+const achieveMax = Object.keys(setup.ALL_ACHIEVEMENTS).length;
+%>
 
-### Achievements (<%-achievements.length%> <span aria-label="of">/</span> <%-setup.totalAchievements%>)
+### Achievements (<%-achieveCount%> <span aria-label="of">/</span> <%- achieveMax %>)
 
-<ul>
-  <% achievements.map(([name, desc]) => { %>
-    <li><%= desc %> (<%= name %>)</li>
-  <% }) %>
-</ul>
+<% window.cheevosList = [
+  ...Object.keys(setup.ALL_ACHIEVEMENTS).filter(k => setup.hasAchievement(k)),
+  ...Object.keys(setup.ALL_ACHIEVEMENTS).filter(k => !setup.hasAchievement(k))
+]; %>
 
+<table class="table">
+  <colgroup>
+  </colgroup>
+  <% for (const key of cheevosList) {
+    const [emoji, route, name, desc] = setup.ALL_ACHIEVEMENTS[key];
+    let unlocked = setup.getAchievements().includes(key); %>
+      <tr class="<% if (!unlocked) %>locked-achievement<%;%>">
+        <td><%= unlocked ? emoji: "🔒" %></span></td>
+        <td><%= unlocked ? `<b>${route}</b>` : route %></td>
+        <td><%= unlocked ? `"${name}" <i>(${desc})</i>` : `<i>(Locked achievement)</i>` %></td>
+      </tr>
+  <% } %>
+</table>
+ 
 * <a0 onclick="setup.resetAchievementsPrompt();">Reset achievements.</a>
 
-<%
-const oneAchievementLeft = achievements.length == setup.totalAchievements - 1;
-const sawBroomClosetEnding = achievements.some(a => /Closet/i.test(a));
-
-if (oneAchievementLeft && !sawBroomClosetEnding) { %>
-<code>Did you get the Broom Closet Ending? The Broom Closet Ending was my favorite!</code>
-<% } %>
+:: Cheevos style [stylesheet]
+.locked-achievement {
+  filter: grayscale(1);
+}

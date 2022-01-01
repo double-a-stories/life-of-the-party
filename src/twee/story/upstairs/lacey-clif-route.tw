@@ -260,7 +260,7 @@ Lacey awakens to find that she has slightly outgrown her bra and pants. Clif rol
 
 Lacey looks down at her dramatically shrunken belly, and recalls the night before. "Phew," she remarks, "What a night!"
 
-<% setup.addAchievement("Lacey Vore Ending", "Two for One Meal"); %>
+<% setup.addAchievement("LACEY_VORE_ENDING"); %>
 
 ### The End.
 

@@ -436,7 +436,7 @@ Standing patiently outside is Gus the dog, alongside a gigantic, towering horse 
 
 ### The end.
 
-<% setup.addAchievement("Byron Vore Ending", "Anyway, here's..."); %>
+<% setup.addAchievement("BYRON_VORE_ENDING"); %>
 
 * [[Epilogue.|Byron Epilogue.]] *(CW: Scat disposal.)*
 * <a0 onclick="setup.restart()">Restart.</a>

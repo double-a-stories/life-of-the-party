@@ -261,7 +261,7 @@ The owl snickers and grabs <%-s.hg?"him":"her"%> by the arm. "Hoo hoo hoo! Omigo
 
 ### The End.
 
-<% setup.addAchievement("Hazel Vore Ending", "A Grizzly's End"); %>
+<% setup.addAchievement("HAZEL_VORE_ENDING"); %>
 
 * [[Epilogue.|Epilogue: Hazel Post Vore.]] *(CW: Scat.)*
 * <a0 onclick="setup.restart()">Restart.</a>
