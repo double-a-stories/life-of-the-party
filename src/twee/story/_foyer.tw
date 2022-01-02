@@ -25,9 +25,9 @@ The incessant loud music is starting to hurt your sensitive ears. You decide to 
 
 This house is huge, and its upscale furnishings seem almost too fancy for the moderately wealthy suburb it's located in. It shouldn't be too hard to find a quiet place to relax.
 
-* [[Go to the bathroom.]] <!-- _bathroom.tw -->
-* [[Go outside.]] <!-- _outside.tw -->
-* [[Go to the garage.]] <!-- ren-route.tw -->
+* [[Go outside.]] <!-- _outside.tw --> *(Smells like... hyena?)*
+* [[Go to the bathroom.]] <!-- _bathroom.tw --> *(Smells like... bear.)*
+* [[Go to the garage.]] <!-- ren-route.tw --> *(Smells like... fox.)*
 
 <%= story.render("Preload Ren emojis")%>
 

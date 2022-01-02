@@ -13,6 +13,10 @@
 </div>
 
 :: Go to the garage. [checkpoint]
+*CW: Nonconsensual vore. Death. Violent threat. Accidental injury.*
+
+*Kinks: Casual vore. Bad breath. Police corruption.*
+
 You walk down the hall and enter the garage. The garage door is open, looking out onto rows of similarly suburban houses. Cool fresh air enters. The smell of freedom.
 
 Parked inside the garage is a clean and polished pickup truck from a luxury brand, and a similarly ostentatious boat.
@@ -198,7 +202,7 @@ Your face is moments from sliding into <%=s.rm?'his':'her'%> gullet.
 Just before your head slips into the fox's slimy throat. You take in a big lungful of putrid air and hold it. <%= story.render("Get swallowed by Ren.") /* [[Get swallowed by Ren.]] */%>
 
 :: Struggle for freedom! [gore]
-*CW: Accidental mauling. Blood.*
+*CW: Accidental injury. Blood. Mauling.*
 
 You thrash your arms and legs, trying to free yourself. Instinctively, the fox sinks <%=s.rm?'his':'her'%> teeth into the flesh of your neck, something <%=s.rm?'he':'she'%> immediately regrets.
 

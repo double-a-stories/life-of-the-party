@@ -19,13 +19,13 @@ story.version = `v0.8.0-indev`;
 :: StoryTitle
 Life of the Party
 
+
 :: Start [no_heading start]
 <style>
 tw-passage > * {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 </style>
-
 <div class="logo">
 <h1 class="logo__title">
 <img class="logo__horse" role="presentation" src="assets/images/logo-horse-left.svg" width="50" height="45"><!--
@@ -34,22 +34,22 @@ tw-passage > * {
 </h1>
 <p class="logo__subtitle">A Furry Vore Adventure by Double-A</p>
 </div>
-
-<div class="center-list">
+<div.center-list>
 
 * [[Life of the Party.]]
-<% if (setup.getAchievements().length >= setup.totalAchievements) { %>
-* More content coming soon!
-<% } %>
 
 </div>
 
 <div>
-<% const hasSomeAchievements = (setup.getAchievements().length > 0); %>
-<%= story.render(hasSomeAchievements ? "Achievements list" : "Content warning") %>
+<%= story.render("Content Warning") %>
 </div>
+<div>
+<%= story.render("Achievements list") %>
+</div>
+:: Content Warning [no_heading topbar_hide]
+### ⚠️&#xFE0F; Content warning ⚠️&#xFE0F;
+*Life of the Party* is an **experimental interactive fetish story** for **ADULTS ONLY**.
 
-:: Content warning
-### <img class="emoji" draggable="false" alt="&#x26A0;&#xFE0F;" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/26a0.png"> CONTENT WARNING <img class="emoji" draggable="false" alt="&#x26A0;&#xFE0F;" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/26a0.png">
+You will assume the role of prey, and be **swallowed and unwillingly digested**. Some scenes contain strong and potentially distressing content, including **sadism, rape threats, asphyxiation, scat disposal, and accidental death**.
 
-This story is for **ADULTS ONLY**, and reader discretion is strongly advised. It contains **niche fetish content**, including unmarked instances of: *Soft vore. Dubious/revoked consent. Unwilling digestion. Sex. Violence. Sexual violence. Sadism. Blood. Post-vore scat disposal. Death.*
+If you choose to continue, you do so **at your own risk**.
