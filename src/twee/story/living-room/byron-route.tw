@@ -10,6 +10,8 @@ Hollis realizes that Byron's sensitive exterior is just a front for <%-s.bm?"his
 }
 
 :: Look at wolf. [checkpoint]
+*CW: Blood drinking. Rape themes. Nonconsensual vore. Asphyxiation.*
+
 A black-furred wolf, about six feet tall, wearing in a stylish scarf and a checkered red flannel shirt. They're sitting aloofly on a couch, and serenading the party with an acoustic guitar.
 
 * <a0 onclick="story.state.bm = true;" data-passage="Talk to Byron.">Talk to him.</a> *(Male pred)*
@@ -436,7 +438,7 @@ Standing patiently outside is Gus the dog, alongside a gigantic, towering horse 
 
 <% setup.addAchievement("Byron Vore Ending", "Anyway, here's..."); %>
 
-* [[Epilogue.|Byron Epilogue.]]
+* [[Epilogue.|Byron Epilogue.]] *(CW: Scat disposal.)*
 * <a0 onclick="setup.restart()">Restart.</a>
 
 :: Byron Epilogue. [blogspot socmed]

@@ -25,7 +25,6 @@ tw-passage > * {
   margin-bottom: 5rem;
 }
 </style>
-
 <div class="logo">
 <h1 class="logo__title">
 <img class="logo__horse" role="presentation" src="assets/images/logo-horse-left.svg" width="50" height="45"><!--
@@ -43,13 +42,15 @@ tw-passage > * {
 <% } %>
 
 </div>
-
+<div>
+<%= story.render("Content warning") %>
+</div>
 <div>
 <% const hasSomeAchievements = (setup.getAchievements().length > 0); %>
-<%= story.render(hasSomeAchievements ? "Achievements list" : "Content warning") %>
+<%= story.render("Achievements list") %>
 </div>
 
 :: Content warning
-### <img class="emoji" draggable="false" alt="&#x26A0;&#xFE0F;" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/26a0.png"> CONTENT WARNING <img class="emoji" draggable="false" alt="&#x26A0;&#xFE0F;" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/26a0.png">
+### ⚠️&#xFE0F; Content warning ⚠️&#xFE0F;
 
-This story is for **ADULTS ONLY**, and reader discretion is strongly advised. It contains **niche fetish content**, including unmarked instances of: *Soft vore. Dubious/revoked consent. Unwilling digestion. Sex. Violence. Sexual violence. Sadism. Blood. Post-vore scat disposal. Death.*
+The following material is for **ADULTS ONLY**. It features strong extreme content which readers may find triggering or distasteful, including instances of **nonconsensual fatal vore, sadism, rape, asphyxiation, and scat disposal**. Discretion is strongly advised.
