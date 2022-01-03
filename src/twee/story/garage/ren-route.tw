@@ -1,16 +1,11 @@
 :: Ren quirk [stylesheet]
 .ren {
   font-family: "Comic Neue", "Comic Sans", "Comic Sans MS", sans-serif !important;
-  font-weight: 700;
   text-transform: lowercase;
 }
 
-:: Preload Ren emojis
-<!-- This hidden passage contains most emojis used in the Ren route. We attempt to cache them as early as possible, so they don't pop in on passages. -->
-<div aria-hidden="true" style="height: 0; overflow: hidden;">
-<q.ren>Heeeeey!!!</q>
-🍈 🍑 🏻 🐇 🐔 🐰 🐴 🐹 🐺 🐾 👅 👌 💢 💨 💰 🔑 🎮 🖼 🏎 👤 👩 👋 🔥 🐷 🐗 👮 👿 💦 😊 😃 🦊 🦹‍♂️ 🦹‍♀️ 🛻 🤨 🖼️ 🙈 🤷‍♂️ 🤷‍♀️ 😉 😎 ❓ ⏳ 🥒 😨 😦 😟 😔 😮‍ 🫂 😁 🤰 🥩 😠 😡 🤬 🩸 😈 🥱 ♨️ 😈‍ 🧛🏻️ 🧛🏻‍♀️ 🤤   😝 😌 😳 😕 😏 🤔 🤢 ☠️ 😒 😧 😬 🙊 ♂ 🚔 😾 🚓 🤫 😼 😩 😖 🙇‍♂️ 🙇‍♀️ 🙅‍♂️ 🙅‍♀️ ⏱ 🥺 ⛓
-</div>
+
+
 
 :: Go to the garage. [checkpoint]
 *CW: Nonconsensual vore. Death. Violent threat. Accidental injury.*
@@ -25,23 +20,15 @@ A few feet ahead of you, you see a red fox, who appears to be struggling to carr
 
 <q.ren>Hiya!!! 😊👋🐾</q> the fox says, talking in an <span.ren>unusually 😃 excited and 😃😃 expressive manner.</span>
 
-* [[Ask him what he's up to.]] *(Male Pred)*
-* [[What's she doing?]] *(Female Pred)*
+* <a0 data-passage="What are you doing?" onclick="story.state.rm = true">Ask him what he's up to.</a> *(Male Pred)*
+* <a0 data-passage="What are you doing?" onclick="story.state.rm = false">Ask him what he's up to.</a> *(Female Pred)*
 
-:: Ask him what he's up to.
-<% s.rm = true; %>
+<div->[[What are you doing?]]</div>
 
-<%= story.render("...What are you doing?") /* [[...What are you doing?]] */ %>
-
-:: What's she doing?
-<% s.rm = false; %>
-
-<%= story.render("...What are you doing?") /* [[...What are you doing?]] */ %>
-
-:: ...What are you doing?
+:: What are you doing?
 You ask <%=s.rm?"him":"her"%> what <%=s.rm?"he":"she"%>'s doing.
 
-<%=s.rm?"He":"She"%> smiles and replies, <q.ren>Stealing!!! 🦊<%=s.rm?`🦹‍♂️`:`🦹‍♀️`%>💰</q>
+<%=s.rm?"He":"She"%> smiles and replies, <q.ren>Stealing!!! 🦊<%=s.rm?"🦹‍♂️":"🦹‍♀️"%>💰</q>
 
 Yeah, you guess that was pretty obvious.
 
@@ -50,15 +37,15 @@ Yeah, you guess that was pretty obvious.
 * [[Is that a good idea?]]
 
 :: Is that a good idea?
-<q.ren>🤨  Um, it's a *great* idea? I've always wanted some of this 🎮🖼️💰 stuff!!!</q>
+<q.ren>🤨  Um, it's a *great* idea? I've always wanted some of this 🎮🖼💰 stuff!!!</q>
 
 You say you meant, like, ethically. Won't the folks who live here be upset about this?
 
-<q.ren>The 🐴 folks who live here are loaded. They probs won't even notice!!! 🙈<%=s.rm?`🤷‍♂️`:`🤷‍♀️`%> I'm like Robin Hood! I steal from the 💰 rich, and give to the me!</q>
+<q.ren>The 🐴 folks who live here are loaded. They probs won't even notice!!! 🙈<%=s.rm?"🤷‍♂️":"🤷‍♀️"%> I'm like Robin Hood! I steal from the 💰 rich, and give to the me!</q>
 
 And what if they do notice? you ask.
 
-<q.ren>Sounds like a problem for <%=s.rm?`🦹‍♂️`:`🦹‍♀️`%> Future Ren,</q> <%=s.rm?"he":"she"%> chuckles, <q.ren>I'm Ren, btw. 😉</q>
+<q.ren>Sounds like a problem for <%=s.rm?"🦹‍♂️":"🦹‍♀️"%> Future Ren,</q> <%=s.rm?"he":"she"%> chuckles, <q.ren>I'm Ren, btw. 😉</q>
 
 * [[Uh, I'm Hollis.]]
 
@@ -128,7 +115,7 @@ You remember that Reese is still here, and possibly in danger. You can't just ab
 
 What? You ask <%=s.rm?"him":"her"%> how <%=s.rm?"he":"she"%> knows.
 
-<q.ren><!-- shrug --><%=s.rm?`🤷‍♂️`:`🤷‍♀️`%> Call it a hunch,</q> <%=s.rm?"he":"she"%> says, <q.ren>No prey ever came to a party like this expecting to leave in one piece, right? Everyone's either here to 🐺 eat or be 🥩 eaten.</q>
+<q.ren><!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%> Call it a hunch,</q> <%=s.rm?"he":"she"%> says, <q.ren>No prey ever came to a party like this expecting to leave in one piece, right? Everyone's either here to 🐺 eat or be 🥩 eaten.</q>
 
 You didn't realize this was that kind of party, you say.
 
@@ -189,7 +176,7 @@ You look up at your destination, and wince slightly. The fox's pulsating throat 
 :: Try persuasion? [vore checkpoint]
 Your voice is muffled by the slick tongue covering your face, but you try to call out to Ren: It's not too late! <%=s.rm?'He':'She'%> doesn't have to do this!
 
-The fox lets out a low growl. (<q.ren>😈<%=s.rm?`‍🧛🏻`:`️🧛🏻‍♀️`%>👅</q>) You realize <%=s.rm?'his':'her'%> teeth are now positioned directly around your throat, and <%=s.rm?'he':'she'%> could easily bite your head off if so inclined.
+The fox lets out a low growl. (<q.ren>😈<%=s.rm?"‍🧛🏻":"🧛🏻‍♀️"%>👅</q>) You realize <%=s.rm?'his':'her'%> teeth are now positioned directly around your throat, and <%=s.rm?'he':'she'%> could easily bite your head off if so inclined.
 
 You rationally decide to keep your mouth shut from now on. <%=s.rm?'He':'She'%> responds with a happy murr (<q.ren>🤤</q>) and swallows again, so your shoulders fill <%=s.rm?'his':'her'%> cheeks.
 
@@ -239,7 +226,7 @@ Ren burps (<q.ren>😮‍💨😌</q>) and <%=s.rm?"his":"her"%> stomach walls c
 :: Wh-why did you do that? [vore]
 You scramble around inside to get Ren's attention, and ask <%=s.rm?"him":"her"%> why <%=s.rm?"he":"she"%> just ate you.
 
-<q.ren>😕 W-well,</q> <%=s.rm?"he":"she"%> says, <q.ren>I didn't want u to 🐇💨 escape and snitch on me. Then it was kinda like my body just took over? 🦊<!-- shrug --><%=s.rm?`🤷‍♂️`:`🤷‍♀️`%></q>
+<q.ren>😕 W-well,</q> <%=s.rm?"he":"she"%> says, <q.ren>I didn't want u to 🐇💨 escape and snitch on me. Then it was kinda like my body just took over? 🦊<!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%></q>
 
 You say weren't gonna rat <%=s.rm?"him":"her"%> out, honestly.
 
@@ -259,7 +246,7 @@ Ren puts a paw on <%=s.rm?"his":"her"%> chin. <q.ren>Well, I... 🤔  don't actu
 :: ...Could you try? [vore]
 You're surprised (and honestly, impressed) to hear this is <%=s.rm?"his":"her"%> first time, considering how fast it went by. Still, your life and Reese's depends on you getting out of here. You ask Ren to try throwing you up.
 
-<q.ren>😕 I mean I guess...</q>  <%=s.rm?"he":"she"%> says. <q.ren>I'd feel really bad if I ☠️ digested u, you seem nice... Although you might finally make my  <%=s.rm?`🍑 ass`:`🍈 chest`%> fill out...</q>
+<q.ren>😕 I mean I guess...</q>  <%=s.rm?"he":"she"%> says. <q.ren>I'd feel really bad if I ☠️ digested u, you seem nice... Although you might finally make my  <%=s.rm?"🍑 ass":"🍈 chest"%> fill out...</q>
 
 Focus, you say! You need <%=s.rm?"him":"her"%> to get you out of here.
 
@@ -278,7 +265,7 @@ You squint. The ones <%=s.rm?"he":"she"%> said would never notice?
 
 A <%=s.rm?"gruff":"ladylike"%> voice yells through the door, <q>What's going on in there?</q>
 
-<q.ren>Nothing!!!</q> Ren yells back, <q.ren>Just normal, consensual vore!!! 🦊🤰<%=s.rm?`♂`:``%></q> You feel <%=s.rm?"his":"her"%> belly sag and slosh around you, as <%=s.rm?"he":"she"%> rushes over to the truck and climbs into the driver's seat.
+<q.ren>Nothing!!!</q> Ren yells back, <q.ren>Just normal, consensual vore!!! 🦊🤰<%=s.rm?"♂":""%></q> You feel <%=s.rm?"his":"her"%> belly sag and slosh around you, as <%=s.rm?"he":"she"%> rushes over to the truck and climbs into the driver's seat.
 
 * [[Ren: Getaway.]]
 
@@ -302,7 +289,7 @@ Ren smiles. <q.ren>Oh yeah, loads of times!!! 😉🛻💨 What did *u* do in hi
 
 Getting involved in a car-jacking wasn't really in your evening plans, you say. If this goes poorly, you could be killed. Or worse, arrested!
 
-<q.ren>Trust me, ur in good paws. 🐾 No one's ever caught me yet, and I don't intend to be change that. <%=s.rm?`🦹‍♂️`:`🦹‍♀️`%></q>
+<q.ren>Trust me, ur in good paws. 🐾 No one's ever caught me yet, and I don't intend to be change that. <%=s.rm?"🦹‍♂️":"🦹‍♀️"%></q>
 
 Ren revs the engine. Soon, <%=s.rm?"he":"she"%>'s onto the highway, experimentally speeding and pushing the limits of the vehicle's motor. You can't see, but a constant grin is plastered on <%=s.rm?"his":"her"%> face. It sounds like <%=s.rm?"he":"she"%>'s truly in <%=s.rm?"his":"her"%> element.
 
@@ -355,13 +342,13 @@ A wildebeast and a boar step out of the foremost police car to apprehend Ren.
 
 "Outta the car," the wildebeast yells, "You have the right to remain silent."
 
-<q.ren>🐷🐗👮<%=s.rm?`🙇‍♂️`:`🙇‍♀️`%>😒...</q> Ren mutters, complying.
+<q.ren>🐷🐗👮<%=s.rm?"🙇‍♂️":"🙇‍♀️"%>😒...</q> Ren mutters, complying.
 
 "Paws where I can see em. You're wanted for possession of a stolen vehicle,  reckless driving, and endangerment of life," the boar says. You feel him poke a finger at you through Ren's shirt. "This thing still alive?" he asks.
 
 "Not sure," the wildebeast says. She asks Ren, "Is your prey recent?"
 
-Ren shakes <%=s.rm?"his":"her"%> head. <q.ren><%=s.rm?`🙅‍♂️`:`🙅‍♀️`%>... ⏱🐇🥩☠️ *BURP*.</q>
+Ren shakes <%=s.rm?"his":"her"%> head. <q.ren><%=s.rm?"🙅‍♂️":"🙅‍♀️"%>... ⏱🐇🥩☠️ *BURP*.</q>
 
 "We're probably too late," the boar says, "it seems pretty far along in the digestive process..."
 
@@ -389,7 +376,7 @@ Ren sighs with relief, <q.ren>😌😌😌</q>. You guess <%=s.rm?"he":"she"%>'s
 
 The boar snaps a pair of handcuffs onto <%=s.rm?"his":"her"%> wrists and says, "We recieved a report from one <%=s.rm?"Basil":"Lacey"%> Armstrong of a stolen vehicle with this tag. Ren Davis, you are under arrest."
 
-Ren's stomach pulses around you happily (<q.ren>⛓<%=s.rm?`🤷‍♂️`:`🤷‍♀️`%>😏☠️</q>). As Ren is hauled away, you feel yourself... beginning to... pass out.
+Ren's stomach pulses around you happily (<q.ren>⛓<%=s.rm?"🤷‍♂️":"🤷‍♀️"%>😏☠️</q>). As Ren is hauled away, you feel yourself... beginning to... pass out.
 
 <% setup.addAchievement("Ren Vore Ending", `🦊🥱🐇!!!`); %>
 
@@ -426,7 +413,7 @@ The late morning sun pours through a square window, between steel bars, and onto
 
 Ren's cellmate—a small copper-colored fennec fox—looks over. <%-!s.rm?"He":"She"%> says with hard, metallic lisp, <q.xander>Look who decided to wake up,</q> <%-!s.rm?"he":"she"%> says, <q.xander>The name is <%=!s.rm?"Xander":"Xandra"%>, serial tax evader. What is a cute thing like you doing in a place like this?</q>
 
-<q.ren>🤔 Well, I got caught stealing a cool 🛻 truck from some horses, plus several hundreds of dollars of 💰 valuable goods. So basically... <!-- shrug --><%=s.rm?`🤷‍♂️`:`🤷‍♀️`%> nothing!!!</q>
+<q.ren>🤔 Well, I got caught stealing a cool 🛻 truck from some horses, plus several hundreds of dollars of 💰 valuable goods. So basically... <!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%> nothing!!!</q>
 
 <%-!s.rm?"Xander":"Xandra"%> chuckles, <q.xander>Crikey, sounds like quite the evening.</q>
 

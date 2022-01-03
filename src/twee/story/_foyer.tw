@@ -29,8 +29,6 @@ This house is huge, and its upscale furnishings seem almost too fancy for the mo
 * [[Go to the bathroom.]] <!-- _bathroom.tw --> *(Smells like... bear.)*
 * [[Go to the garage.]] <!-- ren-route.tw --> *(Smells like... fox.)*
 
-<%= story.render("Preload Ren emojis")%>
-
 :: Search for your friend.
 You make a quick circle of the first floor, but Reese is nowhere in sight.
 
