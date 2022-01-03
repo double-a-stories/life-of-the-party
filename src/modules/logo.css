@@ -3,28 +3,38 @@
 .logo {
   line-height: 1.3;
   text-align: center;
-  margin: 5rem 0;
+  margin: 4rem 0;
 }
 .logo__title {
-  font: 3.5rem/0.8 'PlayfairDisplaySC-Bold-LotP', serif;
+  font: 3em/0.8 'PlayfairDisplaySC-Bold-LotP', serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .logo__subtitle {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: lighter;
+  font-size: larger;
 }
 .logo__horse {
   display: inline-block;
-  height: 0.8em;
+  width: auto;
+  height: 0.75em;
 }
 
 .logo__title > span {
-  padding-inline: 0.5ch;
+  white-space: nowrap;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
   .logo__title {
-    font-size: 1.9em;
+    font-size: 2em;
+    justify-content: center;
+  }
+  .logo__title > span {
+    white-space: nowrap;
+    padding-inline: 0.5ch;
   }
 }
