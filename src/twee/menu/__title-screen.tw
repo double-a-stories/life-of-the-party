@@ -19,10 +19,11 @@ story.version = `v0.8.0-indev`;
 :: StoryTitle
 Life of the Party
 
+
 :: Start [no_heading start]
 <style>
 tw-passage > * {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 </style>
 <div class="logo">
@@ -33,24 +34,22 @@ tw-passage > * {
 </h1>
 <p class="logo__subtitle">A Furry Vore Adventure by Double-A</p>
 </div>
-
-<div class="center-list">
+<div.center-list>
 
 * [[Life of the Party.]]
-<% if (setup.getAchievements().length >= setup.totalAchievements) { %>
-* More content coming soon!
-<% } %>
 
 </div>
+
 <div>
-<%= story.render("Content warning") %>
+<%= story.render("Content Warning") %>
 </div>
 <div>
-<% const hasSomeAchievements = (setup.getAchievements().length > 0); %>
 <%= story.render("Achievements list") %>
 </div>
-
-:: Content warning
+:: Content Warning [no_heading topbar_hide]
 ### ⚠️&#xFE0F; Content warning ⚠️&#xFE0F;
+*Life of the Party* is an **experimental interactive fetish story** for **ADULTS ONLY**.
 
-The following material is for **ADULTS ONLY**. It features strong extreme content which readers may find triggering or distasteful, including instances of **nonconsensual fatal vore, sadism, rape, asphyxiation, and scat disposal**. Discretion is strongly advised.
+You will assume the role of prey, and be **swallowed and unwillingly digested**. Some scenes contain strong and potentially distressing content, including **sadism, rape threats, asphyxiation, scat disposal, and accidental death**.
+
+If you choose to continue, you do so **at your own risk**.
