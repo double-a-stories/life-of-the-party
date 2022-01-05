@@ -17,7 +17,7 @@ body {
   background: var(--background);
   box-sizing: border-box;
   color: var(--color);
-  font: 1.2rem/1.6 var(--font-stack);
+  font: 1.4rem/1.6 var(--font-stack);
   margin: 0.5rem;
   overflow: scroll;
   transition: opacity 1s, background 2s;
@@ -69,41 +69,6 @@ a[href]:hover, a[href]:focus, a[href]:active {
 /* Tag: no_heading: hides the passage name */
 [data-tags~="no_heading"] #recent-command {
   display: none;
-}
-
-
-/* Commands */
-
-.commands-list {
-  list-style-type: "> ";
-  padding-inline-start: 1rem;
-}
-
-.commands-list li {
-  margin-bottom: 1rem;
-}
-
-.commands-list :any-link {
-  color: var(--color);
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
-  text-decoration-line: none;
-  border: 1px solid var(--light);
-  border-radius: 0.5rem;
-}
-
-.commands-list :any-link:hover {
-  color: var(--color);
-  border-color: var(--color);
-  text-decoration-color: var(--light);
-  text-decoration-line: underline;
-}
-
-.commands-list :any-link:focus {
-  color: var(--background);
-  background: var(--color);
-  border-color: transparent;
-  outline: none;
 }
 
 .center-list {

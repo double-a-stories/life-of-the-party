@@ -1,11 +1,14 @@
 :: Help [no_checkpoint]
 ### Keyboard controls
 
-* <kbd>W (K)</kbd> - *Select previous link.*
-* <kbd>A (H)</kbd> - *Undo last command.*
-* <kbd>S (J)</kbd> - *Select next link.*
-* <kbd>D (L) </kbd> - *Redo last command.*
-* <kbd>E (Space)</kbd> - *Use selected link.*
+#### Navigation
+* <kbd>W</kbd> / <kbd>K</kbd> — *Select previous                .*
+* <kbd>S</kbd> / <kbd>J</kbd> — *Select next.*
+* <kbd>E</kbd> / <kbd>␣</kbd> — *Use selected link.*
+
+#### Time travel
+* <kbd>A</kbd> / <kbd>H</kbd> — *Undo last command.*
+* <kbd>D</kbd> / <kbd>L</kbd> — *Redo last command.*
 
 ### Play offline
 
