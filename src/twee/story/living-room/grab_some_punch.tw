@@ -238,7 +238,7 @@ body {
   "I would be too if I was about to be eaten...",
   `<span class="byron">Because maybeeee...</span>`,
   "Oh dear, I spilled my drink all over you,,, Sorry,,,",  
-  "Omigod, did they just take off their top?",
+  "Omigosh, did they just take off their top?",
   s.rescuedKaia ? `<span class="mouse">Uh Hollis, you okay?</span>` : `<span class="byron">Damned drunken rutheads...</span>`,
   "I’d like a piece of that...",
   "Woah, back off dudes. Little dude’s had too much.",
