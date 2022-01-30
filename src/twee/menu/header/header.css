@@ -3,9 +3,6 @@
   border-bottom: 1px solid var(--light);
   padding-block: 1em;
   margin-bottom: 1em;
-  background: var(--background);
-  transition: background 2s;
-  position: sticky;
   top: 0;
 }
 

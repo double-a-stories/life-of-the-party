@@ -14,8 +14,12 @@
   --font-size: clamp(1rem, 3vw, 1.4rem);
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  background: var(--background);
+  background: linear-gradient(rgba(255, 255, 255, 0.15), rgba(0,0,0, 0.15)) var(--background) fixed;
   box-sizing: border-box;
   color: var(--color);
   font: var(--font-size, 1.4rem)/1.6 var(--font-stack);
@@ -23,6 +27,14 @@ body {
   overflow: hidden /* x */ scroll /* y */;
   padding: 0.5rem;
   transition: opacity 1s, background-color 2s;
+  min-height: 100%;
+}
+
+
+@media screen and (max-width:700px) {
+  body {
+    font-size: min(4vw, 1.2rem);
+  }
 }
 
 tw-story {
