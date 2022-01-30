@@ -19,6 +19,7 @@
 
 .commands-list :any-link {
   color: var(--color);
+  background: var(--background);
   display: inline-block;
   padding: 0.25rem 0.5rem;
   text-decoration-line: none;
