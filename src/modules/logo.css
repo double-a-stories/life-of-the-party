@@ -8,7 +8,8 @@
 .logo__title {
   font: 3em/0.8 'PlayfairDisplaySC-Bold-LotP', serif;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .logo__subtitle {
@@ -20,16 +21,20 @@
 .logo__horse {
   display: inline-block;
   width: auto;
-  height: 0.8em;
+  height: 0.75em;
 }
 
 .logo__title > span {
   white-space: nowrap;
-  padding-inline: 0.5ch;
 }
 
 @media screen and (max-width:800px) {
   .logo__title {
-    font-size: 1.9em;
+    font-size: 2em;
+    justify-content: center;
+  }
+  .logo__title > span {
+    white-space: nowrap;
+    padding-inline: 0.5ch;
   }
 }
