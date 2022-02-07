@@ -10,7 +10,6 @@ About twenty minutes ago, you showed up with your friend Reese. At some point yo
 * [[Look around the foyer.|The Foyer.]]
 
 :: The Foyer.
-<% s.partyFlavorState = 0; %>
 
 The floor in the house's entryway is plastered with empty plastic cups. Music is blaring. College-age furs in every direction are chatting, flirting, and dancing.
 

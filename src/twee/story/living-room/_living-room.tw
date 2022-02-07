@@ -1,132 +1,29 @@
 <!-- You go to the living room and dance. This room has a bunch of random world-building flavor text, and can branch off into a few different routes. The script that manages this part is really really awful. -->
 
 :: Dance a little.
-<%
-const visits = visited(passage.id);
+<%= passage.render(setup.party.getPartyMessage()) %>
 
-if (visits == 1) { %>
-
-You head into the living room. It's a high-ceilinged room where dozens of furs of every size and species are busy getting drunk and grooving.
-
-You decide to join them.
-
-<% } else if (visits == 2) { %>
-
-You move to the music blaring from the living room speakers.
-
-You're usually a little uncomfortable in big groups, but right now, you're feeling pretty confident, actually!
-
-<% } else if (visited("Grab some punch.") < 2) { %>
-
-<%= either("You dance some more.", "You keep on dancing.") %>
-<%= either("Why stop now?", "Feels good.", "This place is kind of cramped.", "This is fun!") %>
-
-<% } else { %>
-
-<%= either(
-	"You wiggle your hips as you dance.",
-	"You try out some new moves.",
-	"You shake your tail flamboyantly, to the delight of onlookers.") %>
-<%= either(
-	"It's probably the alcohol, but it feels like you're dancing really well.",
-	"You're starting to attract some attention.",
-	"Anthros around you are looking on with interest.",
-	"Someone cheers as they watch you.",
-	"One more drink couldn't hurt, right?",
-	`You hear someone murmur, "Woah, I'd like a piece of that..."`) %>
-
-<% } %>
-<% if (visits > 2) { %>
-<p><%= story.render("Randomized Party Flavor") %></p>
-<% } %>
-
-<%= story.render("Living room commands") %>
+<%= story.render("Living room commands") /* [[Living room commands]] */ %>
 
 :: Living room commands
 <!-- Dance a little more command -->
-<% if (s.partyFlavorOwl || s.partyFlavorGutbump) %>
-* [[N-no problem!|Dance a little.]]
-<% else if (s.partyFlavorLabrador) %>
-* [[Y-you too?|Dance a little.]]
-<% else if (!s.partyFlavorsLooped) %>
-* [[Dance a little more.|Dance a little.]]
-<% else if (s.partyFlavorsLooped < 2) %>
-* [[Dance, dance, dance.|Dance a little.]]
-<% else %>
-You've been at this for a while, and you're starting to feel dizzy. Maybe now you should try talking to someone...?
-<% ; %>
+* [[<%- setup.party.getDanceCommand()  %>|Dance a little.]]
 
 <!-- Grab some punch. -->
-<% if (s.partySeenPunch || setup.isFlagSet("grabbedPunch")) { %>
-<% if (!s.punchCount) %>
-* [[Grab some punch.|Grab some punch.]]
-<% else if (s.punchCount == 1) %>
-* [[Grab some more punch.|Grab some punch.]]
-<% else if (s.punchCount == 2) %>
-* [[Grab a third punch.|Grab some punch.]]
-<% else if (s.punchCount == 3)%>
-* [[Grab a fourth punch.|Grab some punch.]]
-<% else %>
-* [[Just one more punch...|Grab some punch.]]
+<% if (s.seenPunch) { %>
+* [[<%- setup.party.getPunchCommand() %>|Grab some punch.]]
 <% } %>
 <!-- Basil route -->
-<% if (s.partySeenBasil || setup.isFlagSet("talkedToBasil")) { %>
-* [[Wink back at <%-setup.isFlagSet("talkedToBasil")?"Basil":"the horse"%>.|Wink back at Basil.]]
+<% if (s.seenBasil) { %>
+* [[Wink back at the horse.|Wink back at Basil.]]
 <!-- Byron route -->
-<% } if (s.partySeenByron || setup.isFlagSet("talkedToByron")) { %>
+<% } %>
+<% if (s.seenByron) { %>
 * [[Approach guitar wolf.|Look at wolf.]]
 <% } %>
 
-:: Randomized Party Flavor [hide]
-<!-- wow, the code that controls this part sucks. -->
+<% if (s.partyFlavorsLooped > 2) %>
+*You've been at this for a while, and you're starting to feel dizzy. Maybe now you should try talking to someone!*
+<% ; %>
 
-<%= (function() {
-s.partyFlavorState = +s.partyFlavorState || 0;
-
-if (!setup.partyDanceLiterals || s.partyFlavorState == 0) {
-  setup.partyDanceLiterals = [
-    "You see a group of Labradors cheering on their friend as he attempts to do a keg-stand.",
-"A <strong>pair of black cats</strong> watch in awe as a dog proudly presents his enormous, swollen belly. They raise their <strong>cups of punch</strong>.",
-`The speakers start playing a techno remix of Marie Predatora's latest rap single: "Belly Drop, Belly Drop (Belly Drop)."`,
-`A grey wolf with a huge protruding gut accidentally bumps into you. "'Scuse me," she mutters as she walks away.`,
-`Your ears perk up: the speakers are a slow-jam by the classic R&B duo, Thumper & Bang. You tap your furry toes happily.`,
-`The sound system blares with the shouty vocals and distorted guitar of "groupie gas (ft. some snack idk)" by LOÜD GRÜMBLE.`,
-`A <strong>tall black wolf</strong> in a scarf and a flannel shirt brought an acoustic guitar to the party, and is playing "Wonderwall" with an extremely thoughtful expression.`,
-`A slightly chubby owl notices you from across the room and begins licking her beak.`,
-`A drunk Labrador begins nuzzling you. "Oh my gooood dudes, this rabbit is soooo soft..." You blush. Surprisingly, his fur is extremely soft as well.`,
-`A green anaconda wags her tail in time with the music, and accidentally trips two people. "Oh, sorry!" she stammers, ",,,Sorry again!"`,
-`There aren't many other prey at this party. You feel a little small by comparison to all the huge anthros here.`,
-`A nice, easy song starts playing. You consider offering to dance with one of the guys around you, but most of them are several feet taller than you.`,
-`A heavy-set bear with a selfie stick is recording herself as she shakes her massive hips. You try not to stare, but it's absolutely hypnotic.`,
-`A lioness whispers to her friend, "Did you know there's a rabbit here?" They snicker. "Woah. Do you think it has a vore fetish?"`,
-`You see a cow boy eagerly following a lioness out of the room. They both seem quite excited.`,
-`A <strong>big brown stallion</strong> in a green jacket seems to take notice of your dancing. He winks at you from across the room.`,
-].sort(e => 0.5 - Math.random());
-
-setup.partyDanceLiterals.push(
-`Tails wag and paws pump in the air as the subwoofer wubs and dubs the bass-drop of this one dubstep song, yet again. <strong>Is the playlist looping?</strong>`
-);
-}
-
-
-
-const literals = setup.partyDanceLiterals;
-let text = literals[s.partyFlavorState % literals.length]
-s.partyFlavorsLooped = Math.floor(s.partyFlavorState / literals.length);
-s.partyFlavorState += 1;
-
-// set some flags, in case i want to hook any of these messages into their own routes
-// currently these are used to alter the text of the "dance more" command
-s.partyFlavorMice = text.includes("black mice");
-s.partyFlavorDragon = text.includes("green dragon girl");
-s.partyFlavorOwl = text.includes("owl");
-if (text.includes("punch")) s.partySeenPunch = true;
-if (text.includes("tall black wolf")) s.partySeenByron = true;
-s.partyFlavorWonderwolf = text.includes("tall black wolf");
-s.partyFlavorLioness = text.includes("lioness");
-s.partyFlavorLabrador = text.includes("A drunk Labrador");
-s.partyFlavorGutbump = text.includes("accidentally bumps into you");
-if (text.includes("brown stallion")) s.partySeenBasil = true;
-return text;
-})() %>
-
+<% setup.party.advanceState() %>
