@@ -39,7 +39,7 @@ setup.addAchievement = (name) => {
  * @param {string} name The name of an achievement
  * @returns Whether the given achievement has been acquired.
  */
-setup.hasAchievement = (name) => 
+setup.hasAchievement = (name) =>
   Lockr.sismember("achievements", name);
 
 setup.addAllAchievements = () => {
@@ -58,10 +58,60 @@ Are you sure you want to continue?`;
   }
 }
 
+/*
+ * Story Flags API. These are represented as a hashset on an object.
+ */
+
+/** Get all flags which are set.
+ * @returns {object} Returns an object { [flagName]: count, ... }
+ */
 setup.getFlags = () => Lockr.get("flags", {});
-setup.isFlagSet = (name) => !!Lockr.get("flags", {})[name];
-setup.setFlag = (name, val = true) => Lockr.set("flags", { ...Lockr.get("flags"), [name]: val })
-setup.unsetFlag = (name) => {
-  Lockr.set("flags", { ...Lockr.get("flags"), [name]: undefined });
+/**
+ * 
+ * @param {string} name The flag to check
+ * @returns 
+ */
+// Returns whether a flag is set to a non-zero value
+setup.isFlagSet = (name) => {
+  return !!Lockr.get("flags", {})[name];
 }
+/** Gets the count of a flag
+ * @param {string} name The name of the flag to check 
+ * @returns {number} The number of times the flag was set
+ */
+setup.getFlag = (name) => {
+  let flags = Lockr.get("flags", {});
+  return +(flags[name]) | 0;
+}
+/**
+ * @param {string} name The flag to set
+ * @param {number} count The number to set it to (integer >= 0)
+ */
+setup.setFlag = (name, count = 1) => {
+  let flags = Lockr.get("flags");
+  flags[name] = Math.max(0, +count|0); // increment
+  Lockr.set("flags", flags);
+}
+/** 
+ * Adds a flag with the given name to the set of flags.
+ * @param {string} name The flag to increment
+ * @param {number} amt An integer number to add/subtract
+ */
+setup.addFlag = (name, amt = 1) => {
+  let count = setup.getFlag(name)
+  count = Math.max(0, count + +amt|0); // increment
+  setup.setFlag(name, count);
+}
+/**
+ * Unsets a flag
+ * @param {string} name The flag to unset
+ */
+setup.unsetFlag = (name) => {
+  let flags = Lockr.get("flags");
+  flags[name] = undefined;
+  Lockr.set("flags", flags);
+}
+/**
+ * Unsets all flags.
+ */
 setup.resetFlags = () => Lockr.set("flags", {});
