@@ -26,13 +26,6 @@ $(window).on("sm.story.error", (event, error) => {
     }
 })
 
-/* Adds passage tags to body[data-tags]. This enables CSS rules which change the page background based on passage tags.
-A sample selector looks like body[data-tags~="mytag"];
-*/
-$(window).on('sm.passage.shown', function (event, eventObject) {
-  $("body").attr("data-tags", passage.tags.join(" "));
-});
-
 // Set document language to English.
 // This causes <q> to implicitly render as curly double quotes.
 $("html").attr("lang", "en-us");
