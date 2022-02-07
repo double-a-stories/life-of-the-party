@@ -1,6 +1,6 @@
 <!-- achievements.tw ~ provides UI for achievements in Life of the Party -->
 :: Achievements from LOTP [script]
-// Defines achievements used in Life of the Party
+// The set of achievements from Life of the Party
 setup.ALL_ACHIEVEMENTS = {
   ANA_VORE_ENDING: ["🗑️", "Outside Route", "No Laughing Matter", "Ana Ending"],
   BASIL_VORE_ENDING: ["🐴", "Party Route", "Party Animals", "Basil Ending"],
@@ -15,24 +15,14 @@ setup.ALL_ACHIEVEMENTS = {
 };
 
 :: Achievements list
-<%
-const achieveCount = setup.getAchievements().length;
-const achieveMax = Object.keys(setup.ALL_ACHIEVEMENTS).length;
-%>
+<% const [count, max] = setup.getAchievementCount(); %>
 
-### Achievements (<%-achieveCount%> <span aria-label="of">/</span> <%- achieveMax %>)
-
-<% window.cheevosList = [
-  ...Object.keys(setup.ALL_ACHIEVEMENTS).filter(k => setup.hasAchievement(k)),
-  ...Object.keys(setup.ALL_ACHIEVEMENTS).filter(k => !setup.hasAchievement(k))
-]; %>
+### Achievements (<%- count %> <span aria-label="of">/</span> <%- max %>)
 
 <table class="table">
-  <colgroup>
-  </colgroup>
-  <% for (const key of cheevosList) {
+  <% for (const key of setup.getAllAchievementsSorted()) {
     const [emoji, route, name, desc] = setup.ALL_ACHIEVEMENTS[key];
-    let unlocked = setup.getAchievements().includes(key); %>
+    let unlocked = setup.hasAchievement(key); %>
       <tr class="<% if (!unlocked) %>locked-achievement<%;%>">
         <td><%= unlocked ? emoji: "🔒" %></span></td>
         <td><%= unlocked ? `<b>${route}</b>` : route %></td>
