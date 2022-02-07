@@ -12,6 +12,7 @@
   /* Default body font */
   --font-stack: -apple-system, BlinkMacSystemFont,  Segoe UI, Roboto, Helvetica Neue, sans-serif;
   --font-size: clamp(1rem, 3vw, 1.4rem);
+  --bg-rotation: 180deg;
 }
 
 html {
@@ -19,7 +20,7 @@ html {
 }
 
 body {
-  background: linear-gradient(rgba(255, 255, 255, 0.15), rgba(0,0,0, 0.15)) var(--background) fixed;
+  background: linear-gradient(var(--bg-rotation, 0deg), rgba(255, 255, 255, 0.15), rgba(0,0,0, 0.15)) var(--background) fixed;
   box-sizing: border-box;
   color: var(--color);
   font: var(--font-size, 1.4rem)/1.6 var(--font-stack);
