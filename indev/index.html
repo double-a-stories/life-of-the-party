@@ -1155,7 +1155,7 @@ setup.getFlag = (name) => {
  * @param {number} count The number to set it to (integer >= 0)
  */
 setup.setFlag = (name, count = 1) => {
-  let flags = Lockr.get("flags");
+  let flags = Lockr.get("flags", {});
   flags[name] = Math.max(0, +count | 0); // increment
   Lockr.set("flags", flags);
 };
