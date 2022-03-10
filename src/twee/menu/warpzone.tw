@@ -1,24 +1,3 @@
-:: Debug console message [script]
-$(window).on('sm.story.started', function (event, {
-  story
-}) {
-
-const headingStyle = "font: bold 2rem/1 serif; font-variant-caps: small-caps;";
-const normalStyle = "font: 1rem/1 bold sans-serif;"
-
-console.log(`%cLife of the Party %c${story.version}`,
-"font: bold 2rem/1.6 serif; font-variant-caps: small-caps;",
-"font: lighter 1rem/1.6 sans-serif; text-transform: uppercase"
-);
-console.info(`${story.passage("Debug message").source}\n`);
-
-});
-
-:: Debug message
-> Open developer console
-
-You decide to stick your nose where it doesn't belong, and enter the developer's room. It's a vast, abstract expanse full of confusing syntax, spaghetti code, and runtime errors. Oh dear, how did you even get in here?
-
 :: Warp zone
 You've entered a time warp! This is a list of every passage in *<%= story.name %>*. Obviously, there are **spoilers ahead**.
 

@@ -1,0 +1,36 @@
+/*
+ * fade in keframe animations
+ */
+.fadeleft {
+  animation: var(--fade-duration, 1s) ease-out fadeLeft;
+}
+.faderight {
+  animation: var(--fade-duration, 1s) ease-out fadeRight;
+}
+/** a11y: don't define if the user prefers no motion */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fadeLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(5%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-5%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

@@ -1,10 +1,7 @@
 /**
- * achievements.js
- *
- * A plugin for "Life of the Party". Manages story flags which are preserved
- * between sessions.
- * Provides an API for persistent browser storage, using Lockr
- * License: MIT-0
+ * @file A plugin for "Life of the Party". Manages story flags which are preserved between sessions.
+ * @author double-a-stories
+ * @license MIT-0
  */
 
 /**
@@ -22,10 +19,38 @@ if (window.Lockr == undefined) {
 setup.ACHIEVEMENT_KEY_VERSION = 8;
 
 /**
+ * 
+ * @returns {string} A formatted table
+ */
+setup.getAchievementTable = () => passage.render(`<table class="table">
+<% for (const key of setup.getAllAchievementsSorted()) {
+  const [emoji, route, name, desc] = setup.ALL_ACHIEVEMENTS[key];
+  let unlocked = setup.hasAchievement(key); %>
+    <tr class="<% if (!unlocked) %>locked-achievement<%;%>">
+      <td><%= unlocked ? emoji: "🔒" %></span></td>
+      <td><%= unlocked ? \`<b>\${route}</b>\` : route %></td>
+      <td><%= unlocked ? \`"\${name}" <i>(\${desc})</i>\` : \`<i>(Locked achievement)</i>\` %></td>
+    </tr>
+<% } %>
+</table>`);
+
+/**
  * These achievements are used in Life of the Party
  * Lotp Achievements are stored like [emoji, location, title, description]
  */
-setup.ALL_ACHIEVEMENTS = setup.ALL_ACHIEVEMENTS || {};
+setup.ALL_ACHIEVEMENTS = {
+  ANA_VORE_ENDING: ["🗑️", "Outside Route", "No Laughing Matter", "Ana Ending"],
+  BASIL_VORE_ENDING: ["🐴", "Party Route", "Party Animals", "Basil Ending"],
+  HAZEL_VORE_ENDING: ["🐻", "Bathroom Route", "A Grizzly End", "Hazel Ending", "..."],
+  LACEY_VORE_ENDING: [`🎠`, "Bedroom Route", "Two for One Meal", "Lacey Ending", "Search...?"],
+  REN_VORE_ENDING: ["🦊", "Garage Route", "🐇🥱😊!!!", "Ren Ending"],
+  BYRON_VORE_ENDING: ["🐺", "Wolf Route", "Anyway, Here's...", "Byron Ending"],
+  NIKKI_NOX_VORE_ENDING: ["🍸", "Sauce Route", "Sauced & Swallowed", "Nikki & Nox Ending"],
+  MARCY_VORE_ENDING: ["🦨", "Stink Route", "WIP", "Marcy Ending"],
+  CLOSET_ENDING: ["🧹", "Closet Route", "Worth it?", "Broom Closet Ending"],
+  ZEN_ENDING: ["🌌", "Bench Route", "Space Out", "Zen Ending"],
+};
+
 
 // Lockr key is the name of the story, plus the savegame version.
 Lockr.prefix = `${story.name} ${setup.ACHIEVEMENT_KEY_VERSION} `.replace(

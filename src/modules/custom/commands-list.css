@@ -1,4 +1,7 @@
-/* Commands */
+/*
+ * Commands-list styles
+ * Custom button styles for commands list.
+ */
 
 .commands-list {
     list-style-type: disclosure-closed;

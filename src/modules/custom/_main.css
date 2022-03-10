@@ -90,3 +90,11 @@ a[href]:hover, a[href]:focus, a[href]:active {
     padding: 1rem;
   }
 }
+
+/* Twemoji images */
+.emoji {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.1em;
+  font-size: 1.2em;
+}

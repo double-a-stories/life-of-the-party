@@ -1,89 +1,129 @@
-/*
- * Keyboard Controls
+/**
+ * @file Keyboard navigation module for Snowman stories
+ * @author Double-A <https://github.com/double-a-stories>
+ * @license MIT-0
  */
+window.keybinds = {};
 
-window.setup = window.setup || {};
+/** Global toggle. If false, keypresses will not be intercepted. */
+keybinds.enabled = true;
 
-const controls = {};
+/**
+ * Markdown description for the keybinds.
+ * Insert in your story using <%= keybinds.KEYBINDS_DOCS %>
+ */
+keybinds.KEYBINDS_DOCS = `
+#### Navigation
+* <kbd>W</kbd> / <kbd>K</kbd> — *Select previous.*
+* <kbd>S</kbd> / <kbd>J</kbd> — *Select next.*
+* <kbd>E</kbd> / <kbd>␣</kbd> — *Use selected link.*
 
-controls.getFocusables = () => $("a[href], button, input, select, [tabindex]").filter(":visible");
+#### Time travel
+* <kbd>A</kbd> / <kbd>H</kbd> — *Undo last command.*
+* <kbd>D</kbd> / <kbd>L</kbd> — *Redo last command.*
+`;
 
-controls.focusNext = () => {
-  const $focusables = controls.getFocusables();
-  let index = $focusables.index(document.activeElement);
-  if (index != -1) {
-    $focusables.eq(index + 1).focus();
-  } else {
-    if (story.$passageEl.find($focusables)[0]) {
-      story.$passageEl.find($focusables).first().focus();
-    } else {
-      $focusables.first().focus();
+// Detect keybinds
+document.addEventListener("keydown", (ev) => {
+  if (!keybinds.enabled) {
+    return; // keybinds disabled
+  }
+  const KEYBINDS = {
+    // <https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values>
+    // WASD BINDINGS
+    w: focusPrev,
+    s: focusNext,
+    a: undo,
+    d: redo,
+    e: selectFocused,
+    // VIM-STYLE BINDINGS
+    j: focusNext,
+    k: focusPrev,
+    h: undo,
+    l: redo,
+    " ": selectFocused,
+  };
+  // If we're focused on a text field, ignore keypresses.
+  if (!$(ev.target).is("input[type!='button'], [contenteditable]")) {
+    const key = ev.key;
+    if (key in KEYBINDS) {
+      KEYBINDS[key](); // call the function
+      ev.preventDefault(); //
     }
   }
-}
-controls.focusPrev = () => {
-  const $focusables = controls.getFocusables();
-  let index = $focusables.index(document.activeElement);
-  if (index >= 0) {
-    $focusables.eq(index - 1).focus();
-  } else {
-    controls.focusNext();
-    controls.focusPrev();
-  }
-}
-controls.selectFocused = () => {
-  const $focusables = controls.getFocusables();
-  if ($focusables.index(document.activeElement) != -1) {
-    document.activeElement.click();
-  } else {
-    controls.focusNext();
-  }
-}
-controls.goNext = () => {
-  let p = passage.id;
-  if (!$(":focus")[0]) {
-    window.history.forward();
-  }
-  if (p == passage.id) {
-    controls.selectFocused();
-  }
-}
-
-$(document).keydown((e) => {
-  // If we're focusing on a text field, don't intercept any keys.
-  if ($(e.target).is("input[type!='button'], [contenteditable]")) {
-    return
-  }
-  switch (e.key.toLowerCase()) {
-    // Space | E = Select.
-    case "e":
-    case " ":
-      controls.selectFocused();
-      e.preventDefault();
-      break;
-    // H | A = Undo
-    case "h":
-    case "a":
-      setup.undo();
-      e.preventDefault();
-      break;
-    // D | L = Redo
-    case "d":
-    case "l":
-      controls.goNext();
-      e.preventDefault();
-      break;
-    // W | K = Focus previous link
-    case "w":
-    case "k":
-      controls.focusPrev();
-      e.preventDefault();
-      break;
-    // S | J = Focus next link.
-    case "s":
-    case "j":
-      controls.focusNext();
-      e.preventDefault();
-      break;
-  }
 });
+
+/** Attempts to move focus to the next element on the page. If no element is focused, focus the first element inside the passage tag. */
+const focusNext = () => {
+  const focusables = getFocusables();
+  let index = focusables.indexOf(getFocused());
+  if (index > -1) {
+    focusables[index + 1]?.focus();
+  } else {
+    getFirstFocusable()?.focus();
+  }
+};
+/** Attempts to move focus to the previous element on the page. If no element is focused, focus the element before the first element inside the passage tag. */
+const focusPrev = () => {
+  const focusables = getFocusables();
+  // Try to get the currently focused element. Else get the first one.
+  let index = focusables.indexOf(getFocused() || getFirstFocusable());
+  const target = focusables[index - 1] || focusables[index];
+  target?.focus();
+};
+
+/** Activates (by clicking) the currently focused element. If not focused, triggers focusNext. */
+const selectFocused = () => {
+  let el = getFocused();
+  if (el) {
+    el.click();
+  } else {
+    focusNext();
+  }
+};
+/** Rewinds the story, as if by pressing the browser back button. */
+const undo = () => {
+  setup.undo();
+};
+/** Replays the last command, as if by presing the browser foward button. If none, triggers selectFocused */
+const redo = () => {
+  selectFocused(); // focused element? select it!
+  setup.redo(); // attempt to go forward in history.
+  // the focus function should only complete if the forward command failed.
+};
+
+/**
+ * @returns {Element[]} An array of all elements on the page which could be focused.
+ */
+const getFocusables = (parent) => {
+  parent = parent || document;
+  const isVisible = (el) => el.offsetParent !== null;
+  const nodeList = parent.querySelectorAll(
+    // a list of elements which are focusable
+    "a[href], button, input, select, [tabindex]"
+  );
+  return Array.from(nodeList).filter(isVisible);
+};
+
+/** @returns {Element|null} The current element which is focused */
+const getFocused = () => {
+  const focused = document.activeElement;
+  return focused !== document.body ? focused : null;
+};
+
+/** @returns {Element} The first focus target on the page, starting inside the tw-passage element. */
+const getFirstFocusable = () => {
+  return (
+    getFocusables(document.querySelector("tw-passage"))[0] || getFocusables()[0]
+  );
+};
+
+keybinds = {
+  ...keybinds,
+  selectFocused,
+  getFocused,
+  focusNext,
+  focusPrev,
+  undo,
+  redo,
+};

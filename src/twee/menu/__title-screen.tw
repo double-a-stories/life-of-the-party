@@ -46,6 +46,7 @@ tw-passage > * {
 <div>
 <%= story.render("Achievements list") %>
 </div>
+
 :: Content Warning [no_heading topbar_hide]
 ### ⚠️&#xFE0F; Content warning ⚠️&#xFE0F;
 *Life of the Party* is an **experimental interactive fetish story** for **ADULTS ONLY**.
@@ -53,3 +54,17 @@ tw-passage > * {
 You will assume the role of prey, and be **swallowed and unwillingly digested**. Some scenes contain strong and potentially distressing content, including **sadism, rape threats, asphyxiation, scat disposal, and accidental death**.
 
 If you choose to continue, you do so **at your own risk**.
+
+:: Achievements list
+<% const [count, max] = setup.getAchievementCount(); %>
+
+### Achievements (<%- count %> <span aria-label="of">/</span> <%- max %>)
+
+<%= setup.getAchievementTable() %>
+
+* <a0 onclick="setup.resetAchievementsPrompt();">Reset achievements.</a>
+
+:: Cheevos style [stylesheet]
+.locked-achievement img {
+  filter: grayscale(1);
+}
