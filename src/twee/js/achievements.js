@@ -46,7 +46,6 @@ setup.ALL_ACHIEVEMENTS = {
   REN_VORE_ENDING: ["🦊", "Garage Route", "🐇🥱😊!!!", "Ren Ending"],
   BYRON_VORE_ENDING: ["🐺", "Wolf Route", "Anyway, Here's...", "Byron Ending"],
   NIKKI_NOX_VORE_ENDING: ["🍸", "Sauce Route", "Sauced & Swallowed", "Nikki & Nox Ending"],
-  MARCY_VORE_ENDING: ["🦨", "Stink Route", "WIP", "Marcy Ending"],
   CLOSET_ENDING: ["🧹", "Closet Route", "Worth it?", "Broom Closet Ending"],
   ZEN_ENDING: ["🌌", "Bench Route", "Space Out", "Zen Ending"],
 };
