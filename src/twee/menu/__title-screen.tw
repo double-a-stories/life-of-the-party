@@ -35,7 +35,7 @@ tw-passage > * {
 
 </div>
 
-<div>
+<div class="content-warning">
 <%= story.render("Content Warning") %>
 </div>
 <div>

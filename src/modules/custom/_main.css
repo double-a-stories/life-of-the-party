@@ -98,3 +98,16 @@ a[href]:hover, a[href]:focus, a[href]:active {
   vertical-align: -0.1em;
   font-size: 1.2em;
 }
+
+.content-warning {
+  border-radius: 0.5rem;
+  border: 1px solid var(--light);
+  padding: 1rem;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+abbr[title]:hover {
+  text-decoration: underline dotted;
+}
