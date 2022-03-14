@@ -18,7 +18,7 @@ Parked inside the garage is a clean and polished pickup truck from a luxury bran
 
 A few feet ahead of you, you see a red fox, who appears to be struggling to carry a huge cardboard box. Stacked haphazardly on top is a number of objects, including some electronics, a game console, two silver candelabras, and what appears to be a priceless oil painting. The fox notices you.
 
-<q.ren>Hiya!!! 😊👋🐾</q> the fox says, talking in an <span.ren>unusually 😃 excited and 😃😃 expressive manner.</span>
+<span.ren>"Hiya!!! 😊👋🐾"</span> the fox says, talking in an <span.ren>unusually 😃 excited and 😃😃 expressive manner.</span>
 
 * <a0 data-passage="What are you doing?" onclick="story.state.rm = true">Ask him what he's up to.</a> *(Male Pred)*
 * <a0 data-passage="What are you doing?" onclick="story.state.rm = false">Ask him what he's up to.</a> *(Female Pred)*
@@ -28,35 +28,35 @@ A few feet ahead of you, you see a red fox, who appears to be struggling to carr
 :: What are you doing?
 You ask <%=s.rm?"him":"her"%> what <%=s.rm?"he":"she"%>'s doing.
 
-<%=s.rm?"He":"She"%> smiles and replies, <q.ren>Stealing!!! 🦊<%=s.rm?"🦹‍♂️":"🦹‍♀️"%>💰</q>
+<%=s.rm?"He":"She"%> smiles and replies, <span.ren>"Stealing!!! 🦊<%=s.rm?"🦹‍♂️":"🦹‍♀️"%>💰"</span>
 
 Yeah, you guess that was pretty obvious.
 
-<q.ren>Ur timing is 👌 perf,</q> <%=s.rm?"he":"she"%> says, gesturing with <%=s.rm?"his":"her"%> bushy tail towards the truck, <q.ren>Could u unlatch the 🛻 tailgate for me?</q>
+<span.ren>"Ur timing is 👌 perf,"</span> <%=s.rm?"he":"she"%> says, gesturing with <%=s.rm?"his":"her"%> bushy tail towards the truck, <span.ren>"Could u unlatch the 🛻 tailgate for me?"</span>
 
 * [[Is that a good idea?]]
 
 :: Is that a good idea?
-<q.ren>🤨  Um, it's a *great* idea? I've always wanted some of this 🎮🖼💰 stuff!!!</q>
+<span.ren>"🤨  Um, it's a *great* idea? I've always wanted some of this 🎮🖼💰 stuff!!!"</span>
 
 You say you meant, like, ethically. Won't the folks who live here be upset about this?
 
-<q.ren>The 🐴 folks who live here are loaded. They probs won't even notice!!! 🙈<%=s.rm?"🤷‍♂️":"🤷‍♀️"%> I'm like Robin Hood! I steal from the 💰 rich, and give to the me!</q>
+<span.ren>"The 🐴 folks who live here are loaded. They probs won't even notice!!! 🙈<%=s.rm?"🤷‍♂️":"🤷‍♀️"%> I'm like Robin Hood! I steal from the 💰 rich, and give to the me!"</span>
 
 And what if they do notice? you ask.
 
-<q.ren>Sounds like a problem for <%=s.rm?"🦹‍♂️":"🦹‍♀️"%> Future Ren,</q> <%=s.rm?"he":"she"%> chuckles, <q.ren>I'm Ren, btw. 😉</q>
+<span.ren>"Sounds like a problem for <%=s.rm?"🦹‍♂️":"🦹‍♀️"%> Future Ren,"</span> <%=s.rm?"he":"she"%> chuckles, <span.ren>"I'm Ren, btw. 😉"</span>
 
 * [[Uh, I'm Hollis.]]
 
 :: Uh, I'm Hollis. [checkpoint]
 You're Hollis, you reply, scratching your ears nervously.
 
-<q.ren>Pleased to meet u 🐰😎 dude!!!</q> <%=s.rm?"he":"she"%> says. <q.ren>Sorry, can I call u 🐰 dude? Or are you more of a 🐰👩❓ dude-ess?</q>
+<span.ren>"Pleased to meet u 🐰😎 dude!!!"</span> <%=s.rm?"he":"she"%> says. <span.ren>"Sorry, can I call u 🐰 dude? Or are you more of a 🐰👩❓ dude-ess?"</span>
 
 A-actually, you're neither? you reply.
 
-<q.ren>Oh, neat!!! 🐰👤</q> <%=s.rm?"he":"she"%> smiles, carefully balancing the almost cartoonishly large pile of stolen goods, <q.ren>Anyway, I could use some help with that latch. Any time now!!! ⏳</q>
+<span.ren>"Oh, neat!!! 🐰👤"</span> <%=s.rm?"he":"she"%> smiles, carefully balancing the almost cartoonishly large pile of stolen goods, <span.ren>"Anyway, I could use some help with that latch. Any time now!!! ⏳"</span>
 
 * [[Help with the latch.|Help Ren.]]
 * [[Don't.|Don't help Ren.]]
@@ -64,18 +64,18 @@ A-actually, you're neither? you reply.
 :: Don't help Ren.
 You don't assist <%=s.rm?"him":"her"%>, instead choosing to carefully back toward the door, so as not to seem complicit in <%=s.rm?"his":"her"%> burglary. If anyone asks, you were just looking to get some fresh air, when you stumbled upon this eccentric kitsune stealing a load of valuables. It's the perfect alibi, you think, because it's completely true.
 
-Ren struggles to keep the box steady. <q.ren>🛻 Trunk... Now... Please? ⏳⏳⏳ I'm kind of in a 🥒 here, and if u don't, I'm... gonna...</q>
+Ren struggles to keep the box steady. <span.ren>"🛻 Trunk... Now... Please? ⏳⏳⏳ I'm kind of in a 🥒 here, and if u don't, I'm... gonna..."</span>
 
 * [[Go back to the foyer...?|Ren drops the boxes.]]
 
 :: Ren drops the boxes.
 You inch toward the door.
 
-<q.ren>Ack!!! 😨😨😨</q> Ren loses <%=s.rm?"his":"her"%>  balance and drops the box, sending all of its contents crashing to the ground, including a fine porcelain teapot and a GameStation 4 Pro. <%=s.rm?"He":"She"%> watches helplessly as they smash into several pieces.
+<span.ren>"Ack!!! 😨😨😨"</span> Ren loses <%=s.rm?"his":"her"%>  balance and drops the box, sending all of its contents crashing to the ground, including a fine porcelain teapot and a GameStation 4 Pro. <%=s.rm?"He":"She"%> watches helplessly as they smash into several pieces.
 
  "😦😟😔" <%=s.rm?"His":"Her"%>  ears and whiskers droop with defeat. <%=s.rm?"He":"She"%>  looks like <%=s.rm?"he":"she"%>'s about to cry.
 
-Taking this as your cue to leave, you twist the knob to the garage door. Just as you do, Ren growls, <q.ren>👿👿👿 *Don't move.* I'm not done with u. 💢</q>
+Taking this as your cue to leave, you twist the knob to the garage door. Just as you do, Ren growls, <span.ren>"👿👿👿 *Don't move.* I'm not done with u. 💢"</span>
 * [[Hollis: Escape.]]
 
 :: Help Ren.
@@ -83,7 +83,7 @@ Taking this as your cue to leave, you twist the knob to the garage door. Just as
 
 You can't fault <%=s.rm?"his":"her"%> logic. Well, you can, but you probably shouldn't get on this fox's bad side. You walk over and unlatch the tailgate so Ren can load <%=s.rm?"his":"her"%> pile of loot onto the flatbed.
 
-<q.ren>😮‍💨 Phew,</q> <%=s.rm?"he":"she"%> says, closing it up again, <q.ren>I owe ya one!!! 🫂🫂</q>
+<span.ren>"😮‍💨 Phew,"</span> <%=s.rm?"he":"she"%> says, closing it up again, <span.ren>"I owe ya one!!! 🫂🫂"</span>
 
 Ren suddenly grabs you into a warm hug, affectionately wrapping <%=s.rm?"his":"her"%> tail around your whole body for a moment, before releasing you as if nothing happened.
 
@@ -96,7 +96,7 @@ N-no problem, you stammer!
 :: Is this your truck? [checkpoint]
 You ask Ren if this is <%=s.rm?"his":"her"%> vehicle, even though you probably know the answer already.
 
-Ren hops into the driver's seat, sniffs around a bit, and jingles a set of keys that was stashed in a cup-holder. <q.ren>🔑😁  Is now!!!</q> <%=s.rm?"he":"she"%>  laughs,  <q.ren>Wanna take it for a little spin? 🛻😃</q>
+Ren hops into the driver's seat, sniffs around a bit, and jingles a set of keys that was stashed in a cup-holder. <span.ren>"🔑😁  Is now!!!"</span> <%=s.rm?"he":"she"%>  laughs,  <span.ren>"Wanna take it for a little spin? 🛻😃"</span>
 
 * [[Hey, why not?]]
 * [[That seems like a bad idea...]]
@@ -111,33 +111,33 @@ You don't want to be the only one here when someone notices everything that's mi
 :: I can't leave my friend...
 You remember that Reese is still here, and possibly in danger. You can't just abandon him, not at a party full of predators!
 
-<q.ren>Oh, ur 🐹 friend's totally in some pred's belly by now, 🐺🤰</q> Ren says.
+<span.ren>"Oh, ur 🐹 friend's totally in some pred's belly by now, 🐺🤰"</span> Ren says.
 
 What? You ask <%=s.rm?"him":"her"%> how <%=s.rm?"he":"she"%> knows.
 
-<q.ren><!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%> Call it a hunch,</q> <%=s.rm?"he":"she"%> says, <q.ren>No prey ever came to a party like this expecting to leave in one piece, right? Everyone's either here to 🐺 eat or be 🥩 eaten.</q>
+<span.ren>"<!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%> Call it a hunch,"</span> <%=s.rm?"he":"she"%> says, <span.ren>"No prey ever came to a party like this expecting to leave in one piece, right? Everyone's either here to 🐺 eat or be 🥩 eaten."</span>
 
 You didn't realize this was that kind of party, you say.
 
-Ren smirks, <q.ren>Want a ride home?</q>
+Ren smirks, <span.ren>"Want a ride home?"</span>
 
 * [[No, I really shouldn't...]]
 
 :: That seems like a bad idea...
-Ren looks at you, surprised.<q.ren>What, ur backing out now? I thought u were a 🐇 rabbit, not 🐔 chicken.</q>
+Ren looks at you, surprised.<span.ren>"What, ur backing out now? I thought u were a 🐇 rabbit, not 🐔 chicken."</span>
 
 You say you'd really love to... commit a crime, but as a rule, you try not to take rides from strangers.
 
-<q.ren>C'mon,</q> the fox says with a vicious smile, <q.ren>it'll be fun!!! A little joy-ride never hurt nobody!</q>
+<span.ren>"C'mon,"</span> the fox says with a vicious smile, <span.ren>"it'll be fun!!! A little joy-ride never hurt nobody!"</span>
 
 * [[I can't leave my friend...]]
 
 :: No, I really shouldn't...
-Ren narrows <%=s.rm?"his":"her"%> eyes. <q.ren>Ur just trying to snitch on me, aren't u. 😠</q>
+Ren narrows <%=s.rm?"his":"her"%> eyes. <span.ren>"Ur just trying to snitch on me, aren't u. 😠"</span>
 
 What? No, you say. You might be a bit of a square, but you're not a narc.
 
-<%=s.rm?"He":"She"%> climbs out of the truck and advances towards you. <q.ren>😠😠 Don't lie!!! I can *smell* ur lies, 🦊🦊🦊</q> Ren says, nose twitching wildly, <q.ren>Ur practically *dripping* with deceit.</q>
+<%=s.rm?"He":"She"%> climbs out of the truck and advances towards you. <span.ren>"😠😠 Don't lie!!! I can *smell* ur lies, 🦊🦊🦊"</span> Ren says, nose twitching wildly, <span.ren>"Ur practically *dripping* with deceit."</span>
 
 You nervously start to step toward the door.
 
@@ -146,27 +146,27 @@ You nervously start to step toward the door.
 :: Hollis: Escape.
 You take a deep breath and make a break for the door, praying you'll be fast enough to make it out of here alive.
 
-<q.ren>😠😠😠 Graaaah!</q>
+<span.ren>"😠😠😠 Graaaah!"</span>
 
 You're not fast enough. With incredible agility, Ren leaps at you and grabs you by the middle. <%=s.rm?"He":"She"%> bares <%=s.rm?"his":"her"%> claws and fangs.
 
-<q.ren>😡 This is ur fault,</q> <%=s.rm?"he":"she"%> seethes, <q.ren>You were about to go tell on me, weren't u?</q>
+<span.ren>"😡 This is ur fault,"</span> <%=s.rm?"he":"she"%> seethes, <span.ren>"You were about to go tell on me, weren't u?"</span>
 
 * [[What? No!]]
 
 :: What? No!
 No! You cry out, trying to wrestle free, you're not gonna tell anyone! Promise!
 
-<q.ren>🤬 Horsecrud!!!</q> <%=s.rm?"he":"she"%> says, bringing <%=s.rm?"his":"her"%> sharp teeth right up against the exposed fur of your neck, licking saliva from <%=s.rm?"his":"her"%> lips. This is a obscene gesture, uncommon among civilized anthros. <%=s.rm?"He":"She"%> growls, <q.ren>Gimme one good reason I shouldn't frigging eat u right now. 🥩🩸</q>
+<span.ren>"🤬 Horsecrud!!!"</span> <%=s.rm?"he":"she"%> says, bringing <%=s.rm?"his":"her"%> sharp teeth right up against the exposed fur of your neck, licking saliva from <%=s.rm?"his":"her"%> lips. This is a obscene gesture, uncommon among civilized anthros. <%=s.rm?"He":"She"%> growls, <span.ren>"Gimme one good reason I shouldn't frigging eat u right now. 🥩🩸"</span>
 
 Your body is frozen. In the heat of the moment, flushed with fear, you try to reply. Your lips quiver, and your ears flatten, but your tongue won't form words.
 
-<q.ren>Whoops, 😈</q> Ren says, locking the door behind you with a *click*, <q.ren>Too slow.</q>
+<span.ren>"Whoops, 😈"</span> Ren says, locking the door behind you with a *click*, <span.ren>"Too slow."</span>
 
 * [[Ren: No witnesses.]]
 
 :: Ren: No witnesses. [vore]
-Ren glomps <%=s.rm?'his':'her'%> lips over your head (<q.ren>🦊🥱🐇</q>), and begins working to squeeze it into <%=s.rm?'his':'her'%> throat. You try to squirm free, but <%=s.rm?'he':'she'%>'s gripping your body too tightly. Your vision goes dark. The fur on your ears feel slobbery. All you can smell is fish...
+Ren glomps <%=s.rm?'his':'her'%> lips over your head (<span.ren>"🦊🥱🐇"</span>), and begins working to squeeze it into <%=s.rm?'his':'her'%> throat. You try to squirm free, but <%=s.rm?'he':'she'%>'s gripping your body too tightly. Your vision goes dark. The fur on your ears feel slobbery. All you can smell is fish...
 
 You look up at your destination, and wince slightly. The fox's pulsating throat keeps blasting you with ♨️ hot, ♨️♨️ putrid air. <%=s.rm?'He':'She'%> seems to be hyperventilating as <%=s.rm?'he':'she'%> eats you.
 
@@ -176,9 +176,9 @@ You look up at your destination, and wince slightly. The fox's pulsating throat 
 :: Try persuasion? [vore checkpoint]
 Your voice is muffled by the slick tongue covering your face, but you try to call out to Ren: It's not too late! <%=s.rm?'He':'She'%> doesn't have to do this!
 
-The fox lets out a low growl. (<q.ren>😈<%=s.rm?"‍🧛🏻":"🧛🏻‍♀️"%>👅</q>) You realize <%=s.rm?'his':'her'%> teeth are now positioned directly around your throat, and <%=s.rm?'he':'she'%> could easily bite your head off if so inclined.
+The fox lets out a low growl. (<span.ren>"😈<%=s.rm?"‍🧛🏻":"🧛🏻‍♀️"%>👅"</span>) You realize <%=s.rm?'his':'her'%> teeth are now positioned directly around your throat, and <%=s.rm?'he':'she'%> could easily bite your head off if so inclined.
 
-You rationally decide to keep your mouth shut from now on. <%=s.rm?'He':'She'%> responds with a happy murr (<q.ren>🤤</q>) and swallows again, so your shoulders fill <%=s.rm?'his':'her'%> cheeks.
+You rationally decide to keep your mouth shut from now on. <%=s.rm?'He':'She'%> responds with a happy murr (<span.ren>"🤤"</span>) and swallows again, so your shoulders fill <%=s.rm?'his':'her'%> cheeks.
 
 Your face is moments from sliding into <%=s.rm?'his':'her'%> gullet.
 
@@ -195,7 +195,7 @@ You thrash your arms and legs, trying to free yourself. Instinctively, the fox s
 
 You feel stinging pain as Ren releases you, and you collapse weakly to the garage floor. Everything feels hot and blurry. Then you fall unconscious.
 
-<q.ren>😨😨🥩🩸</q>
+<span.ren>"😨😨🥩🩸"</span>
 
 ### Game Over.
 
@@ -204,120 +204,120 @@ You feel stinging pain as Ren releases you, and you collapse weakly to the garag
 :: Get swallowed by Ren. [vore]
 Your head slides into the tight fleshy tube with a slick *grlk* noise.
 
-(<q.ren>🤤💦💦💦</q>)
+(<span.ren>"🤤💦💦💦"</span>)
 
-Ren is pretty large for a fox, but not the biggest anthro you've seen tonight. You get the feeling <%=s.rm?'he':'she'%>'s somewhat struggling to devour you. Still, this doesn't prevent <%=s.rm?'him':'her'%> from swallowing both your head and shoulders in a single powerful <q.ren>😝 *gulp*~</q>.
+Ren is pretty large for a fox, but not the biggest anthro you've seen tonight. You get the feeling <%=s.rm?'he':'she'%>'s somewhat struggling to devour you. Still, this doesn't prevent <%=s.rm?'him':'her'%> from swallowing both your head and shoulders in a single powerful <span.ren>"😝 *gulp*~"</span>.
 
 * [[Enter Ren's stomach.]]
 
 :: Enter Ren's stomach. [vore]
-Your head pokes into Ren's stomach. It's wet. It's hot. It's wet and hot. Your legs slide in behind you. Ren swallows them with a satisfied <q.ren>👅 Murr...</q>, and they slide down <%=s.rm?"his":"her"%> throat like thick, furry noodles.
+Your head pokes into Ren's stomach. It's wet. It's hot. It's wet and hot. Your legs slide in behind you. Ren swallows them with a satisfied <span.ren>"👅 Murr..."</span>, and they slide down <%=s.rm?"his":"her"%> throat like thick, furry noodles.
 
 You've never been eaten before, but it's basically exactly how you imagined it. Your body is packed tight into a curled up position, in a dank, squelching sac meant only for food.
 
 As you lie here, now completely encapsulated in this fox's body, you feel almost... at home? As if you are fulfilling an important role in the grand scheme of things. As though being devoured was exactly what was expected from you from the beginning.
 
-Ren burps (<q.ren>😮‍💨😌</q>) and <%=s.rm?"his":"her"%> stomach walls clench tighter around you. You begin to suspect that getting out of here won't be easy.
+Ren burps (<span.ren>"😮‍💨😌"</span>) and <%=s.rm?"his":"her"%> stomach walls clench tighter around you. You begin to suspect that getting out of here won't be easy.
 
-<q.ren>Woah, 😳</q> <%=s.rm?"he":"she"%> says, rubbing <%=s.rm?"his":"her"%> huge belly, <q.ren>That was intense. 😌😌</q>
+<span.ren>"Woah, 😳"</span> <%=s.rm?"he":"she"%> says, rubbing <%=s.rm?"his":"her"%> huge belly, <span.ren>"That was intense. 😌😌"</span>
 
 * [[Wh-why did you do that?]]
 
 :: Wh-why did you do that? [vore]
 You scramble around inside to get Ren's attention, and ask <%=s.rm?"him":"her"%> why <%=s.rm?"he":"she"%> just ate you.
 
-<q.ren>😕 W-well,</q> <%=s.rm?"he":"she"%> says, <q.ren>I didn't want u to 🐇💨 escape and snitch on me. Then it was kinda like my body just took over? 🦊<!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%></q>
+<span.ren>"😕 W-well,"</span> <%=s.rm?"he":"she"%> says, <span.ren>"I didn't want u to 🐇💨 escape and snitch on me. Then it was kinda like my body just took over? 🦊<!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%>"</span>
 
 You say weren't gonna rat <%=s.rm?"him":"her"%> out, honestly.
 
-<q.ren>Oh,</q> <%=s.rm?"he":"she"%> replies, rubbing <%=s.rm?"his":"her"%> gut bashfully. <q.ren>Well, what's done is done... 😏</q>
+<span.ren>"Oh,"</span> <%=s.rm?"he":"she"%> replies, rubbing <%=s.rm?"his":"her"%> gut bashfully. <span.ren>"Well, what's done is done... 😏"</span>
 
 * [[Can you get me out of here?]]
 
 :: Can you get me out of here? [vore]
-Ren puts a paw on <%=s.rm?"his":"her"%> chin. <q.ren>Well, I... 🤔  don't actually know?</q>
+Ren puts a paw on <%=s.rm?"his":"her"%> chin. <span.ren>"Well, I... 🤔  don't actually know?"</span>
 
 <%=s.rm?"He":"She"%>... doesn't know?
 
-<q.ren>This is actually my first time eating someone whole like this... 😳 Like, I could try throwing u up? But that sounds p gross tbh. 🤢</q>
+<span.ren>"This is actually my first time eating someone whole like this... 😳 Like, I could try throwing u up? But that sounds p gross tbh. 🤢"</span>
 
 * [[...Could you try?]]
 
 :: ...Could you try? [vore]
 You're surprised (and honestly, impressed) to hear this is <%=s.rm?"his":"her"%> first time, considering how fast it went by. Still, your life and Reese's depends on you getting out of here. You ask Ren to try throwing you up.
 
-<q.ren>😕 I mean I guess...</q>  <%=s.rm?"he":"she"%> says. <q.ren>I'd feel really bad if I ☠️ digested u, you seem nice... Although you might finally make my  <%=s.rm?"🍑 ass":"🍈 chest"%> fill out...</q>
+<span.ren>"😕 I mean I guess..."</span>  <%=s.rm?"he":"she"%> says. <span.ren>"I'd feel really bad if I ☠️ digested u, you seem nice... Although you might finally make my  <%=s.rm?"🍑 ass":"🍈 chest"%> fill out..."</span>
 
 Focus, you say! You need <%=s.rm?"him":"her"%> to get you out of here.
 
-<q.ren>Fine... 😒 Here goes... 🤢</q> Ren begins slowly sticking a claw into <%=s.rm?"his":"her"%> throat. Suddenly, you hear the garage's doorknob rattle. <q.ren>😧 Oh crap,</q> Ren says.
+<span.ren>"Fine... 😒 Here goes... 🤢"</span> Ren begins slowly sticking a claw into <%=s.rm?"his":"her"%> throat. Suddenly, you hear the garage's doorknob rattle. <span.ren>"😧 Oh crap,"</span> Ren says.
 
 * [[What now?]]
 
 :: What now? [vore]
 You hear pounding on the door.
 
-<q.ren>Y'know those 🐴 horses I mentioned earlier?</q>
+<span.ren>"Y'know those 🐴 horses I mentioned earlier?"</span>
 
 You squint. The ones <%=s.rm?"he":"she"%> said would never notice?
 
-<q.ren>Yeah, 😬</q> Ren says, <q.ren>they noticed. 🙊</q>
+<span.ren>"Yeah, 😬"</span> Ren says, <span.ren>"they noticed. 🙊"</span>
 
-A <%=s.rm?"gruff":"ladylike"%> voice yells through the door, <q>What's going on in there?</q>
+A <%=s.rm?"gruff":"ladylike"%> voice yells through the door, <span>"What's going on in there?"</span>
 
-<q.ren>Nothing!!!</q> Ren yells back, <q.ren>Just normal, consensual vore!!! 🦊<%=s.rm?"🫃":"🤰"%></q> You feel <%=s.rm?"his":"her"%> belly sag and slosh around you, as <%=s.rm?"he":"she"%> rushes over to the truck and climbs into the driver's seat.
+<span.ren>"Nothing!!!"</span> Ren yells back, <span.ren>"Just normal, consensual vore!!! 🦊<%=s.rm?"🫃":"🤰"%>"</span> You feel <%=s.rm?"his":"her"%> belly sag and slosh around you, as <%=s.rm?"he":"she"%> rushes over to the truck and climbs into the driver's seat.
 
 * [[Ren: Getaway.]]
 
 :: Ren: Getaway. [vore]
 *CW: Grand theft auto.*
 
-Through the muffled fat of Ren's gut, you hear the truck's engine roar to life. The fox gets an excited smile plastered across <%=s.rm?"his":"her"%> face (<q.ren>😃🏎🏎  !!!!</q>) as <%=s.rm?"he":"she"%> slams the truck into reverse, and peels out at full speed.
+Through the muffled fat of Ren's gut, you hear the truck's engine roar to life. The fox gets an excited smile plastered across <%=s.rm?"his":"her"%> face (<span.ren>"😃🏎🏎  !!!!"</span>) as <%=s.rm?"he":"she"%> slams the truck into reverse, and peels out at full speed.
 
 Just then, a <%=s.rm?"surly brown horse in a letterman's jacket":"cream-colored horse with braided hair"%> bursts into the garage, and watches with bewilderment as a huge-gutted fox swerves <%=s.rm?"his":"her"%> prized truck out onto the main road.
 
 "What the fuck!?" the horse yells as Ren speeds away.
 
-Ren pats your curled-up bulge. <q.ren>Don't worry little 🐰 guy... person... thingy. Jus' gotta give these 🐴 yuppies the slip, then I can 🤢 u outta there!!!</q>
+Ren pats your curled-up bulge. <span.ren>"Don't worry little 🐰 guy... person... thingy. Jus' gotta give these 🐴 yuppies the slip, then I can 🤢 u outta there!!!"</span>
 
 You're really not feeling reassured.
 
 * [[H-have you done this before?]]
 
 :: H-have you done this before? [vore]
-Ren smiles. <q.ren>Oh yeah, loads of times!!! 😉🛻💨 What did *u* do in high school?</q>
+Ren smiles. <span.ren>"Oh yeah, loads of times!!! 😉🛻💨 What did *u* do in high school?"</span>
 
 Getting involved in a car-jacking wasn't really in your evening plans, you say. If this goes poorly, you could be killed. Or worse, arrested!
 
-<q.ren>Trust me, ur in good paws. 🐾 No one's ever caught me yet, and I don't intend to be change that. <%=s.rm?"🦹‍♂️":"🦹‍♀️"%></q>
+<span.ren>"Trust me, ur in good paws. 🐾 No one's ever caught me yet, and I don't intend to be change that. <%=s.rm?"🦹‍♂️":"🦹‍♀️"%>"</span>
 
 Ren revs the engine. Soon, <%=s.rm?"he":"she"%>'s onto the highway, experimentally speeding and pushing the limits of the vehicle's motor. You can't see, but a constant grin is plastered on <%=s.rm?"his":"her"%> face. It sounds like <%=s.rm?"he":"she"%>'s truly in <%=s.rm?"his":"her"%> element.
 
 Then, you hear sirens.
 
-<q.ren>Oh, fuzz. 🚔🚔🚔</q> says Ren.
+<span.ren>"Oh, fuzz. 🚔🚔🚔"</span> says Ren.
 
 * [[(oh gosh oh fluff)]]
 
 :: (oh gosh oh fluff) [vore checkpoint]
 You can hear Ren's heart rate quickening as it pulses all around you. Your captor is now being chased by police.
 
-<q.ren>Fudging bullshrimp! 😾🛻🚓🚓💨</q> the fox mutters, noticing two police cars in the rear view mirror.
+<span.ren>"Fudging bullshrimp! 😾🛻🚓🚓💨"</span> the fox mutters, noticing two police cars in the rear view mirror.
 
 You poke <%-s.rm?"him":"her"%> in the gut, and tell Ren that um, you think maybe <%-s.rm?"he":"she"%> should turn <%-s.rm?"him":"her"%>self in. This all seems really dangerous, and you'd *really* like to get out of here in one piece...
 
-Ren pats you firmly, clearly not appreciating the distraction of having you inside <%-s.rm?"him":"her"%> during this tense situation. <q.ren>🤫 Can't talk,</q> <%-s.rm?"he":"she"%> says, <q.ren>evading cops!!!</q>
+Ren pats you firmly, clearly not appreciating the distraction of having you inside <%-s.rm?"him":"her"%> during this tense situation. <span.ren>"🤫 Can't talk,"</span> <%-s.rm?"he":"she"%> says, <span.ren>"evading cops!!!"</span>
 
 * [[Seriously, slow down!]]
 
 :: Seriously, slow down! [vore]
 You tell Ren to slow down, and kick your foot out to help your point. <%=s.rm?"His":"Her"%> stomach seems to respond by growling a little. Is it getting hotter and wetter in here?
 
-<q.ren>😼 Good idea, but I got a better one.</q> Ren replies, ignoring your advice completely. Instead, <%=s.rm?"he":"she"%> floors it, and begins  rapidly gaining speed.
+<span.ren>"😼 Good idea, but I got a better one."</span> Ren replies, ignoring your advice completely. Instead, <%=s.rm?"he":"she"%> floors it, and begins  rapidly gaining speed.
 
 You groan. You're now starting to run low on air, and fizzy liquids are beginning to tickle your toes. You tell Ren that <%=s.rm?"he":"she"%>'s gotta turn <%=s.rm?"him":"her"%>self in, and puke you up.
 
-Instead, Ren turns the truck's lights off, allowing it to disappear into the darkness. <q.ren>My exit's coming up next. Let's see them cop *this!* 😼🛻🔥💨</q>
+Instead, Ren turns the truck's lights off, allowing it to disappear into the darkness. <span.ren>"My exit's coming up next. Let's see them cop *this!* 😼🛻🔥💨"</span>
 * [[Struggle desperately inside Ren.]]
 
 :: Struggle desperately inside Ren. [vore]
@@ -325,15 +325,15 @@ Ren prepares to crank the wheel to the right, and shake the fuzz.
 
 You kick around frantically. Ren pats <%=s.rm?"his":"her"%> gut frantically.
 
-<q.ren>Nnnng~ 😩 S-stop it!!!</q>, <%=s.rm?"he":"she"%> groans, <q.ren>😖 Ur gonna break my focus and...</q>
+<span.ren>"Nnnng~ 😩 S-stop it!!!"</span>, <%=s.rm?"he":"she"%> groans, <span.ren>"😖 Ur gonna break my focus and..."</span>
 
 <%=s.rm?"He":"She"%> misses the turn, and is now heading head-long toward a  barricade of five more police cars.
 
-<q.ren>🚔🚔😦🚔🚔</q>
+<span.ren>"🚔🚔😦🚔🚔"</span>
 
 Defeated, <%=s.rm?"he":"she"%> has no choice but to pull to a stop.
 
-<q.ren>😡 Grr...</q> You hear Ren produce a deep, low growl.
+<span.ren>"😡 Grr..."</span> You hear Ren produce a deep, low growl.
 
 * [[Uh-oh...]]
 
@@ -342,13 +342,13 @@ A wildebeast and a boar step out of the foremost police car to apprehend Ren.
 
 "Outta the car," the wildebeast yells, "You have the right to remain silent."
 
-<q.ren>🐷🐗👮<%=s.rm?"🙇‍♂️":"🙇‍♀️"%>😒...</q> Ren mutters, complying.
+<span.ren>"🐷🐗👮<%=s.rm?"🙇‍♂️":"🙇‍♀️"%>😒..."</span> Ren mutters, complying.
 
 "Paws where I can see em. You're wanted for possession of a stolen vehicle,  reckless driving, and endangerment of life," the boar says. You feel him poke a finger at you through Ren's shirt. "This thing still alive?" he asks.
 
 "Not sure," the wildebeast says. She asks Ren, "Is your prey recent?"
 
-Ren shakes <%=s.rm?"his":"her"%> head. <q.ren><%=s.rm?"🙅‍♂️":"🙅‍♀️"%>... ⏱🐇🥩☠️ *BURP*.</q>
+Ren shakes <%=s.rm?"his":"her"%> head. <span.ren>"<%=s.rm?"🙅‍♂️":"🙅‍♀️"%>... ⏱🐇🥩☠️ *BURP*."</span>
 
 "We're probably too late," the boar says, "it seems pretty far along in the digestive process..."
 
@@ -359,7 +359,7 @@ You struggle vehemently. You do feel weaker after being trapped in here for so l
 
 The wildebeast scratches her head and asks Ren, "We're too far out to get an ambulance here. Can you puke up this prey?"
 
-<q.ren>🥺🥺😖</q> says Ren.
+<span.ren>"🥺🥺😖"</span> says Ren.
 
 You squirm and kick harder, letting out kicks and muffled yells.
 
@@ -372,11 +372,11 @@ You cry out. No I'm not! Let me out! Please!
 
 "Alright," says the wildebeast, "just don't tell the PRA's. Media will be all over our ass if they catch a whiff of this..."
 
-Ren sighs with relief, <q.ren>😌😌😌</q>. You guess <%=s.rm?"he":"she"%>'s really mad at you.
+Ren sighs with relief, <span.ren>"😌😌😌"</span>. You guess <%=s.rm?"he":"she"%>'s really mad at you.
 
 The boar snaps a pair of handcuffs onto <%=s.rm?"his":"her"%> wrists and says, "We recieved a report from one <%=s.rm?"Basil":"Lacey"%> Armstrong of a stolen vehicle with this tag. Ren Davis, you are under arrest."
 
-Ren's stomach pulses around you happily (<q.ren>⛓<%=s.rm?"🤷‍♂️":"🤷‍♀️"%>😏☠️</q>). As Ren is hauled away, you feel yourself... beginning to... pass out.
+Ren's stomach pulses around you happily (<span.ren>"⛓<%=s.rm?"🤷‍♂️":"🤷‍♀️"%>😏☠️"</span>). As Ren is hauled away, you feel yourself... beginning to... pass out.
 
 <% setup.addAchievement("REN_VORE_ENDING"); %>
 
@@ -409,21 +409,21 @@ $(window).on("sm.passage.shown", () => {
 :: Epilogue: Ren route. [morning]
 The late morning sun pours through a square window, between steel bars, and onto a big, fat-gutted fox who is sleeping soundly inside a concrete cell at the St. Buckwheat Corrections Facility.
 
-<q.ren>🥱... What a party!</q> <%-s.rm?"he":"she"%> yawns.
+<span.ren>"🥱... What a party!"</span> <%-s.rm?"he":"she"%> yawns.
 
-Ren's cellmate—a small copper-colored fennec fox—looks over. <%-!s.rm?"He":"She"%> says with hard, metallic lisp, <q.xander>Look who decided to wake up,</q> <%-!s.rm?"he":"she"%> says, <q.xander>The name is <%=!s.rm?"Xander":"Xandra"%>, serial tax evader. What is a cute thing like you doing in a place like this?</q>
+Ren's cellmate—a small copper-colored fennec fox—looks over. <%-!s.rm?"He":"She"%> says with hard, metallic lisp, <span.xander>"Look who decided to wake up,"</span> <%-!s.rm?"he":"she"%> says, <span.xander>"The name is <%=!s.rm?"Xander":"Xandra"%>, serial tax evader. What is a cute thing like you doing in a place like this?"</span>
 
-<q.ren>🤔 Well, I got caught stealing a cool 🛻 truck from some horses, plus several hundreds of dollars of 💰 valuable goods. So basically... <!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%> nothing!!!</q>
+<span.ren>"🤔 Well, I got caught stealing a cool 🛻 truck from some horses, plus several hundreds of dollars of 💰 valuable goods. So basically... <!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%> nothing!!!"</span>
 
-<%-!s.rm?"Xander":"Xandra"%> chuckles, <q.xander>Crikey, sounds like quite the evening.</q>
+<%-!s.rm?"Xander":"Xandra"%> chuckles, <span.xander>"Crikey, sounds like quite the evening."</span>
 
-<q.ren>Oh, and I ate an <img class="emoji" alt="(agender pride flag)" src="assets/images/emoji-agender-flag.svg"></a> agender 🐇 rabbit at a 🎈 party!!! </q> Ren pats <%-s.rm?"his":"her"%> gut, and it grumbles back in response. <q.ren>I'll probs need to use that 🚽 toilet over there in a few hours...</q>
+<span.ren>"Oh, and I ate an <img class="emoji" alt="(agender pride flag)" src="assets/images/emoji-agender-flag.svg"></a> agender 🐇 rabbit at a 🎈 party!!! "</span> Ren pats <%-s.rm?"his":"her"%> gut, and it grumbles back in response. <span.ren>"I'll probs need to use that 🚽 toilet over there in a few hours..."</span>
 
-<q.xander>Wait, you can eat and digest people?</q> <%-!s.rm?"Xander":"Xandra"%> frowns, now becoming very cognizant of the fact that <%-!s.rm?"he":"she"%>'s all alone with <%-s.rm?"him":"her"%>.
+<span.xander>"Wait, you can eat and digest people?"</span> <%-!s.rm?"Xander":"Xandra"%> frowns, now becoming very cognizant of the fact that <%-!s.rm?"he":"she"%>'s all alone with <%-s.rm?"him":"her"%>.
 
-<q.ren>Only as of recently, but yeah!!! 😃😃 I'm not overly happy to be here, but it was actually really nice of the 🏛 prison system to serve me 🍳 breakfast in bed!</q>
+<span.ren>"Only as of recently, but yeah!!! 😃😃 I'm not overly happy to be here, but it was actually really nice of the 🏛 prison system to serve me 🍳 breakfast in bed!"</span>
 
-<q.xander>Uh, what do you mean breakfast in...</q> <%-!s.rm?"Xander":"Xandra"%> blinks at the realization. <q.xander>...Oh shit.</span></q>
+<span.xander>"Uh, what do you mean breakfast in..."</span> <%-!s.rm?"Xander":"Xandra"%> blinks at the realization. <span.xander>"...Oh shit.</span>"</span>
 
 ### The End.
 

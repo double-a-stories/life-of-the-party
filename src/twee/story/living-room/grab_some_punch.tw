@@ -35,7 +35,7 @@ You walk over to the snack table, and slam down a fourth cup of vodka punch. You
 You walk over the punch bowl, look down at the vat of boozy Kool-Aid, and scowl with disgust. You get the nagging feeling that if you have one more drink, something bad will happen.
 
 <% if (s.rescuedKaia) { %>
-Kaia the mouse looks up at you with concern. <q.mouse>Uh, hi Hollis! I hear that punch can be pretty strong. Maybe you should take it slow?</q>
+Kaia the mouse looks up at you with concern. <span.mouse>"Uh, hi Hollis! I hear that punch can be pretty strong. Maybe you should take it slow?"</span>
 
 * [[Good idea, thanks.]]
 * [[Drink it anyway.|Get very very drunk.]] *(CW: Alcohol abuse, Player pred)*
@@ -51,7 +51,7 @@ A Labrador notices and elbows you. "Woahh, dude! Sick moves, but maybe you shoul
 :: Good idea, thanks.
 You nod, and thank her for looking out of your health.
 
-<q.mouse>No problem! Lemme know if you find faith. Er, Faith, my girlfriend.</q>
+<span.mouse>"No problem! Lemme know if you find faith. Er, Faith, my girlfriend."</span>
 
 * [[Go back.|Dance a little.]]
 
@@ -72,11 +72,11 @@ You watch as the jackrabbit snarfs down the little white mouse with a satisfied 
 
 You feel slightly guilty about not intervening. And somehow... aroused?
 
-The jackrabbit moans, <q.jackrabbit>Mmm... Hrgh!</q> then suddenly clutches at her throat. You see the bulge in her esophagus writhing around. The mouse didn't go down. Somehow, she's fighting her way back up! <q.jackrabbit>Kaff-kaff-kaff! Hork! Bleh!</q> the jackrabbit coughs and wheezes, and finally, spits the mouse onto the floor.
+The jackrabbit moans, <span.jackrabbit>"Mmm... Hrgh!"</span> then suddenly clutches at her throat. You see the bulge in her esophagus writhing around. The mouse didn't go down. Somehow, she's fighting her way back up! <span.jackrabbit>"Kaff-kaff-kaff! Hork! Bleh!"</span> the jackrabbit coughs and wheezes, and finally, spits the mouse onto the floor.
 
 The mouse nimbly lands in a roll, and scampers off out of the living room.
 
-<q.jackrabbit>Eugh...</q> groans the jackrabbit, then she narrows her eyes on you. <q.jackrabbit>...What're you lookin' at, buster?</q>
+<span.jackrabbit>"Eugh..."</span> groans the jackrabbit, then she narrows her eyes on you. <span.jackrabbit>"...What're you lookin' at, buster?"</span>
 
 * [[Go back.|Dance a little.]]
 
@@ -85,32 +85,32 @@ You nervously shout at the jackrabbit not to eat the mouse.
 
 She stops dangling the little white mouse girl over her mouth, and turns to look at you. Despite being another rabbit, she has a carnivorous affect to her. She's a bit taller than you, and judging by the length of her claws, she seems to have neglected trimming them for a few weeks.
 
- With an annoyed glare, she asks, <q.jackrabbit>Hmph. Whatsit to ya?</q>
+ With an annoyed glare, she asks, <span.jackrabbit>"Hmph. Whatsit to ya?"</span>
 
 * [[She's not food!]]
 * [[That's a living person!]]
 
 :: She's not food!
-The jackrabbit narrows her eyes and says, <q.jackrabbit>Dunno know what rock you've been livin' under, bud. We're *all* food. This one's mine.</q>
+The jackrabbit narrows her eyes and says, <span.jackrabbit>"Dunno know what rock you've been livin' under, bud. We're *all* food. This one's mine."</span>
 
 * [[That's a living person!]]
 * [[Grab the mouse out of her claws.]]
 
 :: That's a living person!
-She rolls her eyes and says, <q.jackrabbit>Oh, you're one of those micro-rights hippies? Come to tell me about peace, love, 'n co-existence?</q>
+She rolls her eyes and says, <span.jackrabbit>"Oh, you're one of those micro-rights hippies? Come to tell me about peace, love, 'n co-existence?"</span>
 
-You start to speak, but she interrupts, <q.jackrabbit>Or maybe you're jus' jealous'a me nabbing an easy snack?</q>
+You start to speak, but she interrupts, <span.jackrabbit>"Or maybe you're jus' jealous'a me nabbing an easy snack?"</span>
 
 * [[No, I don't eat people!]]
 
 :: No, I don't eat people!
-She smiles and says, <q.jackrabbit>Your loss. Either way, you're not gettin' your paws on it. Got that?</q>
+She smiles and says, <span.jackrabbit>"Your loss. Either way, you're not gettin' your paws on it. Got that?"</span>
 
 * [[Grab the mouse out of her claws.]]
 * [[G-got it. Nevermind.]] *(Do nothing.)*
 
 :: G-got it. Nevermind.
-<q.jackrabbit>Good,</q> she says, <q.jackrabbit>You're smarter than you look, kid.</q>
+<span.jackrabbit>"Good,"</span> she says, <span.jackrabbit>"You're smarter than you look, kid."</span>
 
 <%= story.render("Do nothing.") /* [[Do nothing.]] */ %>
 
@@ -119,7 +119,7 @@ You try to wrest the mouse from her claws.
 
 The jackrabbit looks with surprise as you attempt to free the mouse by force. She lifts the mouse higher, just out of your reach.
 
-<q.jackrabbit>Ugh, if you're really that desperate, just take it.</q>
+<span.jackrabbit>"Ugh, if you're really that desperate, just take it."</span>
 
 She drops the mouse into your outstretched paws. You hold her very carefully.
 
@@ -132,29 +132,29 @@ You ask if she's hurt.
 
 <% s.rescuedKaia = true; %>
 
-She replies in a small voice, <q.mouse>Not physically, but I think my life might have flashed before my eyes...</q>
+She replies in a small voice, <span.mouse>"Not physically, but I think my life might have flashed before my eyes..."</span>
 
 That's... good? you guess. You tell her you're really sorry. You promise, not all rabbits are like that. You set her down on the punch table.
 
-<q.mouse>No, no, it's totally my fault for not being careful.</q> She dusts herself off. <q.mouse>Thanks for the rescue! I really owe you one.</q>
+<span.mouse>"No, no, it's totally my fault for not being careful."</span> She dusts herself off. <span.mouse>"Thanks for the rescue! I really owe you one."</span>
 
 * [[Don't worry about it!]]
 * [[You're welcome!|Don't worry about it!]]
 
 :: Don't worry about it!
-Kaia smiles up at you. <q.mouse>Honestly, it'd be really embarassing if my whole purpose in life was to be a meal for some rando at a college party!</q>
+Kaia smiles up at you. <span.mouse>"Honestly, it'd be really embarassing if my whole purpose in life was to be a meal for some rando at a college party!"</span>
 
 You scratch your head, and say yeah, it would. You're awkwardly silent for a moment.
 
-<q.mouse>Oh, how rude of me. My name's Kaia. Pleased to meet you!</q>
+<span.mouse>"Oh, how rude of me. My name's Kaia. Pleased to meet you!"</span>
 
 You reply that your name is Hollis, and ask the mouse if she's here with anybody else.
 
-<q.mouse>I'm here with my friend Faith,</q> she says, <q.mouse>Er, girlfriend actually. I haven't seen her recently, but I'm sure she's fine. Would you let me know if you see her? She's a mouse like me.</q>
+<span.mouse>"I'm here with my friend Faith,"</span> she says, <span.mouse>"Er, girlfriend actually. I haven't seen her recently, but I'm sure she's fine. Would you let me know if you see her? She's a mouse like me."</span>
 
 You nod again.
 
-<q.mouse>Awesome! I'll be hanging out over by the punch bowl.</q>
+<span.mouse>"Awesome! I'll be hanging out over by the punch bowl."</span>
 
 You gain **+15 morality points**. Only 30 more of those, and you'll unlock the True Ending!
 
