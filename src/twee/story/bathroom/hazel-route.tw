@@ -3,7 +3,6 @@ Just as you finish, Hazel Gently busts in, impatiently. You remember her as the 
 She devours you, threatening to do worse if you don't let her. She posts pics of it to social media. -->
 
 :: Masturbate.
-*CW: Nonconsensual vore. Death. Rape threat. Humiliation. Size difference. Chubby pred. Breath denial. Casual vore. Sadism. Exhibitionism.*
 
 Ha-ha.
 
@@ -14,6 +13,7 @@ You take a deep breath, get your impulses under control, and...
 * [[Leave.|Leave the bathroom.]]
 * [[Masturbate in the bathroom.]]
 
+<%=T.CWP("Nonconsensual vore", "Death", "Rape threat", "Humiliation", "Size difference", "Chubby pred", "Breath denial", "Casual vore", "Sadism", "Exhibitionism")%>
 :: Masturbate in the bathroom.
 You... um... Okay.
 
@@ -59,7 +59,7 @@ Suddenly, you hear a loud pounding at the door.
 
 * [[Oh shit!]]
 
-:: Oh shit!
+:: Oh shit! [checkpoint]
 <%-s.hg?"He":"She"%> bangs impatiently on the door for a few more seconds. You realize with horror that you never locked the door behind you.
 
 "That's it!" <%-s.hg?"he":"she"%> says, "I'm coming in there."
@@ -87,8 +87,7 @@ In your last waking seconds, you realize this was a very stupid idea.
 
 ### Game Over.
 
-* [[Undo|Oh shit!]]
-* <a0 onclick="setup.restart()">Restart.</a>
+* <a0 onclick="setup.rewind()">Rewind.</a>
 
 :: Wait, I can explain!
 <% s.previousCommand = "Wait, I-" %>
@@ -263,6 +262,6 @@ The owl snickers and grabs <%-s.hg?"him":"her"%> by the arm. "Hoo hoo hoo! Omigo
 
 <% setup.addAchievement("HAZEL_VORE_ENDING"); %>
 
-* [[Epilogue.|Epilogue: Hazel Post Vore.]] *(CW: Scat.)*
+* [[Epilogue.|Epilogue: Hazel Post Vore.]] <%=T.CWI("Scat")%>
 * <a0 onclick="setup.restart()">Restart.</a>
 

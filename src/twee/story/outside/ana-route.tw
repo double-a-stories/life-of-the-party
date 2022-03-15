@@ -1,14 +1,14 @@
 <!-- You go outside and talk to Ana Rose, a hungry hyena with some self-esteem issues. You get familiar, and eventually offer to be eaten. She agrees on the condition that you can't change your mind, and snarfs you down quickly. You begin to have second thoughts, but it's too late. -->
 
 :: Look at hyena. [checkpoint]
-*CW: Willing vore, unwilling digestion. Revoked consent. Accidental digestion. Casual vore. Girl with penis. Masturbation.*
-
 She's wearing acid-wash jeans and a black t-shirt that reads "Bad Bitch". She has sandy-colored fur with brown spots, and a thick long neck.
 
 The hyena sees you staring, and looks up from her phone. She notices you, and says, "Oh. Sup."
 
 * [[What are you doing out here alone?]]
 * [[Have you seen my friend?]]
+
+<%=T.CWP("Willing prey", "Unwilling digestion", "Revoked consent", "Accidental digestion", "Casual vore", "Girl with penis", "Masturbation")%>
 
 :: What are you doing out here alone?
 She folds her arms and and flips her mohawk non-chalantly. "Could ask you the same question."
@@ -66,7 +66,7 @@ She snickers as you helplessly tumble over your words. For a moment, she hesitat
 * [[Do you want a hug?]]
 * [[Anyway, I'm looking for this friend of mine?|I came here with a friend...]]
 
-:: Do you want a hug?
+:: Do you want a hug? [checkpoint]
 "...Sure, whatever," she replies, with a little smile, and stretches out her arms. You give Ana a hug. You can tell she's wearing a lot of deodorant, but it's actually quite nice. You don't remember the last time you were hugged.
 
 After a what feels like a wonderful eternity, she lets go. "That was nice," she says, slouching down a little.
@@ -109,7 +109,7 @@ The second you touch her hair, the hyena immediately lets out an vicious bark, a
 
 ### Game Over
 
-* [[Do you want a hug?]] *(Rewind)*
+* <a0 onclick="setup.rewind()">Rewind</a>
 
 :: A quiet moment.
 For a little while, neither of you say anything. The two of you sit there in comfortable silence, watching the stars.
@@ -565,11 +565,11 @@ Ana giggles contendedly. "...I'll take that as a yes."
 
 <% setup.addAchievement("ANA_VORE_ENDING"); %>
 
-* [[Epilogue.|Epilogue: Ana Post Vore.]] *(CW: Scat Disposal.)*
+* [[Epilogue.|Epilogue: Ana Post Vore.]] <%=T.CWI("Scat disposal")%>
 * <a0 data-passage="Start">Restart</a>
 
 :: Epilogue: Ana Post Vore. [morning]
-*CW: Desperate to poop. Graphic Scat. Urination. Chain restaurants.*
+<%=T.CWP("Desperate to poop", "Graphic scat", "Urination", "Chain restaurants")%>
 
 The morning sun beats down. A hung-over hyena wakes up on a bench in the backyard of the Armstrong household.
 

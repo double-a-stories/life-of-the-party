@@ -8,9 +8,6 @@
 
 
 :: Go to the garage. [checkpoint]
-*CW: Nonconsensual vore. Death. Violent threat. Accidental injury.*
-
-*Kinks: Casual vore. Bad breath. Police corruption.*
 
 You walk down the hall and enter the garage. The garage door is open, looking out onto rows of similarly suburban houses. Cool fresh air enters. The smell of freedom.
 
@@ -23,6 +20,7 @@ A few feet ahead of you, you see a red fox, who appears to be struggling to carr
 * <a0 data-passage="What are you doing?" onclick="story.state.rm = true">Ask him what he's up to.</a> *(Male Pred)*
 * <a0 data-passage="What are you doing?" onclick="story.state.rm = false">Ask him what he's up to.</a> *(Female Pred)*
 
+<%=T.CWP("Nonconsensual vore", "Death", "Violent threat", "Accidental injury", "Casual vore", "Bad breath", "Police corruption")%>
 <div->[[What are you doing?]]</div>
 
 :: What are you doing?
@@ -79,7 +77,6 @@ Taking this as your cue to leave, you twist the knob to the garage door. Just as
 * [[Hollis: Escape.]]
 
 :: Help Ren.
-*CW: Crimes? Crimes.*
 
 You can't fault <%=s.rm?"his":"her"%> logic. Well, you can, but you probably shouldn't get on this fox's bad side. You walk over and unlatch the tailgate so Ren can load <%=s.rm?"his":"her"%> pile of loot onto the flatbed.
 
@@ -93,6 +90,7 @@ N-no problem, you stammer!
 
 * [[Is this your truck?]]
 
+<%=T.CWP("Crimes? Crimes")%>
 :: Is this your truck? [checkpoint]
 You ask Ren if this is <%=s.rm?"his":"her"%> vehicle, even though you probably know the answer already.
 
@@ -189,7 +187,7 @@ Your face is moments from sliding into <%=s.rm?'his':'her'%> gullet.
 Just before your head slips into the fox's slimy throat. You take in a big lungful of putrid air and hold it. <%= story.render("Get swallowed by Ren.") /* [[Get swallowed by Ren.]] */%>
 
 :: Struggle for freedom! [gore]
-*CW: Accidental injury. Blood. Mauling.*
+<%=T.CWP("Accidental injury", "Blood", "Mauling")%>
 
 You thrash your arms and legs, trying to free yourself. Instinctively, the fox sinks <%=s.rm?'his':'her'%> teeth into the flesh of your neck, something <%=s.rm?'he':'she'%> immediately regrets.
 
@@ -270,7 +268,6 @@ A <%=s.rm?"gruff":"ladylike"%> voice yells through the door, <span>"What's going
 * [[Ren: Getaway.]]
 
 :: Ren: Getaway. [vore]
-*CW: Grand theft auto.*
 
 Through the muffled fat of Ren's gut, you hear the truck's engine roar to life. The fox gets an excited smile plastered across <%=s.rm?"his":"her"%> face (<span.ren>"😃🏎🏎  !!!!"</span>) as <%=s.rm?"he":"she"%> slams the truck into reverse, and peels out at full speed.
 
@@ -284,6 +281,7 @@ You're really not feeling reassured.
 
 * [[H-have you done this before?]]
 
+<%=T.CWP("Grand theft auto")%>
 :: H-have you done this before? [vore]
 Ren smiles. <span.ren>"Oh yeah, loads of times!!! 😉🛻💨 What did *u* do in high school?"</span>
 

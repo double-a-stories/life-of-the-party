@@ -3,14 +3,14 @@
 :: Wink back at Basil. [checkpoint]
 <% setup.setFlag("talkedToBasil"); %>
 
-*CW: Exhibitionism. Revoked consent. Willing vore, unwilling digestion. Asphyxiation.  Scat references. Casual vore. Sadism.*
-
 The horse smiles, and walks over to you, carrying two bottles of beer. Like most draft horses, he's an absolute giant, although it's more polite to refer to larger anthros using euphemisms like "gentle", whereas smaller anthros are "noble".
 
 "Hey, thanks for coming," he says, squatting down to offer you one. It's this gesture makes you realize that he's truly twice your height, and easily the biggest person in the room. "I'm Basil."
 
 * [[Take drink.]]
 * [[Don't take drink.]]
+
+<%=T.CWP("Exhibitionism", "Revoked consent", "Willing prey", "Unwilling digestion", "Asphyxiation", "Scat references", "Casual vore", "Sadism")%>
 
 :: Take drink.
 You take the bottle and have a few courteous sips. He chugs his immediately, swallowing the whole beer in only a few gulps. It's impressive to watch. He wipes his mouth.
@@ -242,7 +242,7 @@ Basil smiles as the party rages on. Another night well planned.
 
 <% setup.addAchievement("BASIL_VORE_ENDING"); %>
 
-* [[Epilogue.|Epilogue: Basil Post Vore.]] *(CW: Scat Disposal.)*
+* [[Epilogue.|Epilogue: Basil Post Vore.]] <%=T.CWI("Scat disposal")%>
 * <a0 data-passage="Start">Restart</a>
 
 :: Epilogue: Basil Post Vore. [morning]

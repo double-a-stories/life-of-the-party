@@ -38,12 +38,12 @@ You walk over the punch bowl, look down at the vat of boozy Kool-Aid, and scowl 
 Kaia the mouse looks up at you with concern. <span.mouse>"Uh, hi Hollis! I hear that punch can be pretty strong. Maybe you should take it slow?"</span>
 
 * [[Good idea, thanks.]]
-* [[Drink it anyway.|Get very very drunk.]] *(CW: Alcohol abuse, Player pred)*
+* [[Drink it anyway.|Get very very drunk.]] <%=T.CWI("Alcohol abuse", "Player pred")%>
 
 <% } else { %>
 A Labrador notices and elbows you. "Woahh, dude! Sick moves, but maybe you should go easy on the party sauce, kay dude?"
 
-* [[Get very very drunk.]] *(CW: Alcohol abuse, Player pred)*
+* [[Get very very drunk.]] <%=T.CWI("Alcohol abuse", "Player pred")%>
 * [[Probably for the best...|Dance a little.]]
 <% } %>
 <% } %>
@@ -162,7 +162,6 @@ You gain **+15 morality points**. Only 30 more of those, and you'll unlock the T
 
 :: Get very very drunk. [dark drunk]
 
-*CW: Alcohol abuse. Player pred. Micro prey. Peer pressure. Voyeurism. Unwilling prey. Death. Nonconsensual vore.*
 
 You decide to grab one more cup of spiked punch, and shudder as you swallow its contents.
 
@@ -176,6 +175,7 @@ Uh...
 
 * [[What?|Drunk route bullshit]]
 
+<%=T.CWP("Alcohol abuse", "Player pred", "Micro prey", "Peer pressure", "Voyeurism", "Unwilling prey", "Death", "Nonconsensual vore")%>
 :: Drunk route bullshit [dark drunk]
 You remember drinking a fifth cup of punch, probably five more than your tiny rabbit body could handle. Then you went back onto the dance floor... and...
 

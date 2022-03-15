@@ -448,11 +448,11 @@ In response, Nikki narrows her eyes and begins to impatiently dangle Faith by th
 
 You shudder... It's too much to even listen to. You're anticipating the awful, horrible sound of a cat's mouth gorily eviscerating its prey. All the content warnings in the world couldn't prepare you for what's to come.
 
-* [[Nikki: Chomp.]] *(CW: ?????)*
-* [[Rescue her!!!]]  *(CW: ?????)*
+* [[Nikki: Chomp.]] <%=T.CWI("?????")%>
+* [[Rescue her!!!]]  <%=T.CWI("?????")%>
 
 :: Rescue her!!! [gore]
-*CW: Blood. Accidental mauling.*
+<%=T.CWP("Blood", "Accidental mauling")%>
 
 In a last ditch effort to save Faith from a bloody fate, you lunge forward and try to snatch the mouse from Nikki's mouth.
 
@@ -464,10 +464,12 @@ Nox's eyes go wide, as he stops the recording, and deletes it. <span.nox>"Th-tha
 
 Seems like you're too little, too late. But who could blame you for trying?
 
+### Game Over.
+
 * <a0 onclick="setup.rewind()">Rewind.</a>
 
 :: Nikki: Chomp.
-*CW: Soft vore. Teasing.*
+<%=T.CWP("Soft vore", "Teasing")%>
 
 Nikki delicately lifts her chin, placing more of Faith's tiny body into her mouth. Her tongue is slick with spit, and occasionally pulses underneath her prey, making all kinds of slobbery wet sounds.
 
@@ -765,7 +767,6 @@ You ask, <span.mouse>"Do you think we'll see each other again?"</span>
 
 You laugh, and snuggle your head into Kaia's fur, and sigh. As the slurry of acids rise to overtake you, you whisper, <span.mouse>"That's... good enough for me."</span>
 
-## The end.
+## The End.
 
 * <a0 onclick="setup.restart()">Restart.</a>
-* [[Credits]]

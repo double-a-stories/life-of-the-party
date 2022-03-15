@@ -37,8 +37,6 @@ You close the drawer. Probably shouldn't touch any of these...
 * [[Go back.|Upstairs Hallway]]
 
 :: Examine L's bedroom door.
-*CW: Oral sex (Male partner x Player). Voyeurism. Multiple prey. Nonconsensual vore. Semi-willing digestion. Death.*
-
 You covertly bring one of your ears to the first bedroom door. There are definitely people inside. You can hear a muffled moaning.
 
 What do you do?
@@ -46,6 +44,7 @@ What do you do?
 * [[Knock politely on the door.]] *(Smells like dog.)*
 * [[Ignore it.]]
 
+<%=T.CWP("Oral sex (Male partner x Player)", "Voyeurism", "Multiple prey", "Nonconsensual vore", "Semi-willing digestion", "Death")%>
 :: Knock politely on the door.
 "Um, go away," says a male voice from inside the room.
 
