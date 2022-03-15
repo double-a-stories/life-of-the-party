@@ -26,14 +26,9 @@ tw-passage > * {
   margin-bottom: 2rem;
 }
 </style>
-<div class="logo">
-<h1 class="logo__title">
-<img class="logo__horse" role="presentation" src="assets/images/logo-horse-left.svg" width="50" height="45"><!--
---><span><%- story.name %></span><!--
---><img class="logo__horse" role="presentation" src="assets/images/logo-horse-right.svg" width="56" height="45">
-</h1>
-<p class="logo__subtitle">A Furry Vore Adventure by Double-A</p>
-</div>
+
+<%= story.render("LotP Logo") %>
+
 <div.center-list>
 
 * [[Life of the Party.]]
@@ -48,12 +43,11 @@ tw-passage > * {
 </div>
 
 :: Content Warning [no_heading topbar_hide]
-### ⚠️&#xFE0F; Content warning ⚠️&#xFE0F;
-*Life of the Party* is an **experimental interactive fetish story** for **ADULTS ONLY**.
+### Content warning
 
-You will assume the role of prey, and be **swallowed and unwillingly digested**. Some scenes contain strong and potentially distressing content, including **sadism, rape threats, asphyxiation, scat disposal, and accidental death**.
+⛔️ This is an experimental interactive fetish story for **ADULTS ONLY**. You will assume the role of prey, and be **swallowed and unwillingly digested**. Some scenes contain strong and potentially distressing content, including **sadism, rape threats, asphyxiation, scat disposal, and accidental death**.
 
-If you choose to continue, you do so **at your own risk**.
+⚠️ If you choose to continue, you do so **at your own risk**.
 
 :: Achievements list
 <% const [count, max] = setup.getAchievementCount(); %>
@@ -68,3 +62,13 @@ If you choose to continue, you do so **at your own risk**.
 .locked-achievement img {
   filter: grayscale(1);
 }
+
+:: LotP Logo
+<div class="logo">
+<h1 class="logo__title">
+<img class="logo__horse" role="presentation" src="assets/images/logo-horse-left.svg" width="50" height="45"><!--
+--><span><%- story.name %></span><!--
+--><img class="logo__horse" role="presentation" src="assets/images/logo-horse-right.svg" width="56" height="45">
+</h1>
+<p class="logo__subtitle">A Furry Vore Adventure by Double-A</p>
+</div>
