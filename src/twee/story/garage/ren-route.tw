@@ -18,7 +18,7 @@ A few feet ahead of you, you see a red fox, who appears to be struggling to carr
 <span.ren>"Hiya!!! 😊👋🐾"</span> the fox says, talking in an <span.ren>unusually 😃 excited and 😃😃 expressive manner.</span>
 
 * <a0 data-passage="What are you doing?" onclick="story.state.rm = true">Ask him what he's up to.</a> *(Male Pred)*
-* <a0 data-passage="What are you doing?" onclick="story.state.rm = false">Ask him what he's up to.</a> *(Female Pred)*
+* <a0 data-passage="What are you doing?" onclick="story.state.rm = false">Ask her what she's up to.</a> *(Female Pred)*
 
 <%=T.CWP("Nonconsensual vore", "Death", "Violent threat", "Accidental injury", "Casual vore", "Bad breath", "Police corruption")%>
 <div->[[What are you doing?]]</div>
