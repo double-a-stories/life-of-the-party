@@ -351,7 +351,7 @@ You kick your legs out, striking <%-s.bm?"Byron":"Emily"%> directly in the solar
 :: It doesn't have to be that way... [vore]
 <span.byron>"Ah, what a splendid idea!"</span> <%-s.bm?"he":"she"%> says, patting the outline of your head as if you were a toddler, <span.byron>"You have picked a wonderful time to sell me on this fantastic utopia of yours!"</span> <%-s.bm?"Byron":"Emily"%> sits down on the bed.
 
-<span.byron>"What do you propose? Peaceful, vegan coexistence? Pred and prey suddenly singing Kumbaya? Getting our fix by swallowing eggs, and suppressing our desires into <q>healthy outlets"</span>, like rock songs about juicy, dripping flesh?</q>
+<span.byron>"What do you propose? Peaceful, vegan coexistence? Pred and prey suddenly singing Kumbaya? Getting our fix by swallowing eggs, and suppressing our desires into 'healthy outlets', like rock songs about juicy, dripping flesh?</span>
 
 * [[Well, not exactly...]]
 
@@ -388,7 +388,7 @@ Yes, you reply wearily.
 * [[Yes, <%-s.bm?"sir":"ma'am"%>.|Yes, sir.]]
 
 :: Yes, sir. [vore]
-<%-s.bm?"Byron":"Emily"%> smiles. <span.byron>"There, was that so hard? I'm only asking for a little decency. For the record, I would have accepted <q>yes <%-s.bm?"master":"mistress"%>"</span> as well, heh.</q>
+<%-s.bm?"Byron":"Emily"%> smiles. <span.byron>"There, was that so hard? I'm only asking for a little decency. For the record, I would have accepted '<%-s.bm?"master":"mistress"%>' as well, heh."
 
 Resentfully, you ask if this means you can come out now.
 
