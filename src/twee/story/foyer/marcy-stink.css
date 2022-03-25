@@ -1,0 +1,53 @@
+/* Pink background, for Marcy stink hypnosis */
+/* TODO: Maybe add an animation for cycling these? */
+
+/* Applied from the moment Hollis is exposed to Marcy. */
+body[data-tags~="pheromones_lighter"] {
+    --background: #ffeef8;
+}
+
+/* Applied when Marcy's anxiety causes her stink to flare up. */
+body[data-tags~="pheromones_light"] {
+    --background: #fde;
+}
+
+/* Applied when Hollis invades Marcy's space. */
+body[data-tags~="pheromones_strong"] {
+    --background: #fae;
+    --color: #320;
+}
+
+/* Applies when Hollis really up in Marcy's biz. */
+body[data-tags~="pheromones_full"] {
+    --background: #f6e;
+    /* --light: #fff4; */
+    --color: #000;
+}
+
+/* Applies during vore. */
+body[data-tags~="vore"][data-tags~="pheromones_full"] {
+    --background: #6b005f;
+    --light: #fff4;
+    --color: #ffd2f6;
+}
+
+/* Marcy's text */
+
+body[data-tags~="pheromones_strong"] .marcy {
+    color: #a50084;
+}
+
+body[data-tags~="pheromones_full"] .marcy {
+    color: #86006c;
+}
+
+body[data-tags~="pheromones_full"][data-tags~="vore"] .marcy {
+    color: #f6e;
+}
+
+body[data-tags~="pheromones_full"] .marcy {
+    display: block;
+    text-align: center;
+    font-size: 150%;
+}
+
