@@ -1,0 +1,122 @@
+/* Pink background, for Marcy stink hypnosis */
+/* TODO: Maybe add an animation for cycling these? */
+
+/* Applied from the moment Hollis is exposed to Marcy. */
+body[data-tags~="pheromones_lighter"] {
+    --background: #ffeef8;
+}
+
+/* Applied when Marcy's anxiety causes her stink to flare up. */
+body[data-tags~='pheromones_light'] {
+    --background: hsl(312, 100%, 90%);
+}
+
+/* Applied when Hollis invades Marcy's space. */
+body[data-tags~='pheromones_strong'] {
+    --background: hsl(312, 100%, 83%);
+    --color: #320;
+}
+
+/* Applies when Hollis really up in Marcy's biz. */
+body[data-tags~='pheromones_full'] {
+    --background: #f6d;
+    /* --light: #fff4; */
+    --color: #000;
+}
+
+/* Applies during vore. */
+body[data-tags~="vore"][data-tags~="pheromones_full"] {
+    --background: #6b005f;
+    --light: #fff4;
+    --color: #ffd2f6;
+}
+
+/* Marcy's text */
+
+
+
+:root {
+    --monospace-fonts: ui-monospace, Menlo, Monaco, 'Cascadia Mono',
+    'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace',
+    'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+}
+
+.marcy {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.violet, .indie {
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+}
+
+.violet {
+    font-size: 75%;
+    font-family: var(--monospace-fonts);
+    color: hsla(0, 0%, 0%, 80%);
+    background-color: hsla(280, 50%, 85%, 50%);
+}
+
+.indie {
+    color: hsla(0, 0%, 0%, 80%);
+    background-color: hsla(220, 50%, 85%, 50%);
+}
+
+.joss {
+    color: hsl(315, 100%, 20%);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: white 0px 0px 10px;
+}
+
+big.marcy,
+big.joss,
+.bigtalk {
+    display: block;
+    scale: 2.5;
+    padding: 1em 0;
+    margin-inline: auto;
+    width: calc(100vw/2.5);
+    transform-origin: center;
+    text-align: center;
+    line-height: 1;
+    background-color: unset;
+    animation: linear infinite shakeytext 0.05s;
+}
+
+body[data-tags~='pheromones_lighter'] .marcy,
+body[data-tags~='pheromones_lighter'] .joss {
+    color: hsl(315, 100%, 20%);
+}
+
+body[data-tags~='pheromones_light'] .marcy,
+body[data-tags~='pheromones_light'] .joss {
+    color: hsl(315, 100%, 25%);
+}
+body[data-tags~='pheromones_strong'] .marcy,
+body[data-tags~='pheromones_strong'] .joss {
+    color: hsl(315, 100%, 30%);
+}
+body[data-tags~='pheromones_full'] .marcy,
+body[data-tags~='pheromones_full'] .joss {
+    color: hsl(315, 100%, 35%);
+    text-shadow: white 0px 0px 5px;
+}
+body[data-tags~='pheromones_full'][data-tags~='vore'] .joss {
+    color: #f6e;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    @keyframes shakeytext {
+        from {
+            transform: translateX(0px);
+            /* rotate: 0.25deg; */
+        }
+        to {
+            transform: translateX(1px);
+            /* rotate: -0.25deg; */
+        }
+    }
+}
+
