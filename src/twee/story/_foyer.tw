@@ -11,12 +11,12 @@ About twenty minutes ago, you showed up with your friend Reese. At some point yo
 
 :: The Foyer.
 
-The floor in the house's entryway is plastered with empty plastic cups. Music is blaring. College-age furs in every direction are chatting, flirting, and dancing.
+The floor in the house's entryway is plastered with empty plastic cups. Music is blaring from speakers in the living room. College-age furs in every direction are chatting, flirting, and dancing.
 
 What will you do?
 
 * [[Find someplace quieter.]]
-* [[Search for your friend.]]
+* [[Search for your friend.]] <!-- foyer-search.tw -->
 * [[Dance a little.]] <!-- _living_room.tw-->
 
 :: Find someplace quieter.
@@ -29,18 +29,35 @@ This house is huge, and its upscale furnishings seem almost too fancy for the mo
 * [[Go to the garage.]] <!-- ren-route.tw --> *(Smells like... fox.)*
 
 :: Search for your friend.
-You make a quick circle of the first floor, but Reese is nowhere in sight.
+You make a quick circle around the first floor, passing through the foyer, kitchen, living room, and dining room, but Reese is nowhere in sight.
 
 <% if (!setup.isFlagSet("upstairsUnlocked")) { %>
 
 Someone around here has probably seen where he went.
 
+* [[Ask around.]] <!--  -->
+
 <% } else { %>
 
 You get the feeling he's upstairs.
 
-* [[Look upstairs.]] <!-- _upstairs.tw -->
-
+* [[Look upstairs.]] *(Smells like horses.)* <!-- _upstairs.tw -->
+* [[Wait for Reese here.]] *(Smells like... stink.)*
 <% } %>
 
-* [[Go back.|The Foyer.]]
+:: Ask around.
+The guy nearest to you right is a large chocolate lab, who seems to be carrying a few beers to the living room. You wave to him, and he stops for a moment.
+
+You raise your voice, and ask him if he's seen a guinea pig around here. You practically have to yell to make yourself heard.
+
+<q.dom>No, I haven't,</q> he utters back, but gestures toward the living room. <q.dom>Maybe try asking Basil? The big horse guy. You can't miss him.</q>
+
+Well, thanks anyway, you say. He nods, and walks toward the living room.
+
+* [[Wait for Reese here.]] *(Smells like... stink.)* <!-- marcy-route.tw -->
+<% if (setup.isFlagSet("upstairsUnlocked")) { %>
+* [[Look upstairs.]] <!-- _upstairs.tw --> *(Smells like horses.)*
+<% } else { %>
+* [[Go to the living room.|Dance a little.]]
+* [[Back to the foyer.|The Foyer.]]
+<% } %>
