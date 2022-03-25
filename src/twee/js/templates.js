@@ -1,7 +1,7 @@
 const Templates = (window.Templates = window.T = {});
 {
   const contentWarningInline = (...warnings) =>
-    `<em>(<abbr title="Content Warning">CW</abbr>` +
+    `<em>(<abbr title="Content Warning">CW</abbr>: ` +
     warnings
       .sort()
       .map((w) => `<span style="white-space:nowrap;">${w}.</span>`)
