@@ -219,7 +219,7 @@ You respond by fainting from blood loss.
 
 ### Game Over.
 
-* <a0 onclick="setup.rewind()">Rewind</a>
+* <%= T.rewind() %>
 
 :: Follow Byron upstairs.
 <span.byron>"Those damn dogs,"</span> <%-s.bm?"Byron":"Emily"%> mutters as <%-s.bm?"he":"she"%> drags you through the foyer and up the stairs. <span.byron>"Just interested in rutting and drinking... No respect for superior intellect, and no appreciation for the finer things in life..."</span> <%-s.bm?"He":"She"%> opens the door to an upstairs bedroom, and ushers you in.
@@ -438,7 +438,7 @@ Standing patiently outside is Gus the dog, alongside a gigantic, towering horse 
 <% setup.addAchievement("BYRON_VORE_ENDING"); %>
 
 * [[Epilogue.|Byron Epilogue.]] <%=T.CWI("Scat disposal")%>
-* <a0 onclick="setup.restart()">Restart.</a>
+* <%= T.restart() %>
 
 :: Byron Epilogue. [blogspot socmed]
 <div.social-card>
@@ -494,4 +494,4 @@ Wow,,, You sound so suave,,, Any tips for getting prey to let me eat them,,,?
 
 </div>
 
-* <a0 onclick="setup.restart()">Restart.</a>
+* <%= T.restart() %>

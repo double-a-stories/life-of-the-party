@@ -16,6 +16,10 @@ const Templates = (window.Templates = window.T = {});
       .join(" ") +
     `</p>`;
 
+  const restart = () => passage.render(`<a0 onclick="setup.restart()">Restart.</a>`);
+
+  const rewind = () => passage.render(`<a0 onclick="setup.rewind()">Rewind.</a>`);
+
   // Templates for Hazel Epilogue
 
   const socialMediaComment = ([username, comment]) =>
@@ -61,6 +65,7 @@ const Templates = (window.Templates = window.T = {});
     contentWarningInline,
     CWP: contentWarningParagraph,
     contentWarningParagraph,
+    restart,
     hoursAgo,
     hashtag,
     minutesAgo,

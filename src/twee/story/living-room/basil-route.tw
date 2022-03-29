@@ -243,7 +243,7 @@ Basil smiles as the party rages on. Another night well planned.
 <% setup.addAchievement("BASIL_VORE_ENDING"); %>
 
 * [[Epilogue.|Epilogue: Basil Post Vore.]] <%=T.CWI("Scat disposal")%>
-* <a0 data-passage="Start">Restart</a>
+* <%= T.restart() %>
 
 :: Epilogue: Basil Post Vore. [morning]
 The next morning, Basil goes to the bathroom.
@@ -260,7 +260,7 @@ As he's nearing the entertainment center, he realizes that his sister's gaming c
 
 ### The End.
 
-* <a0 onclick="setup.restart()">Restart.</a>
+* <%= T.restart() %>
 
 :: Become horse food. [vore]
 Over the next three minutes or so, Basil slowly but eagerly works your body down his throat and into his belly. You feel yourself gliding effortlessly through the slick tunnel of his gullet, towards your tight, hot destination. He's done this before, hasn't he?

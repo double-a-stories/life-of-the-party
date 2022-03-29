@@ -265,7 +265,7 @@ Lacey looks down at her dramatically shrunken belly, and recalls the night befor
 ### The End.
 
 * [[Epilogue.|Epilogue: Lacey Post Vore.]] <%=T.CWI("Scat disposal")%>
-* <a0 onclick="setup.restart()">Restart.</a>
+* <%= T.restart() %>
 
 :: Epilogue: Lacey Post Vore. [morning]
 An hour later, Lacey is sitting on the toilet, gradually squeezing out plop after plop of digested guinea pig and rabbit.&nbsp;The mare's powerful intestines have already absorbed all the nutrients she could get out of them, and pulverised their remains into firm round balls of horse shit. The two aren't hard to pass, just a little time-consuming.
@@ -302,5 +302,5 @@ Lacey Armstrong yawns and stretches, ready for a new day, full of new meals. Soo
 
 ### The End.
 
-* <a0 onclick="setup.restart()">Restart.</a>
+* <%= T.restart() %>
 

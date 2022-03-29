@@ -466,7 +466,7 @@ Seems like you're too little, too late. But who could blame you for trying?
 
 ### Game Over.
 
-* <a0 onclick="setup.rewind()">Rewind.</a>
+* <%= T.rewind() %>
 
 :: Nikki: Chomp.
 <%=T.CWP("Soft vore", "Teasing")%>
@@ -736,7 +736,7 @@ The snake stretches her maw wide to engulf your face, sending you slithering dow
 ## The End.
 
 * [[Faith: Epilogue.]]
-* <a0 onclick="setup.restart()">Restart.</a>
+* <%= T.restart() %>
 
 :: Faith: Epilogue. [vore mousestory]
 Your name is Faith. You are a mouse. You're inside the ample cavern of <%= s.ateFaith?"rabbit":"cat" %>'s stomach, surrounded by <%= s.ateFaith?"a mush of pretzels and beer":"dark red fleshy walls" %>, and swimming in awful smelling liquids. You hear a splash.
@@ -769,4 +769,4 @@ You laugh, and snuggle your head into Kaia's fur, and sigh. As the slurry of aci
 
 ## The End.
 
-* <a0 onclick="setup.restart()">Restart.</a>
+* <%= T.restart() %>

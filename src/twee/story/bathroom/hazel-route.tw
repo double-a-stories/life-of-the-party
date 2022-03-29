@@ -87,7 +87,7 @@ In your last waking seconds, you realize this was a very stupid idea.
 
 ### Game Over.
 
-* <a0 onclick="setup.rewind()">Rewind.</a>
+* <%= T.rewind() %>
 
 :: Wait, I can explain!
 <% s.previousCommand = "Wait, I-" %>
@@ -263,5 +263,5 @@ The owl snickers and grabs <%-s.hg?"him":"her"%> by the arm. "Hoo hoo hoo! Omigo
 <% setup.addAchievement("HAZEL_VORE_ENDING"); %>
 
 * [[Epilogue.|Epilogue: Hazel Post Vore.]] <%=T.CWI("Scat")%>
-* <a0 onclick="setup.restart()">Restart.</a>
+* <%= T.restart() %>
 

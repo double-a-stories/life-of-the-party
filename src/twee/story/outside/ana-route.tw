@@ -109,7 +109,7 @@ The second you touch her hair, the hyena immediately lets out an vicious bark, a
 
 ### Game Over
 
-* <a0 onclick="setup.rewind()">Rewind</a>
+* <%= T.rewind() %>
 
 :: A quiet moment.
 For a little while, neither of you say anything. The two of you sit there in comfortable silence, watching the stars.
@@ -566,7 +566,7 @@ Ana giggles contendedly. "...I'll take that as a yes."
 <% setup.addAchievement("ANA_VORE_ENDING"); %>
 
 * [[Epilogue.|Epilogue: Ana Post Vore.]] <%=T.CWI("Scat disposal")%>
-* <a0 data-passage="Start">Restart</a>
+* <%= T.restart() %>
 
 :: Epilogue: Ana Post Vore. [morning]
 <%=T.CWP("Desperate to poop", "Graphic scat", "Urination", "Chain restaurants")%>
@@ -683,4 +683,4 @@ Anticipating the worst, she pushes her claw down the handle to flush. The small 
 
 ### The End.
 
-* <a0 onclick="setup.restart()">Restart.</a>
+* <%= T.restart() %>

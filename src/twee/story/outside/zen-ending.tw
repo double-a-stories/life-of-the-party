@@ -114,4 +114,4 @@ You begin to drift off to a nap. <i.ana>Wow,</i> you think, <i.ana>this route go
 
 ### The End.
 
-* <a0 onclick="setup.restart()">Restart.</a>
+* <%= T.restart() %>
