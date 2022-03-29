@@ -37,13 +37,21 @@
 }
 
 .placeholder-img {
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.7);
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-weight: bold;
+}
+
+.placeholder-img::before {
+  content: attr(data-alt);
+}
+
+.placeholder-img.nsfw::before {
+  content: "(NSFW)";
 }
 
 /* Fake images */

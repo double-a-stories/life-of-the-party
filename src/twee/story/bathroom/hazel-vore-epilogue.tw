@@ -1,111 +1,80 @@
 :: Epilogue: Hazel Post Vore. [socmed]
-<!-- todo: consider trying to generate this HTML automatically-->
-<div.social-card>
 
-Hazel Gently <small>@real_grizzy_grumbler –&nbsp;12h</small>
+<%= T.socialMediaCard({
+  name: "Hazel Gently",
+  username: "@real_grizzy_grumbler",
+  time: T.hoursAgo(12),
+  likeCount: 926,
+  hashtags: [story.state.sg ? "GirlBelly" : "BoyBelly", "Yumm", "SnackGoals"],
+  body:
+  `<div role="img" class="placeholder-img nsfw belly-gradient" aria-label="A blurred out image. The brown radial gradient which gives the faint suggestion of a bear's stomach"/>` +
+  `<p>Just did a little "catching up" with an old friend! They were positively scrumptious, but I don't think this shirt fits anymore...</p>`,
+  comments: [
+    ["bellyfan_xox", "hot tummy!! can you film it struggling?"],
+    ["ally.hoppers6", "dang hazel, u got huge! 😳😳💖"],
+  ],
+}) %>
 
-<div.placeholder-img.belly-gradient role="img" alt="A blurred out image. The brown radial gradient which gives the faint suggestion of a bear's stomach">NSFW</div>
+* [[<%=T.hoursAgo(11)%>...|11 hours ago...]]
 
-Just did a little "catching up" with an old friend! They were positively scrumptious, but I don't think this shirt fits anymore...
+:: 11 hours ago... [socmed]
+<%= T.socialMediaCard({
+  name: "Hazel Gently",
+  username: "@real_grizzy_grumbler",
+  time: T.hoursAgo(11),
+  likeCount: 219,
+  hashtags: ["TGIF", "Party", "Lit", "BellyDance", "TummyRubsPlease"],
+  body: `<p>🎉🐻💃 This party got wild! Gotten so many compliments on my huge tummy. Feels like Holly is finally starting to soften up... I swear, dorks always give me indigestion...</p>`,
+}) %>
 
-<small>#<%-s.hg?"Girl":"Boy"%>Belly #Digestion #Yumm #SnackGoals</small>
+* [[<%=T.hoursAgo(1)%>...|9 hours ago...]]
 
-♡ 926
+:: 9 hours ago... [socmed]
+<%= T.socialMediaCard({
+  name: "Hazel Gently",
+  username: "@real_grizzy_grumbler",
+  time: T.hoursAgo(9),
+  likeCount: 39,
+  hashtags: ["Burp", "Sleepy", "😴", "TopOfTheFoodChain"],
+  body: `<p>There's nothing like falling asleep with a gut full of squirmy and squishy prey. Mmmm...</p>`,
+  comments: [
+    ["prey_rights_478", "disgusting. #PreyArePeopleToo"],
+    ["vorelord.6969", "guess who's getting ate 2nite  👅☝"],
+    ["real_grizzy_grumbler", "@prey_rights_478 💩 get blocked lol"],
+  ],
+}) %>
 
-<div.social-card__comments>
+* [[<%=T.hoursAgo(1)%>...|1 hours ago...]]
 
-<b>bellyfan_xox </b> hot tummy!! can you film it struggling?
+:: 1 hours ago... [socmed]
 
-<b>ally.hoppers6</b> dang hazel, u got huge! 😳😳💖
-
-</div>
-</div>
-
-* [[11h ago...]]
-
-:: 11h ago... [socmed]
-<div.social-card>
-
-Hazel Gently <small>@real_grizzy_grumbler –&nbsp;11h</small>
-
-🎉🐻💃 This party got wild! Gotten so many compliments on my huge tummy. Feels like Holly is finally starting to soften up... I swear, dorks always give me indigestion...
-
-<small>#TGIF #Party #Lit #BellyDance #TummyRubsPlease</small>
-
-♡ 219
-
-</div>
-
-* [[9h ago...]]
-
-:: 9h ago... [socmed]
-<div.social-card>
-
-Hazel Gently <small>@real_grizzy_grumbler – 9h</small>
-
-
-There's nothing like falling asleep with a gut full of squirmy and squishy prey. Mmmm...
-
-<small>#Burp #Sleepy #😴 #TopOfTheFoodChain</small>
-
-♡ 39
-
-<div.social-card__comments>
-
-<b>prey_rights_478</b> disgusting. #PreyArePeopleToo
-
-
-<b>vorelord.6969</b> guess who's getting ate 2nite  👅☝️
-
-
-<b>real_grizzy_grumbler</b> @prey_rights_478 💩 get blocked lol
-
-</div>
-</div>
-
-* [[1h ago...]]
-
-:: 1h ago... [socmed]
-<div.social-card>
-
-Hazel Gently <small>@real_grizzy_grumbler – 1h</small>
+<%= T.socialMediaCard({
+  name: "Hazel Gently",
+  username: "@real_grizzy_grumbler",
+  time: T.hoursAgo(1),
+  likeCount: 199,
+  hashtags: ["GrizzGang", "Gurgling", "🍑"],
+  body: `<p>Good morning ${T.hashtag`GrizzGang`}! My belly is so jiggly now, and I'm not even hung over! Time to pass the dweeb I digested last night. Pics incoming, xoxo.</p>`,
+}) %>
 
 
-Good morning #GrizzGang! My belly is so jiggly now, and I'm not even hung over! Time to pass the dweeb I digested last night. Pics incoming, xoxo
+* [[<%=T.minutesAgo(3)%>|3 minutes ago...]]
 
-<small>#GrizzGang #Gurgling #🍑</small>
-
-♡ 199
-
-</div>
-
-* [[3m ago...]]
-
-:: 3m ago... [socmed]
-<div.social-card>
-
-Hazel Gently <small>@real_grizzy_grumbler – 3m</small>
-
-<div.placeholder-img.poop-gradient role="img" alt="A blurred out image. The radial gradient gives the faint impression of a toilet with poop in it.">NSFW</div>
-
-Wow, they were a bitch to push out, but they made my ass look fantastic. Oh well. Bye Holly, I always thought you were a little turd. 🐻💩🧻
-
-<small>#Disposal #PostVore #PreyPoops #StillHungry</small>
-
-♡ 621
-
-<div.social-card__comments>
-
-<b>kal.mousie</b> woah, you ate someone?
-
-
-<b>gut.filler.19m</b> Eat me next please!
-
-
-<b>bigger.jb.21</b> gods, i'm glad that's not me.
-
-</div>
-</div>
+:: 3 minutes ago... [socmed]
+<%= T.socialMediaCard({
+  name: "Hazel Gently",
+  username: "@real_grizzy_grumbler",
+  time: T.minutesAgo(3),
+  likeCount: 621,
+  hashtags: ["Disposal", "PostVore", "PreyPoops", "StillHungry"],
+  body: `<div role="img" class="placeholder-img nsfw poop-gradient" aria-label="A blurred out image. The radial gradient which gives the faint suggestion of a used toilet"/>` +
+  `<p>Wow, they were a bitch to push out, but they made my ass look fantastic. Oh well. Bye Holly, I always thought you were a little turd. 🐻💩🧻</p>`,
+  comments: [
+    ["kal.mousie", "woah, you ate someone?"],
+    ["gut.filler.19m", "Eat me next please!"],
+    ["bigger.jb.21", "gods, i'm glad that's not me."]
+  ],
+}) %>
 
 * <a0 onclick="setup.restart()">Restart.</a>
 
