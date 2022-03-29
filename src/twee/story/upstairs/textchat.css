@@ -22,13 +22,11 @@
 
 .textchat .lacey {
   align-self: flex-end;
-  color: white;
-  --color: white;
-  --light: (255, 255, 255, 0.9);
 }
 
 .textchat p.lacey {
-  align-self: flex-end;
+  color: white;
+  --light: rgba(255, 255, 255, 0.7);
   background: #66d;
   border-top-right-radius: 0;
 }
@@ -38,6 +36,6 @@
   border-top-left-radius: 0;
 }
 
-.textchat a, .textchat [role="img"] {
-  cursor: not-allowed;
+.textchat .placeholder-img {
+  width: 20rem; height: 15rem;
 }
