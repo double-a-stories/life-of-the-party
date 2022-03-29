@@ -175,5 +175,5 @@ Reese pats Hollis on the back, <span.reese>"Well, I'm sorry I deprived you of yo
 * You ride off into the night, and go out for a slice of pizza.
 * The End.
 
-* <a0 onclick="setup.restart()">Restart</a>
+* <%= T.restart() %>
 * [[Credits]]

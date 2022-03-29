@@ -113,5 +113,5 @@ Lacey smirks as the dog notices you, and says, "...My *boyfriend* on the other h
 
 #### The End.
 
-* <a0 onclick="setup.restart()">Restart.</a>
+* <%= T.restart() %>
 

@@ -76,5 +76,5 @@
   ],
 }) %>
 
-* <a0 onclick="setup.restart()">Restart.</a>
+* <%= T.restart() %>
 
