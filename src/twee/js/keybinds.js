@@ -23,8 +23,9 @@ keybinds.KEYBINDS_DOCS = `
 * <kbd>D</kbd> / <kbd>L</kbd> — *Redo last command.*
 `;
 
-// Detect keybinds
-document.addEventListener("keydown", (ev) => {
+const KEYBIND_THROTTLE = 100; /* ms */
+
+const handleKeybind = (ev) => {
   if (!keybinds.enabled) {
     return; // keybinds disabled
   }
@@ -51,7 +52,10 @@ document.addEventListener("keydown", (ev) => {
       ev.preventDefault(); //
     }
   }
-});
+}
+
+// Detect keybinds
+document.addEventListener("keydown", _.throttle(handleKeybind, KEYBIND_THROTTLE));
 
 /** Attempts to move focus to the next element on the page. If no element is focused, focus the first element inside the passage tag. */
 const focusNext = () => {
@@ -86,6 +90,8 @@ const undo = () => {
   setup.undo();
 };
 /** Replays the last command, as if by presing the browser foward button. If none, triggers selectFocused */
+
+
 const redo = () => {
   selectFocused(); // focused element? select it!
   setup.redo(); // attempt to go forward in history.
