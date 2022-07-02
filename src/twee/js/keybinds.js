@@ -76,14 +76,18 @@ const focusPrev = () => {
   target?.focus();
 };
 
-/** Activates (by clicking) the currently focused element. If not focused, triggers focusNext. */
+/** Activates (by clicking) the currently focused element. If not focused, triggers focusNext.
+ * @returns {boolean} Whether or not an element was found.
+*/
 const selectFocused = () => {
   let el = getFocused();
   if (el) {
     el.click();
+    return true;
   } else {
     focusNext();
   }
+  return false;
 };
 /** Rewinds the story, as if by pressing the browser back button. */
 const undo = () => {
@@ -93,8 +97,8 @@ const undo = () => {
 
 
 const redo = () => {
-  selectFocused(); // focused element? select it!
-  setup.redo(); // attempt to go forward in history.
+  if (!selectFocused()) // focused element? select it!
+    setup.redo(); // attempt to go forward in history.
   // the focus function should only complete if the forward command failed.
 };
 
