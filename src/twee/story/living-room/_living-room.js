@@ -17,7 +17,7 @@ party.getPartyMessage = () => {
 party.danceLiterals = [
   `The sound system blares with the shouty vocals and distorted guitar of "groupie gas (ft. some snack idk)" by LOÜD GRÜMBLE.`,
   `A grey wolf with a huge protruding gut accidentally bumps into you. "'Scuse me," she mutters as she walks away.`,
-  `You notice a tiny white mouse on the floor, scampering anxious between people's feet. It scampers off toward the snack table and **the punch bowl**.`,
+  `You notice a tiny white mouse on the floor, darting anxiously between people's feet. It scampers off toward the snack table and **the punch bowl**.`,
   `There aren't many other prey at this party. You feel a little small by comparison to all the huge anthros here.`,
   `A **big brown stallion** in a green jacket seems to take notice of your dancing. He looks a little familiar. He winks at you from across the room.`,
   `The speakers start playing a techno remix of Marie Predatora's latest rap single: "Belly Drop, Belly Drop (Belly Drop)."`,
