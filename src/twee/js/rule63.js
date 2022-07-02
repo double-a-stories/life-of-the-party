@@ -77,10 +77,10 @@ const Rule63 = window.Rule63 = {};
     }
   }
 
-  const getRule63Message = (defaultGender) => {
+  const getRule63Message = (defaultGender, message="") => {
     const g = getGender(defaultGender);
     if (defaultGender !== getGender(defaultGender)) {
-      return T.infoMessageBox(`Rule 63 Mode is enabled. This character will use <b>${g?"he/him":"she/her"}</b> pronouns.`);
+      return T.infoMessageBox(`Rule 63 Mode is enabled. This character will use <b>${g?"he/him":"she/her"}</b> pronouns. ${message}`);
     }
     return '';
   }
