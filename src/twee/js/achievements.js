@@ -48,6 +48,7 @@ setup.ALL_ACHIEVEMENTS = {
   REN_VORE_ENDING: ["🦊", "Garage...", "🐇🥱😊!!!", "Went on a joy ride. (Ren vore ending)"],
   BYRON_VORE_ENDING: ["🐺", "Couch...", "A Belly You Can't Get Out", "Learned your place. (Byron vore ending)"],
   NIKKI_NOX_VORE_ENDING: ["🍸", "Drink...", "Sauced & Swallowed", "Tried something new. (Nikki & Nox ending)"],
+  IVY_VORE_ENDING: ["🐍", "Living room...", "Taking No For an Answer", "Taught self-reliance. (Ivy vore ending)"],
   CLOSET_ENDING: ["🧹", "Closet...", "My Favorite", "Utilized time effectively. (Broom closet ending)", true],
   ZEN_ENDING: ["🌌", "", "Space Out", "Hollis broke free. (Dissassociation ending)", true],
   ANA_CHOMP_GAME_OVER: ["💋", "", "Tackleglomp", "Overstepped some boundaries. (Ana game over)", true],

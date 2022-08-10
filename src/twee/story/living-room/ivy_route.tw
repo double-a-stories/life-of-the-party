@@ -299,7 +299,13 @@ Let's get a little more descriptive with the digestion this time. Or make it ski
 
 Glorpy goopy stuff. Bones and grossitude. CREUNCH.
 
+### The End.
+
+<% setup.addAchievement("IVY_VORE_ENDING"); %>
+
 * [[Epilogue.|Ivy Epilogue]]
+* <%= T.restart() %>
+
 
 :: Ivy Epilogue [morning]
 
@@ -347,7 +353,7 @@ Ivy collects herself. <span.ivy>"Chet, I'm sick of you three perverts using me. 
 
 * [[Ivy: Digest.]]
 
-:: Ivy: Digest.
+:: Ivy: Digest. [morning]
 
 She flexes her coil muscles, and instantly kills them with a sickening crunch. Jaws in the room drop.
 
