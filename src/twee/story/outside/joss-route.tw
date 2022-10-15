@@ -6,13 +6,13 @@ Joss is a bully who breaks your mind and takes what she wants, just for fun. Ind
 
 There's a shiny gas grill, chairs, string lights, and a jaccuzzi. You notice a delicious flowery scent on the breeze. To your right is a jaccuzzi.
 
-<span.indie>"oh, hello little rabbit!"</span> says a soft voice.
+<span.violet>"oh, hello little rabbit!"</span> says a soft voice.
 
 You turn to see a possum, a shark, and a wolverine sitting on the edge of the tub dangling their hind paws in the steaming water.
 
-The wolverine points at you and whispers into the shark's ear for a second, and she lets out a raspy snicker. <span.indie>"Keheheh! Yes!"</span>
+The wolverine points at you and whispers into the shark's ear for a second. Her friend lets out a raspy snicker. <span.indie>"Keheheh! Yes!"</span>
 
-<span.joss>"Heeeey cutie,"</span> the wolverine calls. You can only describe her voice as... mellifluous. Almost melodic. <span.joss>"Care to join us for a sec? We were hoping you could help us settle an argument."</span>
+<span.joss>"Heeeey cutie,"</span> the wolverine calls, <span.joss>"Care to join us for a sec? We were hoping you could help us settle an argument."</span> Her voice strikes you. You can only describe it as... mellifluous. Almost melodic?
 
 * [[Um, hello there!]]
 
@@ -20,13 +20,14 @@ The wolverine points at you and whispers into the shark's ear for a second, and 
 
 You cautiously walk up to the hot tub. The scent gets stronger. It's this musky, flowery, perfumy aroma which sticks in your head...
 
-<span.violet>"i don't think you should do it..."</span> mumbles the possum.
+<span.violet>"i don't think is a good idea,"</span> mumbles the possum, staring into her phone screen.
 
-The shark chuckles, and nudges the wolverine. <span.indie>"C'mon, say hello!"</span>
+The shark shushes her, and nudges the wolverine. <span.indie>"C'mon, say hello!"</span>
 
 The wolverine nods, and hops down to the deck. She's still two feet taller than you, so she also squats down to your eye level.
 
 <span.joss>"What's up, little guy?"</span> she says, extending a paw to shake. <span.joss>"What's your name?"</span>
+
 
 * [[I'm Hollis Freely, pleasure to meet you!]]
 
@@ -34,25 +35,25 @@ The wolverine nods, and hops down to the deck. She's still two feet taller than 
 <% s.previousCommand = "Hosly... Frisly... Fr... Holly Freelis!" %>
 You shake her paw. It's... sweaty. You say your name is Hisly Frisly.
 
-Wait, no... You once again fail to pronounce your own name. You try to let go of her paw, but you can't. It... tingles, like a jolt of electricity is surging through you. When she finally lets go, you feel numb and dizzy.
+Wait, no... You once again try and fail to pronounce your own name. Like there's a cloud obscuring your thoughts. Nervous, you try to let go of her paw, but can't. It... tingles, like a jolt of electricity is surging through you. When she finally lets go, you feel numb and dizzy.
 
 Your sputter out that your name is Holly. No wait, it used to be that, but it isn't anymore...
 
 <span.joss>"Holly?"</span> the wolverine repeats.
 
-<span.indie>"So it's a girl?"</span> asks the shark.
+<span.violet>"so it's a girl?"</span> asks the possum, seemingly noting this on her phone.
 
-<span.violet>"but its dressed sorta like a boy..."</span> observes the possum.
+<span.indie>"But it's dressed like a boy..."</span> observes the shark.
 
 * [[No, I meant to say Hollis! I actually use they/them pronouns.|No, Hollis.]]
 
 :: No, Hollis. [pheromones_light]
 <% s.previousCommand = "No, iss!" %>
-Iss, Iss! you insist. The wolverine tips her head back, and laughs as you continue to slur your speech. As she does, you possumch glimpses of her sharp, pearly teeth, and feel an uncontrollable admiration for her. Her laugh is beautiful too, almost sing-song.
+Iss, Iss! you insist. Why can't you talk??
 
-<span.joss>"Jeez, I'm already doin' a number on you, huh?"</span>
+<span.joss>"Jeez, I'm already doin' a number on you, huh?"</span> She tips her head back and laughs. You catch a glimpse of her sharp, pearly teeth. They're... beautiful. You feel this uncontrollable sense of admiration for her.
 
-<span.indie>"Hi Holly!"</span> smiles the shark, <span.indie>"I'm Indie! I study biology!"</span>
+<span.indie>"Hi Hollis!"</span> smiles the shark, <span.indie>"I'm Indie! I study biology!"</span>
 
 <span.violet>"i'm violet... i'm a chemistry major,"</span> murmurs the possum.
 
@@ -62,9 +63,9 @@ The wolverine waves casually. <span.joss>"And I'm Jocelyn, cosmetology. My frien
 
 :: Why would I call you...? [pheromones_strong]
 <% s.previousCommand = "Yes, master." %>
-Without thinking, you nod and call her master. Joss and Indie cackle proudly. Violet looks impressed.
+Without thinking, you do exactly as she says.
 
-You try to clear your head with a deep breath of autumn air, but only get another whiff of whatever that perfume is. You feel... warm. The smell is coating your nose and penetrates deep into your nostrils. You sniff your paw that touched hers, and it utterly reeks of the stuff. Is that her... sweat?
+You try to clear your head with a deep breath of autumn air, but only get another whiff of whatever that perfume is. It feels... warm. The smell seems to coat your nose and penetrate deep into your nostrils. You sniff your paw that touched hers, and it utterly reeks of the stuff. Is that her... sweat?
 
 <span.joss>"Good,"</span> Joss smiles, beckoning you closer to the tub, and sits back on the rim. <span.joss>"Now, why don't you join us up here? It's nice and steamy..."</span> She pats a seat for you.
 
@@ -75,9 +76,9 @@ You try to clear your head with a deep breath of autumn air, but only get anothe
 
 You stammer and begin to say you really should be going. Dissatisfied, Joss places a paw on your chin, and lifts it to meet her gaze. She stares into you with her impossibly lustrous black eyes, and repeats,
 
-<big.joss>"Rabbit, why don't you join us up here?"</big>
+<big.joss>"Hollis, why don't you join us up here?"</big>
 
-Her voice echoes and reverberates through your mind. You instantly rocket to your feet and climb up, taking a seat between Indie and Joss. Violet sits across from you.
+Her words echoe and reverberate through your mind. You instantly rocket to your feet and climb up, taking a seat on the hot tub between Indie and Joss. Violet sits across from you.
 
 * [[What did you just do to me??]]
 
@@ -89,59 +90,73 @@ You shake your head, and demand to know what just happened.
 * [[Musked?]]
 
 :: Musked? [pheromones_strong]
+*Musked?* you ask, slurring your speech. Joss giggles and points to the delicious-smelling sweaty sheen on her pawpads.
 
-*Musked?* you ask, slurring your speech. Joss giggles and points to the utterly delicious-smelling sheen on your pawpads.
 
 <span.indie>"You're having a pheromonal reaction to a compound produced naturally by wolverine eccrine glands,"</span> explains Indie.
 
-<span.joss>"Y'know, musk."</span>
+<span.violet>"specifically aminoacetophenone. in sufficient concentration it causes relaxation, heightened libido, and mild hypnotic suggestability,"</span> Violet adds.
 
-Oh right. You remember hearing about this in health class. As a defense mechanism, certain mustelids sweat a kind of psychoactive musk which can relax foes, attract sexual partners, and subdue potential prey. You feel slightly compelled to press them against your snout and lick.
+<span.indie>"Ancient mustelids used it as a defense mechanism to relax foes, attract sexual partners, and subdue potential prey,"</span> Indie adds. You remember hearing something about this in health class...
 
-* [[This is... musk?]]
+* [[This is... your sweat doing this?]]
 
-:: This is... musk? [pheromones_strong]
-<span.violet>"specifically, aminoacetophenones, which cause an extreme aphrodisiac response, plus some minor hypnotic suggestability"</span> Violet adds.
+:: This is... your sweat doing this? [pheromones_strong]
+<span.joss>"I'm a helluva drug, huh? My ex *still* phones me up begging for a dose!"</span>
 
-Joss giggles, <span.joss>"Yeah, it's a hell of a drug. Y'know, my first boyfriend never left my side for five whole days? He still phones me up sometimes begging for a dose!"</span>
+Indie says, <span.indie>"Ordinarily your endocrine response to such a small exposure wouldn't be so severe..."</span>
 
-Indie nods. <span.indie>"Normally your endocrine response to such a small exposure wouldn't be so severe..."</span>
+<span.violet>"but we've distilled it into a pure, concentrated substance, and administered it dermally!"</span>
 
-<span.violet>"but we've distilled it into a pure, concentrated substance, and administered it dermally!"</span> Violet says, showing you a little spray bottle.
-
-<span.joss>"Point being, we made perfume that fucks with your brain, and now you desperately wanna fuck me. Neat, right?"</span>
+Joss displays a little spray bottle. <span.joss>"Point being, we made a perfume that fucks with your brain, and now you desperately wanna fuck me. Neat, right?"</span>
 
 * [[You just date rape drugged me?|Woah, that's really fucked up!]]
 * [[Woah, that's really fucked up!]]
 
 :: Woah, that's really fucked up! [pheromones_strong]
 <% s.previousCommand = "Woah... fuck..." %>
-Normally, you'd be bothered by such a violation of your mental faculties. Thinking thoughts that aren't yours? Acting without free will? If you were more lucid, you'd find this terrifying. But as the chemical fully soaks into your brain, you're finding it increasingly difficult to have such complex thoughts about anything besides Jocelyn. Joss Joss Jocelyn... You desperately want her to fuck you, or let you sniff her ass, or stuff you down her throat...
+Normally, you'd be bothered by such a violation of your mental faculties. Thinking thoughts that aren't yours? Acting without free will? If you were more lucid, you'd find it terrifying. But it's so hard to speak... And everything about Jocelyn is just so... wonderful. Maybe it'd feel nicer to just do as she says?
 
-Violet <span.indie>"don't freak out. You're just experiencing an extreme aphrodisiac, plus some minor hypnotic suggestability,"</span>
+N-no! you finally manage to say, This isn't neat, it's horrifying!
 
-<span.indie"As long as they don't get any more, it should wear off in a few minutes."</span>
+<big.joss>"Relax. Smell your paws again, Hollis."</big>
 
-You take another deep whiff of your paws...
+* [[Sniff...]]
+* [[No, I won't!|Sniff...]]
 
-Jocelyn grunts, <span.joss>"Hey kid, watch it."</span>
+:: Sniff... [no_command pheromones_full]
+<% s.previousCommand = "Snihhhh..." %>
+
+You can't help but follow her commands, and take another deep, whiff of your paws... Oh yes, that's the stuff... You smile guiltily.
+
+Jocelyn laughs, <span.joss>"Jeez, I must taste amazing!"</span>
+
+<span.violet>"just stay calm, this should wear off in a few minutes,"</span> says Violet.
+
+All you want is for Joceyln to fuck you, or let you sniff her ass, or stuff you down her throat... But as the chemical fully soaks into your brain, you're finding it increasingly difficult to have such complex thoughts about anything besides Jocelyn. Joss Joss Jocelyn...
 
 * [[Can I stay like this forever?]]
 
 :: Can I stay like this forever? [pheromones_strong]
 Jocelyn watches you intently, <span.joss>"So what now? They'll follow my every word forever?"</span>
 
-
 * [[Wear off?]]
 
 :: Wear off?
 
+* Joss goes against Violet's wishes, and decides to do "The ultimate test"...
+* To see whether she can convince you to feed yourself to her, and be digested!
+* You feel yourself coming back to lucidity.
+
+
+* <span.violet>"b-but that isn't a controlled trial! we don't know if they would have let you do that *before* the pheromone either! there's all kinds of sampling bias in play!"</span>
+* <span.joss>""</span>
+* <span.indie>"C'mon Vi, don't be such a buzzkill. We're just having fun.</span>
+* 
+* they fight. violet gets splashed too.
+
+She sprays you with another dose.
+
+<big.joss>"Hollis, when I say so, climb into my mouth."</big>
 
 <span.violet>"i didn't think it work would so well..."</span>
-
-* [[Wait, will I have a permanent addiction after this?]]
-
-:: Wait, will I have a permanent addiction after this? [pheromones_strong]
-<% s.previousCommand = "Is this... forever?" %>
-
-Joceyln pats you on the head. <span.joss>"Don't worry kid. You're not gonna get addicted after just one hit. This should wear off in like an hour."</span>
