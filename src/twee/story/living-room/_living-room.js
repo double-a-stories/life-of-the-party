@@ -82,7 +82,7 @@ party.advanceState = () => {
   story.state.partyFlavorState = (+story.state.partyFlavorState | 0) + 1; // increment
   // The number of times we've looped through this
   story.state.partyFlavorsLooped = Math.floor(
-    story.state.partyFlavorState / party.danceLiterals.length
+    (story.state.partyFlavorState - 2) / party.danceLiterals.length
   );
 
   const text = party.getFlavorMessage()||"";
