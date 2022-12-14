@@ -1,0 +1,11 @@
+.ivy {
+    color: darkolivegreen;
+    font-size: 90%;
+    text-transform: lowercase;
+    font-family: var(--monospace-fonts);
+}
+
+[data-tags~="vore"] .ivy {
+    
+    color: #ff0;
+}
