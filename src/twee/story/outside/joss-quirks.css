@@ -74,11 +74,9 @@ big.marcy,
 big.joss,
 .bigtalk {
     display: block;
-    scale: 2.5;
+    font-size: 3rem;
     padding: 1em 0;
-    margin-inline: auto;
-    width: calc(100vw/2.5);
-    transform-origin: center;
+    margin-inline: min(0px, calc((100vw - 900px)/-2));
     text-align: center;
     line-height: 1;
     background-color: unset;
