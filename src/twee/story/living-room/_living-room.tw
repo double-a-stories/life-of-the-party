@@ -21,8 +21,10 @@
 <% if (s.seenByron) { %>
 * [[Approach guitar wolf.|Look at wolf.]]
 <% } %>
-<% if (s.partyFlavorsLooped >= 1) %>
-* [[Leave the living room...?|Ivy Route]] *(Smells like snake.)* <!-- ivy_route.tw -->
-<% ; %>
+
+<% if (s.partyFlavorsLooped >= 2) %>
+* [[Go back to the foyer...?|Ivy Route]] *(Smells like snake.)*
+
+*You've been at this for a while, and Reese is still nowhere to be seen. Why not head on back?*
 
 <% setup.party.advanceState() %>
