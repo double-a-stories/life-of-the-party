@@ -6,7 +6,7 @@ const party = (window.setup.party = window.setup.party || {}); // setup.party
 party.getPartyMessage = () => {
   const state = +story.state.partyFlavorState|0;
   if (state == 0) { // first passage
-    return `You head into the living room. It's a high-ceilinged room where dozens of furs of every size and species are busy getting drunk and grooving.\n\nYou decide to join them.`;
+    return `You head into the living room. It's a high-ceilinged room where dozens of furs of every size and species are busy getting drunk and grooving.\n\nTo kill time, you decide to join them.`;
   } 
   if (state == 1) { // second passage
     return `You move to the music blaring from the living room speakers.\n\nYou're usually a little uncomfortable in big groups, but right now, you're feeling pretty confident, actually!`;
@@ -28,7 +28,7 @@ party.danceLiterals = [
   `There's a slight lull. A slightly chubby owl notices you from across the room and begins licking her beak.`,
   `A **tall black wolf** in a scarf and a flannel shirt brought an acoustic guitar to the party, and is noodling on it with an deeply thoughtful expression.`,
   `A slow-jam by the R&B duo, Thumper & Bang. You consider offering to dance with one of the guys around you, but most are several feet taller than you.`,
-  `A green anaconda wags her tail in time with the music, and accidentally trips two people. "Oh, sorry!" she stammers, ",,,Sorry again!"`,
+  `A green anaconda wags her tail in time with the music, and accidentally trips two people. <span class='ivy'>"Oh, sorry!"</span> she stammers, <span class='ivy'>",,,Sorry again!"</span>`,
   `Tails wag and paws pump in the air as the subwoofer wubs and dubs the bass-drop of that one dubstep song, yet again. **Is the playlist looping?**`,
 ];
 // Returns a message from the above array, based on story.state.partyDanceState
