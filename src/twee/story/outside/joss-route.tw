@@ -3,22 +3,30 @@ Joss is a bully who breaks your mind and takes what she wants, just for fun. Ind
 :: Go out onto the deck. [pheromones_lighter]
 <!-- Go out onto the deck. -->
 
-You step outside. Besides the chilly autumn air, you scent a warm, flowery aroma on the breeze. It's this musky, flowery, perfumy aroma which sticks in your head.
+You step outside.
 
-The deck is home to a shiny gas grill, some chairs, some string lights, and some bird-feeders. To the right of the door, a jacuzzi with some girls who look a little older than you.
+The deck is home to a shiny gas grill, some chairs, some string lights, and some bird-feeders. To the right of the door, a jacuzzi.
 
-You hear a gentle whisper. <span.joss>"Cutie sighted at 12 o' clock. Shall we?"</span>
+Besides the chilly autumn air, you scent a warm, flowery aroma on the breeze. It's this musky, flowery, perfumy aroma which sticks in your head.
+
+You hear a raspy snicker. <span.indie>"Kheheh, cutie spotted at 12 o' clock. Shall we?"</span>
 
 A timid murmur replies, <span.violet>"i don't think is a good idea..."</span>
 
-A third voice chimes in with a raspy snicker, <span.indie>"Kehe. C'mon, let's say hello."</span>
+A third voice calls out, <span.joss>"Hey there, little rabbit."</span> 
 
 * [[Turn right.]]
 
 :: Turn right.
-You turn to see three girls sitting over the edge of the tub: a shark, a possum, and a wolverine. <span.indie>The shark</span> sits with her tail gently skimming the surface of the steaming water. <span.violet>The possum</span> kicks her feet and twiddles her opposable thumbs over her phone, while peering at you curiously from behind her glasses. <span.joss>The wolverine</span> has effortlessly struck a sirenesque pose, and waves casually at you.
+You turn to see three girls sitting over the edge of the hot tub: a shark, a possum, and a wolverine. They look a little older than you.
 
-<span.joss>"Hey there little rabbit,"</span> says the wolverine. <span.joss>"Care to join us a sec? We were hoping you could settle an argument."</span>
+<span.indie>The shark</span> sits with her tail gently skimming the surface of the steaming water.
+
+<span.violet>The possum</span> kicks her feet and twiddles her opposable thumbs over her phone, while peering at you curiously from behind her glasses.
+
+<span.joss>The wolverine</span> has effortlessly struck a sirenesque pose, and waves casually at you.
+
+<span.joss>"Hi!"</span> says the wolverine. <span.joss>"Care to join us a sec? We were hoping you could settle an argument."</span>
 
 * [[Um, hello!]]
 * [[Go back inside.]]
@@ -36,7 +44,7 @@ The wolverine playfully jabs the shark in the shoulder. You hear her grunt as yo
 :: Um, hello! [pheromones_lighter]
 You cautiously approach the hot tub.
 
-<span.joss>"That's it. Come closer."</span> The wolverine's voice instantly strikes you. It's... mellifluous. Melodic, like a siren... The perfumy scent in the air gets stronger. It's coming from her.
+<span.joss>"That's it. Come closer."</span> The wolverine's voice instantly strikes you. It's... mellifluous. Melodic, like a siren... The perfumy scent in the air gets stronger. Is that coming from her?
 
 The shark shushes and nudges the possum. <span.indie>"Psh, c'mon Vi. Say hello!"</span>
 
@@ -54,7 +62,12 @@ The wolverine gives you a firm and... very sweaty pawshake. You smile nervously,
 
 <span.joss>"Hisly...?"</span> The wolverine asks, giving an amused smirk to her friends. 
 
-Wait, no...   You once again try to pronounce your own name, but can't. It's as if there's a cloud obscuring your thoughts, jamming your speech. Anxious, you try to break free of her grip, but can't. Your arm tingles, like a jolt of electricity is surging through it. When she finally lets go, you feel numb and dizzy.
+Wait, no...   You once again try to pronounce your own name, but can't. It's as if there's a cloud obscuring your thoughts, slurring your speech. Anxious, you try to break free of her grip, but can't. Your arm tingles, like a jolt of electricity is surging through it. When she finally lets go, you feel numb and dizzy.
+
+* [[Hollis Freely.]]
+
+:: Hollis Freely. [pheromones_light]
+<% s.previousCommand = "Holly...?" %>
 
 You finally manage to sputter out... your deadname.
 
@@ -64,13 +77,11 @@ You finally manage to sputter out... your deadname.
 
 <span.violet>"but dressed like a boy..."</span> observes the possum, seemingly taking note of this on her phone.
 
-
-
 * [[No! I meant to say Hollis. I use they/them pronouns.|No, Hollis.]]
 
 :: No, Hollis. [pheromones_light]
 <% s.previousCommand = "No, iss!" %>
-Iss, you insist, They! *Iss!* Why can't you talk??
+Iss, you insist, *Iss!* Why can't you talk??
 
 <span.joss>"Jeez, I'm already doin' a number on you, huh?"</span> she laughs. As she does, you catch a glimpse of her many sharp, pearly teeth. They're... beautiful. You feel an uncontrollable admiration for her. The sight of her brings you comfort amid the sudden inexplicable loss of your speech faculties.
 
@@ -85,9 +96,9 @@ The wolverine waves casually. <span.joss>"And I'm Jocelyn, cosmetology. My frien
 
 :: Why would I call you...? [pheromones_strong]
 <% s.previousCommand = "Yes, master." %>
-Without thinking, you do exactly as she says. You don't understand why. It's like everything has this pink fog over it...
+Without thinking, you do exactly as she says. You don't understand why. It's like all your thoughts have this pink fog over it...
 
-You try to clear your head with a deep breath of autumn air, but only get another whiff of whatever that perfume is. It feels... warm. The smell seems to coat your nose and penetrate deep into your nostrils. You sniff your paw that touched hers; it utterly reeks of the stuff. Is that her... sweat?
+You try to clear your head with a deep breath of autumn air, but only get another whiff of whatever that perfume is. The smell seems to coat your nose and penetrate deep into your nostrils. It feels... warm. You sniff your paw that touched hers; it utterly reeks of the stuff. Is that her... sweat?
 
 <span.joss>"Good,"</span> Joss smiles, beckoning you closer to the tub, and sits back on the rim. <span.joss>"Now, why don't you join us up here? It's nice and steamy..."</span> She pats a seat for you.
 
@@ -128,7 +139,7 @@ Musked? you ask, slurring your speech. Joss giggles and points to the delicious-
 
 Indie says, <span.indie>"Ordinarily your endocrine response to such a small exposure wouldn't be so severe..."</span>
 
-<span.violet>"but we've distilled it into a pure, concentrated substance, and administered it dermally!"</span>
+Violet points at your paw, <span.violet>"but we've distilled it into a pure, concentrated substance, and administered it dermally!"</span>
 
 Joss displays a little spray bottle. <span.joss>"These nerds turned my sweat into a super-strong perfume that makes you desperately wanna fuck me. STEM fair project. Neat, right?"</span>
 
