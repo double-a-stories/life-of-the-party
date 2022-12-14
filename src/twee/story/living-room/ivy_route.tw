@@ -1,111 +1,165 @@
-:: Leave the living room.
-<%=T.CWP("Unwilling vore")%>
+:: Ivy Route
+You feel exhausted after all that, but fulfilled. Okay, time to find Reese.
 
-You feel exhausted after all that, but fulfilled. 
+Just as you have that thought, a cream-colored horse saunters down the stairs. She's completely naked, displaying a huge swollen belly, and a satisfied-looking German Shepherd on her arm. You instantly recognize her as Lacey Armstrong, from your high school math class.
 
-Instantly, you feel something cold and scaley on bare your ankles. You spin around, and see a giant, bright-green anaconda hovering behind you.
+Lacey struts right past you into the living room, nonchalantly plucks up a squirrel and stuffs him into her maw. He spends his last moments staring down her throat with a mix of confusion, admiration, and delight, before a single slobbery gulp adds him to her stomach bulge.
 
-"H-hi! My name’ss Ivy! I liked your dancing! Um,,, How's it going?"
+Your face flushes. Record scratch. The whole party goes silent.
 
-With a tight yank, her coils suddenly tighten, jerking your feet together.
+* [[Continue.|Living room scene.]]
+
+:: Living room scene.
+Another horse, who you faintly recognize as Basil, Lacey's older brother, stomps over to the pair with an aggravated expression.
+
+"Seriously guys?" Basil grunts, "You're supposed to at least wait until-"
+
+"Grooooorwr!! *glk* *glk*." The horse turns around to see a lioness now devouring a cow boy. The party remains perfectly still, watching the situation unfold.
+
+"Ugh. Whatever," he mutters. Then he calls, "Free-for-all, everyone!"
+
+* [[Free-for-all?]]
+
+:: Free-for-all?
+At his word, all eyes immediately turn their attention to the prey in the room, including you.
+
+The music blares louder than ever, as the party instantly erupts into a hedonic orgy. Anthros left and right are grabbed and devoured. Your only instinct is to go perfectly still to avoid detection.
+
+Some punch-drunk prey go willingly, others panic and scamper up onto couches, bookcases, and shelves, staring nervously at the inevitable maws beneath them, while claws reach out to grab them by their clothes and tails.
+
+What the hell kind of party is this?? You need to get out of here, right now!
+
+* [[Run for it!]]
+
+:: Run for it!
+You try to take your first step, but there's something cold and scaly wrapped around your ankles. You instantly trip and fall forward.
+
+<span.ivy>"O-oh,,, ssorry!!"</span> says a voice. You spin around, and see a huge, bright-green anaconda hovering over you. <span.ivy>"H-hi,,, I'm Ivy!"</span> she says, <span.ivy>"I was sstanding behind you, but was too nervous to say anything,,, Um,,, How's it going,,,? I liked your dancing!"</span>
+
+With a tight yank, her coils suddenly tighten, jerking your legs together.
 
 * [[What are you doing!?]]
 
 :: What are you doing!?
-"Oh, I'm eating you!"
+<span.ivy>"Oh,,,"</span> the anaconda smiles, <span.ivy>"Sswallowing you!"</span> She gives you a flirty little flick of her forked tongue. <span.ivy>"Betcha weren't expecting to see a ssnake at this party,,, You musst feel pretty lucky,,,!"</span>
 
-"Betcha weren't expecting to see a ssnake at this party, huh? You musst feel pretty lucky,,,"
+She slithers up around you more, restraining your knees, then your entire lower body.
 
-The snake slithers up around you again, restraining your knees, then 
+* [[Struggle.|Struggle. (ivy)]]
 
-Your squirms only invigorate her.
+:: Struggle. (ivy)
+<span.ivy>"Teehee, you're a playful one,,, That'ss cute,,,!"</span> Ivy lifts you off your feet and into the air. <span.ivy>"I like to play too."</span>
 
-"Fufu, I can see that you're new to this. Don't worry, you'll be fine. I'm an endo! I'll be nii-ce and gentle with you,,,"
+Your arms are still free; you try to pry her off of you, but she's faster, not to mention, stronger. She deftly tangles your arms in her coils and tightens around your torso. You keep trying to kick free, but your squirms only seem to invigorate her.
 
-"Teehee, you're playful! That's cute! I like to play too."
+<span.ivy>"Don't worry, I'm an endo. I'll be nii-ce and gentle with you,,,"</span>
 
-* [[Lemme go!!]]
+* [[Lemme go!!]] *(CW: Asyphixiation)*
+* [[I need to save Reese!]]
 
-:: Lemme go!
+:: I need to save Reese!
+Her face flashes with recognition, <span.ivy>"Oh, you know Reese? The guinea pig?"</span> she asks. You nod desperately.
 
-You grunt and demand to be let go.
+<span.ivy>"Wow, what a ssmall world!,"</span> she says, still binding you, <span.ivy>"I sswallowed him a few times back in the day,,, He was alwayss begging me to digest him, but I jusst didn't feel comfortable with it at the time,,,"</span>
 
-"You're so ssmall, I don't think you'll even make a bulge in my big thick tail,,,"
+Reese... wanted to be digested? What?
 
-* [[Squirm more.]]
+Ivy nods eagerly, <span.ivy>"Yeah, he was always going to vore parties like this,,, It's a wonder nobody got him before now,,,"</span>
 
-:: Squirm more.
+* [[Vore parties?]]
+* [[Where is he now?]]
 
-She senses your discomfort but assumes she's just hurt your feelings.
+:: Vore parties?
 
-"I mean,,, Not that that's a bad thing,,,! You're gonna be ssuch a good prey and fill me up so good,,,"
+<span.ivy>"Y'know,,, a party for vore?"</span> she says, <span.ivy>"That's what you're here for,,, right?"</span>
 
-* [[Struggle more]]
+Ivy gestures at the chaos filling the living room. Preds watch enviously as a black cat's tail is slurped up between the lips of a fat, hungry bear. Meanwhile, a drunk Labrador burps up the clothes of one of his friends. An owl restrains a Shih Tzu girl's shoulders while her friend swallows her feet-first.
 
-:: Struggle more
+This... would explain a lot, actually.
 
-"Playing hard to get, are we?" (she tightens, and is now strangling you accidentally)
+* [[Where is he now?]]
 
-She begins to lift you into the air and flick at your ears with her tongue.
+:: Where is he now?
+<% setup.setFlag("upstairsUnlocked"); %>
+Ivy points with her tail toward Lacey's protruding gut.
 
-"Oh, I just love to play with my food,,, But it's time to go," she announces loudly, and stretches her maw open wide above you.
+<span.ivy>"Th-there,,, I saw Clif and Lacey take him upstairs about half an hour ago,,, He seemed really excited for it,,,"</span>
 
-A few preds and prey have gathered to watch her performance with admiration.
+Oh no... Maybe there's still time to get him out?
 
-You stare wide-eyed up at your destination. You feel your lungs weakening, and your eyes begin to water.
+<span.ivy>"N-not likely,,, Lacey is known for playing rough,,,"</span> Her coils wrap around your throat, and she coos, <span.ivy>",,,Do you also like to play rough?"</span>
 
-Her maw snaps shut. "A-are you okay?" she whispers quietly?
+* [[I'm not playing! Let me go, right now!|You're chhhh- choking me...!]]
+
+:: Lemme go!!
+<span.ivy>"Fufu, I can see that you're new to this,,, Feel my thick tail around you? You're so ssmall, I don't think you'll even make a bulge in my big thick tail,,,"</span>
+
+Tears begin to bead in your eyes.
+
+<span.ivy>"I-I mean,,, not that that's a bad thing,,,! You're gonna be ssuch a good prey and fill me up so good,,,"</span> She tightens, as if trying to hug you, but  now strangling you accidentally.
+
+* [[Khhh...]]
+
+:: Khhh...
+She's crushing you. Your airways feel tight. You already feel lightheaded after just a few seconds.
+
+A few preds and prey have gathered to watch her performance.
+
+<span.ivy>"Oh,,, I jusst love to play with my food,,,"</span> she announces loudly, <span.ivy>"But it'ss time to go."</span>
+
+Ivy stretches her maw open wide above you. You stare wide-eyed up at your destination. You feel your lungs weakening, and your eyes begin to water.
+
+Her maw snaps shut. <span.ivy>"A-are you okay?"</span> she whispers quietly.
 
 * [[You're chhhh- choking me...!]]
-* [[P-please let me go?|You're chhhh- choking me...!]]
 
 :: You're chhhh- choking me...!
+Ivy goes silent for a second, eyes wide. <span.ivy>"Y-you,,, don't wanna play?"</span> You shake your head no.
 
-Record scratch.
+<span.ivy>"Oh,,, Ohmigosh I'm so sorry,,,!!"</span> She suddenly loosens up completely and sets you down on the ground. You slowly pant and catch your breath. The disappointed crowd frowns and resumes going about their business. 
 
-"Y-you're not playing?"
-
-You shake your head. "Oh,,, Ohmigosh I'm so sorry,,," She suddenly loosens up completely and sets you down on the ground. The disappointed crowd frowns and resumes going about their business.
-
-You slowly pant and catch your breath. Her scaley face flushes and her eyes are wide with embarassment. ",,,Y-you really don't want to be eaten by me??"
+Ivy's scaley face flushes. She seems like she's about to cry. <span.ivy>",,,Y-you really don't want to be eaten by me??"</span>
 
 * [[I don't want to be eaten in general...]]
 
 :: I don't want to be eaten in general...
 
-"B-but,,," she whimpers, "You came to this party,,,"
+<span.ivy>"B-but,,,"</span> she whimpers, <span.ivy>"You came to Basil's party,,,"</span>
 
 That seems to have been somewhat of a misunderstanding...
 
-She starts to cry. "I don't understand, am I just not good enough?? What'ss wrong with me???"
+Tears bead in her eyes, and she starts to sobs. <span.ivy>"I don't undersstand,,, am I just not a good enough pred?? What'ss wrong with me???"</span>
 
 * [[No, it's not like that!]]
 
 :: No, it's not like that!
+You explain that you're here by mistake: you're not here to be eaten. She seems like an excellent pred, who's gonna make some prey very happy someday! It's not her, it's you.
 
-"I just,,, I've never had prey not want it before,,,"
+<span.ivy>"I just,,, I've never had prey not want it before,,,"</span> Ivy says, with a sad sniffle that pulls at your heartstrings, despite the fact that literal moments ago, she was seconds from swallowing you whole.
 
-You ask, do people... Usually let you eat them?
+People usually let you eat them? you ask.
 
-She nods, sobbing. "Yeah, they let me carry them around inside me,,, Especially my boyfriend chet and his friends,,, They always like it because I'm so gentle,,, And they know I won't digesst,,,"
+<span.ivy>"Yeah,"</span> she nods, <span.ivy>"Prey always ask me to carry them around inside me,,, They always like it because I'm so gentle and comfy,,, And they know I won't digesst,,, Especially my boyfriend Chet and his friends,,, "</span>
 
-* [[Do you... enjoy eating people?]]
+* [[Do *you* enjoy vore?|Do you enjoy vore?]]
 
-:: Do you... enjoy eating people?
+:: Do you enjoy vore?
 
-She's quiet for a second. "I,,, I guesss,,, Sometimess? It's like, the one thing I'm good for,,,"
+She's quiet for a second.
+
+<span.ivy>"I,,, I guesss,,, Ssometimes? It's like, the one thing I'm good at,,, I don't want Chet to be mad at me,,,"</span>
 
 * [[What else do you like to do?]]
 
 :: What else do you like to do?
 
-"Well" (she wipes her tears on the tip of her tail) "I um,,, Like painting,,, I think I'm okay at it,,, But I can't do it as much because it's hard with chet or his friendss inside me,,,"
+Ivy wipes her tears on the tip of her tail. <span.ivy>"Well,,, I like um,,, painting,,,? I think I'm okay at it, but it's hard with Chet or his friendss inside me,,,"</span>
 
-* [[It sounds like they're using you for your body...]]
+* [[It sounds like they're using you for your body.]]
 
-:: It sounds like they're using you for your body...
+:: It sounds like they're using you for your body.
 
-She flexes her coils with discomfort. ,,,R-really?"
+She flexes her coils with discomfort. <span.ivy>",,,R-really?"</span>
 
 * [[Have you tried being more assertive?]]
 
@@ -115,7 +169,7 @@ You tell Ivy it sounds like she needs to be more assertive with her boundaries. 
 
 She dries her face on her tail.
 
-"Y-you mean it,,,? You're not just ssaying that?"
+<span.ivy>"Y-you mean it,,,? You're not just ssaying that?"</span>
 
 * [[Of course!]]
 
@@ -123,17 +177,17 @@ She dries her face on her tail.
 
 Of course! You need to put your own desires first.
 
-"Yeah,,, Yeah you're right! I don't need Chet's approval! I'm my own snake! I can digesst people if I wanna!"
+<span.ivy>"Yeah,,, Yeah you're right! I don't need Chet's approval! I'm my own snake! I can digesst people if I wanna!"</span>
 
 * [[Yes you- wait, what?]]
 
 :: Yes you- wait, what?
 
-Part 3: nummies
-
 Her coils squeeze you tight.
 
-"Oh, thankyou thankyou thankyou for helping me realize! I've been a pushover for so long,,, It's not just about what chet wants, it's about what I want!" She looks you over with renewed excitement. "And what I want... Is to be able to digest my prey!"
+<span.ivy>"Oh, thankyou thankyou thankyou for helping me realize! I've been a pushover for so long,,, It's not just about what chet wants, it's about what I want!"</span> She looks you over with renewed excitement.
+
+<span.ivy>"And what I want... Is to be able to digest my prey!"</span>
 
 * [[That's not what I meant-]]
 
@@ -142,11 +196,11 @@ Her coils squeeze you tight.
 
 You choke. I meant like- hnf- painting...
 
-She nods happily. "Yeah, it'll be so much easier if I'm not lugging around live prey all the time!"
+She nods happily. <span.ivy>"Yeah, it'll be so much easier if I'm not lugging around live prey all the time!"</span>
 
 Her coils constrict, knocking the wind out of you.
 
-She stretches her jaw and smiles triumphantly, "It's time to put my needs first!"
+She stretches her jaw and smiles triumphantly, <span.ivy>"It's time to put my needs first!"</span>
 
 * [[W-wait! Don't eat me!]]
 
@@ -155,11 +209,9 @@ She stretches her jaw and smiles triumphantly, "It's time to put my needs first!
 <% s.previousCommand = "W-wait-" %>
 [once clicked, this command retroactively changes to "W-"]
 
-Part 4: vore
-
 Glomph. Her mouth clamps down over you.
 
-"Mmmmm." Gulp. Gulp. Lots of snake throat and tummmy descriptions here.
+<span.ivy>"Mmmmm."</span> Gulp. Gulp. Lots of snake throat and tummmy descriptions here.
 
 Her gullet is much longer than a mammal prey. Your mind flashes to the search for "Pov vore video" in your browser history back at home.
 
@@ -169,7 +221,7 @@ Oh shit. You realize that if you die here, you'll never be able to delete that.
 
 :: Too late now... [vore]
 
-Sluuuuurp. Your paws go over her tongue and into her throat. "Mmmmm,,,!"
+Sluuuuurp. Your paws go over her tongue and into her throat. <span.ivy>"Mmmmm,,,!"</span>
 
 She doesn't really have a tummy perse, it's just one long tube. I think that's how snakes work anyway...
 
@@ -181,27 +233,27 @@ If you weren't probably about to die, you can see why prey would like this...
 
 You can feel paws on the outside rubbing the bulge you made.
 
-"You d-doing okay in there?" Ivy murmurs.
+<span.ivy>"You d-doing okay in there?"</span> Ivy murmurs.
 
 * [[Ivy...?]]
 
 :: Ivy...? [vore]
 
-"I,,, I realized I never got your name."
+<span.ivy>"I,,, I realized I never got your name."</span>
 
 Hollis, you reply.
 
-"Thanks, holliss,,, You were really tasty, and I'm grateful you helped me realize what'ss important."
+<span.ivy>"Thanks, holliss,,, You were really tasty, and I'm grateful you helped me realize what'ss important."</span>
 
 You're welcome, you cough.
 
-"Sorry, but I'm gonna digest you now."
+<span.ivy>"Sorry, but I'm gonna digest you now."</span>
 
 * [[P-please don't?]]
 
 :: P-please don't? [vore]
 
-She thinks for a second. ",,,the old ivy would have said yes, but now I've resolved to not be such a people-pleaser, so I have to say no.  sorry,,,"
+She thinks for a second. <span.ivy>",,,the old ivy would have said yes, but now I've resolved to not be such a people-pleaser, so I have to say no.  sorry,,,"</span>
 
 Digestive acids begin to pool around you.
 
@@ -212,7 +264,7 @@ Digestive acids begin to pool around you.
 
 You kick out and try to free yourself from the very tight insides.
 
-She can't help but moan a little. "S-sorry, I know you didn't mean for it to, but that felt really nice... I think digesting prey is what I'm meant to do."
+She can't help but moan a little. <span.ivy>"S-sorry, I know you didn't mean for it to, but that felt really nice... I think digesting prey is what I'm meant to do."</span>
 
 * [[I understand.]]
 
@@ -220,7 +272,7 @@ She can't help but moan a little. "S-sorry, I know you didn't mean for it to, bu
 
 You nod and accept your fate.
 
-"Thanks holliss,,," / ",,,sorry holliss, goodbye." she drapes her body over a couch as the party rages on around her, yawns, and curls up around the bulge.
+<span.ivy>"Thanks holliss,,,"</span> / <span.ivy>",,,sorry holliss, goodbye."</span> she drapes her body over a couch as the party rages on around her, yawns, and curls up around the bulge.
 
 Let's get a little more descriptive with the digestion this time. Or make it skippable.
 
@@ -234,7 +286,7 @@ The next day downtown.
 
 Ivy slithers down the sidewalk and talks herself up. She drinks a little bottle of storebought digestion enhancer to help her break down Hollis.
 
-"You can do thisss. You're gonna walk right in there and say what you really feel to his face!"
+<span.ivy>"You can do thisss. You're gonna walk right in there and say what you really feel to his face!"</span>
 
 * [[Enter Pizza Shack.]]
 
@@ -264,11 +316,11 @@ SNAP. GULP. Even faster than Chet they're in her belly too.
 
 "Ivy," Chet shouts from inside her, "What the hell? We can't be doing this right now!"
 
-Ivy collects herself. "Chet, I'm sick of you three perverts using me. I got some good advice, and I've decided I need to set clearer boundaries for my insides."
+Ivy collects herself. <span.ivy>"Chet, I'm sick of you three perverts using me. I got some good advice, and I've decided I need to set clearer boundaries for my insides."</span>
 
 "Okay, okay! We're sorry!" Brad cries, "Just, get us out of here!"
 
-"No. My new boundaries are that food is food, no coming out. Anyone I eat, I eat for my pleasure."
+<span.ivy>"No. My new boundaries are that food is food, no coming out. Anyone I eat, I eat for my pleasure!"</span>
 
 "You-... You bitch!" Terry cries. The three of them are bunched together in a snakebulge, already drowning in stomach acid. "You can't just digest us! You can't-"
 
@@ -278,20 +330,20 @@ Ivy collects herself. "Chet, I'm sick of you three perverts using me. I got some
 
 She flexes her coil muscles, and instantly kills them with a sickening crunch. Jaws in the room drop.
 
-She lets out a little tiny satisfied moan. "Can and will," she sighs, relieved, as her gut burbles and overtakes her meat.
+She lets out a little tiny satisfied moan. <span.ivy>"Can and will,"</span> she sighs, relieved, as her gut burbles and overtakes her meat.
 
 The Pizza Shack clientele's mouths drop as Ivy emerges, full-bellied, having eaten three employees.
 
 A grumpy looking hyena is sitting in a booth. She's eaten two entire pepperoni pizzas. She has a third one folded in half on a plate, and she's about to take a bite when she sees Ivy, and sets it down. "Holy shit, sister!"
 
-Ivy wipes her mouth and lets out a cute burp. "D-do I know you?"
+Ivy wipes her mouth and lets out a cute burp. <span.ivy>"D-do I know you?"</span>
 
 "No, but dear god dude, that was cool as fuck! Was that your boyfriend??"
 
-Ivy blushes and smiles, "E-ex boyfriend now,,," she says with a little burp.
+Ivy blushes and smiles, <span.ivy>"E-ex boyfriend now,,,"</span> she says with a little burp.
 
 Ana cackles. "Heeheehee! Holy shit. That was fucking wicked, but like, super illegal. I'm Ana by the way. C'mon, let's get you out of here."
 
-"O-okay!" Ivy smiles, and follows Ana out to her car.
+<span.ivy>"O-okay!"</span> Ivy smiles, and follows Ana out to her car.
 
 Best friends. The end!

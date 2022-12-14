@@ -21,9 +21,8 @@
 <% if (s.seenByron) { %>
 * [[Approach guitar wolf.|Look at wolf.]]
 <% } %>
-<% if (s.partyFlavorsLooped > 2) %>
+<% if (s.partyFlavorsLooped >= 1) %>
 * [[Leave the living room...?|Ivy Route]] *(Smells like snake.)* <!-- ivy_route.tw -->
-*You've been at this for a while, and you're starting to feel dizzy. Maybe now you should try talking to someone!*
 <% ; %>
 
 <% setup.party.advanceState() %>
