@@ -32,6 +32,7 @@ tw-passage > * {
 <div.center-list>
 
 * [[Life of the Party.]]
+* [[Rule 63 Mode]] <% if (Rule63.isEnabled()) %>*(active)*<%;%>
 
 </div>
 
