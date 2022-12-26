@@ -16,6 +16,11 @@ const Templates = (window.Templates = window.T = {});
       .join(" ") +
     `</p>`;
 
+  const infoMessage = (msg) =>
+  `ⓘ <i>${msg}</i>`;
+  const infoMessageBox = (msg) => 
+  `<p class="content-warning">${infoMessage(msg)}</p>`;
+
   const restart = () => passage.render(`<a0 onclick="setup.restart()">Restart.</a>`);
 
   const rewind = () => passage.render(`<a0 onclick="setup.rewind()">Rewind.</a>`);
@@ -65,6 +70,8 @@ const Templates = (window.Templates = window.T = {});
     contentWarningInline,
     CWP: contentWarningParagraph,
     contentWarningParagraph,
+    infoMessage,
+    infoMessageBox,
     restart,
     rewind,
     hoursAgo,
