@@ -1,5 +1,8 @@
 Joss is a bully who breaks your mind and takes what she wants, just for fun. Indie the shark is a cruel enabler who talks her into eating you, and Vi is sensitive but watches bashfully.
 
+:: JOSS DEMO [script]
+story.startPassage = "Go out onto the deck.";
+
 :: Go out onto the deck. [pheromones_lighter]
 <!-- Go out onto the deck. -->
 
