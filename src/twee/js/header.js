@@ -49,11 +49,15 @@ setup.help = () => {
   }
 };
 
+setup.refreshHeader = () => {
+  renderToSelector("#header", "Topbar controls");
+}
+
 $(window).on("sm.passage.shown", (event, { passage }) => {
   if (passage.name == "Help") {
-    renderToSelector("#header", "Topbar controls");
+    setup.refreshHeader();
     $(window).one("sm.passage.shown", () => {
-      renderToSelector("#header", "Topbar controls");
+      setup.refreshHeader();
     });
   }
 });
@@ -66,5 +70,5 @@ setup.toggleMute = () => {
     setup.unsetFlag("enableSound");
     Howler.mute(true);
   }
-  renderToSelector("#header", "Topbar controls");
+  setup.refreshHeader();
 };

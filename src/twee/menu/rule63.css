@@ -1,0 +1,18 @@
+.rule63-female {
+    /* Pink gradient */
+    background-image: linear-gradient(
+        var(--bg-rotation, 0deg),
+        HotPink -200%,
+        var(--background)
+    );
+}
+
+.rule63-male {
+    /* Blue gradient */
+    background-image: linear-gradient(
+        var(--bg-rotation, 0deg),
+        var(--background),
+        CornFlowerBlue
+        200%
+    );
+}
