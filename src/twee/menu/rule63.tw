@@ -1,0 +1,42 @@
+:: Test [script]
+
+window.TestChar = Rule63.defaultMale;
+
+:: Rule 63 Mode [no_checkpoint no_command]
+<style>
+body {
+    background: linear-gradient(
+        /* Pink gradient */
+        transparent,
+        /* Blue gradient */
+        <% if (Rule63.getSetting() === Rule63.Setting.PREFER_MALE)%>CornFlowerBlue<% else if (Rule63.getSetting() === Rule63.Setting.PREFER_FEMALE) %>HotPink<%;%> 200%
+    ) #eee;
+}
+</style>
+
+This story features vore and sexual content with characters of various genders. **Rule 63 Mode** aims to improve your experience by programmatically altering parts of the story in order to better match your preference.
+
+Other aspects of the story, including characters' genitals and sex scenes, will remain untouched.
+
+<ul>
+    <li>
+        <a0 data-passage="<%=passage.name%>" onclick="Rule63.setSetting(Rule63.Setting.DISABLED)">Use canon genders.</a> <% if (Rule63.getSetting() === Rule63.Setting.DISABLED) %>(active)<% ; %>
+    </li>
+    <li>
+        <a0 data-passage="<%=passage.name%>" onclick="Rule63.setSetting(Rule63.Setting.PREFER_FEMALE)">Prefer female predators.</a>
+        <% if (Rule63.getSetting() === Rule63.Setting.PREFER_FEMALE) %>(active)<% ; %>
+    </li>
+    <li>
+        <a0 data-passage="<%=passage.name%>" onclick="Rule63.setSetting(Rule63.Setting.PREFER_MALE)">Prefer male predators.</a>
+        <% if (Rule63.getSetting() === Rule63.Setting.PREFER_MALE) %>(active)<% ; %>
+    </li>
+    <li>
+     <a0 onclick="setup.undo()">Back</a>
+    </li>
+</ul>
+
+<% if (!Rule63.isEnabled()) { %>
+<%=T.infoMessageBox(`Predators will use <b>their canonical genders</b>.`)%>
+<% } else { %>
+<%=T.infoMessageBox(`Rule 63 is enabled. Predators will use <b>${Ana?"he/him":"she/her"}</b> pronouns where possible.`)%>
+<% } %>
