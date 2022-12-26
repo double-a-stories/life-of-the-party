@@ -1,48 +1,55 @@
-<!-- You go outside and talk to Ana Rose, a hungry hyena with some self-esteem issues. You get familiar, and eventually offer to be eaten. She agrees on the condition that you can't change your mind, and snarfs you down quickly. You begin to have second thoughts, but it's too late. -->
+:: Ana Gender [script]
+Rule63.define("Ana", Rule63.Gender.Female);
+
+<!-- TODO: romance scenes with Ana and Basil are both underdeveloped. add sex. -->
 
 :: Look at hyena. [checkpoint]
-She's wearing acid-wash jeans and a black t-shirt that reads "Bad Bitch". She has sandy-colored fur with brown spots, and a thick long neck.
+<%-Ana?"He":"She"%> has <%-Ana?"light gray fur with dark stripes":"sandy-colored fur with brown spots"%>, and a thick long neck. <%-Ana?"He":"She"%>'s wearing acid-wash jeans and a black tank-top over <%-Ana?"his chubby middle":"her considerable chest"%>. It reads <% if (Ana) { %><span title="bastards bleed">"SHy BΛSTARd"</span>. <% } else { %><span title="bad bitch">"BΛD BITCh"</span>.<% } %>
 
-The hyena sees you staring, and looks up from her phone. She notices you, and says, "Oh. Sup."
+
+The hyena sees you staring, and looks up from <%-Ana?"his":"her"%> phone. <%-Ana?"He":"She"%> notices you, and says, "Oh. Sup."
 
 * [[What are you doing out here alone?]]
 * [[Have you seen my friend?]]
 
-<%=T.CWP("Willing prey", "Unwilling digestion", "Revoked consent", "Accidental digestion", "Casual vore", "Girl with penis", "Masturbation")%>
+<%=T.CWP("Willing prey", "Unwilling digestion", "Revoked consent", "Accidental digestion", "Casual vore", "Masturbation",  Ana ? "Trans man" : "Trans woman")%>
+
+<% Rule63.getRule63Message(Rule63.Gender.Female) %>
+
 
 :: What are you doing out here alone?
-She folds her arms and and flips her mohawk non-chalantly. "Could ask you the same question."
+<%-Ana?"He":"She"%> folds <%-Ana?"his":"her"%> arms and and flips <%-Ana?"his":"her"%> mohawk non-chalantly. "Could ask you the same question."
 
 * [[I'm not really one for parties...]]
 * [[Just... getting some air?]]
 
 :: Just... getting some air?
-Ana kicks her feet up on the bench, and says, "Well, there's a free bench over there."
+<%-Ana?"Andrew":"Ana"%> kicks <%-Ana?"his":"her"%> feet up on the bench, and says, "Well, there's a free bench over there."
 
 * [[Sit by yourself.]]
 * [[Have you seen my friend?]]
 
 :: I'm not really one for parties...
-She lets out a little sigh. "Yeah, me either. It's like, I'm supposed to be enjoying myself here? Making friends and eating people? But all the noise, and the crowds, I get freaked out. I guess I'm just trying to get away from it all for a moment."
+<%-Ana?"He":"She"%> lets out a little sigh. "Yeah, me either. It's like, I'm supposed to be enjoying myself here? Making friends and eating people? But all the noise, and the crowds, I get freaked out. I guess I'm just trying to get away from it all for a moment."
 
 * [[Same here...]]
 * [[Wait, eating people?]]
 
 :: Wait, eating people?
-"Meeting," Ana corrects herself, "Making friends and *meeting* people. I don't eat people, despite what you may have heard." She clears her throat awkwardly. "I'm Ana, by the way. Ana Rose." She pats spot on the bench next to her. "...You can sit if you want."
+"Meeting," <%-Ana?"Andrew":"Ana"%> corrects <%-Ana?"himself":"herself"%>, "Making friends and *meeting* people. I don't eat people, despite what you may have heard." <%-Ana?"He":"She"%> clears <%-Ana?"his":"her"%> throat awkwardly. "I'm <%-Ana?"Andrew":"Ana"%>, by the way. <%-Ana?"Andrew":"Ana"%> Rose." <%-Ana?"He":"She"%> pats spot on the bench next to <%-Ana?"him":"her"%>. "...You can sit if you want."
 * [[I'm Hollis.|Tell Ana your name.]]
 
 :: Same here...
-She nods, looking wistfully off into the distance. The moonlight reflects in her amber-colored eyes.
+<%-Ana?"He":"She"%> nods, looking wistfully off into the distance. The moonlight reflects in <%-Ana?"his":"her"%> <%-Ana?"silvery":"amber"%> eyes.
 
-"I'm Ana, by the way. Ana Rose." She pats spot on the bench next to her. "...You can sit if you want."
+"I'm <%-Ana?"Andrew":"Ana"%>, by the way. <%-Ana?"Andrew":"Ana"%> Rose." <%-Ana?"He":"She"%> pats spot on the bench next to <%-Ana?"him":"her"%>. "...You can sit if you want."
 
 * [[My name's Hollis!|Tell Ana your name.]]
 
 :: Tell Ana your name.
-You sit down on the bench, and tell Ana your name.
+You sit down on the bench, and tell <%-Ana?"Andrew":"Ana"%> your name.
 
-"Hollis," she repeats, smiling slightly. "Cute name."
+"Hollis," <%-Ana?"he":"she"%> repeats, smiling slightly. "Cute name."
 
 You're flustered, and not sure how to respond.
 
@@ -50,47 +57,49 @@ You're flustered, and not sure how to respond.
 * [[I... um... think you're... also... cute?|(oh god oh fuck)]]
 
 :: Charm.
-Ana cocks an eyebrow at you. "...What did you say?"
+<%-Ana?"Andrew":"Ana"%> cocks an eyebrow at you. "...What did you say?"
 
 You realize that instead of saying or doing something charming, you literally just said the word *charm* out loud.
 
-Thinking quickly you tell her, uh, you meant, that she seems very charming! No, wait, you're *charmed* to meet her! That's it. Her name's Ana, yours is Hollis. Charmed.
+Thinking quickly you tell <%-Ana?"him":"her"%>, uh, you meant, that <%-Ana?"he":"she"%> seems very charming! No, wait, you're *charmed* to meet <%-Ana?"him":"her"%>! That's it. <%-Ana?"His":"Her"%> name's <%-Ana?"Andrew":"Ana"%>, yours is Hollis. Charmed.
 
 * [[(oh god oh fuck)]]
 
 :: (oh god oh fuck)
-She snickers as you helplessly tumble over your words. For a moment, she hesitates, delicately running her tongue between her lips and over her pointy white teeth.
+<%-Ana?"He":"She"%> snickers as you helplessly tumble over your words. For a moment, <%-Ana?"he":"she"%> hesitates, delicately running <%-Ana?"his":"her"%> tongue between <%-Ana?"his":"her"%> lips and over <%-Ana?"his":"her"%> pointy white teeth.
 
-"Okay, Hollis. I... think you're kinda cute too," she says, "for a herbivore at least..." She smiles at you, and brushes her hair out of her eyes. She seems to be a little more comfortable around you now. "Kinda cold out here, huh?"
+"Okay, Hollis. I... think you're kinda cute too," <%-Ana?"he":"she"%> says, "for a herbivore at least..." <%-Ana?"He":"She"%> smiles at you, and brushes <%-Ana?"his":"her"%> hair out of <%-Ana?"his":"her"%> eyes. <%-Ana?"He":"She"%> seems to be a little more comfortable around you now. "Kinda cold out here, huh?"
 
 * [[Do you want a hug?]]
 * [[Anyway, I'm looking for this friend of mine?|I came here with a friend...]]
 
 :: Do you want a hug? [checkpoint]
-"...Sure, whatever," she replies, with a little smile, and stretches out her arms. You give Ana a hug. You can tell she's wearing a lot of deodorant, but it's actually quite nice. You don't remember the last time you were hugged.
+"...Sure, whatever," <%-Ana?"he":"she"%> replies, with a little smile, and stretches out <%-Ana?"his":"her"%> arms. You wrap your arms around <%-Ana?"his":"her"%>'s girthy middle, and hug. <%-Ana?"His":"Her"%> arms delicately wrap around you to return the warm gesture.
 
-After a what feels like a wonderful eternity, she lets go. "That was nice," she says, slouching down a little.
+<%-Ana?"He":"She"%>'s wearing a lot of deodorant. Beneath it, your well-attuned nose whiffs the faintest undertone of perspiration. Still, it's not unpleasant. You can't remember the last time you were hugged.
 
-Yeah, you say, and tentatively rest your head against her shoulder.
+After a what feels like a wonderful eternity, <%-Ana?"he":"she"%> lets go. "That was nice," <%-Ana?"he":"she"%> says, slouching down a little.
+
+Yeah, you say, and tentatively rest your head against <%-Ana?"his":"her"%> shoulder.
 
 * [[A quiet moment.]]
-* [[Kiss her.]]
+* [[Kiss <%-Ana?"him":"her"%>.|Kiss her.]]
 
 :: Kiss her.
 You've seen enough romance movies to know where this is going.
 You're sure of it–this is the moment where you lean in, and both share a sudden yet dramatic first kiss.
 
-You turn toward her big furry face, and attempt to kiss her on the mouth. She immediately leans away, letting out a small, surprised growl.
+You turn toward <%-Ana?"his":"her"%> big furry face, and attempt to kiss <%-Ana?"him":"her"%> on the mouth. <%-Ana?"He":"She"%> immediately leans away, letting out a small, surprised growl.
 
-"Woah there, casanova, that's, uh..." She frowns. "I'm not really comfortable with that right now?"
+"Woah there, casanova, that's, uh..." <%-Ana?"He":"She"%> frowns. "I'm not really comfortable with that right now?"
 
 * [[S-sorry!|Sorry for trying to kiss you.]]
-* [[Try to kiss her again.|Kiss her again.]]
+* [[Try to kiss <%-Ana?"him":"her"%> again.|Kiss her again.]]
 
 :: Kiss her again.
-Ana is visibly uncomfortable, and showing her teeth.
+<%-Ana?"Andrew":"Ana"%> is visibly uncomfortable, and showing <%-Ana?"his":"her"%> teeth.
 
-You reflect upon the obvious subtext of her response, and decide instead to delicately run a paw through her dark brown mohawk.
+You reflect upon the obvious subtext of <%-Ana?"his":"her"%> response, and decide instead to delicately run a paw through <%-Ana?"his":"her"%> dark brown mohawk.
 
 "...No seriously don't-...!!!"
 
@@ -99,9 +108,9 @@ You reflect upon the obvious subtext of her response, and decide instead to deli
 :: ENDING: Can't Take a Hint [vore]
 "...!!!"
 
-The second you touch her hair, the hyena immediately lets out an vicious bark, and reflexively glomps her mouth down over your head. You faint from surprise. Ana quickly swallows your unconscious body, making sure no one else was around to see.
+The second you touch <%-Ana?"his":"her"%> hair, the hyena immediately lets out an vicious bark, and reflexively glomps <%-Ana?"his":"her"%> mouth down over your head. You faint from surprise. <%-Ana?"Andrew":"Ana"%> quickly swallows your unconscious body, making sure no one else was around to see.
 
-"Dammit," she mutters, patting the massive bulge in her engorged belly, "Why is meeting new people so HARD??"
+"Dammit," <%-Ana?"he":"she"%> mutters, patting the massive bulge in <%-Ana?"his":"her"%> engorged belly, "Why is meeting new people so HARD??"
 
 <% s.sawFirstKissEnding = true;
 // setup.achievements.add("Cannot Take a Hint (Hyena Bite Ending)");
@@ -116,52 +125,52 @@ The second you touch her hair, the hyena immediately lets out an vicious bark, a
 :: A quiet moment.
 For a little while, neither of you say anything. The two of you sit there in comfortable silence, watching the stars.
 
-"So," she giggles eventually, "some party, huh."
+"So," <%-Ana?"he":"she"%> giggles eventually, "some party, huh."
 
  Yeah, you say, the music's kinda loud.
 
-"Woof, I know, right? "I can't believe they're playing friggin' dubstep. Like, last century called?" She snorts as she laughs.
+"Woof, I know, right? "I can't believe they're playing friggin' dubstep. Like, last century called?" <%-Ana?"He":"She"%> snorts as <%-Ana?"he":"she"%> laughs.
 
-"I don't even know why I came here, honestly. It's just a bunch of horny rich college kids," she says, "-No offense." Ana looks over at you. "Why'd you even come here in the first place?"
+"I don't even know why I came here, honestly. It's just a bunch of horny rich college kids," <%-Ana?"he":"she"%> says, "-No offense." <%-Ana?"Andrew":"Ana"%> looks over at you. "Why'd you even come here in the first place?"
 
 * [[I came here with a friend...]]
 * [[I think I want you to eat me...|Ana, I want you to eat me.]]
 
 :: Sorry for trying to kiss you.
-"No," she says, smiling again, "I get it." She gives you another hug.
+"No," <%-Ana?"he":"she"%> says, smiling again, "I get it." <%-Ana?"He":"She"%> gives you another hug.
 
 <%= story.render("A quiet moment.") /* [[A quiet moment.]] */ %>
 
 :: I came here with a friend...
-Ana scratches her head. "I probably haven't seen 'em. What's this friend of yours look like?"
+<%-Ana?"Andrew":"Ana"%> scratches <%-Ana?"his":"her"%> head. "I probably haven't seen 'em. What's this friend of yours look like?"
 
 * [[He's a guinea pig, about this tall...|Describe Reese.]]
 
 :: Have you seen my friend?
-She takes a thoughtful sip from a plastic cup.
+<%-Ana?"He":"She"%> takes a thoughtful sip from a plastic cup.
 
-"Depends who's asking," she replies.
+"Depends who's asking," <%-Ana?"he":"she"%> replies.
 
-* [[Tell her your name.]]
+* [[Tell <%-Ana?"him":"her"%> your name.|Tell her your name.]]
 
 :: Tell her your name.
 You say your name is Hollis.
 
-"Pleased to meet you, Hollis, I'm Ana." From her tone, you suspect she's being at least a little sarcastic. "Now, this friend of yours?"
+"Pleased to meet you, Hollis, I'm <%-Ana?"Andrew":"Ana"%>." From <%-Ana?"his":"her"%> tone, you suspect <%-Ana?"he":"she"%>'s being at least a little sarcastic. "Now, this friend of yours?"
 
 * [[He's a guinea pig, about this tall...|Describe Reese.]]
 
 :: Describe Reese.
-You give her a brief description of your friend, Reese.
+You give <%-Ana?"him":"her"%> a brief description of your friend, Reese.
 
-"Sorry, haven't seen him," she shrugs and says, "But at a party like this, I wouldn't be surprised if he was already in some pred's gut."
+"Sorry, haven't seen him," <%-Ana?"he":"she"%> shrugs and says, "But at a party like this, I wouldn't be surprised if he was already in some pred's gut."
 
 * [[What!?|What do you mean?]]
 
 :: What do you mean?
 <% setup.setFlag("upstairsUnlocked"); %>
 
-She gives you a slightly patronizing stare.
+<%-Ana?"He":"She"%> gives you a slightly patronizing stare.
 
 "C'mon, you'd have to be an idiot not to realize. This whole place is practically crawling with preds. Your bud probably got dragged into a broom closet somewhere and gurgled. That's all there is to it."
 
@@ -169,85 +178,85 @@ She gives you a slightly patronizing stare.
 * [[That's kind of hot...]]
 
 :: But, um, if he wasn't...?
-She shrugs.
+<%-Ana?"He":"She"%> shrugs.
 
 "I mean, you could probably check in the rooms upstairs. Somewhere secluded and private, that's probably where I'd go... *if* I was trying to eat someone..."
 
-She clears her throat. "Not that that's like, a thing that I've ever done, or anything."
+<%-Ana?"He":"She"%> clears <%-Ana?"his":"her"%> throat. "Not that that's like, a thing that I've ever done, or anything."
 
 * [[Y-you could eat me, if you wanted to...|Ana, I want you to eat me.]]
 * [[Thank you, goodbye.]]
 
 :: Thank you, goodbye.
-You excuse yourself politely, and head back into the house. Ana gives a casual wave as you leave.
+You excuse yourself politely, and head back into the house. <%-Ana?"Andrew":"Ana"%> gives a casual wave as you leave.
 
 * [[Go back to the foyer.|The Foyer.]]
 
 :: Ana, I want you to eat me.
 You brain tells to you to stop. That you're making a big mistake. After hesitating for a second, you finally open your mouth, and manage to get the words out.
 
-The hyena looks at you with astonishment. "R-really?" Her confusion turns into something of a bemused smile.
+The hyena looks at you with astonishment. "R-really?" <%-Ana?"His":"Her"%> confusion turns into something of a bemused smile.
 
 "You *want* me to eat you? Like, 'eat you' eat you? Digestion and all?"
 * [[...Yes please.]]
 * [[No, wait.]]
 
 :: That's kind of hot...
-Ana blushes, but looks at you interestedly.
+<%-Ana?"Andrew":"Ana"%> blushes, but looks at you interestedly.
 
 "You... think vore is *hot*? I guess that's not a surprise, considering you're *here*. You just didn't strike me as that kind of rabbit."
 
 * [[N-no! I meant...]]
 
 :: N-no! I meant...
-Thinking quickly you tell her, uh, you meant, that you think predators are hot! Not that you're assuming she's a— no, fuck, um...
+Thinking quickly you tell <%-Ana?"him":"her"%>, uh, you meant, that you think predators are hot! Not that you're assuming <%-Ana?"he":"she"%>'s a— no, fuck, um...
 
 "Deep breaths, pal."
 
 You clear your throat. What you meant to say was that digesting inside is a stomach, is literally a hot place to be. Like, temperature-wise. Not that you'd ever *want* to be digested in a stomach. Or-or- even thought about anything like that!
 
-Ana pauses thoughtfully for a moment. Her sharp, shiny teeth glint in the moonlight. "...Hollis, do you want me to digest you?"
+<%-Ana?"Andrew":"Ana"%> pauses thoughtfully for a moment. <%-Ana?"His":"Her"%> sharp, shiny teeth glint in the moonlight. "...Hollis, do you want me to digest you?"
 
 * [[...Yes please.]]
 * [[No, wait.]]
 
 :: No, wait.
-You tell her she might've gotten the wrong idea. You're not interested in being digested.
+You tell <%-Ana?"him":"her"%> <%-Ana?"he":"she"%> might've gotten the wrong idea. You're not interested in being digested.
 
-"Oh," she says, clearly a little disappointed. "Sorry, but I don't spit my prey up." Ana gestures to her slightly chubby belly, and says, "There's only one way outta here, and it's not pretty. I take it you're not interested anymore?"
+"Oh," <%-Ana?"he":"she"%> says, clearly a little disappointed. "Sorry, but I don't spit my prey up." <%-Ana?"Andrew":"Ana"%> gestures to <%-Ana?"his":"her"%> slightly chubby belly, and says, "There's only one way outta here, and it's not pretty. I take it you're not interested anymore?"
 
 * [[No, thank you though.]]
 * [[You can digest me, if you want...]]
 
 :: No, thank you though.
-"Oh, no problem," Ana says, clearly a little crestfallen.
+"Oh, no problem," <%-Ana?"Andrew":"Ana"%> says, clearly a little crestfallen.
 
-You awkwardly excuse yourself, and walk back into the foyer. She waves half-heartedly as you leave.
+You awkwardly excuse yourself, and walk back into the foyer. <%-Ana?"He":"She"%> waves half-heartedly as you leave.
 
 * <a0 data-passage="The Foyer.">Go back to the foyer.</a>
 
 :: ...Yes please.
 You can't believe you're saying this.
 
-Ana chuckles, "Gee, I'm that obvious as a predator, huh?" She stands up and gives you a big smile. "Y'know, talking to you was making me *really* hungry." You blush, and she gives you a paw and helps you up. Her tail is wagging eagerly. "You're sure about this?"
+<%-Ana?"Andrew":"Ana"%> chuckles, "Gee, I'm that obvious as a predator, huh?" <%-Ana?"He":"She"%> stands up and gives you a big smile. "Y'know, talking to you was making me *really* hungry." You blush, and <%-Ana?"he":"she"%> gives you a paw and helps you up. <%-Ana?"His":"Her"%> tail is wagging eagerly. "You're sure about this?"
 
 You nod.
 
-"Okay!" she says, "follow me!"
+"Okay!" <%-Ana?"he":"she"%> says, "follow me!"
 
-* [[Follow Ana into the yard.]]
+* [[Follow <%-Ana?"Andrew":"Ana"%> into the yard.|Follow Ana into the yard.]]
 
 :: You can digest me, if you want...
-You blushingly tell Ana you've had a change of heart. You're ready to get gurgled.
+You blushingly tell <%-Ana?"Andrew":"Ana"%> you've had a change of heart. You're ready to get gurgled.
 
-Ana stands up and gives you a big smile. "You sure? Awesome! Y'know, talking to you was making me *really* hungry." You blush, and she gives you a paw and helps you up. Her tail is wagging eagerly.
+<%-Ana?"Andrew":"Ana"%> stands up and gives you a big smile. "You sure? Awesome! Y'know, talking to you was making me *really* hungry." You blush, and <%-Ana?"he":"she"%> gives you a paw and helps you up. <%-Ana?"His":"Her"%> tail is wagging eagerly.
 
-"Okay!" she says, "follow me!"
+"Okay!" <%-Ana?"he":"she"%> says, "follow me!"
 
-* [[Follow Ana into the yard.]]
+* [[Follow <%-Ana?"Andrew":"Ana"%> into the yard.|Follow Ana into the yard.]]
 
 :: Follow Ana into the yard.
-Ana leads you by the paw further into a darker part of the backyard, out of view. "Nobody should bother us out here," she says. You shiver with excitement.
+<%-Ana?"Andrew":"Ana"%> leads you by the paw further into a darker part of the backyard, out of view. "Nobody should bother us out here," <%-Ana?"he":"she"%> says. You shiver with excitement.
 
 "Now, just one condition for me to eat you. Once I eat you, you're mine. If you change your mind, you can kick and squirm all you like, but you're not coming out. No backsies. Got it?"
 
@@ -257,7 +266,7 @@ Ana leads you by the paw further into a darker part of the backyard, out of view
 <% const hasSeen = ["Will you be gentle?", "How does it feel to have live prey inside you?", "Should I get naked first?", "Will I taste okay?"].map(e => +visited(e)).reduce((a, b) => a+b, 0);
 
 if (hasSeen === 0) { %>
-Ana smiles. "Good. Any other questions before you become hyena food?"
+<%-Ana?"Andrew":"Ana"%> smiles. "Good. Any other questions before you become hyena food?"
 <% } else if (hasSeen !== 4) { %>
 "Anything else?"
 <% } else { %>
@@ -277,7 +286,7 @@ Ana smiles. "Good. Any other questions before you become hyena food?"
 
 * [[Should I get naked first?]]
 
-<% } else if (!visited("You have a penis?")) { %>
+<% } else if (!visited("You have a penis?") && !Ana) { %>
 
 * [[You have a penis?]]
 
@@ -298,23 +307,23 @@ Ana smiles. "Good. Any other questions before you become hyena food?"
 <% } %>
 
 :: Will you be gentle?
-"No teeth, I promise." She gives you a cute smile. "My belly definitely won't go easy on you, but you'll probably pass out before you start digesting anyway. I definitely won't bite or scratch you."
+"No teeth, I promise." <%-Ana?"He":"She"%> gives you a cute smile. "My belly definitely won't go easy on you, but you'll probably pass out before you start digesting anyway. I definitely won't bite or scratch you."
 
-She murmurs, "Not hard, anyway..."
+<%-Ana?"He":"She"%> murmurs, "Not hard, anyway..."
 
 * [[Should I feel reassured?]]
 
 :: Should I feel reassured?
-"Well, people say I can be pretty feisty. At least, when they're not saying things like, 'Aah stop!!' and, 'Ana you said you weren't gonna digest me!'"
+"Well, people say I can be pretty feisty. At least, when they're not saying things like, 'Aah stop!!' and, '<%-Ana?"Andrew":"Ana"%> you said you weren't gonna digest me!'"
 
-You give her a horrified expression.
+You give <%-Ana?"him":"her"%> a horrified expression.
 
-"Kidding!" she says, "Honestly, I don't bite."
+"Kidding!" <%-Ana?"he":"she"%> says, "Honestly, I don't bite."
 
 * [[Okay...|Any questions?]]
 
 :: How does it feel to have live prey inside you?
-As you ask her this, Ana's belly grumbles expectantly. She pats it, and looks thoughtful for a second.
+As you ask <%-Ana?"him":"her"%> this, <%-Ana?"Andrew":"Ana"%>'s belly grumbles expectantly. <%-Ana?"He":"She"%> pats it, and looks thoughtful for a second.
 
 "It's uh, kinda hard to describe, beyond saying it feels *super* good. Like, imagine getting a shiatsu massage from the *inside*. Except, the masseuse is made out of *bacon*... or like, carrots, or whatever rabbits eat. I'm not explaining it right."
 * [[Root vegetables, mostly...?]]
@@ -325,75 +334,88 @@ As you ask her this, Ana's belly grumbles expectantly. She pats it, and looks th
 <%= story.render("Any questions?") %>
 
 :: Should I get naked first?
-"Nah," she says, "I can digest clothes no problem. You're lucky you're dealing with an experienced predator!"
+"Nah," <%-Ana?"he":"she"%> says, "I can digest clothes no problem. You're lucky you're dealing with an experienced predator!"
 
-"I mean, you could get naked if you *wanted* to, but, it's not like you're gonna impress me with your dick." She winks. "I guarantee mine's bigger."
+"I mean, you could get naked if you *wanted* to, but, it's not like you're gonna impress me with your dick." <% if (!Ana) { %><%-Ana?"He":"She"%> winks. "I guarantee mine's bigger."<% } %>
+
 * [[Take off clothes.|Undress in front of Ana outside.]]
+<% if (!Ana) { %>
 * [[...I don't have a dick.]]
+<% } %>
 * [[I'll stay clothed.]]
 
 :: Undress in front of Ana outside.
-You remove your clothes, in the hopes that it'll make you easier on Ana's stomach.
+You remove your clothes, in the hopes that it'll make you easier on <%-Ana?"Andrew":"Ana"%>'s stomach.
 
-She looks at the fur of your naked body with intrigue, her eyes drifting towards your crotch. "O-oh! That's uh, very considerate of you."
+<%-Ana?"He":"She"%> looks at the fur of your naked body with intrigue, <%-Ana?"his":"her"%> eyes drifting towards your crotch. "O-oh! That's uh, very considerate of you."
 
 <%= story.render("Any questions?") %>
 
 :: ...I don't have a dick.
-Ana hesitates for a second. "Y-yeah, haha." She scratches the mohawk on the back of her neck. "M-me neither..."
+<%-Ana?"Andrew":"Ana"%> hesitates for a second. <% if (Ana) { %>"Oh, really? But you look so... Uhm... Nevermind!"<%} else { %> "Y-yeah, haha." <%-Ana?"He":"She"%> scratches the mohawk on the back of <%-Ana?"his":"her"%> neck. "M-me neither..." <% } %>
 
 <% s.uhYeahMeNeither = true; %>
 
 <%= story.render("Any questions?") %>
 
 :: I'll stay clothed.
-"Suit yourself," Ana says, "pun intended."
+"Suit yourself," <%-Ana?"Andrew":"Ana"%> says, "pun intended."
 
 <%= story.render("Any questions?") %>
 
 :: You have a penis?
-Ana clears her throat awkwardly. "Yes!"
+<% if (Ana) { %>
+Andrew suddenly looks a little flustered. "What's that supposed to mean? Of course I do." He clears his throat awkwardly. "I mean, technically it's a pseudo-penis, but, y'know."
+
+* [[Pseudo-penis?|Is it because you're a hyena?]]
+<% } else { %>
+Ana clears her throat awkwardly. "Uh, yes! That a problem?"
 
 * [[Is it because you're a hyena?]]
+<% } %>
 * [[Okay, cool.|Any questions?]]
 
 :: Is it because you're a hyena?
+<% if (Ana) { %>
+He opens his mouth, then closes it again. "Let's... change the subject."
+<% } else { %>
 "No, it's because I'm... Huh. Actually yeah, let's go with that."
+<% } %>
 
-* [[Okay, cool.|Any questions?]]
+<%= story.render("Any questions?") %>
 
 :: Will I taste okay?
-Ana sticks her nose into your neck, smelling you over with a slightly invasive tenacity.
+<%-Ana?"Andrew":"Ana"%> sticks <%-Ana?"his":"her"%> nose into your neck, smelling you over with a slightly invasive tenacity.
 
-"Yeah, rabbit fur is usually really soft and delicious. Oh, and those ears!" She playfully licks one, which sends a shiver down your spine. "Yeah, you taste great."
+"Yeah, rabbit fur is usually really soft and delicious. Oh, and those ears!" <%-Ana?"He":"She"%> playfully licks one, which sends a shiver down your spine. "Yeah, you taste great."
 
-She puts a paw on her chin. "...Although maybe you could dump a bottle of salad dressing on yourself... Oh! Or do a quick beer baste!"
+<%-Ana?"He":"She"%> puts a paw on <%-Ana?"his":"her"%> chin. "...Although maybe you could dump a bottle of salad dressing on yourself... Oh! Or do a quick beer baste!"
 
 * [[I'm good, I think.]]
 
 :: I'm good, I think.
-Ana cheerfully licks your face, wetting your nose a little with slobber. "Yeah, you're good."
+<%-Ana?"Andrew":"Ana"%> cheerfully licks your face, wetting your nose a little with slobber. "Yeah, you're good."
 
 <%= story.render("Any questions?") %>
 
 :: I've changed my mind.
-You tell Ana that you've had a change of heart, and don't want to be eaten after all.
+You tell <%-Ana?"Andrew":"Ana"%> that you've had a change of heart, and don't want to be eaten after all.
 
 <% if (visited("Undress in front of Ana outside.")) { %>
-"R-really?" she asks, looking at down at your naked body, "*after* you took your clothes off?"
+"R-really?" <%-Ana?"he":"she"%> asks, looking at down at your naked body, "*after* you took your clothes off?"
 
 You look down, and realize you should probably put your pants back on.
 <% } else { %>
-"R-really?" she asks, looking somewhat disappointed, "*after* my whole spiel?"
+"R-really?" <%-Ana?"he":"she"%> asks, looking somewhat disappointed, "*after* my whole spiel?"
 <% } %>
-She frowns, and puts a paw on her chin. "Well, it's your choice after all. I'm not gonna force you to be my prey. You'll need to find another playthrough for that." She winks.
+<%-Ana?"He":"She"%> frowns, and puts a paw on <%-Ana?"his":"her"%> chin. "Well, it's your choice after all. I'm not gonna force you to be my prey. You'll need to find another playthrough for that." <%-Ana?"He":"She"%> winks.
 
-She pats her gut, and says, "So, you're *completely* sure you don't wanna be my shit? Even if I'm *extra* gentle when I eat you?"
+<%-Ana?"He":"She"%> pats <%-Ana?"his":"her"%> gut, and says, "So, you're *completely* sure you don't wanna be my shit? Even if I'm *extra* gentle when I eat you?"
 * [[No, thank you though.]]
 * [[...I'm ready to be eaten.|Okay, I'm ready.]]
 
 :: Okay, I'm ready.
-Ana grins. She's practically drooling just from looking at you.
+<%-Ana?"Andrew":"Ana"%> grins. <%-Ana?"He":"She"%>'s practically drooling just from looking at you.
 
 "Thanks for doing this. I promise to be extra careful as I digest you into my shit."
 
@@ -401,51 +423,51 @@ Ana grins. She's practically drooling just from looking at you.
 
 :: Get vored by Ana. [vore]
 <% s.previousCommand = "You're w-"; %>
-You're about to say she's welcome, when Ana suddenly lunges at you and clamps her slobbering maw down over your head. Your world suddenly becomes dark, wet, and smelling faintly like mint toothpaste. True to her word, she's feisty, but not actually using teeth.
+You're about to say <%-Ana?"he":"she"%>'s welcome, when <%-Ana?"Andrew":"Ana"%> suddenly lunges at you and clamps <%-Ana?"his":"her"%> slobbering maw down over your head. Your world suddenly becomes dark, wet, and smelling faintly like mint toothpaste. True to <%-Ana?"his":"her"%> word, <%-Ana?"he":"she"%>'s feisty, but not actually using teeth.
 
-Ana deftly wraps her paws around your torso, and with a firm thrust, pushes your head, neck, and shoulders into her slimy esophagus, swallowing them almost instantly. You consider that as a hyena, maybe she's predisposed to consuming as much food as possible before someone else gets to it. Or maybe she's just experienced. Either way, the speed and ravenousness with which she traps you in her stomach is almost incredible.
+<%-Ana?"Andrew":"Ana"%> deftly wraps <%-Ana?"his":"her"%> paws around your torso, and with a firm thrust, pushes your head, neck, and shoulders into <%-Ana?"his":"her"%> slimy esophagus, swallowing them almost instantly. You consider that as a hyena, maybe <%-Ana?"he":"she"%>'s predisposed to consuming as much food as possible before someone else gets to it. Or maybe <%-Ana?"he":"she"%>'s just experienced. Either way, the speed and ravenousness with which <%-Ana?"he":"she"%> traps you in <%-Ana?"his":"her"%> stomach is almost incredible.
 
-Before you know it, Ana is eagerly gulping down your feet, leaving you curled up into a tight, wet ball inside her squeezing stomach walls.
+Before you know it, <%-Ana?"Andrew":"Ana"%> is eagerly gulping down your feet, leaving you curled up into a tight, wet ball inside <%-Ana?"his":"her"%> squeezing stomach walls.
 
-"BUUUURP," Ana concludes, licking her lips. "How was that?"
+"BUUUURP," <%-Ana?"Andrew":"Ana"%> concludes, licking <%-Ana?"his":"her"%> lips. "How was that?"
 
 * [[...F-fast?]]
 
 :: ...F-fast? [vore]
-Ana snickers, patting the huge furry bulge you've made in her gut. "What, did you want me to <%= (visited("...I don't have a dick.")) ? "jill" : "jack" %> you off on the way down?"
+<%-Ana?"Andrew":"Ana"%> snickers, patting the huge furry bulge you've made in <%-Ana?"his":"her"%> gut. "What, did you want me to <%= (visited("...I don't have a dick.")) ? "jill" : "jack" %> you off on the way down?"
 
-Her mention of the possibility arouses you a little. However, cramped as you are, you're fairly certain you can't quite reach your privates anymore. Curled up in the pit of the hyena's belly, you're surrounded by liquids which coat your fur, and sting your skin a little bit.
+<%-Ana?"His":"Her"%> mention of the possibility arouses you a little. However, cramped as you are, you're fairly certain you can't quite reach your privates anymore. Curled up in the pit of the hyena's belly, you're surrounded by liquids which coat your fur, and sting your skin a little bit.
 
 "So, my little morsel, do you like it in there?"
 
 * [[It's... very tight.]]
 
 :: It's... very tight. [vore]
-"Hfff," she sighs, "well *I'm* enjoying you in there.&nbsp;You really were a yummy snack, Hollis."
+"Hfff," <%-Ana?"he":"she"%> sighs, "well *I'm* enjoying you in there.&nbsp;You really were a yummy snack, Hollis."
 
-Absentmindedly, Ana sticks a paw down her jeans, and begins stroking herself. You can feel the impact of each stroke bumping against her engorged belly.
+Absentmindedly, <%-Ana?"Andrew":"Ana"%> sticks a paw down <%-Ana?"his":"her"%> jeans, and begins stroking <%-Ana?"himself":"herself"%>. You can feel the impact of each stroke bumping against <%-Ana?"his":"her"%> engorged belly.
 
-You ask her if she's jerking off.
+You ask <%-Ana?"him":"her"%> if <%-Ana?"he":"she"%>'s jerking off.
 
 "...Yeah. I dunno why but having you in there is making me, like, *rock* hard.
 <% if (s.uhYeahMeNeither) { %>Or, at least, that's what I *would* say, if I did have a penis, which, as established earlier, I don't.
-<% } %>" As she masturbates, the jostling of her gut causes a bit of stomach acid to splash into your mouth.
+<% } %>" As <%-Ana?"he":"she"%> masturbates, the jostling of <%-Ana?"his":"her"%> gut causes a bit of stomach acid to splash into your mouth.
 
 It's not pleasant.
 
 * [[I didn't realize how hot it would be...]]
 
 :: I didn't realize how hot it would be... [vore]
-Ana asks, "Hot as in sexy, or hot like temperature-wise?"
+<%-Ana?"Andrew":"Ana"%> asks, "Hot as in sexy, or hot like temperature-wise?"
 
-You tell her temperature-wise.
+You tell <%-Ana?"him":"her"%> temperature-wise.
 
-She scoffs, "Well *I* didn't realize I had eaten a sensitive pansy!" Ana places a hand over her belly to stabilize it while she continues jerking off. "Don't tell me you're already having second thoughts about this whole digestion thing."
+<%-Ana?"He":"She"%> scoffs, "Well *I* didn't realize I had eaten a sensitive pansy!" <%-Ana?"Andrew":"Ana"%> places a hand over <%-Ana?"his":"her"%> belly to stabilize it while <%-Ana?"he":"she"%> continues masturbating. "Don't tell me you're already having second thoughts about this whole digestion thing."
 * [[...Maybe?]]
 * [[N-no! I'm loving it!]]
 
 :: ...Maybe? [vore]
-"Mmmm, that's a shame," Ana says, "because you're way too delicious to let go. A deal's a deal, bucko. You're hyena fat now."
+"Mmmm, that's a shame," <%-Ana?"Andrew":"Ana"%> says, "because you're way too delicious to let go. A deal's a deal, bucko. You're hyena fat now."
 
 You cough and choke on a little more stomach fluids. They're getting deeper, and it's gradually becoming harder to breathe.
 
@@ -453,61 +475,61 @@ You cough and choke on a little more stomach fluids. They're getting deeper, and
 * [[Digest willingly.]]
 
 :: N-no! I'm loving it! [vore checkpoint]
-Ana lightly jiggles her belly again, this time letting out a husky moan.
+<%-Ana?"Andrew":"Ana"%> lightly jiggles <%-Ana?"his":"her"%> belly again, this time letting out a husky moan.
 
-"Good," she says, "because you feel *fantastic* in there."
+"Good," <%-Ana?"he":"she"%> says, "because you feel *fantastic* in there."
 
-You open your mouth to speak, but you accidentally swallow some of her stomach juices.
+You open your mouth to speak, but you accidentally swallow some of <%-Ana?"his":"her"%> stomach juices.
 
 * [[...Please let me out?]]
 * [[Digest willingly.]]
 
 :: ...Please let me out? [vore]
-Ana lets out an exasperated groan, but her masturbation doesn't stop.
+<%-Ana?"Andrew":"Ana"%> lets out an exasperated groan, but <%-Ana?"his":"her"%> masturbation doesn't stop.
 
-"Oh my fuck. I literally had *one* rule!" She gives your body a firm pat, which makes you shudder. "Not sure how to put this politely Hollis, but you're just food now. You're my food, and I'm digesting you, end of discussion. Any further comments, your *majesty*?"
+"Oh my fuck. I literally had *one* rule!" <%-Ana?"He":"She"%> gives your body a firm pat, which makes you shudder. "Not sure how to put this politely Hollis, but you're just food now. You're my food, and I'm digesting you, end of discussion. Any further comments, your *majesty*?"
 
 You can only let out a small whimper.
 
-"Good," Ana says, and resumes jerking off.
+"Good," <%-Ana?"Andrew":"Ana"%> says, and continues pleasuring <%-Ana?"him":"her"%>self.
 
 * [[(oh god oh fuck.)|Move around inside Ana.]]
 
 :: Move around inside Ana. [vore]
-Your pulse quickens as you feel Ana's stomach acids gradually filling up beneath you.  This isn't anything like you imagined it would be. You try to reposition to keep your paws out of the liquid, but slip and accidentally kick into her thick stomach walls.
+Your pulse quickens as you feel <%-Ana?"Andrew":"Ana"%>'s stomach acids gradually filling up beneath you.  This isn't anything like you imagined it would be. You try to reposition to keep your paws out of the liquid, but slip and accidentally kick into <%-Ana?"his":"her"%> thick stomach walls.
 
-"Woah," she says, letting out a surprised little moan, "Urp, I love strugglers...!"
+"Woah," <%-Ana?"he":"she"%> says, letting out a surprised little moan, "Urp, I love strugglers...!"
 
-* [[Ana, please let me out!]]
+* [[<%-Ana?"Andrew":"Ana"%>, please let me out!|Ana, please let me out!]]
 
 :: Ana, please let me out! [vore]
-You scramble against the walls of Ana's belly, choking on enzymes and stomach fluid. Whatever limited air is left around you is being used up pretty fast. In response, Ana simply lets out a fierce, excited grunt as she pleasures herself. She's clearly approaching orgasm.
+You scramble against the walls of <%-Ana?"Andrew":"Ana"%>'s belly, choking on enzymes and stomach fluid. Whatever limited air is left around you is being used up pretty fast. In response, <%-Ana?"Andrew":"Ana"%> simply lets out a fierce, excited grunt as <%-Ana?"he":"she"%> pleasures <%-Ana?"himself":"herself"%>. <%-Ana?"He":"She"%>'s clearly approaching orgasm.
 
-You're now feeling woozy and light-headed, and massively regret offering yourself as a meal. In desperation, you yell out to get the hyena's attention, but she merely growls back, "Jeez, do you ever stop whining?"
+You're now feeling woozy and light-headed, and massively regret offering yourself as a meal. In desperation, you yell out to get the hyena's attention, but <%-Ana?"he":"she"%> merely growls back, "Jeez, do you ever stop whining?"
 
-"Look," she grunts, "I'll let you out after I orgasm, okay? Just gimme a second. I'm so... freakin'... close...!!!"
+"Look," <%-Ana?"he":"she"%> grunts, "I'll let you out after I orgasm, okay? Just gimme a second. I'm so... freakin'... close...!!!"
 
 * [[I can't breathe...]]
 
 :: I can't breathe... [vore]
-Ana strokes herself faster and faster. Her eagerness even seems to increase as she realizes you're already being affected by her digestive juices.
+<%-Ana?"Andrew":"Ana"%> strokes <%-Ana?"himself":"herself"%> faster and faster. <%-Ana?"His":"Her"%> eagerness even seems to increase as <%-Ana?"he":"she"%> realizes you're already being affected by <%-Ana?"his":"her"%> digestive juices.
 
 "Hnng, mmm, yeah... Right... There..."
 
 Frantically, you begin to struggle with the last remaining bit of strength you have left. You kick and stretch and thrash against the thick stomach walls which imprison you. You struggle desperately, until you can no longer. Exhaustion and the lack of oxygen are rapidly creeping up on you.
 
-"Nf... Oh *fuck*, Hollis, you're squirming sooo... good..." Ana's voice escalates in pitch.  "I'm gonna... fucking..."
+"Nf... Oh *fuck*, Hollis, you're squirming sooo... good..." <%-Ana?"Andrew":"Ana"%>'s voice escalates in pitch.  "I'm gonna... fucking..."
 
 You shut your eyes, as you begin to dissolve into oblivion. You decide to take... just a teeny tiny nap... until...
 
-* [[Ana: Cum.]]
+* [[<%-Ana?"Andrew":"Ana"%>: Cum.|Ana: Cum.]]
 
 :: Digest willingly. [vore]
-You remain silent, and take a few deep breaths to relax yourself. Maybe this isn't really so bad. It's certainly warm in here, and the sound of Ana's racing heart reminds you of some ASMR videos you watched one time.
+You remain silent, and take a few deep breaths to relax yourself. Maybe this isn't really so bad. It's certainly warm in here, and the sound of <%-Ana?"Andrew":"Ana"%>'s racing heart reminds you of some ASMR videos you watched one time.
 
 Besides, you did agree that you wouldn't change your mind. It's your fetish, after all.
 
-Ana lets out a relieved sigh, and resumes jerking off. "Say, um, do you think you could struggle a little for me?"
+<%-Ana?"Andrew":"Ana"%> lets out a relieved sigh, and keeps going. "Say, um, do you think you could struggle a little for me?"
 
 You don't see why not.
 
@@ -516,49 +538,49 @@ You don't see why not.
 :: Squirm for Ana's pleasure. [vore]
 You wriggle your body around, hoping to maybe reposition yourself into a more comfortable position.
 
-"Woah," Ana says, letting out a surprised little moan, "I love strugglers...! Mmmmph!"
+"Woah," <%-Ana?"Andrew":"Ana"%> says, letting out a surprised little moan, "I love strugglers...! Mmmmph!"
 
-The already tight confines of Ana's stomach get even tighter as Ana's stomach secretes more stingy liquids. It's not painful, but it's making your fur feel a little tingly.
+The already tight confines of <%-Ana?"Andrew":"Ana"%>'s stomach get even tighter as <%-Ana?"Andrew":"Ana"%>'s stomach secretes more stingy liquids. It's not painful, but it's making your fur feel a little tingly.
 
-You tell Ana, um, you think she's starting to digest you.
+You tell <%-Ana?"Andrew":"Ana"%>, um, you think <%-Ana?"he":"she"%>'s starting to digest you.
 
-Ana stifles a moan. "Do you need me to let you out?"
+<%-Ana?"Andrew":"Ana"%> stifles a moan. "Do you need me to let you out?"
 
 * [[N-no, I'm okay.|N-no, I'm okay. (Ana)]]
 
 :: N-no, I'm okay. (Ana) [vore]
-"Good," Ana says, "Keep struggling, prey."
+"Good," <%-Ana?"Andrew":"Ana"%> says, "Keep struggling, prey."
 
 You begin to kick and squirm against the slick walls of flesh around you. You make an effort to avoid touching the pool of digestive enzymes when possible, but as they continue to flood the chamber, this becomes increasingly difficult.
 
-Ana lets out a fierce, excited grunt in response. Her eager stroking seems to get faster as she realizes you're already being affected by her digestive juices.
+<%-Ana?"Andrew":"Ana"%> lets out a fierce, excited grunt in response. <%-Ana?"His":"Her"%> eager stroking seems to get faster as <%-Ana?"he":"she"%> realizes you're already being affected by <%-Ana?"his":"her"%> digestive juices.
 
 You shut your eyes, and resign to fulfill your role as food. It truly is a wonderful feeling. You feel yourself beginning to drift off.
 
-Ana growls out, "Oh... yess... I'm gonna... fucking..."
+<%-Ana?"Andrew":"Ana"%> growls out, "Oh... yess... I'm gonna... fucking..."
 
-* [[Ana: Cum.]]
+* [[<%-Ana?"Andrew":"Ana"%>: Cum.|Ana: Cum.]]
 
 :: Ana: Cum.
-"Mmmmh!" Ana lets out a long, satisfied grunt, and yanks her pants down, just as she begins to shoot off spurt after spurt of jizz onto <% if (visited("Undress in front of Ana outside.")) { %>your discarded clothes<% } else { %>the grass<% } %>. She moans out, "Mmmm, yeahhh..." and collapses back on the garden bench, hoisting her swollen belly.
+"Mmmmh!" <%-Ana?"Andrew":"Ana"%> lets out a long, satisfied grunt, and yanks <%-Ana?"his":"her"%> pants down, just as <%-Ana?"he":"she"%> begins to <%-Ana?"gush with":"shoot off"%> off spurt after spurt of <%-Ana?"squirt":"jizz"%> onto <% if (visited("Undress in front of Ana outside.")) { %>your discarded clothes<% } else { %>the grass<% } %>. <%-Ana?"He":"She"%> moans out, "Mmmm, yeahhh..." and collapses back on the garden bench, hoisting <%-Ana?"his":"her"%> swollen belly.
 
 <% if (visited("Digest willingly.") || visited("N-no, I'm okay. (Ana)")) { %>
 
-Ana reclines in satisfaction. as her body begins to slowly reclaim nutrients from her latest meal.
+<%-Ana?"Andrew":"Ana"%> reclines in satisfaction. as <%-Ana?"his":"her"%> body begins to slowly reclaim nutrients from <%-Ana?"his":"her"%> latest meal.
 
-The hyena sighs contentedly. "Hahhhh, that was hot... Was it good for you too? ...Hollis?" She pokes her gut a few times, but no response comes except for a belch of putrid air.
+The hyena sighs contentedly. "Hahhhh, that was hot... Was it good for you too? ...Hollis?" <%-Ana?"He":"She"%> pokes <%-Ana?"his":"her"%> gut a few times, but no response comes except for a belch of putrid air.
 
 "Gone already? Jeez, that must be a new record..."
 
 <% } else { %>
 
-The hyena sighs contentedly. "Hahhhh, that was hot... Okay, I've had my fun. I can let you out now if you want... Hollis?" She pokes her gut a few times, but no response comes except for a belch of putrid air. "Oh. Looks like you won't be coming out after all... Whoops..."
+The hyena sighs contentedly. "Hahhhh, that was hot... Okay, I've had my fun. I can let you out now if you want... Hollis?" <%-Ana?"He":"She"%> pokes <%-Ana?"his":"her"%> gut a few times, but no response comes except for a belch of putrid air. "Oh. Looks like you won't be coming out after all... Whoops..."
 
-She reclines as her body begins to slowly reclaim nutrients from her latest meal. "Well Hollis, sorry for digesting you. If it's any consolation, that was probably the hardest I've ever jizzed... So um, no hard feelings?"
+<%-Ana?"He":"She"%> reclines as <%-Ana?"his":"her"%> body begins to slowly reclaim nutrients from <%-Ana?"his":"her"%> latest meal. "Well Hollis, sorry for digesting you. If it's any consolation, that was probably the hardest I've ever <%-Ana?"cummed":"jizzed"%>... So um, no hard feelings?"
 
-Her prey only responds with a burble, and another loud burp.
+<%-Ana?"His":"Her"%> prey only responds with a burble, and another loud burp.
 
-Ana giggles contendedly. "...I'll take that as a yes."
+<%-Ana?"Andrew":"Ana"%> giggles contendedly. "...I'll take that as a yes."
 
 
 <% } %>
@@ -575,46 +597,46 @@ Ana giggles contendedly. "...I'll take that as a yes."
 
 The morning sun beats down. A hung-over hyena wakes up on a bench in the backyard of the Armstrong household.
 
-"Ughhhh," she groans, clutching her forehead and trying to recall what exactly she did last night. She clutches her swollen, burbling middle. It's smaller than it was, but still bulging out slightly under her shirt.
+"Ughhhh," <%-Ana?"he":"she"%> groans, clutching <%-Ana?"his":"her"%> forehead and trying to recall what exactly <%-Ana?"he":"she"%> did last night. <%-Ana?"He":"She"%> clutches <%-Ana?"his":"her"%> swollen, burbling middle. It's smaller than it was, but still bulging out slightly under <%-Ana?"his":"her"%> shirt.
 
-Ana feels guilty, somewhat, as she remembers the rabbit who filled it. Their name was Holland... Or, Hollister... Something like that.
+<%-Ana?"Andrew":"Ana"%> feels guilty, somewhat, as <%-Ana?"he":"she"%> remembers the rabbit who filled it. Their name was Holland... Or, Hollister... Something like that.
 
-She's soon distracted by the more pressing matter of that rabbit's remains snaking their way through her intestines.
+<%-Ana?"He":"She"%>'s soon distracted by the more pressing matter of that rabbit's remains snaking their way through <%-Ana?"his":"her"%> intestines.
 
-"Ah, shit," she mutters.
+"Ah, shit," <%-Ana?"he":"she"%> mutters.
 
-* [[Ana: Go inside to poop?]]
+* [[<%-Ana?"Andrew":"Ana"%>: Go inside to poop?|Ana: Go inside to poop?]]
 
 :: Ana: Go inside to poop? [morning]
-At your command, Ana looks towards the house, but quickly rules that out as an option. It'd be extremely awkward to invite herself inside just to take a dump. She has a feeling that any toilet she uses will probably be out of service afterward.
+At your command, <%-Ana?"Andrew":"Ana"%> looks towards the house, but quickly rules that out as an option. It'd be extremely awkward to invite <%-Ana?"himself":"herself"%> inside just to take a dump. <%-Ana?"He":"She"%> has a feeling that any toilet <%-Ana?"he":"she"%> uses will probably be out of service afterward.
 
-She wracks her brain, trying to think of the best place to squeeze her ex-prey out.
+<%-Ana?"He":"She"%> wracks <%-Ana?"his":"her"%> brain, trying to think of the best place to squeeze <%-Ana?"his":"her"%> ex-prey out.
 
-* [[Ana: Shit in the backyard.]]
-* [[Ana: Drive somewhere with public restrooms.]]
+* [[<%-Ana?"Andrew":"Ana"%>: Shit in the backyard.|Ana: Shit in the backyard.]]
+* [[<%-Ana?"Andrew":"Ana"%>: Drive somewhere with public restrooms.|Ana: Drive somewhere with public restrooms.]]
 
 :: Ana: Shit in the backyard. [morning]
-Not an option. While the trees out here provided some good cover last night, in broad daylight Ana would still be fairly visible. Not to mention, she'd be leaving behind a massive turd in the backyard of a complete stranger.
+Not an option. While the trees out here provided some good cover last night, in broad daylight <%-Ana?"Andrew":"Ana"%> would still be fairly visible. Not to mention, <%-Ana?"he":"she"%>'d be leaving behind a massive turd in the backyard of a complete stranger.
 
-Ana clutches her head. <em.ana>Yeah,</em> she thinks, <em.ana>not the best idea...</em>
+<%-Ana?"Andrew":"Ana"%> clutches <%-Ana?"his":"her"%> head. <em.ana>Yeah,</em> <%-Ana?"he":"she"%> thinks, <em.ana>not the best idea...</em>
 
 * [[Drive somewhere with a public restrooms.|Ana: Drive somewhere with public restrooms.]]
 
 :: Ana: Drive somewhere with public restrooms. [morning]
-Ana growls. <em.ana>Wow, that's really my only option? Fine.</em>
+<%-Ana?"Andrew":"Ana"%> growls. <em.ana>Wow, that's really my only option? Fine.</em>
 
-The hyena scampers discretely through the yard, around the massive house, and onto the sidewalk. Every step makes her swollen gut squish uncomfortably. Her meal wants out, *now*. She walks to her car with the determined yet careful stride of someone who desperately needs a toilet.
+The hyena scampers discretely through the yard, around the massive house, and onto the sidewalk. Every step makes <%-Ana?"his":"her"%> swollen gut squish uncomfortably. <%-Ana?"His":"Her"%> meal wants out, *now*. <%-Ana?"He":"She"%> walks to <%-Ana?"his":"her"%> car with the determined yet careful stride of someone who desperately needs a toilet.
 
-Ana's car is a dinged up, ancient vehicle. She inherited it from her mother, a hyena almost as unkempt and mangy as the car. Ana's mom was a ruthless predator, and the primary reason she didn't have a father growing up. In fact, it was precisely twenty-one years ago today when he was-
+<%-Ana?"Andrew":"Ana"%>'s car is a dinged up, ancient vehicle. <%-Ana?"He":"She"%> inherited it from <%-Ana?"his":"her"%> mother, a hyena almost as unkempt and mangy as the car. <%-Ana?"Andrew":"Ana"%>'s mom was a ruthless predator, and the primary reason <%-Ana?"he":"she"%> didn't have a father growing up. In fact, it was precisely twenty-one years ago today when he was-
 
-<em.ana>Hey,</em> Ana thinks, <em.ana>quit narrating my tragic backstory, I need to take a shit, NOW.</em>
+<em.ana>Hey,</em> <%-Ana?"Andrew":"Ana"%> thinks, <em.ana>quit narrating my tragic backstory, I need to take a shit, NOW.</em>
 
-* [[Ana: Fine, whatever, just drive.]]
+* [[<%-Ana?"Andrew":"Ana"%>: Fine, whatever, just drive.|Ana: Fine, whatever, just drive.]]
 
 :: Ana: Fine, whatever, just drive. [morning]
-She starts the car and drives for a few minutes, breathing slowly and scanning for the nearest possible location. That happens to be Pizza Shack, the world-famous purveyor of greasy low-price 'zza.
+<%-Ana?"He":"She"%> starts the car and drives for a few minutes, breathing slowly and scanning for the nearest possible location. That happens to be Pizza Shack, the world-famous purveyor of greasy low-price 'zza.
 
-Ana parks and power-walks inside, her nose suddenly accosted by the thick stench of pepperoni. Upon entering, she is immediately accosted by a friendly dog wearing the uniform of a Pizza Shack employee.
+<%-Ana?"Andrew":"Ana"%> parks and power-walks inside, <%-Ana?"his":"her"%> nose suddenly accosted by the thick stench of pepperoni. Upon entering, <%-Ana?"he":"she"%> is immediately accosted by a friendly dog wearing the uniform of a Pizza Shack employee.
 
 <div.multicommand>
 
@@ -626,60 +648,60 @@ Ana parks and power-walks inside, her nose suddenly accosted by the thick stench
 
 :: Employee: Hi! [morning]
 <% s.previousCommand = "Hi! Welcome to-"; %>
-"Fucking *move*!" Ana shoves past the employee and makes a bee-line for the restroom doors.
+"Fucking *move*!" <%-Ana?"Andrew":"Ana"%> shoves past the employee and makes a bee-line for the restroom doors.
 
 Like most public bathrooms, they're segregated by size, offering one stall labeled *gentlekind* (a traditional term for anthros taller than 7 feet), one marked *noblekind*, for anthros of medium height, and one marked *littlekind*, for those smaller than 4 feet. Some mixed-use establishments like airports will also have special *Tinykind* toilets, which are barely three inches tall, but it's rare to see one out in the suburbs.
 
-Ana, desperately holding a load of ex-rabbit inside her bowels, and not needing such common knowledge narrated to her, knocks on the middle door.
+<%-Ana?"Andrew":"Ana"%>, desperately holding a load of ex-rabbit inside <%-Ana?"his":"her"%> bowels, and not needing such common knowledge narrated to <%-Ana?"him":"her"%>, knocks on the middle door.
 
 "Sorry, occupied," comes the reply.
 
-Groaning, she checks the gentlekind door, but it's out of service for cleaning.
+Groaning, <%-Ana?"he":"she"%> checks the gentlekind door, but it's out of service for cleaning.
 
-<em.ana>Fucking dammit,</em> she thinks, eyeing the slightly diminished door leading into the smallest of the three restrooms.
+<em.ana>Fucking dammit,</em> <%-Ana?"he":"she"%> thinks, eyeing the slightly diminished door leading into the smallest of the three restrooms.
 
-* [[Ana: Poop in the tiny toilet.]]
-* [[Ana: Wait until they're finished.]]
+* [[<%-Ana?"Andrew":"Ana"%>: Poop in the tiny toilet.|Ana: Poop in the tiny toilet.]]
+* [[<%-Ana?"Andrew":"Ana"%>: Wait until they're finished.|Ana: Wait until they're finished.]]
 
 :: Ana: Wait until they're finished. [morning]
 <em.ana>Haha, fuck that.</em>
 
-* [[Ana: Shit Hollis out in the tiny toilet.|Ana: Poop in the tiny toilet.]]
+* [[<%-Ana?"Andrew":"Ana"%>: Shit Hollis out in the tiny toilet.|Ana: Poop in the tiny toilet.]]
 
 :: Ana: Poop in the tiny toilet. [morning]
-Ana crouches to enter the littlekind restroom, and naturally finds a toilet designed for anthros much smaller than herself. She yanks down her pants, hovers her large ass over the small toilet bowl, and...
+<%-Ana?"Andrew":"Ana"%> crouches to enter the littlekind restroom, and naturally finds a toilet designed for anthros much smaller than <%-Ana?"himself":"herself"%>. <%-Ana?"He":"She"%> yanks down <%-Ana?"his":"her"%> pants, hovers <%-Ana?"his":"her"%> large ass over the small toilet bowl, and...
 
 * [[<em.ana>Haaaaaaaahh.</em>|Ana: Squeeze out Hollis.]]
 
 :: Ana: Squeeze out Hollis. [morning]
 ...Immediately begins squeezing out a thick, solid turd.
 
-The shit is smooth, but speckled with gray fur and partially-dissolved bones. The telltale signs of a fast metabolism, and a low-fiber diet. The sensation of squeezing it out is almost euphoric. Partially due to how bad she needed to do it, and partially a result of her natural inclinations as a predator.
+The shit is smooth, but speckled with gray fur and partially-dissolved bones. The telltale signs of a fast metabolism, and a low-fiber diet. The sensation of squeezing it out is almost euphoric. Partially due to how bad <%-Ana?"he":"she"%> needed to do it, and partially a result of <%-Ana?"his":"her"%> natural inclinations as a predator.
 
-The hyena grunts as a shit-packed, partially cracked rabbit skull begins to stretch her asshole impossibly wide.
+The hyena grunts as a shit-packed, partially cracked rabbit skull begins to stretch <%-Ana?"his":"her"%> asshole impossibly wide.
 
 * [[<em.ana>Hhhrrrrrrnnnng!</em>|Ana: Poop out skull.]]
 
 :: Ana: Poop out skull. [morning]
-After straining for several seconds, the skull finally passes through with a loud "plop". Ana breathes a sigh of relief.
+After straining for several seconds, the skull finally passes through with a loud "plop". <%-Ana?"Andrew":"Ana"%> breathes a sigh of relief.
 
-As Ana's asshole squeezes them out, Hollis's remains pile up in the small toilet bowl, well past the point at which they'd be reasonable to flush. The hyena is panting softly, almost overjoyed to get her prey out of her.
+As <%-Ana?"Andrew":"Ana"%>'s asshole squeezes them out, Hollis's remains pile up in the small toilet bowl, well past the point at which they'd be reasonable to flush. The hyena is panting softly, almost overjoyed to get <%-Ana?"his":"her"%> prey out of <%-Ana?"him":"her"%>.
 
-As she pinches off the last turd, her asshole finally relaxes, and she lets loose a heavy stream of piss, splashing wildly atop the disgusting mound of what was formerly a living, breathing person.
+As <%-Ana?"he":"she"%> pinches off the last turd, <%-Ana?"his":"her"%> asshole finally relaxes, and <%-Ana?"he":"she"%> lets loose a heavy stream of piss, splashing wildly atop the disgusting mound of what was formerly a living, breathing person.
 
 * [[<em.ana>Phew...</em>|Ana: Done pooping.]]
 
 :: Ana: Done pooping. [morning]
-Ana wipes her ass, which is now slightly fatter than it was last night. She stands up, and takes a moment to admire her brown handiwork.
+<%-Ana?"Andrew":"Ana"%> wipes <%-Ana?"his":"her"%> ass, which is now slightly fatter than it was last night. <%-Ana?"He":"She"%> stands up, and takes a moment to admire <%-Ana?"his":"her"%> brown handiwork.
 
-"Wow, way bigger than I thought it'd be," she remarks, "Well, goodbye, uh, whatever your name was!"
+"Wow, way bigger than I thought it'd be," <%-Ana?"he":"she"%> remarks, "Well, goodbye, uh, whatever your name was!"
 
-* [[Ana: Flush...?]]
+* [[<%-Ana?"Andrew":"Ana"%>: Flush...?|Ana: Flush...?]]
 
 :: Ana: Flush...? [morning]
-Anticipating the worst, she pushes her claw down the handle to flush. The small toilet sputters, but makes no effort to swallow the massive turd. It remains perfectly still in the bowl.
+Anticipating the worst, <%-Ana?"he":"she"%> pushes <%-Ana?"his":"her"%> claw down the handle to flush. The small toilet sputters, but makes no effort to swallow the massive turd. It remains perfectly still in the bowl.
 
-"Shit," the hyena sighs, "Well, looks like you're Chet's problem now." She washes her paws, turns toward the door, and walks out with her tail held high, and a satisfied smile on her face.
+"Shit," the hyena sighs, "Well, looks like you're Chet's problem now." <%-Ana?"He":"She"%> washes <%-Ana?"his":"her"%> paws, turns toward the door, and walks out with <%-Ana?"his":"her"%> tail held high, and a satisfied smile on <%-Ana?"his":"her"%> face.
 
 "I could really fuck up some pizza..."
 

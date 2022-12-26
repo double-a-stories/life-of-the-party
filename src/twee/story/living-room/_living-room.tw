@@ -15,7 +15,7 @@
 <% } %>
 <!-- Basil route -->
 <% if (s.seenBasil) { %>
-* [[Wink back at the horse.|Wink back at Basil.]]
+* [[Wink back at the horse.]]
 <!-- Byron route -->
 <% } %>
 <% if (s.seenByron) { %>

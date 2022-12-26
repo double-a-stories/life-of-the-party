@@ -19,7 +19,7 @@ party.danceLiterals = [
   `A grey wolf with a huge protruding gut accidentally bumps into you. "'Scuse me," she mutters as she walks away.`,
   `You notice a tiny white mouse on the floor, darting anxiously between people's feet. It scampers off toward the snack table and **the punch bowl**.`,
   `There aren't many other prey at this party. You feel a little small by comparison to all the huge anthros here.`,
-  `A **big brown stallion** in a green jacket seems to take notice of your dancing. He looks a little familiar. He winks at you from across the room.`,
+  `A **big brown <%-R.Basil?"stallion":"mare"%>** in a green jacket seems to take notice of your dancing, and winks at you from across the room. <%-R.Basil?"He":"She"%> looks a little familiar.`,
   `The speakers start playing a techno remix of Marie Predatora's latest rap single: "Belly Drop, Belly Drop (Belly Drop)."`,
   `A heavy-set bear with a selfie stick is recording herself as she shakes her massive hips. You try not to stare, but it's absolutely hypnotic.`,
   `A drunk Labrador begins nuzzling you. "Oh my gooood dudes, this rabbit is soooo soft..." You blush. Surprisingly, his fur is extremely soft as well.`,
@@ -89,7 +89,7 @@ party.advanceState = () => {
   // set some flags, in case i want to hook any of these messages into their own routes
   // currently these are used to alter the text of the "dance more" command
 
-  if (text.includes("brown stallion")) {
+  if (text.includes("in a green jacket")) {
     story.state.seenBasil = true;
   }
   if (text.includes("tall black wolf")) {
