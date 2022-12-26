@@ -38,6 +38,10 @@ const Rule63 = window.Rule63 = {};
     } else {
       throw new Error(`invalid param at setModes('${val}')`);
     }
+
+    // side effect: update the page background
+    setBackground();
+    setup.refreshHeader();
   };
 
   /**
@@ -94,6 +98,24 @@ const Rule63 = window.Rule63 = {};
       get: () => getGender(defaultValue, opposite)
     });
   }
+
+  const setBackground = () => {
+    const setting = getSetting();
+    // male
+    if (setting === Setting.PREFER_MALE) {
+      document.body.classList.add("rule63-male");
+    } else {
+      document.body.classList.remove("rule63-male");
+    }
+    // female
+    if (setting === Setting.PREFER_FEMALE) {
+      document.body.classList.add("rule63-female");
+    } else {
+      document.body.classList.remove("rule63-female");
+    }
+  }
+
+  setBackground(); // invoke on page load
 
   // export to the setup namespace
   Object.assign(Rule63, {

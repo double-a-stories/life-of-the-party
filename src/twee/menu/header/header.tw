@@ -11,6 +11,7 @@
 	<li><a0 aria-label="restart" onclick="setup.restart()">Restart</a></li>
 	<li><a0 aria-label="undo" onclick="setup.undo()">Undo</a></li>
 </ul>
+<% if (Rule63.getSetting() !== Rule63.Setting.DISABLED) { %><span><%= T.infoMessage("[[Rule 63 Mode]] is enabled.") %></span><% } %>
 <ul.header-nav-group>
 	<li><a0 aria-label="<%-muted?'unmute':'mute'%>" class="mute-button" onclick="setup.toggleMute();" ><%=muted?`Enable`:`Disable`%> sound</a></li>
 	<li><a0 class="help-button" onclick="setup.help();"><%-!helpShown?"Help":"Back"%></a></li>
