@@ -1,6 +1,9 @@
 /**
  * @author double-a-stories
  * @license MIT-0
+ * 
+ * This module is an over-engineered utility for getting a character's 
+ * and allowing it to be swapped according to several rules.
  */
 
 // @ts-ignore
@@ -19,6 +22,7 @@ const Rule63 = window.Rule63 = {};
   const getSetting = () => setup.getFlag("rule63Mode") ?? Setting.DISABLED;
   /** @returns {boolean} Whether Rule63 mode is enabled */
   const isEnabled = () => getSetting() !== Setting.DISABLED;
+
   /**
    * @enum {number} Possible states
    */
@@ -29,16 +33,13 @@ const Rule63 = window.Rule63 = {};
     NEUTER: 3,
   };
   /**
-   *
-   * @param {Setting} val
+   * @param {Setting} val The Rule63 setting to use.
    */
   const setSetting = (val) => {
-    if (Object.values(Setting).includes(val)) {
-      setup.setFlag("rule63Mode", val);
-    } else {
+    if (!Object.values(Setting).includes(val)) {
       throw new Error(`invalid param at setModes('${val}')`);
     }
-
+    setup.setFlag("rule63Mode", val);
     // side effect: update the page background
     setBackground();
     setup.refreshHeader();
@@ -57,6 +58,8 @@ const Rule63 = window.Rule63 = {};
   }
 
   /**
+   * Character genders.
+   * 
    * @enum {number}
    */
   const Gender = {
@@ -89,9 +92,11 @@ const Rule63 = window.Rule63 = {};
     return '';
   }
 
-  const defineRule63GetterProp = (name, defaultValue, opposite = false) => {
-    const namespace = window;
-    if (name in window) {
+  /***
+   * Creates a Getter property that returns an isMale boolean
+   */
+  const define = (name, defaultValue, opposite = false, namespace = window) => {
+    if (name in namespace) {
       throw new Error(`Property ${namespace}.${name} is already defined!`);
     }
     Object.defineProperty(namespace, name, {
@@ -99,6 +104,9 @@ const Rule63 = window.Rule63 = {};
     });
   }
 
+  /**
+   * Sets a class on the body if Male/Female mode is enabled.
+   */
   const setBackground = () => {
     const setting = getSetting();
     // male
@@ -124,7 +132,7 @@ const Rule63 = window.Rule63 = {};
     getSetting,
     Setting,
     Gender,
-    define: defineRule63GetterProp,
+    define,
     getRule63Message
   });
 })();
