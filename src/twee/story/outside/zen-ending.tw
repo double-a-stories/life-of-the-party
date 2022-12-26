@@ -71,7 +71,7 @@ Attempting story.restart()...
 </div>
 
 :: Be the hyena. [outside dark anastory]
-Your name is Ana. You're a spotted hyena, currently chilling on a bench outside a house party like a total loser.
+Your name is <%-Ana?"Andrew":"Ana"%>. You're a <%-Ana?"striped":"spotted"%> hyena, currently chilling on a bench outside a house party like a total loser.
 
 You showed up about an hour ago, but big crowds freak you out, so you came out here to get some air and clear your head. You're here because, like most young predators, you want to eat someone. You want to feel prey writhing around inside your belly. You'd go in there and grab one, but the noise is too overwhelming.
 
