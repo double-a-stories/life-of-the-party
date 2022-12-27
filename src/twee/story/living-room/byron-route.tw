@@ -12,7 +12,7 @@ A black-furred wolf, about six feet tall, wearing in a stylish scarf and a check
 <%= Rule63.getRule63Message(Rule63.Gender.Male) %>
 
 :: Talk to Byron.
-<% setup.setFlag("talkedToByron"); %>
+<% StoryFlags.set("talkedToByron"); %>
 
 You walk over to the wolf. <%-Byron?"He":"She"%> continues sitting on the couch, strumming bar chords on <%-Byron?"his":"her"%> guitar. <%-Byron?"He":"She"%> looks really into it, but finally stops playing and acknowledges you with a nod.
 
@@ -212,7 +212,7 @@ You respond by fainting from blood loss.
 
 ### Game Over.
 
-<%= setup.addAchievement("BYRON_SCRATCH_GAME_OVER") %>
+<%= Achievements.unlock("BYRON_SCRATCH_GAME_OVER") %>
 
 * <%= T.rewind() %>
 
@@ -430,7 +430,7 @@ Standing patiently outside is Gus the dog, alongside a gigantic, towering horse 
 
 ### The End.
 
-<%= setup.addAchievement("BYRON_VORE_ENDING") %>
+<%= Achievements.unlock("BYRON_VORE_ENDING") %>
 
 * [[Epilogue.|Byron Epilogue.]] <%=T.CWI("Scat disposal")%>
 * <%= T.restart() %>

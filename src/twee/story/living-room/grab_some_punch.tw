@@ -2,7 +2,7 @@
 Rule63.define("Jackie", Rule63.Gender.Female);
 
 :: Grab some punch.
-<% setup.setFlag("grabbedPunch") %>
+<% StoryFlags.set("grabbedPunch") %>
 
 <%
 story.state.punchCount = visited(passage.id);
@@ -27,7 +27,7 @@ You walk over to the snack table, and slam down a fourth cup of vodka punch. You
 * [[Go back.|Dance a little.]]
 <% } else { %>
 
-<% setup.setFlag("alcoholAbuseUnlocked"); %>
+<% StoryFlags.set("alcoholAbuseUnlocked"); %>
 
 You walk over the punch bowl, look down at the vat of boozy Kool-Aid, and scowl with disgust. You get the nagging feeling that if you have one more drink, something bad will happen.
 

@@ -118,7 +118,7 @@ The second you touch <%-Ana?"his":"her"%> hair, the hyena immediately lets out a
 
 ### Game Over
 
-<%= setup.addAchievement("ANA_CHOMP_GAME_OVER") %>
+<%= Achievements.unlock("ANA_CHOMP_GAME_OVER") %>
 
 * <%= T.rewind() %>
 
@@ -168,7 +168,7 @@ You give <%-Ana?"him":"her"%> a brief description of your friend, Reese.
 * [[What!?|What do you mean?]]
 
 :: What do you mean?
-<% setup.setFlag("upstairsUnlocked"); %>
+<% StoryFlags.set("upstairsUnlocked"); %>
 
 <%-Ana?"He":"She"%> gives you a slightly patronizing stare.
 
@@ -587,7 +587,7 @@ The hyena sighs contentedly. "Hahhhh, that was hot... Okay, I've had my fun. I c
 
 ### The End.
 
-<%= setup.addAchievement("ANA_VORE_ENDING") %>
+<%= Achievements.unlock("ANA_VORE_ENDING") %>
 
 * [[Epilogue.|Epilogue: Ana Post Vore.]] <%=T.CWI("Scat disposal")%>
 * <%= T.restart() %>

@@ -319,7 +319,7 @@ Lacey awakens to find that <%-Lacey?"he":"she"%> has slightly outgrown <%-Lacey?
 
 Lacey looks down at <%-Lacey?"his":"her"%> dramatically shrunken belly, and recalls the night before. "Phew," <%-Lacey?"he":"she"%> remarks, "What a night!"
 
-<%= setup.addAchievement("LACEY_VORE_ENDING") %>
+<%= Achievements.unlock("LACEY_VORE_ENDING") %>
 
 ### The End.
 

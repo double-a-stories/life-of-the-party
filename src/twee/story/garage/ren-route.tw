@@ -189,7 +189,7 @@ You feel stinging pain as Ren releases you, and you collapse weakly to the garag
 
 ### Game Over.
 
-<%= setup.addAchievement("REN_BITE_GAME_OVER") %>
+<%= Achievements.unlock("REN_BITE_GAME_OVER") %>
 
 * <a0 onclick="setup.undo()">Undo</a>
 
@@ -370,7 +370,7 @@ The boar snaps a pair of handcuffs onto <%-Ren?"his":"her"%> wrists and says, "W
 
 Ren's stomach pulses around you happily (<span.ren>"⛓<%-Ren?"🤷‍♂️":"🤷‍♀️"%>😏☠️"</span>). As Ren is hauled away, you feel yourself... beginning to... pass out.
 
-<%= setup.addAchievement("REN_VORE_ENDING") %>
+<%= Achievements.unlock("REN_VORE_ENDING") %>
 
 * [[Epilogue.|Epilogue: Ren route.]]
 * <%= T.restart() %>

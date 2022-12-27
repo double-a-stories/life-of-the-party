@@ -11,7 +11,7 @@ const howlerInit = () => {
 
   // Mute and unmute on load.
   $(document).on("sm.passage.shown", () => {
-    if (!setup.isFlagSet("enableSound")) {
+    if (!StoryFlags.isSet("enableSound")) {
       Howler.mute(true);
     } else {
       Howler.mute(false);

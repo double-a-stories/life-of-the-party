@@ -38,11 +38,11 @@ $(window).on("sm.passage.shown", (event, { passage }) => {
 });
 
 setup.toggleMute = () => {
-  if (!setup.isFlagSet("enableSound")) {
-    setup.setFlag("enableSound");
+  if (!StoryFlags.isSet("enableSound")) {
+    StoryFlags.set("enableSound");
     Howler.mute(false);
   } else {
-    setup.unsetFlag("enableSound");
+    StoryFlags.unset("enableSound");
     Howler.mute(true);
   }
   setup.refreshHeader();

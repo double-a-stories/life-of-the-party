@@ -134,7 +134,7 @@ All three of you look down at the flared 14-incher lying limply beside you. The 
 
 You incredulously ask the cats how they know Reese's name.
 
-<% setup.setFlag("upstairsUnlocked"); %>
+<% StoryFlags.set("upstairsUnlocked"); %>
 
 <%-Nox?"Nox":"Noxie"%> smiles, <span.nox>"We mostly know him as guinea_puff_2B8. He's been a pretty active member of the Grumble Geek forums, just like us! It's a worldwide community for preds and prey to chat, and find consensual vore meetups!"</span>
 
@@ -464,7 +464,7 @@ Seems like you're too little, too late. But who could blame you for trying?
 
 ### Game Over.
 
-<%= setup.addAchievement("NIKKI_BITE_GAME_OVER") %>
+<%= Achievements.unlock("NIKKI_BITE_GAME_OVER") %>
 
 * <%= T.rewind() %>
 
@@ -731,7 +731,7 @@ Ivy finishes wrapping you, until only your head remains. <%-Nikki?"Nik":"Nikki"%
 
 The snake stretches <%-Ivy?"his":"her"%> maw wide to engulf your face, sending you slithering down <%-Ivy?"his":"her"%> long, wet throat, and into <%-Ivy?"his":"her"%> coils.
 
-<%= setup.addAchievement("NIKKI_NOX_VORE_ENDING") %>
+<%= Achievements.unlock("NIKKI_NOX_VORE_ENDING") %>
 
 ## The End.
 
