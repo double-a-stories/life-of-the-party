@@ -2,7 +2,7 @@
 Rule63.define("Basil", Rule63.Gender.Male);
 
 :: Wink back at the horse. [checkpoint]
-<% setup.setFlag("talkedToBasil"); %>
+<% StoryFlags.set("talkedToBasil"); %>
 
 You wink back at the horse. <%-Basil?"He":"She"%> smiles, and walks over to you, carrying two bottles of beer. Like most draft horses, <%-Basil?"he":"she"%>'s an absolute giant. Technically it's more polite to refer to larger anthros using euphemisms like "gentle", whereas smaller anthros are "noble".
 
@@ -102,7 +102,7 @@ Basil smiles. "Y'know, you always seemed kinda meek, but now it looks like you r
 * [[Want a taste?|...Do you want to eat me?]]
 
 :: I came here with a friend of mine...
-<% setup.setFlag("upstairsUnlocked"); %>
+<% StoryFlags.set("upstairsUnlocked"); %>
 
 "Oh, the guinea pig?" <%-Basil?"he":"she"%> asks.
 
@@ -243,7 +243,7 @@ Basil smiles as the party rages on. Another night well planned.
 
 ### The End.
 
-<%= setup.addAchievement("BASIL_VORE_ENDING") %>
+<%= Achievements.unlock("BASIL_VORE_ENDING") %>
 
 * [[Epilogue.|Epilogue: Basil Post Vore.]] <%=T.CWI("Scat disposal")%>
 * <%= T.restart() %>

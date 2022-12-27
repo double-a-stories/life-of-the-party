@@ -51,13 +51,13 @@ tw-passage > * {
 ⚠️ If you choose to continue, you do so **at your own risk**.
 
 :: Achievements list
-<% const [count, max] = setup.getAchievementCount(); %>
+<% const [count, max] = Achievements.count(); %>
 
 ### Achievements (<%- count %> <span aria-label="of">/</span> <%- max %>)
 
-<%= setup.getAchievementTable() %>
+<%= Achievements.renderTable() %>
 
-* <a0 onclick="setup.resetAchievementsPrompt();">Reset achievements.</a>
+* <a0 onclick="Achievements.promptReset();">Reset achievements.</a>
 
 :: Cheevos style [stylesheet]
 .locked-achievement img {
