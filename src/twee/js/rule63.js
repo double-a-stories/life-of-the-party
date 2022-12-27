@@ -19,7 +19,7 @@ const Rule63 = window.Rule63 = {};
   /**
    * @returns {Setting} The current Rule63 mode setting
    */
-  const getSetting = () => setup.getFlag("rule63Mode") ?? Setting.DISABLED;
+  const getSetting = () => StoryFlags.get("rule63Mode") ?? Setting.DISABLED;
   /** @returns {boolean} Whether Rule63 mode is enabled */
   const isEnabled = () => getSetting() !== Setting.DISABLED;
 
@@ -39,7 +39,7 @@ const Rule63 = window.Rule63 = {};
     if (!Object.values(Setting).includes(val)) {
       throw new Error(`invalid param at setModes('${val}')`);
     }
-    setup.setFlag("rule63Mode", val);
+    StoryFlags.set("rule63Mode", val);
     // side effect: update the page background
     setBackground();
     setup.refreshHeader();

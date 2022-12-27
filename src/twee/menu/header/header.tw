@@ -6,7 +6,7 @@
 <h2 id="recent-command"></h2>
 
 :: Topbar controls
-<% const muted = !setup.isFlagSet('enableSound'); %>
+<% const muted = !StoryFlags.isSet('enableSound'); %>
 <% const helpShown = window.passage && window.passage.name === "Help"; %>
 
 <ul.header-nav-group>

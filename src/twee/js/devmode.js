@@ -14,7 +14,7 @@ You decide to stick your nose where it doesn't belong, and enter the developer's
     \n`);
 });
 
-if (setup.isFlagSet("devmode") && !$(".dev-info")[0]) {
+if (StoryFlags.isSet("devmode") && !$(".dev-info")[0]) {
   // Create devInfo element
   const $devInfo = $(`<details class="dev-info" open></details>`);
   $devInfo.appendTo($("body"));
@@ -36,7 +36,7 @@ if (setup.isFlagSet("devmode") && !$(".dev-info")[0]) {
     `<dt>story.history.length</dt><dd data-exec="story.history.length"></dd>`
   );
   $devInfoList.append(
-    `<dt>setup.getFlags() (<a href="javascript:void(0)"  onclick="setup.resetAchievements(); setup.resetFlags(); setup.setFlag('devmode')">reset</a>)</dt><dd data-exec="setup.getFlags()"></dd>`
+    `<dt>StoryFlags.getAll() (<a href="javascript:void(0)"  onclick="Achievements.reset(); StoryFlags.reset(); StoryFlags.set('devmode')">reset</a>)</dt><dd data-exec="StoryFlags.getAll()"></dd>`
   );
   // Commands
   $devInfo.append(`<ul class="header-nav-group">
