@@ -3,11 +3,76 @@ You enter the downstairs bathroom, and shut the door behind you, freeing yoursel
 
 The room's every surface is flush with immaculate porcelain and gaudy gold trimmings. There's something hypnotic about it all. Your mind races with possibilities.
 
+* [[Look in the mirror.]]
+* [[Use the toilet.]]
 * [[Masturbate.]] <!-- hazel-route.tw -->
-* [[Use toilet.]]
 * [[Leave.|Leave the bathroom.]]
 
-:: Use toilet.
+:: Look in the mirror. [mirror]
+You've never liked mirrors, but you take a moment to briefly examine this one. It reminds you of that tired trope in fiction, where a POV character describes themself by looking in the mirror.
+
+In the mirror stands a gray rabbit. It looks like you, except horizontally flipped. Your name is Hollis Freely, you are an androgynous-looking gray rabbit. Your face fur is short and curly.
+
+Not including your ears, you're 4'9" feet tall. It's a pretty average size for a rabbit, but considering other species can be up to 10 feet tall, you've always been considered short, or *noble*, a slightly more polite euphemism for the same.
+
+You're wearing...
+
+* [[A baggy hoodie.]]
+* [[A denim jacket.]]
+* [[A turtleneck.]]
+
+:: A baggy hoodie. [mirror mirror_middle]
+Ah yes, your favorite cotton hoodie—heather blue, and very comfy. It's a few sizes too large, so it does an excellent job concealing the shape (or lack thereof) of your torso. On your chest, you’ve sewn in a cute patch that says "THEY&nbsp;/&nbsp;THEM". You got it on Etsy.
+
+<%= story.render("Mirror 2") %>
+
+:: A denim jacket. [mirror mirror_middle]
+Your classic distressed dark-blue jean jacket. You picked it up at the shopping mall during your "rebellious" phase, which mainly involved listening to emo rock and refusing to eat green vegetables. You were in middle school at the time, but it still fits.
+
+You're covered in cute little pins and patches, including a black-gold one with your pronouns, and a pride flag.
+
+<%= story.render("Mirror 2") %>
+
+:: A turtleneck. [mirror mirror_middle]
+Yes, your navy blue turtleneck. You've always been a little self-conscious around your neck, so it can't hurt to conceal it. Plus, you've been told, it gives you kind of a booksmart techbro vibe.
+
+On your chest you're wearing a sticker that just says "They" on it, in a stately serif font. Your high school's GSA bought like 200 of these, seemingly on accident. The president offloaded them all on you when they graduated, since you were the only one who ever took in all four years.
+
+<%= story.render("Mirror 2") %>
+
+:: Mirror 2 [mirror mirror_middle] 
+
+On the bottom, you're wearing...
+
+* [[Cargo shorts.]]
+* [[A black midi skirt.]]
+* [[Skinny jeans.]]
+
+:: Cargo shorts. [mirror mirror_bottom]
+They're comfy and easy to wear. Lots of pockets, mostly loaded with wadded up receipts that you've forgotten about. You could fit a really big smartphone in these, if you owned one, but you don't.
+
+<%= story.render("Mirror 3") %>
+
+:: A black midi skirt. [mirror mirror_bottom]
+A  skirt that goes down to your knees. It's a little femme for your tastes, but it's modest and gets the job done.
+
+<%= story.render("Mirror 3") %>
+
+:: Skinny jeans. [mirror mirror_bottom]
+They're back in fashion again, so you've heard. They make you look slightly taller, and every bit helps.
+
+<%= story.render("Mirror 3") %>
+
+:: Mirror 3
+And of course, on the very bottom, you're barefoot. Shoes aren't a necessity in this world, and you have a *much* easier time walking without them.
+
+Of course, you already knew all this information, since you were the one who put these clothes on in the first place, and it really doesn't seem like the kind of decision that's going to affect anything.
+
+This was basically a huge waste of time, but at least you're feeling a little calmer now.
+
+* [[Go back|Go to the bathroom.]]
+
+:: Use the toilet.
 You consider using the toilet. However, at a second glance, you realize it not designed for someone of your little stature. The bowl is almost twice your size, and you could easily fall in. Based on the size, you presume that this house is owned by a family of rhinoceroses, or maybe big horses.
 
 You didn't really need to pee anyway.
