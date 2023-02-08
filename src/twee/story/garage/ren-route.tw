@@ -1,12 +1,3 @@
-:: Ren quirk [stylesheet]
-.ren {
-  font-family: "Comic Neue", "Comic Sans", "Comic Sans MS", sans-serif !important;
-  text-transform: lowercase;
-}
-
-
-
-
 :: Go to the garage. [checkpoint]
 
 You walk down the hall and enter the garage. The garage door is open, looking out onto rows of similarly suburban houses. Cool fresh air enters. The smell of freedom.
@@ -15,7 +6,7 @@ Parked inside the garage is a clean and polished pickup truck from a luxury bran
 
 A few feet ahead of you, you see a red fox, who appears to be struggling to carry a huge cardboard box. Stacked haphazardly on top is a number of objects, including some electronics, a game console, two silver candelabras, and what appears to be a priceless oil painting. The fox notices you.
 
-<span.ren>"Hiya!!! 😊👋🐾"</span> the fox says, talking in an <span.ren>unusually 😃 excited and 😃😃 expressive manner.</span>
+<span.ren>"Hiya!!! 😊👋🐾"</span> the fox says, talking in an unusually 😃 excited and 😃😃 expressive manner.</span>
 
 * <a0 data-passage="What are you doing?" onclick="story.state.rm = true">Ask him what he's up to.</a> *(Male Pred)*
 * <a0 data-passage="What are you doing?" onclick="story.state.rm = false">Ask her what she's up to.</a> *(Female Pred)*
@@ -381,26 +372,14 @@ Ren's stomach pulses around you happily (<span.ren>"⛓<%=s.rm?"🤷‍♂️":"
 * [[Epilogue.|Epilogue: Ren route.]]
 * <%= T.restart() %>
 
-:: Xander [stylesheet]
-.xander {
-  font-family: 
-}
-
-.small-dollar-sign { font-size: 80%; }
-.small-cent-sign { vertical-align: -0.1em; }
-
 :: Xander quirk2 [script]
 $(window).on("sm.passage.shown", () => {
   $(".xander").each((i, el) => {
     // Preserve original text for screen readers
-    el.title = el.innerText;
-    // Substitute characters
-    el.innerHTML = el.innerText
-          .replace(/s/g, "$")
-          .replace(/c/g, "¢")
-          .replace(/\$/g, "<span class='small-dollar-sign'>$</span>")
-          .replace(/¢/g, "<span class='small-cent-sign'>¢</span>")
-          .replace(/S/g, "$")
+    
+    el.setAttribute("data-replace", el.innerText
+          .replace(/([Cc])/g, "¢")
+          .replace(/([Ss])/g, "$"));
   })
 })
 
@@ -409,7 +388,7 @@ The late morning sun pours through a square window, between steel bars, and onto
 
 <span.ren>"🥱... What a party!"</span> <%-s.rm?"he":"she"%> yawns.
 
-Ren's cellmate—a small copper-colored fennec fox—looks over. <%-!s.rm?"He":"She"%> says with hard, metallic lisp, <span.xander>"Look who decided to wake up,"</span> <%-!s.rm?"he":"she"%> says, <span.xander>"The name is <%=!s.rm?"Xander":"Xandra"%>, serial tax evader. What is a cute thing like you doing in a place like this?"</span>
+Ren's cellmate—a small copper-colored fennec fox—looks over. <span.xander>"Look who decided to wake up,"</span> <%-!s.rm?"he":"she"%> says, with a hard metallic lisp, <span.xander>"The name is <%=!s.rm?"Xander":"Xandra"%>, serial tax evader. What is a cute thing like you doing in a place like this?"</span>
 
 <span.ren>"🤔 Well, I got caught stealing a cool 🛻 truck from some horses, plus several hundreds of dollars of 💰 valuable goods. So basically... <!-- shrug --><%=s.rm?"🤷‍♂️":"🤷‍♀️"%> nothing!!!"</span>
 
