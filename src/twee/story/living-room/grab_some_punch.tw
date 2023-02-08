@@ -55,16 +55,6 @@ You nod, and thank her for looking out of your health.
 
 * [[Go back.|Dance a little.]]
 
-
-:: Kaia quirk [stylesheet]
-/* She talks small. */
-.mouse {
-  font-size: 85%;
-}
-.jackrabbit {
-  /* No quirk for now. */
-}
-
 :: Do nothing.
 <% s.rescuedKaia = false; %>
 

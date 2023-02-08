@@ -1,24 +1,5 @@
 :: Twinspeak [stylesheet]
-.twinspeak {
-    text-shadow: var(--color) -0.25em -0.5em;
-    box-shadow: -0.25em -0.5em var(--accent);
-    color: var(--accent);
-    background: var(--color);
-}
-.nikki, .nox, .twinspeak {
-    --accent: #fb4;
-    /* font-family: Times New Roman, serif; */
-    padding: 0.25em;
-    border-radius: 2px;
-}
-.nox {
-    color: var(--color);
-    background: var(--accent);
-}
-.nikki {
-    color: var(--accent);
-    background: var(--color);
-}
+
 
 
 :: Wake up in the kitchen. [checkpoint]

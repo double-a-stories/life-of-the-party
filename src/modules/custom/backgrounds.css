@@ -46,3 +46,14 @@ body[data-tags~="gore"] {
     filter: blur(0);
   }
 }
+
+/* Kaia and Faith's perspective */
+
+[data-tags~="mousestory"] {
+  font-size: 150%;
+  font-family: 'Trebuchet MS', var(--font-stack);
+  --color: #E6D1AB !important;
+  --background: #1d1103 !important;
+  --light: #D8B370 !important;
+  --accent: #D8B370 !important;
+}

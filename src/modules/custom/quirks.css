@@ -1,0 +1,88 @@
+:root {
+    --ren-color: #820;
+    --byron-color: #335;
+    --nikki-nox-color: #fb4;
+    --ivy-color: #562;
+}
+
+body[data-tags~="vore"] {
+    --ren-color: #f63;
+    --byron-color: #aab;
+    --ivy-color: #ff0;
+}
+
+/** 
+ * Character voices
+ */
+.ren {
+    font-family: "Comic Neue", "Comic Sans", "Comic Sans MS", sans-serif !important;
+    text-transform: lowercase;
+    color: var(--ren-color);
+}
+
+/* Xander – replaces SsCc with $ and ¢. */
+/* This is more complicated for a11y reasons. */
+.xander {
+    font-family: var(--font-family-monospace);
+    font-size: 80%;
+}
+.xander {
+    position: relative;
+    color: rgba(0, 0, 0, 0);
+    font-size: 0px;
+}
+
+.xander::before {
+    font-size: 1rem;
+    content: attr(data-replace);
+    color: var(--xander-color, var(--color));
+}
+
+.byron {
+    font-family: var(--font-family-serif);
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--byron-color);
+}
+
+
+/* Nikki and Nox */
+.nikki,
+.nox,
+.twinspeak {
+    padding: 0.25em;
+    border-radius: 2px;
+}
+
+.nox {
+    color: var(--color);
+    background: var(--nikki-nox-color);
+}
+
+.nikki {
+    color: var(--nikki-nox-color);
+    background: var(--color);
+}
+
+.twinspeak {
+    text-shadow: var(--color) -0.25em -0.5em;
+    box-shadow: -0.25em -0.5em var(--nikki-nox-color);
+    color: var(--nikki-nox-color);
+    background: var(--color);
+}
+
+/* Mice speak with smaller text */
+.mouse,
+.kaia,
+.faith {
+    font-size: 85%;
+}
+
+/* Ivy */
+
+.ivy {
+    color: var(--ivy-color);
+    font-size: 90%;
+    text-transform: lowercase;
+    font-family: var(--font-family-monospace);
+}

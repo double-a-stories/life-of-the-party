@@ -2,13 +2,6 @@
 In the living room is a hipster wolf guitarist with poetic aspirations and delusions of being a high-class gentleman. <%-s.bm?"He":"She"%> tries to gatekeep you with flowery speech and obscure knowledge, but begrudgingly admits <%-s.bm?"his":"her"%> respect for you.
 Hollis realizes that Byron's sensitive exterior is just a front for <%-s.bm?"his":"her"%> predatory desires, and rejects <%-s.bm?"him":"her"%>. <%-s.bm?"He":"She"%> doesn't take it well. -->
 
-:: Byron's font quirk [stylesheet]
-.byron {
-  font-family: "Times New Roman", "Tinos", "Times", serif;
-  font-weight: bold;
-  font-size: 1.1em;
-}
-
 :: Look at wolf. [checkpoint]
 
 A black-furred wolf, about six feet tall, wearing in a stylish scarf and a checkered red flannel shirt. They're sitting aloofly on a couch, and serenading the party with an acoustic guitar.

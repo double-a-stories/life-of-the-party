@@ -3,16 +3,20 @@
 /* Style variables */
 
 :root {
+  /* Body text color */
   --color: #111;
+  /* Body background gradient color */
   --background: #eee;
   /* Semi-transparent decoration color */
   --light: rgba(0, 0, 0, 20%);
   /* Link hover color */
   --accent: #d93;
-  /* Default body font */
-  --font-stack: "IBM Plex Sans", sans-serif;
-  --font-size: clamp(1rem, 3vw, 1.4rem);
-  --bg-rotation: 180deg;
+  /* Body font */
+  --font-stack: var(--font-family-sans-serif);
+  --font-family-sans-serif: "IBM Plex Sans", sans-serif;
+  --font-family-monospace: ui-monospace, Menlo, Monaco, "Courier New", monospace;
+  --font-family-serif: "Times New Roman", "Tinos", "Times", serif;
+  --bg-rotation: 0deg;
 }
 
 html {
@@ -20,21 +24,26 @@ html {
 }
 
 body {
-  background: linear-gradient(var(--bg-rotation, 0deg), rgba(255, 255, 255, 0.15), rgba(0,0,0, 0.15)) var(--background) fixed;
+  background: linear-gradient(
+      var(--bg-rotation, 0deg),
+      rgba(0, 0, 0, 0.15),
+      rgba(255, 255, 255, 0.15)
+    )
+    var(--background) fixed;
   box-sizing: border-box;
   color: var(--color);
-  font: var(--font-size, 1.4rem)/1.6 var(--font-stack);
+  font: clamp(1rem, 3vw, 1.4rem) / 1.6 var(--font-stack);
   hyphens: auto;
   text-align: justify;
   margin: 0;
-  overflow: hidden /* x */ scroll /* y */;
   padding: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
   transition: opacity 1s, background-color 2s;
   min-height: 100%;
 }
 
-
-@media screen and (max-width:700px) {
+@media screen and (max-width: 700px) {
   body {
     font-size: min(4vw, 1.2rem);
   }
@@ -52,9 +61,13 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 1em;
 }
 
-
 /*  Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.15;
   font-weight: 700;
 }
@@ -69,7 +82,9 @@ a[href] {
   text-decoration-color: var(--light, rgba(0, 0, 0, 20%));
 }
 
-a[href]:hover, a[href]:focus, a[href]:active {
+a[href]:hover,
+a[href]:focus,
+a[href]:active {
   color: var(--accent, #d93);
   text-decoration-color: var(--accent, #d93);
 }
@@ -90,8 +105,9 @@ a[href]:hover, a[href]:focus, a[href]:active {
   margin-right: auto;
   width: max-content;
 }
+
 /* Mobile mode */
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
   .commands-list a {
     padding: 1rem;
   }
@@ -114,6 +130,7 @@ a[href]:hover, a[href]:focus, a[href]:active {
 abbr[title] {
   text-decoration: none;
 }
+
 abbr[title]:hover {
   text-decoration: underline dotted;
 }
