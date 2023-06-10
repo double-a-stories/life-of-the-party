@@ -32,7 +32,9 @@ tw-passage > * {
 <div.center-list>
 
 * [[Life of the Party.]]
-<% if (setup.getAchievements().length >= setup.totalAchievements) { %>
+
+<% const [count, max] = setup.getAchievementCount(); %>
+<% if (count === max) { %>
 * [[Epilogue.]] <!-- _true-ending.tw -->
 <% } %>
 
