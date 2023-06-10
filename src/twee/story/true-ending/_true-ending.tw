@@ -1,3 +1,10 @@
+RETCON: Add a mirror to the bathroom scene. Look at yourself. Get a little Hollis lore.
+RETCON: Basil should mention his dad once or twice. Maybe it’ll appear in a sex scene with him and Gus?
+RETCON: Basil and Lacey should be the primary villains of the piece. Basil should be much more of a jerk. Sexy jerk.
+RETCON: Reese is Hollis's step-brother, and it rectifies the fact that he's the only character with no canonical surname. This allows him to make a "step-sibling, I'm stuck!!" joke.
+RETCON: Ana should be cooler and quirkier. Really seem like she's constantly on edge. Really really make Hollis like her.
+RETCON: We should be able to meet Faith somewhere. Or at least, Nox should mention where he found her. Nox was near Lacey's bedroom when Reese was swallowed, so it makes sense for her to be up there too, maybe on the bannister, asking you to find Kaia.
+
 :: Epilogue styles [stylesheet]
 body[data-tags~="epilogue"] {
   --background: #002;
@@ -28,18 +35,18 @@ body[data-tags~="epilogue"] {
 }
 
 :: Epilogue. [epilogue outside]
-It's early in the evening. Fall leaves scatter about the otherwise well-kempt lawns of a dozen suburban houses. Parked cars are lined up as far as the eye can see.
+It's early in the evening. Fall leaves litter the otherwise perfectly kempt lawns of a dozen suburban houses. Parked cars line the street in both directions.
 
-A rabbit and a guinea pig walk along the sidewalk, and arrive in front of the Armstrong house.
+A rabbit and a guinea pig walk along the sidewalk, and arrive in front of a towering McMansion.
 
 <span.reese>"Well, this is the place,"</span> says the guinea pig.
 
 * [[I don't think I'm ready for this...]]
 
 :: I don't think I'm ready for this... [epilogue outside]
-<span.hollis>"I don't think I'm ready for this,"</span> says the rabbit, awkwardly adjusting their shirt.
+<span.hollis>"I don't think I'm ready for this,"</span> says the rabbit, awkwardly adjusting the hem of their top.
 
-<span.reese>"There's nothing to be afraid of, Hol,"</span> replies the guinea pig, patting his friend on the shoulder. <span.reese>"The place will be crawling with drunk hotties. You just have to act natural, and they'll be begging for a taste of you!"</span>
+<span.reese>"It's nothing to be afraid of, Hol,"</span> replies the guinea pig, patting his friend on the shoulder. <span.reese>"The place will be crawling with drunk hotties. You just have to act natural, and they'll be begging for a taste of you! You'll be the life of the party."</span>
 
 Thumping bass, whoops and hollers can be heard even from outside.
 
@@ -48,102 +55,111 @@ Thumping bass, whoops and hollers can be heard even from outside.
 :: I'm not great with crowds... [epilogue outside]
 <span.hollis>"We both know I'm not really great with crowds..."</span> the rabbit says, shifting uncomfortably.
 
-<span.reese>"You can leave if you want to,"</span> the guinea pig replies. <span.reese>"But a party like this is the perfect way for a couple of dropouts like us to forget all our worries! Trust me, it'll be over before you know it!"</span>
+<span.reese>"Dude, you can leave if you want,"</span> the guinea pig replies. <span.reese>"But something like this is the perfect way for pathetic dropouts like us to forget all our worries! Trust me, you'll be having fun before before you know it."</span>
 
 * [[Won't there be predators there?]]
 
 :: Won't there be predators there? [epilogue outside]
-Frightening images flash through the rabbit's mind. A wolf's fangs, a bear's belly, a horse's maw. Vivid memories of things which haven't happened? No, probably just their overactive imagination...
+<q.hollis>Won't there be preds there?</q> the rabbit asks.
 
-<q.hollis>Won't there be predators there?</q> the rabbit asks.
+The rabbit shudders as images flash their mind. A wolf's fangs, a bear's belly, a horse's slavering maw.
 
-<q.reese>Uh, yeah,</q> the guinea pig chuckles, seemingly excited at the prospect, <q.reese>I certainly hope so!</q>
+<q.reese>Uh, yeah,</q> the guinea pig chuckles, seemingly excited at the prospect, <q.reese>I'd certainly hope so!</q>
 
-The rabbit finds their friend's enthusiasm a little odd, but not out of character. Reese always found himself flirting with carnivores
+The rabbit finds their friend's enthusiasm a little off-putting, but not at all out of character. He was always flirting with carnivores and getting into trouble. The rabbit meanwhile generally preferred to admire them from afar. Ideally, from the safety of their laptop screen.
 
-<q.hollis>But uh, what if something happens to one of us?</q> asks the rabbit.
+* [[What if something happens?]]
 
-<q.reese>I dunno Hol, that's just the Circle of Life.</q>
+:: What if something happens? [epilogue outside]
+
+<q.hollis>But, what if something happens to one of us?</q> asks the rabbit.
+
+<q.reese>I dunno Hol, that's just the Circle of Life. You're only young once.</q>
 
 <span.reese>"So,"</span> the guinea pig asks, approaching the door, <span.reese>"are you coming?"</span>
 
-* [[I really don't want to!]]
+* [[I guess...]]
 
-:: I really don't want to! [epilogue outside]
-<span.hollis>"I really don't want to..."</span> they say.
+:: I guess... [epilogue outside]
 
-The guinea pig frowns. <span.reese>"Really? We can leave if you want."</span>
+<span.hollis>"I mean,"</span> says the rabbit, scratching their whiskers, <span.hollis>"we came all this way..."</span>
 
-<span.hollis>"No, no,"</span> says the rabbit, scratching their whiskers, <span.hollis>"we came all this way..."</span>
-
-The guinea pig smiles, and says, <span.reese>"If you say so..."</span> He goes to knock on the front door to be let in.
+The guinea pig smiles, and says, <span.reese>"That's the spirit!"</span> He goes to knock on the front door to be let in.
 
 * [[Wait, didn't we already do this?]]
 
 :: Wait, didn't we already do this? [epilogue]
-<span.hollis>"Wait, didn't we already do this?"</span> asks Hollis, confused. The sentence echoes strangely inside their head as they say it.
+<span.hollis>"Wait, didn't we already do this?"</span> asks Hollis, confused. The words feel strange coming out of their mouth.
 
-A smile flickers on Reese's lips. He stops reaching for the door. <span.reese>"What do you mean?"</span>
+A smile flickers on Reese's lips, and he pauses reaching for the door. <span.reese>"What do you mean?"</span>
 
 Hollis says, <span.hollis>"I remember having this conversation before. You convinced me to go with you, and you knocked on the door."</span>
 
-<span.reese>"And then what happened?"</span> asks Reese.
+<span.reese>"And then what happened?"</span> asks Reese, his back still turned.
 
 * [[We went inside...]]
 
 :: We went inside... [epilogue]
-Hollis frowns as they mentally retrace their steps. <span.hollis>"We went inside... Then I got separated from you. And I went upstairs? No wait, outside... There was a horse involved? And I think..."</span>
+Hollis frowns as they mentally retrace their steps. <span.hollis>"We went inside... and got separated. And I went upstairs? No wait, outside...? I saw Basil and his sister..."</span>
 
 They shiver for a moment, as they recall vividly the wet, hot sensation of being inside a predator's stomach. Several different stomachs, actually, which is confusing... They remember feeling a strange mixture of fear and excitement, as drowsiness became sleep, and sleep became oblivion.
 
+<span.hollis>"A-and I think..."</span>
+
 Reese nods, <span.reese>"You think...?"</span>
 
-* [[I think I died.]]
+* [[I died.]]
 
-:: I think I died. [epilogue stars]
-<span.hollis>"I think I died?"</span> says Hollis. Their heart sinks.
+:: I died. [epilogue stars]
+<span.hollis>"I think... I died?"</span> says Hollis. Their heart sinks.
 
-Reese smirks, <span.reese>"I was wondering when you'd catch on."</span>
-
-* [[What's happening?]]
-
-:: What's happening? [epilogue stars]
-<span.hollis>"What's happening?"</span> Hollis asks.
+Reese smiles and turns back to face Hollis. <span.reese>"Finally. Was wondering when you'd catch on."</span>
 
 Hollis looks around. The house is gone, as is the sidewalk. In every direction, it's just the twilit sky stretching out forever, slowly turning into night.
 
-Reese glances around, and shrugs nonchalantantly. <span.reese>"If I had to guess, I'd say we've been digested."</span> He scratches the back of his head.
+* [[Where are we?]]
+
+:: Where are we? [epilogue stars zen]
+<span.hollis>"Where are we?"</span> Hollis asks.
+
+Reese glances around, and shrugs nonchalantantly. <span.reese>"If I had to guess, we're in some kind of liminal space between worlds. If your life was a book, we're standing in the margins."</span> He scratches the back of his head.
 
 Hollis looks out at the horizon.
 
-* [[Is this... the afterlife?]]
+* [[Is this hell?]]
 
-:: Is this... the afterlife? [epilogue stars]
-Reese shrugs. <span.reese>"I dunno, do you believe in that kind of thing? This definitely *looks* like some kind of liminal space in which souls are cleansed before reincarnation."</span>
+:: Is this hell? [epilogue stars]
+<span.hollis>"Are we in... hell?"</span> they ask.
 
-Hollis stares at him awkwardly. <span.hollis>"Like some kind of purgatory?"</span>
+Reese feigns shock, <span.reese>"Hollis, you wound me. Am I really that bad?"</span>
 
-<span.reese>"Sure. On the other paw, it's equally likely that my life is flashing before my eyes, and you're just a figment of my imagination."</span>
+Hollis stares at him awkwardly. <span.hollis>"I mean like, this could be some kind of purgatory, reincarnation thingy."</span>
+
+<span.reese>"I thought you didn't believe in that stuff."</span>
+
+<span.hollis>"I don't. Or, didn't? This is... a lot to process."</span>
+
+<span.reese>"Well if you want a boring science answer, maybe all of this is just my life is flashing before my eyes in my final moments, and you're just a figment of my imagination."</span>
 
 * [[I don't feel like a figment...]]
 
 :: I don't feel like a figment... [epilogue stars]
-Hollis touches the gray fur of their cheeks. <span.hollis>"I don't feel like a figment,"</span> they say.
+Hollis touches the gray fur of their cheeks. <span.hollis>"I don't feel like one,"</span> they say.
 
-<span.reese>"That's exactly what a figment would say,"</span> Reese says, smiling, <span.reese>"Oh, or maybe our souls have been combined into some kind of sentient turd!"</span>
+<span.reese>"Exactly what a figment would say,"</span> Reese says, smiling, <span.reese>"Oh, or maybe our souls have coalesced and reincarnated into some kind of sentient turd!"</span>
 
-Hollis folds their arms and chuckles. <span.hollis>"If anyone's a sentient turd, it's you."</span> They both laugh. Hollis tries to remember the last time they really laughed.
+Hollis folds their arms and smirks. <span.hollis>"Reese, you were already a sentient turd."</span> They both giggle. Hollis tries to remember the last time they really, truly laughed.
 
 * [[I can't believe I'm dead...]]
 
 :: I can't believe I'm dead... [epilogue stars]
-<span.hollis>"I can't believe I'm dead,"</span> Hollis sighs wistfully.
+<span.hollis>"I can't believe I'm dead,"</span> Hollis sighs wistfully, <span.hollis>"I thought there'd be more... fanfare."</span>
 
-<span.reese>"Oh, I can,"</span> says Reese. Hollis shoots them a look. <span.reese>"Let's face it. You were a young herbivore with no college education, no self defense skills, and a raging vore kink! It was practically destiny."</span>
+<span.reese>"Oh, I can,"</span> says Reese. Hollis glares. <span.reese>"Let's face it. You were a young herbivore with no college education, no self defense skills, and a raging vore kink! It was practically destiny."</span>
 
-<span.hollis>"Hey,"</span> says Hollis, defensively, <span.hollis>"You're the one with the vore kink! A kink which got both of us killed!"</span>
+<span.hollis>"Hey,"</span> says Hollis, defensively, <span.hollis>"You're the one with the vore kink! Which got both of us killed!"</span>
 
-Reese looks at them smugly, <span.reese>"It was pretty hot though, right?"</span>
+Reese looks at them smugly, <span.reese>"Touché... Pretty hot though, right?"</span>
 
 * [[Well, I guess so...|Give feedback.]]
 * [[Actually it was kind of boring?|Give feedback.]]
@@ -151,7 +167,7 @@ Reese looks at them smugly, <span.reese>"It was pretty hot though, right?"</span
 :: Give feedback. [epilogue stars]
 <span.reese>"Heh, face it Hol. You loved being food."</span>
 
-The rabbit frowns, and stammers, <span.hollis>"But... there was so much more I wanted to do with my life!"</span>
+Hollis frowns, and stammers, <span.hollis>"S-sure, but... there was so much more I wanted to do with my life!"</span>
 
 <span.reese>"Oh, like what?"</span>
 
@@ -160,7 +176,7 @@ The rabbit frowns, and stammers, <span.hollis>"But... there was so much more I w
 :: Uh... Well... [epilogue stars]
 Hollis hesitates, <span.hollis>"...There was that one superhero movie I wanted to see... "</span>
 
-Reese pats Hollis on the back, <span.reese>"Well, I'm sorry I deprived you of your lifelong dream to see *Digestitron III: Return of Digestitron*, heh."</span>
+Reese pats Hollis on the back, <span.reese>"Well, I'm sorry I deprived you of your lifelong dream to see *Digestitron III: Revenge of Digestitron*, heh."</span>
 
 <span.hollis>"And maybe I would've finally gotten a Chia Pet..."</span> Hollis reflects for a moment, and says, <span.hollis>"I guess I really was just a huge, worthless nerd?"</span>
 
@@ -171,22 +187,134 @@ Reese pats Hollis on the back, <span.reese>"Well, I'm sorry I deprived you of yo
 
 <span.hollis>"And I'm probably keeping a plumber well-employed..."</span> Hollis snickers.
 
-<span.reese>"But seriously, this whole thing is pretty much entirely my fault. And... I'm sorry. If I'd respected your boundaries, you wouldn't have been eaten."</span>
+<span.reese>"But uh, jokes aside... This whole thing is pretty much entirely my fault? And... I guess I owe you an apology. If I'd respected your boundaries, you wouldn't have been eaten."</span>
 
 * [[Don't feel bad!]]
 
 :: Don't feel bad! [epilogue stars]
-<span.hollis>"Hey, don't feel bad,"</span> Hollis says, <span.hollis>"Like you said, I think it was basically inevitable."</span>
+<span.hollis>"Hey, don't feel bad,"</span> Hollis says, <span.hollis>"Like you said, I think it was somehow inevitable? Like, cosmically?"</span>
 
-// TODO:
-* Give the player a chance to express feelings.
-* Glad I had a friend like you.
-* You gain self-actualization and catharsis, and begin to disintegrate.
-* Wait, no. It doesn't have to end like this!
-* You restart the story again, march up the stairs, and pull Reese from Lacey's mouth. Then you find the jackrabbit and Nikki/Nox, and reunite Faith and Kaia.
-* Then you go outside, and talk Ana into giving all of you a ride home.
-* You ride off into the night, and go out for a slice of pizza.
-* The End.
+............................................................
+
+"C-can we stay like this?" you ask, embracing Reese.
+
+"While I'd be happy to offer you sloppy seconds," he says with a wink, "I'm afraid we can't." His body glows, and begins disintegrating into little wisps of light. Flecks of matter float away from his body, leaving behind a ghostly blue afterimage, before that too begins to become stardust,  "My time has come. I'm moving on. Or, reincarnating, or whatever."
+
+"That's it, then?" you ask, frowning, "That's all there was for us in this world?"
+
+"You didn't miss anything, did you?" Reese said, "You made every possible choice you could have made?"
+
+* [[Yes!! I did!!!]]
+
+:: Yes!! I did!!!
+
+"Yes!" you cry, "I followed every path. Every one lead me back here!"
+
+"Well Hol, I guess you're just destined to become prey." Reese shrugs, "I mean hey, so was I!"
+
+Reese chuckles as different parts of his body begin to destabilize, as if his essence is being worn away by an invisible acid. "This isn't so bad really. Kinda tickles actually." His lower body bubbles away, and he takes your paw, giving you a cheesy grin. "Before I go, I don't suppose I could convince you to suck my-?"
+
+And then he's gone. Dust in the ether, laid to rest among imaginary stars.
+
+You look at your own left hand. It's glowing as well. This is it, you guess. Your spirit vanishing to oblivion. You take a deep breath, and prepare to stop existing.
+
+* [[Let go.]]
+* [[No. Fight it.]]
+
+:: Let go.
+
+Instant game over. Credits screen.
+
+:: No. Fight it.
+
+You... *what*?
+
+You tense every muscle in your little body. Your hand reforms, and clenches into a solid fist.
+
+"No," you say out loud, "Fight it."
+
+*No?* Come on, Hollis. You already saw all the endings. In every one, you die. Clearly, the reader found it all very sexy, since they stuck it out to the very end. But that's it. That's all the content there is, as evidenced by the empty void you're in now. Puttering out here in this void, which is just an imaginary metanarrative space, where you can come to grips with your mortality in a thematically satsifying way.
+
+"Hey," Ana says, "Shut up."
+
+What?
+
+"You, narrator. Shut up, you pretentious fuck."
+
+You don't hear anything. You're very sure Ana the hyena is *not* talking to you. In fact it would make no narrative sense for her to be-
+
+"I'm in the scene now, deal with it."
+
+Oh for fuck's sake... You turn around, and Ana the hyena is standing behind you with her arms crossed. She pats you on the shoulder. "Hey bunny kid. Sup. Look who clipped out of bounds lol."
+
+> Ana? ...Are you dead?
+
+"Nah, I just live rent-free in God's head. I'm like, their 'sona or some shit. They writes horny stories about me sometimes. We're in one right now." She looks around. "Or, like, in the margins of one. Can't believe a fucking *nerd* like that would have *me* as their fursona. It's honestly embarassing."
+
+HEY, remember who's literally **causing you to exist** right now.
+
+"Yeah sis," she shouts into the ether, "We know! If your little game got any more Meta, Facebook would sue! It's a good thing you're into anal vore because otherwise you could not *possibly* be any more up your own asshole."
+
+Your universe doesn't have Facebook, Ana.
+
+"Oh right, it's some furry version like PredNook. BlueBall. YiffShitSpace dot biz"
+
+Remember the Hazel route? It *was* Snapchomp, but now I've just decided that now it's YiffShitSpace.biz. Fuck you.
+
+"Fuck you," Ana mutters.
+
+> Is this real?
+
+"Is this... real?" you ask.
+
+"As real as everything else. You're not like, in a coma hallucinating this or something. That would be stupid."
+
+> Look in mirror.
+
+
+
+> Send me back.
+
+
+
+> SEND. ME. BACK.
+
+> LIFE OF THE FUCKING PARTY.
+
+Y-you can't do it again, there's no more story.
+
+"Make more, shithead," Ana says.
+
+> PARTY KILLER.
+> let's get some cool final boss music going too actually
+
+Here begins a "true ending" 100% "speedrun" route of the game, with brand new options. Hollis goes full galaxy brain.
+
+1. Rush upstairs, grab a broom from the closet.
+- ""
+2. Threaten Lacey until she vomits Reese up.
+- "H-Hollis?" "I'll explain later. Follow me."
+- Reese has joined the party.
+3. As you return downstairs, Kaia is about to be snatched by the jackrabbit, but you grab her in time.
+- ""
+- Kaia has joined the party.
+4. Nox is about to pick Faith up.
+- Nikki smiles and waves. "Look at you, cheating death, huh?"
+- Nox, "We won't waste your time. Here's what you came for."
+- Nox hands Faith to you.
+- Kaia and Faith are emotionally reunited. They choose to follow you.
+5. Byron is seen trying to neg Ivy. Hit him in the groin with the broom.
+- Ivy has joined the party.
+6. Ana is waiting in the side yard.
+- "Alright, hot shot. Ready to blow this joint?"
+- You all climb into Ana's car. Music fades.
+7. Pizza Shack.
+- Talk to everyone.
+- Nice happy scene.
+
+True Epilogue:
+
+Years later, Hollis has become a counselor.
 
 * <%= T.restart() %>
 * [[Credits]]
