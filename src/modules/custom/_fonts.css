@@ -5,9 +5,9 @@
 /* Comic Neue is used for Ren's text, as it's slightly more legible than Comic Sans. */
 
 @font-face {
-	font-family: "PlayfairDisplaySC-Bold-LotP";
+  font-family: "PlayfairDisplaySC-Bold-LotP";
   font-display: block;
-	src: url(assets/font/PlayfairDisplaySC-Bold-LotP.woff2) format("woff2");
+  src: url(assets/font/PlayfairDisplaySC-Bold-LotP.woff2) format("woff2");
 }
 
 /* @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Tinos:ital@0;1&display=swap"); */
@@ -17,4 +17,59 @@
   font-weight: 700;
   font-display: swap;
   src: url(assets/font/ComicNeue-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/font/IBMPlexSans-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/font/IBMPlexSans-SemiBoldItalic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/font/IBMPlexSans-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/font/IBMPlexSans-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(assets/font/IBMPlexSans-Thin.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/font/IBMPlexSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/font/IBMPlexSans-Italic.ttf) format('truetype');
 }
