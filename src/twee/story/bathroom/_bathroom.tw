@@ -9,11 +9,9 @@ The room's every surface is flush with immaculate porcelain and gaudy gold trimm
 * [[Leave.|Leave the bathroom.]]
 
 :: Look in the mirror. [mirror]
-You've never liked mirrors, but you take a moment to briefly examine this one. It reminds you of that tired trope in fiction, where a POV character describes themself by looking in the mirror.
+You've never liked mirrors, but you take a moment to briefly examine yourself in this one. An androgynous-looking gray rabbit stares back. It reminds you of that tired trope in fiction, where a POV character describes themself by looking in the mirror.
 
-In the mirror stands a gray rabbit. It looks like you, except horizontally flipped. Your name is Hollis Freely, you are an androgynous-looking gray rabbit. Your face fur is short and curly.
-
-Not including your ears, you're 4'9" feet tall. It's a pretty average size for a rabbit, but considering other species can be up to 10 feet tall, you've always been considered short, or *noble*, a slightly more polite euphemism for the same.
+Your face fur is short and curly. Not including your ears, you're 4'9" feet tall. It's a pretty average size for a rabbit, but considering other species can be up to 10 feet tall, you've always been considered short, or *noble*, a slightly more polite euphemism for the same.
 
 You're wearing...
 
@@ -27,7 +25,7 @@ Ah yes, your favorite cotton hoodie—heather blue, and very comfy. It's a few s
 <%= story.render("Mirror 2") %>
 
 :: A denim jacket. [mirror mirror_middle]
-Your classic distressed dark-blue jean jacket. You picked it up at the shopping mall during your "rebellious" phase, which mainly involved listening to emo rock and refusing to eat green vegetables. You were in middle school at the time, but it still fits.
+Your classic distressed dark-blue jean jacket. You picked it up at the shopping mall during your "rebellious" phase, which mainly involved listening to emo rock and refusing to eat vegetables. You were in middle school at the time, but it still fits.
 
 You're covered in cute little pins and patches, including a black-gold one with your pronouns, and a pride flag.
 
@@ -49,7 +47,7 @@ On the bottom, you're wearing...
 * [[Skinny jeans.]]
 
 :: Cargo shorts. [mirror mirror_bottom]
-They're comfy and easy to wear. Lots of pockets, mostly loaded with wadded up receipts that you've forgotten about. You could fit a really big smartphone in these, if you owned one, but you don't.
+They're comfy and easy to wear. Lots of pockets, mostly loaded with wadded up receipts that you've forgotten about. You could fit a big smartphone in these, if you owned a phone. You don't.
 
 <%= story.render("Mirror 3") %>
 
@@ -66,7 +64,7 @@ They're back in fashion again, so you've heard. They make you look slightly tall
 :: Mirror 3
 And of course, on the very bottom, you're barefoot. Shoes aren't a necessity in this world, and you have a *much* easier time walking without them.
 
-Of course, you already knew all this information, since you were the one who put these clothes on in the first place, and it really doesn't seem like the kind of decision that's going to affect anything.
+Of course, you already knew all this information, since you were the one who put these clothes on in the first place.
 
 This was basically a huge waste of time, but at least you're feeling a little calmer now.
 
