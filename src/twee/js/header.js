@@ -16,31 +16,6 @@ $(window).on("sm.passage.hidden", function (event, { story }) {
   $(":focus").blur(); // unselect selected item
 });
 
-/* Previous Command API */
-// Show the text of the clicked link as the title of the next passage
-// e.g. the link [[Foo|Bar]] goes to the passage Bar, but shows Foo.
-$(window).on("sm.passage.shown", (e, { passage }) => {
-  const s = story.state;
-  const passageTitle = s.previousCommand || passage.name;
-  $("tw-passage").prepend(`<h2 id='recent-command'>${passageTitle}</h2>`);
-  s.previousCommand = "";
-  $("a").on("click", function () {
-    // Data attributes:
-    // Add data-nocommand to use the linked passage's title
-    // Use data-command="..." to set custom titles
-    const { dataset } = this;
-    if (dataset.command) {
-      // custom command attribute
-      s.previousCommand = dataset.command;
-    } else if (dataset.nocommand !== undefined
-      || passage.tags.includes("no_command")) {
-        s.previousCommand = "";
-    } else {
-      s.previousCommand = $(this).html();
-    }
-  });
-});
-
 setup.help = () => {
   if (passage.name != "Help") {
     story.show("Help");
