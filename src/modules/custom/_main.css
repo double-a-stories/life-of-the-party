@@ -24,6 +24,8 @@ body {
   box-sizing: border-box;
   color: var(--color);
   font: var(--font-size, 1.4rem)/1.6 var(--font-stack);
+  hyphens: auto;
+  text-align: justify;
   margin: 0;
   overflow: hidden /* x */ scroll /* y */;
   padding: 0.5rem;
@@ -46,8 +48,8 @@ tw-story {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 
@@ -55,6 +57,10 @@ h1, h2, h3, h4, h5, h6, p {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.15;
   font-weight: 700;
+}
+
+h2 {
+  font-size: 1.2em;
 }
 
 /* Links */
