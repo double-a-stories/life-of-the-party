@@ -22,7 +22,7 @@ $(window).on("sm.passage.hidden", function (event, { story }) {
 $(window).on("sm.passage.shown", (e, { passage }) => {
   const s = story.state;
   const passageTitle = s.previousCommand || passage.name;
-  $("#recent-command").html(passageTitle);
+  $("tw-passage").prepend(`<h2 id='recent-command'>${passageTitle}</h2>`);
   s.previousCommand = "";
   $("a").on("click", function () {
     // Data attributes:

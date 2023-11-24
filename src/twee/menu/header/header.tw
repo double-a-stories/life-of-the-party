@@ -3,8 +3,6 @@
 <%= story.render("Topbar controls") %>
 </header>
 
-<h2 id="recent-command"></h2>
-
 :: Topbar controls
 <% const muted = !setup.isFlagSet('enableSound'); %>
 <% const helpShown = window.passage && window.passage.name === "Help"; %>
