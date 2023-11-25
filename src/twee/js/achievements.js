@@ -47,13 +47,16 @@ setup.ALL_ACHIEVEMENTS = {
   LACEY_VORE_ENDING: [`🎠`, "Bedroom...", "Two for One Meal", "Found your friend. (Lacey vore ending)"],
   REN_VORE_ENDING: ["🦊", "Garage...", "🐇🥱😊!!!", "Went on a joy ride. (Ren vore ending)"],
   BYRON_VORE_ENDING: ["🐺", "Couch...", "A Belly You Can't Get Out", "Learned your place. (Byron vore ending)"],
-  NIKKI_NOX_VORE_ENDING: ["🍸", "Drink...", "Sauced & Swallowed", "Tried something new (Nikki & Nox ending)"],
+  NIKKI_NOX_VORE_ENDING: ["🍸", "Drink...", "Sauced & Swallowed", "Tried something new. (Nikki & Nox ending)"],
   CLOSET_ENDING: ["🧹", "Closet...", "My Favorite", "Utilized time effectively. (Broom closet ending)", true],
   ZEN_ENDING: ["🌌", "", "Space Out", "Hollis broke free. (Dissassociation ending)", true],
   ANA_CHOMP_GAME_OVER: ["💋", "", "Tackleglomp", "Overstepped some boundaries. (Ana game over)", true],
   WINDOW_GAME_OVER: ["🪟", "", "splat.MP3", "Tried to escape through the window. (Bathroom game over)", true],
-  BYRON_SCRATCH_GAME_OVER: ["🩸", "...", "Only a flesh wound", "Attempted to deprive your superior of their rightful property. (Byron game over)", true],
-  NIKKI_BITE_GAME_OVER: ["🙀", "...", "Love bite", "Tried to rescue Faith. (Nikki game over)", true],
+  REN_BITE_GAME_OVER: ["😡", "", "Liar Liar, Neck's On Fire", "Brought a rabbit to a fox fight. (Ren game over)", true],
+  BYRON_SCRATCH_GAME_OVER: ["🩸", "", "Only a flesh wound", "Attempted to deprive your superior of their rightful property. (Byron game over)", true],
+  NIKKI_BITE_GAME_OVER: ["🙀", "", "Love bite", "Tried to rescue Faith. (Nikki game over)", true],
+  ALL_STORY_ACHIEVEMENTS: ["🥇", "", "Dedicated", "Completed every story route. Thanks for playing!", true],
+  ALL_ACHIEVEMENTS: ["🌟", "", "Completionist", "Got every hidden ending. That's all, folks!", true],
 };
 
 
@@ -87,18 +90,25 @@ setup.getAchievementCount = () => {
   let count = setup.getAchievements().length;
   let total = Object.entries(setup.ALL_ACHIEVEMENTS).filter(
     ([key, [emoji, hint, name, desc, hidden]]) => setup.hasAchievement(key) || !hidden).length;
-    return [count, total];
+  return [count, total];
 };
 /**
  * @param {string} name The name of a valid achievement.
  * @throws If the name is not a defined achievement.
  */
 setup.addAchievement = (name) => {
-  if (name in setup.ALL_ACHIEVEMENTS) {
-    Lockr.sadd("achievements", name);
-  } else {
+  if (!(name in setup.ALL_ACHIEVEMENTS)) {
     throw new Error(`${name} is not a valid achievement.`);
   }
+  // if (setup.hasAchievement(name)) {
+  //   return "";
+  // }
+  Lockr.sadd("achievements", name);
+  const [emoji, hint, title, desc] = setup.ALL_ACHIEVEMENTS[name];
+  return `
+  <div class="content-warning">
+    <b>Achievement unlocked:</b> ${emoji} ${title}
+  </div>`;
 };
 /**
  * @param {string} name The name of an achievement
@@ -178,3 +188,23 @@ setup.unsetFlag = (name) => {
  * Unsets all flags.
  */
 setup.resetFlags = () => Lockr.set("flags", {});
+
+
+$(window).on("sm.passage.shown", () => {
+  if (!setup.hasAchievement("ALL_STORY_ACHIEVEMENTS")) {
+    if (Object.entries(setup.ALL_ACHIEVEMENTS)
+      .filter(([key, [emoji, hint, title, desc, hidden]]) => !hidden)
+      .map(([key, val]) => key)
+      .every(setup.hasAchievement)) {
+      $(setup.addAchievement("ALL_STORY_ACHIEVEMENTS")).prependTo("tw-passage");
+    }
+  }
+  if (!setup.hasAchievement("ALL_ACHIEVEMENTS")) {
+    if (Object.entries(setup.ALL_ACHIEVEMENTS)
+      .filter(([key, val]) => key != "ALL_ACHIEVEMENTS")
+      .map(([key, val]) => key)
+      .every(setup.hasAchievement)) {
+      setup.addAchievement("ALL_ACHIEVEMENTS");
+    }
+  }
+});

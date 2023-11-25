@@ -87,7 +87,7 @@ In your last waking seconds, you realize this was a very stupid idea.
 
 ### Game Over.
 
-<% setup.addAchievement("WINDOW_GAME_OVER") %>
+<%= setup.addAchievement("WINDOW_GAME_OVER") %>
 * <%= T.rewind() %>
 
 :: Wait, I can explain!
@@ -261,7 +261,7 @@ The owl snickers and grabs <%-s.hg?"him":"her"%> by the arm. "Hoo hoo hoo! Omigo
 
 ### The End.
 
-<% setup.addAchievement("HAZEL_VORE_ENDING"); %>
+<%= setup.addAchievement("HAZEL_VORE_ENDING") %>
 
 * [[Epilogue.|Epilogue: Hazel Post Vore.]] <%=T.CWI("Scat")%>
 * <%= T.restart() %>

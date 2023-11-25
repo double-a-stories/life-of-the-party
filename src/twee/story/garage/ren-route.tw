@@ -197,6 +197,8 @@ You feel stinging pain as Ren releases you, and you collapse weakly to the garag
 
 ### Game Over.
 
+<%= setup.addAchievement("REN_BITE_GAME_OVER") %>
+
 * <a0 onclick="setup.undo()">Undo</a>
 
 :: Get swallowed by Ren. [vore]
@@ -376,7 +378,7 @@ The boar snaps a pair of handcuffs onto <%=s.rm?"his":"her"%> wrists and says, "
 
 Ren's stomach pulses around you happily (<span.ren>"⛓<%=s.rm?"🤷‍♂️":"🤷‍♀️"%>😏☠️"</span>). As Ren is hauled away, you feel yourself... beginning to... pass out.
 
-<% setup.addAchievement("REN_VORE_ENDING"); %>
+<%= setup.addAchievement("REN_VORE_ENDING") %>
 
 * [[Epilogue.|Epilogue: Ren route.]]
 * <%= T.restart() %>

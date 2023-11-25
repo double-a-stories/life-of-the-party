@@ -219,7 +219,7 @@ You respond by fainting from blood loss.
 
 ### Game Over.
 
-<% setup.addAchievement("BYRON_SCRATCH_GAME_OVER"); %>
+<%= setup.addAchievement("BYRON_SCRATCH_GAME_OVER") %>
 
 * <%= T.rewind() %>
 
@@ -437,7 +437,7 @@ Standing patiently outside is Gus the dog, alongside a gigantic, towering horse 
 
 ### The End.
 
-<% setup.addAchievement("BYRON_VORE_ENDING"); %>
+<%= setup.addAchievement("BYRON_VORE_ENDING") %>
 
 * [[Epilogue.|Byron Epilogue.]] <%=T.CWI("Scat disposal")%>
 * <%= T.restart() %>

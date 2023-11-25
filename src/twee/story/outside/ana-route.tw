@@ -109,7 +109,7 @@ The second you touch her hair, the hyena immediately lets out an vicious bark, a
 
 ### Game Over
 
-<% setup.addAchievement("ANA_CHOMP_GAME_OVER"); %>
+<%= setup.addAchievement("ANA_CHOMP_GAME_OVER") %>
 
 * <%= T.rewind() %>
 
@@ -565,7 +565,7 @@ Ana giggles contendedly. "...I'll take that as a yes."
 
 ### The End.
 
-<% setup.addAchievement("ANA_VORE_ENDING"); %>
+<%= setup.addAchievement("ANA_VORE_ENDING") %>
 
 * [[Epilogue.|Epilogue: Ana Post Vore.]] <%=T.CWI("Scat disposal")%>
 * <%= T.restart() %>

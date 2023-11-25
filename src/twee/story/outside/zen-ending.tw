@@ -30,7 +30,7 @@ Your heart clenches at the thought that being food could be your sole purpose in
 * [[Break these mortal chains.]]
 
 :: Break these mortal chains. [dreamy_3 stars outside zen]
-<% setup.addAchievement("ZEN_ENDING") %>
+<%= setup.addAchievement("ZEN_ENDING") %>
 
 You shut your eyes tight. No: you will not be constricted. You are soul of unimaginable power. You refuse to be constrained by the edges of this reality.
 

@@ -466,7 +466,7 @@ Seems like you're too little, too late. But who could blame you for trying?
 
 ### Game Over.
 
-<% setup.addAchievement("NIKKI_BITE_GAME_OVER"); %>
+<%= setup.addAchievement("NIKKI_BITE_GAME_OVER") %>
 
 * <%= T.rewind() %>
 
@@ -733,7 +733,7 @@ Ivy finishes wrapping you, until only your head remains. Nikki observes the skil
 
 The snake stretches her maw wide to engulf your face, sending you slithering down her long, wet throat, and into her coils.
 
-<% setup.addAchievement("NIKKI_NOX_VORE_ENDING"); %>
+<%= setup.addAchievement("NIKKI_NOX_VORE_ENDING") %>
 
 ## The End.
 
