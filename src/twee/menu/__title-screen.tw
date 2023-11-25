@@ -65,10 +65,5 @@ tw-passage > * {
 
 :: LotP Logo
 <div class="logo">
-<h1 class="logo__title">
-<img class="logo__horse" role="presentation" src="assets/images/logo-horse-left.svg" width="50" height="45"><!--
---><span><%- story.name %></span><!--
---><img class="logo__horse" role="presentation" src="assets/images/logo-horse-right.svg" width="56" height="45">
-</h1>
-<p class="logo__subtitle">A Furry Vore Adventure by Double-A</p>
+<h1><img class="logo__shapes" alt="Life of the Party: A Furry Vore Adventure by Double-A" src="assets/images/logo.svg"></h1>
 </div>
