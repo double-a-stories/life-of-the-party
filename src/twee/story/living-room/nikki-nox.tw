@@ -466,6 +466,8 @@ Seems like you're too little, too late. But who could blame you for trying?
 
 ### Game Over.
 
+<% setup.addAchievement("NIKKI_BITE_GAME_OVER"); %>
+
 * <%= T.rewind() %>
 
 :: Nikki: Chomp.

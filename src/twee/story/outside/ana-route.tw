@@ -109,6 +109,8 @@ The second you touch her hair, the hyena immediately lets out an vicious bark, a
 
 ### Game Over
 
+<% setup.addAchievement("ANA_CHOMP_GAME_OVER"); %>
+
 * <%= T.rewind() %>
 
 :: A quiet moment.

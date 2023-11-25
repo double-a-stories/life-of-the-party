@@ -87,6 +87,7 @@ In your last waking seconds, you realize this was a very stupid idea.
 
 ### Game Over.
 
+<% setup.addAchievement("WINDOW_GAME_OVER") %>
 * <%= T.rewind() %>
 
 :: Wait, I can explain!

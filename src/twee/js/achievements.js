@@ -24,12 +24,14 @@ setup.ACHIEVEMENT_KEY_VERSION = 8;
  */
 setup.getAchievementTable = () => passage.render(`<table class="table">
 <% for (const key of setup.getAllAchievementsSorted()) {
-  const [emoji, route, name, desc] = setup.ALL_ACHIEVEMENTS[key];
-  let unlocked = setup.hasAchievement(key); %>
+  const [emoji, hint, name, desc, hidden] = setup.ALL_ACHIEVEMENTS[key];
+  let unlocked = setup.hasAchievement(key);
+  if (hidden && !unlocked) continue; 
+  %>
     <tr class="<% if (!unlocked) %>locked-achievement<%;%>">
       <td><%= unlocked ? emoji: "🔒" %></span></td>
-      <td><%= unlocked ? \`<b>\${route}</b>\` : route %></td>
-      <td><%= unlocked ? \`"\${name}" <i>(\${desc})</i>\` : \`<i>(Locked achievement)</i>\` %></td>
+      <td width="99%"><b><%= unlocked ? name : "???" %><%= hidden ? " (secret)" : "" %></b><%= unlocked ? "<br>" : "" %>
+      <%= unlocked ? desc : "<i>" + hint + "</i>" %></td>
     </tr>
 <% } %>
 </table>`);
@@ -39,15 +41,19 @@ setup.getAchievementTable = () => passage.render(`<table class="table">
  * Lotp Achievements are stored like [emoji, location, title, description]
  */
 setup.ALL_ACHIEVEMENTS = {
-  ANA_VORE_ENDING: ["🗑️", "Outside Route", "No Laughing Matter", "Ana Ending"],
-  BASIL_VORE_ENDING: ["🐴", "Party Route", "Party Animals", "Basil Ending"],
-  HAZEL_VORE_ENDING: ["🐻", "Bathroom Route", "A Grizzly End", "Hazel Ending", "..."],
-  LACEY_VORE_ENDING: [`🎠`, "Bedroom Route", "Two for One Meal", "Lacey Ending", "Search...?"],
-  REN_VORE_ENDING: ["🦊", "Garage Route", "🐇🥱😊!!!", "Ren Ending"],
-  BYRON_VORE_ENDING: ["🐺", "Couch Route", "A Belly You Can't Get Out", "Byron Ending"],
-  NIKKI_NOX_VORE_ENDING: ["🍸", "Sauce Route", "Sauced & Swallowed", "Nikki & Nox Ending"],
-  CLOSET_ENDING: ["🧹", "Closet Route", "Worth it?", "Broom Closet Ending"],
-  ZEN_ENDING: ["🌌", "Bench Route", "Space Out", "Zen Ending"],
+  ANA_VORE_ENDING: ["🗑️", "Outside...", "Rebel Girl", "Made a new friend. (Ana vore ending)"],
+  BASIL_VORE_ENDING: ["🐴", "Dance...", "Party Animal", "Got everyone's attention. (Basil vore ending)"],
+  HAZEL_VORE_ENDING: ["🐻", "Bathroom...", "A Grizzly's End", "Reunited with an old face. (Hazel vore ending)"],
+  LACEY_VORE_ENDING: [`🎠`, "Bedroom...", "Two for One Meal", "Found your friend. (Lacey vore ending)"],
+  REN_VORE_ENDING: ["🦊", "Garage...", "🐇🥱😊!!!", "Went on a joy ride. (Ren vore ending)"],
+  BYRON_VORE_ENDING: ["🐺", "Couch...", "A Belly You Can't Get Out", "Learned your place. (Byron vore ending)"],
+  NIKKI_NOX_VORE_ENDING: ["🍸", "Drink...", "Sauced & Swallowed", "Tried something new (Nikki & Nox ending)"],
+  CLOSET_ENDING: ["🧹", "Closet...", "My Favorite", "Utilized time effectively. (Broom closet ending)", true],
+  ZEN_ENDING: ["🌌", "", "Space Out", "Hollis broke free. (Dissassociation ending)", true],
+  ANA_CHOMP_GAME_OVER: ["💋", "", "Tackleglomp", "Overstepped some boundaries. (Ana game over)", true],
+  WINDOW_GAME_OVER: ["🪟", "", "splat.MP3", "Tried to escape through the window. (Bathroom game over)", true],
+  BYRON_SCRATCH_GAME_OVER: ["🩸", "...", "Only a flesh wound", "Attempted to deprive your superior of their rightful property. (Byron game over)", true],
+  NIKKI_BITE_GAME_OVER: ["🙀", "...", "Love bite", "Tried to rescue Faith. (Nikki game over)", true],
 };
 
 
@@ -78,10 +84,10 @@ setup.getAllAchievementsSorted = () => {
  * @returns {[number, number]} The number of active achievements, and the total.
  */
 setup.getAchievementCount = () => {
-  return [
-    setup.getAchievements().length,
-    Object.keys(setup.ALL_ACHIEVEMENTS).length,
-  ];
+  let count = setup.getAchievements().length;
+  let total = Object.entries(setup.ALL_ACHIEVEMENTS).filter(
+    ([key, [emoji, hint, name, desc, hidden]]) => setup.hasAchievement(key) || !hidden).length;
+    return [count, total];
 };
 /**
  * @param {string} name The name of a valid achievement.
@@ -107,9 +113,8 @@ setup.addAllAchievements = () => {
 setup.resetAchievements = () => Lockr.set("achievements", []);
 
 setup.resetAchievementsPrompt = function () {
-  const message = `This will reset your save file, including the ${
-    setup.getAchievements().length
-  } achievement(s) you have acquired so far.\n\nAre you sure you want to continue?`;
+  const message = `This will reset your save file, including the ${setup.getAchievements().length
+    } achievement(s) you have acquired so far.\n\nAre you sure you want to continue?`;
   if (window.confirm(message)) {
     Lockr.flush();
     setup.restart();

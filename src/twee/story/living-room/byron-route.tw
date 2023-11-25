@@ -219,6 +219,8 @@ You respond by fainting from blood loss.
 
 ### Game Over.
 
+<% setup.addAchievement("BYRON_SCRATCH_GAME_OVER"); %>
+
 * <%= T.rewind() %>
 
 :: Follow Byron upstairs.
