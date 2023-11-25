@@ -1,14 +1,4 @@
-/* Playfair Display SC is used exclusively for the title */
-/* This font file is embedded in the project as PlayfairDisplaySC-Bold-LotP */
-/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&text=Life%20of%20%the%20Party&display=block"); */
-
 /* Comic Neue is used for Ren's text, as it's slightly more legible than Comic Sans. */
-
-@font-face {
-  font-family: "PlayfairDisplaySC-Bold-LotP";
-  font-display: block;
-  src: url(assets/font/PlayfairDisplaySC-Bold-LotP.woff2) format("woff2");
-}
 
 /* @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Tinos:ital@0;1&display=swap"); */
 @font-face {
