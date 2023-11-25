@@ -236,7 +236,7 @@ body {
   "Check it, bun’s gettin’ completely blasted!",
   "Haha, sweet party Basil!",
   "I would be too if I was about to be eaten...",
-  `<span class="byron">Because maybeeee...</span>`,
+  `<span class="byron">And she's buying a stairway...</span>`,
   "Oh dear, I spilled my drink all over you,,, Sorry,,,",  
   "Omigosh, did they just take off their top?",
   s.rescuedKaia ? `<span class="mouse">Uh Hollis, you okay?</span>` : `<span class="byron">Damned drunken rutheads...</span>`,

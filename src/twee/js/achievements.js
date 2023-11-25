@@ -44,7 +44,7 @@ setup.ALL_ACHIEVEMENTS = {
   HAZEL_VORE_ENDING: ["🐻", "Bathroom Route", "A Grizzly End", "Hazel Ending", "..."],
   LACEY_VORE_ENDING: [`🎠`, "Bedroom Route", "Two for One Meal", "Lacey Ending", "Search...?"],
   REN_VORE_ENDING: ["🦊", "Garage Route", "🐇🥱😊!!!", "Ren Ending"],
-  BYRON_VORE_ENDING: ["🐺", "Wolf Route", "Anyway, Here's...", "Byron Ending"],
+  BYRON_VORE_ENDING: ["🐺", "Couch Route", "A Belly You Can't Get Out", "Byron Ending"],
   NIKKI_NOX_VORE_ENDING: ["🍸", "Sauce Route", "Sauced & Swallowed", "Nikki & Nox Ending"],
   CLOSET_ENDING: ["🧹", "Closet Route", "Worth it?", "Broom Closet Ending"],
   ZEN_ENDING: ["🌌", "Bench Route", "Space Out", "Zen Ending"],

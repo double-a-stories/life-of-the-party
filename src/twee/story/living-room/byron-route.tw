@@ -45,19 +45,19 @@ Right, you say, you never really saw the appeal either.
 * [[...Compliment <%-s.bm?"his":"her"%> shirt?|Compliment shirt?]]
 
 :: Compliment shirt?
-You notice that underneath <%-s.bm?"his":"her"%> flannel, <%-s.bm?"he":"she"%>'s wearing a t-shirt from an emo rock group called Dingoes Ate My Girlfriend. You used to be pretty into them back in junior high.
+You notice that underneath <%-s.bm?"his":"her"%> flannel, <%-s.bm?"he":"she"%>'s wearing a t-shirt of Dingoes! at the Location. You used to be pretty into them back in junior high.
 
 Cool shirt, you say.
 
-<span.byron>"Oh, what's this?"</span> The wolf gives you a little smile. <span.byron>"Another soul moved by song? A kindred spirit, inspired by the Dingoes' poetics to muse on the thin, bloodless veneer of this shallow world?"</span>
+<span.byron>"Ah, what's this?"</span> The wolf gives you a little smile. <span.byron>"Another soul moved by song? A kindred spirit, inspired by the dark poetics to muse on the thin, bloodless veneer of this shallow world?"</span>
 
 You stare blankly.
 
-<%-s.bm?"He":"She"%> puts a paw on <%-s.bm?"his":"her"%> chin, and continues to look contemplative, <span.byron>"Perhaps we have more in common than these shallow costumes of fur would have us believe..."</span>
+<%-s.bm?"He":"She"%> puts a paw on <%-s.bm?"his":"her"%> chin, and continues to look contemplative, <span.byron>"Perhaps we have more in common than these shallow costumes of fur would have us believe."</span>
 
-* [[Actually I just like their music...]]
+* [[To be honest I just like the music...]]
 
-:: Actually I just like their music...
+:: To be honest I just like the music...
 <span.byron>"Oh,"</span> <%-s.bm?"he":"she"%> replies, frowning, <span.byron>"I suppose I mistook you for a true aficionado. One who has stared into the ravenous abyss of sorrow, and emerged clad in the darkness of truth..."</span>
 
 <%-s.bm?"He":"She"%> begins tuning <%-s.bm?"his":"her"%> guitar and ignoring you.
@@ -67,7 +67,7 @@ You stare blankly.
 :: Hey, I've done that!
 You scowl and inform <%-s.bm?"him":"her"%> that you were a moody teenager once too! *You* just happened to grow out of it!
 
-<span.byron>"Oh really?"</span> <%-s.bm?"he":"she"%> raises an eyebrow. <span.byron>"Then I suppose you should have no problem naming three Dingoes albums?"</span>
+<span.byron>"Oh really?"</span> <%-s.bm?"he":"she"%> raises an eyebrow. <span.byron>"Then you should have no problem naming three of their albums."</span>
 
 You roll your eyes.
 
