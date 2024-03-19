@@ -122,3 +122,13 @@ const howlerInit = () => {
   });
   passageAudio(zenMusic, hasTags("zen"));
 }
+
+setup.playAchievementSound = () => {
+  const pikoop = new Howl({
+    src: ["assets/sound/xbox-360-achievement-sound.mp3"],
+    autoplay: true,
+    volume: 0.6,
+  })
+
+  pikoop.play();
+}

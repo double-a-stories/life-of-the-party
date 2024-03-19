@@ -51,9 +51,8 @@ tw-passage > * {
 ⚠️ If you choose to continue, you do so **at your own risk**.
 
 :: Achievements list
-<% const [count, max] = Achievements.count(); %>
 
-### Achievements (<%- count %> <span aria-label="of">/</span> <%- max %>)
+### Achievements (<%- Achievements.percent() %>)
 
 <%= Achievements.renderTable() %>
 
