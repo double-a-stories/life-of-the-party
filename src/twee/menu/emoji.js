@@ -5,7 +5,7 @@
 // OK: <%s.rm?`⚠️:`⚠️`%>
 
 {
-  twemoji.base = "https://twemoji.maxcdn.com/v/latest/";
+  twemoji.base = "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/";
 
   $(window).on("sm.passage.shown", function parsePassageEmojis() {
     twemoji.parse(story.$passageEl[0]);
