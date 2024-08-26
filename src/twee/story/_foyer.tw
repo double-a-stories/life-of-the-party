@@ -1,8 +1,6 @@
 <!-- These passages define the opening narration, and "hub area". -->
 
 :: Life of the Party.
-Rule63.define("Reese", Rule63.Gender.Male);
-
 Your name is Hollis. You are an androgynous-looking gray rabbit of no particular gender identity, around the age of nineteen.
 
 Right now, you're at a very crowded house party. Drunk and horny college furs are everywhere. Loud music and the smell of cheap booze fills every room. <% if (Achievements.getUnlocked().length > 3) { %>This place seems strangely familiar, though you can't put a paw on it.<% } %>

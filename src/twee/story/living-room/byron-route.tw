@@ -1,6 +1,3 @@
-:: Byron Pronouns [script]
-Rule63.define("Byron", Rule63.Gender.Male);
-
 :: Look at wolf. [checkpoint]
 
 A black-furred wolf, about six feet tall, wearing in a stylish scarf and a checkered red flannel shirt. <%-Byron?"He":"She"%>'s sitting aloofly on a couch, and serenading the party with an acoustic guitar.

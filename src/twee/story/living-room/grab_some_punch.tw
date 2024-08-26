@@ -1,6 +1,3 @@
-:: Jackrabbit pronouns [script]
-Rule63.define("Jackie", Rule63.Gender.Female);
-
 :: Grab some punch.
 <% StoryFlags.set("grabbedPunch") %>
 

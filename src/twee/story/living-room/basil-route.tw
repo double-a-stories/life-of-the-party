@@ -1,6 +1,3 @@
-:: Basil Pronouns [script]
-Rule63.define("Basil", Rule63.Gender.Male);
-
 :: Wink back at the horse. [checkpoint]
 <% StoryFlags.set("talkedToBasil"); %>
 

@@ -1,6 +1,4 @@
 :: Ana Gender [script]
-Rule63.define("Ana", Rule63.Gender.Female);
-
 <!-- TODO: romance scenes with Ana and Basil are both underdeveloped. add sex. -->
 
 :: Look at hyena. [checkpoint]

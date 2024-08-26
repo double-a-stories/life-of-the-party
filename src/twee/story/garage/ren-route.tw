@@ -1,6 +1,3 @@
-:: Ren gender [script]
-Rule63.define("Ren", Rule63.Gender.Male);
-
 :: Go to the garage. [checkpoint]
 You walk down the hall and enter the garage. The garage door is open, looking out onto rows of similarly suburban houses. Cool fresh air enters. The smell of freedom.
 

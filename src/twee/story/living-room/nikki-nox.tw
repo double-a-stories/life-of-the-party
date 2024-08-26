@@ -1,9 +1,5 @@
 :: Nikki/Nox Pronouns [script]
-Rule63.define("Nikki", Rule63.Gender.Female);
-Rule63.define("Ivy", Rule63.Gender.Female);
-Rule63.define("Nox", Nikki ? Rule63.Gender.Female : Rule63.Gender.Male, true);
-window.Kaia = false; // not fully implemented
-window.Faith = false;
+
 
 :: Twinspeak [stylesheet]
 
