@@ -46,7 +46,7 @@ What do you do?
 
 <%=T.CWP("Oral sex (Male partner x Player)", "Voyeurism", "Multiple prey", "Nonconsensual vore", "Semi-willing digestion", "Death")%>
 :: Knock politely on the door.
-"Um, go away," says a male voice from inside the room.
+"Um, go away," says a <%-Clif?"he":"she"> voice from inside the room.
 
 Alongside it, you hear a few more muffled grunts, as well as a kind of slick slurping noise. Is someone... swallowing?
 

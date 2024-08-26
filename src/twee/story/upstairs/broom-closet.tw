@@ -37,7 +37,7 @@ setup.getBroomClosetMessage = () => {
     "You'd have to climb to see what's on the top shelf, but you're pretty sure it's just more linens.",
     "There's no story content in the broom closet, alright? No predators, no vore, nothing. It's just a closet.",
     `You dig behind the towels and find a mysterious glowing amulet! You can use this to gain access to the Crypt of Zamantheus! Actually, it's just more towels.`,
-    `Your friend Reese is probably being devoured as we speak. Don't you want to rescue him? Go back. To the hallway.`,
+    `Your friend Reese is probably being devoured as we speak. Don't you want to rescue Reese? Go back. To the hallway.`,
     "It's actually pretty spacious in here, all things considered. This place was clearly designed for someone much, much taller than you.",
     `You close the door behind you, and hide inside the darkened broom closet for a little while. This is a huge waste of time.`,
     `You check the top shelf, and find a few half-empty bottles of name-brand glass cleaner, and a dust-pan. Fascinating, right?`,

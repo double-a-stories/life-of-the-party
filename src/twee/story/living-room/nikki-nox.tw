@@ -136,36 +136,36 @@ You incredulously ask the cats how they know Reese's name.
 
 <% StoryFlags.set("upstairsUnlocked"); %>
 
-<%-Nox?"Nox":"Noxie"%> smiles, <span.nox>"We mostly know him as guinea_puff_2B8. He's been a pretty active member of the Grumble Geek forums, just like us! It's a worldwide community for preds and prey to chat, and find consensual vore meetups!"</span>
+<%-Nox?"Nox":"Noxie"%> smiles, <span.nox>"We mostly know <%-Reese?"him":"her"%> as guinea_puff_2B8. <%-Reese?"He":"She"%>'s been a pretty active member of the Grumble Geek forums, just like us! It's a worldwide community for preds and prey to chat, and find consensual vore meetups!"</span>
 
-<%-Nikki?"Nik":"Nikki"%> nods, <span.nikki>"He's been raving about going to this party for weeks."</span> 
+<%-Nikki?"Nik":"Nikki"%> nods, <span.nikki>"<%-Reese?"He":"She"%>'s been raving about going to this party for weeks."</span> 
 
 * [[Where did he go!? Maybe I can still save him!]]
 
 :: Where did he go!? Maybe I can still save him!
-<%-Nikki?"Nik":"Nikki"%> thinks back, and says, <span.nikki>"I'm pretty sure I caught a short glimpse of Basil's sister bringing him upstairs..."</span>
+<%-Nikki?"Nik":"Nikki"%> thinks back, and says, <span.nikki>"I'm pretty sure I caught a short glimpse of Basil's sister bringing <%-Reese?"him":"her"%> upstairs..."</span>
 
-<%-Nox?"Nox":"Noxie"%> grins, <span.nox>"And I caught a very *long* glimpse of Lacey and <%-Lacey?"his":"her"%> boyfriend going to town swallowing that yummy boy bod!"</span>
+<%-Nox?"Nox":"Noxie"%> grins, <span.nox>"And I caught a very *long* glimpse of Lacey and <%-Lacey?"his":"her"%> boyfriend going to town swallowing that yummy <%-Reese?"boy":"guinea"%> bod!"</span>
 
-You rocket to your feet. <% if (s.ateFaith) %>Faith lets out an uncomfortable yelp, as if reminding you to be careful as she's still inside your mouth.<%;%> Reese is upstairs? Maybe there's still time to get him out of there!
+You rocket to your feet. <% if (s.ateFaith) %>Faith lets out an uncomfortable yelp, as if reminding you to be careful as she's still inside your mouth.<%;%> Reese is upstairs? Maybe there's still time to get <%-Reese?"him":"her"%> out of there!
 
-<%-Nox?"Nox":"Noxie"%> shakes <%-Nox?"his":"her"%> head, <span.nox>"Sorry, that was like three hours ago. Knowing Lacey, he's probably been digested already."</span>
+<%-Nox?"Nox":"Noxie"%> shakes <%-Nox?"his":"her"%> head, <span.nox>"Sorry, that was like three hours ago. Knowing Lacey, <%-Reese?"he":"she"%>'s probably been digested already."</span>
 
 * [[Oh. Oh no...]]
 
 :: Oh. Oh no...
-You collapse to your knees. You can't believe it; you were so busy getting wasted, you couldn't save him! It's all your fault.
+You collapse to your knees. You can't believe it; you were so busy getting wasted, you couldn't save <%-Reese?"him":"her"%>! It's all your fault.
 
-<%-Nox?"Nox":"Noxie"%> seems confused, <span.nox>"Save? Knowing Reese, the whole thing was 100% consensual. That dude was a vorny freak, even by our standards! It's weird that he would bring you here without telling you that..."</span>
+<%-Nox?"Nox":"Noxie"%> seems confused, <span.nox>"Save? Knowing Reese, the whole thing was 100% consensual. That <%-Reese?"dude":"gal"%> was a vorny freak, even by our standards! It's weird that <%-Reese?"he":"she"%> would bring you here without telling you that..."</span>
 
 * [[Actually... that would explain a lot.]] 
 
 :: Actually... that would explain a lot.
-You think back to when you and Reese first arrived, and he ventured off into the living room without you. At the time, it seemed like he was just excited to do underage drinking, but you recall his exact words at the time were: *I'm gonna go get fucking annihilated!*
+You think back to when you and Reese first arrived, and <%-Reese?"he":"she"%> ventured off into the living room without you. At the time, it seemed like he was just excited to do underage drinking, but you recall his exact words at the time were: *I'm gonna go get fucking annihilated!*
 
 ...What a weirdo, you think. Still, being digested must have been painful, right?
 
-<%-Nox?"Nox":"Noxie"%> pats you on the shoulder, <span.nox>"I can assure you, Lacey was really gentle with him. Your friend died doing what he loved! It's all part of the Circle of Life."</span>
+<%-Nox?"Nox":"Noxie"%> pats you on the shoulder, <span.nox>"I can assure you, Lacey was really gentle with <%-Reese?"him":"her"%>. Your friend died doing what <%-Reese?"he":"she"%> loved! It's all part of the Circle of Life."</span>
 
 <%-Nikki?"Nik":"Nikki"%> nods. <span.nikki>"Circle of Life,"</span> <%-Nikki?"he":"she"%> repeats.
 

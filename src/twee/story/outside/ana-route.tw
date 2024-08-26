@@ -158,12 +158,12 @@ You say your name is Hollis.
 
 "Pleased to meet you, Hollis, I'm <%-Ana?"Andrew":"Ana"%>." From <%-Ana?"his":"her"%> tone, you suspect <%-Ana?"he":"she"%>'s being at least a little sarcastic. "Now, this friend of yours?"
 
-* [[He's a guinea pig, about this tall...|Describe Reese.]]
+* [[<%-Reese?"He":"She"%>'s a guinea pig, about this tall...|Describe Reese.]]
 
 :: Describe Reese.
 You give <%-Ana?"him":"her"%> a brief description of your friend, Reese.
 
-"Sorry, haven't seen him," <%-Ana?"he":"she"%> shrugs and says, "But at a party like this, I wouldn't be surprised if he was already in some pred's gut."
+"Sorry, haven't seen <%-Reese?"him":"her"%>," <%-Ana?"he":"she"%> shrugs and says, "But at a party like this, I wouldn't be surprised if <%-Reese?"he":"she"%> was already in some pred's gut."
 
 * [[What!?|What do you mean?]]
 
