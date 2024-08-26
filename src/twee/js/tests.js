@@ -11,4 +11,17 @@ const smokeTest = () => {
     return true;
 };
 
-window.Tests = { smokeTest };
+const generateProof = () => {
+    let output = "";
+    output += `# ${story.name}\n`;
+    for (const p of story.passages) {
+        if (p == undefined) {
+            continue;
+        }
+        output += `## ${p.name}\n`;
+        output += `${p.render()}\n\n`;
+    }
+    return output;
+}
+
+window.Tests = { smokeTest, generateProof };
