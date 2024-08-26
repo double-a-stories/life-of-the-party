@@ -1,4 +1,8 @@
+:: deb [script]
+story.startPassage = "Ivy Route";
+
 :: Ivy Route
+
 You feel exhausted after all that, but fulfilled. Okay, time to find Reese.
 
 You try to take your first step, but there's something cold and scaly wrapped around both your ankles. You instantly trip and fall forward.
@@ -33,7 +37,7 @@ She deftly tangles your arms in her coils and tightens around your torso. You ke
 :: I need to save Reese!
 Her face flashes with recognition, <span.ivy>"Oh, you know Reese? The guinea pig?"</span> she asks. You nod desperately.
 
-<span.ivy>"Wow, what a ssmall world!,"</span> she says, still binding you, <span.ivy>"I sswallowed him a few times back in the day,,, He was alwayss begging me to digest him,,, but I jusst didn't feel comfortable with it,,,"</span>
+<span.ivy>"Wow, what a ssmall world!,"</span> she says, still binding you, <span.ivy>"I sswallowed Reese a few times back in the day,,, They were alwayss begging me to digest,,, but I jusst didn't feel comfortable with it,,,"</span>
 
 Reese... wanted to be digested? What?
 
@@ -45,17 +49,15 @@ Ivy nods eagerly, <span.ivy>"Yeah, he was always going to parties like this,,, I
 :: Parties like... this?
 <span.ivy>"Y'know,,, a party for vore?"</span> she says, <span.ivy>"That's what you're here for,,, right?"</span>
 
-Ivy gestures at the chaos filling the living room. Preds watch enviously as a black wolf's tail is slurped up between the lips of a fat, hungry bear. Meanwhile, a drunk Labrador burps up the clothes of one of his friends. An owl restrains a Shih Tzu girl's shoulders while her friend swallows her feet-first.
-
 This... would explain a lot, actually.
 
 * [[Where is he now?]]
 
 :: Where is he now?
 <% setup.setFlag("upstairsUnlocked"); %>
-Ivy points with her tail toward Lacey's protruding gut.
+Ivy points the tip of her tail up.
 
-<span.ivy>"Th-there,,, I saw Clif and Lacey take him upstairs about half an hour ago,,, He seemed really excited for it,,,"</span>
+<span.ivy>"I saw Clif and Lacey take Reese upstairs about half an hour ago,,, He seemed really excited for it,,,"</span>
 
 Oh no... Maybe there's still time to get him out?
 
@@ -112,9 +114,9 @@ Tears bead in her eyes, and she lets out a sad sniffle that pulls at your hearts
 * [[No, it's not like that!]]
 
 :: No, it's not like that!
-You explain that you're here by mistake: you're not here to be eaten. You gently touch her tail and say she seems like an excellent pred, who's gonna make some prey very happy someday! It's not her, it's you.
+You explain that you're here by mistake: you're not here to be eaten. You gently touch her tail. She seems like an excellent pred, who's gonna make some prey very happy someday!
 
-<span.ivy>"I just,,, I've never had prey not want it before,,,"</span> Ivy says.
+<span.ivy>"I just,,, I've never had one not want it before,,,"</span> Ivy says.
 
 People usually let you eat them? you ask.
 
@@ -126,11 +128,11 @@ People usually let you eat them? you ask.
 
 She's quiet for a second.
 
-<span.ivy>"I,,, I guesss,,, Ssometimes? Teasing and sswallowing prey are like, the one thing I'm good at,,, And Chet likes it when I'm dominant,,,"</span>
+<span.ivy>"I,,, I guesss,,, Ssometimes? Teasing and sswallowing prey are like, the one thing I'm good at,,, And Chet likes it when I act all dominant,,,"</span>
 
-* [[C'mon, surely you have other talents!]]
+* [[Surely you have other talents!]]
 
-:: C'mon, surely you have other talents!
+:: Surely you have other talents!
 
 Ivy wipes her tears on the tip of her tail.
 
@@ -150,7 +152,7 @@ Have you tried being more assertive with your boundaries?
 
 She flexes her coils with discomfort. <span.ivy>",,,R-really?"</span>
 
-You nod. It's not fair for him to treat her like his property! You tell her she's not just a belly, she's a whole person, and has value on her own! If he can't respect that, then you shouldn't be with him.
+You nod. It's not fair for him to treat her like his property! You tell her she's the one who decides what to do with her belly. She's a whole person, and has value on her own! If he won't acknowledge basic boundaries then you shouldn't be with him.
 
 She dries her eyes. The tip of her tail flits anxiously.
 
@@ -160,21 +162,19 @@ She dries her eyes. The tip of her tail flits anxiously.
 
 :: Of course!
 
-Of course! You say she needs to put her own needs first.
+Of course! You say she needs to put her own needs and wants first.
 
-She thinks about this for a second, and nods, <span.ivy>"Yeah,,, Yeah, you're right! I don't need Chet's approval! I'm my own snake!"</span>
+She processes this for a second, and nods, <span.ivy>"Yeah,,, Yeah, you're right! I don't need Chet's approval! I'm my own snake!"</span>
 
 That's the spirit! you say.
 
 She flicks her tongue proudly, <span.ivy>"I'm my own snake! and I can digesst people if I wanna!"</span>
 
-* [[Yes you- wait, what?]]
+* [[Yes you can! Wait, what?]]
 
-:: Yes you- wait, what?
+:: Yes you can! Wait, what?
 
-<span.ivy>"Oh, thankyou thankyou thankyou for helping me realize!"</span> She grins at you with renewed excitement.
-
-<span.ivy>"You're right! I'm not just a belly, I have a full functioning digestive tract! I've been a pushover for so long,,, But it's not just about what chet wants, it's about what I want too!"</span>
+<span.ivy>"Oh, thankyou thankyou thankyou for helping me realize!"</span> She grins at you with renewed excitement. <span.ivy>"You're right! I'm not just a belly, I have a full functioning digestive tract! I've been a pushover for so long,,, But it's not just about what chet wants, it's about what I want too!"</span>
 
 Her coils suddenly squeeze you in another tight hug. 
 
@@ -198,13 +198,11 @@ She stretches her jaw and smiles triumphantly, <span.ivy>"It's time to put my ne
 :: W-wait! Don't eat me! [vore]
 
 <% s.previousCommand = "W-wait-" %>
-[once clicked, this command retroactively changes to "W-"]
-
 Glomph. Her mouth clamps down over you.
 
 <span.ivy>"Mmmmm."</span> Gulp. Gulp. Lots of snake throat and tummmy descriptions here.
 
-Her gullet is much longer than a mammal prey. Your mind flashes to the search for "Pov vore video" in your browser history back at home.
+Her gullet is much longer than a mammal prey. Your mind flashes to the search for "snake pov vore video" in your browser history back at home.
 
 Oh shit. You realize that if you die here, you'll never be able to delete that.
 
@@ -212,9 +210,7 @@ Oh shit. You realize that if you die here, you'll never be able to delete that.
 
 :: Too late now... [vore]
 
-Sluuuuurp. Your paws go over her tongue and into her throat. <span.ivy>"Mmmmm,,,!"</span>
-
-She doesn't really have a tummy perse, it's just one long tube. I think that's how snakes work anyway...
+Sluuuuurp. Your paws go over her tongue and inside of her. <span.ivy>"Mmmmm,,,!"</span> She doesn't really have a tummy perse, her digestive tract is basically just one long tube....
 
 Can't think too much, you're already out of air, and getting sleepy...
 
@@ -263,9 +259,9 @@ She can't help but moan a little. <span.ivy>"S-sorry, I know you didn't mean for
 
 You nod and accept your fate.
 
-<span.ivy>"Thanks holliss,,,"</span> / <span.ivy>",,,sorry holliss, goodbye."</span> she drapes her body over a couch as the party rages on around her, yawns, and curls up around the bulge.
+<span.ivy>",,,sorry holliss, goodbye."</span> she drapes her body over a couch as the party rages on around her, yawns, and curls up around the bulge.
 
-Let's get a little more descriptive with the digestion this time. Or make it skippable.
+TODO: Let's get a little more descriptive with the digestion this time. Or make it skippable.
 
 Glorpy goopy stuff. Bones and grossitude. CREUNCH.
 
