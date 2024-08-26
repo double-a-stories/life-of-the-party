@@ -7,7 +7,7 @@ window.TestChar = Rule63.defaultMale;
 <% if (!Rule63.isEnabled()) { %>
 <%=T.infoMessageBox(`Characters will use <b>their canonical genders</b>.<br>This is the <b>intended experience</b> for <si>Life of the Party</i>.`)%>
 <% } else { %>
-<%=T.infoMessageBox(`Rule 63 is enabled. Characters will use <b>${Ana?"he/him":"she/her"}</b> pronouns where possible. Content beyond this point is <b>not canon</b>.`)%>
+<%=T.infoMessageBox(`Rule 63 is enabled. Characters will use <b>${R.Ana?"he/him":"she/her"}</b> pronouns where possible. Content beyond this point is <b>not canon</b>.`)%>
 <% } %>
 
 **Rule 63 Mode** changes the pronouns used for characters in the story. This couldbe usefuls in case you're some kind of weird depraved monosexual.

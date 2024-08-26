@@ -14,7 +14,7 @@ Maybe it's your weak tolerance, but you're feeling pretty tipsy right now.
 
 * [[Go back.|Dance a little.]]
 <% } else if (s.punchCount == 3) { %>
-On your way to get a third cup of punch, you see a jackrabbit grab a tiny mouse off the floor, and dangle it teasingly over <%- Jackie?"his":"her" %> snout. Should you... do something?
+On your way to get a third cup of punch, you see a jackrabbit grab a tiny mouse off the floor, and dangle it teasingly over <%-R.Jackie?"his":"her"%> snout. Should you... do something?
 
 * [[H-hey, don't do that!]] <!-- living-room-kaia.tw --> 
 * [[Do nothing.]] <!-- living-room-kaia.tw --> 
@@ -52,60 +52,60 @@ You nod, and thank her for looking out of your health.
 :: Do nothing.
 <% s.rescuedKaia = false; %>
 
-You watch as the jackrabbit snarfs down the little white mouse with a satisfied smile. At first the thing squeaks out in fear, but the sound stops instantly as she begins snaking down <%- Jackie?"his":"her" %> throat.
+You watch as the jackrabbit snarfs down the little white mouse with a satisfied smile. At first the thing squeaks out in fear, but the sound stops instantly as she begins snaking down <%-R.Jackie?"his":"her"%> throat.
 
 You feel slightly guilty about not intervening. And somehow... aroused?
 
-The jackrabbit moans, <span.jackrabbit>"Mmm... Hrgh!"</span> then suddenly clutches at <%- Jackie?"his":"her" %> throat. You see the bulge in <%- Jackie?"his":"her" %> esophagus writhing around. The mouse didn't go down. Somehow, she's fighting her way back up! <span.jackrabbit>"Kaff-kaff-kaff! Hork! Bleh!"</span> the jackrabbit coughs and wheezes, and finally, spits the mouse onto the floor.
+The jackrabbit moans, <span.jackrabbit>"Mmm... Hrgh!"</span> then suddenly clutches at <%-R.Jackie?"his":"her"%> throat. You see the bulge in <%-R.Jackie?"his":"her"%> esophagus writhing around. The mouse didn't go down. Somehow, she's fighting her way back up! <span.jackrabbit>"Kaff-kaff-kaff! Hork! Bleh!"</span> the jackrabbit coughs and wheezes, and finally, spits the mouse onto the floor.
 
 The mouse nimbly lands in a roll, and scampers off out of the living room.
 
-<span.jackrabbit>"Eugh..."</span> groans the jackrabbit, then she narrows <%- Jackie?"his":"her" %> eyes on you. <span.jackrabbit>"...What're you lookin' at, buster?"</span>
+<span.jackrabbit>"Eugh..."</span> groans the jackrabbit, then she narrows <%-R.Jackie?"his":"her"%> eyes on you. <span.jackrabbit>"...What're you lookin' at, buster?"</span>
 
 * [[Go back.|Dance a little.]]
 
 :: H-hey, don't do that!
 You nervously shout at the jackrabbit not to eat the mouse.
 
-<%- Jackie?"He":"She" %> stops dangling the little white mouse girl over <%- Jackie?"his":"her" %> mouth, and turns to look at you. Despite being another rabbit, <%- Jackie?"he":"she" %> has a carnivorous affect to <%- Jackie?"him":"her" %>. <%- Jackie?"He":"She" %>'s a bit taller than you, and judging by the length of <%- Jackie?"his":"her" %> claws, <%- Jackie?"he":"she" %> seems to have neglected trimming them for a few weeks.
+<%-R.Jackie?"He":"She"%> stops dangling the little white mouse girl over <%-R.Jackie?"his":"her"%> mouth, and turns to look at you. Despite being another rabbit, <%-R.Jackie?"he":"she"%> has a carnivorous affect to <%-R.Jackie?"him":"her"%>. <%-R.Jackie?"He":"She"%>'s a bit taller than you, and judging by the length of <%-R.Jackie?"his":"her"%> claws, <%-R.Jackie?"he":"she"%> seems to have neglected trimming them for a few weeks.
 
- With an annoyed glare, <%- Jackie?"he":"she" %> asks, <span.jackrabbit>"Hmph. Whatsit to ya?"</span>
+ With an annoyed glare, <%-R.Jackie?"he":"she"%> asks, <span.jackrabbit>"Hmph. Whatsit to ya?"</span>
 
 * [[She's not food!]]
 * [[That's a living person!]]
 
 :: She's not food!
-The jackrabbit narrows <%- Jackie?"his":"her" %> eyes and says, <span.jackrabbit>"Dunno know what rock you've been livin' under, bud. We're *all* food. This one's mine."</span>
+The jackrabbit narrows <%-R.Jackie?"his":"her"%> eyes and says, <span.jackrabbit>"Dunno know what rock you've been livin' under, bud. We're *all* food. This one's mine."</span>
 
 * [[That's a living person!]]
-* [[Grab the mouse out of <%- Jackie?"his":"her" %> claws.|Grab the mouse.]]
+* [[Grab the mouse out of <%-R.Jackie?"his":"her"%> claws.|Grab the mouse.]]
 
 :: That's a living person!
-<%- Jackie?"He":"She" %> rolls <%- Jackie?"his":"her" %> eyes and says, <span.jackrabbit>"Oh, you're one of those micro-rights hippies? Come to tell me about peace, love, 'n co-existence?"</span>
+<%-R.Jackie?"He":"She"%> rolls <%-R.Jackie?"his":"her"%> eyes and says, <span.jackrabbit>"Oh, you're one of those micro-rights hippies? Come to tell me about peace, love, 'n co-existence?"</span>
 
-You start to speak, but <%- Jackie?"he":"she" %> interrupts, <span.jackrabbit>"Or maybe you're jus' jealous'a me nabbing an easy snack?"</span>
+You start to speak, but <%-R.Jackie?"he":"she"%> interrupts, <span.jackrabbit>"Or maybe you're jus' jealous'a me nabbing an easy snack?"</span>
 
 * [[No, I don't eat people!]]
 
 :: No, I don't eat people!
-<%- Jackie?"He":"She" %> smiles and says, <span.jackrabbit>"Your loss. Either way, you're not gettin' your paws on it. Got that?"</span>
+<%-R.Jackie?"He":"She"%> smiles and says, <span.jackrabbit>"Your loss. Either way, you're not gettin' your paws on it. Got that?"</span>
 
-* [[Grab the mouse out of <%- Jackie?"his":"her" %> claws.|Grab the mouse.]]
+* [[Grab the mouse out of <%-R.Jackie?"his":"her"%> claws.|Grab the mouse.]]
 * [[G-got it. Nevermind.]] *(Do nothing.)*
 
 :: G-got it. Nevermind.
-<span.jackrabbit>"Good,"</span> <%- Jackie?"he":"she" %> says, <span.jackrabbit>"You're smarter than you look, kid."</span>
+<span.jackrabbit>"Good,"</span> <%-R.Jackie?"he":"she"%> says, <span.jackrabbit>"You're smarter than you look, kid."</span>
 
 <%= story.render("Do nothing.") /* [[Do nothing.]] */ %>
 
 :: Grab the mouse.
-You try to wrest the mouse from <%- Jackie?"his":"her" %> claws.
+You try to wrest the mouse from <%-R.Jackie?"his":"her"%> claws.
 
-The jackrabbit looks with surprise as you attempt to free the mouse by force. <%- Jackie?"He":"She" %> lifts the mouse higher, just out of your reach.
+The jackrabbit looks with surprise as you attempt to free the mouse by force. <%-R.Jackie?"He":"She"%> lifts the mouse higher, just out of your reach.
 
 <span.jackrabbit>"Ugh, if you're really that desperate, just take it."</span>
 
-<%- Jackie?"He":"She" %> drops the mouse into your outstretched paws. You hold her very carefully.
+<%-R.Jackie?"He":"She"%> drops the mouse into your outstretched paws. You hold her very carefully.
 
 The little white mouse rises to her feet. At full height, she's a mere 6-inches tall.
 

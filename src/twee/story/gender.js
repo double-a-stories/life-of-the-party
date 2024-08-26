@@ -9,7 +9,7 @@ Rule63.define("Ivy", Rule63.Gender.Female);
 Rule63.define("Jackie", Rule63.Gender.Female);
 Rule63.define("Lacey", Rule63.Gender.Female);
 Rule63.define("Nikki", Rule63.Gender.Female);
-Rule63.define("Nox", Nikki ? Rule63.Gender.Female : Rule63.Gender.Male, true);
+Rule63.define("Nox", R.Nikki ? Rule63.Gender.Female : Rule63.Gender.Male, true);
 Rule63.define("Reese", Rule63.Gender.Male);
 Rule63.define("Ren", Rule63.Gender.Male);
 window.Faith = false;

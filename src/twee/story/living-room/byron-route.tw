@@ -1,8 +1,8 @@
 :: Look at wolf. [checkpoint]
 
-A black-furred wolf, about six feet tall, wearing in a stylish scarf and a checkered red flannel shirt. <%-Byron?"He":"She"%>'s sitting aloofly on a couch, and serenading the party with an acoustic guitar.
+A black-furred wolf, about six feet tall, wearing in a stylish scarf and a checkered red flannel shirt. <%-R.Byron?"He":"She"%>'s sitting aloofly on a couch, and serenading the party with an acoustic guitar.
 
-* [[Talk to <%-Byron?"him":"her"%>.|Talk to Byron.]]</a>
+* [[Talk to <%-R.Byron?"him":"her"%>.|Talk to Byron.]]</a>
 * [[Go back.|Dance a little.]]
 
 <%=T.CWP("Blood drinking", "Rape themes", "Nonconsensual vore", "Asphyxiation")%>
@@ -11,31 +11,31 @@ A black-furred wolf, about six feet tall, wearing in a stylish scarf and a check
 :: Talk to Byron.
 <% StoryFlags.set("talkedToByron"); %>
 
-You walk over to the wolf. <%-Byron?"He":"She"%> continues sitting on the couch, strumming bar chords on <%-Byron?"his":"her"%> guitar. <%-Byron?"He":"She"%> looks really into it, but finally stops playing and acknowledges you with a nod.
+You walk over to the wolf. <%-R.Byron?"He":"She"%> continues sitting on the couch, strumming bar chords on <%-R.Byron?"his":"her"%> guitar. <%-R.Byron?"He":"She"%> looks really into it, but finally stops playing and acknowledges you with a nod.
 
-<span.byron>"Ahh,"</span> <%-Byron?"he":"she"%> says, speaking with a <span.byron>deep, aristocratic accent</span>, <span.byron>"The countenance of a lone rabbit amidst a grim setting is an unexpected pleasure. Perhaps... 'twas fate that united us?"</span>
+<span.byron>"Ahh,"</span> <%-R.Byron?"he":"she"%> says, speaking with a <span.byron>deep, aristocratic accent</span>, <span.byron>"The countenance of a lone rabbit amidst a grim setting is an unexpected pleasure. Perhaps... 'twas fate that united us?"</span>
 
 * [[Uh, what?]]
 
 :: Uh, what?
-You squint and say you're not really sure what <%-Byron?"he":"she"%>'s talking about. <%-Byron?"He":"She"%> looks aloofly out at the party, <%-Byron?"his":"her"%> dark green eyes glistening beneath the jet-black fur of <%-Byron?"his":"her"%> face.
+You squint and say you're not really sure what <%-R.Byron?"he":"she"%>'s talking about. <%-R.Byron?"He":"She"%> looks aloofly out at the party, <%-R.Byron?"his":"her"%> dark green eyes glistening beneath the jet-black fur of <%-R.Byron?"his":"her"%> face.
 
-<span.byron>"Forgive an old hound's musings"</span>, <%-Byron?"he":"she"%> says, <span.byron>"It was once said that rabbits are good luck, so it seemed ominous that fortune would lead you here..."</span> <%-Byron?"He":"She"%> takes a sip of water, and continues, <span.byron>"You tread like a small leaf on the wind... I wonder if we crueler beasts could learn something from that..."</span>
+<span.byron>"Forgive an old hound's musings"</span>, <%-R.Byron?"he":"she"%> says, <span.byron>"It was once said that rabbits are good luck, so it seemed ominous that fortune would lead you here..."</span> <%-R.Byron?"He":"She"%> takes a sip of water, and continues, <span.byron>"You tread like a small leaf on the wind... I wonder if we crueler beasts could learn something from that..."</span>
 
-You stare back at <%-Byron?"him":"her"%> blankly. Is <%-Byron?"he":"she"%>... flirting with you? <%-Byron?"He":"She"%> speaks like a moody teenaged vampire from a bad fan fiction, so it's sort of hard to tell.
+You stare back at <%-R.Byron?"him":"her"%> blankly. Is <%-R.Byron?"he":"she"%>... flirting with you? <%-R.Byron?"He":"She"%> speaks like a moody teenaged vampire from a bad fan fiction, so it's sort of hard to tell.
 
 * [[...Have you tried the punch?]]
-* [[...Compliment <%-Byron?"his":"her"%> shirt?|Compliment shirt?]]
+* [[...Compliment <%-R.Byron?"his":"her"%> shirt?|Compliment shirt?]]
 
 :: ...Have you tried the punch?
 <span.byron>"No,"</span> replies the wolf, <span.byron>"I choose not to desecrate my body with that corporate poison."</span>
 
 Right, you say, you never really saw the appeal either.
 
-* [[...Compliment <%-Byron?"his":"her"%> shirt?|Compliment shirt?]]
+* [[...Compliment <%-R.Byron?"his":"her"%> shirt?|Compliment shirt?]]
 
 :: Compliment shirt?
-You notice that underneath <%-Byron?"his":"her"%> flannel, <%-Byron?"he":"she"%>'s wearing a t-shirt from this emo pop band called *Dingoes! at the Location*. You used to be pretty into them back in junior high.
+You notice that underneath <%-R.Byron?"his":"her"%> flannel, <%-R.Byron?"he":"she"%>'s wearing a t-shirt from this emo pop band called *Dingoes! at the Location*. You used to be pretty into them back in junior high.
 
 Cool shirt, you say.
 
@@ -43,21 +43,21 @@ Cool shirt, you say.
 
 You stare blankly.
 
-<%-Byron?"He":"She"%> puts a paw on <%-Byron?"his":"her"%> chin, and continues to look contemplative, <span.byron>"Perhaps we have more in common than these shallow costumes of fur would have us believe."</span>
+<%-R.Byron?"He":"She"%> puts a paw on <%-R.Byron?"his":"her"%> chin, and continues to look contemplative, <span.byron>"Perhaps we have more in common than these shallow costumes of fur would have us believe."</span>
 
 * [[To be honest I just like the music...]]
 
 :: To be honest I just like the music...
-<span.byron>"Oh,"</span> <%-Byron?"he":"she"%> replies, frowning, <span.byron>"I suppose I mistook you for a true aficionado. One who has stared into the ravenous abyss of sorrow, and emerged clad in the darkness of truth..."</span>
+<span.byron>"Oh,"</span> <%-R.Byron?"he":"she"%> replies, frowning, <span.byron>"I suppose I mistook you for a true aficionado. One who has stared into the ravenous abyss of sorrow, and emerged clad in the darkness of truth..."</span>
 
-<%-Byron?"He":"She"%> begins tuning <%-Byron?"his":"her"%> guitar and ignoring you.
+<%-R.Byron?"He":"She"%> begins tuning <%-R.Byron?"his":"her"%> guitar and ignoring you.
 
 * [[Hey, I've done that!]]
 
 :: Hey, I've done that!
-You scowl and inform <%-Byron?"him":"her"%> that you were a moody teenager once too! *You* just happened to grow out of it!
+You scowl and inform <%-R.Byron?"him":"her"%> that you were a moody teenager once too! *You* just happened to grow out of it!
 
-<span.byron>"Oh really?"</span> <%-Byron?"he":"she"%> raises an eyebrow. <span.byron>"Then I suppose you should have no problem naming three of their albums?"</span>
+<span.byron>"Oh really?"</span> <%-R.Byron?"he":"she"%> raises an eyebrow. <span.byron>"Then I suppose you should have no problem naming three of their albums?"</span>
 
 You roll your eyes.
 
@@ -66,23 +66,23 @@ You roll your eyes.
 * [[*Food for Love. Pain Train. Tummy KO OK.*|Name 3 of their albums.]]
 
 :: Name 3 of their albums.
-The wolf raises <%-Byron?"his":"her"%> eyebrows as you correctly rattle off three D.A.M.G album titles.
+The wolf raises <%-R.Byron?"his":"her"%> eyebrows as you correctly rattle off three D.A.M.G album titles.
 
 The wolf is silent for a moment, then says, <span.byron>"Truly, I am impressed by your knowledge. It is good to see *someone* at this party is not a culture-less ruthead. With whom do I have the pleasure of speaking?"</span>
 
 * [[The name's Freely. Hollis Freely.]]
 
 :: The name's Freely. Hollis Freely.
-<span.byron>"Pleasure to make your acquaintance, noble rabbit,"</span> the wolf says, now observing you with renewed interest. <%-Byron?"He":"She"%> gestures for you to sit, and you oblige. <%-Byron?"His":"Her"%> fluffy tail curls around your back. It makes you slightly nervous.
+<span.byron>"Pleasure to make your acquaintance, noble rabbit,"</span> the wolf says, now observing you with renewed interest. <%-R.Byron?"He":"She"%> gestures for you to sit, and you oblige. <%-R.Byron?"His":"Her"%> fluffy tail curls around your back. It makes you slightly nervous.
 
-Finally, <%-Byron?"he":"she"%> deigns to introduce <%-Byron?"himself":"herself"%> to you. <%-Byron?"He":"She"%> gestures grandiosely to <%-Byron?"his":"her"%> chest, and says, <span.byron>"I am <%-Byron?"Emmet":"Emily"%> Byron III, but you may call me simply <%-Byron?"Byron":"Emily"%>."</span>
+Finally, <%-R.Byron?"he":"she"%> deigns to introduce <%-R.Byron?"himself":"herself"%> to you. <%-R.Byron?"He":"She"%> gestures grandiosely to <%-R.Byron?"his":"her"%> chest, and says, <span.byron>"I am <%-R.Byron?"Emmet":"Emily"%> Byron III, but you may call me simply <%-R.Byron?"Byron":"Emily"%>."</span>
 
-<%-Byron?"Byron":"Emily"%> extends <%-Byron?"his":"her"%> massive right paw.
+<%-R.Byron?"Byron":"Emily"%> extends <%-R.Byron?"his":"her"%> massive right paw.
 
 * [[Shake.]]
 
 :: Shake.
-You politely return the pawshake. <%-Byron?"Byron":"Emily"%>'s firm, professional grip around your wrist is uncomfortably tight, and you're relieved when <%-Byron?"he":"she"%> lets go.
+You politely return the pawshake. <%-R.Byron?"Byron":"Emily"%>'s firm, professional grip around your wrist is uncomfortably tight, and you're relieved when <%-R.Byron?"he":"she"%> lets go.
 
 <span.byron>"So. I take it you prefer the Dingoes later work?"</span>
 
@@ -91,88 +91,88 @@ You politely return the pawshake. <%-Byron?"Byron":"Emily"%>'s firm, professiona
 :: Well, actually...
 On the contrary, your favorite was their first live album, *Dingoes On Tour*.
 
-<%-Byron?"Byron":"Emily"%> nods slyly. <span.byron>"Yes, I think they sounded best with Strauss on the drums."</span>
+<%-R.Byron?"Byron":"Emily"%> nods slyly. <span.byron>"Yes, I think they sounded best with Strauss on the drums."</span>
 
 You sweat a little at the mention of the band's original drummer, Strauss. A few weeks after their first tour, he mysteriously vanished. Eventually, it came out that he'd got into a drunken argument with the band's bassist, and was swallowed and digested. The ensuing scandal dominated headlines for several days.
 
 * [[Yeah, it's a shame that he... left.]]
 
 :: Yeah, it's a shame that he... left.
-The wolf raises <%-Byron?"his":"her"%> eyebrow. <span.byron>"My dear rabbit, taboos only serve to shackle your mind. If one lacks the freedom to speak honestly, one may as well not speak at all. You need not resort to euphemism around me."</span>
+The wolf raises <%-R.Byron?"his":"her"%> eyebrow. <span.byron>"My dear rabbit, taboos only serve to shackle your mind. If one lacks the freedom to speak honestly, one may as well not speak at all. You need not resort to euphemism around me."</span>
 
 * [[Okay, it's a shame that he was eaten.]]
 
 :: Okay, it's a shame that he was eaten.
-<%-Byron?"Byron":"Emily"%> nods, and looks off into the distance wistfully. <span.byron>"Yes, I despise the heedless snuffing of herbivorous life. All those songs unwritten, words left unsaid... That you prey live for years, amassing knowledge, skills, and memories, only to be extinguished in an instant... It is the greatest pity."</span> <%-Byron?"He":"She"%> gives you a rare moment of eye contact. <span.byron>"It is a kind of sorrow few predators would understand, I imagine."</span>
+<%-R.Byron?"Byron":"Emily"%> nods, and looks off into the distance wistfully. <span.byron>"Yes, I despise the heedless snuffing of herbivorous life. All those songs unwritten, words left unsaid... That you prey live for years, amassing knowledge, skills, and memories, only to be extinguished in an instant... It is the greatest pity."</span> <%-R.Byron?"He":"She"%> gives you a rare moment of eye contact. <span.byron>"It is a kind of sorrow few predators would understand, I imagine."</span>
 
 You say this turn of conversation is making you slightly uncomfortable.
 
-<span.byron>"Yes, this is a rather public place to have such an... intimate discussion."</span> <%-Byron?"he":"she"%> says, <span.byron>"Why don't we head upstairs? Somewhere the two of us may speak more... privately?"</span>
+<span.byron>"Yes, this is a rather public place to have such an... intimate discussion."</span> <%-R.Byron?"he":"she"%> says, <span.byron>"Why don't we head upstairs? Somewhere the two of us may speak more... privately?"</span>
 
 You're skeptical.
 
 * [[Why? So you can eat me?]]
 
 :: Why? So you can eat me?
-<span.byron>"What?"</span> <%-Byron?"He":"She"%> acts offended, and says, <span.byron>"I had hoped that through my manners, I had proven myself above such silly suspicions. Unlike *some* of the savages here, I would never attempt to take advantage of a helpless little person in such a savage, ungentle manner. It is beneath me."</span>
+<span.byron>"What?"</span> <%-R.Byron?"He":"She"%> acts offended, and says, <span.byron>"I had hoped that through my manners, I had proven myself above such silly suspicions. Unlike *some* of the savages here, I would never attempt to take advantage of a helpless little person in such a savage, ungentle manner. It is beneath me."</span>
 
 Uh-huh, you say.
 
-<%-Byron?"He":"She"%> raises a claw to <%-Byron?"his":"her"%> chin. <span.byron>"But, if *you* were interested in such a thing, I suppose I would have no choice but to accept..."</span>
+<%-R.Byron?"He":"She"%> raises a claw to <%-R.Byron?"his":"her"%> chin. <span.byron>"But, if *you* were interested in such a thing, I suppose I would have no choice but to accept..."</span>
 * [[God, you're pathetic!]]
 
 :: God, you're pathetic!
-<%-Byron?"Byron":"Emily"%> blinks. <span.byron>"Ex*cuse* me?"</span>
+<%-R.Byron?"Byron":"Emily"%> blinks. <span.byron>"Ex*cuse* me?"</span>
 
-You tell <%-Byron?"him":"her"%> firmly that you're not gonna let <%-Byron?"him":"her"%> eat you, or fuck you, or anything.
+You tell <%-R.Byron?"him":"her"%> firmly that you're not gonna let <%-R.Byron?"him":"her"%> eat you, or fuck you, or anything.
 
-<%-Byron?"His":"Her"%> mouth seems to become slightly dry. <span.byron>"Are... are you sure? I have been told it can be quite... pleasant, given the right participants. A sensual reminder of animal passions long forgotten, a pleasure so greatly heightened by the cruel grip of mortality... Was I wrong to presume that your arrival here was a result of these incurable passions?"</span>
+<%-R.Byron?"His":"Her"%> mouth seems to become slightly dry. <span.byron>"Are... are you sure? I have been told it can be quite... pleasant, given the right participants. A sensual reminder of animal passions long forgotten, a pleasure so greatly heightened by the cruel grip of mortality... Was I wrong to presume that your arrival here was a result of these incurable passions?"</span>
 
 * [[Ew, no!|Shut it!]]
 * [[Shut it!]]
 
 :: Shut it!
-Ugh, stop talking like that, you say. The whole "sensitive musician" shtick is obviously just a ploy to lure in prey. You tell <%-Byron?"Byron":"Emily"%> <%-Byron?"he":"she"%>'s just horny and hungry, like everybody else at this dumb party. A literal wolf in sheep's clothing!
+Ugh, stop talking like that, you say. The whole "sensitive musician" shtick is obviously just a ploy to lure in prey. You tell <%-R.Byron?"Byron":"Emily"%> <%-R.Byron?"he":"she"%>'s just horny and hungry, like everybody else at this dumb party. A literal wolf in sheep's clothing!
 
-<%-Byron?"He":"She"%> narrows <%-Byron?"his":"her"%> eyes, and scowls, <span.byron>"...You insult me gravely, little thing. I have been nothing but a pinnacle of noble courtesy, and you rebuff both me and my pedigree."</span> <%-Byron?"He":"She"%> sticks out a paw. <span.byron>"Follow me."</span>
+<%-R.Byron?"He":"She"%> narrows <%-R.Byron?"his":"her"%> eyes, and scowls, <span.byron>"...You insult me gravely, little thing. I have been nothing but a pinnacle of noble courtesy, and you rebuff both me and my pedigree."</span> <%-R.Byron?"He":"She"%> sticks out a paw. <span.byron>"Follow me."</span>
 
 * [[Don't take it.]]
 
 :: Don't take it.
 You stay put. The wolf begins openly scowling, but remains careful not to let the other party goers take notice.
 
-<span.byron>"You ignoble <!-- tiny --> slut!"</span> the wolf curses at you, popping <%-Byron?"his":"her"%> collar. <%-Byron?"Byron":"Emily"%> snarls, <span.byron>"You disgrace me and my family name! A <%-Byron?"gentleman":"gentlewoman"%>= like myself cannot let a slight like that go unpunished. I demand satisfaction!"</span>
+<span.byron>"You ignoble <!-- tiny --> slut!"</span> the wolf curses at you, popping <%-R.Byron?"his":"her"%> collar. <%-R.Byron?"Byron":"Emily"%> snarls, <span.byron>"You disgrace me and my family name! A <%-R.Byron?"gentleman":"gentlewoman"%>= like myself cannot let a slight like that go unpunished. I demand satisfaction!"</span>
 
-<%-Byron?"He":"She"%> rises to <%-Byron?"his":"her"%> feet, slings <%-Byron?"his":"her"%> guitar over <%-Byron?"his":"her"%> back, and offers you <%-Byron?"his":"her"%> paw. <span.byron>"Stand up,"</span> <%-Byron?"he":"she"%> commands.
+<%-R.Byron?"He":"She"%> rises to <%-R.Byron?"his":"her"%> feet, slings <%-R.Byron?"his":"her"%> guitar over <%-R.Byron?"his":"her"%> back, and offers you <%-R.Byron?"his":"her"%> paw. <span.byron>"Stand up,"</span> <%-R.Byron?"he":"she"%> commands.
 
-You tell <%-Byron?"him":"her"%> you're not gonna-
+You tell <%-R.Byron?"him":"her"%> you're not gonna-
 
-<%-Byron?"He":"She"%> looms over you and bares <%-Byron?"his":"her"%> fangs. <span.byron>"*Now.*"</span>
+<%-R.Byron?"He":"She"%> looms over you and bares <%-R.Byron?"his":"her"%> fangs. <span.byron>"*Now.*"</span>
 
 * [[Stand up.]]
 
 :: Stand up.
-<span.byron>"Good."</span> <%-Byron?"Byron":"Emily"%> places <%-Byron?"his":"her"%> paw firmly on your lower back. You feel <%-Byron?"his":"her"%> claws outstretched, as if threatening to shred through your clothes and into the flesh beneath. <span.byron>"Let us go upstairs, shall we?"</span>
+<span.byron>"Good."</span> <%-R.Byron?"Byron":"Emily"%> places <%-R.Byron?"his":"her"%> paw firmly on your lower back. You feel <%-R.Byron?"his":"her"%> claws outstretched, as if threatening to shred through your clothes and into the flesh beneath. <span.byron>"Let us go upstairs, shall we?"</span>
 
-You grit your teeth, and walk helplessly alongside <%-Byron?"Byron":"Emily"%> as <%-Byron?"he":"she"%> leads you back out of the living room. You're about to enter the foyer, when a golden Labrador in a green jacket stops the two of you.
+You grit your teeth, and walk helplessly alongside <%-R.Byron?"Byron":"Emily"%> as <%-R.Byron?"he":"she"%> leads you back out of the living room. You're about to enter the foyer, when a golden Labrador in a green jacket stops the two of you.
 
 * [[Blink twice.]]
 
 :: Blink twice.
-"Yoo, dude!" the dog chuckles, "If it isn't Emory Whats<%-Byron?"his":"her"%>face, from the chess club! It's Gus! Long time no see, dude!"
+"Yoo, dude!" the dog chuckles, "If it isn't Emory Whats<%-R.Byron?"his":"her"%>face, from the chess club! It's Gus! Long time no see, dude!"
 
-<span.byron>"<%-Byron?"Emmet":"Emily"%> Byron,"</span> the wolf smiles painedly, giving you a friendly pat on the shoulder. <span.byron>"And this is my charming friend, Hollis!"</span>
+<span.byron>"<%-R.Byron?"Emmet":"Emily"%> Byron,"</span> the wolf smiles painedly, giving you a friendly pat on the shoulder. <span.byron>"And this is my charming friend, Hollis!"</span>
 
 The Labrador points a paw at the wolf, and asks you, "Hey dude, this dude bothering you, dude? Cause that's supes no bueno, dude."
 
-<%-Byron?"Byron":"Emily"%> tightens <%-Byron?"his":"her"%> grip on you and tries to walk away. <%-Byron?"He":"She"%> grunts, <span.byron>"No, we were just-"</span>
+<%-R.Byron?"Byron":"Emily"%> tightens <%-R.Byron?"his":"her"%> grip on you and tries to walk away. <%-R.Byron?"He":"She"%> grunts, <span.byron>"No, we were just-"</span>
 
 "Let em talk, dude," the dog interrupts.
 
 * [[Well, um...]]
 
 :: Well, um... [checkpoint]
-You hesitate for a moment. Then, you feel <%-Byron?"Byron":"Emily"%>'s paw tighten on your shoulder. The pointy claws of <%-Byron?"his":"her"%> thumb prod you in the back, probably harder than <%-Byron?"he":"she"%> meant to. It stings! D-did <%-Byron?"he":"she"%> just draw blood?
+You hesitate for a moment. Then, you feel <%-R.Byron?"Byron":"Emily"%>'s paw tighten on your shoulder. The pointy claws of <%-R.Byron?"his":"her"%> thumb prod you in the back, probably harder than <%-R.Byron?"he":"she"%> meant to. It stings! D-did <%-R.Byron?"he":"she"%> just draw blood?
 
 You grimace slightly, suck air through your teeth, and answer.
 
@@ -184,7 +184,7 @@ You reply nonchalantly, struggling to get the words out without arousing suspici
 
 "Oh, cool. Have a cool time, dudes," the dog says, shooting both of you a wink and walking away.
 
-<span.byron>"Oh,"</span> <%-Byron?"Byron":"Emily"%> mutters with a half-smile, <span.byron>"We will."</span>
+<span.byron>"Oh,"</span> <%-R.Byron?"Byron":"Emily"%> mutters with a half-smile, <span.byron>"We will."</span>
 
 You gulp, as the wolf leads you from the room.
 
@@ -193,17 +193,17 @@ You gulp, as the wolf leads you from the room.
 :: Ow, get this creep away from me! [gore]
 You cry out and try to yank yourself free.
 
-<%-Byron?"Byron":"Emily"%>'s claws instinctively dig deep into you. You squeal in pain as <%-Byron?"he":"she"%> puts a huge bloody gash on your back.
+<%-R.Byron?"Byron":"Emily"%>'s claws instinctively dig deep into you. You squeal in pain as <%-R.Byron?"he":"she"%> puts a huge bloody gash on your back.
 
-<span.byron>"Oh dear,"</span> <%-Byron?"Byron":"Emily"%> flatly mutters in surprise. <%-Byron?"He":"She"%> stares down at <%-Byron?"his":"her"%> claws, wet with your blood, seemingly more intrigued than bothered.
+<span.byron>"Oh dear,"</span> <%-R.Byron?"Byron":"Emily"%> flatly mutters in surprise. <%-R.Byron?"He":"She"%> stares down at <%-R.Byron?"his":"her"%> claws, wet with your blood, seemingly more intrigued than bothered.
 
 Gus stares in shock.
 
-<%-Byron?"He":"She"%> wipes them on <%-Byron?"his":"her"%> flannel, and says, <span.byron>"I am ashamed, dear rabbit, that it has come to this. Perhaps we beasts truly are inseparable from our dark– *Ow!*"</span>
+<%-R.Byron?"He":"She"%> wipes them on <%-R.Byron?"his":"her"%> flannel, and says, <span.byron>"I am ashamed, dear rabbit, that it has come to this. Perhaps we beasts truly are inseparable from our dark– *Ow!*"</span>
 
-<%-Byron?"Byron":"Emily"%> is interrupted by Gus's fist, as he completely clobbers <%-Byron?"him":"her"%> in the <%-Byron?"groin":"face"%>, knocking <%-Byron?"him":"her"%> to the floor.
+<%-R.Byron?"Byron":"Emily"%> is interrupted by Gus's fist, as he completely clobbers <%-R.Byron?"him":"her"%> in the <%-R.Byron?"groin":"face"%>, knocking <%-R.Byron?"him":"her"%> to the floor.
 
-"Party fuckin' foul, dude," Gus says, shaking out his fist while <%-Byron?"Byron":"Emily"%> collapses. He leans down to check on you. "You okay, dawg?"
+"Party fuckin' foul, dude," Gus says, shaking out his fist while <%-R.Byron?"Byron":"Emily"%> collapses. He leans down to check on you. "You okay, dawg?"
 
 You respond by fainting from blood loss.
 
@@ -214,7 +214,7 @@ You respond by fainting from blood loss.
 * <%= T.rewind() %>
 
 :: Follow Byron upstairs.
-<span.byron>"Those damn dogs,"</span> <%-Byron?"Byron":"Emily"%> mutters as <%-Byron?"he":"she"%> drags you through the foyer and up the stairs. <span.byron>"Just interested in rutting and drinking... No respect for superior intellect, and no appreciation for the finer things in life..."</span> <%-Byron?"He":"She"%> opens the door to an upstairs bedroom, and ushers you in.
+<span.byron>"Those damn dogs,"</span> <%-R.Byron?"Byron":"Emily"%> mutters as <%-R.Byron?"he":"she"%> drags you through the foyer and up the stairs. <span.byron>"Just interested in rutting and drinking... No respect for superior intellect, and no appreciation for the finer things in life..."</span> <%-R.Byron?"He":"She"%> opens the door to an upstairs bedroom, and ushers you in.
 
 *Click*.
 
@@ -223,13 +223,13 @@ You respond by fainting from blood loss.
 * [[You'll never get away with this.]]
 
 :: You'll never get away with this.
-The wolf chuckles. <span.byron>"With what? Eating you? I guess you truly are stupider than you look."</span> <%-Byron?"He":"She"%> gestures for you to take a seat on the bed. At risk of further injury, you oblige.
+The wolf chuckles. <span.byron>"With what? Eating you? I guess you truly are stupider than you look."</span> <%-R.Byron?"He":"She"%> gestures for you to take a seat on the bed. At risk of further injury, you oblige.
 
 <span.byron>"I shan't bore your little mind with statistics, but did you know that 900,000 prey are reported missing every year? You might also be interested to know that only 2% of those cases are even investigated?"</span>
 
-You shift uncomfortably, still trying not to look frightened. <%-Byron?"Byron":"Emily"%> leans forward and puts <%-Byron?"his":"her"%> paws on your knees.
+You shift uncomfortably, still trying not to look frightened. <%-R.Byron?"Byron":"Emily"%> leans forward and puts <%-R.Byron?"his":"her"%> paws on your knees.
 
-<span.byron>"So face it, little rabbit. No one is coming to save you..."</span>  <%-Byron?"He":"She"%> pats <%-Byron?"his":"her"%> stomach, and says, <span.byron>"...And once you are done in here, no one is ever going to find you. So why don't we make it easy? Take off your clothes."</span>
+<span.byron>"So face it, little rabbit. No one is coming to save you..."</span>  <%-R.Byron?"He":"She"%> pats <%-R.Byron?"his":"her"%> stomach, and says, <span.byron>"...And once you are done in here, no one is ever going to find you. So why don't we make it easy? Take off your clothes."</span>
 
 * [[Do as told.|Take off your top.]]
 * [[Fuck you.|Take off your top.]]
@@ -237,111 +237,111 @@ You shift uncomfortably, still trying not to look frightened. <%-Byron?"Byron":"
 :: Take off your top.
 <span.byron>"Oh, no need to be ashamed, dear rabbit. You and I are merely animals, playing at civilization, and these clothes are but a pointless shroud."</span> The wolf "assists" in forcibly undressing you.
 
-<span.byron>"How obedient. I think deep down, your body is eager to fulfill its purpose in feeding me..."</span> <%-Byron?"He":"She"%> looks you over, then notices the small red gash on your shoulder.
+<span.byron>"How obedient. I think deep down, your body is eager to fulfill its purpose in feeding me..."</span> <%-R.Byron?"He":"She"%> looks you over, then notices the small red gash on your shoulder.
 
-<span.byron>"Oh dear, let me have a look at this..."</span> <%-Byron?"He":"She"%> sticks <%-Byron?"his":"her"%> nose into your fur, then drags <%-Byron?"his":"her"%> tongue across your wound. You wince as <%-Byron?"he":"she"%> tastes your blood. <span.byron>"Hm, you are not exactly a Cabernet, but still... I can see why my ancestors liked this..."</span>
+<span.byron>"Oh dear, let me have a look at this..."</span> <%-R.Byron?"He":"She"%> sticks <%-R.Byron?"his":"her"%> nose into your fur, then drags <%-R.Byron?"his":"her"%> tongue across your wound. You wince as <%-R.Byron?"he":"she"%> tastes your blood. <span.byron>"Hm, you are not exactly a Cabernet, but still... I can see why my ancestors liked this..."</span>
 
 * [[G-gross...]]
 
 :: G-gross...
-You shudder as <%-Byron?"he":"she"%> laps at your wound, instinctively pulling away. The wolf stops licking, and stands while dusting off <%-Byron?"his":"her"%> shoulders.
+You shudder as <%-R.Byron?"he":"she"%> laps at your wound, instinctively pulling away. The wolf stops licking, and stands while dusting off <%-R.Byron?"his":"her"%> shoulders.
 
-<span.byron>"I would not expect you to understand a carnivore's complex palate,"</span> <%-Byron?"Byron":"Emily"%> says, <span.byron>"The wretched pretenders of my kind claim to be civilized eaters of soy, fish, and dairy, but some appetites are not so easily tamed..."</span>
+<span.byron>"I would not expect you to understand a carnivore's complex palate,"</span> <%-R.Byron?"Byron":"Emily"%> says, <span.byron>"The wretched pretenders of my kind claim to be civilized eaters of soy, fish, and dairy, but some appetites are not so easily tamed..."</span>
 
 You rest your chin on your palms with boredom.
 
-<%-Byron?"He":"She"%> examines <%-Byron?"his":"her"%> claws coldly, <span.byron>"At the very least, one must have the nobility to be honest about their bloodlust."</span>
+<%-R.Byron?"He":"She"%> examines <%-R.Byron?"his":"her"%> claws coldly, <span.byron>"At the very least, one must have the nobility to be honest about their bloodlust."</span>
 
 * [[Shut up shut up shut up!]]
 
 :: Shut up shut up shut up!
-You tell <%-Byron?"Byron":"Emily"%>, oh my god, stop talking! Can <%-Byron?"he":"she"%> go thirty seconds without droning on and on about pretentious nonsense?? You'd much rather bleed to death than spend one more second listening to <%-Byron?"him":"her"%> speak.
+You tell <%-R.Byron?"Byron":"Emily"%>, oh my god, stop talking! Can <%-R.Byron?"he":"she"%> go thirty seconds without droning on and on about pretentious nonsense?? You'd much rather bleed to death than spend one more second listening to <%-R.Byron?"him":"her"%> speak.
 
 <span.byron>"Hmph. I was only trying to have a decent conversation,"</span> the wolf says, <span.byron>"But if you prefer to spend your final moments like an ungrateful, frightened whelp, then so be it. I can be scary."</span>
 
-<%-Byron?"He":"She"%> bares <%-Byron?"his":"her"%> fangs.
+<%-R.Byron?"He":"She"%> bares <%-R.Byron?"his":"her"%> fangs.
 
 * [[Do your worst.]]
 
 :: Do your worst.
-You put on a brave face, and tell your assailant to do <%-Byron?"his":"her"%> worst.
+You put on a brave face, and tell your assailant to do <%-R.Byron?"his":"her"%> worst.
 
-<%-Byron?"Byron":"Emily"%> opens <%-Byron?"his":"her"%> jaws wide in front of your face, close enough to see individual strands of saliva. <%-Byron?"His":"Her"%> breath on your face is disgusting. You can tell <%-Byron?"he":"she"%> is trying very hard to be intimidating.
+<%-R.Byron?"Byron":"Emily"%> opens <%-R.Byron?"his":"her"%> jaws wide in front of your face, close enough to see individual strands of saliva. <%-R.Byron?"His":"Her"%> breath on your face is disgusting. You can tell <%-R.Byron?"he":"she"%> is trying very hard to be intimidating.
 
 * [[Wow, I'm literally terrified.]]
 
 :: Wow, I'm literally terrified.
 You hide your anxieties behind a cool, detached demeanor, and tell Byron flatly about how you're totally quaking in your boots.
 
-<%-Byron?"He":"She"%> seems to lose <%-Byron?"his":"her"%> temper slightly. <span.byron>"My teeth will graze your weak skin, and my stomach will smother you until its acids dissolve everything you ever were into slurry. You'll feel *every* moment of agony, until you're digested and absorbed as calories."</span> <%-Byron?"He":"She"%> smiles wickedly, <span.byron>"And I'm not even doing it because I'm hungry. I'm doing it to teach you where uppity prey like you belong."</span>
+<%-R.Byron?"He":"She"%> seems to lose <%-R.Byron?"his":"her"%> temper slightly. <span.byron>"My teeth will graze your weak skin, and my stomach will smother you until its acids dissolve everything you ever were into slurry. You'll feel *every* moment of agony, until you're digested and absorbed as calories."</span> <%-R.Byron?"He":"She"%> smiles wickedly, <span.byron>"And I'm not even doing it because I'm hungry. I'm doing it to teach you where uppity prey like you belong."</span>
 
 * [[Oh, cool. Whatever.]]
 
 :: Oh, cool. Whatever.
 Yup, sounds terrifying, you say.
 
-The wolf glares at you, and snarls, <span.byron>"You seem to be under the impression that pretending to be brave will make me lose interest."</span> <%-Byron?"He":"She"%> smirks, <span.byron>"I admit, I derive some satisfaction from a watching a prey quiver with the unshakeable fear of dying, but I *am* going to eat you, whether you struggle or not."</span>
+The wolf glares at you, and snarls, <span.byron>"You seem to be under the impression that pretending to be brave will make me lose interest."</span> <%-R.Byron?"He":"She"%> smirks, <span.byron>"I admit, I derive some satisfaction from a watching a prey quiver with the unshakeable fear of dying, but I *am* going to eat you, whether you struggle or not."</span>
 
 You swallow nervously, and don't say anything.
 
-<%-Byron?"He":"She"%> grabs you by the ears, and pulls them tight. <span.byron>"That is enough talk. Any last words, dear rabbit?"</span>
+<%-R.Byron?"He":"She"%> grabs you by the ears, and pulls them tight. <span.byron>"That is enough talk. Any last words, dear rabbit?"</span>
 
 * [[Hope you choke and die!]]
 
 :: Hope you choke and die!
-You tell <%-Byron?"Byron":"Emily"%> you hope <%-Byron?"he":"she"%> chokes on you, because it would apparently the only thing in the world that could make <%-Byron?"him":"her"%> shut the fuck up for a single second.
+You tell <%-R.Byron?"Byron":"Emily"%> you hope <%-R.Byron?"he":"she"%> chokes on you, because it would apparently the only thing in the world that could make <%-R.Byron?"him":"her"%> shut the fuck up for a single second.
 
-<%-Byron?"He":"She"%> frowns, and says, <span.byron>"Well that's just-"</span>
+<%-R.Byron?"He":"She"%> frowns, and says, <span.byron>"Well that's just-"</span>
 
-You also say that being covered in stomach acid and bile could not be even a tenth as repulsive as <%-Byron?"his":"her"%> personality, and the self-aggrandizing bullshit <%-Byron?"he's":"she's"%> constantly spewing.
+You also say that being covered in stomach acid and bile could not be even a tenth as repulsive as <%-R.Byron?"his":"her"%> personality, and the self-aggrandizing bullshit <%-R.Byron?"he's":"she's"%> constantly spewing.
 
-<%-Byron?"Byron":"Emily"%> sighs, and grips you by the shoulders. <span.byron>"'Twas foolish of me to expect grace and dignity from the graceless and undignified. All the same, I suppose... Farewell, Freely."</span>
+<%-R.Byron?"Byron":"Emily"%> sighs, and grips you by the shoulders. <span.byron>"'Twas foolish of me to expect grace and dignity from the graceless and undignified. All the same, I suppose... Farewell, Freely."</span>
 
 * [[Up yours.]]
 
 :: Up yours. [vore]
-You raise both middle fingers, as <%-Byron?"Byron":"Emily"%> lifts you up and shoves your naked body head-first into <%-Byron?"his":"her"%> gaping maw. Your vision gets darker and darker as your face slides toward <%-Byron?"his":"her"%> gullet. Slick saliva covers your cheeks, and your ears flatten at the roof of <%-Byron?"his":"her"%> mouth. You break out into a cold sweat.
+You raise both middle fingers, as <%-R.Byron?"Byron":"Emily"%> lifts you up and shoves your naked body head-first into <%-R.Byron?"his":"her"%> gaping maw. Your vision gets darker and darker as your face slides toward <%-R.Byron?"his":"her"%> gullet. Slick saliva covers your cheeks, and your ears flatten at the roof of <%-R.Byron?"his":"her"%> mouth. You break out into a cold sweat.
 
 <span.byron>"Glrk. Glp. Glgg."</span>
 
-You hear a sickening series of squelches as the wolf swallows, and your head slips into <%-Byron?"his":"her"%> esophagus. You can feel the pulsing of <%-Byron?"his":"her"%> heartbeat as you slowly slide head-long toward <%-Byron?"his":"her"%> gut. Your face splashes headfirst into a putrid cavern of <%-Byron?"his":"her"%> stomach.
+You hear a sickening series of squelches as the wolf swallows, and your head slips into <%-R.Byron?"his":"her"%> esophagus. You can feel the pulsing of <%-R.Byron?"his":"her"%> heartbeat as you slowly slide head-long toward <%-R.Byron?"his":"her"%> gut. Your face splashes headfirst into a putrid cavern of <%-R.Byron?"his":"her"%> stomach.
 
 * [[Ew...]]
 
 :: Ew... [vore]
 The whole process takes several minutes. You spend every moment feeling wet and gross.
 
-Your feet are the last part of you to slide over <%-Byron?"his":"her"%> tongue, and down behind you. And with that, you're curled up in <%-Byron?"his":"her"%> gut.
+Your feet are the last part of you to slide over <%-R.Byron?"his":"her"%> tongue, and down behind you. And with that, you're curled up in <%-R.Byron?"his":"her"%> gut.
 
-<span.byron>"Hahhh... Mmmm."</span> <%-Byron?"Byron":"Emily"%> moans as <%-Byron?"his":"her"%> belly expands around you. You're surprised that you can hear <%-Byron?"his":"her"%> voice so clearly. It seems <%-Byron?"he":"she"%> really doesn't have much body fat. <span.byron>"So, how does it feel to be food?"</span>
+<span.byron>"Hahhh... Mmmm."</span> <%-R.Byron?"Byron":"Emily"%> moans as <%-R.Byron?"his":"her"%> belly expands around you. You're surprised that you can hear <%-R.Byron?"his":"her"%> voice so clearly. It seems <%-R.Byron?"he":"she"%> really doesn't have much body fat. <span.byron>"So, how does it feel to be food?"</span>
 
-* [[Kick <%-Byron?"Byron":"Emily"%> in the stomach.|Kick Byron in the stomach.]]
+* [[Kick <%-R.Byron?"Byron":"Emily"%> in the stomach.|Kick Byron in the stomach.]]
 
 :: Kick Byron in the stomach. [vore]
-You kick your legs out, striking <%-Byron?"Byron":"Emily"%> directly in the solar plexus. The red flesh of the wolf's belly ripples around you. In the process, your lower body slips up under you, forcing you to curl up awkwardly with your face in your crotch.
+You kick your legs out, striking <%-R.Byron?"Byron":"Emily"%> directly in the solar plexus. The red flesh of the wolf's belly ripples around you. In the process, your lower body slips up under you, forcing you to curl up awkwardly with your face in your crotch.
 
-<span.byron>"Urgh,"</span> <%-Byron?"Byron":"Emily"%> groans, <span.byron>"You little shit."</span> <%-Byron?"He":"She"%> adjusts <%-Byron?"his":"her"%> scarf. <span.byron>"Ahem. Try that again, and I'll do my best make things even less comfortable."</span>
+<span.byron>"Urgh,"</span> <%-R.Byron?"Byron":"Emily"%> groans, <span.byron>"You little shit."</span> <%-R.Byron?"He":"She"%> adjusts <%-R.Byron?"his":"her"%> scarf. <span.byron>"Ahem. Try that again, and I'll do my best make things even less comfortable."</span>
 
  It probably doesn't help that you're stuck like this now, but wow did that feel good.
 
  * [[Let me out, you monster.]]
 
 :: Let me out, you monster. [vore]
-<span.byron>"Oh Hollis,"</span> chuckles <%-Byron?"Byron":"Emily"%>, <span.byron>"I am no monster. As a wolf, my genetic programming makes me a machine for swallowing and digesting fresh meat."</span>
+<span.byron>"Oh Hollis,"</span> chuckles <%-R.Byron?"Byron":"Emily"%>, <span.byron>"I am no monster. As a wolf, my genetic programming makes me a machine for swallowing and digesting fresh meat."</span>
 
-<%-Byron?"His":"Her"%> belly sloshes around you as <%-Byron?"he":"she"%> paces the floor. You poke and prod the slick, squishy flesh which surrounds you.
+<%-R.Byron?"His":"Her"%> belly sloshes around you as <%-R.Byron?"he":"she"%> paces the floor. You poke and prod the slick, squishy flesh which surrounds you.
 
-<span.byron>"*Your* genetic programming,"</span> <%-Byron?"he":"she"%> continues, <span.byron>"makes you a tiny, grass-eating whore, destined to be ripped to shreds. That's who we *are*. Everything else is just a lie to keep up the charade of a civilized, functioning society. We're all just snowflakes in an avalanche."</span>
+<span.byron>"*Your* genetic programming,"</span> <%-R.Byron?"he":"she"%> continues, <span.byron>"makes you a tiny, grass-eating whore, destined to be ripped to shreds. That's who we *are*. Everything else is just a lie to keep up the charade of a civilized, functioning society. We're all just snowflakes in an avalanche."</span>
 
 * [[You're in control. You can still puke me up.]]
 
 :: You're in control. You can still puke me up. [vore]
-<span.byron>"Believe me, if any of us had even the slightest control over our senseless animal desires, this world would be a very different place."</span> <%-Byron?"Byron":"Emily"%> pats <%-Byron?"his":"her"%> gut, and continues, <span.byron>"But these are the facts of nature. My kind is doomed to destroy, while yours is doomed to serve."</span>
+<span.byron>"Believe me, if any of us had even the slightest control over our senseless animal desires, this world would be a very different place."</span> <%-R.Byron?"Byron":"Emily"%> pats <%-R.Byron?"his":"her"%> gut, and continues, <span.byron>"But these are the facts of nature. My kind is doomed to destroy, while yours is doomed to serve."</span>
 
 * [[It doesn't have to be that way...]]
 
 :: It doesn't have to be that way... [vore]
-<span.byron>"Ah, what a splendid idea!"</span> <%-Byron?"he":"she"%> says, patting the outline of your head as if you were a toddler, <span.byron>"You have picked a wonderful time to sell me on this fantastic utopia of yours!"</span> <%-Byron?"Byron":"Emily"%> sits down on the bed.
+<span.byron>"Ah, what a splendid idea!"</span> <%-R.Byron?"he":"she"%> says, patting the outline of your head as if you were a toddler, <span.byron>"You have picked a wonderful time to sell me on this fantastic utopia of yours!"</span> <%-R.Byron?"Byron":"Emily"%> sits down on the bed.
 
 <span.byron>"What do you propose? Peaceful, vegan coexistence? Pred and prey suddenly singing Kumbaya? Getting our fix by swallowing eggs, and suppressing our desires into 'healthy outlets', like rock songs about juicy, dripping flesh?</span>
 
@@ -350,7 +350,7 @@ You kick your legs out, striking <%-Byron?"Byron":"Emily"%> directly in the sola
 :: Well, not exactly... [vore]
 You start to say, Well, it wouldn't be overnight, but maybe with some common-sense legal reforms-
 
-<%-Byron?"Byron":"Emily"%> interrupts. <span.byron>"Hush. Don't you see, little rabbit? This *is* peaceful. No mauling, no bloodshed. Almost entirely painless. Activists talk a lot about 'safety' and 'respect', but  *this* is what you prey deserve. The strong take what they can, while the weak suffer what they must."</span>
+<%-R.Byron?"Byron":"Emily"%> interrupts. <span.byron>"Hush. Don't you see, little rabbit? This *is* peaceful. No mauling, no bloodshed. Almost entirely painless. Activists talk a lot about 'safety' and 'respect', but  *this* is what you prey deserve. The strong take what they can, while the weak suffer what they must."</span>
 
 * [[Get me out of here, you fuck.]]
 
@@ -362,16 +362,16 @@ In the heat of the moment, you can't think of a retort. Rather, you're distracte
 * [[Ow...]]
 
 :: Ow... [vore]
-You can hear <%-Byron?"Byron":"Emily"%> smiling, as <%-Byron?"he":"she"%> says, <span.byron>"Oh dear, is it getting unpleasant in there? You should expect nothing less from the body of an alpha predator. Where's all your bravado now, little rabbit?"</span>
+You can hear <%-R.Byron?"Byron":"Emily"%> smiling, as <%-R.Byron?"he":"she"%> says, <span.byron>"Oh dear, is it getting unpleasant in there? You should expect nothing less from the body of an alpha predator. Where's all your bravado now, little rabbit?"</span>
 
 Your body is now submerged in unpleasant liquids, and the surrounding air—which already smelled unpleasant—is now beginning to taste stale.
 
-* [[<%-Byron?"Byron":"Emily"%>... Let. Me. Out.|Let. me. out.]]
+* [[<%-R.Byron?"Byron":"Emily"%>... Let. Me. Out.|Let. me. out.]]
 
 :: Let. me. out. [vore]
  You tell the wolf plainly to let you out.
 
-<%-Byron?"Byron":"Emily"%> thinks about this. <span.byron>"Well, have you learned your lesson? Do you accept that as prey, subservience is your lot in life? And do you promise to always show the utmost respect and deference to your superior creatures?"</span> <%-Byron?"he":"she"%> asks.
+<%-R.Byron?"Byron":"Emily"%> thinks about this. <span.byron>"Well, have you learned your lesson? Do you accept that as prey, subservience is your lot in life? And do you promise to always show the utmost respect and deference to your superior creatures?"</span> <%-R.Byron?"he":"she"%> asks.
 
 Yes, you reply wearily.
 
@@ -380,11 +380,11 @@ Yes, you reply wearily.
 * [[Yes, <%-R.Byron?"sir":"ma'am"%>.|Yes, sir.]]
 
 :: Yes, sir. [vore]
-<%-Byron?"Byron":"Emily"%> smiles. <span.byron>"There, was that so hard? I'm only asking for a little decency. For the record, I would have accepted '<%-Byron?"master":"mistress"%>' as well, heh."
+<%-R.Byron?"Byron":"Emily"%> smiles. <span.byron>"There, was that so hard? I'm only asking for a little decency. For the record, I would have accepted '<%-R.Byron?"master":"mistress"%>' as well, heh."
 
 Resentfully, you ask if this means you can come out now.
 
-<%-Byron?"He":"She"%> pats <%-Byron?"his":"her"%> gut. <span.byron>"...No, I think the lesson will be much more effective this way. Besides, I just had this flannel dry-cleaned, and I doubt a pissant like you would understand how inconvenient it is to clean out vomit."</span>
+<%-R.Byron?"He":"She"%> pats <%-R.Byron?"his":"her"%> gut. <span.byron>"...No, I think the lesson will be much more effective this way. Besides, I just had this flannel dry-cleaned, and I doubt a pissant like you would understand how inconvenient it is to clean out vomit."</span>
 
 You clench your knuckles with white-hot rage. Your breathing quickens as you struggle for breath. You're feeling rather delirious now, and can hardly think of a response.
 
@@ -393,37 +393,37 @@ You clench your knuckles with white-hot rage. Your breathing quickens as you str
 :: Fuck... you... [vore]
 You're about to die at the hands of an extremely annoying and conceited wolf. You'd think of something grander and more poetic to say about the pointless tragedy of it all, but nothing's coming to mind. Due to a lack of oxygen, you're mostly feeling very sleepy.
 
-<%-Byron?"Byron":"Emily"%> sits on the bed, and continues to blather. <span.byron>"You know, it's a shame we got off on the wrong foot, rabbit. Really, you were quite delicious, and I think we could have both had a very enjoyable experience if you only knew how to mind your manners."</span>
+<%-R.Byron?"Byron":"Emily"%> sits on the bed, and continues to blather. <span.byron>"You know, it's a shame we got off on the wrong foot, rabbit. Really, you were quite delicious, and I think we could have both had a very enjoyable experience if you only knew how to mind your manners."</span>
 
 Fuck... you... You wheeze out your last words, shut your eyes tight, and fall unconscious for eternity.
 
-* [[<%-Byron?"Byron":"Emily"%>: Digest.|Byron: Digest.]]
+* [[<%-R.Byron?"Byron":"Emily"%>: Digest.|Byron: Digest.]]
 
 :: Byron: Digest.
-<span.byron>"Sorry, did you say something?"</span> <%-Byron?"Byron":"Emily"%> says, with a self-satisfied half-smirk.
+<span.byron>"Sorry, did you say something?"</span> <%-R.Byron?"Byron":"Emily"%> says, with a self-satisfied half-smirk.
 
 There is no reply.
 
-<span.byron>"Hello? Still listening?"</span> <%-Byron?"Byron":"Emily"%> prods and presses on <%-Byron?"his":"her"%> stomach, only to feel a sickening wet crunch in response. <span.byron>"Ah, I suppose you're finished. What a pity."</span>
+<span.byron>"Hello? Still listening?"</span> <%-R.Byron?"Byron":"Emily"%> prods and presses on <%-R.Byron?"his":"her"%> stomach, only to feel a sickening wet crunch in response. <span.byron>"Ah, I suppose you're finished. What a pity."</span>
 
-<%-Byron?"He":"She"%> heaves <%-Byron?"his":"her"%> huge belly off <%-Byron?"his":"her"%> lap, and rises from the bed, satisfied with <%-Byron?"his":"her"%> righteous punishment of the rabbit inside <%-Byron?"him":"her"%>. The feeling of fullness is almost orgasmic, as <%-Byron?"his":"her"%> body begins to digest.
+<%-R.Byron?"He":"She"%> heaves <%-R.Byron?"his":"her"%> huge belly off <%-R.Byron?"his":"her"%> lap, and rises from the bed, satisfied with <%-R.Byron?"his":"her"%> righteous punishment of the rabbit inside <%-R.Byron?"him":"her"%>. The feeling of fullness is almost orgasmic, as <%-R.Byron?"his":"her"%> body begins to digest.
 
-<%-Byron?"He":"She"%> glances at <%-Byron?"his":"her"%> watch—an expensive antique. The wolf wonders, has it really only been half an hour since <%-Byron?"he":"she"%> met the rabbit who is now dissolving inside <%-Byron?"him":"her"%>? It felt longer than that...
+<%-R.Byron?"He":"She"%> glances at <%-R.Byron?"his":"her"%> watch—an expensive antique. The wolf wonders, has it really only been half an hour since <%-R.Byron?"he":"she"%> met the rabbit who is now dissolving inside <%-R.Byron?"him":"her"%>? It felt longer than that...
 
 Oh well. Time to return to the party.
 
-* [[<%-Byron?"Byron":"Emily"%>: Go back downstairs.|Byron: Go back downstairs.]]
+* [[<%-R.Byron?"Byron":"Emily"%>: Go back downstairs.|Byron: Go back downstairs.]]
 
 :: Byron: Go back downstairs.
-<%-Byron?"Byron":"Emily"%> opens the bedroom door. <span.byron>"O-oh!"</span>
+<%-R.Byron?"Byron":"Emily"%> opens the bedroom door. <span.byron>"O-oh!"</span>
 
 Standing patiently outside is Gus the dog, alongside a gigantic, towering horse with his arms folded.
 
-<span.byron>"Basil Armstrong! What a lovely surprise!"</span> <%-Byron?"Byron":"Emily"%> fruitlessly tries to adjust <%-Byron?"his":"her"%> shirt to hide <%-Byron?"his":"her"%> massive bulging gut, and begins to exit. <span.byron>"I'll have you know I was just leav- ack!"</span> Basil nonchalantly shoves the wolf aside as he and Gus walk in.
+<span.byron>"Basil Armstrong! What a lovely surprise!"</span> <%-R.Byron?"Byron":"Emily"%> fruitlessly tries to adjust <%-R.Byron?"his":"her"%> shirt to hide <%-R.Byron?"his":"her"%> massive bulging gut, and begins to exit. <span.byron>"I'll have you know I was just leav- ack!"</span> Basil nonchalantly shoves the wolf aside as he and Gus walk in.
 
 "...Stay out of my room," Basil mutters, and slams the door shut behind him.
 
-<%-Byron?"Byron":"Emily"%> stands silently in the hallway. A few seconds pass. <span.byron>"O-okay,"</span> <%-Byron?"he":"she"%> murmurs meekly.
+<%-R.Byron?"Byron":"Emily"%> stands silently in the hallway. A few seconds pass. <span.byron>"O-okay,"</span> <%-R.Byron?"he":"she"%> murmurs meekly.
 
 ### The End.
 

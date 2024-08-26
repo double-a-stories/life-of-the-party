@@ -7,7 +7,7 @@
  */
 
 // @ts-ignore
-const Rule63 = window.Rule63 = {};
+const Rule63 = window.Rule63 = window.R = {};
 (() => {
   "use strict";
 
@@ -95,7 +95,7 @@ const Rule63 = window.Rule63 = {};
   /***
    * Creates a Getter property that returns an isMale boolean
    */
-  const define = (name, defaultValue, opposite = false, namespace = window) => {
+  const define = (name, defaultValue, opposite = false, namespace = Rule63) => {
     if (name in namespace) {
       throw new Error(`Property ${namespace}.${name} is already defined!`);
     }

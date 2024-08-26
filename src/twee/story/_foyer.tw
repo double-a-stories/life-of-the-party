@@ -5,7 +5,7 @@ Your name is Hollis. You are an androgynous-looking gray rabbit of no particular
 
 Right now, you're at a very crowded house party. Drunk and horny college furs are everywhere. Loud music and the smell of cheap booze fills every room. <% if (Achievements.getUnlocked().length > 3) { %>This place seems strangely familiar, though you can't put a paw on it.<% } %>
 
-About twenty minutes ago, you showed up with your friend Reese. At some point you got separated, and you haven't seen <%-Reese?"him":"her"%> since.
+About twenty minutes ago, you showed up with your friend Reese. At some point you got separated, and you haven't seen <%-R.Reese?"him":"her"%> since.
 
 * [[Look around the foyer.|The Foyer.]]
 
@@ -33,7 +33,7 @@ You make a quick circle of the first floor, but Reese is nowhere in sight.
 
 <% if (!StoryFlags.isSet("upstairsUnlocked")) { %>
 
-Someone around here has probably seen where <%-Reese?"he":"she"%> went.
+Someone around here has probably seen where <%-R.Reese?"he":"she"%> went.
 
 <% } else { %>
 
