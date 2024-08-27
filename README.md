@@ -17,11 +17,6 @@ All ***non-prose source code*** (i.e. config files, scripts, stylesheets, file s
 ## Building from source
 
 1. Install [Tweego](http://www.motoslave.net/tweego/) and [NodeJS](https://nodejs.org/).
-   * The `tweego` and `node` binaries must be in your system's PATH.
-   * If you built Tweego from scratch, you'll need to manually install the [snowman-2](https://github.com/videlais/snowman/tree/master/dist/snowman-2.0.3) format into `storyformats/` story format, if you don't already have it.
-2. Install proofing formats into `./storyformats` (optional)
-    * [poof](https://github.com/ChapelR/pooof/releases) – Proof-reading tool
-    * [illume](https://www.maximumverbosity.net/twine/Illume/) – Provides passage analysis
-    * [dotgraph](https://github.com/mcdemarco/dotgraph/releases/tag/v2.2.0) – Generates story graphs
-3. `npm start` - Launch live server for development
-4. `npm run twee-build` - Generates game at ./dist/index.html
+2. `npm start` - Launch live server for development
+3. `npm run build` - Generates game HTML in `dist`
+4. `npm run proof` – Builds proof-reading/analysis tools in `proofing`

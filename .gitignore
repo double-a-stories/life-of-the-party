@@ -61,5 +61,5 @@ typings/
 .next
 
 dist/*.html
-proofing/*.html
+proofing
 *.zip

@@ -1,0 +1,7 @@
+# This folder is populated by the "build:modules" script, which copies
+# in external dependencies from NPM.
+
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
