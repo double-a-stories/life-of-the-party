@@ -20,7 +20,7 @@ All ***non-prose source code*** (i.e. config files, scripts, stylesheets, file s
    * The `tweego` and `node` binaries must be in your system's PATH.
    * If you built Tweego from scratch, you'll need to manually install the [snowman-2](https://github.com/videlais/snowman/tree/master/dist/snowman-2.0.3) format into `storyformats/` story format, if you don't already have it.
 2. Install proofing formats into `./storyformats` (optional)
-    * [poof](https://github.com/ChapelR/poof/releases) – Proof-reading tool
+    * [poof](https://github.com/ChapelR/pooof/releases) – Proof-reading tool
     * [illume](https://www.maximumverbosity.net/twine/Illume/) – Provides passage analysis
     * [dotgraph](https://github.com/mcdemarco/dotgraph/releases/tag/v2.2.0) – Generates story graphs
 3. `npm start` - Launch live server for development
