@@ -34,7 +34,7 @@ party.danceLiterals = [
 // Returns a message from the above array, based on story.state.partyDanceState
 party.getFlavorMessage = () => {
   // edge case: if we're about to get the "One last punch" message
-  if (story.state.punchCount == 4) {
+  if (story.state.punchCount == 4 && !story.state.sawCatTeaser) {
     story.state.sawCatTeaser = true;
     story.state.partyFlavorState--; // go back by 1.
     return "A **pair of black cats** watch in awe as a dog proudly presents his enormous, swollen belly. They toast with their cups of punch.";
