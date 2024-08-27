@@ -1,7 +1,7 @@
 {
   "name": "life-of-the-party",
-  "version": "8.0.0",
-  "description": "A furry vore adventure",
+  "version": "0.8.0",
+  "description": "A Furry Vore Adventure",
   "scripts": {
     "start": "npm run watch",
     "postinstall": "npm run get_modules",
