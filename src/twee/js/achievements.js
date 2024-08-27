@@ -10,13 +10,6 @@
 // @ts-ignore
 window.setup = window.setup || {};
 
-// @ts-ignore
-const Lockr = window.Lockr;
-if (Lockr == undefined) {
-  // make sure Lockr is loaded.
-  throw new Error("achievements.js: Lockr.js was not loaded in time!");
-}
-
 /** Savegame format version
 * Can be updated to introduce breaking changes with previous achievement storage formats. */
 const ACHIEVEMENT_KEY_VERSION = 8;
