@@ -3,7 +3,7 @@
   "version": "8.0.0",
   "description": "A furry vore adventure",
   "scripts": {
-    "develop": "concurrently \"npm run twee-watch\" \"npm run live-server\"",
+    "start": "concurrently -k \"npm run twee-watch\" \"npm run live-server\"",
     "package-zip": "zip -r \"life-of-the-party-v\"$npm_package_version\"-dist.zip\" dist",
     "publish-stable": "gh-pages -a -d dist",
     "publish-indev": "gh-pages -a -d dist -e indev/",

@@ -23,5 +23,5 @@ All ***non-prose source code*** (i.e. config files, scripts, stylesheets, file s
     * [poof](https://github.com/ChapelR/poof/releases) – Proof-reading tool
     * [illume](https://www.maximumverbosity.net/twine/Illume/) – Provides passage analysis
     * [dotgraph](https://github.com/mcdemarco/dotgraph/releases/tag/v2.2.0) – Generates story graphs
-3. `npm run develop` - Launch live server for development
+3. `npm start` - Launch live server for development
 4. `npm run twee-build` - Generates game at ./dist/index.html
