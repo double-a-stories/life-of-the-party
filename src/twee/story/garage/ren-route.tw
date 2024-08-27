@@ -15,7 +15,7 @@ A few feet ahead of you, you see a red fox, who appears to be struggling to carr
 
 You ask <%-R.Ren?"him":"her"%> what <%-R.Ren?"he":"she"%>'s doing.
 
-<%-R.Ren?"He":"She"%> smiles and replies, <span.ren>"Stealing!!! 🦊<%-s.rm?"🦹‍♂️":"🦹‍♀️"%>💰"</span>
+<%-R.Ren?"He":"She"%> smiles and replies, <span.ren>"Stealing!!! 🦊<%-R.Ren?"🦹‍♂️":"🦹‍♀️"%>💰"</span>
 
 Yeah, you guess that was pretty obvious.
 
@@ -388,19 +388,19 @@ The late morning sun pours through a square window, between steel bars, and onto
 
 <span.ren>"🥱... What a party!"</span> <%-R.Ren?"he":"she"%> yawns.
 
-Ren's cellmate—a small copper-colored fennec fox—looks over. <span.xander>"Look who decided to wake up,"</span> <%-!s.rm?"he":"she"%> says, with a hard metallic lisp, <span.xander>"The name is <%=!s.rm?"Xander":"Xandra"%>, serial tax evader. What is a cute thing like you doing in a place like this?"</span>
+Ren's cellmate—a small copper-colored fennec fox—looks over. <span.xander>"Look who decided to wake up,"</span> <%-R.Xander?"he":"she"%> says, with a hard metallic lisp, <span.xander>"The name is <%=R.Xander?"Xander":"Xandra"%>, serial tax evader. What is a cute thing like you doing in a place like this?"</span>
 
 <span.ren>"🤔 Well, I got caught stealing a cool 🛻 truck from some horses, plus several hundreds of dollars of 💰 valuable goods. So basically... <!-- shrug --><%-R.Ren?"🤷‍♂️":"🤷‍♀️"%> nothing!!!"</span>
 
-<%-!s.rm?"Xander":"Xandra"%> chuckles, <span.xander>"Crikey, sounds like quite the evening."</span>
+<%-R.Xander?"Xander":"Xandra"%> chuckles, <span.xander>"Crikey, sounds like quite the evening."</span>
 
 <span.ren>"Oh, and I ate an <img class="emoji" alt="(agender pride flag)" src="assets/images/emoji-agender-flag.svg"></a> agender 🐇 rabbit at a 🎈 party!!! "</span> Ren pats <%-R.Ren?"his":"her"%> gut, and it grumbles back in response. <span.ren>"I'll probs need to use that 🚽 toilet over there in a few hours..."</span>
 
-<span.xander>"Wait, you can eat and digest people?"</span> <%-!s.rm?"Xander":"Xandra"%> frowns, now becoming very cognizant of the fact that <%-!s.rm?"he":"she"%>'s all alone with <%-R.Ren?"him":"her"%>.
+<span.xander>"Wait, you can eat and digest people?"</span> <%-R.Xander?"Xander":"Xandra"%> frowns, now becoming very cognizant of the fact that <%-R.Xander?"he":"she"%>'s all alone with <%-R.Ren?"him":"her"%>.
 
 <span.ren>"Only as of recently, but yeah!!! 😃😃 I'm not overly happy to be here, but it was actually really nice of the 🏛 prison system to serve me 🍳 breakfast in bed!"</span>
 
-<span.xander>"Uh, what do you mean breakfast in..."</span> <%-!s.rm?"Xander":"Xandra"%> blinks at the realization. <span.xander>"...Oh shit.</span>"</span>
+<span.xander>"Uh, what do you mean breakfast in..."</span> <%-R.Xander?"Xander":"Xandra"%> blinks at the realization. <span.xander>"...Oh shit.</span>"</span>
 
 ### The End.
 

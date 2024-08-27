@@ -12,7 +12,7 @@ Like everything else in this house, the kitchen is vast and elegantly furnished.
 
 <span.nox>"Hey! They're waking up!"</span> says a voice.
 
-<span.nikki>"Quiet, <%-R.Nox?"Nox":"Noxie"%>, you'll scare them,"</span> says another. 
+<span.nikki>"Quiet, <%-R.Nox?"Nox":"Noxy"%>, you'll scare them,"</span> says another. 
 
 * [[Who's there?]]
 
@@ -33,15 +33,15 @@ You might describe their accents as English, or maybe Londonian. That is, if you
 
 <span.nox>"Oh, how rude of us!"</span> remarks the first cat.
 
-<span.nikki>"I'm <%-R.Nikki?"Nik":"Nikki"%>. This is my sibling, <%-R.Nox?"Nox":"Noxie"%>,"</span> says the other, appraising you with <%-R.Nikki?"his":"her"%> piercing yellow eyes. 
+<span.nikki>"I'm <%-R.Nikki?"Nyx":"Nikki"%>. This is my sibling, <%-R.Nox?"Nox":"Noxy"%>,"</span> says the other, appraising you with <%-R.Nikki?"his":"her"%> piercing yellow eyes. 
 
-<span.nox>"I'm <%-R.Nox?"Nox":"Noxie"%>, and <%-R.Nikki?"he":"she"%>'s <%-R.Nikki?"Nik":"Nikki"%>!"</span> reiterates <%-R.Nox?"Nox":"Noxie"%>. <%-R.Nox?"His":"Her"%> eyes beam softly—the color of marigolds.
+<span.nox>"I'm <%-R.Nox?"Nox":"Noxy"%>, and <%-R.Nikki?"he":"she"%>'s <%-R.Nikki?"Nyx":"Nikki"%>!"</span> reiterates <%-R.Nox?"Nox":"Noxy"%>. <%-R.Nox?"His":"Her"%> eyes beam softly—the color of marigolds.
 
 <span.twinspeak>A pleasure to make your acquaintance!"</span> they both say simultaneously.
 
 L-likewise, you say.
 
-Both cats are basically the same height as you, although <%-R.Nikki?"Nik":"Nikki"%> seems to stand with slightly taller posture, while <%-R.Nox?"Nox":"Noxie"%> seems to fiddle with <%-R.Nox?"his":"her"%> pockets. You're still too hungover to try and tell them apart, but you nod at them politely.
+Both cats are basically the same height as you, although <%-R.Nikki?"Nyx":"Nikki"%> seems to stand with slightly taller posture, while <%-R.Nox?"Nox":"Noxy"%> seems to fiddle with <%-R.Nox?"his":"her"%> pockets. You're still too hungover to try and tell them apart, but you nod at them politely.
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
@@ -77,36 +77,36 @@ Both cats are basically the same height as you, although <%-R.Nikki?"Nik":"Nikki
 <!-- CONVERSATION PATH 1 -->
 
 :: How did I get here?
-Both cats give you a genial smile. <span.nox>"You... don't remember?"</span> asks <%-R.Nox?"Nox":"Noxie"%>, scratching <%-R.Nox?"his":"her"%> whiskers nervously.
+Both cats give you a genial smile. <span.nox>"You... don't remember?"</span> asks <%-R.Nox?"Nox":"Noxy"%>, scratching <%-R.Nox?"his":"her"%> whiskers nervously.
 
 You shake your head. The last few hours are mostly a blur, you say.
 
-<%-R.Nikki?"Nik":"Nikki"%> clears <%-R.Nikki?"his":"her"%> throat. <span.nikki>"The short version is that you got incredibly wasted, wandered in to the kitchen, and passed out on the floor. We've been watching you ever since, just to make sure you didn't die, or anything."</span>
+<%-R.Nikki?"Nyx":"Nikki"%> clears <%-R.Nikki?"his":"her"%> throat. <span.nikki>"The short version is that you got incredibly wasted, wandered in to the kitchen, and passed out on the floor. We've been watching you ever since, just to make sure you didn't die, or anything."</span>
 
-<span.nox>"No other reason!"</span> <%-R.Nox?"Nox":"Noxie"%> adds with a sincere smile.
+<span.nox>"No other reason!"</span> <%-R.Nox?"Nox":"Noxy"%> adds with a sincere smile.
 
 * [[...Thanks?]] 
 
 :: ...Thanks?
-<%-R.Nikki?"Nik":"Nikki"%> and <%-R.Nox?"Nox":"Noxie"%> smile. <span.twinspeak>"No problem, Hollis,"</span> they both say in unison. It's not creepy at all.
+<%-R.Nikki?"Nyx":"Nikki"%> and <%-R.Nox?"Nox":"Noxy"%> smile. <span.twinspeak>"No problem, Hollis,"</span> they both say in unison. It's not creepy at all.
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: How do you know my name?
-<span.nox>"Oh,"</span> says <%-R.Nox?"Nox":"Noxie"%>, <span.nox>"this is kind of awkward, but you actually said it, like, four times. You kept on insisting, *My name is Hollis! I am an androgynous-looking gray rabbit!*"</span>
+<span.nox>"Oh,"</span> says <%-R.Nox?"Nox":"Noxy"%>, <span.nox>"this is kind of awkward, but you actually said it, like, four times. You kept on insisting, *My name is Hollis! I am an androgynous-looking gray rabbit!*"</span>
 
 ...Huh.
 
-<span.nikki>"Anyway,"</span> <%-R.Nikki?"Nik":"Nikki"%> continues, <span.nikki>"you danced a lot, then ran around for a while flirting with preds."</span>
+<span.nikki>"Anyway,"</span> <%-R.Nikki?"Nyx":"Nikki"%> continues, <span.nikki>"you danced a lot, then ran around for a while flirting with preds."</span>
 
-<%-R.Nox?"Nox":"Noxie"%> pulls an expensive looking smartphone out of <%-R.Nox?"His":"Her"%> back pocket. <span.nox>"Oh, and you took your shirt off! I caught it all on video! Wanna see?"</span>
+<%-R.Nox?"Nox":"Noxy"%> pulls an expensive looking smartphone out of <%-R.Nox?"His":"Her"%> back pocket. <span.nox>"Oh, and you took your shirt off! I caught it all on video! Wanna see?"</span>
 
 Your cheeks flush with embarrassment, and you shake your head no. The words "DRUNSK SLUNT", "PLAYBUNNY", and "DIBS!! -IVY" are written across your body in permanent marker. You pull the blanket tighter around your naked torso.
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: Oh jeez...
-<%-R.Nox?"Nox":"Noxie"%> continues, <span.nox>"A couple of the jocks tried to take a lick, but this Labrador guy was really insistent that 'None of you dudes better try and take advantage of this little rabbit dude in their inebriated state, 'kay dudes?'"</span>
+<%-R.Nox?"Nox":"Noxy"%> continues, <span.nox>"A couple of the jocks tried to take a lick, but this Labrador guy was really insistent that 'None of you dudes better try and take advantage of this little rabbit dude in their inebriated state, 'kay dudes?'"</span>
 
 <span.nikki>"After that, you stumbled into the kitchen, grabbed even more booze and snacks, and passed out. And here you are now."</span>
 
@@ -117,42 +117,42 @@ You gradually stand up, dusting some pretzel crumbs off your back. You look down
 :: ...And the dildo?
 All three of you look down at the flared 14-incher lying limply beside you. The cats exchange a confused glance.
 
-<span.nikki>"...I actually have no idea where you got that from,"</span> frowns <%-R.Nikki?"Nik":"Nikki"%>.
+<span.nikki>"...I actually have no idea where you got that from,"</span> frowns <%-R.Nikki?"Nyx":"Nikki"%>.
 
-<span.nox>"A riddle for the ages,"</span> says <%-R.Nox?"Nox":"Noxie"%> with a bemused shrug.
+<span.nox>"A riddle for the ages,"</span> says <%-R.Nox?"Nox":"Noxy"%> with a bemused shrug.
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 <!-- CONVERSATION ROUTE 2 -->
 :: Have you guys seen my friend?
 
-<span.nikki>"Oh, you mean Reese?"</span> <%-R.Nikki?"Nik":"Nikki"%>'s face lights up.
+<span.nikki>"Oh, you mean Reese?"</span> <%-R.Nikki?"Nyx":"Nikki"%>'s face lights up.
 
 You incredulously ask the cats how they know Reese's name.
 
 <% StoryFlags.set("upstairsUnlocked"); %>
 
-<%-R.Nox?"Nox":"Noxie"%> smiles, <span.nox>"We mostly know <%-R.Reese?"him":"her"%> as guinea_puff_2B8. <%-R.Reese?"He":"She"%>'s been a pretty active member of the Grumble Geek forums, just like us! It's a worldwide community for preds and prey to chat, and find consensual vore meetups!"</span>
+<%-R.Nox?"Nox":"Noxy"%> smiles, <span.nox>"We mostly know <%-R.Reese?"him":"her"%> as guinea_puff_2B8. <%-R.Reese?"He":"She"%>'s been a pretty active member of the Grumble Geek forums, just like us! It's a worldwide community for preds and prey to chat, and find consensual vore meetups!"</span>
 
-<%-R.Nikki?"Nik":"Nikki"%> nods, <span.nikki>"<%-R.Reese?"He":"She"%>'s been raving about going to this party for weeks."</span> 
+<%-R.Nikki?"Nyx":"Nikki"%> nods, <span.nikki>"<%-R.Reese?"He":"She"%>'s been raving about going to this party for weeks."</span> 
 
 * [[Where did he go!? Maybe I can still save him!]]
 
 :: Where did he go!? Maybe I can still save him!
-<%-R.Nikki?"Nik":"Nikki"%> thinks back, and says, <span.nikki>"I'm pretty sure I caught a short glimpse of Basil's sister bringing <%-R.Reese?"him":"her"%> upstairs..."</span>
+<%-R.Nikki?"Nyx":"Nikki"%> thinks back, and says, <span.nikki>"I'm pretty sure I caught a short glimpse of Basil's sister bringing <%-R.Reese?"him":"her"%> upstairs..."</span>
 
-<%-R.Nox?"Nox":"Noxie"%> grins, <span.nox>"And I caught a very *long* glimpse of Lacey and <%-R.Lacey?"his":"her"%> boyfriend going to town swallowing that yummy <%-R.Reese?"boy":"guinea"%> bod!"</span>
+<%-R.Nox?"Nox":"Noxy"%> grins, <span.nox>"And I caught a very *long* glimpse of Lacey and <%-R.Lacey?"his":"her"%> boyfriend going to town swallowing that yummy <%-R.Reese?"boy":"guinea"%> bod!"</span>
 
 You rocket to your feet. <% if (s.ateFaith) %>Faith lets out an uncomfortable yelp, as if reminding you to be careful as she's still inside your mouth.<%;%> Reese is upstairs? Maybe there's still time to get <%-R.Reese?"him":"her"%> out of there!
 
-<%-R.Nox?"Nox":"Noxie"%> shakes <%-R.Nox?"his":"her"%> head, <span.nox>"Sorry, that was like three hours ago. Knowing Lacey, <%-R.Reese?"he":"she"%>'s probably been digested already."</span>
+<%-R.Nox?"Nox":"Noxy"%> shakes <%-R.Nox?"his":"her"%> head, <span.nox>"Sorry, that was like three hours ago. Knowing Lacey, <%-R.Reese?"he":"she"%>'s probably been digested already."</span>
 
 * [[Oh. Oh no...]]
 
 :: Oh. Oh no...
 You collapse to your knees. You can't believe it; you were so busy getting wasted, you couldn't save <%-R.Reese?"him":"her"%>! It's all your fault.
 
-<%-R.Nox?"Nox":"Noxie"%> seems confused, <span.nox>"Save? Knowing Reese, the whole thing was 100% consensual. That <%-R.Reese?"dude":"gal"%> was a vorny freak, even by our standards! It's weird that <%-R.Reese?"he":"she"%> would bring you here without telling you that..."</span>
+<%-R.Nox?"Nox":"Noxy"%> seems confused, <span.nox>"Save? Knowing Reese, the whole thing was 100% consensual. That <%-R.Reese?"dude":"gal"%> was a vorny freak, even by our standards! It's weird that <%-R.Reese?"he":"she"%> would bring you here without telling you that..."</span>
 
 * [[Actually... that would explain a lot.]] 
 
@@ -161,36 +161,36 @@ You think back to when you and Reese first arrived, and <%-R.Reese?"he":"she"%> 
 
 ...What a weirdo, you think. Still, being digested must have been painful, right?
 
-<%-R.Nox?"Nox":"Noxie"%> pats you on the shoulder, <span.nox>"I can assure you, Lacey was really gentle with <%-R.Reese?"him":"her"%>. Your friend died doing what <%-R.Reese?"he":"she"%> loved! It's all part of the Circle of Life."</span>
+<%-R.Nox?"Nox":"Noxy"%> pats you on the shoulder, <span.nox>"I can assure you, Lacey was really gentle with <%-R.Reese?"him":"her"%>. Your friend died doing what <%-R.Reese?"he":"she"%> loved! It's all part of the Circle of Life."</span>
 
-<%-R.Nikki?"Nik":"Nikki"%> nods. <span.nikki>"Circle of Life,"</span> <%-R.Nikki?"he":"she"%> repeats.
+<%-R.Nikki?"Nyx":"Nikki"%> nods. <span.nikki>"Circle of Life,"</span> <%-R.Nikki?"he":"she"%> repeats.
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: Wait, why were you watching to begin with?
-<%-R.Nox?"Nox":"Noxie"%> smiles weakly, <span.nox>"Eheh, there's a perfectly reasonable explanation for that. You see-"</span>
+<%-R.Nox?"Nox":"Noxy"%> smiles weakly, <span.nox>"Eheh, there's a perfectly reasonable explanation for that. You see-"</span>
 
-<%-R.Nikki?"Nik":"Nikki"%> interrupts, <span.nikki>"Ahem, I'm sure our friend doesn't need to hear about this... Why don't we tell them about *that thing* we had in mind?"</span>
+<%-R.Nikki?"Nyx":"Nikki"%> interrupts, <span.nikki>"Ahem, I'm sure our friend doesn't need to hear about this... Why don't we tell them about *that thing* we had in mind?"</span>
 
 <%= story.render("Nikki/Nox commands") /* [[Nikki/Nox commands]] */ %> 
 
 :: Are you guys predators...?
-<span.nikki>"We're not going to eat you, if that's what you're wondering,"</span> <%-R.Nikki?"Nik":"Nikki"%> smiles coyly. 
+<span.nikki>"We're not going to eat you, if that's what you're wondering,"</span> <%-R.Nikki?"Nyx":"Nikki"%> smiles coyly. 
 
-<span.nox>"Oh, heavens no!"</span> says <%-R.Nox?"Nox":"Noxie"%>, <span.nox>"You're way too big!"</span>
+<span.nox>"Oh, heavens no!"</span> says <%-R.Nox?"Nox":"Noxy"%>, <span.nox>"You're way too big!"</span>
 
-<%-R.Nikki?"Nik":"Nikki"%> nods, <span.nikki>"My sibling and I don't fancy ourselves carnivores, per&nbsp;se..."</span>
+<%-R.Nikki?"Nyx":"Nikki"%> nods, <span.nikki>"My sibling and I don't fancy ourselves carnivores, per&nbsp;se..."</span>
 
-<%-R.Nox?"Nox":"Noxie"%> smiles enthusiastically, <span.nox>"We prefer to think of ourselves as encouraging observers!"</span>
+<%-R.Nox?"Nox":"Noxy"%> smiles enthusiastically, <span.nox>"We prefer to think of ourselves as encouraging observers!"</span>
 
 * [[That's... good?]]
 
 :: That's... good?
-<span.nikki>"I'm glad you think so,"</span> <%-R.Nikki?"Nik":"Nikki"%> says, taking a few powerful steps closer to you.
+<span.nikki>"I'm glad you think so,"</span> <%-R.Nikki?"Nyx":"Nikki"%> says, taking a few powerful steps closer to you.
 
-You're filled with a sense of dread as <%-R.Nikki?"Nik":"Nikki"%> draws near, as if <%-R.Nikki?"he":"she"%> and <%-R.Nikki?"his":"her"%> brother were somehow an incarnation of Death. Soon, <%-R.Nikki?"he":"she"%>'s fully invaded your personal space, <%-R.Nikki?"his":"her"%> narrow yellow eyes peering and probing into your soul, and <%-R.Nikki?"his":"her"%> mostly flat chest level with your own.
+You're filled with a sense of dread as <%-R.Nikki?"Nyx":"Nikki"%> draws near, as if <%-R.Nikki?"he":"she"%> and <%-R.Nikki?"his":"her"%> brother were somehow an incarnation of Death. Soon, <%-R.Nikki?"he":"she"%>'s fully invaded your personal space, <%-R.Nikki?"his":"her"%> narrow yellow eyes peering and probing into your soul, and <%-R.Nikki?"his":"her"%> mostly flat chest level with your own.
 
-<span.nikki>"But that reminds me, Hollis,"</span> says <%-R.Nikki?"Nik":"Nikki"%>, <span.nikki>"While we've got you here, my sibling and I have an... interesting proposition for you,"</span> <%-R.Nikki?"He":"She"%> runs <%-R.Nikki?"his":"her"%> paw gently up the fur of your arm, giving you goosebumps.
+<span.nikki>"But that reminds me, Hollis,"</span> says <%-R.Nikki?"Nyx":"Nikki"%>, <span.nikki>"While we've got you here, my sibling and I have an... interesting proposition for you,"</span> <%-R.Nikki?"He":"She"%> runs <%-R.Nikki?"his":"her"%> paw gently up the fur of your arm, giving you goosebumps.
 
 * [[Well I'm flattered, but...]]
 * [[Oh, tell me more!]]
@@ -206,34 +206,34 @@ You perk your eyebrows up.
 <%= story.render("Interesting proposition.") /* [[Interesting proposition.]] */ %>
 
 :: Interesting proposition.
-<%-R.Nox?"Nox":"Noxie"%> immediately blurts out, <span.nox>"It's not sex!"</span>
+<%-R.Nox?"Nox":"Noxy"%> immediately blurts out, <span.nox>"It's not sex!"</span>
 
-<%-R.Nikki?"Nik":"Nikki"%> shoots <%-R.Nox?"him":"her"%> a look.
+<%-R.Nikki?"Nyx":"Nikki"%> shoots <%-R.Nox?"him":"her"%> a look.
 
 <span.nox>"Sorry, it sounded like you were talking about sex. Which we're not."</span>
 
 * [[Wh-what is it then?]]
 
 :: Wh-what is it then?
-<span.nikki>"Glad you asked,"</span> says <%-R.Nikki?"Nik":"Nikki"%>, <span.nikki>"<%-R.Nox?"Nox":"Noxie"%>, if you will?"</span>
+<span.nikki>"Glad you asked,"</span> says <%-R.Nikki?"Nyx":"Nikki"%>, <span.nikki>"<%-R.Nox?"Nox":"Noxy"%>, if you will?"</span>
 
-<%-R.Nox?"Nox":"Noxie"%> reaches into <%-R.Nox?"his":"her"%> breast pocket and pulls out something small and brown, and presents it toward you. You squint to examine it, and your eyes go wide.
+<%-R.Nox?"Nox":"Noxy"%> reaches into <%-R.Nox?"his":"her"%> breast pocket and pulls out something small and brown, and presents it toward you. You squint to examine it, and your eyes go wide.
 
 * [[A mouse!?]]
 
 :: A mouse!?
-In <%-R.Nox?"Nox":"Noxie"%>'s paws stands a dwarf mouse. The creature is about six inches tall. She's naked, which isn't unnatural for mice, or tinykind in general. Her body is covered from head to toe with light brown fur. She struggles to balance, and shields her face at the sudden exposure to light.
+In <%-R.Nox?"Nox":"Noxy"%>'s paws stands a dwarf mouse. The creature is about six inches tall. She's naked, which isn't unnatural for mice, or tinykind in general. Her body is covered from head to toe with light brown fur. She struggles to balance, and shields her face at the sudden exposure to light.
 
-<span.nikki>"A meal!"</span> <%-R.Nikki?"Nik":"Nikki"%> smiles.
+<span.nikki>"A meal!"</span> <%-R.Nikki?"Nyx":"Nikki"%> smiles.
 
-<span.nox>"Nya! A morsel!"</span> <%-R.Nox?"Nox":"Noxie"%> beams. <span.nox>"For you!"</span>
+<span.nox>"Nya! A morsel!"</span> <%-R.Nox?"Nox":"Noxy"%> beams. <span.nox>"For you!"</span>
 
 * [[You want me to eat her??]]
 
 :: You want me to eat her??
-<%-R.Nikki?"Nik":"Nikki"%> nods, <span.nikki>"Oh yes, yes we do."</span>
+<%-R.Nikki?"Nyx":"Nikki"%> nods, <span.nikki>"Oh yes, yes we do."</span>
 
-<%-R.Nox?"Nox":"Noxie"%> says, <span.nox>"We figured that since you're feeling sauced and snacky, you'd enjoy feeling this lovely little lady wriggling down your throat!"</span>
+<%-R.Nox?"Nox":"Noxy"%> says, <span.nox>"We figured that since you're feeling sauced and snacky, you'd enjoy feeling this lovely little lady wriggling down your throat!"</span>
 
 Your mouth goes completely dry.
 
@@ -244,27 +244,27 @@ You look nervously at the tiny mouse. She looks back at you hopefully.
 :: Oh, um, I don't... do that.
 But you're not a predator, you say. You don't eat people. Nor eggs, fish, or dairy, for that matter.
 
-<span.nikki>"Of course you don't,"</span> says <%-R.Nikki?"Nik":"Nikki"%>, <span.nikki>"That's actually why we're so interested."</span>
+<span.nikki>"Of course you don't,"</span> says <%-R.Nikki?"Nyx":"Nikki"%>, <span.nikki>"That's actually why we're so interested."</span>
 
-<%-R.Nox?"Nox":"Noxie"%> smirks, <span.nox>"There's nothing quite the thrill of like watching someone's first time!"</span>
+<%-R.Nox?"Nox":"Noxy"%> smirks, <span.nox>"There's nothing quite the thrill of like watching someone's first time!"</span>
 
-<span.nikki>"Especially you herbivores! You get so conflicted and twisted up over it inside..."</span> <%-R.Nikki?"Nik":"Nikki"%> adds, betraying <%-R.Nikki?"his":"her"%> own excitement with a blush. <span.nikki>"But at the end of the day, no one can resist a snack!"</span>
+<span.nikki>"Especially you herbivores! You get so conflicted and twisted up over it inside..."</span> <%-R.Nikki?"Nyx":"Nikki"%> adds, betraying <%-R.Nikki?"his":"her"%> own excitement with a blush. <span.nikki>"But at the end of the day, no one can resist a snack!"</span>
 
 * [[Um, I'd rather not...]]
 
 :: Um, I'd rather not...
-You're about to say you'd rather not, but <%-R.Nikki?"Nik":"Nikki"%> interrupts you.
+You're about to say you'd rather not, but <%-R.Nikki?"Nyx":"Nikki"%> interrupts you.
 
-<span.nikki>"Not to mention, our little friend here is perfectly and completely willing."</span> <%-R.Nikki?"Nik":"Nikki"%> shoots a glare at the mouse in <%-R.Nox?"Nox":"Noxie"%>'s paws. <span.nikki>"Isn't that right?"</span>
+<span.nikki>"Not to mention, our little friend here is perfectly and completely willing."</span> <%-R.Nikki?"Nyx":"Nikki"%> shoots a glare at the mouse in <%-R.Nox?"Nox":"Noxy"%>'s paws. <span.nikki>"Isn't that right?"</span>
 
 <span.mouse>"Yes, that's right! Ha ha!"</span> the mouse replies with a forced smile.
 
-<span.nox>"So, why not give it a try?"</span> asks <%-R.Nox?"Nox":"Noxie"%>, <span.nox>"A small, vulnerable thing like you may not get another chance before someone eats *you* all up!"</span> <%-R.Nox?"He":"She"%> brings the mouse girl up to your paws, gesturing for you to hold her. <span.nox>"Maybe just a little taste?"</span>
+<span.nox>"So, why not give it a try?"</span> asks <%-R.Nox?"Nox":"Noxy"%>, <span.nox>"A small, vulnerable thing like you may not get another chance before someone eats *you* all up!"</span> <%-R.Nox?"He":"She"%> brings the mouse girl up to your paws, gesturing for you to hold her. <span.nox>"Maybe just a little taste?"</span>
 
 * [[Examine mouse.]]
 
 :: Examine mouse.
-You hold your paws flat, and the mouse dutifully scampers from <%-R.Nox?"Nox":"Noxie"%>'s paws onto yours. She stands with her paws nervously behind her back, and continues to smile with only her teeth.
+You hold your paws flat, and the mouse dutifully scampers from <%-R.Nox?"Nox":"Noxy"%>'s paws onto yours. She stands with her paws nervously behind her back, and continues to smile with only her teeth.
 
 You haven't really seen such a small anthro up close before. Unsurprisingly, tinykind tend not to spend very much time around bigger folk, who could accidentally crush them with a single misstep, or, as you've seen, snatch them up for a quick snack.
 
@@ -273,7 +273,7 @@ You too have lived your whole life as a small, weak thing, desperately avoiding 
 * [[H-hello there, I'm Hollis.]]
 
 :: H-hello there, I'm Hollis.
-You introduce yourself to the mouse. She glances back at <%-R.Nikki?"Nik":"Nikki"%>, as if checking for permission to speak.
+You introduce yourself to the mouse. She glances back at <%-R.Nikki?"Nyx":"Nikki"%>, as if checking for permission to speak.
 
 <span.mouse>"H-hi!"</span> she replies, <span.mouse>"I'm Faith."</span> <% if (s.rescuedKaia) { %> *Faith*... The name sounds familiar. You try to remember where you've heard it before, but you're unable to.<% } %>
 
@@ -281,16 +281,16 @@ For just a second, your mind races with images of yourself as a predator. You ca
 
 You ask Faith if she wants to be eaten.
 
-Faith swallows and says, <span.mouse>"Yup, haha!!"</span> once again looking halfway over her shoulder at <%-R.Nikki?"Nik":"Nikki"%> for approval. <span.mouse>"Totally!"</span> You're pretty sure you get the picture.
+Faith swallows and says, <span.mouse>"Yup, haha!!"</span> once again looking halfway over her shoulder at <%-R.Nikki?"Nyx":"Nikki"%> for approval. <span.mouse>"Totally!"</span> You're pretty sure you get the picture.
 
 * [[I won't do it!]]
 
 :: I won't do it!
 You can't believe they lied to you. You tell the cats that you refuse to participate in something so barbaric as devouring a helpless mouse against her will.
 
-<%-R.Nox?"Nox":"Noxie"%> seems disappointed. <span.nox>"I guess there was always a possibility you'd say no. We can't force you, after all!"</span>
+<%-R.Nox?"Nox":"Noxy"%> seems disappointed. <span.nox>"I guess there was always a possibility you'd say no. We can't force you, after all!"</span>
 
-<%-R.Nikki?"Nik":"Nikki"%> snatches Faith back out of your paws, causing her to let out a startled squeak. The cat examines her coldly, and muses, <span.nikki>"I suppose there are other ways we could have our fun with her..."</span>
+<%-R.Nikki?"Nyx":"Nikki"%> snatches Faith back out of your paws, causing her to let out a startled squeak. The cat examines her coldly, and muses, <span.nikki>"I suppose there are other ways we could have our fun with her..."</span>
 
 Your eyes go wide. 
 
@@ -299,58 +299,58 @@ Your eyes go wide.
 :: You mean like torture??
 You recall terrible news stories of people doing hideous, awful things to micros, but not getting caught for lack of evidence. Once in middle school, someone dared you to search for "micro hard vore" on a school computer. You didn't actually see anything, but you were banned from the computer lab for a few weeks because of that.
 
-<%-R.Nikki?"Nik":"Nikki"%> looks back to you, <span.nikki>"Torture is such a strong word... But yeah, pretty much."</span>
+<%-R.Nikki?"Nyx":"Nikki"%> looks back to you, <span.nikki>"Torture is such a strong word... But yeah, pretty much."</span>
 
 That's horrible! you say.
 
-<span.nox>"Well,"</span> <%-R.Nox?"Nox":"Noxie"%> says, <span.nox>"my <%-R.Nikki?"brother":"sister"%> can be a little intense with <%-R.Nikki?"his":"her"%> food. But that's only if you decide not to partake yourself!"</span>
+<span.nox>"Well,"</span> <%-R.Nox?"Nox":"Noxy"%> says, <span.nox>"my <%-R.Nikki?"brother":"sister"%> can be a little intense with <%-R.Nikki?"his":"her"%> food. But that's only if you decide not to partake yourself!"</span>
 
 * [[I thought you said you weren't predators!]]
 * [[You're blackmailing me?!]]
 
 :: I thought you said you weren't predators!
-<span.nikki>"Not quite,"</span> says <%-R.Nikki?"Nik":"Nikki"%>.
+<span.nikki>"Not quite,"</span> says <%-R.Nikki?"Nyx":"Nikki"%>.
 
-<span.nox>"We only said we *preferred* to watch! Nyaha~!"</span> says <%-R.Nox?"Nox":"Noxie"%>.
+<span.nox>"We only said we *preferred* to watch! Nyaha~!"</span> says <%-R.Nox?"Nox":"Noxy"%>.
 
-<%-R.Nikki?"Nik":"Nikki"%> gently caresses Faith's cheek with <%-R.Nikki?"his":"her"%> paw. The mouse recoils slightly, but tries not to move too much. <%-R.Nikki?"He":"She"%> gives you an evil smile.
+<%-R.Nikki?"Nyx":"Nikki"%> gently caresses Faith's cheek with <%-R.Nikki?"his":"her"%> paw. The mouse recoils slightly, but tries not to move too much. <%-R.Nikki?"He":"She"%> gives you an evil smile.
 
 <span.nikki>"Oh, and don't try to stop us either,"</span> <%-R.Nikki?"he":"she"%> says, making <%-R.Nikki?"his":"her"%> sharp feline teeth visible between <%-R.Nikki?"his":"her"%> lips, <span.nikki>"My claws are a little sharp, and I'd hate to have an... unfortunate accident. You know how it is."</span>
 
 * [[You're blackmailing me?!]]
 
 :: You're blackmailing me?!
-<%-R.Nikki?"Nik":"Nikki"%> shakes <%-R.Nikki?"his":"her"%> head. <span.nikki>"Oh no, not blackmail! We're not *forcing* you to consume her."</span>
+<%-R.Nikki?"Nyx":"Nikki"%> shakes <%-R.Nikki?"his":"her"%> head. <span.nikki>"Oh no, not blackmail! We're not *forcing* you to consume her."</span>
 
-<span.nox>"Think of it as more of an opportunity to reduce potential harm! If you swallow her, she'll hardly even suffer a little!"</span> says <%-R.Nox?"Nox":"Noxie"%>.
+<span.nox>"Think of it as more of an opportunity to reduce potential harm! If you swallow her, she'll hardly even suffer a little!"</span> says <%-R.Nox?"Nox":"Noxy"%>.
 
 <span.nikki>"Whereas *we* can make no such promises!"</span>
 
 <span.nox>"But either way, she'll be in a belly. So really, you might as well, right?"</span>
 
-<%-R.Nikki?"Nik":"Nikki"%> glances toward the kitchen door, <span.nikki>"And you better decide quick, before anyone comes in."</span>
+<%-R.Nikki?"Nyx":"Nikki"%> glances toward the kitchen door, <span.nikki>"And you better decide quick, before anyone comes in."</span>
 
 * [[Shouldn't she get a say too?|Shouldn't she get a say too?]]
 
 :: Shouldn't she get a say too?
-<%-R.Nikki?"Nik":"Nikki"%> groans, <span.nikki>"Personifying your food never ends well..."</span>
+<%-R.Nikki?"Nyx":"Nikki"%> groans, <span.nikki>"Personifying your food never ends well..."</span>
 
-<span.nox>"No, no, they've got a point,"</span> says <%-R.Nox?"Nox":"Noxie"%>, <span.nox>"Little mouse, would you rather be eaten by Hollis or my sibling?"</span>
+<span.nox>"No, no, they've got a point,"</span> says <%-R.Nox?"Nox":"Noxy"%>, <span.nox>"Little mouse, would you rather be eaten by Hollis or my sibling?"</span>
 
-All eyes fall on Faith, who stands nervously atop <%-R.Nikki?"Nik":"Nikki"%>'s paw.
+All eyes fall on Faith, who stands nervously atop <%-R.Nikki?"Nyx":"Nikki"%>'s paw.
 
 <span.mouse>"Um... Well..."</span> the mouse hesitates, <span.mouse>"P-preferably neither?"</span>
 
-She can tell from the cats' expressions that this is not a satisfactory answer. <%-R.Nikki?"Nik":"Nikki"%> bares <%-R.Nikki?"his":"her"%> fangs, and uses a claw to tug your lips aside, exposing your flat, herbivorous teeth. <span.nikki>"Be honest, dear,"</span> <%-R.Nikki?"he":"she"%> says, <span.nikki>"Would you rather be at my mercy, or theirs?"</span>
+She can tell from the cats' expressions that this is not a satisfactory answer. <%-R.Nikki?"Nyx":"Nikki"%> bares <%-R.Nikki?"his":"her"%> fangs, and uses a claw to tug your lips aside, exposing your flat, herbivorous teeth. <span.nikki>"Be honest, dear,"</span> <%-R.Nikki?"he":"she"%> says, <span.nikki>"Would you rather be at my mercy, or theirs?"</span>
 
 Faith looks up at you nervously, and stammers, <span.mouse>"I-I'd feel safer if it was with you, Hollis? But I don't want you to feel responsible for um... what's going to happen to me... Sorry, but I guess I'll leave the choice it in your paws."</span>
 
-<span.nikki>"There, she's had her say,"</span> says <%-R.Nikki?"Nik":"Nikki"%>, <span.nikki>"Time to choose, Hollis. Are you gonna eat her or not?"</span>
+<span.nikki>"There, she's had her say,"</span> says <%-R.Nikki?"Nyx":"Nikki"%>, <span.nikki>"Time to choose, Hollis. Are you gonna eat her or not?"</span>
 
 * [[Hollis: Decide.]]
 
 :: Hollis: Decide.
-Your heart pounds. Should you swallow Faith yourself, and be directly responsible for digesting her? You'd live with the guilt of that deed for the rest of your life... On the other paw, would you let <%-R.Nikki?"Nik":"Nikki"%> have <%-R.Nikki?"his":"her"%> way, and risk letting her get painfully chewed and gored?
+Your heart pounds. Should you swallow Faith yourself, and be directly responsible for digesting her? You'd live with the guilt of that deed for the rest of your life... On the other paw, would you let <%-R.Nikki?"Nyx":"Nikki"%> have <%-R.Nikki?"his":"her"%> way, and risk letting her get painfully chewed and gored?
 
 <span.twinspeak>"Tick tock..."</span> the twins say simultaneously.
 
@@ -365,7 +365,7 @@ You feel like you're at the helm of a speeding trolley, and no matter what you d
 <% s.ateFaith = true; %>
 Okay, you say, heart pounding. As long as it means protecting her from greater harm, you'll do it. You'll swallow Faith, and she will be the first and last person you ever eat. You feel nauseous just thinking about it.
 
-<span.twinspeak>"Yaaaay!"</span> the cats cheer. <%-R.Nikki?"Nik":"Nikki"%> places Faith back into your paws, and says, <span.nikki>"Great choice!"</span>
+<span.twinspeak>"Yaaaay!"</span> the cats cheer. <%-R.Nikki?"Nyx":"Nikki"%> places Faith back into your paws, and says, <span.nikki>"Great choice!"</span>
 
 <span.mouse>"Thank you Hollis,"</span> Faith says, looking up at you. You look into her tiny eyes, and sense in them equal parts despair and gratitude. <span.mouse>"D-don't worry about me, I'll be fine. Just do what you have to do. I won't struggle much."</span> Her words do little to soothe you.
 
@@ -376,85 +376,85 @@ You've never tried swallowing something this large before, and you're afraid of 
 
 <span.nikki>"Don't worry, it's mostly instinct. The first step is a good condiment, to make her go down easier."</span>
 
-Before you can object, <%-R.Nox?"Nox":"Noxie"%> snatches Faith, carries her over to the fridge, and pulls open the door. <span.nox>"Let's see ... We've got apple butter, peach jam, ranch and barbecue sauce... Can horses even eat this stuff?"</span> <%-R.Nox?"he":"she"%> wonders, looking at the bottle.
+Before you can object, <%-R.Nox?"Nox":"Noxy"%> snatches Faith, carries her over to the fridge, and pulls open the door. <span.nox>"Let's see ... We've got apple butter, peach jam, ranch and barbecue sauce... Can horses even eat this stuff?"</span> <%-R.Nox?"he":"she"%> wonders, looking at the bottle.
 
-<span.nikki>"Let's do peach and barbecue!"</span> calls <%-R.Nikki?"Nik":"Nikki"%>.
+<span.nikki>"Let's do peach and barbecue!"</span> calls <%-R.Nikki?"Nyx":"Nikki"%>.
 
-<span.nox>"Roger that,"</span> replies <%-R.Nox?"Nox":"Noxie"%>.
+<span.nox>"Roger that,"</span> replies <%-R.Nox?"Nox":"Noxy"%>.
 
-* [[<%-R.Nox?"Nox":"Noxie"%>: Sauce.|Nox: Sauce.]]
+* [[<%-R.Nox?"Nox":"Noxy"%>: Sauce.|Nox: Sauce.]]
 
 :: Nox: Sauce.
-In a bowl, <%-R.Nikki?"Nik":"Nikki"%> mixes the jelly and barbecue sauce into a sweet brown mixture, with just a touch of olive oil. Dangling her by the tail, <%-R.Nox?"Nox":"Noxie"%> plunges Faith into the sauce. For two seconds, she scrambles and struggles frantically, until <%-R.Nox?"Nox":"Noxie"%> pulls her back out.
+In a bowl, <%-R.Nikki?"Nyx":"Nikki"%> mixes the jelly and barbecue sauce into a sweet brown mixture, with just a touch of olive oil. Dangling her by the tail, <%-R.Nox?"Nox":"Noxy"%> plunges Faith into the sauce. For two seconds, she scrambles and struggles frantically, until <%-R.Nox?"Nox":"Noxy"%> pulls her back out.
 
 <span.mouse>"Ack... E-ew..."</span> Faith hacks and wheezes, thoroughly coated with the sticky substance.
 
-<span.nikki>"Ooh, perfect! Now: hold your jaw open wide like this."</span> <%-R.Nikki?"Nik":"Nikki"%> gestures for you to drop your chin, and tilt your head back a little. You do so. <span.nikki>"Awesome. Now, here comes the mousie."</span>
+<span.nikki>"Ooh, perfect! Now: hold your jaw open wide like this."</span> <%-R.Nikki?"Nyx":"Nikki"%> gestures for you to drop your chin, and tilt your head back a little. You do so. <span.nikki>"Awesome. Now, here comes the mousie."</span>
 
-Before you can even pause to think about it, <%-R.Nox?"Nox":"Noxie"%> raises Faith, and drops her unceremoniously onto your tongue.
+Before you can even pause to think about it, <%-R.Nox?"Nox":"Noxy"%> raises Faith, and drops her unceremoniously onto your tongue.
 
 * [[Hollis: Nom.]]
 
 :: Hollis: Nom.
-The first thing you notice, naturally, is the taste. <%-R.Nikki?"Nik":"Nikki"%>'s sweet and tangy condiment combination is surprisingly delicious. It reminds you a little of the tiny vegan cocktail meatballs they serve on toothpicks at fancy events. It makes your mouth water.
+The first thing you notice, naturally, is the taste. <%-R.Nikki?"Nyx":"Nikki"%>'s sweet and tangy condiment combination is surprisingly delicious. It reminds you a little of the tiny vegan cocktail meatballs they serve on toothpicks at fancy events. It makes your mouth water.
 
-<%-R.Nikki?"Nik":"Nikki"%> sticks a paw in the sauce, and licks it off. <span.nikki>"Mmm! Good, right?"</span>
+<%-R.Nikki?"Nyx":"Nikki"%> sticks a paw in the sauce, and licks it off. <span.nikki>"Mmm! Good, right?"</span>
 
 The mass in your mouth hardly feels animate, until you feel Faith's legs twitch a little against your salivating tongue. Your senses are nearly overwhelmed by the feeling of having a living creature inside you. This is wrong. You're not a predator. It's so horribly wrong. And yet... It feels... normal? You almost want to swallow instinctively, but you resist.
 
-<%-R.Nox?"Nox":"Noxie"%> aims <%-R.Nox?"his":"her"%> phone camera into your mouth, and presses record.
+<%-R.Nox?"Nox":"Noxy"%> aims <%-R.Nox?"his":"her"%> phone camera into your mouth, and presses record.
 
-<%-R.Nikki?"Nik":"Nikki"%> asks, <span.nikki>"Now, before she goes down, you don't mind if we do some light teasing first, right? Trust me, frightening your prey really brings out the flavor."</span>
+<%-R.Nikki?"Nyx":"Nikki"%> asks, <span.nikki>"Now, before she goes down, you don't mind if we do some light teasing first, right? Trust me, frightening your prey really brings out the flavor."</span>
 
 You try to tell them no, but you can't speak with your mouth full. Failing that, you consider shaking your head, but you're worried it would disorient Faith.
 
-<span.nox>"Perfect,"</span> <%-R.Nox?"Nox":"Noxie"%> says, interpreting your silence as a yes.
+<span.nox>"Perfect,"</span> <%-R.Nox?"Nox":"Noxy"%> says, interpreting your silence as a yes.
 
-* [[<%-R.Nox?"Nox":"Noxie"%>: Taunt.|Nox: Tease.]]
+* [[<%-R.Nox?"Nox":"Noxy"%>: Taunt.|Nox: Tease.]]
 
 :: No. Final answer.
-No, you say. You just can't do it. You look sadly at Faith, and say that you're sorry, but she's in <%-R.Nikki?"Nik":"Nikki"%>'s paws now.
+No, you say. You just can't do it. You look sadly at Faith, and say that you're sorry, but she's in <%-R.Nikki?"Nyx":"Nikki"%>'s paws now.
 
 Faith forces a smile. <span.mouse>"That's okay Hollis, I forgive you. If you see my girlfriend, just promise you'll tell her what happened to me. She's a white mouse, and small, like me."</span>
 
 <% if (s.rescuedKaia) { %>You remember Kaia. Of course! How could you have forgotten?<% } %>
 
-<span.nikki>"Your loss,"</span> <%-R.Nikki?"Nik":"Nikki"%> says, clutching Faith by the middle, and drawing her toward <%-R.Nikki?"his":"her"%> lips, <span.nikki>"Well, let's get this show on the road!"</span>
+<span.nikki>"Your loss,"</span> <%-R.Nikki?"Nyx":"Nikki"%> says, clutching Faith by the middle, and drawing her toward <%-R.Nikki?"his":"her"%> lips, <span.nikki>"Well, let's get this show on the road!"</span>
 
-<span.nox>"Oh boy,"</span> <%-R.Nox?"Nox":"Noxie"%> gushes, <span.nox>"Can't wait! Nyah!"</span>
+<span.nox>"Oh boy,"</span> <%-R.Nox?"Nox":"Noxy"%> gushes, <span.nox>"Can't wait! Nyah!"</span>
 
-<span.nikki>"Don't worry, dear,"</span> <%-R.Nikki?"Nik":"Nikki"%> coos at Faith, baring <%-R.Nikki?"his":"her"%> fangs tenderly,  <span.nikki>"You'll hardly feel a thing."</span>
+<span.nikki>"Don't worry, dear,"</span> <%-R.Nikki?"Nyx":"Nikki"%> coos at Faith, baring <%-R.Nikki?"his":"her"%> fangs tenderly,  <span.nikki>"You'll hardly feel a thing."</span>
 
 * [[Cover your eyes.]]
 
 :: Cover your eyes. [checkpoint]
-It's too much to watch. You put your paws in front of your eyes. <%-R.Nox?"Nox":"Noxie"%> points <%-R.Nox?"his":"her"%> phone camera at Faith, and presses record.
+It's too much to watch. You put your paws in front of your eyes. <%-R.Nox?"Nox":"Noxy"%> points <%-R.Nox?"his":"her"%> phone camera at Faith, and presses record.
 
-<span.nikki>"Any last words, my ignoble morsel?"</span> asks <%-R.Nikki?"Nik":"Nikki"%>, grinning from ear to ear.
+<span.nikki>"Any last words, my ignoble morsel?"</span> asks <%-R.Nikki?"Nyx":"Nikki"%>, grinning from ear to ear.
 
-You hear Faith beg, <span.mouse>"N-<%-R.Nikki?"Mr. N-Nik":"Ms. N-Nikki"%>, it's not too late to let me go. I won't tell anyone about this, honest!"</span> Her tiny eyes staring deep at <%-R.Nikki?"Nik":"Nikki"%>'s, hoping to find just a hint of compassion within the carnivore.
+You hear Faith beg, <span.mouse>"N-<%-R.Nikki?"Mr. N-Nyx":"Ms. N-Nikki"%>, it's not too late to let me go. I won't tell anyone about this, honest!"</span> Her tiny eyes staring deep at <%-R.Nikki?"Nyx":"Nikki"%>'s, hoping to find just a hint of compassion within the carnivore.
 
-In response, <%-R.Nikki?"Nik":"Nikki"%> narrows <%-R.Nikki?"his":"her"%> eyes and begins to impatiently dangle Faith by the tail. <span.mouse>"O-ow... Please, you don't have to do this..."</span>
+In response, <%-R.Nikki?"Nyx":"Nikki"%> narrows <%-R.Nikki?"his":"her"%> eyes and begins to impatiently dangle Faith by the tail. <span.mouse>"O-ow... Please, you don't have to do this..."</span>
 
-<span.nox>"No,"</span> says <%-R.Nox?"Nox":"Noxie"%>, <span.nox>"But <%-R.Nikki?"he":"she"%> clearly really wants to! And I wanna watch. Nyaha!"</span>
+<span.nox>"No,"</span> says <%-R.Nox?"Nox":"Noxy"%>, <span.nox>"But <%-R.Nikki?"he":"she"%> clearly really wants to! And I wanna watch. Nyaha!"</span>
 
-<span.nikki>"Mmm, c'mere cutie..."</span> <%-R.Nikki?"Nik":"Nikki"%> purrs, drawing Faith closer and closer to <%-R.Nikki?"his":"her"%> lips. <span.nikki>"I wanna see what's inside of you..."</span> The mouse shudders and instinctively kicks a little as the cat places her tiny feet delicately onto <%-R.Nikki?"his":"her"%> outstretched tongue.
+<span.nikki>"Mmm, c'mere cutie..."</span> <%-R.Nikki?"Nyx":"Nikki"%> purrs, drawing Faith closer and closer to <%-R.Nikki?"his":"her"%> lips. <span.nikki>"I wanna see what's inside of you..."</span> The mouse shudders and instinctively kicks a little as the cat places her tiny feet delicately onto <%-R.Nikki?"his":"her"%> outstretched tongue.
 
 You shudder... It's too much to even listen to. You're anticipating the awful, horrible sound of a cat's mouth gorily eviscerating its prey. All the content warnings in the world couldn't prepare you for what's to come.
 
-* [[<%-R.Nikki?"Nik":"Nikki"%>: Chomp.|Nikki: Chomp.]] <%=T.CWI("?????")%>
+* [[<%-R.Nikki?"Nyx":"Nikki"%>: Chomp.|Nikki: Chomp.]] <%=T.CWI("?????")%>
 * [[Rescue her!!!|Rescue her!!!]]  <%=T.CWI("?????")%>
 
 :: Rescue her!!! [gore]
 <%=T.CWP("Blood", "Accidental mauling")%>
 
-In a last ditch effort to save Faith from a bloody fate, you lunge forward and try to snatch the mouse from <%-R.Nikki?"Nik":"Nikki"%>'s mouth.
+In a last ditch effort to save Faith from a bloody fate, you lunge forward and try to snatch the mouse from <%-R.Nikki?"Nyx":"Nikki"%>'s mouth.
 
 Reacting suddenly to this unexpected movement, <%-R.Nikki?"he":"she"%> instinctively bites down, sinking <%-R.Nikki?"his":"her"%> teeth into both you and Faith... It's, uh, not pleasant, and there's blood involved.
 
 Faith can only manage to squeak out, <span.mouse>"O-ow..."</span> before she falls unconscious.
 
-<%-R.Nox?"Nox":"Noxie"%>'s eyes go wide, as <%-R.Nox?"he":"she"%> stops the recording, and deletes it. <span.nox>"Th-that wasn't supposed to happen..."</span>
+<%-R.Nox?"Nox":"Noxy"%>'s eyes go wide, as <%-R.Nox?"he":"she"%> stops the recording, and deletes it. <span.nox>"Th-that wasn't supposed to happen..."</span>
 
 Seems like you're too little, too late. But who could blame you for trying?
 
@@ -467,45 +467,45 @@ Seems like you're too little, too late. But who could blame you for trying?
 :: Nikki: Chomp.
 <%=T.CWP("Soft vore", "Teasing")%>
 
-<%-R.Nikki?"Nik":"Nikki"%> delicately lifts <%-R.Nikki?"his":"her"%> chin, placing more of Faith's tiny body into <%-R.Nikki?"his":"her"%> mouth. <%-R.Nikki?"His":"Her"%> tongue is slick with spit, and occasionally pulses underneath <%-R.Nikki?"his":"her"%> prey, making all kinds of slobbery wet sounds.
+<%-R.Nikki?"Nyx":"Nikki"%> delicately lifts <%-R.Nikki?"his":"her"%> chin, placing more of Faith's tiny body into <%-R.Nikki?"his":"her"%> mouth. <%-R.Nikki?"His":"Her"%> tongue is slick with spit, and occasionally pulses underneath <%-R.Nikki?"his":"her"%> prey, making all kinds of slobbery wet sounds.
 
-<%-R.Nox?"Nox":"Noxie"%> watches with awe and excitement, while Faith lets out a series of uncomfortable grunts and cries. <span.nox>"Yesss,"</span> <%-R.Nox?"he":"she"%> says, <span.nox>"Ooh, I bet she's delicious!"</span>
+<%-R.Nox?"Nox":"Noxy"%> watches with awe and excitement, while Faith lets out a series of uncomfortable grunts and cries. <span.nox>"Yesss,"</span> <%-R.Nox?"he":"she"%> says, <span.nox>"Ooh, I bet she's delicious!"</span>
 
-<%-R.Nikki?"Nik":"Nikki"%> closes <%-R.Nikki?"his":"her"%> lips around Faith's tail, but does not swallow her yet. Instead, <%-R.Nikki?"he":"she"%> simply takes a moment to savor the taste. <span.nikki>"Mmmnn,"</span> <%-R.Nikki?"he":"she"%> moans, pressing Faith against the roof of <%-R.Nikki?"his":"her"%> mouth and swallowing saliva. <%-R.Nikki?"His":"Her"%> tongue tickles and wraps around the mouse.
+<%-R.Nikki?"Nyx":"Nikki"%> closes <%-R.Nikki?"his":"her"%> lips around Faith's tail, but does not swallow her yet. Instead, <%-R.Nikki?"he":"she"%> simply takes a moment to savor the taste. <span.nikki>"Mmmnn,"</span> <%-R.Nikki?"he":"she"%> moans, pressing Faith against the roof of <%-R.Nikki?"his":"her"%> mouth and swallowing saliva. <%-R.Nikki?"His":"Her"%> tongue tickles and wraps around the mouse.
 
 You peek at the scene from between your paws. There's... less teeth involved than you expected...
 
 * [[You're... not chewing her?|You're... not chewing her?]]
 
 :: You're... not chewing her?
-<span.nikki>"Chew?"</span> <%-R.Nikki?"Nik":"Nikki"%> asks, still speaking in a dignified manner despite <%-R.Nikki?"his":"her"%> mouth muffled with mouse, <span.nikki>"Whyever woul' I do tha'?"</span> As <%-R.Nikki?"he":"she"%> talks, <%-R.Nikki?"his":"her"%> grip on Faith loosens slightly. Faith flips onto her belly, and pokes her head out between <%-R.Nikki?"Nik":"Nikki"%>'s lips. She's clearly very frightened, but seemingly unharmed.
+<span.nikki>"Chew?"</span> <%-R.Nikki?"Nyx":"Nikki"%> asks, still speaking in a dignified manner despite <%-R.Nikki?"his":"her"%> mouth muffled with mouse, <span.nikki>"Whyever woul' I do tha'?"</span> As <%-R.Nikki?"he":"she"%> talks, <%-R.Nikki?"his":"her"%> grip on Faith loosens slightly. Faith flips onto her belly, and pokes her head out between <%-R.Nikki?"Nyx":"Nikki"%>'s lips. She's clearly very frightened, but seemingly unharmed.
 
 You say you thought they'd be, erm, mauling her.
 
-<span.nox>"You assumed..."</span> says <%-R.Nox?"Nox":"Noxie"%>.
+<span.nox>"You assumed..."</span> says <%-R.Nox?"Nox":"Noxy"%>.
 
-<span.nikki>"...And we shaw no need to correct,"</span> says <%-R.Nikki?"Nik":"Nikki"%>.
+<span.nikki>"...And we shaw no need to correct,"</span> says <%-R.Nikki?"Nyx":"Nikki"%>.
 
-<span.nox>"Besides,"</span> <%-R.Nox?"Nox":"Noxie"%> continues, <span.nox>"we're not bloodthirsty, sadistic monsters!"</span> says <%-R.Nox?"Nox":"Noxie"%>, <span.nox>"Just regular sadists. The only physical pain she'll experience is slowly and painfully digesting! Although she'll probably be unconscious for that... We mostly just like watching prey feel scared and helpless!"</span>
+<span.nox>"Besides,"</span> <%-R.Nox?"Nox":"Noxy"%> continues, <span.nox>"we're not bloodthirsty, sadistic monsters!"</span> says <%-R.Nox?"Nox":"Noxy"%>, <span.nox>"Just regular sadists. The only physical pain she'll experience is slowly and painfully digesting! Although she'll probably be unconscious for that... We mostly just like watching prey feel scared and helpless!"</span>
 
 Th-that's still pretty bad, you say.
 
-<%-R.Nox?"Nox":"Noxie"%> rolls <%-R.Nox?"his":"her"%> eyes, and points toward the dining room. <span.nox>"If you wanna be judgmental, the door's that way. Otherwise, shush. This is my favorite part!"</span>
+<%-R.Nox?"Nox":"Noxy"%> rolls <%-R.Nox?"his":"her"%> eyes, and points toward the dining room. <span.nox>"If you wanna be judgmental, the door's that way. Otherwise, shush. This is my favorite part!"</span>
 
-* [[<%-R.Nox?"Nox":"Noxie"%>: Tease.|Nox: Tease.]]
+* [[<%-R.Nox?"Nox":"Noxy"%>: Tease.|Nox: Tease.]]
 
 :: Nox: Tease.
-<%-R.Nox?"Nox":"Noxie"%> puts <%-R.Nox?"his":"her"%> eyes level with Faith's tiny face, still sticking out of <%- !s.ateFaith ? Nikki?"her brother's":"his sister's" : "your"%> mouth, and aims <%-R.Nox?"his":"her"%> camera at her. <span.nox>"So, little mousey, how do you feel about being digested?"</span>
+<%-R.Nox?"Nox":"Noxy"%> puts <%-R.Nox?"his":"her"%> eyes level with Faith's tiny face, still sticking out of <%- !s.ateFaith ? Nikki?"her brother's":"his sister's" : "your"%> mouth, and aims <%-R.Nox?"his":"her"%> camera at her. <span.nox>"So, little mousey, how do you feel about being digested?"</span>
 
 <span.mouse>"Uhm... Scared?"</span> the mouse responds.
 
-<%-R.Nox?"Nox":"Noxie"%> nods, <span>"Good, good! Your little body's gonna be dissolved inside of <%= !s.ateFaith?"my sister's":"this rabbit's"%> stomach, so a little fear is perfectly natural! What else?"</span>
+<%-R.Nox?"Nox":"Noxy"%> nods, <span>"Good, good! Your little body's gonna be dissolved inside of <%= !s.ateFaith?"my sister's":"this rabbit's"%> stomach, so a little fear is perfectly natural! What else?"</span>
 
 Faith looks sad now. <span.mouse>"I'm worried about my girlfriend Kaia. She's really strong, but I think <%-R.Kaia?"he":"she"%>'ll worry about me if I disappear..."</span>
 
-<span.nox>"Oh,"</span> <%-R.Nox?"Nox":"Noxie"%> says, <span.nox>"You're scared you might never see her again! How deliciously tragic, nyaha!"</span>
+<span.nox>"Oh,"</span> <%-R.Nox?"Nox":"Noxy"%> says, <span.nox>"You're scared you might never see her again! How deliciously tragic, nyaha!"</span>
 
-<span.nikki>"If it makes you feel any better,"</span> says <%-R.Nikki?"Nik":"Nikki"%>, <span.nikki>"at a party like this, there's pretty good odds your little friend was also eaten."</span>
+<span.nikki>"If it makes you feel any better,"</span> says <%-R.Nikki?"Nyx":"Nikki"%>, <span.nikki>"at a party like this, there's pretty good odds your little friend was also eaten."</span>
 
 * [[Umm...|Nox: Tease II]]
 
@@ -513,21 +513,21 @@ Faith looks sad now. <span.mouse>"I'm worried about my girlfriend Kaia. She's re
 
 This seems needlessly cruel, you think, but don't break your silence.
 
-<span.mouse>"That doesn't help at all? I'd actually really like to get out of here,"</span> She shifts her arms slightly, attempting to pull herself free. <%- !s.ateFaith?Nikki?"Nik's":"Nikki's":"Your" %> mouth instinctively sucks her backward. Your heart cries out, but you can't bring yourself to say anything.
+<span.mouse>"That doesn't help at all? I'd actually really like to get out of here,"</span> She shifts her arms slightly, attempting to pull herself free. <%- !s.ateFaith?Nikki?"Nyx's":"Nikki's":"Your" %> mouth instinctively sucks her backward. Your heart cries out, but you can't bring yourself to say anything.
 
-<%-R.Nikki?"Nik":"Nikki"%> smiles, <span.nikki>"Oh, you'll be 'coming out' <%= s.ateFaith?"sooner":"shooner"%> or later."</span>
+<%-R.Nikki?"Nyx":"Nikki"%> smiles, <span.nikki>"Oh, you'll be 'coming out' <%= s.ateFaith?"sooner":"shooner"%> or later."</span>
 
-<%-R.Nox?"Nox":"Noxie"%> laughs, <span.nox>"Sounds like someone's eager to get swallowed! Shall we?"</span>
+<%-R.Nox?"Nox":"Noxy"%> laughs, <span.nox>"Sounds like someone's eager to get swallowed! Shall we?"</span>
 
 Faith stammers, <span.mouse>"No, wait, just think about this-"</span>
 
-* [[<% if (s.ateFaith) %><%-R.Nikki?"Nik":"Nikki"%> and <%;%><%-R.Nox?"Nox":"Noxie"%>: Peer pressure.|Nox: Peer pressure.]]
+* [[<% if (s.ateFaith) %><%-R.Nikki?"Nyx":"Nikki"%> and <%;%><%-R.Nox?"Nox":"Noxy"%>: Peer pressure.|Nox: Peer pressure.]]
 
 :: Nox: Peer pressure.
 
-<span class="<%=s.ateFaith?'twinspeak':'nox'%>">Gulp! Gulp!"</span> <% if (s.ateFaith) %><%-R.Nikki?"Nik":"Nikki"%> and <%-R.Nox?"Nox":"Noxie"%> chant<% else %><%-R.Nox?"Nox":"Noxie"%> chants<%;%> excitedly. <% if (s.ateFaith) %>Your cheeks flush bright red. The cats stare at you expectantly. <%-R.Nikki?"Nik":"Nikki"%>'s claws extend, as if to remind you how easily <%-R.Nikki?"he":"she"%> and <%-R.Nikki?"his":"her"%> brother could overpower you.<% else %>You watch silently, your cheeks flushing bright red.<%;%> 
+<span class="<%=s.ateFaith?'twinspeak':'nox'%>">Gulp! Gulp!"</span> <% if (s.ateFaith) %><%-R.Nikki?"Nyx":"Nikki"%> and <%-R.Nox?"Nox":"Noxy"%> chant<% else %><%-R.Nox?"Nox":"Noxy"%> chants<%;%> excitedly. <% if (s.ateFaith) %>Your cheeks flush bright red. The cats stare at you expectantly. <%-R.Nikki?"Nyx":"Nikki"%>'s claws extend, as if to remind you how easily <%-R.Nikki?"he":"she"%> and <%-R.Nikki?"his":"her"%> brother could overpower you.<% else %>You watch silently, your cheeks flushing bright red.<%;%> 
 
-<span.mouse>"None of this is your fault, Hollis,"</span> Faith calls from inside of <%-s.ateFaith?"your":Nikki?"Nik's":"Nikki's"%> mouth, <span.mouse>" J-just please promise me, if you find Kaia, you'll tell her what happened to me. "</span>
+<span.mouse>"None of this is your fault, Hollis,"</span> Faith calls from inside of <%-s.ateFaith?"your":Nikki?"Nyx's":"Nikki's"%> mouth, <span.mouse>" J-just please promise me, if you find Kaia, you'll tell her what happened to me. "</span>
 
 You nod. Based on the cats' wild expressions, you can tell it's definitely too late to <% if (s.ateFaith) %>back out<% else %>stop them<%;%> now. At least, that's what you have to tell yourself to keep from being utterly appalled and disgusted by the thought of what you're about to <% if (s.ateFaith) %>do<% else %>see<%;%>.
 
@@ -540,21 +540,21 @@ You can't bear to look...
 <% if (s.ateFaith) %>
 * [[Hollis: Swallow.|Swallow Faith.]]
 <% else %>
-* [[<%-R.Nikki?"Nik":"Nikki"%>: Swallow.|Swallow Faith.]]
+* [[<%-R.Nikki?"Nyx":"Nikki"%>: Swallow.|Swallow Faith.]]
 <% ; %>
 
 :: Swallow Faith.
 <% if (!s.ateFaith) %>
-<%-R.Nikki?"Nik":"Nikki"%> carelessly flings <%-R.Nikki?"his":"her"%> head back. The squealing mouse goes careening into <%-R.Nikki?"his":"her"%> gullet. With a single gulp, she becomes nothing but a bulge beneath the black fur of the cat's throat. It's... fascinating to watch.
+<%-R.Nikki?"Nyx":"Nikki"%> carelessly flings <%-R.Nikki?"his":"her"%> head back. The squealing mouse goes careening into <%-R.Nikki?"his":"her"%> gullet. With a single gulp, she becomes nothing but a bulge beneath the black fur of the cat's throat. It's... fascinating to watch.
 <% else %>
 Reluctantly, you close your lips and tip your chin back. Faith's body gently glides down your tongue, and into the back of your throat. You choke on her briefly, but after a series of slow, considered gulps, you swallow her. It feels... fascinating.
 <% ; %>
 
-<span.nikki>"Mmm,"</span> <%-R.Nikki?"Nik":"Nikki"%> moans. <span.nox>"Oooh!"</span> <%-R.Nox?"Nox":"Noxie"%> giggles.
+<span.nikki>"Mmm,"</span> <%-R.Nikki?"Nyx":"Nikki"%> moans. <span.nox>"Oooh!"</span> <%-R.Nox?"Nox":"Noxy"%> giggles.
 
-You <%-s.ateFaith?"feel":"see"%> the bulge going down <%-s.ateFaith?"your":Nikki?"Nik's":"Nikki's"%> throat. <%-s.ateFaith?"It feels bizarre, yet weirdly satisfying, in a guilty pleasure kind of way.":"This is the first time you've watched something like this up close, although you've devoted an unusual amount of time to imagining it."%>
+You <%-s.ateFaith?"feel":"see"%> the bulge going down <%-s.ateFaith?"your":Nikki?"Nyx's":"Nikki's"%> throat. <%-s.ateFaith?"It feels bizarre, yet weirdly satisfying, in a guilty pleasure kind of way.":"This is the first time you've watched something like this up close, although you've devoted an unusual amount of time to imagining it."%>
 
-<span.nox>"Mind if I...?"</span> <%-R.Nox?"Nox":"Noxie"%>, clearly dripping with excitement and arousal, gently touches <%-s.ateFaith?"your":Nikki?"Nik's":"Nikki's"%> throat, as its undulations bring Faith's outline down, beneath <%-s.ateFaith?"your":Faith?"his":"her"%> collarbone, chest, and into <%-s.ateFaith?"your":Faith?"his":"her"%> stomach.
+<span.nox>"Mind if I...?"</span> <%-R.Nox?"Nox":"Noxy"%>, clearly dripping with excitement and arousal, gently touches <%-s.ateFaith?"your":Nikki?"Nyx's":"Nikki's"%> throat, as its undulations bring Faith's outline down, beneath <%-s.ateFaith?"your":Faith?"his":"her"%> collarbone, chest, and into <%-s.ateFaith?"your":Faith?"his":"her"%> stomach.
 
 <span.nox>"Oh yes... Good mousie..."</span> <%-R.Nox?"he":"she"%> murmurs.
 
@@ -562,12 +562,12 @@ You <%-s.ateFaith?"feel":"see"%> the bulge going down <%-s.ateFaith?"your":Nikki
 
 :: Swallow Faith II
 <% if (!s.ateFaith) %>
-<%-R.Nikki?"Nik":"Nikki"%> untucks and unbuttons <%-R.Nikki?"his":"her"%> shirt, to show off <%-R.Nikki?"his":"her"%> stomach. You politely avert your eyes, but you catch a glimpse of Faith kicking, and your perverted impulses get the better of you.
+<%-R.Nikki?"Nyx":"Nikki"%> untucks and unbuttons <%-R.Nikki?"his":"her"%> shirt, to show off <%-R.Nikki?"his":"her"%> stomach. You politely avert your eyes, but you catch a glimpse of Faith kicking, and your perverted impulses get the better of you.
 <% else %>
 The two cats look intently at your stomach.
 <%;%> You fix your eyes on the tiny squirming bulge beneath <%-s.ateFaith?"your own grey":"the cat's black"%> belly fur.
 
-<span.nikki>"Care for a  <%-s.ateFaith?"tummy rub":"feel"%>?"</span> <%-R.Nikki?"Nik":"Nikki"%> asks you.
+<span.nikki>"Care for a  <%-s.ateFaith?"tummy rub":"feel"%>?"</span> <%-R.Nikki?"Nyx":"Nikki"%> asks you.
 
 * [[N-no, I couldn't...]]
 * [[Y-yes please...|Tummy rubs.]]
@@ -580,13 +580,13 @@ You protest, trying very hard to pretend like you're not aroused by the <%-s.ate
 * [[I guess...|Tummy rubs.]]
 
 :: Tummy rubs.
-<%-s.ateFaith?"The cats stand over you":`You stand over ${Nikki?"Nik":"Nikki"}`%>, and rub the little bulge Faith makes in <%-s.ateFaith?"your":Nikki?"his":"her"%> stomach. It feels equal-parts taboo and thrilling, and <%-s.ateFaith?"they seem":`${Nikki?"he":"she"} seems`%> to feel the same, sighing happily.
+<%-s.ateFaith?"The cats stand over you":`You stand over ${Nikki?"Nyx":"Nikki"}`%>, and rub the little bulge Faith makes in <%-s.ateFaith?"your":Nikki?"his":"her"%> stomach. It feels equal-parts taboo and thrilling, and <%-s.ateFaith?"they seem":`${Nikki?"he":"she"} seems`%> to feel the same, sighing happily.
 
 In response to touch, Faith's movements get more and more intense. You despise yourself for taking pleasure from the mouse's discomfort. You feel as if you've utterly betrayed her... But, if she's going to be digested anyway, is it so wrong?
 
-<span.nikki>"Ahhh,"</span> <%-R.Nikki?"Nik":"Nikki"%> moans, clearly satisfied by how easily <%-R.Nikki?"he":"she"%>'s coerced you into <%-R.Nikki?"his":"her"%> dark deeds.
+<span.nikki>"Ahhh,"</span> <%-R.Nikki?"Nyx":"Nikki"%> moans, clearly satisfied by how easily <%-R.Nikki?"he":"she"%>'s coerced you into <%-R.Nikki?"his":"her"%> dark deeds.
 
-<span.nox>"Ooooh... She's gonna digest really nicely,"</span> <%-R.Nox?"Nox":"Noxie"%> coos. <span.nox>"That was a lot of fun, but maybe we should clear out of here before someone comes in."</span>
+<span.nox>"Ooooh... She's gonna digest really nicely,"</span> <%-R.Nox?"Nox":"Noxy"%> coos. <span.nox>"That was a lot of fun, but maybe we should clear out of here before someone comes in."</span>
 
 Just then, the door to the dining room swings open slightly.
 
@@ -595,7 +595,7 @@ Just then, the door to the dining room swings open slightly.
 :: Kaia: Enter.
 Suddenly, <%-s.rescuedKaia?"Kaia":"a white mouse"%> bursts into the room. <%-s.rescuedKaia ?"":"Kaia, you presume."%> <span.mouse>"There you are, you monsters,"</span> <%-R.Kaia?"he":"she"%> growls at the cats, <span.mouse>"I've been looking for you two for hours. Where's Faith?"</span>
 
-<%-R.Nox?"Nox":"Noxie"%> can't help but grin widely. <%-R.Nox?"He":"She"%> wordlessly points a claw toward <%-s.ateFaith?"your":Nikki?"Nik's":"Nikki's"%> stomach, clearly stifling a snicker. It squirms violently in response.
+<%-R.Nox?"Nox":"Noxy"%> can't help but grin widely. <%-R.Nox?"He":"She"%> wordlessly points a claw toward <%-s.ateFaith?"your":Nikki?"Nyx's":"Nikki's"%> stomach, clearly stifling a snicker. It squirms violently in response.
 
 Kaia blinks in shock. The white fur of her face seems to become puffy red with rage. She turns her tiny, powerful gaze toward you. <% if (s.rescuedKaia) %><span.mouse>"H-Hollis?"</span> blinks in disbelief.<% else %>She points an accusatory claw at you, and says, <span.mouse>"You! You're the rabbit from earlier!"</span><% ; %> She seems to be at a loss for words. <span.mouse>"H-how could you <%-s.ateFaith?"do this":"let this happen"%>?"</span>
 
@@ -604,15 +604,15 @@ Your heart feels ready to sink into the floor from guilt over what you <% if (s.
 * [[I... I'm sorry...|Sorry for eating your girlfriend...]]
 
 :: Sorry for eating your girlfriend...
-<span.nikki>"Oh-ho,"</span> laughs <%-R.Nikki?"Nik":"Nikki"%>, patting you on the back. <span.nikki>"This dear rabbit is hardly to blame. We basically forced them to <% if (s.ateFaith) %>eat her<% else %>watch us<% ; %>."</span>
+<span.nikki>"Oh-ho,"</span> laughs <%-R.Nikki?"Nyx":"Nikki"%>, patting you on the back. <span.nikki>"This dear rabbit is hardly to blame. We basically forced them to <% if (s.ateFaith) %>eat her<% else %>watch us<% ; %>."</span>
 
-<%-R.Nox?"Nox":"Noxie"%> adds with a smile, <span.nox>"Plus, they were extremely drunk at the time! If anything, we're the ones you should be angry at."</span>
+<%-R.Nox?"Nox":"Noxy"%> adds with a smile, <span.nox>"Plus, they were extremely drunk at the time! If anything, we're the ones you should be angry at."</span>
 
 Tears begin to stream down Kaia's face, and for a moment, <%-R.Kaia?"he":"she"%> is silent. Expressionless. <span.mouse>"I... I guess this was always going to one of us sooner or later..."</span> She covers her face, still sobbing, and cries out, <span.mouse>"Oh, why on earth did I bring her to a place like this??"</span>
 
-<%-R.Nox?"Nox":"Noxie"%> helpfully jumps in, <span.nox>"Is it because your youthful sense of invulnerability, combined with a general sense of dissatisfaction toward the world, causes you to seek out self-destructive thrills?"</span>
+<%-R.Nox?"Nox":"Noxy"%> helpfully jumps in, <span.nox>"Is it because your youthful sense of invulnerability, combined with a general sense of dissatisfaction toward the world, causes you to seek out self-destructive thrills?"</span>
 
-Kaia stares at <%-R.Nox?"him":"her"%>, baffled, and dries her tears on her arm. After only a second of deliberation, <%-R.Kaia?"he":"she"%> points a claw at <%-s.ateFaith?"you":Nikki?"Nik":"Nikki"%>. <span.mouse>"You. You disgusting, nauseous carnivore. If you have any humanity left, swallow me, and reunite me with my Faith."</span>
+Kaia stares at <%-R.Nox?"him":"her"%>, baffled, and dries her tears on her arm. After only a second of deliberation, <%-R.Kaia?"he":"she"%> points a claw at <%-s.ateFaith?"you":Nikki?"Nyx":"Nikki"%>. <span.mouse>"You. You disgusting, nauseous carnivore. If you have any humanity left, swallow me, and reunite me with my Faith."</span>
 
 * [[Y-you wanna be eaten too?]]
 
@@ -620,36 +620,36 @@ Kaia stares at <%-R.Nox?"him":"her"%>, baffled, and dries her tears on her arm. 
 <span.mouse>"I don't *want* to,"</span> says Kaia, resolutely, <span.mouse>"But she's all I have in the world. If she's going to be digested, I'd do anything to comfort her in her last moments."</span>
 
 <% if (s.ateFaith) { %> 
-You feel really conflicted at this request, but <%-R.Nikki?"Nik":"Nikki"%> and <%-R.Nox?"Nox":"Noxie"%> both look at you expectantly.
+You feel really conflicted at this request, but <%-R.Nikki?"Nyx":"Nikki"%> and <%-R.Nox?"Nox":"Noxy"%> both look at you expectantly.
 
-<span.nikki>"I mean,"</span> says <%-R.Nikki?"Nik":"Nikki"%>, <span.nikki>"You did eat her girlfriend..."</span>
+<span.nikki>"I mean,"</span> says <%-R.Nikki?"Nyx":"Nikki"%>, <span.nikki>"You did eat her girlfriend..."</span>
 
-<span.nox>"After doing something so horrible, awful, and immoral... it's really the least you could do,"</span> says <%-R.Nox?"Nox":"Noxie"%>.
+<span.nox>"After doing something so horrible, awful, and immoral... it's really the least you could do,"</span> says <%-R.Nox?"Nox":"Noxy"%>.
 
 Alright, you say, you get it. You nod at Kaia, and lift her up into your paws. A-are you ready? you ask.
 
 Kaia smiles weakly, <span.mouse>"Ready as I'll ever be."</span> 
 <% } else { %>
-Without even another word, <%-R.Nikki?"Nik":"Nikki"%> snatches Kaia up, and starts bringing her toward <%-R.Nikki?"his":"her"%> mouth. <span.nikki>"More food? Sure, whatever,"</span> smiles the cat.
+Without even another word, <%-R.Nikki?"Nyx":"Nikki"%> snatches Kaia up, and starts bringing her toward <%-R.Nikki?"his":"her"%> mouth. <span.nikki>"More food? Sure, whatever,"</span> smiles the cat.
 
 <span.mouse>"Nngh-"</span>  Kaia says, squirming slightly, <span.mouse>"I um- maybe had a few more things I wanted to say first..."</span>
 
-<%-R.Nikki?"Nik":"Nikki"%> does not slow down, and only continues raising the mouse toward <%-R.Nikki?"his":"her"%> lips.
+<%-R.Nikki?"Nyx":"Nikki"%> does not slow down, and only continues raising the mouse toward <%-R.Nikki?"his":"her"%> lips.
 
 <span.mouse>"This was kind of a dramatic moment for me- but- urgh, fine."</span> She turns to you, and says simply, <span.mouse>"<% if (s.rescuedMouse) %>Goodbye, Hollis, thanks for everything.<% else %>Goodbye, rabbit. Thanks for nothing.<%;%>"</span>
 <% } %>
 
-* [[<%-s.ateFaith?"Hollis":Nikki?"Nik":"Nikki"%>: Eat Kaia.|Pred: Eat Kaia.]]
+* [[<%-s.ateFaith?"Hollis":Nikki?"Nyx":"Nikki"%>: Eat Kaia.|Pred: Eat Kaia.]]
 
 :: Pred: Eat Kaia.
 
-<%-s.ateFaith?"You gently bring":`${Nikki?"Nik":"Nikki"} swiftly brings`%> Kaia to <%-s.ateFaith?"your":Nikki?"his":"her"%> lips, and <%-s.ateFaith?"place":"places"%> her onto <%-s.ateFaith?"your":Nikki?"his":"her"%> tongue. She slides down it intently.
+<%-s.ateFaith?"You gently bring":`${Nikki?"Nyx":"Nikki"} swiftly brings`%> Kaia to <%-s.ateFaith?"your":Nikki?"his":"her"%> lips, and <%-s.ateFaith?"place":"places"%> her onto <%-s.ateFaith?"your":Nikki?"his":"her"%> tongue. She slides down it intently.
 
-Strangely, the mouse's expression now looks much more determined, and less resigned to her fate. <span.mouse>"Sorry about this!"</span> <%-R.Kaia?"he":"she"%> shouts, <span.mouse>"This is gonna suck for the both of us!"</span> Steadying her hind paws on <%-s.ateFaith?"your":Nikki?"Nik's":"Nikki's"%> slobbery tongue, <%-R.Kaia?"he":"she"%> leaps.
+Strangely, the mouse's expression now looks much more determined, and less resigned to her fate. <span.mouse>"Sorry about this!"</span> <%-R.Kaia?"he":"she"%> shouts, <span.mouse>"This is gonna suck for the both of us!"</span> Steadying her hind paws on <%-s.ateFaith?"your":Nikki?"Nyx's":"Nikki's"%> slobbery tongue, <%-R.Kaia?"he":"she"%> leaps.
 
-<%-s.ateFaith?"You only have":`${Nikki?"Nik":"Nikki"} only has`%> a moment to react, before Kaia jumps and grabs hold of <%-s.ateFaith?"your":Nikki?"his":"her"%> uvula, in an attempt to induce vomiting. <%-s.ateFaith?"You choke and gag":"The cat chokes and gags"%> in response. 
+<%-s.ateFaith?"You only have":`${Nikki?"Nyx":"Nikki"} only has`%> a moment to react, before Kaia jumps and grabs hold of <%-s.ateFaith?"your":Nikki?"his":"her"%> uvula, in an attempt to induce vomiting. <%-s.ateFaith?"You choke and gag":"The cat chokes and gags"%> in response. 
 
-* [[<%-s.ateFaith?"Oww! Getoutgetout!":`${Nikki?"Nik":"Nikki"}: Gulp.`%>|Pred: Force Kaia down.]]
+* [[<%-s.ateFaith?"Oww! Getoutgetout!":`${Nikki?"Nyx":"Nikki"}: Gulp.`%>|Pred: Force Kaia down.]]
 
 :: Pred: Force Kaia down.
 
@@ -658,20 +658,20 @@ You groan with pain and discomfort. Your brain tells you should abide with her g
 
 Is it because you're a predator now? Is it just instinct? Either way, your mouth won't let her go. Your throat repeatedly gulps and glrks, trying to get her down. You shake your head wildly, even as Kaia clings to the back of your throat.
 <% else %>
-<span.nikki>"Ack! You little shit!"</span> <%-R.Nikki?"Nik":"Nikki"%> growls, whipping <%-R.Nikki?"his":"her"%> head around, hoping to dislodge the mouse. <span.nikki>"I can't believe you thought that would work on me... The insolence!"</span>
+<span.nikki>"Ack! You little shit!"</span> <%-R.Nikki?"Nyx":"Nikki"%> growls, whipping <%-R.Nikki?"his":"her"%> head around, hoping to dislodge the mouse. <span.nikki>"I can't believe you thought that would work on me... The insolence!"</span>
 <%;%>
 
-Soon, Kaia loses her grip. <%-R.Nox?"Nox":"Noxie"%> zooms the camera into <%-s.ateFaith?"your":Nikki?"Nik's":"Nikki's"%> mouth, and watches as <%-R.Kaia?"he":"she"%> is successfully dislodged, and sent plummeting into <%-s.ateFaith?"your":"that"%> slick gullet.
+Soon, Kaia loses her grip. <%-R.Nox?"Nox":"Noxy"%> zooms the camera into <%-s.ateFaith?"your":Nikki?"Nyx's":"Nikki's"%> mouth, and watches as <%-R.Kaia?"he":"she"%> is successfully dislodged, and sent plummeting into <%-s.ateFaith?"your":"that"%> slick gullet.
 
 <span.mouse>"D-dammit..."</span> Kaia sighs, struggling no further.
 
-* [[<%-s.ateFaith?"Hollis":Nikki?"Nik":"Nikki"%>: Swallow.|Pred: Swallow Kaia.]]
+* [[<%-s.ateFaith?"Hollis":Nikki?"Nyx":"Nikki"%>: Swallow.|Pred: Swallow Kaia.]]
 <% ; %>
 
 :: Pred: Swallow Kaia.
-<%-s.ateFaith?"You do":`${Nikki?"Nik":"Nikki"} does`%> that. <%-s.ateFaith?"You finish":`${Nikki?"He":"She"} finishes`%> the deed with only a few swallows, then <%-s.ateFaith?"open your":`opens ${Nikki?"his":"her"}`%> mouth with a sigh. <% if (s.ateFaith) %>You feel like you're getting the hang of predation, awful though it may be.<% else %><%-R.Nikki?"Nik":"Nikki"%> smiles, and caresses <%-R.Nikki?"his":"her"%> throat, neckbone, then stomach with satisfaction."<%;%>
+<%-s.ateFaith?"You do":`${Nikki?"Nyx":"Nikki"} does`%> that. <%-s.ateFaith?"You finish":`${Nikki?"He":"She"} finishes`%> the deed with only a few swallows, then <%-s.ateFaith?"open your":`opens ${Nikki?"his":"her"}`%> mouth with a sigh. <% if (s.ateFaith) %>You feel like you're getting the hang of predation, awful though it may be.<% else %><%-R.Nikki?"Nyx":"Nikki"%> smiles, and caresses <%-R.Nikki?"his":"her"%> throat, neckbone, then stomach with satisfaction."<%;%>
 
-Soon, Kaia is inside <%-s.ateFaith?"you":Nikki?"Nik":"Nikki"%>, alongside Faith. You <%-s.ateFaith?"feel":"see"%> little movements inside <%-s.ateFaith?"your":Nikki?"Nik's":"Nikki's"%> stomach, but they settle down quickly, with a dramatic sense of finality. <%-R.Nox?"Nox":"Noxie"%> keeps <%-R.Nox?"his":"her"%> phone camera pointed at the little bulge for several seconds, then stops the recording.
+Soon, Kaia is inside <%-s.ateFaith?"you":Nikki?"Nyx":"Nikki"%>, alongside Faith. You <%-s.ateFaith?"feel":"see"%> little movements inside <%-s.ateFaith?"your":Nikki?"Nyx's":"Nikki's"%> stomach, but they settle down quickly, with a dramatic sense of finality. <%-R.Nox?"Nox":"Noxy"%> keeps <%-R.Nox?"his":"her"%> phone camera pointed at the little bulge for several seconds, then stops the recording.
 
 You're completely silent, as your mind processes and replays the heartbreaking events that just unfolded before you. 
 
@@ -681,20 +681,20 @@ You're completely silent, as your mind processes and replays the heartbreaking e
 
 Two mice—two *people* who would have otherwise lived long, fulfilling lives—have been devoured, <%-s.ateFaith?"*by you*, even when you could have stopped it":"and you did nothing to stop it"%>. You feel ready to vomit, either from the unspeakable loss you've been made complicit in, or possibly from the amount of pretzels and vodka filling your stomach.
 
-Finally, <%-R.Nox?"Nox":"Noxie"%> stops recording on <%-R.Nox?"his":"her"%> phone, and breaks the silence. <span.nox>"Goodness,"</span> <%-R.Nox?"he":"she"%> says, wearing a satisfied grin from ear-to-ear, <span.nox>"That was soo hot!"</span>
+Finally, <%-R.Nox?"Nox":"Noxy"%> stops recording on <%-R.Nox?"his":"her"%> phone, and breaks the silence. <span.nox>"Goodness,"</span> <%-R.Nox?"he":"she"%> says, wearing a satisfied grin from ear-to-ear, <span.nox>"That was soo hot!"</span>
 
-<%-R.Nikki?"Nik":"Nikki"%> pats <%-s.ateFaith?"your":Nikki?"his":"her"%> gut, and nods, <span.nikki>"Yes, I enjoyed it greatly too."</span> You can't muster words to describe how apalled you are by their nonchalant demeanor.
+<%-R.Nikki?"Nyx":"Nikki"%> pats <%-s.ateFaith?"your":Nikki?"his":"her"%> gut, and nods, <span.nikki>"Yes, I enjoyed it greatly too."</span> You can't muster words to describe how apalled you are by their nonchalant demeanor.
 
 * [[Um, what now?]]
 
 :: Um, what now?
 You feel equal parts nauseated, empowered, and guilty. Mostly, you feel gripped by a distinct sense of anti-climax. You ask what happens now.
 
-<%-R.Nox?"Nox":"Noxie"%> replies, <span.nox>"Now, the mousies digest! They'll probably keep kicking for around 30 minutes, and then they'll settle down into a cute little <%-s.ateFaith?"rabbit":"cat"%> poop"</span>
+<%-R.Nox?"Nox":"Noxy"%> replies, <span.nox>"Now, the mousies digest! They'll probably keep kicking for around 30 minutes, and then they'll settle down into a cute little <%-s.ateFaith?"rabbit":"cat"%> poop"</span>
 
 You ask, is it weird that after all that, you're <%-s.ateFaith?"still":"feeling sort of"%> hungry?
 
-<span.nikki>"Nah, perfectly normal. C'mon, we'll walk you to Pizza Shack,"</span> says <%-R.Nikki?"Nik":"Nikki"%>.
+<span.nikki>"Nah, perfectly normal. C'mon, we'll walk you to Pizza Shack,"</span> says <%-R.Nikki?"Nyx":"Nikki"%>.
 
 * [[Back to the living room.]]
 
@@ -719,9 +719,9 @@ You smile nervously and explain that you were really drunk at the time, and real
 :: Help! She's eating me!
 You call out for help, but your cries fall on deaf ears. Both cats are just watching eagerly. <span.nikki>"Sorry Hol, but it's quite uncouth to break a promise to a gentlewoman."</span>
 
-Ivy finishes wrapping you, until only your head remains. <%-R.Nikki?"Nik":"Nikki"%> observes the skill and grace with which <%-R.Nikki?"he":"she"%> constricts you, and murmurs, <span.nikki>"Ooh, good form!"</span>
+Ivy finishes wrapping you, until only your head remains. <%-R.Nikki?"Nyx":"Nikki"%> observes the skill and grace with which <%-R.Nikki?"he":"she"%> constricts you, and murmurs, <span.nikki>"Ooh, good form!"</span>
 
-<span.nox>"Very true,"</span> <%-R.Nox?"Nox":"Noxie"%> replies.
+<span.nox>"Very true,"</span> <%-R.Nox?"Nox":"Noxy"%> replies.
 
 <span.ivy>"Sorry again,,,"</span> Ivy says.
 
@@ -755,7 +755,7 @@ You recall what you were taught in Sunday school about Circlearianism. About how
 
 :: Do you think we'll see each other again? [vore mousestory]
 
-<%= s.ateFaith?"Hollis":Nikki?"Nik":"Nikki"%>'s stomach glorps and tightens around you.
+<%= s.ateFaith?"Hollis":Nikki?"Nyx":"Nikki"%>'s stomach glorps and tightens around you.
 
 You ask, <span.mouse>"Do you think we'll see each other again?"</span>
 

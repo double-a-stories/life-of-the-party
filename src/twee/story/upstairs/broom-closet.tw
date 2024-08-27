@@ -92,11 +92,11 @@ You bang on the door trying to get someone's attention, but with the loud music 
 :: Epilogue: Broom Closet Ending. [morning]
 Sure, why not.
 
-Elsewhere in the house, the morning sun comes blazing through the windows, and lands warmly on the cream-colored fur of a horse, lying in bed while her boyfriend snores loudly next to her. Lacey Armstrong stretches and yawns as she climbs out of bed, her guts filled with the digested remains of a guinea pig. Specifically, the remains of your friend, a guinea pig named Reese.
+Elsewhere in the house, the morning sun comes blazing through the windows, and lands warmly on the cream-colored fur of a horse, lying in bed while <%-R.Lacey?"his":"her"%> <%-R.Clif?"boyfriend":"girlfriend"%> snores loudly next to <%-R.Lacey?"him":"her"%>. Lacey Armstrong stretches and yawns as <%-R.Lacey?"he":"she"%> climbs out of bed, <%-R.Lacey?"his":"her"%> guts filled with the digested remains of a guinea pig. Specifically, the remains of your friend, a guinea pig named Reese.
 
-Lacey enters the hallway, and opens the broom closet to grab some clean bedsheets. She blinks groggily, as her brain takes a moment to register the unexpected presence of a gray rabbit, curled up and sleeping on the floor.
+Lacey enters the hallway, and opens the broom closet to grab some clean bedsheets. <%-R.Lacey?"He":"She"%> blinks groggily, as <%-R.Lacey?"his":"her"%> brain takes a moment to register the unexpected presence of a gray rabbit, curled up and sleeping on the floor.
 
-She laughs. "Wait a minute, is that... Hollis?"
+<%-R.Lacey?"He":"She"%> laughs. "Wait a minute, is that... Hollis?"
 
 * [[Hollis: Wake up.]]
 
@@ -107,9 +107,9 @@ Instinctually, you try to leap to your feet and escape, but Lacey lightly places
 
 "Sorry, can't have you running off now. Usually I'd appreciate some breakfast, but I'm kinda full right now..."
 
-You breathe a sigh of relief, as you realize she's not going to eat you. Then, you hear a German shepherd come out into the hall, wearing nothing but his boxers. "Hey Lacey," he says rubbing his eyes, "who ya talking to?"
+You breathe a sigh of relief, as you realize <%-R.Lacey?"he":"she"%>'s not going to eat you. Then, you hear a German shepherd come out into the hall, wearing nothing but <%-R.Clif?"his":"her"%> boxers. "Hey Lacey," <%-R.Clif?"he":"she"%> says rubbing <%-R.Clif?"his":"her"%> eyes, "who ya talking to?"
 
-Lacey smirks as the dog notices you, and says, "...My *boyfriend* on the other hand, would absolutely *love* a taste!"
+Lacey smirks as the dog notices you, and says, "...My *<%-R.Clif?"boyfriend":"girlfriend"%>* on the other hand, would absolutely *love* a taste!"
 
 #### The End.
 
