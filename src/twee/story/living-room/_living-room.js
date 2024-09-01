@@ -26,7 +26,7 @@ party.danceLiterals = [
   `A lioness whispers to her friend, "Did you know there's a rabbit here?" They snicker. "Woah. Do you think it has a vore fetish?"`,
   `You see a cow boy eagerly following a lioness out of the room. They both seem quite excited.`,
   `There's a slight lull. A slightly chubby owl notices you from across the room and begins licking her beak.`,
-  `A **tall black wolf** in a scarf and a flannel shirt brought an acoustic guitar to the party, and is noodling on it with an deeply thoughtful expression.`,
+  `A **black wolf** in a scarf and flannel shirt is noodling on an acoustic guitar with and thoughtful expression. <span.byron>"Hmph."</span>`,
   `A slow-jam by the R&B duo, Thumper & Bang. You consider offering to dance with one of the guys around you, but most are several feet taller than you.`,
   `A green anaconda wags her tail in time with the music, and accidentally trips two people. "Oh, sorry!" she stammers, ",,,Sorry again!"`,
   `Tails wag and paws pump in the air as the subwoofer wubs and dubs the bass-drop of that one dubstep song, yet again. **Is the playlist looping?**`,
@@ -92,7 +92,7 @@ party.advanceState = () => {
   if (text.includes("in a green jacket")) {
     story.state.seenBasil = true;
   }
-  if (text.includes("tall black wolf")) {
+  if (text.includes("black wolf")) {
     story.state.seenByron = true;
   }
   if (text.includes("punch")) {

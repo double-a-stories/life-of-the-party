@@ -1,11 +1,11 @@
 :: Look at wolf. [checkpoint]
 
-A black-furred wolf, about six feet tall, wearing in a stylish scarf and a checkered red flannel shirt. <%-R.Byron?"He":"She"%>'s sitting aloofly on a couch, and serenading the party with an acoustic guitar.
+A black-furred wolf, about six and a half feet tall, wearing a stylish scarf and a checkered red flannel shirt. <%-R.Byron?"He":"She"%>'s sitting aloofly on a couch, and serenading the party with a guitar.
 
 * [[Talk to <%-R.Byron?"him":"her"%>.|Talk to Byron.]]</a>
 * [[Go back.|Dance a little.]]
 
-<%=T.CWP("Blood drinking", "Rape themes", "Nonconsensual vore", "Asphyxiation")%>
+<%=T.CWP("Rape", "Blood", "Misgendering", "Incel ideology")%>
 <%= Rule63.getRule63Message(Rule63.Gender.Male) %>
 
 :: Talk to Byron.
