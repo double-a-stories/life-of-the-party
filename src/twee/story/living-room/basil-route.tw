@@ -1,3 +1,12 @@
+<!--
+Basil is a jocky track and field star who went to high school with you.
+He's hosting the party; this is his house. You know him through Lacey, his younger sister and mathlete.
+His boyfriend(?) is Gus the Labrador who says "dude" a bunch.
+
+TODO: You should be able to have sex with Basil. Let's commit further to him being a trans man.
+The flirting here is kinda awkward too, so let's make that more natural...
+
+-->
 :: Wink back at the horse. [checkpoint]
 <% StoryFlags.set("talkedToBasil"); %>
 
@@ -122,7 +131,7 @@ You politely excuse yourself. The horse shoots you finger-guns as you leave. You
 * <a0 data-passage="The Foyer.">Go back to the foyer.</a>
 
 :: So, how's college?
-"It's going alright," <%-R.Basil?"he":"she"%> says, "West Nexus offered me a sports scholarship, but I wanted to stay closer to home, so I wound up at ZSU instead. Where are you going again?"
+"S'going alright," <%-R.Basil?"he":"she"%> says, "West Nexus offered me a sports scholarship, but I wanted to stay closer to home, so I wound up at ZSU instead. Sports medicine. Where are you going again?"
 
 * [[I dropped out.|...I'm not really sure yet.]]
 * [[...I'm not really sure yet.]]
