@@ -1,7 +1,7 @@
 :: Open the door. [checkpoint]
 You swing open the door to reveal a darkly lit bedroom... Fairy lights, a Mathletes trophy, a high-end Mcintosh Pro workstation, a big bottle of lube, and a bigger bottle of pepto bizmol. A ton of empty energy drink cans called "FINAL BOSS". Apparently apple-flavored.
 
-On the edge of the bed sits a huge, chubby, cream-colored <%-R.Lacey?"stallion":"mare"%>, sitting naked. <%-R.Lacey?"He":"She"%> is the tallest anthro you've ever seen, period. <%-R.Lacey?"His":"Her"%> beautiful golden mane is decorated with silver ribbons, and <%-R.Lacey?"his":"her"%> snout is perched with nerdy round glasses.  <%-R.Lacey?"His":"Her"%> mouth is stuffed, and there's an enormous bulge in <%-R.Lacey?"his":"her"%> throat.
+On the edge of the bed sits a huge, chubby, cream-colored <%-R.Lacey?"stallion":"mare"%>, sitting naked. <%-R.Lacey?"He":"She"%> is the tallest anthro you've ever seen in your life, and easily dwarfs you without even standing. <%-R.Lacey?"His":"Her"%> beautiful golden mane is decorated with silver ribbons, and <%-R.Lacey?"his":"her"%> snout is perched with nerdy round glasses.  <%-R.Lacey?"His":"Her"%> mouth is stuffed, and there's an enormous bulge in <%-R.Lacey?"his":"her"%> throat.
 
 Beside <%-R.Lacey?"him":"her"%> sits a similarly robust German Shepherd, gently groping the <%-R.Lacey?"stallion":"mare"%>'s bulging neck, and the bulge in <%-R.Clif?"his":"her"%> own <%-R.Clif?"boxers":"panties"%>.
 
@@ -10,13 +10,6 @@ Beside <%-R.Lacey?"him":"her"%> sits a similarly robust German Shepherd, gently 
 "Hrgphm?" grunts the <%-R.Lacey?"stallion":"mare"%>, with a glimmer of familiarity.
 
 Their eyes immediately fix on you in surprise. It looks like you're interrupting two preds in the middle of a meal. Oh fuck oh god.
-
-* [[...Lacey?]]
-* [[Run.]]
-
-:: Run.
-
-There's no running from a boss battle!
 
 * [[...Lacey?]]
 
@@ -44,14 +37,34 @@ Your friend is being swallowed against <%-R.Reese?"his":"her"%> will, before you
 
 "Holly, wha' are you doing here?" Lacey asks.
 
-
 "Hollis," Reese calls, as <%-R.Reese?"he":"she"%> slowly disappears further into the <%-R.Lacey?"stallion":"mare"%>'s slick pink gullet. "Don't worry about me! I'll be fi-mmph!" <%-R.Reese?"His":"Her"%> voice becomes muffled as Lacey gulps hard, and pulls Reese's head fully inside <%-R.Lacey?"his":"her"%> mouth.
 
 The dog stands up, and towers over you. Your eensy heart pounds inside your teensy chest.
 
+<%= story.render("Lacey battle") %> <!-- [[Lacey battle]] -->
+
+:: Lacey battle
+
 What will you do?
 
-* [[Attack Lacey!!]]
+* [[Attack!!]]
+* [[Item.]]
+* [[Run.]]
+
+:: Item.
+You're not carrying anything. Well, nothing useful.
+
+<% if (StoryFlags.isSet("creepedDrawers")) { %>
+If only you'd brought that dildo with you...
+<% } %>
+
+<%= story.render("Lacey battle") %>
+
+:: Run.
+
+<%= story.render("Lacey battle") %>
+
+There's no running from a boss battle!
 
 :: Attack Lacey!! [checkpoint]
 Adrenaline rushes, at last. You do all you can think to: body slam into Lacey. Clif menaces to scoop you up, but you zoom past <%-R.Clif?"him":"her"%>.

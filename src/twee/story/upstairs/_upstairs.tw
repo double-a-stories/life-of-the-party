@@ -23,6 +23,8 @@ There's no one in there. The shelves are sporting a number of trophies from vari
 * [[Go back.|Upstairs Hallway]]
 
 :: Look in Basil's drawers.
+<% StoryFlags.set("creepedDrawers"); %>
+
 You decide it couldn't hurt to take a discrete little peek in the dresser. You pull open the top drawer.
 
 #### Items found:
