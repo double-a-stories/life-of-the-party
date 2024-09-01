@@ -33,8 +33,6 @@ body {
   box-sizing: border-box;
   color: var(--color);
   font: clamp(1rem, 3vw, 1.4rem) / 1.6 var(--font-stack);
-  hyphens: auto;
-  text-align: justify;
   margin: 0;
   padding: 0.5rem;
   overflow-x: hidden;
