@@ -1,6 +1,6 @@
 <!-- These passages define the opening narration, and "hub area". -->
 
-:: Life of the Party.
+:: Life of the Party. [party]
 Your name is Hollis. You are an androgynous-looking gray rabbit of no particular gender identity, around the age of nineteen.
 
 Right now, you're at a very crowded house party. Drunk and horny college furs are everywhere. Loud music and the smell of cheap booze fills every room. <% if (Achievements.getUnlocked().length > 3) { %>This place seems strangely familiar, though you can't put a paw on it.<% } %>
@@ -9,7 +9,7 @@ About twenty minutes ago, you showed up with your friend Reese. At some point yo
 
 * [[Look around the foyer.|The Foyer.]]
 
-:: The Foyer.
+:: The Foyer. [party]
 
 The floor in the house's entryway is plastered with empty plastic cups. Music is blaring. College-age furs in every direction are chatting, flirting, and dancing.
 
@@ -19,7 +19,7 @@ What will you do?
 * [[Search for your friend.]]
 * [[Dance a little.]] <!-- _living_room.tw-->
 
-:: Find someplace quieter.
+:: Find someplace quieter. [party]
 The incessant loud music is starting to hurt your sensitive ears. You decide to look for a place away from the noise where you can clear your thoughts.
 
 This house is huge, and its upscale furnishings seem almost too fancy for the moderately wealthy suburb it's located in. It shouldn't be too hard to find a quiet place to relax.
@@ -28,7 +28,7 @@ This house is huge, and its upscale furnishings seem almost too fancy for the mo
 * [[Go to the bathroom.]] <!-- _bathroom.tw --> *(Smells like... bear.)*
 * [[Go to the garage.]] <!-- ren-route.tw --> *(Smells like... fox.)*
 
-:: Search for your friend.
+:: Search for your friend. [party]
 You make a quick circle of the first floor, but Reese is nowhere in sight.
 
 <% if (!StoryFlags.isSet("upstairsUnlocked")) { %>

@@ -54,17 +54,16 @@ body[data-tags~="dark"], .backdrop {
 }
 
 .backdrop {
-  position: absolute;
-  left: 0px;
-  right: 0px;
+  --color: #eee;
+  --light: rgba(255, 255, 255, 50%);
+  margin-inline: -100vw; /* dumb hack. make the background stretch all the way across. */
+  padding-inline: 100vw;
   padding-top: 60rem;
   width: 100%;
   background: rgb(238,238,238);
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,
     #020202 30%);
   color: #eee;
-  --color: #eee;
-  --light: rgba(255, 255, 255, 50%);
   text-align: center;
 }
 

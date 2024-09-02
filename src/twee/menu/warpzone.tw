@@ -1,4 +1,4 @@
-:: Warp zone
+:: Warp zone [menu]
 You've entered a time warp! This is a list of every passage in *<%= story.name %>*. Obviously, there are **spoilers ahead**.
 
 <table class="table">

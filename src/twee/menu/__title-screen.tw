@@ -20,7 +20,7 @@ story.version = `v0.8.0`;
 Life of the Party
 
 
-:: Start [no_heading start]
+:: Start [no_heading start menu]
 <style>
 tw-passage > * {
   margin-bottom: 2rem;
@@ -43,14 +43,14 @@ tw-passage > * {
 <%= story.render("Achievements list") %>
 </div>
 
-:: Content Warning [no_heading topbar_hide]
+:: Content Warning [no_heading topbar_hide menu]
 ### Content warning
 
 ⛔️ This is an experimental interactive fetish story for **ADULTS ONLY**. You will assume the role of prey, and be **swallowed and unwillingly digested**. Some scenes contain strong and potentially distressing content, including **sadism, rape threats, asphyxiation, scat disposal, and accidental death**.
 
 ⚠️ If you choose to continue, you do so **at your own risk**.
 
-:: Achievements list
+:: Achievements list [menu]
 
 ### Achievements (<%- Achievements.percent() %>)
 

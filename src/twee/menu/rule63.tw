@@ -2,7 +2,7 @@
 
 window.TestChar = Rule63.defaultMale;
 
-:: Rule 63 Mode [no_checkpoint no_command]
+:: Rule 63 Mode [no_checkpoint no_command menu]
 
 <% if (!Rule63.isEnabled()) { %>
 <%=T.infoMessageBox(`Characters will use <b>their canonical genders</b>.<br>This is the <b>intended experience</b> for <si>Life of the Party</i>.`)%>

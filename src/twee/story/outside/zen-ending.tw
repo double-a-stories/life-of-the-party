@@ -29,6 +29,10 @@ Your heart clenches at the thought that being food could be your sole purpose in
 * [[Don't think about it.|Get up.]]
 * [[Break these mortal chains.]]
 
+<% if (StoryFlags.isSet("enableSound")) { %>
+<p class="content-warning">🎵 *Dance of the Macabre* by Vylet Pony</p>
+<% } %>
+
 :: Break these mortal chains. [dreamy_3 stars outside zen]
 <%= Achievements.unlock("ZEN_ENDING") %>
 

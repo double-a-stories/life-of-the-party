@@ -698,7 +698,7 @@ You ask, is it weird that after all that, you're <%-s.ateFaith?"still":"feeling 
 
 * [[Back to the living room.]]
 
-:: Back to the living room.
+:: Back to the living room. [party]
 The three of you walk back into the living room. Is it possible that you'll actually go home tonight in one piece?
 
 Then suddenly, you hear a voice call your name. <span.ivy>"Hollis,,,! You came back,,,!"</span> A giant green anaconda girl slithers toward you from across the room. You don't recognize <%-R.Ivy?"him":"her"%> at all.
@@ -707,7 +707,7 @@ Then suddenly, you hear a voice call your name. <span.ivy>"Hollis,,,! You came b
 
 * [[Hehe, the thing about that...]]
 
-:: Hehe, the thing about that...
+:: Hehe, the thing about that... [party]
 You smile nervously and explain that you were really drunk at the time, and really weren't in the right frame of mind to agree to something like that.
 
 <span.ivy>"B-but, you swore,,,"</span> Ivy points <%-R.Ivy?"his":"her"%> tail to the message written in sharpie on your fur. <span.ivy>"You gave me dibs and everything,,,"</span> <%-R.Ivy?"he":"she"%> says, dejectedly. <%-R.Ivy?"He":"She"%> begins to coil <%-R.Ivy?"his":"her"%> body around you, and sighs, <span.ivy>"Oh dear, I'm really sorry about this,,,"</span>
@@ -716,7 +716,7 @@ You smile nervously and explain that you were really drunk at the time, and real
 
 * [[Help! <%-R.Ivy?"He":"She"%>'s eating me!|Help! She's eating me!]]
 
-:: Help! She's eating me!
+:: Help! She's eating me! [party]
 You call out for help, but your cries fall on deaf ears. Both cats are just watching eagerly. <span.nikki>"Sorry Hol, but it's quite uncouth to break a promise to a gentlewoman."</span>
 
 Ivy finishes wrapping you, until only your head remains. <%-R.Nikki?"Nyx":"Nikki"%> observes the skill and grace with which <%-R.Nikki?"he":"she"%> constricts you, and murmurs, <span.nikki>"Ooh, good form!"</span>

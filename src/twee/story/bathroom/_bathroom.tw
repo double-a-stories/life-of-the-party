@@ -1,4 +1,4 @@
-:: Go to the bathroom.
+:: Go to the bathroom. [party_far]
 You enter the downstairs bathroom, and shut the door behind you, freeing yourself from the stress of the party.
 
 The room's every surface is flush with immaculate porcelain and gaudy gold trimmings. There's something hypnotic about it all. Your mind races with possibilities.
@@ -72,14 +72,14 @@ This was basically a huge waste of time, but at least you're feeling a little ca
 
 * [[Go back|Go to the bathroom.]]
 
-:: Use the toilet.
+:: Use the toilet. [party_far]
 You consider using the toilet. However, at a second glance, you realize it not designed for someone of your little stature. The bowl is almost twice your size, and you could easily fall in. Based on the size, you presume that this house is owned by a family of rhinoceroses, or maybe big horses.
 
 You didn't really need to pee anyway.
 
 * [[Go back|Go to the bathroom.]]
 
-:: Leave the bathroom.
+:: Leave the bathroom. [party]
 You go back into the hallway. The loud music continues to bombard your ears. That didn't really help much.
 
 * [[Go outside.]]

@@ -7,7 +7,7 @@ TODO: You should be able to have sex with Basil. Let's commit further to him bei
 The flirting here is kinda awkward too, so let's make that more natural...
 
 -->
-:: Wink back at the horse. [checkpoint]
+:: Wink back at the horse. [checkpoint party]
 <% StoryFlags.set("talkedToBasil"); %>
 
 You wink back at the horse. <%-R.Basil?"He":"She"%> smiles, and walks over to you, carrying two bottles of beer. Like most draft horses, <%-R.Basil?"he":"she"%>'s an absolute giant. Technically it's more polite to refer to larger anthros using euphemisms like "gentle", whereas smaller anthros are "noble".
@@ -21,7 +21,7 @@ You wink back at the horse. <%-R.Basil?"He":"She"%> smiles, and walks over to yo
 
 <%= Rule63.getRule63Message(Rule63.Gender.Male) %>
 
-:: Take drink.
+:: Take drink. [party]
 You take the bottle and have a few courteous sips. <%-R.Basil?"He":"She"%> chugs <%-R.Basil?"his":"hers"%> immediately, swallowing the whole beer in only a few gulps.
 
 "Those were some cool moves, kid," <%-R.Basil?"he":"she"%> says, wiping <%-R.Basil?"his":"her"%> mouth, "Seems like you're enjoying my party."
@@ -29,7 +29,7 @@ You take the bottle and have a few courteous sips. <%-R.Basil?"He":"She"%> chugs
 * [[Thanks!|Thanks for the compliment!]]
 * [[I'd be happy to show you some more...]]
 
-:: Don't take drink.
+:: Don't take drink. [party]
 <%
   s.horseConsensualPath = false;
 %>
@@ -43,7 +43,7 @@ Basil stares at your face for a second, and raises an eyebrow.
 * [[I don't think so...]]
 * [[My name's Hollis?]]
 
-:: Thanks for the compliment!
+:: Thanks for the compliment! [party]
 <%-R.Basil?"He":"She"%> chuckles. "Y'know, you look familiar..." <%-R.Basil?"He":"She"%> spends a few seconds thinking, and raises an eyebrow.
 
 "...Do I know you from somewhere?"
@@ -51,7 +51,7 @@ Basil stares at your face for a second, and raises an eyebrow.
 * [[I don't think so...]]
 * [[My name's Hollis?]]
 
-:: I'd be happy to show you some more...
+:: I'd be happy to show you some more... [party]
 <%-R.Basil?"He":"She"%> raises an eyebrow, and a satisfied smile comes across <%-R.Basil?"his":"her"%> face as <%-R.Basil?"he":"she"%> catches your meaning.
 
 <%-R.Basil?"He":"She"%> delicately takes your paw in <%-R.Basil?"his":"her"%> hand, and steps closer to you until <%-R.Basil?"he":"she"%>'s almost looking straight down at you. It's a little intimidating.
@@ -63,7 +63,7 @@ Basil stares at your face for a second, and raises an eyebrow.
 * [[I don't think so...]]
 * [[My name's Hollis?]]
 
-:: I don't think so...
+:: I don't think so... [party]
 "I've definitely seen your face before..." For a moment, <%-R.Basil?"he":"she"%> stares at you intently. <%-R.Basil?"His":"Her"%> face is rugged and angular, yet <%-R.Basil?"his":"her"%> voice is quite gentle.
 
 Suddenly, <%-R.Basil?"his":"her"%> eyes flash with recognition. "Wait a minute, Holly Freely?"
@@ -74,14 +74,14 @@ Hollis, you correct <%-R.Basil?"him":"her"%>.
 
 * [[Oh, right!]]
 
-:: My name's Hollis?
+:: My name's Hollis? [party]
 <%-R.Basil?"His":"Her"%> eyes flash with recognition.
 
 "No way! Hollis Freely? It's me, Basil Armstrong, from Riveredge High! I think you were in my sister's math class!"
 
 * [[Oh, right!]]
 
-:: Oh, right!
+:: Oh, right! [party]
 You remember <%-R.Basil?"him":"her"%> now. Basil was an award-winning track star, who graduated a year ahead of you. <%-R.Basil?"His":"Her"%> younger sister once gave you math tutoring.
 
 "Yeah, small world, huh?" <%-R.Basil?"he":"she"%> says,
@@ -93,7 +93,7 @@ You nod, awkwardly.
 * [[I came here with a friend of mine...]]
 * [[Horse cock.]]
 
-:: Horse cock.
+:: Horse cock. [party]
 Basil seems taken aback by your candidness. "...What?"
 
 You repeat yourself.
@@ -107,7 +107,7 @@ Basil smiles. "Y'know, you always seemed kinda meek, but now it looks like you r
 * [[Interested in getting a closer look at my tail?|Oh, is my tail giving you ideas?]]
 * [[Want a taste?|...Do you want to eat me?]]
 
-:: I came here with a friend of mine...
+:: I came here with a friend of mine... [party]
 <% StoryFlags.set("upstairsUnlocked"); %>
 
 "Oh, the guinea pig?" <%-R.Basil?"he":"she"%> asks.
@@ -123,7 +123,7 @@ You ask <%-R.Basil?"him":"her"%> if <%-R.Basil?"he":"she"%> saw anything after t
 * [[So, how's college?]]
 * [[Thanks for the tip. Goodbye.|Bye Basil.]]
 
-:: Bye Basil.
+:: Bye Basil. [party]
 You politely excuse yourself. The horse shoots you finger-guns as you leave. You head for the foyer.
 
 "Stay out of my room!" <%-R.Basil?"he":"she"%> calls.
@@ -146,7 +146,7 @@ You ask <%-R.Basil?"him":"her"%> what that's supposed to mean.
 * [[Is that a threat?]]
 * [[Oh, is my tail giving you \"ideas?\" (¯- w •¯)|Oh, is my tail giving you ideas?]]
 
-:: Oh, is my tail giving you ideas?
+:: Oh, is my tail giving you ideas? [party]
 *This path is unfinished. __Sorry!__*
 
 You flamboyantly wiggle your hips.
@@ -161,7 +161,7 @@ You nod, trying to keep your cool, and not betray how excited you are.
 
 * [[...Do you want to eat me?]]
 
-:: Is that a threat?
+:: Is that a threat? [party]
 "No, no!" Basil stammers, "I'm just saying, you should be careful in a crowd like this."
 
 <%-R.Basil?"He":"She"%> crouches down, until <%-R.Basil?"his":"her"%> huge face is level with yours. You shudder a little as <%-R.Basil?"he":"she"%> murmurs into your tall fuzzy ears.
@@ -171,7 +171,7 @@ You nod, trying to keep your cool, and not betray how excited you are.
 * [[...Do you want to eat me?]]
 * [[Kiss <%-R.Basil?"him":"her"%>.|Kiss him.]]
 
-:: Kiss him.
+:: Kiss him. [party]
 You surprise <%-R.Basil?"him":"her"%> by immediately leaning in for a passionate kiss.
 
 "Mmph!" <%-R.Basil?"he":"she"%> cries, blindsided. Then, after a moment, <%-R.Basil?"he":"she"%> reciprocates. "Mmmm."
@@ -180,13 +180,13 @@ After several seconds, <%-R.Basil?"he":"she"%> separates <%-R.Basil?"his":"her"%
 
 * [[...Do you want to eat me?]]
 
-:: ...Do you want to eat me?
+:: ...Do you want to eat me? [party]
 Basil's face looks serious as you ask this. Unconsciously, <%-R.Basil?"he":"she"%> begins salivating. <%-R.Basil?"He":"She"%> swallows a little saliva and asks, "Hollis... Do *you* want to be eaten?"
 
 * [[Yes.|Yes, eat me Basil.]]
 * [[No.|No thank you. (Basil)]]
 
-:: Yes, eat me Basil.
+:: Yes, eat me Basil. [party]
 You nod your head.
 
 Basil scoffs a little, and raises an eyebrow. "You want me to swallow you in front of all these people?"
@@ -194,14 +194,14 @@ Basil scoffs a little, and raises an eyebrow. "You want me to swallow you in fro
 * [[Please.|Agree to let Basil eat you in the living room.]]
 * [[No, wait.|No, don't eat me Basil.]]
 
-:: No, don't eat me Basil.
+:: No, don't eat me Basil. [party]
 Basil frowns. "Heh. Change your mind?" <%-R.Basil?"He":"She"%> smugly twiddles <%-R.Basil?"his":"her"%> thumbs, "That's a shame, I was looking forward to getting a taste of you... You're sure you don't want it?"
 
 * [[Well, as long as you don't digest me...]]
 * [[No, thank you.|No thank you. (Basil)]]
 * [[How about a taste of my tail instead?  (¯- w •¯)|Oh, is my tail giving you ideas?]]
 
-:: Agree to let Basil eat you in the living room.
+:: Agree to let Basil eat you in the living room. [party]
 Something inside your head is screaming at you to run, begging you not to succumb to such a pointless fate. Maybe the punch is messing with your head. But right now, all you can think about is the wet, hot flesh inside this horse's slobbery mouth.
 
 You nod your head again. Unconsciously, your tail starts wagging.
@@ -210,7 +210,7 @@ Basil rises to <%-R.Basil?"his":"her"%> feet, a pleased, benevolent smile on <%-
 
 * [[Strip naked.|Undress in the middle of the party.]]
 
-:: Undress in the middle of the party.
+:: Undress in the middle of the party. [party]
 You attract the attention of a few onlookers as you suddenly shuck off your clothes, and drop them on the floor. You hear a few whoops and hollers. Soon, nearly the whole crowd in the living room is looking at you with anticipation, murmuring eagerly amongst themselves.
 
 Basil towers over you. A bit of <%-R.Basil?"his":"her"%> drool drips on your left ear, causing you to twitch. You're sure you can make out a bulge in <%-R.Basil?"his":"her"%> trousers. "Huh," the horse says, glancing at your naked body with a bemused smile, "All this time I thought you were... Never mind." <%-R.Basil?"He":"She"%> licks <%-R.Basil?"his":"her"%> lips and says, "Let's give these folks a show!"
@@ -219,7 +219,7 @@ The stallion grips you by the shoulders and stretches <%-R.Basil?"his":"her"%> m
 
 * [[Basil: Glomph.]]
 
-:: Basil: Glomph. [vore]
+:: Basil: Glomph. [vore party_far]
 The party disappears, and your surroundings are swiftly replaced by the darkness of Basil's mouth. Your ears are immediately soaked in saliva, and you feel them tickling the back of <%-R.Basil?"his":"her"%> throat.
 
 "Mmmmf," Basil moans out loud. <%-R.Basil?"He":"She"%> runs <%-R.Basil?"his":"her"%> powerful tongue over your face, tasting you and coating your face in hot drool.
@@ -271,14 +271,14 @@ As <%-R.Basil?"he":"she"%>'s nearing the entertainment center, <%-R.Basil?"he":"
 
 * <%= T.restart() %>
 
-:: Become horse food. [vore]
+:: Become horse food. [vore party_far]
 Over the next three minutes or so, Basil slowly but eagerly works your body down <%-R.Basil?"his":"her"%> throat and into <%-R.Basil?"his":"her"%> belly. You feel yourself gliding effortlessly through the slick tunnel of <%-R.Basil?"his":"her"%> gullet, towards your tight, hot destination. <%-R.Basil?"He":"She"%>'s done this before, hasn't <%-R.Basil?"he":"she"%>?
 
 A few furs in the room keep watching with wide eyes as they witness an act of predation for the first time. Others begin shamelessly touching themselves, and others still begin to survey their peers for potential meals.
 
 * [[Curl up in Basil's belly.]]
 
-:: Moan. [vore]
+:: Moan. [vore party_far]
 Basil laughs, the kind of chuckle which makes <%-R.Basil?"his":"her"%> belly squeeze in on you slightly, "I'll take that as a yes."
 
 The insides of Basil's stomach are spacious and warm. You're curled up in a loose ball, but you have enough room to get comfortable surrounded by the undulating flesh. Even though you specifically asked <%-R.Basil?"him":"her"%> to do this, you're still surprised by how aroused it's making you. First time for everything, after all.
@@ -289,7 +289,7 @@ You consider could probably take the opportunity to "enjoy yourself" a little...
 
 * [[Enjoy yourself.]]
 
-:: Enjoy yourself. [vore]
+:: Enjoy yourself. [vore party_far]
 You do that. You're already naked, so you take the opportunity to rub yourself in a pleasing way. The comfy, slimy walls squeeze and squish around you, resisting and conforming to your every movement. It's incredible.
 
 "Woah," Basil grunts, "That feels great! Never had a prey masturbate inside me before..."
@@ -300,14 +300,14 @@ Basil too is attracting some attention, something you realize when you feel two 
 
 * [[What's going on out there?]]
 
-:: What's going on out there? [vore]
+:: What's going on out there? [vore party_far]
 Back outside, a pair of black cats have asked permission to touch Basil's bulging gut. You feel them curiously poking and prodding you, stifling little giggles and gasps as you twitch and move in response. <span.nox>"Woooah,"</span> one of them says, <span.nox>"This is *soo* hot. Hope it likes being horseshit!"</span>
 
 Basil winks at the cat, "Stick around, and maybe you'll join them for the after-party!" They both squeal and scamper off giggling.
 
 * [[Wait, horseshit?]]
 
-:: No thank you. (Basil)
+:: No thank you. (Basil) [party]
 "...Oh. Of course," Basil says, awkwardly. <%-R.Basil?"He":"She"%> stands, and turns to leave. "Just uh, be careful out there, alright?" <%-R.Basil?"He":"She"%> starts to walk away.
 
 Basil walks away, back into the throng of dancing party goers.
@@ -323,19 +323,19 @@ The stallion rises to <%-R.Basil?"his":"her"%> feet, a pleased, benevolent smile
 
 * [[Strip naked.|Undress in the middle of the party.]]
 
-:: Curl up in Basil's belly. [vore]
+:: Curl up in Basil's belly. [vore party_far]
 The sphincter to <%-R.Basil?"his":"her"%> esophagus shuts tightly, as your hind paws come sliding into <%-R.Basil?"his":"her"%> stomach after you. Basil's full belly effortlessly stretches to contain the entirety of your curled up body, leaving a massive bulge sticking out of <%-R.Basil?"his":"her"%> previously flat and chiseled stomach.
 
 "BRAAAAAAAP," the stallion concludes, wiping <%-R.Basil?"his":"her"%> mouth with the neck of <%-R.Basil?"his":"her"%> tank top, which has long since given up on containing <%-R.Basil?"his":"her"%> swollen belly. <%-R.Basil?"He":"She"%> caresses <%-R.Basil?"his":"her"%> gut happily. "How's it going in there?"
 
 * [[Moan.]]
 
-:: Wait, horseshit? [vore]
+:: Wait, horseshit? [vore party_far]
 "Yeah," Basil chuckles, "should only take me a few hours, really! I'll probably be squeezing you out into a toilet by this time tomorrow."
 
 * [[You're... gonna digest me?]]
 
-:: You're... gonna digest me? [vore]
+:: You're... gonna digest me? [vore party_far]
 Basil gives you an affirmative pat. "Uh, you know how this works, right? Did you think I was just gonna keep you in there forever? "
 
 <% if (visited("Well, as long as you don't digest me...")) { %>
@@ -354,7 +354,7 @@ N-no, you stammer, you assumed <%-R.Basil?"he":"she"%>'d let you out.
 
 * [[Struggle.|Struggle inside Basil!]]
 
-:: Basil: Get me out of here! [vore]
+:: Basil: Get me out of here! [vore party_far]
 The lack of oxygen is making you dizzy. You bang helplessly on the walls of the horse's stomach, begging to be let out.
 
 "No, sorry. I get that you're new to this, but once you're in there, you're not coming back up."
@@ -373,7 +373,7 @@ You're too light-headed to respond. You need to rest, you decide, before you can
 
 * [[Basil: Digest.]]
 
-:: This is kinda hot... [vore]
+:: This is kinda hot... [vore party_far]
 Basil touches your bulging outline. "It is right? Glad you changed your mind. It must be nice knowing you're contributing to my sweet bod."
 
 Either because of the oppressive heat in here, or the lack of air, you feel yourself body begin to relax. You resume pleasuring yourself, now finding a strange arousal in the idea of being digested. You're going to die, but somehow, that hardly even matters to you?
@@ -398,7 +398,7 @@ Your struggling only increases. The juices are beginning to tingle your fur, and
 * [[Get me out of here!|Basil: Get me out of here!]] *(Unwilling Digestion)*
 * [[This is kinda hot...]] *(Willing Digestion)*
 
-:: Hollis: Cum. [vore]
+:: Hollis: Cum. [vore party_far]
 You masturbate inside Basil's stomach, your movements gradually becoming faster and more furious.
 
 A few people outside are gawking and pointing at the motion coming from Basil's gut. <%-R.Basil?"He":"She"%> simply replies with a cocky smile. "Heh. You've really put on a show for us, huh?" <%-R.Basil?"He":"She"%> rubs <%-R.Basil?"his":"her"%> gut, sloshing you with more stomach acid. "Time to soften up now."

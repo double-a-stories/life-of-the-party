@@ -1,9 +1,13 @@
 <!-- You go to the living room and dance. This room has a bunch of random world-building flavor text, and can branch off into a few different routes. The script that manages this part is really really awful. -->
 
-:: Dance a little.
+:: Dance a little. [party dubstep]
 <%= passage.render(setup.party.getPartyMessage()) %>
 
 <%= story.render("Living room commands") /* [[Living room commands]] */ %>
+
+<% if (StoryFlags.isSet("enableSound")) { %>
+<p class="content-warning">🎵 *Invasion (ft. L.M.)* by Vylet Pony</p>
+<% } %>
 
 :: Living room commands
 <!-- Dance a little more command -->

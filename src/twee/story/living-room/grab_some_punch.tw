@@ -1,4 +1,4 @@
-:: Grab some punch.
+:: Grab some punch. [party dubstep]
 <% StoryFlags.set("grabbedPunch") %>
 
 <%
@@ -42,14 +42,14 @@ A Labrador notices and elbows you. "Woahh, dude! Sick moves, but maybe you shoul
 <% } %>
 <% } %>
 
-:: Good idea, thanks.
+:: Good idea, thanks. [party dubstep]
 You nod, and thank her for looking out of your health.
 
 <span.mouse>"No problem! Lemme know if you find faith. Er, Faith, my girlfriend."</span>
 
 * [[Go back.|Dance a little.]]
 
-:: Do nothing.
+:: Do nothing. [party dubstep]
 <% s.rescuedKaia = false; %>
 
 You watch as the jackrabbit snarfs down the little white mouse with a satisfied smile. At first the thing squeaks out in fear, but the sound stops instantly as she begins snaking down <%-R.Jackie?"his":"her"%> throat.
@@ -64,7 +64,7 @@ The mouse nimbly lands in a roll, and scampers off out of the living room.
 
 * [[Go back.|Dance a little.]]
 
-:: H-hey, don't do that!
+:: H-hey, don't do that! [party dubstep]
 You nervously shout at the jackrabbit not to eat the mouse.
 
 <%-R.Jackie?"He":"She"%> stops dangling the little white mouse girl over <%-R.Jackie?"his":"her"%> mouth, and turns to look at you. Despite being another rabbit, <%-R.Jackie?"he":"she"%> has a carnivorous affect to <%-R.Jackie?"him":"her"%>. <%-R.Jackie?"He":"She"%>'s a bit taller than you, and judging by the length of <%-R.Jackie?"his":"her"%> claws, <%-R.Jackie?"he":"she"%> seems to have neglected trimming them for a few weeks.
@@ -74,31 +74,31 @@ You nervously shout at the jackrabbit not to eat the mouse.
 * [[She's not food!]]
 * [[That's a living person!]]
 
-:: She's not food!
+:: She's not food! [party dubstep]
 The jackrabbit narrows <%-R.Jackie?"his":"her"%> eyes and says, <span.jackrabbit>"Dunno know what rock you've been livin' under, bud. We're *all* food. This one's mine."</span>
 
 * [[That's a living person!]]
 * [[Grab the mouse out of <%-R.Jackie?"his":"her"%> claws.|Grab the mouse.]]
 
-:: That's a living person!
+:: That's a living person! [party dubstep]
 <%-R.Jackie?"He":"She"%> rolls <%-R.Jackie?"his":"her"%> eyes and says, <span.jackrabbit>"Oh, you're one of those micro-rights hippies? Come to tell me about peace, love, 'n co-existence?"</span>
 
 You start to speak, but <%-R.Jackie?"he":"she"%> interrupts, <span.jackrabbit>"Or maybe you're jus' jealous'a me nabbing an easy snack?"</span>
 
 * [[No, I don't eat people!]]
 
-:: No, I don't eat people!
+:: No, I don't eat people! [party dubstep]
 <%-R.Jackie?"He":"She"%> smiles and says, <span.jackrabbit>"Your loss. Either way, you're not gettin' your paws on it. Got that?"</span>
 
 * [[Grab the mouse out of <%-R.Jackie?"his":"her"%> claws.|Grab the mouse.]]
 * [[G-got it. Nevermind.]] *(Do nothing.)*
 
-:: G-got it. Nevermind.
+:: G-got it. Nevermind. [party dubstep]
 <span.jackrabbit>"Good,"</span> <%-R.Jackie?"he":"she"%> says, <span.jackrabbit>"You're smarter than you look, kid."</span>
 
 <%= story.render("Do nothing.") /* [[Do nothing.]] */ %>
 
-:: Grab the mouse.
+:: Grab the mouse. [party dubstep]
 You try to wrest the mouse from <%-R.Jackie?"his":"her"%> claws.
 
 The jackrabbit looks with surprise as you attempt to free the mouse by force. <%-R.Jackie?"He":"She"%> lifts the mouse higher, just out of your reach.
@@ -111,7 +111,7 @@ The little white mouse rises to her feet. At full height, she's a mere 6-inches 
 
 * [[A-are you hurt?]]
 
-:: A-are you hurt?
+:: A-are you hurt? [party dubstep]
 You ask if she's hurt.
 
 <% s.rescuedKaia = true; %>
@@ -125,7 +125,7 @@ That's... good? you guess. You tell her you're really sorry. You promise, not al
 * [[Don't worry about it!]]
 * [[You're welcome!|Don't worry about it!]]
 
-:: Don't worry about it!
+:: Don't worry about it! [party dubstep]
 Kaia smiles up at you. <span.mouse>"Honestly, it'd be really embarassing if my whole purpose in life was to be a meal for some rando at a college party!"</span>
 
 You scratch your head, and say yeah, it would. You're awkwardly silent for a moment.
